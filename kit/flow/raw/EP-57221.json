@@ -1,0 +1,135 @@
+{
+ "key": "EP-57221",
+ "summary": "Global Search. Blocks, Labels, Order and Availability Control",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-09-10T17:00:04.242Z",
+ "createdMs": 1789059604242,
+ "resolved": "2026-09-17T16:17:02.011Z",
+ "resolvedMs": 1789661822011,
+ "priority": "Urgent",
+ "team": "Exhibitor team",
+ "labels": [
+  "mig-in-preparation"
+ ],
+ "reportedBy": [
+  "IMEX"
+ ],
+ "parent": "EP-44808",
+ "subtasks": [
+  {
+   "key": "EP-57240",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-57241",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-57242",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-57277",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-57278",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-57429",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  }
+ ],
+ "changelogTotal": 46,
+ "changelogReturned": 46,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-15T09:51:34.210Z",
+   "ms": 1789465894210,
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-15T09:51:53.289Z",
+   "ms": 1789465913289,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-15T09:52:02.094Z",
+   "ms": 1789465922094,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-15T16:48:16.083Z",
+   "ms": 1789490896083,
+   "from": "Brief ready for review",
+   "to": "Open",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-16T09:51:35.354Z",
+   "ms": 1789552295354,
+   "from": "Open",
+   "to": "Ready to start",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-16T09:54:44.245Z",
+   "ms": 1789552484245,
+   "from": "Ready to start",
+   "to": "In progress",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-16T13:21:03.695Z",
+   "ms": 1789564863695,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2026-09-17T05:18:22.668Z",
+   "ms": 1789622302668,
+   "from": "Ready for testing",
+   "to": "In testing",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-17T15:53:45.555Z",
+   "ms": 1789660425555,
+   "from": "In testing",
+   "to": "Ready for release",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-17T16:17:02.038Z",
+   "ms": 1789661822038,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Ivan Tymoshenko"
+  }
+ ],
+ "integrity": []
+}

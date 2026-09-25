@@ -1,0 +1,68 @@
+{
+ "key": "EP-42569",
+ "summary": "Check models for master db connection",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2025-05-21T14:48:49.006Z",
+ "createdMs": 1747838929006,
+ "resolved": "2026-09-16T12:28:54.899Z",
+ "resolvedMs": 1789561734899,
+ "priority": "Medium",
+ "team": null,
+ "labels": [],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 11,
+ "changelogReturned": 11,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2025-06-17T16:42:19.493Z",
+   "ms": 1750178539493,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-06-18T10:36:55.719Z",
+   "ms": 1750243015719,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-06-23T22:30:48.368Z",
+   "ms": 1750717848368,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-06-25T22:29:31.370Z",
+   "ms": 1750890571370,
+   "from": "Task in testing",
+   "to": "Ready for deploy",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2026-09-15T16:47:52.074Z",
+   "ms": 1789490872074,
+   "from": "QA Tested",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-16T12:28:54.926Z",
+   "ms": 1789561734926,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "integrity": [
+  "chain break Ready for deploy -> QA Tested at 2026-09-15T16:47:52.074Z"
+ ]
+}

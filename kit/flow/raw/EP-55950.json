@@ -1,0 +1,87 @@
+{
+ "key": "EP-55950",
+ "summary": "Saved Search Queries: extract controller logic into a service layer (from EP-55336 review)",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-08-06T07:48:28.346Z",
+ "createdMs": 1786002508346,
+ "resolved": "2026-09-16T14:34:12.455Z",
+ "resolvedMs": 1789569252455,
+ "priority": "Medium",
+ "team": "Exhibitor team",
+ "labels": [],
+ "reportedBy": [],
+ "parent": "EP-44808",
+ "subtasks": [],
+ "changelogTotal": 43,
+ "changelogReturned": 43,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-08-14T12:13:51.108Z",
+   "ms": 1786709631108,
+   "from": "Open",
+   "to": "Ready for development",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-08-14T12:13:54.597Z",
+   "ms": 1786709634597,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-08-14T12:14:03.728Z",
+   "ms": 1786709643728,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-10T15:10:22.004Z",
+   "ms": 1789053022004,
+   "from": "Code review and merge",
+   "to": "Ready for testing",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-11T06:54:01.208Z",
+   "ms": 1789109641208,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-11T12:10:50.292Z",
+   "ms": 1789128650292,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-14T10:34:43.342Z",
+   "ms": 1789382083342,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-15T16:48:15.437Z",
+   "ms": 1789490895437,
+   "from": "Staged for Release",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-16T14:34:12.474Z",
+   "ms": 1789569252474,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Volodymyr Borisenko"
+  }
+ ],
+ "integrity": []
+}

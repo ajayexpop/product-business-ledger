@@ -1,0 +1,149 @@
+{
+ "key": "EP-56268",
+ "summary": "AI Search never filters by relevance, only sorts \u2014 searching \"Samsung\" returns 100 products of which 8 are Samsung, and the whole exhibitor index every time",
+ "type": "Bug",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-08-17T08:45:57.722Z",
+ "createdMs": 1786956357722,
+ "resolved": "2026-09-22T14:39:19.550Z",
+ "resolvedMs": 1790087959550,
+ "priority": "High",
+ "team": "Exhibitor team",
+ "labels": [
+  "ai-analyzed",
+  "ai-valid",
+  "qa-pipeline"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": "EP-44808",
+ "subtasks": [],
+ "changelogTotal": 54,
+ "changelogReturned": 54,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-08-18T06:02:20.593Z",
+   "ms": 1787032940593,
+   "from": "PM review",
+   "to": "Ready for development",
+   "by": "Fazil Mammadli"
+  },
+  {
+   "at": "2026-08-18T06:02:23.746Z",
+   "ms": 1787032943746,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Fazil Mammadli"
+  },
+  {
+   "at": "2026-09-03T10:16:14.139Z",
+   "ms": 1788430574139,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-03T14:19:10.897Z",
+   "ms": 1788445150897,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-03T14:19:27.029Z",
+   "ms": 1788445167029,
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-04T10:34:43.909Z",
+   "ms": 1788518083909,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-07T11:09:06.232Z",
+   "ms": 1788779346232,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-07T11:34:28.956Z",
+   "ms": 1788780868956,
+   "from": "Code review and merge",
+   "to": "Ready for testing",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-07T11:37:08.381Z",
+   "ms": 1788781028381,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-07T12:12:26.247Z",
+   "ms": 1788783146247,
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-08T17:21:39.232Z",
+   "ms": 1788888099232,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-08T17:21:47.301Z",
+   "ms": 1788888107301,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-09T06:51:22.043Z",
+   "ms": 1788936682043,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-09T11:21:52.553Z",
+   "ms": 1788952912553,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-10T08:47:00.862Z",
+   "ms": 1789030020862,
+   "from": "QA Tested",
+   "to": "Direct Deploy",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-15T16:52:51.364Z",
+   "ms": 1789491171364,
+   "from": "Direct Deploy",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-22T14:39:19.578Z",
+   "ms": 1790087959578,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Konstantin Shein"
+  }
+ ],
+ "integrity": []
+}

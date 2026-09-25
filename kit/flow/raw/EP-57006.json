@@ -1,0 +1,94 @@
+{
+ "key": "EP-57006",
+ "summary": "Event approval button visible",
+ "type": "Bug",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-09-04T12:18:14.289Z",
+ "createdMs": 1788524294289,
+ "resolved": "2026-09-22T11:30:10.714Z",
+ "resolvedMs": 1790076610714,
+ "priority": "Urgent",
+ "team": "Organizer team",
+ "labels": [
+  "ai-analyzed",
+  "ai-valid",
+  "form",
+  "form-69"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 39,
+ "changelogReturned": 39,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-07T08:26:15.745Z",
+   "ms": 1788769575745,
+   "from": "PM review",
+   "to": "Ready for development",
+   "by": "Olena Bakun"
+  },
+  {
+   "at": "2026-09-07T08:26:18.406Z",
+   "ms": 1788769578406,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Olena Bakun"
+  },
+  {
+   "at": "2026-09-07T12:14:33.842Z",
+   "ms": 1788783273842,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Olena Bakun"
+  },
+  {
+   "at": "2026-09-07T14:46:07.796Z",
+   "ms": 1788792367796,
+   "from": "Code review and merge",
+   "to": "Ready for testing",
+   "by": "Olena Bakun"
+  },
+  {
+   "at": "2026-09-08T11:12:17.717Z",
+   "ms": 1788865937717,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Oleksandr Pylypenko"
+  },
+  {
+   "at": "2026-09-08T11:18:38.443Z",
+   "ms": 1788866318443,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Oleksandr Pylypenko"
+  },
+  {
+   "at": "2026-09-10T09:23:34.556Z",
+   "ms": 1789032214556,
+   "from": "QA Tested",
+   "to": "Direct Deploy",
+   "by": "Olena Bakun"
+  },
+  {
+   "at": "2026-09-15T16:52:51.364Z",
+   "ms": 1789491171364,
+   "from": "Direct Deploy",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-22T11:30:10.744Z",
+   "ms": 1790076610744,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Mariia Ivanova"
+  }
+ ],
+ "integrity": []
+}

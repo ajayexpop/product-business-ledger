@@ -1,0 +1,109 @@
+{
+ "key": "EP-57098",
+ "summary": "All Day Session in the calendar view",
+ "type": "Story",
+ "level": 0,
+ "status": "In testing",
+ "statusCategory": "indeterminate",
+ "created": "2026-09-08T10:37:10.213Z",
+ "createdMs": 1788863830213,
+ "resolved": null,
+ "resolvedMs": null,
+ "priority": "Medium",
+ "team": "Visitor team",
+ "labels": [
+  "DoDUserStory"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": "EP-57118",
+ "subtasks": [
+  {
+   "key": "EP-57103",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-57105",
+   "type": "Sub-task",
+   "status": "In Progress",
+   "cat": "indeterminate"
+  },
+  {
+   "key": "EP-57651",
+   "type": "Defect",
+   "status": "Ready for testing",
+   "cat": "indeterminate"
+  },
+  {
+   "key": "EP-57652",
+   "type": "Defect",
+   "status": "Ready for testing",
+   "cat": "indeterminate"
+  }
+ ],
+ "changelogTotal": 16,
+ "changelogReturned": 16,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-08T12:33:50.448Z",
+   "ms": 1788870830448,
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-08T12:34:42.283Z",
+   "ms": 1788870882283,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-08T12:34:47.667Z",
+   "ms": 1788870887667,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-08T12:34:52.550Z",
+   "ms": 1788870892550,
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-08T12:35:01.194Z",
+   "ms": 1788870901194,
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-08T12:35:09.103Z",
+   "ms": 1788870909103,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-22T09:49:24.366Z",
+   "ms": 1790070564366,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2026-09-22T09:49:27.958Z",
+   "ms": 1790070567958,
+   "from": "Ready for testing",
+   "to": "In testing",
+   "by": "Olena Khromei"
+  }
+ ],
+ "integrity": []
+}

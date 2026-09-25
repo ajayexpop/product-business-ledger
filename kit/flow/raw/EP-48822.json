@@ -1,0 +1,87 @@
+{
+ "key": "EP-48822",
+ "summary": "[next 14 | 12] fix design (add a gap)",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-02-02T18:54:06.047Z",
+ "createdMs": 1770058446047,
+ "resolved": "2026-09-16T12:28:57.383Z",
+ "resolvedMs": 1789561737383,
+ "priority": "Medium",
+ "team": null,
+ "labels": [],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 16,
+ "changelogReturned": 16,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-02-03T13:57:31.566Z",
+   "ms": 1770127051566,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Anastasiia Rudenko"
+  },
+  {
+   "at": "2026-02-03T15:00:10.424Z",
+   "ms": 1770130810424,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Anastasiia Rudenko"
+  },
+  {
+   "at": "2026-02-04T09:46:46.617Z",
+   "ms": 1770198406617,
+   "from": "Code review and merge",
+   "to": "Ready for testing",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2026-02-04T09:46:51.536Z",
+   "ms": 1770198411536,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2026-02-04T09:47:06.218Z",
+   "ms": 1770198426218,
+   "from": "Task in testing",
+   "to": "Ready for deploy",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2026-02-04T09:47:36.842Z",
+   "ms": 1770198456842,
+   "from": "Ready for deploy",
+   "to": "Merged to Master/Mobile env",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2026-02-04T09:48:13.013Z",
+   "ms": 1770198493013,
+   "from": "Merged to Master/Mobile env",
+   "to": "RC approved",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2026-09-15T16:48:24.408Z",
+   "ms": 1789490904408,
+   "from": "RC approved",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-16T12:28:57.405Z",
+   "ms": 1789561737405,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "integrity": []
+}

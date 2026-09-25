@@ -1,0 +1,71 @@
+{
+ "key": "EP-57421",
+ "summary": "ClickHouse: dictionaries FAILED, pointing at non-existent Postgres databases (now 4, growing)",
+ "type": "Bug",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-09-17T05:41:38.378Z",
+ "createdMs": 1789623698378,
+ "resolved": "2026-09-21T08:39:44.619Z",
+ "resolvedMs": 1789979984619,
+ "priority": "Medium",
+ "team": "Data Science",
+ "labels": [
+  "ai-analyzed",
+  "ai-needs-info"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 10,
+ "changelogReturned": 10,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-17T05:44:20.045Z",
+   "ms": 1789623860045,
+   "from": "Open",
+   "to": "Ready to start",
+   "by": "Emmanuel Okorie"
+  },
+  {
+   "at": "2026-09-17T05:44:44.714Z",
+   "ms": 1789623884714,
+   "from": "Ready to start",
+   "to": "In progress",
+   "by": "Emmanuel Okorie"
+  },
+  {
+   "at": "2026-09-21T08:39:22.293Z",
+   "ms": 1789979962293,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Fazil Mammadli"
+  },
+  {
+   "at": "2026-09-21T08:39:29.477Z",
+   "ms": 1789979969477,
+   "from": "Ready for testing",
+   "to": "In testing",
+   "by": "Fazil Mammadli"
+  },
+  {
+   "at": "2026-09-21T08:39:39.151Z",
+   "ms": 1789979979151,
+   "from": "In testing",
+   "to": "Ready for release",
+   "by": "Fazil Mammadli"
+  },
+  {
+   "at": "2026-09-21T08:39:44.641Z",
+   "ms": 1789979984641,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Fazil Mammadli"
+  }
+ ],
+ "integrity": []
+}

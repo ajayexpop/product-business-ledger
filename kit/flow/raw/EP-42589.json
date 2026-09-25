@@ -1,0 +1,69 @@
+{
+ "key": "EP-42589",
+ "summary": "close db_route connection after fetch in DbRouterProvider",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2025-05-22T13:12:19.259Z",
+ "createdMs": 1747919539259,
+ "resolved": "2026-09-16T12:28:54.006Z",
+ "resolvedMs": 1789561734006,
+ "priority": "Medium",
+ "team": null,
+ "labels": [],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 10,
+ "changelogReturned": 10,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2025-05-22T16:40:57.657Z",
+   "ms": 1747932057657,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Maksym Levenets"
+  },
+  {
+   "at": "2025-05-22T16:42:03.173Z",
+   "ms": 1747932123173,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Maksym Levenets"
+  },
+  {
+   "at": "2025-05-22T16:42:07.484Z",
+   "ms": 1747932127484,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Maksym Levenets"
+  },
+  {
+   "at": "2025-05-22T16:42:13.740Z",
+   "ms": 1747932133740,
+   "from": "Task in testing",
+   "to": "Ready for deploy",
+   "by": "Maksym Levenets"
+  },
+  {
+   "at": "2026-09-15T16:47:52.074Z",
+   "ms": 1789490872074,
+   "from": "QA Tested",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-16T12:28:54.032Z",
+   "ms": 1789561734032,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "integrity": [
+  "chain break Ready for deploy -> QA Tested at 2026-09-15T16:47:52.074Z"
+ ],
+ "note": "transcribed from an inline connector result; 4 non-status histories omitted"
+}

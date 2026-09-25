@@ -1,0 +1,108 @@
+{
+ "key": "EP-57336",
+ "summary": "manifest.webmanifest is re-fetched on every App Router navigation (max-age=0, no ETag)",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-09-15T09:30:18.514Z",
+ "createdMs": 1789464618514,
+ "resolved": "2026-09-15T17:21:48.782Z",
+ "resolvedMs": 1789492908782,
+ "priority": "High",
+ "team": "Staff Team",
+ "labels": [
+  "Frontend-dev",
+  "caching",
+  "performance",
+  "tech-debt"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 13,
+ "changelogReturned": 13,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-15T12:56:49.568Z",
+   "ms": 1789477009568,
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-15T12:57:10.695Z",
+   "ms": 1789477030695,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-15T12:57:17.934Z",
+   "ms": 1789477037934,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-15T12:57:21.350Z",
+   "ms": 1789477041350,
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-15T12:57:27.063Z",
+   "ms": 1789477047063,
+   "from": "Ready for decomposition",
+   "to": "Ready to start",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-15T12:57:31.132Z",
+   "ms": 1789477051132,
+   "from": "Ready to start",
+   "to": "In progress",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-15T12:57:47.773Z",
+   "ms": 1789477067773,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-15T13:11:13.782Z",
+   "ms": 1789477873782,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-15T16:11:59.431Z",
+   "ms": 1789488719431,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-15T16:47:52.074Z",
+   "ms": 1789490872074,
+   "from": "QA Tested",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T17:21:48.807Z",
+   "ms": 1789492908807,
+   "from": "Ready for release",
+   "to": "DONE",
+   "by": "Ivan Tymoshenko"
+  }
+ ],
+ "integrity": []
+}

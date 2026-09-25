@@ -1,0 +1,59 @@
+{
+ "key": "EP-48024",
+ "summary": "[TechDept] [portal] Fix Dependency cycle in StandsInfo component",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-01-13T12:00:25.503Z",
+ "createdMs": 1768305625503,
+ "resolved": "2026-09-22T16:06:01.535Z",
+ "resolvedMs": 1790093161535,
+ "priority": "Medium",
+ "team": "Organizer team",
+ "labels": [],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 22,
+ "changelogReturned": 22,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-02-09T09:03:23.486Z",
+   "ms": 1770627803486,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2026-09-22T16:05:49.575Z",
+   "ms": 1790093149575,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2026-09-22T16:05:52.601Z",
+   "ms": 1790093152601,
+   "from": "Ready for testing",
+   "to": "In testing",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2026-09-22T16:05:58.955Z",
+   "ms": 1790093158955,
+   "from": "In testing",
+   "to": "Ready for release",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2026-09-22T16:06:01.561Z",
+   "ms": 1790093161561,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Konstantin Shyrokov"
+  }
+ ],
+ "integrity": []
+}

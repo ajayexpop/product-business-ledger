@@ -1,0 +1,85 @@
+{
+ "key": "EP-57424",
+ "summary": "[Registration - Payments] Visitor's basket is empty, if they registered and approved with limited registrations",
+ "type": "Bug",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-09-17T06:26:29.042Z",
+ "createdMs": 1789626389042,
+ "resolved": "2026-09-22T12:32:54.891Z",
+ "resolvedMs": 1790080374891,
+ "priority": "High",
+ "team": "Organizer team",
+ "labels": [
+  "ai-analyzed",
+  "ai-valid"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 21,
+ "changelogReturned": 21,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-18T15:03:27.782Z",
+   "ms": 1789743807782,
+   "from": "Open",
+   "to": "Ready to start",
+   "by": "Oleksiy Leshchenko"
+  },
+  {
+   "at": "2026-09-18T15:03:30.119Z",
+   "ms": 1789743810119,
+   "from": "Ready to start",
+   "to": "In progress",
+   "by": "Oleksiy Leshchenko"
+  },
+  {
+   "at": "2026-09-21T08:50:28.925Z",
+   "ms": 1789980628925,
+   "from": "In progress",
+   "to": "Ready for review",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2026-09-22T12:14:47.682Z",
+   "ms": 1790079287682,
+   "from": "Ready for review",
+   "to": "In Review",
+   "by": "Oleksiy Leshchenko"
+  },
+  {
+   "at": "2026-09-22T12:14:54.891Z",
+   "ms": 1790079294891,
+   "from": "In Review",
+   "to": "Ready for testing",
+   "by": "Oleksiy Leshchenko"
+  },
+  {
+   "at": "2026-09-22T12:26:11.542Z",
+   "ms": 1790079971542,
+   "from": "Ready for testing",
+   "to": "In testing",
+   "by": "Oleksandr Pylypenko"
+  },
+  {
+   "at": "2026-09-22T12:32:52.272Z",
+   "ms": 1790080372272,
+   "from": "In testing",
+   "to": "Ready for release",
+   "by": "Oleksandr Pylypenko"
+  },
+  {
+   "at": "2026-09-22T12:32:54.911Z",
+   "ms": 1790080374911,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Oleksandr Pylypenko"
+  }
+ ],
+ "integrity": []
+}

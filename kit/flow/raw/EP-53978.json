@@ -1,0 +1,357 @@
+{
+ "key": "EP-53978",
+ "summary": "Enhancing Privacy for Opted-Out Users: Favouriting Features and GDPR Compliance",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-05-29T09:57:12.299Z",
+ "createdMs": 1780048632299,
+ "resolved": "2026-09-09T15:55:40.938Z",
+ "resolvedMs": 1788969340938,
+ "priority": "High",
+ "team": "Exhibitor team",
+ "labels": [
+  "DoDUserStory"
+ ],
+ "reportedBy": [
+  "DLG",
+  "FBF"
+ ],
+ "parent": "EP-49994",
+ "subtasks": [
+  {
+   "key": "EP-55341",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55343",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55646",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55691",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55692",
+   "type": "Defect",
+   "status": "Rejected",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55693",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55694",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55695",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55696",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55697",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55698",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55701",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55702",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55704",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55707",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55715",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55857",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55858",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55865",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55913",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-55919",
+   "type": "Sub-task",
+   "status": "Rejected",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56242",
+   "type": "Defect",
+   "status": "Rejected",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56243",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56380",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56402",
+   "type": "Defect",
+   "status": "Done",
+   "cat": "done"
+  }
+ ],
+ "changelogTotal": 163,
+ "changelogReturned": 100,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-07-27T14:45:15.494Z",
+   "ms": 1785163515494,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Oleksii Tur"
+  },
+  {
+   "at": "2026-07-28T06:16:28.856Z",
+   "ms": 1785219388856,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-08-03T14:46:12.001Z",
+   "ms": 1785768372001,
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-08-05T09:19:47.543Z",
+   "ms": 1785921587543,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-08-19T16:42:05.475Z",
+   "ms": 1787157725475,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Oleksii Tur"
+  },
+  {
+   "at": "2026-08-20T09:50:45.888Z",
+   "ms": 1787219445888,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-08-20T14:45:12.480Z",
+   "ms": 1787237112480,
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-08-31T14:10:12.659Z",
+   "ms": 1788185412659,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-01T15:12:18.334Z",
+   "ms": 1788275538334,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Oleksii Tur"
+  },
+  {
+   "at": "2026-09-01T15:21:30.085Z",
+   "ms": 1788276090085,
+   "from": "Ready for testing",
+   "to": "Awaiting Estimation",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-01T15:21:37.487Z",
+   "ms": 1788276097487,
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-01T15:21:46.247Z",
+   "ms": 1788276106247,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-01T15:25:00.314Z",
+   "ms": 1788276300314,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-01T15:25:05.555Z",
+   "ms": 1788276305555,
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-01T15:25:12.243Z",
+   "ms": 1788276312243,
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-01T15:25:15.670Z",
+   "ms": 1788276315670,
+   "from": "Ready for development",
+   "to": "Ready for decomposition",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-01T15:25:21.630Z",
+   "ms": 1788276321630,
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-01T15:25:26.396Z",
+   "ms": 1788276326396,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-01T15:25:29.597Z",
+   "ms": 1788276329597,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-02T06:10:15.877Z",
+   "ms": 1788329415877,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-02T13:47:52.021Z",
+   "ms": 1788356872021,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-03T08:57:08.687Z",
+   "ms": 1788425828687,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Oleksii Tur"
+  },
+  {
+   "at": "2026-09-04T14:50:46.680Z",
+   "ms": 1788533446680,
+   "from": "Staged for Release",
+   "to": "RC approved",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-09T15:55:40.964Z",
+   "ms": 1788969340964,
+   "from": "RC approved",
+   "to": "COMPLETE",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T16:47:30.706Z",
+   "ms": 1789490850706,
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "integrity": [
+  "changelog truncated: 100 of 163"
+ ]
+}

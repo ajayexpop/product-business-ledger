@@ -1,0 +1,82 @@
+{
+ "key": "EP-42697",
+ "summary": "Remove basket item type models",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2025-05-28T10:09:16.663Z",
+ "createdMs": 1748426956663,
+ "resolved": "2026-09-16T12:28:55.759Z",
+ "resolvedMs": 1789561735759,
+ "priority": "Medium",
+ "team": null,
+ "labels": [],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 29,
+ "changelogReturned": 29,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2025-05-28T16:56:05.451Z",
+   "ms": 1748451365451,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-06-12T13:52:50.011Z",
+   "ms": 1749736370011,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-06-23T21:54:07.616Z",
+   "ms": 1750715647616,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-06-25T22:04:27.479Z",
+   "ms": 1750889067479,
+   "from": "Task in testing",
+   "to": "On-hold",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-07-01T06:56:26.885Z",
+   "ms": 1751352986885,
+   "from": "On-hold",
+   "to": "Task in testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-07-01T07:42:57.121Z",
+   "ms": 1751355777121,
+   "from": "Task in testing",
+   "to": "Ready for deploy",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2026-09-15T16:47:52.074Z",
+   "ms": 1789490872074,
+   "from": "QA Tested",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-16T12:28:55.783Z",
+   "ms": 1789561735783,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "integrity": [
+  "chain break Ready for deploy -> QA Tested at 2026-09-15T16:47:52.074Z"
+ ]
+}

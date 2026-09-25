@@ -1,0 +1,138 @@
+{
+ "key": "EP-55645",
+ "summary": "Region filters",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-07-28T11:03:24.144Z",
+ "createdMs": 1785236604144,
+ "resolved": "2026-09-21T11:06:52.488Z",
+ "resolvedMs": 1789988812488,
+ "priority": "High",
+ "team": "Exhibitor team",
+ "labels": [
+  "DoDUserStory"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": null,
+ "subtasks": [
+  {
+   "key": "EP-56176",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56177",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56178",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  }
+ ],
+ "changelogTotal": 49,
+ "changelogReturned": 49,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-07-28T11:04:27.997Z",
+   "ms": 1785236667997,
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2026-07-28T11:04:30.721Z",
+   "ms": 1785236670721,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2026-07-28T11:04:38.565Z",
+   "ms": 1785236678565,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2026-07-28T11:04:41.488Z",
+   "ms": 1785236681488,
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2026-08-12T14:50:58.076Z",
+   "ms": 1786546258076,
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-08-18T08:53:19.303Z",
+   "ms": 1787043199303,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2026-09-03T12:03:38.515Z",
+   "ms": 1788437018515,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Miljan Sucur"
+  },
+  {
+   "at": "2026-09-07T08:33:49.969Z",
+   "ms": 1788770029969,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2026-09-08T13:10:27.466Z",
+   "ms": 1788873027466,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2026-09-09T08:04:00.486Z",
+   "ms": 1788941040486,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-14T09:03:07.632Z",
+   "ms": 1789376587632,
+   "from": "Staged for Release",
+   "to": "RC approved",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2026-09-15T16:48:24.408Z",
+   "ms": 1789490904408,
+   "from": "RC approved",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-21T11:06:52.514Z",
+   "ms": 1789988812514,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Konstantin Shein"
+  }
+ ],
+ "integrity": []
+}

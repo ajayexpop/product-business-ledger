@@ -1,0 +1,87 @@
+{
+ "key": "EP-56159",
+ "summary": "API docs generation reports success when it fails \u2014 swagger.php drops exit codes",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-08-12T11:28:46.978Z",
+ "createdMs": 1786534126978,
+ "resolved": "2026-09-17T09:21:47.488Z",
+ "resolvedMs": 1789636907488,
+ "priority": "Medium",
+ "team": "Exhibitor team",
+ "labels": [],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 21,
+ "changelogReturned": 21,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-11T10:52:05.957Z",
+   "ms": 1789123925957,
+   "from": "Open",
+   "to": "Ready for development",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-11T10:52:09.346Z",
+   "ms": 1789123929346,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-11T10:52:14.067Z",
+   "ms": 1789123934067,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-11T10:52:18.830Z",
+   "ms": 1789123938830,
+   "from": "Code review and merge",
+   "to": "Ready for testing",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-11T10:52:22.899Z",
+   "ms": 1789123942899,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-11T10:52:33.732Z",
+   "ms": 1789123953732,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-11T11:03:46.066Z",
+   "ms": 1789124626066,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-15T16:48:15.437Z",
+   "ms": 1789490895437,
+   "from": "Staged for Release",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-17T09:21:47.515Z",
+   "ms": 1789636907515,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Volodymyr Borisenko"
+  }
+ ],
+ "integrity": []
+}

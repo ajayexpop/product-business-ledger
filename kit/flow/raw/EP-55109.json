@@ -1,0 +1,92 @@
+{
+ "key": "EP-55109",
+ "summary": "support `q` search param on initial page load for news, participants, and sessions",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-07-07T13:50:29.901Z",
+ "createdMs": 1783432229901,
+ "resolved": "2026-09-16T09:26:19.738Z",
+ "resolvedMs": 1789550779738,
+ "priority": "Medium",
+ "team": "Staff Team",
+ "labels": [
+  "Frontend-dev",
+  "frontend",
+  "routing",
+  "search"
+ ],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 22,
+ "changelogReturned": 22,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-07-07T13:52:09.103Z",
+   "ms": 1783432329103,
+   "from": "Open",
+   "to": "Ready for development",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-07-07T13:56:35.946Z",
+   "ms": 1783432595946,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-07-08T11:44:08.048Z",
+   "ms": 1783511048048,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-07-09T09:26:36.263Z",
+   "ms": 1783589196263,
+   "from": "Code review and merge",
+   "to": "Ready for testing",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-07-10T07:37:17.964Z",
+   "ms": 1783669037964,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2026-07-10T07:57:17.050Z",
+   "ms": 1783670237050,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2026-07-22T11:37:30.715Z",
+   "ms": 1784720250715,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-15T16:48:15.437Z",
+   "ms": 1789490895437,
+   "from": "Staged for Release",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-16T09:26:19.765Z",
+   "ms": 1789550779765,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Konstantin Shein"
+  }
+ ],
+ "integrity": []
+}

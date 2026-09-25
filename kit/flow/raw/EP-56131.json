@@ -1,0 +1,94 @@
+{
+ "key": "EP-56131",
+ "summary": "Opted-out privacy is enforced two different ways \u2014 decide whether the remaining passive interactions get private tracking or stay read-side masked",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-08-11T14:27:55.331Z",
+ "createdMs": 1786458475331,
+ "resolved": "2026-09-21T07:57:00.265Z",
+ "resolvedMs": 1789977420265,
+ "priority": "Medium",
+ "team": "Exhibitor team",
+ "labels": [],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 37,
+ "changelogReturned": 37,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-01T09:54:52.119Z",
+   "ms": 1788256492119,
+   "from": "Open",
+   "to": "Ready for development",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-01T09:56:32.984Z",
+   "ms": 1788256592984,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-01T15:01:18.152Z",
+   "ms": 1788274878152,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Oleksii Tur"
+  },
+  {
+   "at": "2026-09-01T15:13:19.538Z",
+   "ms": 1788275599538,
+   "from": "Code review and merge",
+   "to": "Ready for testing",
+   "by": "Oleksii Tur"
+  },
+  {
+   "at": "2026-09-01T15:20:58.522Z",
+   "ms": 1788276058522,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-02T15:50:54.490Z",
+   "ms": 1788364254490,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-03T08:59:35.622Z",
+   "ms": 1788425975622,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Oleksii Tur"
+  },
+  {
+   "at": "2026-09-07T09:14:06.926Z",
+   "ms": 1788772446926,
+   "from": "Staged for Release",
+   "to": "RC approved",
+   "by": "Oleksii Tur"
+  },
+  {
+   "at": "2026-09-15T16:48:24.408Z",
+   "ms": 1789490904408,
+   "from": "RC approved",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-21T07:57:00.298Z",
+   "ms": 1789977420298,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Konstantin Shein"
+  }
+ ],
+ "integrity": []
+}

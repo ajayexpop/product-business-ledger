@@ -1,0 +1,112 @@
+{
+ "key": "EP-57186",
+ "summary": "[DS part]Create daily report to be shared with Hyve",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-09-09T16:52:00.405Z",
+ "createdMs": 1788972720405,
+ "resolved": "2026-09-22T08:32:48.617Z",
+ "resolvedMs": 1790065968617,
+ "priority": "Medium",
+ "team": "Data Science",
+ "labels": [
+  "mig-in-preparation"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": "EP-57193",
+ "subtasks": [],
+ "changelogTotal": 25,
+ "changelogReturned": 25,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-15T08:22:45.675Z",
+   "ms": 1789460565675,
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Maksym Kysunko"
+  },
+  {
+   "at": "2026-09-15T08:22:49.611Z",
+   "ms": 1789460569611,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Maksym Kysunko"
+  },
+  {
+   "at": "2026-09-15T08:23:05.373Z",
+   "ms": 1789460585373,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Maksym Kysunko"
+  },
+  {
+   "at": "2026-09-15T08:23:23.538Z",
+   "ms": 1789460603538,
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Maksym Kysunko"
+  },
+  {
+   "at": "2026-09-15T08:23:40.426Z",
+   "ms": 1789460620426,
+   "from": "Ready for decomposition",
+   "to": "Ready to start",
+   "by": "Maksym Kysunko"
+  },
+  {
+   "at": "2026-09-15T08:23:45.397Z",
+   "ms": 1789460625397,
+   "from": "Ready to start",
+   "to": "In progress",
+   "by": "Maksym Kysunko"
+  },
+  {
+   "at": "2026-09-21T10:27:21.981Z",
+   "ms": 1789986441981,
+   "from": "In progress",
+   "to": "Ready for review",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2026-09-22T07:44:07.488Z",
+   "ms": 1790063047488,
+   "from": "Ready for review",
+   "to": "In Review",
+   "by": "Elmurod Odilov"
+  },
+  {
+   "at": "2026-09-22T07:48:20.955Z",
+   "ms": 1790063300955,
+   "from": "In Review",
+   "to": "Ready for testing",
+   "by": "Elmurod Odilov"
+  },
+  {
+   "at": "2026-09-22T08:32:39.076Z",
+   "ms": 1790065959076,
+   "from": "Ready for testing",
+   "to": "In testing",
+   "by": "Elmurod Odilov"
+  },
+  {
+   "at": "2026-09-22T08:32:45.951Z",
+   "ms": 1790065965951,
+   "from": "In testing",
+   "to": "Ready for release",
+   "by": "Elmurod Odilov"
+  },
+  {
+   "at": "2026-09-22T08:32:48.637Z",
+   "ms": 1790065968637,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Elmurod Odilov"
+  }
+ ],
+ "integrity": []
+}

@@ -1,0 +1,68 @@
+{
+ "key": "EP-40393",
+ "summary": "Fix payment form (after country manager deploying)",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2025-03-11T11:18:02.815Z",
+ "createdMs": 1741691882815,
+ "resolved": "2026-09-16T12:28:53.100Z",
+ "resolvedMs": 1789561733100,
+ "priority": "Medium",
+ "team": null,
+ "labels": [],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 21,
+ "changelogReturned": 21,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2025-03-11T11:18:24.383Z",
+   "ms": 1741691904383,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-03-12T13:12:50.029Z",
+   "ms": 1741785170029,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-05-12T20:35:08.187Z",
+   "ms": 1747082108187,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-05-14T22:24:57.848Z",
+   "ms": 1747261497848,
+   "from": "Task in testing",
+   "to": "Ready for deploy",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2026-09-15T16:47:52.074Z",
+   "ms": 1789490872074,
+   "from": "QA Tested",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-16T12:28:53.130Z",
+   "ms": 1789561733130,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "integrity": [
+  "chain break Ready for deploy -> QA Tested at 2026-09-15T16:47:52.074Z"
+ ]
+}

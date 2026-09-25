@@ -1,0 +1,98 @@
+{
+ "key": "EP-56738",
+ "summary": "Point backend front-cache revalidation at /nextapi/revalidate/all",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-08-27T14:41:18.450Z",
+ "createdMs": 1787841678450,
+ "resolved": "2026-09-15T18:00:45.545Z",
+ "resolvedMs": 1789495245545,
+ "priority": "Medium",
+ "team": "Staff Team",
+ "labels": [
+  "Frontend-dev",
+  "routing",
+  "tech-debt"
+ ],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 13,
+ "changelogReturned": 13,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-08-27T15:00:22.708Z",
+   "ms": 1787842822708,
+   "from": "Open",
+   "to": "Ready for development",
+   "by": "Oleksandr Zakablukov"
+  },
+  {
+   "at": "2026-08-27T15:00:24.601Z",
+   "ms": 1787842824601,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Oleksandr Zakablukov"
+  },
+  {
+   "at": "2026-08-27T15:00:27.784Z",
+   "ms": 1787842827784,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Oleksandr Zakablukov"
+  },
+  {
+   "at": "2026-09-14T16:16:37.689Z",
+   "ms": 1789402597689,
+   "from": "Code review and merge",
+   "to": "In progress",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T07:29:28.341Z",
+   "ms": 1789457368341,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Oleksandr Zakablukov"
+  },
+  {
+   "at": "2026-09-15T07:29:31.761Z",
+   "ms": 1789457371761,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Oleksandr Zakablukov"
+  },
+  {
+   "at": "2026-09-15T07:29:40.064Z",
+   "ms": 1789457380064,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Oleksandr Zakablukov"
+  },
+  {
+   "at": "2026-09-15T07:30:08.712Z",
+   "ms": 1789457408712,
+   "from": "QA Tested",
+   "to": "Direct Deploy",
+   "by": "Oleksandr Zakablukov"
+  },
+  {
+   "at": "2026-09-15T16:48:55.057Z",
+   "ms": 1789490935057,
+   "from": "Direct Deploy",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T18:00:45.568Z",
+   "ms": 1789495245568,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Oleksandr Zakablukov"
+  }
+ ],
+ "integrity": []
+}

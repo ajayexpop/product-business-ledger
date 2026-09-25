@@ -1,0 +1,125 @@
+{
+ "key": "EP-57257",
+ "summary": "Story 31. Disable New UI Registration toggle for all clients (available on newdemo only)",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-09-12T11:24:53.812Z",
+ "createdMs": 1789212293812,
+ "resolved": null,
+ "resolvedMs": null,
+ "priority": "High",
+ "team": "Visitor team",
+ "labels": [
+  "DoDUserStory"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": "EP-54655",
+ "subtasks": [
+  {
+   "key": "EP-57275",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-57276",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  }
+ ],
+ "changelogTotal": 26,
+ "changelogReturned": 26,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-12T11:25:29.057Z",
+   "ms": 1789212329057,
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-12T11:25:33.518Z",
+   "ms": 1789212333518,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-12T11:26:56.391Z",
+   "ms": 1789212416391,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-14T09:52:11.326Z",
+   "ms": 1789379531326,
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-14T09:52:22.259Z",
+   "ms": 1789379542259,
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-14T09:52:25.910Z",
+   "ms": 1789379545910,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-14T09:52:28.727Z",
+   "ms": 1789379548727,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-14T13:00:16.058Z",
+   "ms": 1789390816058,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Dmytro Liashyk"
+  },
+  {
+   "at": "2026-09-14T13:41:45.679Z",
+   "ms": 1789393305679,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Dmytro Liashyk"
+  },
+  {
+   "at": "2026-09-14T14:05:48.179Z",
+   "ms": 1789394748179,
+   "from": "QA Tested",
+   "to": "Direct Deploy",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-14T14:05:51.362Z",
+   "ms": 1789394751362,
+   "from": "Direct Deploy",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-15T16:47:30.706Z",
+   "ms": 1789490850706,
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "integrity": []
+}

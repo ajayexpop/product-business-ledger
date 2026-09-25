@@ -1,0 +1,170 @@
+{
+ "key": "EP-56372",
+ "summary": "Add FBM Gabarito to remaining pages [Android]",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-08-19T12:52:51.166Z",
+ "createdMs": 1787143971166,
+ "resolved": "2026-09-14T08:41:05.690Z",
+ "resolvedMs": 1789375265690,
+ "priority": "Medium",
+ "team": "Mobile team",
+ "labels": [
+  "DoDUserStory"
+ ],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [
+  {
+   "key": "EP-56374",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56375",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56376",
+   "type": "Sub-task",
+   "status": "Rejected",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56377",
+   "type": "Sub-task",
+   "status": "Rejected",
+   "cat": "done"
+  }
+ ],
+ "changelogTotal": 34,
+ "changelogReturned": 34,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-08-20T13:54:32.855Z",
+   "ms": 1787234072855,
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Taimoor Zulfiqar"
+  },
+  {
+   "at": "2026-08-20T13:54:35.303Z",
+   "ms": 1787234075303,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Taimoor Zulfiqar"
+  },
+  {
+   "at": "2026-08-20T13:54:49.979Z",
+   "ms": 1787234089979,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Taimoor Zulfiqar"
+  },
+  {
+   "at": "2026-08-20T13:54:55.213Z",
+   "ms": 1787234095213,
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Taimoor Zulfiqar"
+  },
+  {
+   "at": "2026-08-20T15:03:46.315Z",
+   "ms": 1787238226315,
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-08-20T15:03:49.785Z",
+   "ms": 1787238229785,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-08-26T14:27:12.893Z",
+   "ms": 1787754432893,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Oleksandr Yelfutin"
+  },
+  {
+   "at": "2026-09-09T10:23:09.581Z",
+   "ms": 1788949389581,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2026-09-10T02:26:56.327Z",
+   "ms": 1789007216327,
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2026-09-10T10:04:20.778Z",
+   "ms": 1789034660778,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2026-09-10T10:04:31.825Z",
+   "ms": 1789034671825,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2026-09-10T10:04:38.230Z",
+   "ms": 1789034678230,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2026-09-10T10:04:44.785Z",
+   "ms": 1789034684785,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2026-09-14T08:40:57.069Z",
+   "ms": 1789375257069,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-09-14T08:41:01.832Z",
+   "ms": 1789375261832,
+   "from": "Staged for Release",
+   "to": "RC approved",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-09-14T08:41:05.713Z",
+   "ms": 1789375265713,
+   "from": "RC approved",
+   "to": "COMPLETE",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-09-15T16:47:30.706Z",
+   "ms": 1789490850706,
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "integrity": []
+}

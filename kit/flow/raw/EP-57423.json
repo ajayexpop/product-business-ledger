@@ -1,0 +1,71 @@
+{
+ "key": "EP-57423",
+ "summary": "ClickHouse: system.query_log + system.trace_log consuming ~135GB (32% of disk), no TTL",
+ "type": "Bug",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-09-17T05:44:06.256Z",
+ "createdMs": 1789623846256,
+ "resolved": "2026-09-21T08:41:20.530Z",
+ "resolvedMs": 1789980080530,
+ "priority": "Medium",
+ "team": "Data Science",
+ "labels": [
+  "ai-analyzed",
+  "ai-needs-info"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 9,
+ "changelogReturned": 9,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-17T05:44:35.973Z",
+   "ms": 1789623875973,
+   "from": "Open",
+   "to": "Ready to start",
+   "by": "Emmanuel Okorie"
+  },
+  {
+   "at": "2026-09-17T05:44:38.659Z",
+   "ms": 1789623878659,
+   "from": "Ready to start",
+   "to": "In progress",
+   "by": "Emmanuel Okorie"
+  },
+  {
+   "at": "2026-09-21T08:41:00.825Z",
+   "ms": 1789980060825,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Fazil Mammadli"
+  },
+  {
+   "at": "2026-09-21T08:41:06.844Z",
+   "ms": 1789980066844,
+   "from": "Ready for testing",
+   "to": "In testing",
+   "by": "Fazil Mammadli"
+  },
+  {
+   "at": "2026-09-21T08:41:15.740Z",
+   "ms": 1789980075740,
+   "from": "In testing",
+   "to": "Ready for release",
+   "by": "Fazil Mammadli"
+  },
+  {
+   "at": "2026-09-21T08:41:20.550Z",
+   "ms": 1789980080550,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Fazil Mammadli"
+  }
+ ],
+ "integrity": []
+}

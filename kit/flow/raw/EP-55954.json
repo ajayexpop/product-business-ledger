@@ -1,0 +1,150 @@
+{
+ "key": "EP-55954",
+ "summary": "Decouple schedule page, exhibitor and speaker profile from show placeholder setting",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-08-06T09:20:10.582Z",
+ "createdMs": 1786008010582,
+ "resolved": "2026-09-17T07:18:05.047Z",
+ "resolvedMs": 1789629485047,
+ "priority": "Medium",
+ "team": "Mobile team",
+ "labels": [
+  "DoDUserStory"
+ ],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [
+  {
+   "key": "EP-56655",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56656",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56657",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  }
+ ],
+ "changelogTotal": 40,
+ "changelogReturned": 40,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-08-19T14:17:20.056Z",
+   "ms": 1787149040056,
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-08-19T14:17:23.427Z",
+   "ms": 1787149043427,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-08-19T14:21:51.284Z",
+   "ms": 1787149311284,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-08-26T13:38:05.266Z",
+   "ms": 1787751485266,
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-09-02T11:59:31.151Z",
+   "ms": 1788350371151,
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-09-02T11:59:35.038Z",
+   "ms": 1788350375038,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-09-02T11:59:41.921Z",
+   "ms": 1788350381921,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-09-02T11:59:45.496Z",
+   "ms": 1788350385496,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-09-04T09:52:49.753Z",
+   "ms": 1788515569753,
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-09-04T09:52:56.599Z",
+   "ms": 1788515576599,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-09-04T09:52:59.501Z",
+   "ms": 1788515579501,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Piotr Wi\u015bniewski"
+  },
+  {
+   "at": "2026-09-10T11:38:05.880Z",
+   "ms": 1789040285880,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Yurii Lytvynenko"
+  },
+  {
+   "at": "2026-09-11T13:56:14.514Z",
+   "ms": 1789134974514,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Yurii Lytvynenko"
+  },
+  {
+   "at": "2026-09-15T16:47:52.074Z",
+   "ms": 1789490872074,
+   "from": "QA Tested",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-17T07:18:05.075Z",
+   "ms": 1789629485075,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Piotr Wi\u015bniewski"
+  }
+ ],
+ "integrity": []
+}

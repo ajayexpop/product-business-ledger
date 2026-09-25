@@ -1,0 +1,107 @@
+{
+ "key": "EP-56337",
+ "summary": "Web front sends referSource=profile_meetings (the Meeting Wizard slug) for the participant's own meetings page \u2014 21 040 rows on 48 tenants reported as admin-booked",
+ "type": "Bug",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-08-18T16:49:01.460Z",
+ "createdMs": 1787071741460,
+ "resolved": "2026-09-22T09:30:20.916Z",
+ "resolvedMs": 1790069420916,
+ "priority": "Medium",
+ "team": "Exhibitor team",
+ "labels": [
+  "ai-analyzed",
+  "ai-valid",
+  "meeting-source-slug-collision"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 33,
+ "changelogReturned": 33,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-08-31T07:46:39.412Z",
+   "ms": 1788162399412,
+   "from": "PM review",
+   "to": "Ready for development",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-08-31T13:40:41.212Z",
+   "ms": 1788183641212,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-01T08:21:09.650Z",
+   "ms": 1788250869650,
+   "from": "In progress",
+   "to": "Ready for development",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-02T12:19:15.208Z",
+   "ms": 1788351555208,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-02T12:19:29.521Z",
+   "ms": 1788351569521,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-02T14:21:23.820Z",
+   "ms": 1788358883820,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2026-09-03T08:33:02.169Z",
+   "ms": 1788424382169,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2026-09-04T13:12:31.893Z",
+   "ms": 1788527551893,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-14T09:03:15.162Z",
+   "ms": 1789376595162,
+   "from": "Staged for Release",
+   "to": "RC approved",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2026-09-15T16:52:51.747Z",
+   "ms": 1789491171747,
+   "from": "RC approved",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-22T09:30:20.946Z",
+   "ms": 1790069420946,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Ivan Tymoshenko"
+  }
+ ],
+ "integrity": []
+}

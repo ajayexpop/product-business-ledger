@@ -1,0 +1,111 @@
+{
+ "key": "EP-54890",
+ "summary": "[EP:QA] Old ticketing is displayed when 'New ticketing' is ON",
+ "type": "Bug",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-06-26T09:46:52.771Z",
+ "createdMs": 1782467212771,
+ "resolved": "2026-09-21T16:10:25.192Z",
+ "resolvedMs": 1790007025192,
+ "priority": "Low",
+ "team": "Organizer team",
+ "labels": [
+  "ai-analyzed",
+  "ai-valid"
+ ],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 37,
+ "changelogReturned": 37,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-06-26T09:47:07.657Z",
+   "ms": 1782467227657,
+   "from": "PM review",
+   "to": "Ready for development",
+   "by": "Oleksandr Pylypenko"
+  },
+  {
+   "at": "2026-06-26T11:35:03.117Z",
+   "ms": 1782473703117,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Oleksiy Leshchenko"
+  },
+  {
+   "at": "2026-06-30T11:20:57.821Z",
+   "ms": 1782818457821,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Oleksiy Leshchenko"
+  },
+  {
+   "at": "2026-07-02T09:52:34.217Z",
+   "ms": 1782985954217,
+   "from": "Code review and merge",
+   "to": "Ready for testing",
+   "by": "Oleksiy Leshchenko"
+  },
+  {
+   "at": "2026-07-09T07:45:19.211Z",
+   "ms": 1783583119211,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Oleksandr Pylypenko"
+  },
+  {
+   "at": "2026-07-09T07:46:26.299Z",
+   "ms": 1783583186299,
+   "from": "Task in testing",
+   "to": "On-hold",
+   "by": "Oleksandr Pylypenko"
+  },
+  {
+   "at": "2026-09-07T09:23:19.913Z",
+   "ms": 1788772999913,
+   "from": "On-hold",
+   "to": "Task in testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2026-09-07T09:23:30.361Z",
+   "ms": 1788773010361,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2026-09-09T06:00:39.841Z",
+   "ms": 1788933639841,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Oleksiy Leshchenko"
+  },
+  {
+   "at": "2026-09-11T20:37:17.034Z",
+   "ms": 1789159037034,
+   "from": "Staged for Release",
+   "to": "RC approved",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2026-09-15T16:52:51.747Z",
+   "ms": 1789491171747,
+   "from": "RC approved",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-21T16:10:25.218Z",
+   "ms": 1790007025218,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "integrity": []
+}

@@ -1,0 +1,93 @@
+{
+ "key": "EP-57330",
+ "summary": "Session Calendar View - Show starting and ending time slots only",
+ "type": "Story",
+ "level": 0,
+ "status": "In Progress",
+ "statusCategory": "indeterminate",
+ "created": "2026-09-15T07:02:38.032Z",
+ "createdMs": 1789455758032,
+ "resolved": null,
+ "resolvedMs": null,
+ "priority": "Urgent",
+ "team": "Mobile team",
+ "labels": [],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": null,
+ "subtasks": [
+  {
+   "key": "EP-57462",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-57464",
+   "type": "Sub-task",
+   "status": "In Progress",
+   "cat": "indeterminate"
+  },
+  {
+   "key": "EP-57465",
+   "type": "Sub-task",
+   "status": "Ready to start",
+   "cat": "new"
+  },
+  {
+   "key": "EP-57466",
+   "type": "Sub-task",
+   "status": "Ready to start",
+   "cat": "new"
+  }
+ ],
+ "changelogTotal": 16,
+ "changelogReturned": 16,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-15T15:13:21.796Z",
+   "ms": 1789485201796,
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Taimoor Zulfiqar"
+  },
+  {
+   "at": "2026-09-15T15:13:23.971Z",
+   "ms": 1789485203971,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Taimoor Zulfiqar"
+  },
+  {
+   "at": "2026-09-15T15:13:29.186Z",
+   "ms": 1789485209186,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Taimoor Zulfiqar"
+  },
+  {
+   "at": "2026-09-15T16:48:16.083Z",
+   "ms": 1789490896083,
+   "from": "Brief ready for review",
+   "to": "Open",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-18T14:11:37.094Z",
+   "ms": 1789740697094,
+   "from": "Open",
+   "to": "Ready to start",
+   "by": "Taimoor Zulfiqar"
+  },
+  {
+   "at": "2026-09-18T14:11:41.472Z",
+   "ms": 1789740701472,
+   "from": "Ready to start",
+   "to": "In progress",
+   "by": "Taimoor Zulfiqar"
+  }
+ ],
+ "integrity": []
+}

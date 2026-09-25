@@ -1,0 +1,130 @@
+{
+ "key": "EP-56418",
+ "summary": "Return Button to Global search result page",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-08-20T08:55:15.972Z",
+ "createdMs": 1787216115972,
+ "resolved": "2026-09-17T09:55:50.358Z",
+ "resolvedMs": 1789638950358,
+ "priority": "Medium",
+ "team": "Exhibitor team",
+ "labels": [
+  "DoDUserStory"
+ ],
+ "reportedBy": [],
+ "parent": "EP-44808",
+ "subtasks": [
+  {
+   "key": "EP-56913",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-56914",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  }
+ ],
+ "changelogTotal": 47,
+ "changelogReturned": 47,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-01T12:10:23.509Z",
+   "ms": 1788264623509,
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-02T11:47:47.504Z",
+   "ms": 1788349667504,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-02T11:48:11.971Z",
+   "ms": 1788349691971,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-02T11:48:33.226Z",
+   "ms": 1788349713226,
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-02T11:58:29.176Z",
+   "ms": 1788350309176,
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-03T09:50:08.480Z",
+   "ms": 1788429008480,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-07T09:57:55.072Z",
+   "ms": 1788775075072,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-08T07:07:19.753Z",
+   "ms": 1788851239753,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-08T08:32:51.844Z",
+   "ms": 1788856371844,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-08T09:50:39.306Z",
+   "ms": 1788861039306,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-10T11:54:36.403Z",
+   "ms": 1789041276403,
+   "from": "Staged for Release",
+   "to": "RC approved",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-15T16:48:24.408Z",
+   "ms": 1789490904408,
+   "from": "RC approved",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-17T09:55:50.385Z",
+   "ms": 1789638950385,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Ivan Tymoshenko"
+  }
+ ],
+ "integrity": []
+}

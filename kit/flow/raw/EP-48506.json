@@ -1,0 +1,87 @@
+{
+ "key": "EP-48506",
+ "summary": "Refactor for XLS/PDF agenda in schedules (ScheduleAgendaGeneratorService)",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-01-26T12:17:17.711Z",
+ "createdMs": 1769429837711,
+ "resolved": "2026-09-18T13:22:42.886Z",
+ "resolvedMs": 1789737762886,
+ "priority": "High",
+ "team": "Exhibitor team",
+ "labels": [],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [
+  {
+   "key": "EP-57095",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  }
+ ],
+ "changelogTotal": 94,
+ "changelogReturned": 94,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-08-14T09:49:12.029Z",
+   "ms": 1786700952029,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-07T09:29:41.381Z",
+   "ms": 1788773381381,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Christian Morales"
+  },
+  {
+   "at": "2026-09-09T08:02:44.908Z",
+   "ms": 1788940964908,
+   "from": "Code review and merge",
+   "to": "Ready for testing",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-09T08:03:30.110Z",
+   "ms": 1788941010110,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Konstantin Shein"
+  },
+  {
+   "at": "2026-09-09T16:41:48.160Z",
+   "ms": 1788972108160,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-09-10T13:59:45.007Z",
+   "ms": 1789048785007,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Christian Morales"
+  },
+  {
+   "at": "2026-09-15T16:48:15.437Z",
+   "ms": 1789490895437,
+   "from": "Staged for Release",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-18T13:22:42.907Z",
+   "ms": 1789737762907,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Roman Kubashevych"
+  }
+ ],
+ "integrity": []
+}

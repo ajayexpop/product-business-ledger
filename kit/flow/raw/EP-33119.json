@@ -1,0 +1,132 @@
+{
+ "key": "EP-33119",
+ "summary": "1 Confirmation page setup for Participant",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2024-08-13T06:36:54.155Z",
+ "createdMs": 1723531014155,
+ "resolved": "2026-09-16T12:28:52.374Z",
+ "resolvedMs": 1789561732374,
+ "priority": "Medium",
+ "team": "Visitor team",
+ "labels": [
+  "Team_B"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": "EP-916",
+ "subtasks": [
+  {
+   "key": "EP-33140",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-35703",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-35704",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  },
+  {
+   "key": "EP-37946",
+   "type": "Sub-task",
+   "status": "Ready to start",
+   "cat": "new"
+  }
+ ],
+ "changelogTotal": 62,
+ "changelogReturned": 62,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2024-08-13T06:53:04.407Z",
+   "ms": 1723531984407,
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2024-09-23T10:40:02.994Z",
+   "ms": 1727088002994,
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2024-09-23T10:40:05.169Z",
+   "ms": 1727088005169,
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2024-11-20T13:23:28.698Z",
+   "ms": 1732109008698,
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-11-20T13:23:30.620Z",
+   "ms": 1732109010620,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-11-22T14:30:40.556Z",
+   "ms": 1732285840556,
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-11-26T10:20:37.329Z",
+   "ms": 1732616437329,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2024-12-13T10:03:33.263Z",
+   "ms": 1734084213263,
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2026-01-22T11:16:45.595Z",
+   "ms": 1769080605595,
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T16:47:52.074Z",
+   "ms": 1789490872074,
+   "from": "QA Tested",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-16T12:28:52.394Z",
+   "ms": 1789561732394,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "integrity": [
+  "chain break Ready for deploy -> QA Tested at 2026-09-15T16:47:52.074Z"
+ ]
+}

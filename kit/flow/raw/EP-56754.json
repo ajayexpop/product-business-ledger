@@ -1,0 +1,94 @@
+{
+ "key": "EP-56754",
+ "summary": "Switch Pull Integration Service to DI style",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-08-28T09:05:19.974Z",
+ "createdMs": 1787907919974,
+ "resolved": "2026-09-22T10:31:33.385Z",
+ "resolvedMs": 1790073093385,
+ "priority": "Medium",
+ "team": "Integration team",
+ "labels": [],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 19,
+ "changelogReturned": 19,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-03T09:14:08.154Z",
+   "ms": 1788426848154,
+   "from": "Open",
+   "to": "Ready for development",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2026-09-03T09:14:10.959Z",
+   "ms": 1788426850959,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2026-09-03T09:14:14.959Z",
+   "ms": 1788426854959,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2026-09-14T16:16:15.827Z",
+   "ms": 1789402575827,
+   "from": "Code review and merge",
+   "to": "In progress",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-22T10:31:09.078Z",
+   "ms": 1790073069078,
+   "from": "In progress",
+   "to": "Ready for review",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2026-09-22T10:31:12.215Z",
+   "ms": 1790073072215,
+   "from": "Ready for review",
+   "to": "In Review",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2026-09-22T10:31:18.687Z",
+   "ms": 1790073078687,
+   "from": "In Review",
+   "to": "Ready for testing",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2026-09-22T10:31:21.635Z",
+   "ms": 1790073081635,
+   "from": "Ready for testing",
+   "to": "In testing",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2026-09-22T10:31:27.111Z",
+   "ms": 1790073087111,
+   "from": "In testing",
+   "to": "Ready for release",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2026-09-22T10:31:33.411Z",
+   "ms": 1790073093411,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Mykola Litvynchuk"
+  }
+ ],
+ "integrity": []
+}

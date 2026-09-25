@@ -1,0 +1,85 @@
+{
+ "key": "EP-57402",
+ "summary": "[EP:QA] [Registration - Payments] 'Your payment could not be started.' error is displayed for Buyer",
+ "type": "Bug",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-09-16T12:51:05.132Z",
+ "createdMs": 1789563065132,
+ "resolved": "2026-09-21T09:34:36.897Z",
+ "resolvedMs": 1789983276897,
+ "priority": "High",
+ "team": "Organizer team",
+ "labels": [
+  "ai-analyzed",
+  "ai-valid"
+ ],
+ "reportedBy": [
+  "INTERNAL"
+ ],
+ "parent": null,
+ "subtasks": [],
+ "changelogTotal": 28,
+ "changelogReturned": 28,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-09-17T05:50:54.336Z",
+   "ms": 1789624254336,
+   "from": "Open",
+   "to": "Ready to start",
+   "by": "Oleksiy Leshchenko"
+  },
+  {
+   "at": "2026-09-17T05:50:58.332Z",
+   "ms": 1789624258332,
+   "from": "Ready to start",
+   "to": "In progress",
+   "by": "Oleksiy Leshchenko"
+  },
+  {
+   "at": "2026-09-17T13:57:20.976Z",
+   "ms": 1789653440976,
+   "from": "In progress",
+   "to": "Ready for review",
+   "by": "Oleksiy Leshchenko"
+  },
+  {
+   "at": "2026-09-18T13:33:59.981Z",
+   "ms": 1789738439981,
+   "from": "Ready for review",
+   "to": "In Review",
+   "by": "Oleksandr Pylypenko"
+  },
+  {
+   "at": "2026-09-18T13:34:04.845Z",
+   "ms": 1789738444845,
+   "from": "In Review",
+   "to": "Ready for testing",
+   "by": "Oleksandr Pylypenko"
+  },
+  {
+   "at": "2026-09-18T13:34:07.821Z",
+   "ms": 1789738447821,
+   "from": "Ready for testing",
+   "to": "In testing",
+   "by": "Oleksandr Pylypenko"
+  },
+  {
+   "at": "2026-09-21T09:32:19.609Z",
+   "ms": 1789983139609,
+   "from": "In testing",
+   "to": "Ready for release",
+   "by": "Oleksandr Pylypenko"
+  },
+  {
+   "at": "2026-09-21T09:34:36.920Z",
+   "ms": 1789983276920,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Oleksandr Pylypenko"
+  }
+ ],
+ "integrity": []
+}

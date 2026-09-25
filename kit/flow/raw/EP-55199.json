@@ -1,0 +1,97 @@
+{
+ "key": "EP-55199",
+ "summary": "CustomHeader search: show categories selector on mobile + static in-flow panel",
+ "type": "Story",
+ "level": 0,
+ "status": "Done",
+ "statusCategory": "done",
+ "created": "2026-07-09T13:15:37.161Z",
+ "createdMs": 1783602937161,
+ "resolved": "2026-09-16T09:01:14.053Z",
+ "resolvedMs": 1789549274053,
+ "priority": "Medium",
+ "team": "Staff Team",
+ "labels": [
+  "Frontend-dev",
+  "frontend"
+ ],
+ "reportedBy": [],
+ "parent": null,
+ "subtasks": [
+  {
+   "key": "EP-55436",
+   "type": "Sub-task",
+   "status": "Done",
+   "cat": "done"
+  }
+ ],
+ "changelogTotal": 21,
+ "changelogReturned": 21,
+ "changelogStartAt": 0,
+ "transitions": [
+  {
+   "at": "2026-07-09T13:23:35.238Z",
+   "ms": 1783603415238,
+   "from": "Open",
+   "to": "Ready for development",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-07-09T13:23:37.550Z",
+   "ms": 1783603417550,
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-07-09T15:38:55.880Z",
+   "ms": 1783611535880,
+   "from": "In progress",
+   "to": "Code review and merge",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-07-17T08:37:27.054Z",
+   "ms": 1784277447054,
+   "from": "Code review and merge",
+   "to": "Ready for testing",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-07-17T12:56:45.613Z",
+   "ms": 1784293005613,
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-07-20T14:21:21.338Z",
+   "ms": 1784557281338,
+   "from": "Task in testing",
+   "to": "QA Tested",
+   "by": "Roman Kubashevych"
+  },
+  {
+   "at": "2026-07-20T14:53:00.738Z",
+   "ms": 1784559180738,
+   "from": "QA Tested",
+   "to": "Staged for Release",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2026-09-15T16:48:15.437Z",
+   "ms": 1789490895437,
+   "from": "Staged for Release",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-16T09:01:14.075Z",
+   "ms": 1789549274075,
+   "from": "Ready for release",
+   "to": "Done",
+   "by": "Ivan Tymoshenko"
+  }
+ ],
+ "integrity": []
+}
