@@ -208,7 +208,7 @@ The attribution order differs from the bug side — incidents try override label
 | `s`, `pr`, `wy`, `oc` | Summary, problem, why, outcome | **AI, from the ticket and its linked spec** |
 | `lens`, `pa` | Theme and product area | **AI classification** |
 | `cf` | Confidence in the AI text: High 418, Medium 140, **Low 92** | AI self-assessment |
-| `cl` | Client labels — the only link to a client | Jira labels |
+| `cl` (`tags`) | Client tokens — the only link to a client | Jira Reported by, `customfield_10145` (corrected 24 Sep 2026: not labels) |
 
 The prose on every story card is AI-written, never invented from nothing, but 92 stories are flagged low confidence and are marked as such wherever they appear. Treat a low-confidence summary as a pointer to the ticket, not as a statement of fact.
 
@@ -571,7 +571,7 @@ Much weaker, and the asymmetry is the point:
 
 | Rule | Detail |
 | --- | --- |
-| 1 | A story counts for a client **only** if it carries that client's label in Jira. 61 of 650 do. |
+| 1 | A story counts for a client **only** if Jira names that client on it, in its Reported by field (`customfield_10145`). 70 of 684 do (61 of the inherited 650). |
 | 2 | Labels join to companies through the same Pipedrive dictionary the bug side uses. |
 | 3 | INTERNAL-labelled and unlabelled stories become the platform band. They are never attributed to a client and never counted in a client's Shipped column. |
 
@@ -916,6 +916,8 @@ Every logic change gets a row. The registry holds the rule; this log holds when 
 
 | Date | Change | Why | By |
 | --- | --- | --- | --- |
+| 24 Sep 2026 | **34 started or shipped stories added to the page (Version 4 of this URL)**: 650 → 684 stories (567 shipped, 117 in progress), taken from the story cache where Jira's status category is In Progress or Done; the 512 not started stay in the cache (`dl-story-population`). 9 name a client, so named stories go 61 → 70 and investment moves for DLG (3 → 9), HINTE (8 → 10) and IMEX (15 → 16); no quadrant, KPI tile or other client changes. Registry v7 → v8, 203 → 204 rules; `dl-story-attribution` reworded | The owner asked to add the new stories; 512 of the 546 had not started, and the owner chose to add only those started or shipped | Claude, for Ajay |
+| 24 Sep 2026 | **Story attribution field corrected**: a story names a client through its Reported by field (`customfield_10145`), not its Jira labels. All 61 inherited tagged stories match Reported by and none matches labels; the rule, the Method tab and this document said labels | The wording described the wrong field | Claude |
 | 24 Sep 2026 | **Story to epic hierarchy (Version 3 of this URL)**: every ledger story now carries its Jira epic key; the Delivery tab has an **Epics** view (epic, its stories, shipped and in progress counted from the stories, Jira's own epic status shown only as Jira's and flagged where it disagrees); the Epic line on each story opens the epic. 373 of the 650 stories sit under 57 epics; 277 have no parent in Jira. 13 stories show a different epic name from the 16 Sep snapshot (moved or renamed). EP epics have no parent, so the hierarchy is two levels | The owner asked to see the story to epic hierarchy; the dataset held an epic name only | Claude, for Ajay |
 | 24 Sep 2026 | **Story cache and delta runs**: all 1,192 in-scope 2026 stories pulled into `data/stories/cache/` with their epic and what, why and outcome; the 650 keep their inherited text, 546 were written new to `data/stories/SPEC.md` (393 High, 66 Medium, 87 Low confidence). 365 EP epics and 4 cross-project epics (EI, HV) cached. `tools/stories.py plan` gives the next run's delta. Not on the page yet: the page still reports on the 650 | So later runs pull only what changed, and the story generator is documented | Claude, for Ajay |
 | 24 Sep 2026 | **Logic registry v6 → v7: 201 → 203 rules**: `dl-epic-hierarchy`, `src-story-cache` | The rules behind the two changes above travel with the artifact | Claude |

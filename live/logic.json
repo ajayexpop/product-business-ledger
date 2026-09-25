@@ -1,5 +1,5 @@
 {
- "version": 7,
+ "version": 8,
  "updated": "2026-09-24",
  "updatedBy": "claude",
  "rules": [
@@ -1132,8 +1132,8 @@
    "name": "Which client gets a story",
    "kind": "reference",
    "type": "longtext",
-   "value": "A story attaches to a client through its Jira labels, resolved to Pipedrive company ids in the pds field. A story carrying two client labels appears in both client rows and is counted once in each, so the band totals exceed the story count where labels overlap. A story with no client label is platform work and appears in the platform band under the team that built it, never against a client.",
-   "why": "Deliberately different from the bug rule below: a story has no Reported By field and no Pipedrive stamp, only labels. Only 61 of 650 stories carry one, so the client rows are thin by construction and the platform band holds 589.",
+   "value": "A story attaches to a client through the client tokens in its Jira Reported by field (customfield_10145, the dataset's tags), resolved to Pipedrive company ids in the pds field; INTERNAL marks it internal and names nobody. A story carrying two client tokens appears in both client rows and is counted once in each, so the band totals exceed the story count where they overlap. A story naming no client is platform work and appears in the platform band under the team that built it, never against a client.",
+   "why": "Checked 24 Sep 2026: all 61 inherited tagged stories match their Reported by values and none matches its Jira labels, so the earlier wording (labels) described the wrong field. Deliberately different from the bug rule: a story has no Pipedrive stamp. 70 of 684 stories name a client, so the client rows are thin by construction.",
    "source": "Delivery Timeline dataset + live Jira"
   },
   {
@@ -1265,6 +1265,16 @@
    "value": "Epic = the story's Jira parent where that parent is an Epic (hierarchy level 1), read on each story pull; the epic may sit in another project (EI, HV). EP epics have no parent, so the hierarchy is two levels: story, then epic. The Epics view on the Delivery tab groups the ledger's stories by that epic and counts shipped and in progress from the stories themselves. The epic's own Jira status is shown only as Jira's, and flagged where it disagrees with its stories. A story with no parent is listed under No epic, never guessed from its title.",
    "why": "The dataset carried an epic name and no key, so nothing could be grouped or opened, and 13 of the names had gone stale by 24 Sep as stories moved epics. Epic status is not read as progress because it does not track its children at EP (sv-epic-status).",
    "source": "Ajay, 24 Sep 2026: \"we are missing story - epic hierarchy please add that so we can see that\". Checked live: 0 of 365 EP epics has a parent."
+  },
+  {
+   "id": "dl-story-population",
+   "group": "Delivery timeline",
+   "name": "The page carries stories that have shipped or started; stories not yet started stay in the cache",
+   "kind": "reference",
+   "type": "longtext",
+   "value": "Page stories = the 650 inherited from the Delivery Timeline (16 Sep 2026) plus every other in-scope 2026 story whose Jira status category is In Progress or Done at the story pull, 34 on 24 Sep 2026 (27 in progress, 7 shipped), marked added. Stories in To Do (Open, Ready to start: 512 on 24 Sep) are held in data/stories/cache with their text and epic but are not on the page, because investment counts shipped or in-progress work only (il-investment-unit).",
+   "why": "Adding the backlog would have counted planned work as delivery and moved clients across the quadrant. The owner chose, 24 Sep 2026, to add only the started and shipped stories.",
+   "source": "Ajay, 24 Sep 2026."
   },
   {
    "id": "ev-source",
@@ -2347,6 +2357,28 @@
      "kind": "added",
      "from": "—",
      "to": "Scope: project = EP AND issuetype = Story AND created >= 2026-01-01 AND status != Rejected (1,192 on 24 Sep 2026). One r…"
+    }
+   ]
+  },
+  {
+   "v": 8,
+   "at": "2026-09-24T22:30:00Z",
+   "by": "claude",
+   "note": "34 started or shipped stories added to the page: 1 rule added, 1 reworded, 204 in all.",
+   "changes": [
+    {
+     "id": "dl-story-population",
+     "name": "The page carries stories that have shipped or started; stories not yet started stay in the cache",
+     "kind": "added",
+     "from": "—",
+     "to": "Page stories = the 650 inherited from the Delivery Timeline (16 Sep 2026) plus every other in-scope 2026 story whose Jir…"
+    },
+    {
+     "id": "dl-story-attribution",
+     "name": "Which client gets a story",
+     "kind": "reworded",
+     "from": "A story attaches to a client through its Jira labels, resolved to Pipedrive company ids in the pds field. A story carryi…",
+     "to": "A story attaches to a client through the client tokens in its Jira Reported by field (customfield_10145, the dataset's t…"
     }
    ]
   }

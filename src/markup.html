@@ -14,7 +14,7 @@
         <div class="meta">
           <span><b>Planhat</b> 49 companies</span>
           <span><b>Jira</b> EP bugs · IMP incidents</span>
-          <span><b>Delivery</b> 650 stories, 2026</span>
+          <span><b>Delivery</b> 684 stories, 2026</span>
         </div>
       </div>
     </div>
@@ -342,7 +342,7 @@
         <h3 style="margin-top:18px;font-size:15px">Which client gets the story</h3>
         <div class="note">New here, and much weaker than the bug side:</div>
         <ol class="steps">
-          <li>A story counts for a client only if it carries that client's label in Jira. 61 of 650 stories do.</li>
+          <li>A story counts for a client only if Jira names that client on it, in its Reported by field. 70 of 684 stories do.</li>
           <li>Labels are joined to Planhat companies through the same Pipedrive id dictionary the bug side uses, learned from how Bug Radar already resolved those labels. A3, Farnborough and Cosmoprof had no bug-side precedent and were mapped by name.</li>
           <li>INTERNAL-labelled and unlabelled stories become the platform band. They are never attributed to a client, and never counted in a client's Shipped column.</li>
         </ol>
@@ -352,7 +352,7 @@
           <li>Planhat returns HTTP 200 for a field name that does not exist. Renaming any of the four fields in Planhat silently freezes every company on yesterday's value.</li>
           <li>Closure is detected from the status name, not statusCategory. A new "closed" status that matches none of the known substrings keeps its bugs counted as open.</li>
           <li>Caps and weights live in three places: the Planhat Health Score Profile, the n8n Compute Health Factors node, and the Weekly Digest QUALITY array.</li>
-          <li>Story summaries are AI-written from the Jira description and any linked spec. 92 of 650 are flagged low confidence and marked as such wherever they appear.</li>
+          <li>Story summaries are AI-written from the Jira description and any linked spec. 97 of 684 are flagged low confidence and marked as such wherever they appear.</li>
         </ol>
       </div>
     </div>
@@ -364,11 +364,11 @@
     <div class="src" style="margin-top:14px">
       <div class="card"><h3>Jira EP (bugs)</h3><p>84 open issues of type Bug with a client in "Reported by" (cf 10145), "Affected clients" (cf 12190) or a Pipedrive Company ID (cf 12108). Pulled 17 Sep 2026 via the Jira REST API.</p><p><a href="https://expoplatform.atlassian.net/issues/?jql=project%20%3D%20EP%20AND%20issuetype%20%3D%20Bug%20AND%20statusCategory%20!%3D%20Done%20AND%20(cf%5B10145%5D%20!%3D%20%22INTERNAL%22%20OR%20cf%5B12190%5D%20is%20not%20EMPTY)" target="_blank" rel="noopener">Open the closest live JQL</a> — it returns 76, not 84. JQL cannot express the INTERNAL discard (a ticket is dropped only if <i>every</i> Reported-by value is INTERNAL), so the last step happens in extraction (jql-ep).</p></div>
       <div class="card"><h3>Jira IMP (incidents)</h3><p>39 incidents created in the last 180 days after removing Grafana noise and test tickets. 31 attributed to a client.</p><p><a href="https://incidents.expoplatform.tools/" target="_blank" rel="noopener">incidents.expoplatform.tools</a> for MTTA, MTTR, SLA and component patterns.</p></div>
-      <div class="card"><h3>Delivery Timeline</h3><p>650 stories delivered or in progress across 2026, 11 teams, six value lenses, generated 16 Sep 2026. Summaries, themes and impact tags are AI-written from each ticket and its linked spec.</p></div>
+      <div class="card"><h3>Delivery Timeline</h3><p>684 stories delivered or in progress across 2026: 650 inherited from the Delivery Timeline, generated 16 Sep 2026, and 34 added from Jira on 24 Sep 2026 with their text written to the documented story spec. Eleven teams, six value lenses. Summaries, themes and impact tags are AI-written from each ticket and its linked spec. A further 512 stories raised in 2026 have not been started; they are held in the story cache, not on this page.</p></div>
       <div class="card"><h3>Planhat</h3><p>Phase = Active, 49 companies: Sales Tier, Health, CSM and RM score, Sentiment, the three Jira factors, Renewal, Owner. <b>Connector live since 21 Sep 2026</b>, so this no longer needs a hand export. Revenue is deliberately not read: Won TCV and contract value were removed from this dashboard on 21 Sep 2026 and are not held in the page.</p><p><a href="https://ws.planhat.com/expoplatform/home/data-explorer/company" target="_blank" rel="noopener">Open in Planhat</a></p></div>
       <div class="card"><h3>Customer &amp; Event workbook</h3><p>Susan&rsquo;s consolidated sheet, read live through the Google Drive connector. Used for one thing: the Pipedrive Company ID that everything else joins on. Contract value and currency are not read. Event dates come from the Jira OP project, 271 editions, not from this sheet.</p><p><a href="https://docs.google.com/spreadsheets/d/1O2N9kDzvDZbPRzhtTy-FlHyeOSrwevIt/edit" target="_blank" rel="noopener">Open the sheet</a></p></div>
       <div class="card"><h3>Health Score design guide</h3><p>Definitions, caps, decay and the bug attribution rules come from the OPKL page reviewed 14 Sep 2026.</p><p><a href="https://expoplatform.atlassian.net/wiki/spaces/OPKL/pages/2015920131" target="_blank" rel="noopener">Bug and Incident Factors guide</a> · <a href="https://expoplatform.atlassian.net/wiki/spaces/OPKL/pages/2090074114" target="_blank" rel="noopener">Client Data Journey hub</a></p></div>
-      <div class="card"><h3>Known gaps</h3><p>Only 61 of 650 stories carry a client label, so the investment axis of this ledger is thin by construction. K5 GmbH is in Jira and the contract sheet but no longer Phase = Active in Planhat, so it has no tier or health. Jira labels differ from Planhat names (FBF, FBM and FrankfurterBuchmesse are one client). 8 incidents carry no client. Only the first paragraph of each Health Factors Breakdown is shown.</p></div>
+      <div class="card"><h3>Known gaps</h3><p>Only 70 of 684 stories name a client, so the investment axis of this ledger is thin by construction. K5 GmbH is in Jira and the contract sheet but no longer Phase = Active in Planhat, so it has no tier or health. Jira labels differ from Planhat names (FBF, FBM and FrankfurterBuchmesse are one client). 8 incidents carry no client. Only the first paragraph of each Health Factors Breakdown is shown.</p></div>
       <div class="card"><h3>What this page is</h3><p>A client-side merge of two existing dashboards — the Client Bug Radar (17 Sep) and the Delivery Timeline (16 Sep). Both originals are untouched; this page holds a copy of their data and reorganises it around the client rather than the team. Jira, Confluence, the workbook and Planhat all pull through connectors; only the 2026 story feed is still re-inherited by hand. The pipeline ledger lives in this artifact’s shared database, the logic registry in logic.json and the flow extract in flow.json: every pull is stored once and read, never re-run on page load.</p></div>
       <div class="card"><h3>Jira EP changelog (flow)</h3><p>64 EP stories and bugs sampled 22 Sep 2026 (50 done, 14 in flight): every status transition and the time in each state, read with <code>expand=changelog</code> through the Atlassian connector and stored in flow.json. It is a sample; the full pull of about 1,200 issues is a scheduled batch. The Flow tab reads the file as it is.</p></div>
       <div class="card"><h3>Pipeline ledger</h3><p>18 must-have items held in this artifact’s shared database, schema 2 since 22 Sep 2026: Team from the Jira ticket, Driver (who it is for), a one-line Why with the old text kept as Rationale. Jira status, due date and logged time are read per row and dated.</p></div>
