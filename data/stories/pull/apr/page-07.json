@@ -1,0 +1,1052 @@
+[
+ {
+  "k": "EP-52247",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52247",
+  "summary": "API V3 - [PUT] /api/v3/events/{eventId}/sessions/types/{typeId} (Update session type)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-22T02:15:57.367+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3602,
+  "ai": {
+   "s": "Adds a V3 PUT endpoint to update an existing session type by its internal ID.",
+   "pr": "In V2, session type updates were combined with creation in /api/v2/sessions/setType.",
+   "wy": "Part of the Public API V3 migration, splitting create and update into clear REST operations.",
+   "oc": "PUT /api/v3/events/{eventId}/sessions/types/{typeId} supports partial updates matched only by typeId.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52248",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52248",
+  "summary": "API V3 - [POST] /api/v3/events/{eventId}/sessions/tracks (Create session track)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-22T02:16:15.243+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3929,
+  "ai": {
+   "s": "Adds a V3 POST endpoint to create session tracks as first-class entities that sessions can then reference.",
+   "pr": "In V2, /api/v2/sessions/setTrack handled both creating and updating tracks.",
+   "wy": "Part of the Public API V3 migration, splitting create and update into clear REST operations.",
+   "oc": "POST /api/v3/events/{eventId}/sessions/tracks creates a track that must exist before it is assigned to sessions.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52249",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52249",
+  "summary": "API V3 - [PUT] /api/v3/events/{eventId}/sessions/tracks/{trackId} (Update session track)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-22T02:16:31.715+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3960,
+  "ai": {
+   "s": "Adds a V3 PUT endpoint to update an existing session track by its internal ID.",
+   "pr": "In V2, session track updates were combined with creation in /api/v2/sessions/setTrack.",
+   "wy": "Part of the Public API V3 migration, splitting create and update into clear REST operations.",
+   "oc": "PUT /api/v3/events/{eventId}/sessions/tracks/{trackId} supports partial updates matched only by trackId.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52291",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52291",
+  "summary": "Design changes",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-22T14:27:26.381+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Designers",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-916",
+   "summary": "Participant Registration on New UI",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 101,
+  "ai": {
+   "s": "Fixes design issues in the new-UI participant registration found in the frontend developers' review.",
+   "pr": "The frontend review found a few design issues, but the ticket leaves the list blank.",
+   "wy": "Part of Participant Registration on the new UI.",
+   "oc": "Not clearly specified beyond the ticket title; design fixes for registration are expected.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52362",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52362",
+  "summary": "[Dashboard] Event Overview — Registration Snapshot, Engagement Rates & Activity Time (R1, R23, R24)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-23T13:05:41.767+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "dashboards",
+   "embeddable",
+   "mig-in-preparation",
+   "reporting"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52360",
+   "summary": "Automated Event Reporting Dashboards (Embeddable.com)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2272,
+  "ai": {
+   "s": "Adds an Event Overview dashboard page with registration snapshot KPIs, engagement rates and activity time for organisers.",
+   "pr": "Organisers had no automated overview of expected versus actual registration, verification and engagement across web and mobile.",
+   "wy": "Part of the Automated Event Reporting Dashboards (Embeddable.com) epic.",
+   "oc": "KPI cards for registration and verification, engagement gauges for exhibitors, attendees, web and mobile, and activity time, cross-filtered by date range (PRD R1, R23, R24).",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52371",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52371",
+  "summary": "[Dashboard] Floorplan & Push Notifications — Map Usage & Notification Performance (R19, R20)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-23T13:08:19.719+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "dashboards",
+   "embeddable",
+   "mig-in-preparation",
+   "reporting"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52360",
+   "summary": "Automated Event Reporting Dashboards (Embeddable.com)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1426,
+  "ai": {
+   "s": "Adds a dashboard page for floor plan usage and push notification performance.",
+   "pr": "Organisers had no automated reporting on map opens, POI clicks or how push notifications performed.",
+   "wy": "Part of the Automated Event Reporting Dashboards (Embeddable.com) epic.",
+   "oc": "Floor plan KPIs and trend from ExpoFP analytics with POI drill-down, plus notification sent, web and app clicks and CTR by batch (PRD R19, R20).",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52372",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52372",
+  "summary": "[Dashboard] Lead Retrieval — Conditional Module (R22)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-23T13:08:33.435+0100",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "DoDUserStory",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52360",
+   "summary": "Automated Event Reporting Dashboards (Embeddable.com)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1220,
+  "ai": {
+   "s": "Adds a conditional Lead Retrieval dashboard page showing lead capture KPIs and top exhibitors by leads.",
+   "pr": "Organisers had no automated view of lead retrieval usage per event.",
+   "wy": "Part of the Automated Event Reporting Dashboards (Embeddable.com) epic.",
+   "oc": "KPIs for exhibitors using lead retrieval, total and average leads and a top-exhibitors table, hidden when native Lead Retrieval is not active (PRD R22).",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52373",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52373",
+  "summary": "[Dashboard] Infrastructure — Embeddable.com Setup, Data Models, Theming & Global Controls",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-23T13:08:53.277+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "dashboards",
+   "embeddable",
+   "infrastructure",
+   "mig-in-preparation",
+   "reporting"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52360",
+   "summary": "Automated Event Reporting Dashboards (Embeddable.com)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2017,
+  "ai": {
+   "s": "Sets up Embeddable.com as the embedded analytics platform for event reporting dashboards, with data models, theming and global controls.",
+   "pr": "The reporting dashboards needed an embedded analytics foundation connected to EP data.",
+   "wy": "Part of the Automated Event Reporting Dashboards (Embeddable.com) epic.",
+   "oc": "Embeddable workspace and SDK, CI/CD for models, code-defined data models for key EP entities with caching, and theming matched to the platform.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Infrastructure"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52378",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52378",
+  "summary": "Country Manager - Resolving duplicate city creation",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-23T14:11:17.185+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54527",
+   "summary": "Country Manager — Cities & Regions",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 664,
+  "ai": {
+   "s": "Stops duplicate cities in the Country Manager by limiting Add New City to TAMs and SuperAdmins and auto-filling city details from WikiData.",
+   "pr": "Clients created cities by typing all fields by hand, which led to duplicate city records.",
+   "wy": "Part of the Country Manager (Cities & Regions) clean-up; duplicates affect location data across the platform.",
+   "oc": "Add New City hidden for clients; a city-name dropdown auto-populates region, latitude, longitude and timezone from the WikiData integration.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52427",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52427",
+  "summary": "[Import] checkStatus uses deprecated synchronous XHR (async: false) — blocks UI",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-24T14:17:16.624+0100",
+  "updated": "2026-09-14T17:16:30.579+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 753,
+  "ai": {
+   "s": "Replaces the synchronous status check in the admin Import page with an async call so the UI no longer freezes.",
+   "pr": "checkStatus() used deprecated synchronous XHR, blocking the browser every 3 seconds during imports and blocking page load for all 7 import types.",
+   "wy": "Found during the code review for EP-52270 of the admin Import UI.",
+   "oc": "checkStatus refactored to async $.ajax with callbacks.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52428",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52428",
+  "summary": "[Import Participants] No loading indicator during readHeaders file parsing",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-04-24T14:17:23.533+0100",
+  "updated": "2026-09-14T17:16:31.051+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 482,
+  "ai": {
+   "s": "Adds a loading indicator while participant import files are parsed, so the page no longer looks frozen.",
+   "pr": "Between choosing a file and the column-mapping modal there was no spinner, so large files looked stuck and users re-clicked.",
+   "wy": "Found during the code review for EP-52270 of the admin Import UI.",
+   "oc": "A spinner shown when the readHeaders request starts and hidden on response.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52429",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52429",
+  "summary": "[Import] No client-side file size validation before upload",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-04-24T14:17:30.135+0100",
+  "updated": "2026-09-14T17:16:31.513+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 508,
+  "ai": {
+   "s": "Adds a client-side file size check before import uploads, warning users about oversized files.",
+   "pr": "Import only checked file type, so very large files were silently uploaded twice without warning.",
+   "wy": "Found during the code review for EP-52270 of the admin Import UI.",
+   "oc": "A size check before readHeaders with a warning above a threshold.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52430",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52430",
+  "summary": "[Import] \"Cancel Upload\" has no confirmation dialog — immediate destructive action",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-04-24T14:17:37.643+0100",
+  "updated": "2026-09-14T17:16:16.361+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 481,
+  "ai": {
+   "s": "Adds a confirmation dialog to \"Cancel Upload\" in the admin Import page to prevent accidental loss of queued tasks.",
+   "pr": "Cancel Upload immediately deleted all pending import tasks with no confirmation or recovery.",
+   "wy": "Found during the code review for EP-52270 of the admin Import UI.",
+   "oc": "A confirm dialog before the clearList request.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52431",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52431",
+  "summary": "[Import] Accessibility gaps — no ARIA attributes on progress bar, modals, file input",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-04-24T14:17:46.994+0100",
+  "updated": "2026-09-14T17:16:16.843+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 681,
+  "ai": {
+   "s": "Closes accessibility gaps in the admin Import UI with ARIA attributes and keyboard support.",
+   "pr": "The file input, progress bar, modals and tooltips lacked ARIA roles and keyboard access, so screen reader users could not use import, a WCAG 2.1 gap.",
+   "wy": "Found during the code review for EP-52270 of the admin Import UI.",
+   "oc": "ARIA attributes, keyboard navigation and role=\"log\" on the upload log.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Compliance",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52432",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52432",
+  "summary": "[Import] File uploaded twice (readHeaders + importVisitors) — doubles upload time",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-04-24T14:17:57.926+0100",
+  "updated": "2026-09-14T17:16:17.297+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 572,
+  "ai": {
+   "s": "Stops the import flow uploading the same spreadsheet twice, halving upload time for large files.",
+   "pr": "The Excel file was uploaded once to read headers and again to import, doubling upload time.",
+   "wy": "Found during the code review for EP-52270 of the admin Import UI.",
+   "oc": "The file stored server-side after readHeaders and referenced by ID in importVisitors.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52452",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52452",
+  "summary": "Sent Emails export: add DB index and use CSV for large datasets",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-24T20:48:51.702+0100",
+  "updated": "2026-09-14T17:15:56.202+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1796,
+  "ai": {
+   "s": "Fixes Sent Emails exports failing on large events by adding a database index and switching big exports to streamed CSV.",
+   "pr": "On an event with 518,669 sent-email rows the export worker ran out of memory building xlsx and the task stayed stuck \"In Progress\"; the table also lacked an event_id index.",
+   "wy": "Large events could not export their sent-email data.",
+   "oc": "An index on global_email_sent (event_id, created) and CSV streaming above about 50,000 rows, keeping xlsx for small exports.",
+   "lens": "DATA",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Scalability",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52453",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52453",
+  "summary": "[TechDept] [BE + QA!]Stuck cron_tasks rows: unified reaper with attempts counter and Failed state",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-24T21:04:10.430+0100",
+  "updated": "2026-09-22T11:20:22.114+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3093,
+  "ai": {
+   "s": "Adds a unified reaper for stuck cron tasks, with an attempts counter and a Failed state, so admin jobs no longer show \"In Progress\" forever.",
+   "pr": "When a cron_tasks handler was killed its row stayed active forever; the partial reaper waited up to 12 hours, retried endlessly and overwrote timestamps (EP-52278 blocked exports for half a day).",
+   "wy": "Tech debt that blocks users and destroys the audit trail.",
+   "oc": "New attempts and last_reaped_at columns, a partial index and a reapStaleCronTasks step on every tick with per-family timeouts.",
+   "lens": "COST",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52483",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52483",
+  "summary": "Automatic Space Reservation for Images and Videos per Breakpoint to Prevent Layout Shifts",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-27T10:11:56.547+0100",
+  "updated": "2026-09-23T05:36:03.699+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "IMEX"
+  ],
+  "epic": {
+   "k": "EP-54741",
+   "summary": "Platform Performance & Operational Efficiency 2026",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 358,
+  "ai": {
+   "s": "Reserves space for images and videos at each breakpoint so pages stop shifting as media loads.",
+   "pr": "Not clearly specified in the ticket; the description links to a Confluence page and gives a rough 21-day estimate. Media loading presumably caused layout shifts.",
+   "wy": "Reported by IMEX; part of Platform Performance & Operational Efficiency 2026.",
+   "oc": "Not clearly specified beyond the ticket title; automatic media space reservation per breakpoint is expected.",
+   "lens": "EXP",
+   "pa": "Website Builder",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52502",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52502",
+  "summary": "Story 1: \"Describe CSS Changes\" UI Entry Point",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-27T14:33:52.391+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52500",
+   "summary": "AI CSS Generator — HTML Snapshot + Selector Approach",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 104,
+  "ai": {
+   "s": "Adds a \"Describe CSS Changes\" entry point where users ask AI to restyle a page block.",
+   "pr": "Not clearly specified in the ticket; the description only links to a Confluence page.",
+   "wy": "Part of the AI CSS Generator (HTML Snapshot + Selector Approach) epic.",
+   "oc": "Not clearly specified beyond the ticket title; a UI entry point for AI CSS requests is expected.",
+   "lens": "AI",
+   "pa": "Website Builder",
+   "cf": "Low",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52503",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52503",
+  "summary": "Story 2: \"Block HTML Snapshot Serialization\"",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-27T14:34:35.380+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52500",
+   "summary": "AI CSS Generator — HTML Snapshot + Selector Approach",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 104,
+  "ai": {
+   "s": "Serialises a block's HTML snapshot so the AI CSS Generator can target it with selectors.",
+   "pr": "Not clearly specified in the ticket; the description only links to a Confluence page.",
+   "wy": "Part of the AI CSS Generator (HTML Snapshot + Selector Approach) epic.",
+   "oc": "Not clearly specified beyond the ticket title; block HTML snapshot serialisation is expected.",
+   "lens": "AI",
+   "pa": "Website Builder",
+   "cf": "Low",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52505",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52505",
+  "summary": "Story 3: \"Secure Backend Proxy for AI Requests\"",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-27T14:35:18.391+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52500",
+   "summary": "AI CSS Generator — HTML Snapshot + Selector Approach",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 104,
+  "ai": {
+   "s": "Adds a secure backend proxy for AI CSS Generator requests.",
+   "pr": "Not clearly specified in the ticket; the description only links to a Confluence page.",
+   "wy": "Part of the AI CSS Generator (HTML Snapshot + Selector Approach) epic.",
+   "oc": "Not clearly specified beyond the ticket title; a backend proxy for AI requests is expected.",
+   "lens": "AI",
+   "pa": "Website Builder",
+   "cf": "Low",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52506",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52506",
+  "summary": "Story 4: \"Block-Scoped CSS Preview & Application\"",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-27T14:36:19.596+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52500",
+   "summary": "AI CSS Generator — HTML Snapshot + Selector Approach",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 104,
+  "ai": {
+   "s": "Adds a preview-and-apply step for AI-generated CSS scoped to a single block.",
+   "pr": "Not clearly specified in the ticket; the description only links to a Confluence page.",
+   "wy": "Part of the AI CSS Generator (HTML Snapshot + Selector Approach) epic.",
+   "oc": "Not clearly specified beyond the ticket title; block-scoped CSS preview and application is expected.",
+   "lens": "AI",
+   "pa": "Website Builder",
+   "cf": "Low",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52507",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52507",
+  "summary": "Story 5: \"Plain Language Prompt Interpretation\"",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-27T14:37:07.810+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52500",
+   "summary": "AI CSS Generator — HTML Snapshot + Selector Approach",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 104,
+  "ai": {
+   "s": "Interprets plain-language prompts into CSS changes for the AI CSS Generator.",
+   "pr": "Not clearly specified in the ticket; the description only links to a Confluence page.",
+   "wy": "Part of the AI CSS Generator (HTML Snapshot + Selector Approach) epic.",
+   "oc": "Not clearly specified beyond the ticket title; plain-language prompt handling is expected.",
+   "lens": "AI",
+   "pa": "Website Builder",
+   "cf": "Low",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52509",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52509",
+  "summary": "Story 6: \"Rollback Last AI CSS Change\"",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-27T14:37:54.249+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52500",
+   "summary": "AI CSS Generator — HTML Snapshot + Selector Approach",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 104,
+  "ai": {
+   "s": "Lets users roll back the last AI-generated CSS change.",
+   "pr": "Not clearly specified in the ticket; the description only links to a Confluence page.",
+   "wy": "Part of the AI CSS Generator (HTML Snapshot + Selector Approach) epic.",
+   "oc": "Not clearly specified beyond the ticket title; a rollback of the last AI CSS change is expected.",
+   "lens": "AI",
+   "pa": "Website Builder",
+   "cf": "Low",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52510",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52510",
+  "summary": "Story 7: \"CSS Validation & Safety Guardrails\"",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-27T14:38:32.324+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52500",
+   "summary": "AI CSS Generator — HTML Snapshot + Selector Approach",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 104,
+  "ai": {
+   "s": "Adds validation and safety guardrails for AI-generated CSS.",
+   "pr": "Not clearly specified in the ticket; the description only links to a Confluence page.",
+   "wy": "Part of the AI CSS Generator (HTML Snapshot + Selector Approach) epic.",
+   "oc": "Not clearly specified beyond the ticket title; CSS validation and guardrails are expected.",
+   "lens": "AI",
+   "pa": "Website Builder",
+   "cf": "Low",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52548",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52548",
+  "summary": "Integrations team sub-task",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-27T20:48:34.237+0100",
+  "updated": "2026-09-14T15:26:17.648+0100",
+  "resolved": null,
+  "team": "",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54523",
+   "summary": "API V3 & Integrations 2026",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 453,
+  "ai": {
+   "s": "Adds validation to city imports via the API so cities not matching the WikiData database are rejected with a clear error.",
+   "pr": "Importing city names via the API could create duplicate or unmatched cities in an environment.",
+   "wy": "Integrations team's part of resolving duplicate city creation in the Country Manager.",
+   "oc": "Unmatched city names cannot create new cities, and the API flags them with an error during the integration process.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ },
+ {
+  "k": "EP-52641",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52641",
+  "summary": "reCAPTCHA timeout during registration - improve UX and token refresh mechanism",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-30T10:51:20.365+0100",
+  "updated": "2026-09-14T17:16:47.671+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1445,
+  "ai": {
+   "s": "Keeps reCAPTCHA valid during long registration forms with silent token refresh and a clear message if it does expire.",
+   "pr": "reCAPTCHA v2 tokens expire after 2 minutes, so users who took longer to fill in registration could not submit, as EP-52402 showed.",
+   "wy": "Users were failing to complete registration; the earlier bug was closed without fixing the cause.",
+   "oc": "Automatic token refresh before expiry, an actionable expiry message and an evaluation of moving to reCAPTCHA v3.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "UX",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:10Z"
+ }
+]

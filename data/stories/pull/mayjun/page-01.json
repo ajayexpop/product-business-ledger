@@ -1,0 +1,3014 @@
+[
+ {
+  "k": "EP-52804",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52804",
+  "summary": "Add rate limiting to /api/v1/resend endpoint",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-05-02T15:05:30.735+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52805",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52805",
+  "summary": "Add extended logging to /api/v1/resend endpoint",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-02T15:06:22.784+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52806",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52806",
+  "summary": "Index remaining clients for Qdrant",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-03T07:06:48.081+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-44808",
+   "summary": "Search Anatomy",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 897,
+  "ai": {
+   "s": "Extends AI-powered Qdrant search from the IMEX pilot to all remaining clients by indexing their data across 10 content types.",
+   "pr": "AI-powered search had only been proven in an IMEX pilot; other clients' data was not indexed, and Brands, Pavilions and Exhibitor Events had no indexing pipeline.",
+   "wy": "The IMEX pilot worked well, so the product decision is to roll AI search out to every client.",
+   "oc": "All remaining clients are to be indexed for exhibitors, products, brands, pavilions, news, exhibitor events, delegates, speakers, buyers and sessions, reusing pilot pipelines with safe re-runs.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "AI Enablement",
+    "Scalability",
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-52815",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52815",
+  "summary": "unify apiCall and apiSendForm",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-04T12:59:32.329+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52816",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52816",
+  "summary": "Extend Event Cloning to Support Selective Cloning of Sponsors, News, Sessions, Local Categories, and Floor Plan",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-05-04T13:19:10.213+0100",
+  "updated": "2026-09-22T18:07:10.985+0100",
+  "resolved": "2026-08-19T16:50:16.116+0100",
+  "team": "Organizer team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54531",
+   "summary": "Client Manager & Onboarding",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52820",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52820",
+  "summary": "Investigate and fix mobile app sync process for past/expired events",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-05-04T15:09:14.780+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52837",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52837",
+  "summary": "API V3 - [POST] /api/v3/products (Create global product, no event relation)",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T02:44:52.640+0100",
+  "updated": "2026-09-20T16:35:52.484+0100",
+  "resolved": "2026-08-19T16:50:15.662+0100",
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52838",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52838",
+  "summary": "API V3 - [GET] /api/v3/products (List global products)",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-05-05T02:45:12.644+0100",
+  "updated": "2026-09-24T12:52:16.115+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52839",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52839",
+  "summary": "API V3 - [GET] /api/v3/products/{productId} (Get product details across all events)",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-05-05T02:45:35.741+0100",
+  "updated": "2026-09-24T12:52:15.759+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3831,
+  "ai": {
+   "s": "Adds a V3 endpoint that returns a single product by its global ID, with its per-event categories, custom fields and sponsorship across every event it is bound to.",
+   "pr": "There was no V3 endpoint giving the fully expanded, cross-event view of a product; event-scoped reads only showed one event's bindings.",
+   "wy": "Part of the Public API v3 migration and the global vs event-scoped product architecture.",
+   "oc": "GET /api/v3/products/{id} returns the global product object plus an events array (eventId, categories, customFields, isSponsored), resolved to the x-lang language.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-52840",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52840",
+  "summary": "API V3 - [PATCH] /api/v3/products/{id} (Update global product fields)",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T02:46:00.554+0100",
+  "updated": "2026-09-20T16:35:59.257+0100",
+  "resolved": "2026-09-03T08:53:34.254+0100",
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52841",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52841",
+  "summary": "API V3 - [DELETE] /api/v3/products/{id} (Delete product globally, cascades all event relations)",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T02:46:20.394+0100",
+  "updated": "2026-09-20T16:35:53.849+0100",
+  "resolved": "2026-09-03T08:53:32.435+0100",
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52842",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52842",
+  "summary": "API V3 - [POST] /api/v3/events/{eventId}/products/{productId} (Bind product to event)",
+  "status": "Ready for release",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-05-05T02:46:48.664+0100",
+  "updated": "2026-09-21T16:46:59.174+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52843",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52843",
+  "summary": "API V3 - [PATCH] /api/v3/events/{eventId}/products/{productId} (Update event-scoped product data)",
+  "status": "Ready for release",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-05-05T02:47:12.885+0100",
+  "updated": "2026-09-15T17:47:52.074+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52844",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52844",
+  "summary": "API V3 - [DELETE] /api/v3/events/{eventId}/products/{productId} (Remove product from event only)",
+  "status": "Ready for release",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-05-05T02:47:33.837+0100",
+  "updated": "2026-09-15T17:47:52.074+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52848",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52848",
+  "summary": "Restore BroadcastChannel cross-tab logout sync lost during Next.js 14 migration",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T08:27:54.546+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "auth",
+   "next14-migration",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52850",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52850",
+  "summary": "Remove direct clsx dependency, replace 8 trivial usages with native JS",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T08:43:46.048+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52851",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52851",
+  "summary": "Remove unused `country-flag-icons` dependency from portal-ui",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T08:54:12.016+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52867",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52867",
+  "summary": "Move ignore-loader from dependencies to devDependencies",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T10:39:08.445+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52869",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52869",
+  "summary": "Replace linkify-react/linkifyjs with internal regex-based solution",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T10:57:46.907+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52870",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52870",
+  "summary": "Remove unused next-absolute-url dependency",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T11:12:37.694+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52873",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52873",
+  "summary": "Remove unused next-redux-wrapper dependency from portal-ui",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T12:29:54.156+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52874",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52874",
+  "summary": "Remove unused punycode dependency from portal-ui",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T12:38:14.710+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52877",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52877",
+  "summary": "Remove unused react-dnd dependency",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T13:04:08.410+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52878",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52878",
+  "summary": "Consolidate infinite scroll libraries: drop react-infinite-scroller in favor of react-infinite-scroll-component",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T13:12:01.014+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52879",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52879",
+  "summary": "Remove unused redux-wrapper dependency from portal-ui",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T13:21:42.803+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52880",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52880",
+  "summary": "Remove unused xml2js dependency from portal-ui",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-05T13:32:37.213+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52935",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52935",
+  "summary": "Implement universal pagination memory in admin panel",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-06T11:32:01.112+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54741",
+   "summary": "Platform Performance & Operational Efficiency 2026",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Makes the admin panel remember pagination position universally, so organisers return to the same page of a list (ticket had no further detail).",
+   "pr": "Not clearly specified beyond the ticket title; presumably admin lists reset to page one when users navigate away and back.",
+   "wy": "Not clearly specified beyond the ticket title; sits under the Platform Performance & Operational Efficiency 2026 epic.",
+   "oc": "Not clearly specified beyond the ticket title; universal pagination memory in the admin panel is planned.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX",
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-52941",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52941",
+  "summary": "AI meeting note taker purchase at event level",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-06T14:37:03.567+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-47872",
+   "summary": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Lets the AI meeting note taker be purchased at event level (ticket had no further detail).",
+   "pr": "Not clearly specified beyond the ticket title; presumably the AI note taker could not be bought per event.",
+   "wy": "Not clearly specified beyond the ticket title; part of moving the Meeting Transcription Tool from POC to production.",
+   "oc": "Not clearly specified beyond the ticket title; event-level purchase of the AI meeting note taker is planned.",
+   "lens": "REV",
+   "pa": "Lead Intelligence",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Revenue"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-52943",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52943",
+  "summary": "add bundle analyzer script for Next.js production build",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-06T15:05:41.184+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52952",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52952",
+  "summary": "Update Lead Contribution Logic for Exhibitors Based on Meeting Appointments",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Urgent",
+  "created": "2026-05-06T16:55:19.081+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-05-14T14:38:52.416+0100",
+  "team": "Exhibitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "IMEX"
+  ],
+  "epic": {
+   "k": "EP-50122",
+   "summary": "Lead Capture pro settings",
+   "status": "Done",
+   "statusCategory": "done"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52959",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52959",
+  "summary": "Analyze modules count and size in dev mode ",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-06T17:57:22.510+0100",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Analyses module count and size in dev mode to understand frontend build weight (ticket had no further detail).",
+   "pr": "Not clearly specified beyond the ticket title.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; an analysis of module count and size in dev mode is planned (currently on hold).",
+   "lens": "COST",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-52967",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52967",
+  "summary": "Build diagnostic and tracing solution",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-07T09:23:10.096+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46020",
+   "summary": "Recreate category-based Recommendation Service",
+   "status": "Done",
+   "statusCategory": "done"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52986",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52986",
+  "summary": "[QA] Exhibitor Manual -> Manual Settings",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-05-07T13:53:06.314+0100",
+  "updated": "2026-09-18T14:55:17.220+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4737,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Exhibitor Manual — Manual Settings: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Exhibitor Manual — Manual Settings functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Manual Settings.",
+   "lens": "INTEG",
+   "pa": "Exhibitor Manual",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-52987",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52987",
+  "summary": "Exhibitor Manual -> Global Settings",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-05-07T13:54:23.042+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4737,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Exhibitor Manual — Global Settings: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Exhibitor Manual — Global Settings functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Global Settings.",
+   "lens": "INTEG",
+   "pa": "Exhibitor Manual",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-52989",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52989",
+  "summary": "Standardising Pagination in the Admin Panel for Consistency and User Experience",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Urgent",
+  "created": "2026-05-07T14:04:03.988+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-06-12T15:17:12.972+0100",
+  "team": "Organizer team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "HINTE"
+  ],
+  "epic": {
+   "k": "EP-54741",
+   "summary": "Platform Performance & Operational Efficiency 2026",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-52990",
+  "link": "https://expoplatform.atlassian.net/browse/EP-52990",
+  "summary": "Schedule Optimization for Minimizing Participant Movement Between Tables",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-07T14:35:51.284+0100",
+  "updated": "2026-09-15T17:48:23.179+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46140",
+   "summary": "Improve Speed Networking Service",
+   "status": "Done",
+   "statusCategory": "done"
+  },
+  "parent": null,
+  "descChars": 4420,
+  "ai": {
+   "s": "Adds an optional post-generation step to Speed Networking schedules that reassigns tables to cut how far participants walk between consecutive meetings.",
+   "pr": "Schedule generation ignored the physical table layout, so attendees could be sent to distant tables between timeslots and team members had no stable table assignment.",
+   "wy": "Chaotic movement between tables harms participant experience, navigation comfort and session efficiency.",
+   "oc": "Table-layout input (full, partial or none) is supported and table assignments are optimised while preserving pairs and timeslots, keeping team members at the same or nearby tables.",
+   "lens": "EXP",
+   "pa": "Networking & Interactions",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53015",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53015",
+  "summary": "AI Note Taker as add-on in LCP",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-10T21:18:37.573+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-47872",
+   "summary": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1581,
+  "ai": {
+   "s": "Brings AI Note Taker into the mobile app as a Lead Capture Pro add-on, so exhibitors who buy it at event level get access regardless of profile or category flags.",
+   "pr": "AI Note Taker could only be switched on globally in the Mobile App Builder, while the web side was moving it to an event-level Lead Capture Pro purchase.",
+   "wy": "Aligns the app with the new event-level Lead Capture Pro packaging so exhibitors can purchase add-ons per event.",
+   "oc": "Purchases of AI Note Taker or Lead Capture activate access; otherwise profile-level then category-level flags decide availability, and non-exhibitor participants have no access.",
+   "lens": "REV",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Revenue",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53036",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53036",
+  "summary": "Session: Always display Sponsor Name on Session cards and pages",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-05-11T10:14:39.890+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-06-03T19:56:12.622+0100",
+  "team": "Visitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "HINTE"
+  ],
+  "epic": {
+   "k": "EP-54525",
+   "summary": "Sessions & Agenda UX (New UI)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53048",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53048",
+  "summary": "Add session/exhibitor event type to the detail card view",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-05-11T12:22:47.331+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-05-28T09:52:34.366+0100",
+  "team": "Visitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "HINTE"
+  ],
+  "epic": {
+   "k": "EP-54525",
+   "summary": "Sessions & Agenda UX (New UI)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53049",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53049",
+  "summary": "Add exhibitor name on the Exhibitor Event Detail View",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-05-11T12:32:18.599+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-05-15T12:52:30.062+0100",
+  "team": "Visitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "HINTE"
+  ],
+  "epic": {
+   "k": "EP-14666",
+   "summary": "Exhibitor profile",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53055",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53055",
+  "summary": "Remove UserIp from all request except login and auth, fix tagset removing time in redis cache ",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-11T12:57:45.064+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53058",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53058",
+  "summary": "[Sprint 2] Index all entities",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T13:56:33.068+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-44808",
+   "summary": "Search Anatomy",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 275,
+  "ai": {
+   "s": "Ensures all ten searchable entities, from exhibitors to sessions, are indexed in Qdrant for global search.",
+   "pr": "Not every entity type was indexed in Qdrant, so global search could not return complete results.",
+   "wy": "Part of the Search Anatomy epic to make AI-powered global search cover all content.",
+   "oc": "Exhibitors, products, brands, pavilions, news, exhibitor events, delegates, speakers, buyers (exhibitors and team members only) and sessions are to be indexed.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "Medium",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53059",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53059",
+  "summary": "[Sprint 2] Add custom mapping file from IMEX",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T13:57:11.221+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-44808",
+   "summary": "Search Anatomy",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 460,
+  "ai": {
+   "s": "Uses a custom alias mapping file from IMEX in search, so a query like 'Italy' ranks exhibitors matching Italia or Italian above weaker matches.",
+   "pr": "Search treated equivalent terms such as Italy, Italia and Italian as unrelated, so relevant parent exhibitors could rank below child exhibitors.",
+   "wy": "IMEX is supplying its own alias mappings to improve search relevance for its event.",
+   "oc": "The IMEX mapping file defines equivalent words, and search ranks parent exhibitors matching any mapped alias above child exhibitors that only match the literal term.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53060",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53060",
+  "summary": "Exhibitor Manual -> Vendors",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-05-11T14:03:08.467+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4705,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Exhibitor Manual — Vendors: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Exhibitor Manual — Vendors functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Vendors.",
+   "lens": "INTEG",
+   "pa": "Exhibitor Manual",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53061",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53061",
+  "summary": "Exhibitor Manual -> Email Templates",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-05-11T14:04:04.489+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4737,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Exhibitor Manual — Email Templates: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Exhibitor Manual — Email Templates functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Email Templates.",
+   "lens": "INTEG",
+   "pa": "Exhibitor Manual",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53062",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53062",
+  "summary": "Exhibitor Manual -> Exhibitors",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-05-11T14:04:44.109+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4717,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Exhibitor Manual — Exhibitors: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Exhibitor Manual — Exhibitors functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Exhibitors.",
+   "lens": "INTEG",
+   "pa": "Exhibitor Manual",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53063",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53063",
+  "summary": "Event Setup -> General",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T14:09:56.198+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4685,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Event Setup — General: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Event Setup — General functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for General.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53064",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53064",
+  "summary": "Event Setup -> Build Website",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T14:11:33.295+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4709,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Event Setup — Build Website: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Event Setup — Build Website functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Build Website.",
+   "lens": "INTEG",
+   "pa": "Website Builder",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53065",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53065",
+  "summary": "Event Setup -> Sign In Page",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T14:13:35.636+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4705,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Event Setup — Sign In Page: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Event Setup — Sign In Page functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Sign In Page.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53066",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53066",
+  "summary": "Event Setup -> New UI settings",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T14:14:39.921+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4717,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Event Setup — New UI settings: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Event Setup — New UI settings functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for New UI settings.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53069",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53069",
+  "summary": "Event Setup -> Payments",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T14:15:34.096+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4689,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Event Setup — Payments: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Event Setup — Payments functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Payments.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53070",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53070",
+  "summary": "Event Setup -> Module Management",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T14:16:01.163+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4725,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Event Setup — Module Management: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Event Setup — Module Management functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Module Management.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53071",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53071",
+  "summary": "Event Setup -> Country Manager",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T14:16:22.641+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4717,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Event Setup — Country Manager: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Event Setup — Country Manager functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Country Manager.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53073",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53073",
+  "summary": "Event Setup -> Chat Bot",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T14:16:47.561+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4689,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Event Setup — Chat Bot: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Event Setup — Chat Bot functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Chat Bot.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:43Z"
+ },
+ {
+  "k": "EP-53074",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53074",
+  "summary": "Event Setup -> Display Filters",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T14:17:09.955+0100",
+  "updated": "2026-09-21T10:06:24.880+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "DoDUserStory",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4717,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Event Setup — Display Filters: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Event Setup — Display Filters functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Display Filters.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53075",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53075",
+  "summary": "Event Setup -> Content Setting",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-11T14:17:30.152+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52257",
+   "summary": "Covering Existing Functionality with Tests",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 4717,
+  "ai": {
+   "s": "Plans end-to-end test coverage of Event Setup — Content Setting: consolidated business and technical docs, BE/FE/E2E test plans, automated tests in CI/CD and QA sign-off.",
+   "pr": "The existing Event Setup — Content Setting functionality had no consolidated business or technical documentation and no complete, CI-integrated automated test coverage, so regressions could go unnoticed.",
+   "wy": "Part of the engineering drive to cover existing functionality with tests, so the platform can be changed and refactored safely.",
+   "oc": "Five sequential steps are defined: a PO-approved business .md, a Tech Lead-approved technical .md, BE/FE/E2E test plans, automated tests wired into CI/CD, and QA sign-off for Content Setting.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53084",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53084",
+  "summary": "iOS/ Ids",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-05-11T19:19:13.445+0100",
+  "updated": "2026-09-14T16:52:27.792+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53117",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53117",
+  "summary": "Implementing Universal Pagination Memory in Admin Panel for User Experience Enhancement - Good To Have List ONLY",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-12T10:10:29.414+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-06-17T17:56:14.008+0100",
+  "team": "Organizer team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54741",
+   "summary": "Platform Performance & Operational Efficiency 2026",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53137",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53137",
+  "summary": "[BE Test fail] Import Participants: DataController sync path swallows $account->save() failures",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-12T12:06:22.457+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "EP-52194",
+   "found-by-tests",
+   "import-participants"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53138",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53138",
+  "summary": "[BE Test fail] Import Participants: missing save-failure guard in ImportTask::importVisitorAction causes invalid PHQL and stale cron_task",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-12T12:06:40.833+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "EP-52194",
+   "found-by-tests",
+   "import-participants"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53139",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53139",
+  "summary": "[BE Test fail] Import Participants: ImportTask::getBlockFormData TypeError aborts worker on null getFormDataAssoc()",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-12T12:06:56.510+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "EP-52194",
+   "found-by-tests",
+   "import-participants"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53330",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53330",
+  "summary": "Expand non-mutual likes into mutual likes",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-12T14:02:08.193+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-06-04T20:10:08.858+0100",
+  "team": "Data Science",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46140",
+   "summary": "Improve Speed Networking Service",
+   "status": "Done",
+   "statusCategory": "done"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53334",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53334",
+  "summary": "Generate additional pairs or meetings without existing likes",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-12T14:51:10.039+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-06-30T09:33:47.056+0100",
+  "team": "Data Science",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46140",
+   "summary": "Improve Speed Networking Service",
+   "status": "Done",
+   "statusCategory": "done"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53353",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53353",
+  "summary": "Boost performance with ApiCache::get() ",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-13T09:11:04.555+0100",
+  "updated": "2026-09-21T13:34:41.296+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-53492",
+   "summary": "Implement Exhibitor CRUD",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1220,
+  "ai": {
+   "s": "Makes ApiCache::get() actually read the response cache, so exhibitor API endpoints stop missing a cache they already write to and respond faster.",
+   "pr": "ApiCache::get() always returned false without a lookup, so exhibitors/info, get, content, news, membersList and similar endpoints never used their saved 1-hour cache entries.",
+   "wy": "Identified as the highest-leverage single change across the Exhibitor API surface and a prerequisite to measuring other endpoint improvements.",
+   "oc": "The cache read path is implemented in get(), so endpoints that already write correct cache keys with a 1-hour TTL can serve cached responses.",
+   "lens": "COST",
+   "pa": "Exhibitor Marketplace",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Scalability",
+    "Cost Reduction",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53361",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53361",
+  "summary": "Remove components/layouts/LoaderPlug.tsx and reuse expo-react-components LoaderPlug",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-13T10:59:46.290+0100",
+  "updated": "2026-09-14T17:16:23.582+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2455,
+  "ai": {
+   "s": "Replaces the duplicate LoaderPlug in portal-ui with the shared expo-react-components version, giving one consistent loading component.",
+   "pr": "Two parallel LoaderPlug components existed, one in the shared library and a copy in portal-ui, causing drift, inconsistent UX and extra maintenance.",
+   "wy": "The shared component should be the single source of truth for loading states.",
+   "oc": "All 20+ portal-ui callers import the shared LoaderPlug, props are reconciled, the local file is deleted and typecheck, lint and loading-state smoke tests pass.",
+   "lens": "COST",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53393",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53393",
+  "summary": "Organizer Platform: Superadmin can configure Burger Menu Footer Logo in App Builder so that mobile apps can show ExpoPlatform (or custom) branding consistently",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-13T17:00:19.744+0100",
+  "updated": "2026-09-15T17:48:16.083+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54530",
+   "summary": "Admin Panel Restructure & Navigation",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2838,
+  "ai": {
+   "s": "Adds a Superadmin-only App Builder toggle, on by default, that shows an ExpoPlatform logo under the app version in the mobile burger menu.",
+   "pr": "There was no way to control whether ExpoPlatform branding appears in the burger menu footer of event mobile apps.",
+   "wy": "Lets ExpoPlatform display its branding consistently in mobile apps while Superadmins keep control per event.",
+   "oc": "A per-event 'Burger menu footer logo' setting visible only to Superadmins; the backend passes the flag so iOS and Android show or hide the logo.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53398",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53398",
+  "summary": "Remove \"newfront\" in the url",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Urgent",
+  "created": "2026-05-13T17:24:37.289+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-07-09T12:47:24.511+0100",
+  "team": "Visitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54529",
+   "summary": "Website Builder & Event Site 2026",
+   "status": "Done",
+   "statusCategory": "done"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53413",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53413",
+  "summary": "Admin panel rearangement. Move Sponsorship",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-05-14T09:02:00.531+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-06-12T08:00:42.135+0100",
+  "team": "Exhibitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-54530",
+   "summary": "Admin Panel Restructure & Navigation",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53418",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53418",
+  "summary": "Auto login after logout when personate was used",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-14T10:40:49.379+0100",
+  "updated": "2026-09-14T17:16:08.776+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 333,
+  "ai": {
+   "s": "Fixes a bug where, after using impersonation in the admin panel, logging out of another account silently logs the user back in as the first account.",
+   "pr": "Impersonation set a remember cookie equal to the PHP session, so after logging in as a second user and logging out, the site reloaded logged in as the first user.",
+   "wy": "Unexpected auto-login into the wrong account is a security and trust risk.",
+   "oc": "Logout after impersonation is to end the session cleanly without re-authenticating as the previously impersonated account.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53420",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53420",
+  "summary": "Fix work with local and session storages in case they are disabled",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-14T12:06:24.118+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Front-end dev",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53440",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53440",
+  "summary": "Transfer admin notifications to the SQS queue",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Urgent",
+  "created": "2026-05-15T10:54:48.822+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53446",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53446",
+  "summary": "Add detailed CloudWatch logging for Campaign sender list generation process ",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "High",
+  "created": "2026-05-15T13:13:34.631+0100",
+  "updated": "2026-09-14T16:52:27.054+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53448",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53448",
+  "summary": "Extend duplicate send protection for Campaign emails beyond 24-hour window",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "High",
+  "created": "2026-05-15T13:20:18.700+0100",
+  "updated": "2026-09-23T03:06:26.940+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53452",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53452",
+  "summary": "[TechDept] Optimize memory usage during Payments export",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-15T15:16:16.932+0100",
+  "updated": "2026-09-23T20:24:14.035+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Optimises memory usage during Payments export (ticket had no further detail).",
+   "pr": "Not clearly specified beyond the ticket title; presumably the Payments export consumed excessive memory.",
+   "wy": "Not clearly specified beyond the ticket title; tagged as tech debt.",
+   "oc": "Not clearly specified beyond the ticket title; reduced memory use for the Payments export is planned.",
+   "lens": "COST",
+   "pa": "Organizer Analytics",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Scalability"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53455",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53455",
+  "summary": "Restoring Google Analytics Support: Enhancements for GA4 Integration and Validation",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-05-15T16:37:02.154+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-06-12T08:00:47.837+0100",
+  "team": "Exhibitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "HINTE"
+  ],
+  "epic": {
+   "k": "EP-54528",
+   "summary": "Attendance & Event Analytics 2026",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53464",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53464",
+  "summary": "Align Contact Details block to the canonical rule on iOS and Android",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-17T14:48:52.638+0100",
+  "updated": "2026-09-17T10:05:11.391+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-916",
+   "summary": "Participant Registration on New UI",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3606,
+  "ai": {
+   "s": "Makes Contact Details the first content block on every profile type in the iOS and Android apps, with the same rows in the same order and no duplicated values.",
+   "pr": "Contact Details appeared in different positions and with different rows across profile types and platforms, and the same phone value was sometimes shown twice.",
+   "wy": "Design decided a canonical rule so profiles look and behave identically across People and Scanned Badges on both platforms.",
+   "oc": "Contact Details sits first after the header with email, website, personal phone and social rows; empty rows or blocks are hidden and company data stays in Additional Information.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53519",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53519",
+  "summary": "Email pipeline reliability: per-client isolation, stream split (transactional vs marketing), input validation, rate-limit kill-switch",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Urgent",
+  "created": "2026-05-18T18:56:49.900+0100",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "",
+  "labels": [
+   "DoDUserStory",
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54741",
+   "summary": "Platform Performance & Operational Efficiency 2026",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 6441,
+  "ai": {
+   "s": "Hardens the email pipeline so one client's bounces cannot stop email for everyone, with separate transactional and marketing streams, validation and scoped kill-switches.",
+   "pr": "All email went through one shared SES pipeline with no ingress validation, so a bounce spike from one client or campaign could trip a platform-wide kill-switch, including transactional mail.",
+   "wy": "Stakeholders report significant revenue loss from platform-wide email shutdowns and view email delivery as essential.",
+   "oc": "Planned: split transactional and marketing streams on separate SES identities, per-client isolation, validation of addresses before SES, and a per-client-scoped kill-switch.",
+   "lens": "INTEG",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "Retention",
+    "Scalability"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53548",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53548",
+  "summary": "Google Analytics field front-end validation",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-19T02:36:55.041+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-06-17T17:56:18.488+0100",
+  "team": "Organizer team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54528",
+   "summary": "Attendance & Event Analytics 2026",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53550",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53550",
+  "summary": "Researching access logic",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-19T02:47:09.124+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-44808",
+   "summary": "Search Anatomy",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53551",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53551",
+  "summary": "Researching new entities for search",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-19T02:47:50.240+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-44808",
+   "summary": "Search Anatomy",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53552",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53552",
+  "summary": "Enable filtering on DS side for marketplace filters",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-19T02:48:29.023+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-44808",
+   "summary": "Search Anatomy",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53567",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53567",
+  "summary": "HOTFIX: Add temporary caching for /api/session/basket/list requests in mobile apps",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-05-19T10:20:19.633+0100",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "DoDUserStory",
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54741",
+   "summary": "Platform Performance & Operational Efficiency 2026",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1047,
+  "ai": {
+   "s": "Adds temporary client-side caching of /api/session/basket/list in the mobile apps to cut the duplicate traffic seen during IMEX.",
+   "pr": "The legacy basket/list endpoint had no caching and was called thousands of times by the same clients, as screens reused it and reopening views re-triggered requests.",
+   "wy": "An immediate hotfix was needed to reduce backend load and stabilise production traffic while a larger refactor is planned.",
+   "oc": "A TTL-based cache (1–5 minutes) keyed by user, event and parameters, with in-flight de-duplication and refresh on session-related changes.",
+   "lens": "COST",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Scalability",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53588",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53588",
+  "summary": "Admin notifications: hybrid idempotency (DB UNIQUE + post-FCM Redis flag)",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-19T17:19:27.204+0100",
+  "updated": "2026-09-14T17:16:36.335+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3575,
+  "ai": {
+   "s": "Makes admin notification sending retry-safe with a DB unique constraint and a post-FCM Redis flag, so users get neither duplicate pushes nor missed ones.",
+   "pr": "The Redis lock set before insert and push meant a worker crash mid-batch made SQS retries skip the whole batch, so users silently missed in-app records and pushes for 24 hours.",
+   "wy": "Removes the accepted trade-off from EP-53440 between duplicate pushes and silent delivery loss.",
+   "oc": "A UNIQUE index with INSERT ... ON CONFLICT DO NOTHING protects in-app records, and a per-user Redis flag set after successful FCM dispatch skips only users already notified.",
+   "lens": "INTEG",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53589",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53589",
+  "summary": "Front-end for chatbot",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-19T18:59:19.791+0100",
+  "updated": "2026-09-21T16:46:59.317+0100",
+  "resolved": "2026-07-23T11:12:19.311+0100",
+  "team": "Exhibitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54526",
+   "summary": "Communication Channels — Email, Chat & Notifications",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53608",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53608",
+  "summary": "Layout refactor",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-20T13:15:08.986+0100",
+  "updated": "2026-09-14T17:17:03.067+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Refactors the frontend layout (ticket had no further detail).",
+   "pr": "Not clearly specified beyond the ticket title.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; a layout refactor is planned.",
+   "lens": "COST",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53630",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53630",
+  "summary": "Fix notistack colors.",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-21T09:23:38.037+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53642",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53642",
+  "summary": "Investigate New Architecture and Registration Flow",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-21T11:02:35.649+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-07-02T10:51:48.582+0100",
+  "team": "Visitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-916",
+   "summary": "Participant Registration on New UI",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53650",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53650",
+  "summary": "Remove legacy \"-next14\" branches",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-21T15:31:42.520+0100",
+  "updated": "2026-09-14T17:16:07.739+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 6894,
+  "ai": {
+   "s": "Renames the frontend repo branches so the live Next.js 14 branches take the canonical names and the old v12 branches are kept as -next12 legacy.",
+   "pr": "After the Next.js 12 to 14 migration, two parallel branch sets existed, with production on the '-next14' branches while the canonical names still pointed at legacy v12 code.",
+   "wy": "Next.js 14 is now the live production version, so its branches should be the default and the confusion removed.",
+   "oc": "v12 branches renamed to -next12, v14 branches renamed to master/alpha/rc/hotFix/prod, with DevOps reconfiguring the prod build trigger and branch permissions.",
+   "lens": "COST",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53653",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53653",
+  "summary": "Migrate i18next to the ICU format",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-21T16:04:15.158+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53666",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53666",
+  "summary": "Post-incident review and RCA",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Urgent",
+  "created": "2026-05-21T16:11:26.509+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "incident",
+   "mig-in-preparation",
+   "rca",
+   "secrets-leak",
+   "security"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-53654",
+   "summary": "[SECURITY] Rotate compromised AWS keys and purge from repo history",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 963,
+  "ai": {
+   "s": "Produces a post-incident review and root cause analysis of the compromised AWS keys incident, with prevention, detection and response actions.",
+   "pr": "A compromised account led to secrets being pulled and keys exfiltrated, and hard-coded keys and missing secret scanning had gone unaddressed for years.",
+   "wy": "Security incident response: understand how the leak happened and stop it recurring.",
+   "oc": "A Confluence RCA with timeline, scope, 5 Whys, action items for prevention, detection and response, and an updated secret-hygiene policy for dev onboarding.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53706",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53706",
+  "summary": "Make Exhibitor module with CREATE command",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-05-22T11:17:53.469+0100",
+  "updated": "2026-09-24T16:34:58.980+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-53492",
+   "summary": "Implement Exhibitor CRUD",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53725",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53725",
+  "summary": "[admin-ui] Change docker node to 24 ",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-25T08:38:10.263+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53727",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53727",
+  "summary": "Android: menu refactoring",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-05-25T09:13:05.127+0100",
+  "updated": "2026-09-24T10:25:17.285+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "qa_large_regression_android"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53732",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53732",
+  "summary": "Rework integration activation ",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-05-25T10:22:20.642+0100",
+  "updated": "2026-09-14T15:26:29.520+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54523",
+   "summary": "API V3 & Integrations 2026",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 969,
+  "ai": {
+   "s": "Reworks integration activation so an active subscription alone controls data flow, removing the redundant Enable Exhibitor and Enable Visitor checkboxes.",
+   "pr": "Integrations had to be marked enabled before auto sync could be used, yet disabling the integration only hid the tab while subscriptions kept syncing data.",
+   "wy": "The old checkbox no longer had a real purpose and created confusing, inconsistent behaviour.",
+   "oc": "Creating a subscription activates the integration; pausing or deleting it stops data flow, and the enable checkboxes are removed.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53751",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53751",
+  "summary": "Remove Unconfirmed Appointment email template",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-25T16:43:52.021+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53761",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53761",
+  "summary": "portal-ui: clean up unused files in public/ and dead Meta/PagePlug/ErrorsPageControl/HomePageController chain",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-26T08:49:29.411+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53766",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53766",
+  "summary": "Summary Support dynamic Firebase signing key configuration for client-published mobile apps",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-05-26T10:16:58.366+0100",
+  "updated": "2026-09-23T08:06:14.223+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1701,
+  "ai": {
+   "s": "Supports multiple Firebase signing keys for client-published mobile apps so deep links work when apps are signed under client accounts.",
+   "pr": "Migration to new Firebase projects and publishing under client accounts introduced differing signing certificates, and mismatched fingerprints broke deep links and possibly push notifications.",
+   "wy": "More apps are being published directly under client accounts, so signing configuration must handle this reliably.",
+   "oc": "Firebase configs and assetlinks.json support the correct fingerprints for all apps, deep links work, push impact is investigated and the setup flow is documented.",
+   "lens": "INTEG",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Scalability"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:53Z"
+ },
+ {
+  "k": "EP-53767",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53767",
+  "summary": "Global Search. Sponsored Exhibitors",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-05-26T10:36:28.672+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-08-20T09:13:11.560+0100",
+  "team": "Exhibitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "IMEX"
+  ],
+  "epic": {
+   "k": "EP-44808",
+   "summary": "Search Anatomy",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53768",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53768",
+  "summary": "Global Search. Sponsored Products",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-05-26T10:37:50.057+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-08-20T09:13:25.725+0100",
+  "team": "Exhibitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "IMEX"
+  ],
+  "epic": {
+   "k": "EP-44808",
+   "summary": "Search Anatomy",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ },
+ {
+  "k": "EP-53873",
+  "link": "https://expoplatform.atlassian.net/browse/EP-53873",
+  "summary": "[Tech] Make Product module",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-05-27T14:53:52.658+0100",
+  "updated": "2026-09-15T17:47:30.706+0100",
+  "resolved": "2026-08-04T13:30:13.033+0100",
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54523",
+   "summary": "API V3 & Integrations 2026",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": null,
+  "ai": null,
+  "aiSource": "inherited",
+  "pulledAt": "2026-09-25T02:13:42Z"
+ }
+]

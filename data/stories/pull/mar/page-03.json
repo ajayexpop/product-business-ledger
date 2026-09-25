@@ -1,0 +1,816 @@
+[
+ {
+  "k": "EP-50711",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50711",
+  "summary": "AI recommendation & auto‑population of Sessions into Attendee agendas",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T10:22:57.092+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50608",
+   "summary": "AI Agenda Builder (tools)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2883,
+  "ai": {
+   "s": "Surfaces AI-recommended sessions and exhibitor events for empty slots when attendees open their schedule, added only when the attendee accepts them.",
+   "pr": "Attendees had to search the programme manually to fill empty schedule slots, with no personalised suggestions.",
+   "wy": "Core of AI Agenda Builder Phase 1: personalised agendas with explicit consent.",
+   "oc": "Specified: a suggestion panel with pre-checked sessions for empty slots, excluding overlaps, duplicates, paid sessions and rejected items, within the event limit.",
+   "lens": "AI",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "AI Enablement",
+    "Adoption",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50712",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50712",
+  "summary": "Schedule UX for AI‑populated Sessions (visibility, filtering, removal)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T10:24:39.743+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50608",
+   "summary": "AI Agenda Builder (tools)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1280,
+  "ai": {
+   "s": "Marks AI-recommended sessions in the attendee schedule with a badge and adds a filter and removal that stops the session being recommended again.",
+   "pr": "Without clear marking, attendees could not tell which schedule items came from AI recommendations or control them.",
+   "wy": "AI Agenda Builder Phase 1: transparency and user control over AI-generated agenda items.",
+   "oc": "Specified: an 'AI recommended' badge, a show/hide filter and removal feeding the do-not-recommend list, consistent across web and mobile.",
+   "lens": "AI",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50714",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50714",
+  "summary": "Adding notification setting to mobile app",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T10:26:51.429+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54526",
+   "summary": "Communication Channels — Email, Chat & Notifications",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1149,
+  "ai": {
+   "s": "Adds a Notification Settings screen to the mobile app that syncs both ways with the web preferences.",
+   "pr": "Users could set notification preferences on web but had no equivalent on mobile, forcing a platform switch.",
+   "wy": "Part of closing the feature gap between web and mobile.",
+   "oc": "Specified: mobile notification categories and toggles matching web, with changes reflected immediately on both platforms.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50715",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50715",
+  "summary": "Notifications and email flows for AI‑populated Sessions",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T10:31:15.538+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50608",
+   "summary": "AI Agenda Builder (tools)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1336,
+  "ai": {
+   "s": "Sends attendees one in-platform notification and, where enabled, one email confirming the AI-recommended sessions they accepted.",
+   "pr": "Attendees accepting AI recommendations would have no record of what was added to their schedule.",
+   "wy": "AI Agenda Builder Phase 1: confirmation-style notifications consistent with the consent model.",
+   "oc": "Specified: a batched notification per acceptance linking to the schedule, a single summary email, and nothing sent when all recommendations are dismissed.",
+   "lens": "AI",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Low",
+   "im": [
+    "AI Enablement",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50717",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50717",
+  "summary": "Adding reset password setting to mobile app",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T10:31:40.420+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54524",
+   "summary": "Mobile App — 2026 Enhancements",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 920,
+  "ai": {
+   "s": "Adds a Change Password option to mobile app settings so users can update their password without switching to the web.",
+   "pr": "The mobile app had no way to change the account password, so users had to switch to the web platform.",
+   "wy": "Closing the settings gap between mobile and web.",
+   "oc": "Specified: authenticated users verify their current password and set a new one in-app, mirroring the web flow.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50718",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50718",
+  "summary": "Ongoing AI agenda maintenance & repopulation",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T10:34:37.483+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50608",
+   "summary": "AI Agenda Builder (tools)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1548,
+  "ai": {
+   "s": "Recomputes AI session recommendations fresh each time an attendee opens their schedule, reflecting new sessions and changed free slots.",
+   "pr": "Recommendations need to stay current as the programme and the attendee's schedule change.",
+   "wy": "AI Agenda Builder Phase 1 uses on-demand computation rather than scheduled batch rebuilds.",
+   "oc": "Specified: each trigger generates a new set from the current programme, schedule, categories and reject list, never re-showing rejected or accepted sessions.",
+   "lens": "AI",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50720",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50720",
+  "summary": "Bridging UI gap between web and mobile on ExpoFP",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T10:36:58.583+0000",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54524",
+   "summary": "Mobile App — 2026 Enhancements",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1069,
+  "ai": {
+   "s": "Aligns the ExpoFP stand content card order on mobile with web, showing Exhibitor Information before Sessions.",
+   "pr": "On mobile the stand card rendered Sessions, Exhibitor Information, Sessions, breaking the visual hierarchy used on web.",
+   "wy": "Consistency between the web and mobile ExpoFP experience.",
+   "oc": "The mobile stand content card is to display Exhibitor Information followed by Sessions.",
+   "lens": "EXP",
+   "pa": "Floor Plan",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50721",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50721",
+  "summary": "DS algorithm implementation & calibration for AI Agenda Builder",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T10:40:45.132+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50608",
+   "summary": "AI Agenda Builder (tools)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2353,
+  "ai": {
+   "s": "Implements the Data Science recommendation algorithm that ranks sessions for attendees' empty slots by category overlap.",
+   "pr": "AI Agenda Builder had no algorithm to pick the best-matching sessions for each empty schedule slot.",
+   "wy": "Enables the Visitor team to surface quality suggestions in the consent UI, reusing existing recommender infrastructure.",
+   "oc": "Specified: a ranked per-slot list with relevance scores, applying exclusion rules and the event limit, validated against historical event data.",
+   "lens": "AI",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "AI Enablement",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50769",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50769",
+  "summary": "(UI/UX) AI Assistant Chat Entry Point - Web",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T19:19:27.841+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-42404",
+   "summary": "AI Event Assistant (AGENT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2175,
+  "ai": {
+   "s": "Adds a floating AI assistant chat widget to the event website, with quick actions and free-text questions answered from event data.",
+   "pr": "Attendees had no visible entry point on the event website to ask the AI assistant questions about the event.",
+   "wy": "AI Event Assistant: instant answers without navigating between pages; DS owns the backend, web owns the UI.",
+   "oc": "Specified: a widget visible on page load with a welcome message, at least 3 quick actions, free-text input and graceful out-of-scope handling.",
+   "lens": "AI",
+   "pa": "Website Builder",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "AI Enablement",
+    "Adoption",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50771",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50771",
+  "summary": "AI Assistant Chat Entry Point - Mobile",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T19:20:39.863+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-42404",
+   "summary": "AI Event Assistant (AGENT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1913,
+  "ai": {
+   "s": "Adds the AI assistant chat to the mobile app, using the same backend API and quick actions as the web assistant.",
+   "pr": "Attendees on mobile could not reach the AI assistant without switching to a browser.",
+   "wy": "AI Event Assistant: on-the-go access for attendees through the shared DS backend.",
+   "oc": "Specified: an in-app chat interface with welcome message, quick actions and free-text questions, connected to the shared chatbot API.",
+   "lens": "AI",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "AI Enablement",
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50774",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50774",
+  "summary": "Speaker Queries",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T19:23:34.717+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-42404",
+   "summary": "AI Event Assistant (AGENT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1961,
+  "ai": {
+   "s": "Enables the AI event assistant to answer questions about speakers, their bios and the sessions they present.",
+   "pr": "Attendees wanting speaker information had to browse the programme themselves; the assistant had no speaker knowledge domain.",
+   "wy": "Speakers are the second core knowledge domain in Phase 1 of the AI Event Assistant.",
+   "oc": "Specified: a speakers tool for keynote, profile, speaker-to-session and topic queries, stating when no speaker matches instead of fabricating.",
+   "lens": "AI",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50775",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50775",
+  "summary": "P2: Exhibitor and Booth Location Queries",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T19:24:48.521+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-42404",
+   "summary": "AI Event Assistant (AGENT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1893,
+  "ai": {
+   "s": "Enables the AI event assistant to find exhibitors by category and return booth locations.",
+   "pr": "Attendees on large exhibition floors had no quick way to find relevant companies or locate a booth.",
+   "wy": "Phase 2 of the AI Event Assistant adds exhibitors and booths as a knowledge domain.",
+   "oc": "Specified: an exhibitors tool answering category, startup, booth location and demo/giveaway queries, stating clearly when no exhibitor matches.",
+   "lens": "AI",
+   "pa": "Exhibitor Marketplace",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50776",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50776",
+  "summary": "P2: Product Showcase Queries",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T19:26:56.878+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-42404",
+   "summary": "AI Event Assistant (AGENT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1661,
+  "ai": {
+   "s": "Enables the AI event assistant to answer questions about showcased products and which exhibitors offer them.",
+   "pr": "Attendees with particular product interests had to browse booths individually to find relevant exhibitors.",
+   "wy": "Phase 2 of the AI Event Assistant adds product showcase data as a knowledge domain.",
+   "oc": "Specified: a products tool linked to exhibitor records, answering topic, product and exhibitor product queries and stating when nothing matches.",
+   "lens": "AI",
+   "pa": "Exhibitor Marketplace",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50777",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50777",
+  "summary": "Nearby Hotels & Services Queries (good to have)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T19:28:02.152+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-42404",
+   "summary": "AI Event Assistant (AGENT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1601,
+  "ai": {
+   "s": "Optionally lets the AI event assistant answer questions about hotels and services near the venue, if a data source is confirmed.",
+   "pr": "Travelling attendees could not find nearby accommodation or services within the platform; the data is not held there.",
+   "wy": "Good-to-have for the AI Event Assistant MVP, only if a data source is confirmed in Phase 2.",
+   "oc": "Specified: nearby hotel answers from organiser-provided or approved external data, never fabricated; not to be built without a confirmed source.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Low",
+   "im": [
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50778",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50778",
+  "summary": "LLM Model Evaluation & Selection",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T19:28:55.886+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-42404",
+   "summary": "AI Event Assistant (AGENT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1521,
+  "ai": {
+   "s": "Evaluates and selects the LLM for the AI event assistant MVP on accuracy, latency and cost per query.",
+   "pr": "The PoC did not optimise which LLM was used, which is not viable for a production MVP.",
+   "wy": "Accurate, fast answers within a sustainable cost envelope for the production assistant.",
+   "oc": "Specified: a benchmark suite over session, speaker, exhibitor and product queries, 2 to 3 models compared, a documented choice integrated into the MVP.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement",
+    "Cost Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50779",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50779",
+  "summary": "Scalability & Response Latency",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-24T19:30:01.188+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54741",
+   "summary": "Platform Performance & Operational Efficiency 2026",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1768,
+  "ai": {
+   "s": "Designs the AI assistant backend to handle concurrent attendees and traffic bursts with defined latency targets and graceful degradation.",
+   "pr": "The PoC ran under controlled conditions and was not proven to handle event-level concurrent traffic across web and mobile.",
+   "wy": "Slow responses reduce engagement; the MVP must perform during peak periods such as after keynotes.",
+   "oc": "Specified: latency targets validated under simulated load, burst handling without errors, and a clear message when the assistant is at capacity.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Scalability",
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50874",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50874",
+  "summary": "[Phase 1] Automated post-event CSAT email to visitors about platform experience",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T00:06:25.939+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50795",
+   "summary": "NPS/Feedback Collection",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2090,
+  "ai": {
+   "s": "Sends visitors an automated post-event CSAT email to rate the platform experience in one click, without logging in.",
+   "pr": "There was no systematic signal from the highest-volume persona on the quality of the platform itself, as opposed to the event.",
+   "wy": "Product feedback: actionable CSAT on the app, registration, networking and agenda tools.",
+   "oc": "Specified: a branded email after a configurable delay, 1-5 score plus optional text, tokenised links, GDPR unsubscribe, attributed responses and check-in exclusion toggle.",
+   "lens": "DATA",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50875",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50875",
+  "summary": "[Phase 1] Third-party feedback tool evaluation and selection",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T00:06:51.927+0000",
+  "updated": "2026-09-14T16:26:45.269+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50795",
+   "summary": "NPS/Feedback Collection",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1340,
+  "ai": {
+   "s": "Evaluates at least 3 third-party feedback tools and recommends one to power email-based CSAT/NPS collection.",
+   "pr": "No tool had been chosen for email CSAT/NPS, blocking Phase 1 build; the choice affects integration effort, cost, GDPR and portability.",
+   "wy": "A prerequisite decision for the NPS/Feedback Collection programme.",
+   "oc": "Specified: tools such as Delighted, Survicate and Typeform assessed against set criteria, a signed-off recommendation, effort estimate and GDPR/residency check.",
+   "lens": "DATA",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50876",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50876",
+  "summary": "[Phase 1] Automated post-event CSAT email to exhibitors about platform tools",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T00:07:03.533+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50795",
+   "summary": "NPS/Feedback Collection",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2137,
+  "ai": {
+   "s": "Sends exhibitors an automated post-event CSAT email about platform tools such as lead capture, matchmaking and the exhibitor portal.",
+   "pr": "There was no structured feedback from exhibitors on the tools they use most intensively during events.",
+   "wy": "Exhibitor CSAT is high-value product signal given their commercial relationship and likely response.",
+   "oc": "Specified: branded email after a configurable delay, 1-5 score, optional most-useful-tool and open-text questions, tokenised links, primary-contact default.",
+   "lens": "DATA",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-50877",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50877",
+  "summary": "[Phase 1] Automated post-event NPS email to organizers about Expo Platform",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T00:07:15.311+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50795",
+   "summary": "NPS/Feedback Collection",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2162,
+  "ai": {
+   "s": "Sends organisers a post-event NPS email about ExpoPlatform, with detractor scores alerting Customer Success for follow-up.",
+   "pr": "There was no systematic B2B NPS from organisers, the strongest leading indicator of renewal intent.",
+   "wy": "Retention: track client satisfaction and identify at-risk accounts early.",
+   "oc": "Specified: 0-10 NPS email to the primary organiser contact, optional reason, 30-day frequency cap, CS alert on 0-6 and unsubscribes flagged to CS.",
+   "lens": "DATA",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Retention",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ }
+]

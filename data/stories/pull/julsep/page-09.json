@@ -1,0 +1,762 @@
+[
+ {
+  "k": "EP-57045",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57045",
+  "summary": "ws_time_online_statistics: role profile sources (profile_member, profile_speaker, profile_buyer, profile_moderator) are declared in the mobile maps but not in the contract",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-07T10:16:19.545+0100",
+  "updated": "2026-09-14T16:52:13.528+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 3474,
+  "ai": {
+   "s": "Decides how role-specific profile screens (member, speaker, buyer, moderator) should appear in the mobile source contract.",
+   "pr": "Role profile sources were declared in the mobile maps but not in SourcePagesEnum or Sources v2, and profile_buyers duplicated profile_buyer.",
+   "wy": "Low volume but seen on up to 25 tenants, so these are real screens reporting outside the contract.",
+   "oc": "A decision between one generic profile source or one per role is needed, with the plural duplicate retired on the client.",
+   "lens": "DATA",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57046",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57046",
+  "summary": "ws_time_online_statistics: app lifecycle events arrive as page sources (splash show, login otp, external login, dev-showcase-grid) — decide whether they are tracked at all",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-07T10:16:20.943+0100",
+  "updated": "2026-09-14T16:52:13.515+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 3786,
+  "ai": {
+   "s": "Decides whether app lifecycle moments (splash, login steps, a dev screen) should be tracked as page sources in online-time statistics.",
+   "pr": "Seven non-page values such as \"splash show\", \"login otp\" and a production dev-showcase-grid arrived in the same urn column as real pages.",
+   "wy": "Clean mobile time-online reports; a development screen should not report from production.",
+   "oc": "A product decision per signal is needed: drop, rename or keep, including whether unauthenticated login steps should produce online time.",
+   "lens": "DATA",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57047",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57047",
+  "summary": "ws_time_online_statistics: nine product pages report sources that are not in the contract — most look like re-spellings of slugs that already exist",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-07T10:16:22.270+0100",
+  "updated": "2026-09-14T16:52:13.525+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4226,
+  "ai": {
+   "s": "Decides per value what to do with nine mobile product-page sources outside the contract, most of them re-spellings of existing slugs.",
+   "pr": "Screens such as chat_list, schedule_sessions and product_favorite_list reported sources missing from SourcePagesEnum and Sources v2.",
+   "wy": "The same screens were split across names in mobile reports.",
+   "oc": "Each value is to be mapped to its existing slug, added to the contract or dropped.",
+   "lens": "DATA",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57050",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57050",
+  "summary": "Open the event approval button to the people who really do the approval",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-07T10:55:21.519+0100",
+  "updated": "2026-09-14T17:16:11.884+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1699,
+  "ai": {
+   "s": "Gives the event Approve button to the people who actually approve events, rather than a hardcoded list of admin ids.",
+   "pr": "EP-57006 restored a hardcoded approver id list that does not match today's approvers and can only change with a release; Delete and Set Active are gated by the shared 613 account.",
+   "wy": "Event approval is a commercial decision owned by Susan, Ajay and finance.",
+   "oc": "The approver set is to be named and decided as a list, role or manageable permission, with Delete and Set Active reviewed on the same basis.",
+   "lens": "DATA",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57051",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57051",
+  "summary": "Find out why Manager users get superadmin permissions inside a customer admin panel",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-07T10:55:43.125+0100",
+  "updated": "2026-09-14T17:16:13.879+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2567,
+  "ai": {
+   "s": "Investigates why Manager users, TAMs included, get superadmin rights inside customer admin panels via single sign-on.",
+   "pr": "Manager SSO logged everyone into customer admins as shared tenant account 613, the seeded superadmin, so any \"is superadmin\" check passed for all of them.",
+   "wy": "Follow-up from EP-57006; every 613-based check on any admin screen has the same security hole.",
+   "oc": "The identity problem is to be traced from IndexController's Manager sign-on and the affected checks listed.",
+   "lens": "DATA",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57057",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57057",
+  "summary": "HeaderMobileMenu mounts LanguageSelector twice, toggled only by CSS",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-09-07T12:55:53.876+0100",
+  "updated": "2026-09-14T17:16:14.352+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "frontend",
+   "performance"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2232,
+  "ai": {
+   "s": "Stops the mobile header menu mounting the language selector twice, which built every language link twice on each render.",
+   "pr": "HeaderMobileMenu rendered LanguageSelector for mobile and desktop, toggled only by CSS, so both ran and data-tour matched two nodes.",
+   "wy": "Frontend performance and correctness for organiser custom CSS and product tours; found in the PR #7274 review.",
+   "oc": "Only one LanguageSelector instance is to mount per viewport.",
+   "lens": "EXP",
+   "pa": "Website Builder",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57072",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57072",
+  "summary": "Add TanStack Query as the client server-state layer and shrink Redux to client state",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-07T16:44:44.029+0100",
+  "updated": "2026-09-14T17:17:14.283+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "performance",
+   "state-management",
+   "tech-debt"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 6426,
+  "ai": {
+   "s": "Introduces TanStack Query as portal-ui's server-state layer and shrinks Redux to genuine client state.",
+   "pr": "Server data was cached by hand in classic Redux, with 22 ad-hoc freshness checks, 33 force-refetch sites, 5 copies of one endpoint and 17 contexts reimplementing lists.",
+   "wy": "Frontend tech debt and performance, measured in an audit of master-next14 on 7 Sep 2026.",
+   "oc": "A standard query cache is to replace hand-written TTLs, invalidation and loading flags, slice by slice.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "Scalability"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57124",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57124",
+  "summary": "Native Integration - Jotform — Phase 1: Inbound",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-08T15:33:04.057+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 25330,
+  "ai": {
+   "s": "Adds a native inbound Jotform integration that imports exhibitors from Jotform form submissions every five minutes.",
+   "pr": "Exhibitor data collected in Jotform had no native route into ExpoPlatform.",
+   "wy": "Integration Hub expansion for clients using Jotform to gather exhibitor data.",
+   "oc": "An API-key polled Jotform → EP sync with created_at delta, submission-id matching and EU routing is specified.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57221",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57221",
+  "summary": "Global Search. Blocks, Labels, Order and Availability Control",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Urgent",
+  "created": "2026-09-10T18:00:04.242+0100",
+  "updated": "2026-09-21T10:54:42.619+0100",
+  "resolved": "2026-09-17T17:17:02.011+0100",
+  "team": "Exhibitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "IMEX"
+  ],
+  "epic": {
+   "k": "EP-44808",
+   "summary": "Search Anatomy",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 257,
+  "ai": {
+   "s": "Gives control over Global Search blocks, labels, order and availability (detail is in a linked Confluence page only).",
+   "pr": "Not clearly specified beyond the ticket title.",
+   "wy": "Reported by IMEX, part of the Search Anatomy epic.",
+   "oc": "Not clearly specified beyond the ticket title; marked Done.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57237",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57237",
+  "summary": "Session Calendar: Sync \"By Track\" Side Drawer tab label with the configured Display Filter name from Admin Panel",
+  "status": "Ready for release",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-09-11T11:44:24.473+0100",
+  "updated": "2026-09-24T17:15:24.271+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-57118",
+   "summary": "Session Calendar View improvements",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3077,
+  "ai": {
+   "s": "The Session Calendar side drawer tab now shows the organiser's configured name for the Tracks filter, including translations, instead of a hardcoded \"By Track\".",
+   "pr": "The side drawer hardcoded \"By Track\" although organisers can rename Tracks (e.g. to Streams or Topics), as the rest of the platform respects.",
+   "wy": "Consistent terminology for clients who customise the label.",
+   "oc": "The tab label reads the Display Filter name from the Admin Panel, with localised variants; ready for release.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57253",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57253",
+  "summary": "Language Filter for Sessions and Exhibitor Events (Web)",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-09-11T15:35:19.748+0100",
+  "updated": "2026-09-24T13:39:04.392+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "DLG",
+   "HINTE"
+  ],
+  "epic": {
+   "k": "EP-57511",
+   "summary": "New filters for Sessions and Exhibitor events",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 245,
+  "ai": {
+   "s": "Adds a language filter for sessions and exhibitor events on web (detail is in a linked Confluence page only).",
+   "pr": "Not clearly specified beyond the ticket title.",
+   "wy": "Reported by DLG and HINTE; part of the new sessions and exhibitor events filters epic.",
+   "oc": "Not clearly specified beyond the ticket title; presumed to let attendees filter sessions and exhibitor events by language.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57284",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57284",
+  "summary": "portal-ui: adopt the shared TrackTag and drop the local track color logic",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-14T12:42:24.930+0100",
+  "updated": "2026-09-14T17:16:22.681+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend",
+   "Frontend-dev"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 3950,
+  "ai": {
+   "s": "Switches portal-ui to the shared TrackTag component and removes its now-duplicated local track colour logic.",
+   "pr": "EP-57087 moved track colouring into the library's TrackTag, leaving a duplicate copy in portal-ui's trackColor helper.",
+   "wy": "Remove duplicated code once the library owns the behaviour.",
+   "oc": "Seven TrackList/TracksBlock mounts are to render TrackTag and the local colour code is to be deleted, once a library release ships.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57291",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57291",
+  "summary": "Language and Location Filters for Sessions and Exhibitor Events (Mobile App)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Urgent",
+  "created": "2026-09-14T14:14:25.987+0100",
+  "updated": "2026-09-24T12:17:56.569+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "ForgeDev",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1775,
+  "ai": {
+   "s": "Adds language and location filters to the mobile Sessions and Exhibitor Events pages, returning the same results as on web.",
+   "pr": "Mobile attendees lacked the language and location filters available on web.",
+   "wy": "Parity between app and web filtering.",
+   "oc": "Filters are specified with the web option sets, multi-select, AND logic, and grouped floorplan, online and custom locations.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57304",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57304",
+  "summary": "[Integration] Add sync_ts to contract for accountsInteractions sync",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-09-14T16:05:23.637+0100",
+  "updated": "2026-09-24T13:36:32.130+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-57297",
+   "summary": "accountsInteractions: sync_ts cursor field to fix incremental-sync data loss",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3870,
+  "ai": {
+   "s": "Adds a sync_ts cursor to the accountsInteractions and sponsorInteractions APIs so clients can pull increments by server sync time without losing data.",
+   "pr": "Incremental pulls filtered by action time could miss records synced later, causing data loss for integrations.",
+   "wy": "Fix incremental-sync data loss for API clients.",
+   "oc": "sync_ts is returned per record and sync_from/sync_to accepted in the same millisecond format with a half-open window; in testing.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57308",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57308",
+  "summary": "Unify badge QR code generation & scanning (post-IMP-317/IMP-318 follow-up)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-09-14T17:42:23.863+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1341,
+  "ai": {
+   "s": "Unifies badge QR code generation and scanning on one dedicated, unique QR field so lead scans can no longer resolve to the wrong exhibitor.",
+   "pr": "Badge QR codes encoded a bare account_id that could collide with external ids, so Android misattributed team-member scans (IMP-317/IMP-318).",
+   "wy": "Postmortem follow-up to prevent lead misattribution.",
+   "oc": "A DB-unique QR field, strict QR-only lookup in both apps, mobile test coverage and a plan for already-printed badges are scoped.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57315",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57315",
+  "summary": "[Reg-OT][BE][Payments][Part 2.1][Main-Split2] Purchasing: bring invoice and cumulative discounts back, and close the Part 2 review items",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-15T01:13:01.981+0100",
+  "updated": "2026-09-23T20:48:46.961+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-55566",
+   "summary": "Registration - Payments (OT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 12496,
+  "ai": {
+   "s": "Brings invoice payment and cumulative discounts back to the new Registration purchasing flow and closes the Part 2 review items.",
+   "pr": "Pay-by-invoice and cumulative discounts were switched off in Purchasing Part 2 (EP-56043), and review found defects shipped as known limitations.",
+   "wy": "Complete the new Registration payment path safely after the Part 2 release.",
+   "oc": "Features are to be re-enabled correctly, the recorded defects fixed, and diagnostics and suite gating landed first.",
+   "lens": "REV",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "Revenue",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57330",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57330",
+  "summary": "Session Calendar View - Show starting and ending time slots only",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "priority": "Urgent",
+  "created": "2026-09-15T08:02:38.032+0100",
+  "updated": "2026-09-24T17:49:32.048+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4640,
+  "ai": {
+   "s": "The mobile Session Calendar View grid starts at the first session's time slot and ends at the last, with no empty hours to scroll past.",
+   "pr": "The calendar grid rendered empty time slots above the first and below the last session.",
+   "wy": "Attendees should see the programme immediately on load.",
+   "oc": "The visible range is computed per day from the grid sessions, excluding all-day sessions, snapping to slot boundaries.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57332",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57332",
+  "summary": "Session Calendar View - All Day Sessions with fixed 44px +N button (Mobile)",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "priority": "Urgent",
+  "created": "2026-09-15T08:32:37.951+0100",
+  "updated": "2026-09-24T17:49:34.425+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4446,
+  "ai": {
+   "s": "Mobile Calendar View moves sessions of 6 hours or more into an ALL DAY banner with a fixed 44px \"+N\" button, freeing the grid for shorter sessions.",
+   "pr": "Long sessions competed with time-specific sessions in the grid and squeezed their column width.",
+   "wy": "Mobile adaptation of the web behaviour in EP-57098.",
+   "oc": "Sessions of 6+ hours are promoted to a banner in 1- and 3-day modes, excluded from overlap calculation, and still openable.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX",
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57343",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57343",
+  "summary": "Create meeting stats tab in Embeddable Analytics page",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-15T14:21:43.537+0100",
+  "updated": "2026-09-24T17:49:36.941+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 6089,
+  "ai": {
+   "s": "Adds a Meeting Analytics tab to the Embeddable Analytics page, with event, date and meeting-tag filters.",
+   "pr": "Meeting statistics were only in the legacy Analytics → General → Meetings page, not in the Embeddable dashboards.",
+   "wy": "Extends the Embeddable.com analytics pattern of EP-52392 and EP-54553.",
+   "oc": "A new dashboard tab is to show the documented meeting stats, split per selected meeting tag, while the legacy page stays.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ },
+ {
+  "k": "EP-57347",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57347",
+  "summary": "API V2 — Add filter_1 to filter_5 support on sessions/set",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Urgent",
+  "created": "2026-09-15T15:57:40.678+0100",
+  "updated": "2026-09-17T13:52:01.368+0100",
+  "resolved": "2026-09-17T13:52:01.344+0100",
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "INTERNAL",
+   "DLG"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 14723,
+  "ai": {
+   "s": "API V2 sessions/set now accepts filter_1 to filter_5, so integrations can set custom session filters, matched in the request language.",
+   "pr": "Integrations could not set custom session filters through sessions/set.",
+   "wy": "Requested internally and by DLG for session data integrations.",
+   "oc": "Filters are applied leniently with per-slot errors, cleared with an empty string, and matched in the request language; done.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:04Z"
+ }
+]

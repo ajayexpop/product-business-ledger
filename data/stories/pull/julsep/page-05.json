@@ -1,0 +1,766 @@
+[
+ {
+  "k": "EP-55977",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55977",
+  "summary": "formBuilderV2: a page that renders form fields on load can never be navigated away from",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-08-06T20:21:43.269+0100",
+  "updated": "2026-09-14T17:17:11.451+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "routing",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3391,
+  "ai": {
+   "s": "Fixes a form-builder bug where a page loaded directly with any form field rendered could never be navigated away from client-side.",
+   "pr": "After a reload or pasted link on a page rendering even one formBuilderV2 field, client-side navigation started but never applied: the URL stayed put with no error.",
+   "wy": "Frontend routing defect found on the registration form sections work (EP-55965), blocking step navigation.",
+   "oc": "The cause was bisected to rendering any single form field; the fix is to let navigation complete after a fresh load.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55988",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55988",
+  "summary": "Remove legacy Aventri v2 integration",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-07T09:57:48.564+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46491",
+   "summary": "Native Integrations - Migrations",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 839,
+  "ai": {
+   "s": "Removes the legacy Aventri v2 integration settings surface now that the Hub Aventri integration has replaced it.",
+   "pr": "The legacy aventri_v2 settings, log views and controller actions remained after Hub Aventri (EP-46288) superseded them.",
+   "wy": "Integration migration clean-up: reduce legacy surface and unused infrastructure cost.",
+   "oc": "After an audit, TAM sign-off and infra check, the legacy views and GeneralController actions are to be removed and docs updated, keeping shared workers.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Cost Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55996",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55996",
+  "summary": "Switch search engine for Exhibitors list",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-08-07T13:27:52.126+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-55779",
+   "summary": "Switch AI Search for Marketplace",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 303,
+  "ai": {
+   "s": "Switches the search engine behind the Marketplace exhibitors list (detail is in a linked Confluence functional reference only).",
+   "pr": "Not clearly specified beyond the ticket title and epic (Switch AI Search for Marketplace).",
+   "wy": "Part of the Switch AI Search for Marketplace epic; not otherwise specified.",
+   "oc": "Not clearly specified beyond the ticket title; presumed to move the exhibitors list onto the new search engine.",
+   "lens": "AI",
+   "pa": "Exhibitor Marketplace",
+   "cf": "Low",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55998",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55998",
+  "summary": "Remove legacy A2Z (SOAP) integration",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-07T14:11:15.336+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46491",
+   "summary": "Native Integrations - Migrations",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 790,
+  "ai": {
+   "s": "Removes the legacy A2Z SOAP integration settings surface now that the Hub A2Z REST integration has replaced it.",
+   "pr": "Legacy a2z SOAP settings, logs and resync actions remained after Hub A2Z REST (EP-45439) superseded them.",
+   "wy": "Integration migration clean-up: reduce legacy surface and unused infrastructure cost.",
+   "oc": "After an audit, TAM sign-off and infra check, legacy views and actions are to be removed and docs updated, keeping shared workers.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Cost Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56034",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56034",
+  "summary": "[TechDept][CLONING-2][BE] Stage 2 — invert the legacy dependency",
+  "status": "Ready for review",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-08-08T02:06:40.569+0100",
+  "updated": "2026-09-23T19:00:32.998+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-56030",
+   "summary": "[CLONING] New Modules Architecture conformance",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 6027,
+  "ai": {
+   "s": "Moves the cloning module's decisions into its domain layer with legacy model access behind ports and adapters, making cloner bugs cheap to unit test.",
+   "pr": "Every functional defect in cloning lived in entity cloners reachable only through Postgres-backed tests, with four still open on alpha, and legacy models imported the module directly.",
+   "wy": "Conformance with the new modules architecture and cheaper detection of a proven bug class.",
+   "oc": "Cloning logic sits in Domain behind ports, so each cloner decision becomes a fast table-driven unit test; the stage is in review.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56038",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56038",
+  "summary": "DS: recover the lost meeting-create events — root cause found, step-by-step restoration plan",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-08T13:20:12.590+0100",
+  "updated": "2026-09-17T13:26:16.297+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 8542,
+  "ai": {
+   "s": "Finds why meeting-create statistics were being lost and sets out a rehearsed plan to restore them, starting with IMEX event 1295.",
+   "pr": "The analytics lambda silently dropped client events whose dictionary lookup failed; iOS sent an account id as an exhibitor id, losing 2,884 of 2,912 iOS meetings on event 1295.",
+   "wy": "Meeting statistics are core client analytics, and IMEX data was materially undercounted.",
+   "oc": "The root cause is filed (EP-56207) and a step-by-step restoration using the prod-failed backup marker was rehearsed on a dev copy; production is untouched.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Data & Analytics",
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56052",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56052",
+  "summary": "AditusVisitors hub: multi external event id sync via SyncJob steps",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-10T07:56:44.765+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46491",
+   "summary": "Native Integrations - Migrations",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 809,
+  "ai": {
+   "s": "Lets the Hub AditusVisitors integration sync several external event ids by running one SyncJob step per id.",
+   "pr": "Legacy aditus_v2 could sync multiple external event ids but the Hub AditusVisitors integration could not, blocking legacy removal.",
+   "wy": "Feature parity needed to retire legacy aditus_v2.",
+   "oc": "Design decisions on id storage, step execution and per-step cursors are to precede a multi-step build with tests, e2e and docs.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56053",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56053",
+  "summary": "Remove legacy Aditus v2 (InfoSalons) integration",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-10T07:59:25.198+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46491",
+   "summary": "Native Integrations - Migrations",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 976,
+  "ai": {
+   "s": "Removes the legacy Aditus v2 (InfoSalons) integration settings surface once the Hub AditusVisitors replacement supports multiple event ids.",
+   "pr": "The legacy aditus_v2 settings surface remained after Hub AditusVisitors replaced it.",
+   "wy": "Integration migration clean-up, gated on EP-56052 parity.",
+   "oc": "After the gate, audit and TAM sign-off, legacy views and load/save are to be removed while Aditus v1 mobile badges keep working.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56054",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56054",
+  "summary": "Visit Connect SSO as standalone service with own settings page",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-10T08:01:39.923+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46491",
+   "summary": "Native Integrations - Migrations",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 868,
+  "ai": {
+   "s": "Extracts Visit Connect (N200) SSO into a standalone service with its own admin settings page, independent of any integration.",
+   "pr": "N200 SSO was tied to the legacy n200 integration, had no live test coverage and blocked that integration's removal.",
+   "wy": "Prerequisite for removing legacy n200 while keeping exhibitor SSO working.",
+   "oc": "A dedicated settings page and SSO service are planned, with the exhibitor menu and endpoint re-pointed, tests added and config migration decided.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56055",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56055",
+  "summary": "N200 flag archaeology — disposition of non-SSO functionality",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-10T08:04:10.966+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46491",
+   "summary": "Native Integrations - Migrations",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1254,
+  "ai": {
+   "s": "Decides the fate of each remaining non-SSO N200 flag before the legacy integration is removed.",
+   "pr": "Legacy n200 carried flags such as external badge, external lead scanner, lead sync and category import whose purpose and users were unclear.",
+   "wy": "Removal of legacy n200 needs a deliberate drop / platform-level / migrate decision per flag.",
+   "oc": "A per-flag decision table is to be produced, with small platform-level work done in-ticket and user-visible changes documented.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56056",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56056",
+  "summary": "Remove legacy N200 (VISIT) integration",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-10T08:05:31.005+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46491",
+   "summary": "Native Integrations - Migrations",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1180,
+  "ai": {
+   "s": "Removes the legacy N200 (VISIT) integration settings surface once SSO, flag dispositions and meeting-access mapping are in place.",
+   "pr": "The legacy n200 settings, logs and seven controller actions remained after Hub Visit replaced it.",
+   "wy": "Integration migration clean-up, gated on EP-56054, EP-56055 and EP-56057.",
+   "oc": "After the gates, audit, TAM sign-off and infra check, legacy views and actions are to be removed and docs pointed at Hub Visit and the SSO service.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Cost Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56057",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56057",
+  "summary": "Conditional Meeting Access as hub mapping field",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-10T08:20:00.986+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46491",
+   "summary": "Native Integrations - Migrations",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 943,
+  "ai": {
+   "s": "Rebuilds N200's conditional meeting access as an Integration Hub mapping field any integration can use.",
+   "pr": "Only legacy N200 could block meeting access based on a registration answer, and that logic blocked the integration's removal.",
+   "wy": "Preserve the capability for all integrations while retiring legacy n200.",
+   "oc": "A mapping field from source path and match value to ALLOW_MEETINGS is to be designed, built with parity tests and documented.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56061",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56061",
+  "summary": "Filter meeting analytics by meeting tags",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-10T08:51:36.660+0100",
+  "updated": "2026-09-24T17:48:23.706+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2234,
+  "ai": {
+   "s": "Organisers can filter meeting analytics by meeting tag, and compare several tags side by side in colour-coded columns.",
+   "pr": "Meetings analytics showed one blended total, so organisers could not separate or compare co-located shows sharing an event.",
+   "wy": "Organisers running co-located shows need per-show meeting performance.",
+   "oc": "A Meeting Tags multi-select beside the Events filter is specified: one tag filters every section, two or more split each metric by tag.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56075",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56075",
+  "summary": "Normalize Alert styles via theme overrides",
+  "status": "Ready for review",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-08-10T11:16:09.439+0100",
+  "updated": "2026-09-18T10:04:02.598+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3807,
+  "ai": {
+   "s": "Moves the Alert component's look into expo-react-components theme overrides instead of each app reimplementing it with inline styles.",
+   "pr": "Alert existed only as a custom per-app wrapper that restyled MUI's Alert with ad-hoc sx for colours, variants, icons and layout.",
+   "wy": "Design-system consistency and less duplicated frontend code.",
+   "oc": "Severity colours, variants, icons and spacing are to live in theme overrides so apps use a standard Alert; the change is in review.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56085",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56085",
+  "summary": "Comprehensive pixel-dimension validation for all upload routes (images + media)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-08-10T13:39:23.465+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2331,
+  "ai": {
+   "s": "Applies consistent pixel-dimension validation to both product upload routes so oversized images and GIFs get a 400 instead of a 500.",
+   "pr": "The /media route had no pixel bound, animated GIFs bypassed the 30 MP ceiling, and images with a side of 32768 px or more caused a 500.",
+   "wy": "Gaps found in testing after EP-55933; decoded-pixel bombs are a stability risk.",
+   "oc": "Area and per-side limits, including frames × width × height for GIFs, are to be enforced on /images and /media with field-scoped 400 errors.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56121",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56121",
+  "summary": "Integration Hub: Per-Field \"Null if Empty\" Control on Field Mappings",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-08-11T13:02:40.589+0100",
+  "updated": "2026-09-24T18:19:49.456+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 3029,
+  "ai": {
+   "s": "Adds a per-field \"Null if empty\" control to Integration Hub mappings so empty source values can be kept from wiping existing data.",
+   "pr": "When a source API returned null for a populated field, sync overwrote valid data, as when Genesis World wiped exhibitor categories (EP-55214).",
+   "wy": "Protect client data across all native integrations, not just Genesis.",
+   "oc": "Each create and update mapping row is to get a checkbox: ticked writes null as today, unticked skips the write and keeps the value.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56138",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56138",
+  "summary": "PDF badge from side menu",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-11T18:11:21.434+0100",
+  "updated": "2026-09-24T17:48:29.408+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "IMEX"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4047,
+  "ai": {
+   "s": "Attendees in a configured category can open their public transport ticket PDF from the mobile app menu.",
+   "pr": "There was no way to show an account-specific PDF in the app, so attendees would need to print transport tickets despite having digital ones.",
+   "wy": "Requested for IMEX Frankfurt (IF27), where Ops is exploring public transport tickets.",
+   "oc": "A category-restricted burger-menu item is specified, with the PDF pushed per account via a new parameter on Open API POST /api/v2/account/set.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56156",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56156",
+  "summary": "Digital passport — zone-visit stamp collection with tiered rewards (Backend)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-12T12:25:43.751+0100",
+  "updated": "2026-09-24T17:48:28.929+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3893,
+  "ai": {
+   "s": "Adds backend support for a digital passport, recording visitors' zone-visit stamps and resolving their reward tier automatically.",
+   "pr": "Check-in zones logged presence but had no stamp, count or tier concept, and the leaderboard's points model did not fit.",
+   "wy": "Organisers of multi-zone events want to encourage exploration with tiered rewards; the mobile story depends on this API.",
+   "oc": "A provisional scope covers idempotent per-zone stamps, passport-eligible zone flags, configurable tiers and an API; still in discovery.",
+   "lens": "EXP",
+   "pa": "Networking & Interactions",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56157",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56157",
+  "summary": "Digital passport — zone-visit stamp collection with tiered rewards (Mobile App)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-12T12:26:48.184+0100",
+  "updated": "2026-09-24T17:48:38.118+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3071,
+  "ai": {
+   "s": "Visitors can collect digital stamps for zone visits in the mobile app and see their progress toward reward tiers.",
+   "pr": "Visitors had no way to collect zone-visit stamps or see how close they were to a reward at multi-zone events.",
+   "wy": "Drive event exploration; the client's first use case is a 3-day event with 9 zones.",
+   "oc": "A provisional passport screen showing stamps collected versus total and the current tier is planned, blocked by backend story EP-56156.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Adoption",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-56161",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56161",
+  "summary": "Align Banners Size FE<>Admin<>Design",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-12T12:51:37.371+0100",
+  "updated": "2026-09-14T17:16:55.932+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 244,
+  "ai": {
+   "s": "Aligns banner sizes across frontend, admin and design, which currently all differ.",
+   "pr": "Banner sizes differed between Figma, the admin panel and the frontend, and some pages such as News had no banner designs.",
+   "wy": "Related to bug EP-56147; inconsistent sizes make banners display incorrectly.",
+   "oc": "Banner dimensions are to be made consistent across design, admin and frontend.",
+   "lens": "REV",
+   "pa": "Sponsorship",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ }
+]

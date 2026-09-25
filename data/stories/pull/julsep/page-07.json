@@ -1,0 +1,735 @@
+[
+ {
+  "k": "EP-56334",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56334",
+  "summary": "US-9: LLM coaching narrative",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T15:29:02.198+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 840,
+  "ai": {
+   "s": "Adds an LLM coaching layer to the insights portal that writes plain-English narrative and a prioritised action plan per section, never inventing numbers.",
+   "pr": "Insight sections showed figures without tailored guidance on what exhibitors should do next.",
+   "wy": "Part of the ExpoIntelligence vision, but deliberately deferred until the dashboards are validated commercially.",
+   "oc": "Deterministic numbers with LLM-written narrative, cached per exhibitor and data version, are specified; low priority per the 7 Aug team decision.",
+   "lens": "AI",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56335",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56335",
+  "summary": "US-10: Paywall on dashboard (nice-to-have)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T15:29:13.036+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 602,
+  "ai": {
+   "s": "Lets exhibitors self-purchase the full insights report from a paywalled preview on their dashboard (nice-to-have, v2).",
+   "pr": "There was no self-service way for exhibitors to buy access to the full insights report.",
+   "wy": "A potential revenue stream for ExpoIntelligence, deferred behind v1 email-link access.",
+   "oc": "A locked preview, purchase unlock and auditable entitlement are specified; not to be sized until v1 ships and a payment decision lands.",
+   "lens": "REV",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Revenue"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56373",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56373",
+  "summary": "Native Integration: Infosalon Exhibitor Push + SSO",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-19T13:55:30.307+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Native_Integration",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-45437",
+   "summary": "Integration HUB - Integrations EPIC",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2849,
+  "ai": {
+   "s": "Adds a native InfoSalons integration that pushes ExpoPlatform exhibitor data to the InfoSalons Exhibitor Portal and supports SSO login.",
+   "pr": "Exhibitor data had to reach the InfoSalons badging and registration portal outside a native integration, with no SSO between the two.",
+   "wy": "Extends the Integration Hub, following the Aditus exhibitor push pattern (EP-46657).",
+   "oc": "An ongoing outbound sync on create and update with API-key auth, plus JWT-signed SSO login and account sync endpoints, is specified.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56421",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56421",
+  "summary": "[TechDept][TM-dev/BE] Monolith: implement ICU MessageFormat rendering in the translation layer (plural/select)",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-20T10:29:15.656+0100",
+  "updated": "2026-09-22T11:21:35.480+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 6365,
+  "ai": {
+   "s": "Adds ICU MessageFormat rendering to the monolith's translation layer so plural and select translations display correctly instead of as raw ICU text.",
+   "pr": "Translation Manager stores real ICU values since EP-55658, but the monolith only substitutes flat placeholders, so plurals reach end users as raw source.",
+   "wy": "The agreed follow-up to a risk explicitly accepted in EP-55658.",
+   "oc": "The monolith translation service is to render ICU plural, select and nested arguments from the Translation Manager's ICU form.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56423",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56423",
+  "summary": "Reuse the unsaved changes guard on the rest of the iframe-embedded admin pages",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-08-20T10:45:36.693+0100",
+  "updated": "2026-09-14T17:17:10.478+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2826,
+  "ai": {
+   "s": "Extends the unsaved-changes guard to the other iframe-embedded admin pages, so parent-frame navigation no longer silently drops edits.",
+   "pr": "Only the registration settings pages got the EP-56400 guard; exhibitor profile, content settings, networking onboarding and site builder still lost edits on parent-frame clicks.",
+   "wy": "The same data-loss bug EP-56400 fixed remained reproducible elsewhere in the admin.",
+   "oc": "The reusable guard is to be wired into the remaining embedded pages, replacing each page's own partial navigation warning.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56442",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56442",
+  "summary": "Internal admin panel search",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-20T14:59:24.788+0100",
+  "updated": "2026-09-24T18:11:20.901+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 8893,
+  "ai": {
+   "s": "Adds a persistent Admin Panel search that finds pages, settings, entities and hidden text such as tooltips and dropdown options, and jumps straight to them.",
+   "pr": "The Admin Panel had grown too large to navigate reliably, e.g. 45 ungrouped fields under Registration Settings → Additional Settings.",
+   "wy": "Admins waste time hunting for settings; distinct from the customer-facing Global Search.",
+   "oc": "A header search bar is specified over an index of page titles, labels, help text, placeholders and option values, including Analytics & Reports.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56447",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56447",
+  "summary": "Codeception: BaseCest leaks process-wide static state between tests (ExpoConfig::$values), manufacturing false failures in full-suite runs",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-20T16:43:40.131+0100",
+  "updated": "2026-09-14T17:16:49.123+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 5402,
+  "ai": {
+   "s": "Resets the ExpoConfig static cache between Codeception tests so full-suite runs stop producing false failures that look like product bugs.",
+   "pr": "BaseCest did not reset ExpoConfig::$values, which caches misses, so a module enabled in the database could read as disabled in later tests.",
+   "wy": "Reliable tests: leaked static state manufactures failures unrelated to the code under test.",
+   "oc": "The second process-wide static is to be reset centrally after a verification run; the first leak was fixed in PR #4880.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Maintenance",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56463",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56463",
+  "summary": "Flaky unit test: PublicApiLogFiltersReaderTest fails on a warm cache — Cache::getCachedResult skips the mocked call",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-21T09:36:54.230+0100",
+  "updated": "2026-09-14T17:16:34.979+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 4134,
+  "ai": {
+   "s": "Fixes a flaky unit test for PublicApiLogFiltersReader that fails whenever the CloudWatch filters cache is already warm.",
+   "pr": "The cached call skipped the mocked CloudWatch method on a cache hit, so the test passed only on a cold cache and failed after other suites warmed it.",
+   "wy": "Deterministic cache-dependent failures undermine confidence in the test suite.",
+   "oc": "The test is to isolate or bypass the cache so its expectation holds regardless of cache state.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56547",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56547",
+  "summary": "[BE Test fail] Import suites are red — 53 failures across api-admin and cli, and nothing anywhere turns red",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-25T10:48:54.796+0100",
+  "updated": "2026-09-14T17:17:11.003+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 5267,
+  "ai": {
+   "s": "Gets the red import test suites passing again: 53 failures across api-admin and cli that nothing flagged.",
+   "pr": "A full Codeception run showed 25 cli and 30 api-admin failures, mostly import, and the functional suite crashing, with no pipeline turning red.",
+   "wy": "Surfaced during QA on EP-55347; broken suites hide real regressions in import.",
+   "oc": "The failing import tests (email dispatch, team member counts and others) are to be fixed and the suites made to signal failures.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56579",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56579",
+  "summary": "Banners sizes streamline",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-25T12:22:39.782+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Streamlines banner sizes (ticket has no further detail).",
+   "pr": "Not clearly specified beyond the ticket title — no description was provided.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; presumed to standardise banner dimensions.",
+   "lens": "REV",
+   "pa": "Sponsorship",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56595",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56595",
+  "summary": "Exhibitor event parent/child pair: loaders, error messages and the counterpart index",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-25T14:23:58.399+0100",
+  "updated": "2026-09-24T16:20:40.548+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "exhibitor-events",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 4511,
+  "ai": {
+   "s": "Tidies the exhibitor event parent/child approval pair: loaders, error messages and a counterpart index, after the EP-56280 fix.",
+   "pr": "Pending and live exhibitor event rows point at each other without foreign keys, and issues such as a save path deleting the row it is saving were left out of EP-56280.",
+   "wy": "Recorded so the remaining risks are scheduled rather than rediscovered; an exhibitor's save could be lost.",
+   "oc": "The remaining items around the pair are to be fixed, starting with establishing what happens when the auto-approve branch deletes the row mid-save.",
+   "lens": "INTEG",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56643",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56643",
+  "summary": "fix Avatar size=\"xxs\" regression in TagSelect breaking build:types",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-26T12:29:15.116+0100",
+  "updated": "2026-09-14T17:16:08.284+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "frontend",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1891,
+  "ai": {
+   "s": "Fixes the Avatar size=\"xxs\" regression in TagSelect that breaks the type build and crashes TagSelect items with avatars.",
+   "pr": "The v8 Avatar rewrite dropped the xxs size but TagSelect still passed it, so build:types failed and styles[\"xxs\"] was undefined at render.",
+   "wy": "The regression shipped in 0.5.4 and a red build:types gates nothing.",
+   "oc": "The size is to be mapped to xs or restored per Figma, other dropped sizes fixed, and Avatar made to fall back to its default size.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56668",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56668",
+  "summary": "Make exhibitor manual edits non-destructive",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-26T17:10:45.546+0100",
+  "updated": "2026-09-24T17:48:51.389+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1301,
+  "ai": {
+   "s": "Organisers can edit published Exhibitor Manual sections and groups without destroying exhibitors' submitted data; only deletion removes data.",
+   "pr": "Editing a published manual section could wipe weeks of exhibitor submissions.",
+   "wy": "Organisers need to fix and adjust the manual after launch without data loss.",
+   "oc": "A rule is specified: non-delete edits keep submission counts, data and status unchanged, and removed fields are retained but hidden.",
+   "lens": "EXP",
+   "pa": "Exhibitor Manual",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56682",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56682",
+  "summary": "move products add/edit route guard onto productInfo and drop the duplicate products request",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-27T08:34:36.602+0100",
+  "updated": "2026-09-14T16:52:15.056+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "performance"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 13788,
+  "ai": {
+   "s": "Moves the product add/edit permission check onto the productInfo request the form already makes, dropping a duplicate products request.",
+   "pr": "The EP-55755 route guard fetched its own copy of permission data on every entry to the product form, adding a request that did not exist before.",
+   "wy": "Frontend performance, and the limit decision is more correct coming from the backend.",
+   "oc": "/api/v1/exhibitor/productInfo is to carry the decision, so entering the form costs exactly one request.",
+   "lens": "COST",
+   "pa": "Exhibitor Marketplace",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Scalability"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56693",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56693",
+  "summary": "Deferred registration emails (email_waiting_condition): payment binding, row lifecycle, confirm-race hardening, .ics on release",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-27T10:06:49.385+0100",
+  "updated": "2026-09-14T17:16:41.950+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 4086,
+  "ai": {
+   "s": "Hardens deferred registration emails: binds parked emails to their payment, cleans up rows on cancel, fixes a confirm race and sends .ics on release.",
+   "pr": "Parked emails were keyed only by account and event, so confirming one pending invoice released another's emails and password resets, and cancelled rows were never cleaned.",
+   "wy": "Edge-case follow-up to EP-56584 raised in PR review, deliberately kept out of the urgent fix.",
+   "oc": "A nullable payment_id with filtered release, cancel-time clean-up, race hardening and calendar attachments are scoped.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56694",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56694",
+  "summary": "Returning registrant keeps platform access before offline payment is approved (account activated at registration)",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-27T10:06:56.352+0100",
+  "updated": "2026-09-14T17:16:44.353+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1619,
+  "ai": {
+   "s": "Decides whether returning registrants should lose platform access until their offline payment is approved, since accounts are activated at registration.",
+   "pr": "finishRegistration() activates the account unconditionally, so a returning registrant with existing credentials can use the platform before the invoice is reviewed.",
+   "wy": "Contradicts EP-34905 (no immediate access before approval); the underlying exposure behind EP-56584.",
+   "oc": "Product decisions on deferring activation and on payment cancel are needed before implementation.",
+   "lens": "REV",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Revenue",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56707",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56707",
+  "summary": "New login flow: after \"Incorrect login\" the email field on the second screen is locked and the way to correct it is not signposted",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-27T10:47:48.171+0100",
+  "updated": "2026-09-14T17:17:12.387+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2697,
+  "ai": {
+   "s": "Signposts how to correct the email after an \"Incorrect login\" in the new mobile login flow, where the email field is locked on the second screen.",
+   "pr": "After an unknown email reached the OTP screen and failed, the pre-filled email was locked with no hint that the fix is one screen back.",
+   "wy": "Raised as tech debt: behaviour matches the criteria, which chose late validation to prevent account enumeration.",
+   "oc": "The second screen is to indicate how to change the email while keeping the anti-enumeration design.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56742",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56742",
+  "summary": "Exclude surcharge/tax from invoice when offline payment method is selected",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-08-27T16:46:41.513+0100",
+  "updated": "2026-09-24T17:48:57.280+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "ACI"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 5232,
+  "ai": {
+   "s": "Invoices no longer include the credit card surcharge when a delegate chooses invoice payment, controlled by an event setting.",
+   "pr": "Generated invoices still carried the 4.5% card surcharge on ticket and session lines even when the delegate paid by invoice.",
+   "wy": "Requested by ACI Asia-Pacific & Middle East for RACE 2027 (EP-55785).",
+   "oc": "With the exclude setting on, invoice-payment orders produce invoices with no surcharge and a net total; card payments are unchanged.",
+   "lens": "REV",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "Revenue"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56743",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56743",
+  "summary": "SessionCardVerticalView does not pass address to MetaInfo",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-08-27T17:46:24.919+0100",
+  "updated": "2026-09-14T17:16:25.927+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "frontend",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1917,
+  "ai": {
+   "s": "Makes vertical session cards show the session address, as the other four session card views already do.",
+   "pr": "SessionCardVerticalView never passed address to MetaInfo, so every vertical card dropped it, including the new Registration sessions step.",
+   "wy": "Reported by QA on EP-56654; consumers had only hacky workarounds.",
+   "oc": "The vertical view is to pass address through so MetaInfo renders its own address row.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ },
+ {
+  "k": "EP-56745",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56745",
+  "summary": "finish the incomplete Untitled UI v7→v8 upgrade",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-27T19:12:12.992+0100",
+  "updated": "2026-09-14T17:16:27.941+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "frontend",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 4326,
+  "ai": {
+   "s": "Finishes the incomplete Untitled UI v7 to v8 upgrade so the component library matches the design system and upstream features.",
+   "pr": "The v8 upgrade stopped part-way, leaving nine files untouched and features half-wired, so design and code disagreed on every input and select.",
+   "wy": "Found while mapping the design system with Code Connect; most gaps are unsynced upstream files.",
+   "oc": "Remaining files are to be synced per a per-file audit; hint-text, label, dropdown and 94 new icon subpaths are already done on a branch.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:21:20Z"
+ }
+]

@@ -1,0 +1,292 @@
+[
+ {
+  "k": "EP-49060",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49060",
+  "summary": "[Client Manager][BE FE QA] New Client Manager (Finance View) / Splitted to Tasks",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-09T15:30:24.276+0000",
+  "updated": "2026-09-15T17:48:23.179+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-43651",
+   "summary": "New Client Manager",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 7137,
+  "ai": {
+   "s": "A dedicated Finance view in the new Client Manager lets Finance review, approve and reject customer environments inside the platform, with a full audit trail.",
+   "pr": "Finance approved or rejected new customer environments entirely outside the system through async communication, with no central interface and no recorded audit trail.",
+   "wy": "Second step of the Onboarding Journey after TAM environment creation; bringing Finance approval in-house centralises control.",
+   "oc": "A Finance role and a \"Customer Management\" screen with Kanban and list views, status tabs and a review side panel with an approval checklist to approve or reject environments.",
+   "lens": "COST",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "Operational Efficiency",
+    "Compliance",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49061",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49061",
+  "summary": "Organizer Onboarding Journey",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-09T15:31:10.648+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52807",
+   "summary": "Onboarding Journey",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2164,
+  "ai": {
+   "s": "A guided onboarding flow takes new organisers through account, event and billing setup and recommends modules suited to their event.",
+   "pr": "New organisers had no structured path from signup to a configured event, so setup was high-friction and the information needed for personalisation and billing was not collected.",
+   "wy": "Part of the Onboarding Journey: reduce setup friction and drive activation and module adoption after signup.",
+   "oc": "A five-step onboarding flow (About You, Event Setup, Billing, Tell Us About Your Event, Unlock More Value) with skip, dashboard landing, decision-table module recommendations and stored responses.",
+   "lens": "EXP",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Adoption",
+    "Revenue Enabler",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49062",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49062",
+  "summary": "Onboarding Dashboard",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-09T15:31:30.562+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52807",
+   "summary": "Onboarding Journey",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2073,
+  "ai": {
+   "s": "An event onboarding dashboard gives TAMs and organisers one place to see setup progress per module, manage team members and resume onboarding.",
+   "pr": "Understanding event setup status meant navigating across multiple screens, with no single view of progress, team members or what still needed attention.",
+   "wy": "Part of the Onboarding Journey: a single source of truth for TAMs and organisers during event setup.",
+   "oc": "A shared dashboard with event overview cards, team member invitations, module-level and overall completion percentages, module navigation and a continue-onboarding entry point.",
+   "lens": "EXP",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Adoption",
+    "Operational Efficiency",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49112",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49112",
+  "summary": "Onboarding - Emails",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-10T11:56:23.982+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-52807",
+   "summary": "Onboarding Journey",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1488,
+  "ai": {
+   "s": "Automatic onboarding emails keep TAMs, Finance and organisers informed when environments and events are created, approved, rejected or go live.",
+   "pr": "There were no system notifications for key onboarding lifecycle changes, so TAMs, Finance and organisers relied on manual communication to learn about approvals, rejections and status changes.",
+   "wy": "Part of the Onboarding Journey: keep every role informed of lifecycle actions taken in the Admin Panel.",
+   "oc": "Triggered emails for TAMs (assignment, client/event approved or rejected), Finance (new client, re-send, test to live, dates changed) and organisers (onboarding, test to live).",
+   "lens": "COST",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49137",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49137",
+  "summary": "Team Visitor SLO definition",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-10T14:50:17.073+0000",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-49132",
+   "summary": "SLOs are established per team",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2574,
+  "ai": {
+   "s": "The Visitor team defined availability and latency SLOs for the endpoints it owns, giving measurable reliability targets for its part of the platform.",
+   "pr": "Endpoints owned by the Visitor team had no documented, measurable reliability targets, so service-level health was not visible.",
+   "wy": "Engineering-wide initiative for each team to establish SLOs and gain full visibility of platform health at service level.",
+   "oc": "An inventory of Visitor team endpoints with availability and latency SLOs, based on Grafana data and documented in Confluence using the SLO template.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Infrastructure"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49139",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49139",
+  "summary": "Team Mobile SLO definition",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-10T14:50:51.096+0000",
+  "updated": "2026-09-23T07:56:32.101+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-49132",
+   "summary": "SLOs are established per team",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2574,
+  "ai": {
+   "s": "The Mobile team defined availability and latency SLOs for the endpoints it owns, giving measurable reliability targets for its part of the platform.",
+   "pr": "Endpoints owned by the Mobile team had no documented, measurable reliability targets, so service-level health was not visible.",
+   "wy": "Engineering-wide initiative for each team to establish SLOs and gain full visibility of platform health at service level.",
+   "oc": "An inventory of Mobile team endpoints with availability and latency SLOs, based on Grafana data and documented in Confluence using the SLO template.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Infrastructure"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49140",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49140",
+  "summary": "Team Data Science SLO definition",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-10T14:51:11.440+0000",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-49132",
+   "summary": "SLOs are established per team",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2574,
+  "ai": {
+   "s": "The Data Science team defined availability and latency SLOs for the endpoints and services it owns, giving measurable reliability targets.",
+   "pr": "Endpoints and services owned by the Data Science team had no documented, measurable reliability targets, so service-level health was not visible.",
+   "wy": "Engineering-wide initiative for each team to establish SLOs and gain full visibility of platform health at service level.",
+   "oc": "An inventory of Data Science endpoints and services with availability and latency SLOs, based on Grafana data and documented in Confluence using the SLO template.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Infrastructure"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ }
+]

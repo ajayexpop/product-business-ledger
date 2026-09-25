@@ -1,0 +1,775 @@
+[
+ {
+  "k": "EP-56756",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56756",
+  "summary": "Payment analytics",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-28T10:05:44.130+0100",
+  "updated": "2026-09-24T17:48:56.014+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Adds payment analytics (ticket has no further detail).",
+   "pr": "Not clearly specified beyond the ticket title — no description was provided.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; presumed to give organisers analytics on registration payments.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56757",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56757",
+  "summary": "Capture checkout-start events and gateway failure reason codes in the payment lifecycle",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-08-28T10:10:25.106+0100",
+  "updated": "2026-09-24T17:48:57.830+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 3391,
+  "ai": {
+   "s": "Records a \"checkout started\" event and gateway failure reason codes in the payment lifecycle, so funnel abandonment and failure causes can be analysed later.",
+   "pr": "Only completed orders existed and failures were stored as a bare failed status, making checkout abandonment and failure-cause analysis impossible after the fact.",
+   "wy": "Raised while the Reg-OT payments refactor (EP-56046) builds the lifecycle model, to avoid a costly retrofit.",
+   "oc": "The payment record is to persist checkout-start events and gateway-provided error codes as part of the new lifecycle.",
+   "lens": "DATA",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56770",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56770",
+  "summary": "Exhibitor side repeatable entries and multi-file upload",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-28T13:03:41.944+0100",
+  "updated": "2026-09-24T17:49:03.566+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "FESPA"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2539,
+  "ai": {
+   "s": "Exhibitors can add rows on demand to Exhibitor Manual table sections and upload several files to one File field.",
+   "pr": "Table row counts were fixed by the organiser and File fields took one file, so exhibitors with more entries emailed the organiser instead.",
+   "wy": "Raised by FESPA Middle East (about 500 exhibitors, REQ-2026-075); email workarounds defeat structured collection.",
+   "oc": "Exhibitors are to add and remove their own rows before submission and attach multiple files per File field, saved with their entries.",
+   "lens": "EXP",
+   "pa": "Exhibitor Manual",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56825",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56825",
+  "summary": "Restrict meetings for exhibitors without team members (rework)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-31T15:01:23.462+0100",
+  "updated": "2026-09-24T17:49:14.063+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1639,
+  "ai": {
+   "s": "Adds a mobile setting that blocks Meet and Message for exhibitors with no team members, with explanatory toasts for attendees and owners.",
+   "pr": "Attendees could try to meet or message exhibitors that had no team members to respond.",
+   "wy": "Rework of the restriction to one clear rule without changing existing GDPR or connection settings.",
+   "oc": "With the setting on, buttons are greyed with a 2-second toaster on all listed surfaces; child exhibitors' members do not count for the parent.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56843",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56843",
+  "summary": "[OT] Organizer Platform: Add engagement tracking to interactive elements in App Builder Custom Blocks",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-08-31T18:11:37.523+0100",
+  "updated": "2026-09-24T17:49:16.047+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-57193",
+   "summary": "OT: Other Q3/4 2026",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 4043,
+  "ai": {
+   "s": "Adds click and impression tracking to sponsor banners, story reels and experience cards in HYVE's App Builder custom blocks.",
+   "pr": "Interactive elements placed via custom HTML in App Builder captured no engagement data, so organisers could not prove sponsored placement value.",
+   "wy": "One-time fix for HYVE to report sponsor performance to exhibitors and sponsors.",
+   "oc": "Tracking and a report with date, timestamp, asset and user columns are being built for unique and total engagement.",
+   "lens": "REV",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56848",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56848",
+  "summary": "Resolve the visitor locale in middleware instead of after hydration",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-01T08:32:36.135+0100",
+  "updated": "2026-09-14T17:16:51.753+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "i18n",
+   "routing",
+   "seo",
+   "tech-debt"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4771,
+  "ai": {
+   "s": "Resolves a first-time visitor's locale in middleware from Accept-Language, instead of rendering one language and switching after hydration.",
+   "pr": "Locale was chosen client-side after render, and the server detector silently failed on non-BCP-47 locale codes such as es_lat and tha.",
+   "wy": "SEO and user experience: pages were served in one language and then navigated away in another.",
+   "oc": "Middleware is to detect the locale with a valid locale mapping so the first response is already in the right language.",
+   "lens": "EXP",
+   "pa": "Website Builder",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56864",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56864",
+  "summary": "Session Calendar View - Toggle On/Off",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-09-01T11:21:50.154+0100",
+  "updated": "2026-09-24T17:49:18.519+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 680,
+  "ai": {
+   "s": "The mobile app shows or hides the Session Calendar View according to a backend feature flag.",
+   "pr": "The app had no way to enable or disable the Session Calendar View per configuration.",
+   "wy": "Organisers need control over whether the calendar view is offered.",
+   "oc": "The app is to read the flag, show the view when enabled, hide it when disabled and fall back safely if the flag is absent.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56915",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56915",
+  "summary": "Required (Important) Custom Category Filters in popup",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-09-02T13:22:16.037+0100",
+  "updated": "2026-09-24T10:55:37.270+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 203,
+  "ai": {
+   "s": "Adds required (important) custom category filters to a popup (detail is in a linked Confluence page only).",
+   "pr": "Not clearly specified beyond the ticket title.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; presumed to prompt users to set required custom category filters in a popup.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56922",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56922",
+  "summary": "Story 5: Page 04 — Your team's engagement",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-09-02T14:18:17.803+0100",
+  "updated": "2026-09-24T14:20:06.771+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2566,
+  "ai": {
+   "s": "Puts real data behind the insights portal page \"Your team's engagement\", covering registration date, logins, dashboard hours, messages and leads per team member.",
+   "pr": "Page 04 showed stub placeholder values from Story 1.",
+   "wy": "Part of delivering the ExpoIntelligence Exhibitor Insights Portal with metrics agreed with Jordan on 2 Sep.",
+   "oc": "Each card is wired to defined metrics, such as per-session logins and first-touch lead ownership; the story is in testing.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56923",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56923",
+  "summary": "Story 6: Page 05 — How you compare",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-02T14:18:32.410+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1789,
+  "ai": {
+   "s": "Puts real data behind the insights portal page \"How you compare\", showing percentiles against a shared-category peer group.",
+   "pr": "Page 05 showed placeholder values, and the mocked stand-size cohort could not be built reliably platform-wide.",
+   "wy": "Part of the ExpoIntelligence portal, with definitions resolved with Jordan on 2 Sep.",
+   "oc": "Paired bars are to show 0–100 percentiles against the shared-category cohort, with the median peer average keeping outliers and a floor of one peer.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56924",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56924",
+  "summary": "Story 7: Build UI from approved prototype (pages 01–05)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-02T14:18:45.865+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1523,
+  "ai": {
+   "s": "Builds the insights portal front end for pages 01–05 from the approved prototype, wired to the live API instead of mock values.",
+   "pr": "The prototype used hardcoded mock numbers and some original widget wording no longer matched agreed definitions.",
+   "wy": "The assembly step that turns ExpoIntelligence data stories into a usable portal.",
+   "oc": "The guided journey and one-page report for five sections are to reach visual parity with no mock values; coaching and grow-next-show are out of scope.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "Data & Analytics",
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56958",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56958",
+  "summary": "Complete DS part for the service",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-03T10:06:43.168+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-42404",
+   "summary": "AI Event Assistant (AGENT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Completes the data science part of the AI Event Assistant service (ticket has no further detail).",
+   "pr": "Not clearly specified beyond the ticket title — no description was provided.",
+   "wy": "Part of the AI Event Assistant (AGENT) epic; not otherwise specified.",
+   "oc": "Not clearly specified beyond the ticket title.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56967",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56967",
+  "summary": "bootstrap.php: report every unloadable DI class instead of aborting the registration loop",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-03T13:46:35.997+0100",
+  "updated": "2026-09-22T12:50:57.493+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4477,
+  "ai": {
+   "s": "Makes bootstrap.php report every DI provider class it cannot load, instead of silently skipping it or aborting on the first one.",
+   "pr": "An unresolvable DI class made class_implements() return false and was silently skipped, so the missing service only failed far away at first use.",
+   "wy": "Split out of PR #4828 at the reviewer's request; a bare throw was rejected as it changed failure behaviour for about 10 entrypoints.",
+   "oc": "The registration loop is to complete and report all unloadable classes together.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Risk Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56969",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56969",
+  "summary": "Saved search queries: expose the list endpoint as GET instead of POST",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-09-03T14:09:52.254+0100",
+  "updated": "2026-09-17T09:38:31.268+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1830,
+  "ai": {
+   "s": "Exposes the saved search queries list endpoint as GET instead of POST, with the POST route deprecated.",
+   "pr": "/api/v1/search-suggestions/savedQueries was a pure read served over POST, uncacheable and looking like a write to intermediaries.",
+   "wy": "Follow-up from the EP-55950 review; it could not change there because the verb change breaks the shipped contract.",
+   "oc": "A GET route is to be added, the frontend switched, POST deprecated then removed, and OpenAPI and README updated.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-56985",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56985",
+  "summary": "EditProfileWrapper sends undefined category_id on profile save",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-09-04T07:40:33.191+0100",
+  "updated": "2026-09-14T17:16:25.466+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "profile",
+   "tech-debt"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2865,
+  "ai": {
+   "s": "Fixes the standalone Edit Profile page sending an undefined category_id on every profile save.",
+   "pr": "EditProfileWrapper read category_id from the Redux login user, which never has it, instead of the profileEdit response that does.",
+   "wy": "Same bug already fixed in MeetingProgramProfileStage; wrong data sent on every save.",
+   "oc": "category_id is to be sourced from data.userData, matching the MeetingProgramProfileStage fix.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-57020",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57020",
+  "summary": "List the source values already arriving that the backend cannot map or display, and decide per value: document, rename, or stop tracking",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-04T16:32:35.092+0100",
+  "updated": "2026-09-14T16:52:14.325+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 6067,
+  "ai": {
+   "s": "Lists every source value arriving in statistics that the backend cannot map or display, and decides for each whether to document, rename or stop tracking it.",
+   "pr": "Some urn_source and refer_source values were in neither SourcePagesEnum nor Sources v2, so reports showed them as raw strings or a dash.",
+   "wy": "Split out of EP-55681 to clean up source attribution in client reports.",
+   "oc": "An exhaustive list measured across 327 tenant databases exists; each value is to get a document, rename or stop decision.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-57023",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57023",
+  "summary": "Empty source pair: split the 1.5M rows/90d of missing urn_source + refer_source into owners and decide what to collect",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-04T17:05:59.006+0100",
+  "updated": "2026-09-14T16:52:14.341+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 14622,
+  "ai": {
+   "s": "Breaks down the 1.5M rows per 90 days with empty source columns into their owners and decides what each should collect.",
+   "pr": "Nearly half of traffic carried no refer_source and about a fifth neither source, which is what the user-facing \"Unknown\" bucket is made of.",
+   "wy": "The largest finding of the EP-55681 source analysis; five populations with four owners.",
+   "oc": "The data is held and split by population so each owner can fix collection; only one population is a defect on the team's side.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-57039",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57039",
+  "summary": "Mobile apps send CamelCase screen names instead of contract source slugs in ws_time_online_statistics (new since 2026-07-16, growing)",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-07T09:55:53.997+0100",
+  "updated": "2026-09-23T08:00:38.151+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "ai-analyzed",
+   "ai-valid",
+   "ws-source-camelcase"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 9527,
+  "ai": {
+   "s": "Makes the mobile apps send contract source slugs rather than CamelCase screen names in online-time statistics.",
+   "pr": "Since 16 July 2026 iOS and Android sent screen class names such as MenuPage and ExhibitorsList as the urn, 40 values and growing.",
+   "wy": "Mobile page and time-online reports group by urn, so these rows fall outside the reporting dictionary.",
+   "oc": "The apps are to emit the documented lower snake_case slugs for online-time tracking.",
+   "lens": "DATA",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-57042",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57042",
+  "summary": "ws_time_online_statistics: mobile apps still send pre-rename singular source names (delegate_list, exhibitor_list, session_list and 8 more) that are not in the contract",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-07T10:11:29.547+0100",
+  "updated": "2026-09-23T08:00:21.071+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "ai-analyzed",
+   "ai-valid",
+   "tech-debt",
+   "ws-source-pre-rename"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 7629,
+  "ai": {
+   "s": "Stops the mobile apps sending 11 pre-rename singular source names, such as delegate_list, in online-time statistics.",
+   "pr": "The same screens reported under both old singular names and contract names, splitting mobile report figures.",
+   "wy": "Source contract consistency for mobile reporting.",
+   "oc": "The residual old names are to be replaced with the contract names in the apps.",
+   "lens": "DATA",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ },
+ {
+  "k": "EP-57044",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57044",
+  "summary": "ws_time_online_statistics: filter screens arrive as sources in both singular and plural form (_filter / _filters) — decide whether they belong in the contract at all",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-07T10:16:17.978+0100",
+  "updated": "2026-09-14T16:52:13.518+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 3929,
+  "ai": {
+   "s": "Decides whether mobile filter screens belong in the source contract at all, as they arrive under both _filter and _filters spellings.",
+   "pr": "Eleven filter-screen values in two spellings were in neither SourcePagesEnum nor Sources v2.",
+   "wy": "Low volume but one decision covers a whole class of screens.",
+   "oc": "A decision is needed to add a single spelling to the contract or stop tracking filter screens as sources.",
+   "lens": "DATA",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:22:11Z"
+ }
+]

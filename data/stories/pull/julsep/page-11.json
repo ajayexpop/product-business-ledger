@@ -1,0 +1,677 @@
+[
+ {
+  "k": "EP-57510",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57510",
+  "summary": "[Exhibitor Categories] Saving a product limit deletes products with no warning or confirmation",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-09-18T09:17:51.300+0100",
+  "updated": "2026-09-18T16:35:27.935+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "qa-pipeline"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2714,
+  "ai": {
+   "s": "Adds a warning and confirmation before saving an exhibitor category product limit, which today silently deletes every product above the limit.",
+   "pr": "Lowering a category's active-products limit immediately and irreversibly deleted excess products with no warning, confirmation or report; in IMP-321 about 2,200 products were purged.",
+   "wy": "Organisers lose exhibitor data without knowing; EP-57473 fixed the scope but not the silent interaction.",
+   "oc": "Saving a lower limit is to warn, require confirmation and report what will be removed.",
+   "lens": "EXP",
+   "pa": "Exhibitor Marketplace",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57512",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57512",
+  "summary": "Migrate portal-ui to the normalized Alert from expo-react-components",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-18T10:02:57.720+0100",
+  "updated": "2026-09-18T10:03:55.915+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Frontend-dev"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4878,
+  "ai": {
+   "s": "Migrates portal-ui from its custom Alert to the normalised Alert in expo-react-components and deletes the local component.",
+   "pr": "portal-ui's Alert reimplemented variants, colours, icons and layout in inline sx across 34 importing files.",
+   "wy": "Follow-on from EP-56075, which moved the Alert look into the shared theme.",
+   "oc": "All usages are to switch to the shared Alert or MUI Alert with theme overrides, and components/UI/Alert is to be removed.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57513",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57513",
+  "summary": "Migrate admin-ui to the normalized Alert from expo-react-components",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-18T10:03:47.444+0100",
+  "updated": "2026-09-18T10:04:02.646+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Frontend-dev"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 5803,
+  "ai": {
+   "s": "Migrates admin-ui from its custom Alert to the normalised Alert in expo-react-components and deletes the local component.",
+   "pr": "admin-ui carried a near-copy of portal-ui's custom Alert with the same inline-styled variants, icons and layout overrides.",
+   "wy": "Follow-on from EP-56075 to use one shared Alert across apps.",
+   "oc": "All admin-ui usages are to move to the shared Alert and src/components/UI/Alert is to be removed.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57533",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57533",
+  "summary": "Academic Title for Event Participants",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-18T18:05:09.149+0100",
+  "updated": "2026-09-21T11:28:31.699+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2212,
+  "ai": {
+   "s": "Adds an academic title field for event participants, shown with names across registration, profiles, sessions, search, badges, mobile and exports.",
+   "pr": "Participants had no academic title field, so titles could not be captured or displayed with names.",
+   "wy": "Needed for DACH-market events; detail is in a linked Confluence page.",
+   "oc": "Cross-team scope is outlined, with a Visitor team estimate of BE 15, FE 5–7 and QA 7–9 days.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "Medium",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57544",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57544",
+  "summary": "Mobile: display Academic Title next to participant names on agenda session cards, speaker list and attendee profile cards, without truncating the name",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Urgent",
+  "created": "2026-09-21T08:07:10.243+0100",
+  "updated": "2026-09-24T17:49:38.765+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 3812,
+  "ai": {
+   "s": "The mobile app shows a participant's academic title before their name on agenda cards, speaker lists and attendee profiles, without truncating the name.",
+   "pr": "The app had no academic title, so DLG and FBM used workarounds and DACH participants saw names wrong for their market.",
+   "wy": "Correct naming for DACH clients such as DLG and FBM.",
+   "oc": "The title is to render in the salutation position, names are to wrap or shrink but never clip, and older app versions show the plain name.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57562",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57562",
+  "summary": "Minimal Release for Academic Titles at EuroTier 2026",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-21T11:35:23.242+0100",
+  "updated": "2026-09-23T10:21:26.660+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 205,
+  "ai": {
+   "s": "Delivers a minimal release of academic titles for EuroTier 2026 (detail is in a linked Confluence page only).",
+   "pr": "Not clearly specified beyond the ticket title.",
+   "wy": "Timed for EuroTier 2026; not otherwise specified.",
+   "oc": "Not clearly specified beyond the ticket title; rough estimate BE 7–10, FE 3–5 and QA 4 days.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57571",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57571",
+  "summary": "Improve Latency of Meetings Export Endpoint ",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-21T13:21:25.523+0100",
+  "updated": "2026-09-21T13:22:08.828+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 472,
+  "ai": {
+   "s": "Improves the response time of the meetings export endpoint.",
+   "pr": "The meetings export endpoint was slow to return data.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; the acceptance criterion is only that latency improves.",
+   "lens": "COST",
+   "pa": "Networking & Interactions",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Scalability"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57577",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57577",
+  "summary": "Mobile app: allow opted-out users to favourite exhibitors, visitors and products",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Urgent",
+  "created": "2026-09-21T14:59:30.223+0100",
+  "updated": "2026-09-24T11:42:42.195+0100",
+  "resolved": "2026-09-24T11:42:42.169+0100",
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [
+   "DLG"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4598,
+  "ai": {
+   "s": "Opted-out users can now favourite and unfavourite exhibitors, visitors and products in the mobile app, privately, as they already could on web.",
+   "pr": "The app did not render the favourite option for opted-out users, so the same user got different behaviour on web and mobile.",
+   "wy": "Completes EP-53978 across platforms; requested by DLG.",
+   "oc": "The favourite affordance shows for opted-out users on all three surfaces, stored privately so the other party is never identified; done.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Compliance",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57581",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57581",
+  "summary": "Implement Account Module",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-21T15:47:00.327+0100",
+  "updated": "2026-09-24T06:43:53.017+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 584,
+  "ai": {
+   "s": "Builds the Accounts module operations the Exhibitor module needs for owner accounts, so account data is no longer written by the Exhibitor module.",
+   "pr": "The Exhibitor module called stubs that only wrote a log line, so two admin endpoints failed.",
+   "wy": "Module ownership in the new architecture: the Accounts module must own account data.",
+   "oc": "Create owner account, set logo and login, sync company name and deactivate on delete are to be implemented per the attached spec.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "Medium",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57634",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57634",
+  "summary": "Multi-Tier Gating for New UI Registration in Global and Event Module Management",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-22T11:09:44.659+0100",
+  "updated": "2026-09-24T10:36:04.684+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 169,
+  "ai": {
+   "s": "Adds multi-tier gating for the new registration UI in global and event Module Management (detail is in a linked Confluence page only).",
+   "pr": "Not clearly specified beyond the ticket title.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; rough estimate BE 2–4, FE 1 and QA 2 days.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57666",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57666",
+  "summary": "Root error boundary sits above the locale layout: every crash ends in HierarchyRequestError and a blank page",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-09-22T18:13:47.985+0100",
+  "updated": "2026-09-24T21:05:03.702+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "observability",
+   "tech-debt"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 8013,
+  "ai": {
+   "s": "Fixes the root error boundary placement so a crash shows an error page instead of a HierarchyRequestError loop and a blank page.",
+   "pr": "The only app-wide error boundary sat above the locale root layout, so any error stripped the html element, failed to append the fallback and looped.",
+   "wy": "Observability and reliability: every crash ended in a blank page with misleading error reports.",
+   "oc": "A correctly placed boundary (e.g. global-error) is to render a fallback without destroying the document; in progress.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57667",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57667",
+  "summary": "Floorplan: stop treating an empty stand/hall payload as a failed request",
+  "status": "Ready for release",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-09-22T18:14:29.381+0100",
+  "updated": "2026-09-23T18:21:32.446+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "floorplan",
+   "tech-debt"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 3674,
+  "ai": {
+   "s": "Stops the admin floorplan treating a hall with no stands as a failed request, ending an ongoing unhandled Sentry error.",
+   "pr": "An empty hall returned data: [] and the shape guard rejected arrays, raising \"Failed to fetch stand list\" (51 events, 16 users).",
+   "wy": "Sentry noise and false errors on the admin exhibitor page.",
+   "oc": "Empty payloads are handled as valid, removing the unhandled rejection; ready for release.",
+   "lens": "EXP",
+   "pa": "Floor Plan",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57684",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57684",
+  "summary": "Integrations catalog: move SAML 2.0 settings to a dedicated integration page (urgent – DLG)",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Urgent",
+  "created": "2026-09-23T08:03:21.208+0100",
+  "updated": "2026-09-23T19:22:52.489+0100",
+  "resolved": "2026-09-23T17:29:39.018+0100",
+  "team": "Integration team",
+  "labels": [
+   "DLG",
+   "integrations-catalog",
+   "saml"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-42337",
+   "summary": "Integrations page",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2946,
+  "ai": {
+   "s": "SAML 2.0 settings now have their own page in the Integrations catalog instead of the shared legacy settings page.",
+   "pr": "SAML still pointed to /admin/general/settings while hub integrations had dedicated pages.",
+   "wy": "Urgent request from DLG.",
+   "oc": "A page at /admin/integrations/saml on the hub template reuses existing storage with no data migration, and the catalog entry points to it; done.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57699",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57699",
+  "summary": "Show the backend's error message when auth type changes mid-login, instead of a hardcoded one",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-23T10:10:18.390+0100",
+  "updated": "2026-09-23T10:18:41.742+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1350,
+  "ai": {
+   "s": "Shows the backend's \"sign-in settings have changed\" message when the auth type changes mid-login, instead of a hardcoded invalid-login text.",
+   "pr": "If an admin switched between OTP and password while a user was logging in, the screen showed its own static error rather than the specific backend message.",
+   "wy": "Users were told their credentials were wrong when the real cause was a settings change.",
+   "oc": "For errorCode 1002 the app is to display the backend error text; other cases stay unchanged.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57749",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57749",
+  "summary": "[Reg-OT][BE][Payments][Part 2.1][Split1] Purchasing: bring invoice and cumulative discounts back, and close the Part 2 review items",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-23T20:48:04.897+0100",
+  "updated": "2026-09-23T20:48:14.962+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-55566",
+   "summary": "Registration - Payments (OT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 208,
+  "ai": {
+   "s": "The sprint-sized split of EP-57315, bringing invoice payment and cumulative discounts back to new Registration purchasing.",
+   "pr": "Not clearly specified beyond the ticket title; all context lives on parent story EP-57315.",
+   "wy": "Split to fit sprint capacity.",
+   "oc": "Not clearly specified beyond the ticket title and the parent story.",
+   "lens": "REV",
+   "pa": "Online Registration",
+   "cf": "Low",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Revenue"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57786",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57786",
+  "summary": "Mobile app: hide Meet and Message when Meetings / Messages are turned off in Module Management — iOS + Android",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-24T08:55:35.271+0100",
+  "updated": "2026-09-24T17:37:05.186+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4703,
+  "ai": {
+   "s": "Makes the iOS and Android apps hide Meet and Message when Meetings or Messages are turned off in Module Management.",
+   "pr": "The apps ignored Module Management toggles, so attendees still saw Meet and Message after an organiser disabled them.",
+   "wy": "A repeated family of live-event bugs (EP-40944, EP-57200, EP-57216, EP-57664) and one predictable rule for organisers.",
+   "oc": "Module Management is to have the same effect as the Permission Matrix, removing the actions everywhere in the app.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57795",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57795",
+  "summary": "Edit profile: show values under moderation and highlight fields awaiting organiser approval (speakers, events with pre-moderation)",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-09-24T11:18:26.183+0100",
+  "updated": "2026-09-24T11:48:03.404+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "tech-debt"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1212,
+  "ai": {
+   "s": "Speakers see their pending values and a notice when profile changes await organiser approval, instead of thinking their data was not saved.",
+   "pr": "With pre-moderation on, speaker profile changes went to approval silently, which looked like a failed save (EP-56625).",
+   "wy": "Make moderation status explicit for speakers and organisers.",
+   "oc": "Edit profile is to show submitted values, highlight moderated fields and show a banner; the organiser's visitor card highlights them too.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ },
+ {
+  "k": "EP-57810",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57810",
+  "summary": "[portalUI] Observability on next14: Sentry error capture and structured CloudWatch logs",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-24T14:09:20.127+0100",
+  "updated": "2026-09-24T17:11:36.053+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Frontend-dev",
+   "observability",
+   "tech-debt"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 5360,
+  "ai": {
+   "s": "Restores observability in portal-ui on next14 with Sentry error capture and structured CloudWatch logs.",
+   "pr": "Sentry had been removed, the browser had no error handlers, 54 console.error calls went nowhere and process crashes wrote nothing.",
+   "wy": "Production failures were almost invisible to the team.",
+   "oc": "Sentry is to be reinstated with source maps, global handlers added and logs structured so they can be alerted on.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:24:39Z"
+ }
+]

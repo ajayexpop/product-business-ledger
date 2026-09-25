@@ -1,0 +1,568 @@
+[
+ {
+  "k": "EP-49360",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49360",
+  "summary": "Finance Event Approval Flow",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-16T12:26:19.342+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-51554",
+   "summary": "Event Manager (Admin Panel)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1981,
+  "ai": {
+   "s": "Finance can approve or reject newly created client events in the Admin Panel, with reasons, notes and automatic emails to the linked TAMs.",
+   "pr": "Client events created in the Admin Panel had no in-platform Finance approval step, so approvals and rejections were not tracked or communicated to TAMs.",
+   "wy": "Part of the Onboarding Journey; Finance-role users control which events go live.",
+   "oc": "Waiting for approval, Active and Rejected tabs, a review side panel with checklist, rejection reasons and notes, a test-state indicator, editable rejected events and TAM emails.",
+   "lens": "COST",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "Operational Efficiency",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49361",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49361",
+  "summary": "New Admin List Screen and Creation",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-16T12:58:38.508+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54530",
+   "summary": "Admin Panel Restructure & Navigation",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2006,
+  "ai": {
+   "s": "TAMs and organisers create and manage event admin users from a new Admin List screen, with permissions and an onboarding email for the first admin.",
+   "pr": "There was no streamlined way for TAMs and organisers to create organiser admin users with event access and permissions and start their onboarding.",
+   "wy": "Part of the Onboarding Journey and Admin Panel restructure; admin creation also reachable from the dashboard.",
+   "oc": "An Admin List page with User List, Admin Categories and MFA tabs, an Add Admin form with events access and Full Access or Read Only permissions, and a first-admin onboarding email prompt.",
+   "lens": "COST",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49397",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49397",
+  "summary": "Describe edit section elements",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-17T11:13:28.058+0000",
+  "updated": "2026-09-14T17:16:10.316+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1341,
+  "ai": {
+   "s": "Documented the elements an edit section can contain (title, subtitle, edit blocks, hints) so the team knows how edit sections should look.",
+   "pr": "The team did not know the full structure of edit sections, such as which titles, subtitles, fields and hints can appear and where.",
+   "wy": "Needed as a reference to build edit sections consistently.",
+   "oc": "A description of edit section elements, including maximum contents and hint placement, with an optional full tab view.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49436",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49436",
+  "summary": "Attendance: Organizer can compare unique Attendee Check-ins across Events in Total Check-In / Check-Out graph",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-17T16:41:02.266+0000",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54528",
+   "summary": "Attendance & Event Analytics 2026",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2119,
+  "ai": {
+   "s": "Organisers can compare unique attendee check-ins and check-outs across co-located events in the Total Check-In / Check-Out graph.",
+   "pr": "Organisers running several co-located events in one client environment had to switch between events to monitor attendance during the live phase.",
+   "wy": "Part of Attendance and Event Analytics 2026: live cross-event attendance monitoring.",
+   "oc": "An Events multi-select filter on the graph showing grouped bars of unique check-ins and check-outs per event, counting each attendee once per event per time bucket.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49456",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49456",
+  "summary": "Not able to scroll filters and banner to end until you scroll down whole marketplace(cards) down.",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-18T11:48:54.333+0000",
+  "updated": "2026-09-14T16:52:49.807+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 353,
+  "ai": {
+   "s": "Fixed marketplace scrolling so filters and the banner can be scrolled to the end without scrolling through all cards when infinite scroll is on.",
+   "pr": "With infinite scroll enabled, users could not scroll the marketplace filters and banner to the end until they had scrolled down the whole list of cards.",
+   "wy": "UX bug on the marketplace listing.",
+   "oc": "Filters and banner scroll independently of the card list on the marketplace with infinite scroll enabled.",
+   "lens": "EXP",
+   "pa": "Exhibitor Marketplace",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49459",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49459",
+  "summary": "Sentry issues",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-18T13:01:14.281+0000",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Addressed Sentry-reported issues for the Visitor team (ticket had no further detail).",
+   "pr": "Not clearly specified beyond the ticket title — no description was provided.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; presumed fixes for errors reported in Sentry; on hold.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49469",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49469",
+  "summary": "Redirection to mobile app post webview login (SSO login - Cosmoprof)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-18T15:24:51.393+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54524",
+   "summary": "Mobile App — 2026 Enhancements",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1127,
+  "ai": {
+   "s": "After logging in through the Cosmoprof webview or SSO, mobile app users are redirected back to the app and land on the home page logged in.",
+   "pr": "The Cosmoprof webview login did not return users to the app afterwards, and the original SSO story could not be delivered in time.",
+   "wy": "Workaround for EP-49318 under time pressure, for the Cosmoprof login flow.",
+   "oc": "A backend-configured webview URL containing a redirect key, so after webview or SSO login the user returns to the app's home page in a logged-in state.",
+   "lens": "INTEG",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49546",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49546",
+  "summary": "[Exhibitor Settings] The Exhibitor is not present at this event",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-20T08:53:06.837+0000",
+  "updated": "2026-09-14T17:16:21.251+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 5766,
+  "ai": {
+   "s": "Fixed exhibitors that appear in search but fail to open, showing \"The Exhibitor is not present at this event\" in the admin panel and a 404 on the front end.",
+   "pr": "Some exhibitors, such as one found by searching \"Soap\", were returned by the search API but opening them gave an error in the admin panel and a 404 on the profile.",
+   "wy": "Data consistency bug in exhibitor settings.",
+   "oc": "Exhibitors returned by search can be opened in both the admin panel and the front end without errors.",
+   "lens": "EXP",
+   "pa": "Exhibitor Marketplace",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49551",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49551",
+  "summary": "[next14] Fix profile/ticketing page",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-20T10:10:39.862+0000",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-35047",
+   "summary": "Fix issues after next update",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 629,
+  "ai": {
+   "s": "Fixed the profile ticketing page layout after the Next14 upgrade so it matches the Next12 version.",
+   "pr": "The profile/ticketing page rendered differently under Next14 compared with Next12, as shown in comparison screenshots.",
+   "wy": "Part of fixing issues after the Next14 update.",
+   "oc": "Not clearly specified beyond the ticket title; presumed profile/ticketing page restored to its Next12 appearance; on hold.",
+   "lens": "INTEG",
+   "pa": "Online Registration",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49569",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49569",
+  "summary": "Avoid of using phpsession, use token instead",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-20T14:33:58.897+0000",
+  "updated": "2026-09-14T17:16:03.150+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2100,
+  "ai": {
+   "s": "Backend endpoints authenticate with the token instead of relying on the PHP session first.",
+   "pr": "Several backend endpoints, such as tickets and meetingProgram list, used the PHP session before the x-auth-token, which caused inconsistent behaviour.",
+   "wy": "Technical correctness: token-based authentication for the new frontend.",
+   "oc": "Endpoints prioritise the auth token over phpsession when identifying the user.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49618",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49618",
+  "summary": "IMEX Requirements (DS)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-23T12:38:02.342+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-44808",
+   "summary": "Search Anatomy",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 10692,
+  "ai": {
+   "s": "Rebuilt search ranking on Qdrant with tiered name matching, typeahead and no dead ends, with IMEX as the first validation client.",
+   "pr": "Search was broken: coordinators outranked exact partner matches, substrings added noise, spacing and country variants failed and users hit blank pages.",
+   "wy": "IMEX requirements for search, validated first with IMEX.",
+   "oc": "A V1 data science scope: tiered deterministic ranking, exhibitors, people and sessions indexed, typeahead, Top Results, Quick Links, organiser settings and a sub-500ms latency target.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "Client Commitment",
+    "UX",
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49640",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49640",
+  "summary": "[next14]: Uncaught Errors on root page",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-24T11:19:00.270+0000",
+  "updated": "2026-09-14T17:16:39.559+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-35047",
+   "summary": "Fix issues after next update",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 436,
+  "ai": {
+   "s": "Fixed uncaught errors on the root page of the Next14 frontend.",
+   "pr": "The Next14 build threw uncaught errors on the root page, as shown in a screenshot.",
+   "wy": "Part of fixing issues after the Next14 update.",
+   "oc": "Not clearly specified beyond the ticket title; presumed the root page loads without uncaught errors.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49671",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49671",
+  "summary": "Back/ Pls update behaviour of \"Clear DB\" btn ",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-24T17:26:04.504+0000",
+  "updated": "2026-09-14T17:16:09.254+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 783,
+  "ai": {
+   "s": "The Clear database button now returns refreshed app data immediately instead of after a 10-minute cache delay.",
+   "pr": "Pressing Clear database sent a new timestamp to app/getexhibitions, but the cached endpoint returned updated data only after about 10 minutes.",
+   "wy": "Organisers and QA need changes to reach the app straight away.",
+   "oc": "The getexhibitions request bypasses the cache after Clear database, so updated data is returned immediately.",
+   "lens": "INTEG",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49687",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49687",
+  "summary": "[next14]: Socket context refactor",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-25T08:47:57.221+0000",
+  "updated": "2026-09-14T17:16:02.122+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-35047",
+   "summary": "Fix issues after next update",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 727,
+  "ai": {
+   "s": "Refactored the Next14 socket context, including assessing a socket connection without third-party services.",
+   "pr": "The socket context in the Next14 frontend needed refactoring, and relying on a third-party service for socket connections was being questioned.",
+   "wy": "Part of fixing issues after the Next14 update.",
+   "oc": "Not clearly specified beyond the ticket title; presumed refactored socket context and a review of a native socket connection.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ },
+ {
+  "k": "EP-49802",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49802",
+  "summary": "IMEX Requirements (Application)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-27T21:57:10.839+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-44808",
+   "summary": "Search Anatomy",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 4764,
+  "ai": {
+   "s": "Attendees get a rebuilt search experience with grouped typeahead, a Top Results block, quick links and no dead-end pages, per IMEX requirements.",
+   "pr": "Search results were hard to navigate and could leave users on a blank page with no guidance.",
+   "wy": "IMEX requirement for search; application layer on top of the Qdrant ranking rebuild.",
+   "oc": "Grouped typeahead with Quick Link chips, a results page with Top Results, quick links and fixed organiser-ordered entity blocks with Show more, and no-dead-end states.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:43Z"
+ }
+]

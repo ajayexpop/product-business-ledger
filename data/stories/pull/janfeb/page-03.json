@@ -1,0 +1,629 @@
+[
+ {
+  "k": "EP-47759",
+  "link": "https://expoplatform.atlassian.net/browse/EP-47759",
+  "summary": "Android/ Investigate opportunity detect \"data issues\" with \"Not response\" app   ",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-06T10:22:45.374+0000",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 263,
+  "ai": {
+   "s": "Investigated how to detect and prevent Android \"No response\" app freezes that appeared simply after logging in and waiting.",
+   "pr": "On Android build 8358 the app showed \"No response\" after login with no further user action, observed on a Samsung Galaxy A56 5G running Android 16.",
+   "wy": "App stability: unresponsive-app dialogs after login degrade the attendee experience.",
+   "oc": "An investigation into how such data-related \"No response\" issues can be detected and prevented on Android.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-47767",
+  "link": "https://expoplatform.atlassian.net/browse/EP-47767",
+  "summary": "Deeplinks. Mobile app promotion",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-06T12:07:41.347+0000",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-54524",
+   "summary": "Mobile App — 2026 Enhancements",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 526,
+  "ai": {
+   "s": "Scoped deeplinks for promoting the mobile app so users can be sent straight into it (details held on a linked Confluence page).",
+   "pr": "Not clearly specified beyond the ticket title; the description links to a Confluence page and a rough estimate only.",
+   "wy": "Part of the Mobile App 2026 Enhancements epic; internally reported.",
+   "oc": "Not clearly specified beyond the ticket title; presumed deeplink support for mobile app promotion, estimated at 2 to 6 days.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-47880",
+  "link": "https://expoplatform.atlassian.net/browse/EP-47880",
+  "summary": "[TechDept] Category remove fail when client has no BM database",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-01-08T15:35:10.386+0000",
+  "updated": "2026-09-22T11:19:31.633+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2055,
+  "ai": {
+   "s": "Fixed category removal in the admin categorisation page failing for clients who have no legacy BM database.",
+   "pr": "Removing a category triggered ProductGroupsEvents::beforeDelete and BM Category::removeItem, which accessed the retired BM database, throwing a fatal PDOException for new clients.",
+   "wy": "Tech debt: the BM database is no longer used or created for new clients, so dependent code breaks.",
+   "oc": "Category removal no longer depends on the obsolete BM database, so organisers can delete categories without errors.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-47912",
+  "link": "https://expoplatform.atlassian.net/browse/EP-47912",
+  "summary": "test",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-09T12:14:13.326+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Placeholder test ticket with no content.",
+   "pr": "Not clearly specified beyond the ticket title.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Not Clearly Specified",
+   "bv": "Low",
+   "im": []
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-47920",
+  "link": "https://expoplatform.atlassian.net/browse/EP-47920",
+  "summary": "Conutry Manager: System merges duplicate Cities within Region so that Location data remains consistent across Events",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-09T12:41:37.932+0000",
+  "updated": "2026-09-22T17:44:43.747+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54527",
+   "summary": "Country Manager — Cities & Regions",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 597,
+  "ai": {
+   "s": "A script merges duplicate City records within the same Region so location data stays clean and consistent across events.",
+   "pr": "Duplicate City records within the same Region made location data inconsistent across events and needed manual clean-up.",
+   "wy": "Data quality in the Country Manager: consistent Cities and Regions without manual intervention.",
+   "oc": "A command-line or scheduled script that automatically merges duplicate Cities within a Region; regions, countries, UI and live-event merges are out of scope.",
+   "lens": "DATA",
+   "pa": "Client Manager",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics",
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-47926",
+  "link": "https://expoplatform.atlassian.net/browse/EP-47926",
+  "summary": "Understand two rows in account_event for owner",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-09T13:35:13.371+0000",
+  "updated": "2026-09-14T16:52:56.616+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 16354,
+  "ai": {
+   "s": "Investigated why some exhibitors have two owner rows in account_event with different accounts, to understand the data inconsistency.",
+   "pr": "Exhibitors 1135, 1143 and 1195 each had two account_event owner records with different account_ids, statuses, registration codes and account information.",
+   "wy": "Data integrity: duplicate owner records create ambiguity about who owns an exhibitor profile.",
+   "oc": "An analysis of the two owner rows per exhibitor, comparing status, registration code, activation and account information fields.",
+   "lens": "DATA",
+   "pa": "Exhibitor Marketplace",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Risk Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-47952",
+  "link": "https://expoplatform.atlassian.net/browse/EP-47952",
+  "summary": "Country Manager: Organizer selects City from type-ahead dropdown to prevent multiple records for one city so that Location data remains consistent across Events",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-11T21:58:12.692+0000",
+  "updated": "2026-09-22T17:44:45.860+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54527",
+   "summary": "Country Manager — Cities & Regions",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1249,
+  "ai": {
+   "s": "Organisers pick a City from a type-ahead list in Add City, auto-filling its region and coordinates, so duplicate city records are avoided.",
+   "pr": "A free-text City name input let organisers create multiple records for one city through slight spelling variations such as New York and New Yorke.",
+   "wy": "Keep Country Manager location data accurate and consistent across events.",
+   "oc": "A type-ahead City dropdown after three letters that auto-populates and locks Region, Latitude, Longitude and Timezone, while still allowing new Cities.",
+   "lens": "DATA",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-47989",
+  "link": "https://expoplatform.atlassian.net/browse/EP-47989",
+  "summary": "Allow Contact Person or Admin to Manage Multiple Exhibitor Companies from a Single Login",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-12T16:08:08.922+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-14666",
+   "summary": "Exhibitor profile",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2296,
+  "ai": {
+   "s": "A contact person or admin can manage multiple independent exhibitor companies from one login instead of juggling separate accounts.",
+   "pr": "A team member email could be tied to only one exhibitor company, forcing pavilion managers and agencies to use multiple logins or an unsuitable parent-child structure.",
+   "wy": "Requested by DLG for pavilions with 30+ co-exhibitors; parent-child is not GDPR-suitable for independent companies.",
+   "oc": "Support for one login to manage several independent exhibitor companies, estimated at 12 to 18 days including design, backend, frontend and QA.",
+   "lens": "EXP",
+   "pa": "Exhibitor Marketplace",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Client Commitment",
+    "Operational Efficiency",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-48136",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48136",
+  "summary": "ON HOLD - [FE] Client Manager: Centralising Lead Features under Lead Capture + for Event Organizers",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-15T13:36:12.063+0000",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "DoDUserStory",
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1616,
+  "ai": {
+   "s": "A new Lead Capture + top-level admin menu groups Lead Capture Pro and Custom Lead Questions so organisers find lead features in one place.",
+   "pr": "Lead-related configuration was spread across Event Setup and Registration Settings, making lead features hard for organisers to discover and manage.",
+   "wy": "Improve discoverability and usability of lead features without changing functionality.",
+   "oc": "A Lead Capture + menu after Management, holding Lead Capture Pro and Custom Lead Questions, with no behavioural changes; the story is on hold.",
+   "lens": "EXP",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-48212",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48212",
+  "summary": "Need to extend error map for SES",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-17T14:07:11.540+0000",
+  "updated": "2026-09-14T16:52:55.841+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 590,
+  "ai": {
+   "s": "Extended the SES bounce error map so every code returned by Amazon SES maps to the correct email status.",
+   "pr": "Some SES bounce codes appeared to be wrongly assigned to the EMAIL_NO_EXIST status because the error map did not cover all returned codes.",
+   "wy": "Accurate email delivery statuses; misclassified bounces mislabel valid addresses.",
+   "oc": "Support for the full set of SES bounce codes, so bounces are classified correctly rather than defaulting to EMAIL_NO_EXIST.",
+   "lens": "INTEG",
+   "pa": "User Engagement & Communication",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Maintenance",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-48328",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48328",
+  "summary": "Exhibitor Events: Adding a custom filter on the exhibitor event creation/edit page in Admin Panel",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-21T12:03:08.109+0000",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "DoDUserStory",
+   "mig-on-hold"
+  ],
+  "reportedBy": [
+   "FrankfurterBuchmesse"
+  ],
+  "epic": {
+   "k": "EP-47879",
+   "summary": "Add Custom Filters for Exhibitor Events",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 719,
+  "ai": {
+   "s": "Admins can add custom filters when creating or editing exhibitor events in the Admin Panel (details held on a linked Confluence page).",
+   "pr": "Not clearly specified beyond the ticket title; exhibitor events presumably lacked custom filter fields in the Admin Panel.",
+   "wy": "Requested by Frankfurter Buchmesse as part of the Add Custom Filters for Exhibitor Events epic.",
+   "oc": "Custom filter support on the admin exhibitor event create/edit page, estimated at around 20 days across teams; the story is on hold.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-48329",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48329",
+  "summary": "Add custom filter to Exhibitor Event creation UI on the front-end",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-21T12:22:16.918+0000",
+  "updated": "2026-09-14T15:25:08.069+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-47879",
+   "summary": "Add Custom Filters for Exhibitor Events",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 928,
+  "ai": {
+   "s": "Exhibitors see and choose custom filter options when creating an exhibitor event on the front end.",
+   "pr": "The exhibitor event creation screen did not show the custom filters, so exhibitors could not tag their events with them.",
+   "wy": "Enhance the exhibitor experience as part of the Add Custom Filters for Exhibitor Events epic.",
+   "oc": "Custom filters added to the front-end exhibitor event creation screen, estimated at seven days.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "Medium",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-48332",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48332",
+  "summary": "Implement custom filter display and selection in exhibitor event listing and search on the web",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-21T12:48:41.075+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "FrankfurterBuchmesse"
+  ],
+  "epic": {
+   "k": "EP-47879",
+   "summary": "Add Custom Filters for Exhibitor Events",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 961,
+  "ai": {
+   "s": "Users can filter the exhibitor events directory on the web by custom filters, matching the session filter experience.",
+   "pr": "The web exhibitor event listing offered no custom filters, so users could not easily narrow events down.",
+   "wy": "Requested by Frankfurter Buchmesse; consistency with session filters.",
+   "oc": "The exhibitor event listing filter section updated to display and apply custom filters.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "Medium",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-48338",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48338",
+  "summary": "Implement custom filter display and selection in exhibitor event listing in the mobile app",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-21T13:02:48.664+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "FrankfurterBuchmesse"
+  ],
+  "epic": {
+   "k": "EP-47879",
+   "summary": "Add Custom Filters for Exhibitor Events",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 927,
+  "ai": {
+   "s": "Mobile app users can filter the exhibitor event listing by custom filters, in line with the web experience.",
+   "pr": "The mobile app exhibitor event listing had no custom filters, so it differed from the web and made relevant events harder to find.",
+   "wy": "Requested by Frankfurter Buchmesse; align mobile with web.",
+   "oc": "Custom filter display and selection in the mobile app exhibitor event listing on Android and iOS.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "Medium",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-48344",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48344",
+  "summary": "Exhibitor Event: Enhancing Import/Export for Custom Filter Values in Exhibitor Event",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-21T13:26:10.404+0000",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "DoDUserStory",
+   "mig-on-hold"
+  ],
+  "reportedBy": [
+   "FrankfurterBuchmesse"
+  ],
+  "epic": {
+   "k": "EP-47879",
+   "summary": "Add Custom Filters for Exhibitor Events",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 564,
+  "ai": {
+   "s": "Exhibitor event import and export gain support for custom filter values (details held on a linked Confluence page).",
+   "pr": "Not clearly specified beyond the ticket title; import/export presumably did not handle custom filter values for exhibitor events.",
+   "wy": "Requested by Frankfurter Buchmesse as part of the Add Custom Filters for Exhibitor Events epic.",
+   "oc": "Not clearly specified beyond the ticket title; presumed import/export of custom filter values, estimated at four days; on hold.",
+   "lens": "COST",
+   "pa": "Session & Speakers",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Client Commitment",
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ },
+ {
+  "k": "EP-48345",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48345",
+  "summary": "Add parameters for custom filters in sessions/exhibitor events API endpoints.",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-21T13:29:20.451+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-47879",
+   "summary": "Add Custom Filters for Exhibitor Events",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 497,
+  "ai": {
+   "s": "Session and exhibitor event API endpoints accept custom filter parameters so admins can set filter values through the API.",
+   "pr": "The existing session and exhibitor event endpoints had no parameters for custom filters, so they could not be managed via the API.",
+   "wy": "Part of the Add Custom Filters for Exhibitor Events epic, extending it to integrations.",
+   "oc": "Custom filter parameters added to the existing sessions and exhibitor events API endpoints for adding and updating values.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "Medium",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:57Z"
+ }
+]

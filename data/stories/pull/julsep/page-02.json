@@ -1,0 +1,735 @@
+[
+ {
+  "k": "EP-55008",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55008",
+  "summary": "Add lightweight server-side t() translation helper for Server Components",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-01T16:23:03.361+0100",
+  "updated": "2026-09-14T17:16:37.226+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "i18n",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2162,
+  "ai": {
+   "s": "Adds a server-side t() translation helper so Server Components can resolve i18n keys directly, removing the temporary NoAccessTranslated client wrapper.",
+   "pr": "Server Components cannot call useTranslation(), so a stop-gap client wrapper was added just to translate static strings, adding hydration and hiding the real i18n key from callsites.",
+   "wy": "Frontend tech debt: every future Server Component needing a translated string would otherwise need a client wrapper or ship raw English.",
+   "oc": "A memoised getServerTranslation(locale) helper is planned, with NoAccessTranslated removed and the 8 affected pages using the server t(), with no visual change.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55035",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55035",
+  "summary": "Bypass Payment Step When Basket Total Is £0 in Booking/Category Upgrade Flow",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-02T13:18:11.542+0100",
+  "updated": "2026-09-24T17:47:38.567+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2557,
+  "ai": {
+   "s": "Attendees whose basket total drops to £0 in the booking or category upgrade flow can complete the booking without being asked for payment or billing details.",
+   "pr": "When a 100% discount reduced the basket to £0 in booking or category upgrade, attendees still saw a \"Pay £0.00\" button and the payment form.",
+   "wy": "Asking for payment details on a free transaction is confusing friction for attendees and inconsistent with free registrations elsewhere.",
+   "oc": "A \"Complete Booking\" button replaces \"Pay £0.00\", the payment form is bypassed and a £0 invoice is sent only if the event's zero-price invoice setting is on.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55037",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55037",
+  "summary": "Kiosk Badge Export",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-02T13:58:14.838+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2977,
+  "ai": {
+   "s": "Organisers can export Kiosk badge printing data for attendees and exhibitor team members to Excel, showing unique and total prints per person.",
+   "pr": "Organisers had no export of Kiosk badge printing activity, so they could not analyse stationery usage or onsite printing per person.",
+   "wy": "Organisers need print data to track stationery usage and onsite activity during and after the live event.",
+   "oc": "A new \"Kiosk\" option under Data > Import/Export > Export produces a date-filtered .xlsx with per-person print counts and a timestamp per print.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55070",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55070",
+  "summary": "LexChat: self-host lexchat.js instead of loading from external siteURL",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-07-06T03:45:53.829+0100",
+  "updated": "2026-09-14T17:16:54.687+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "frontend",
+   "performance",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1828,
+  "ai": {
+   "s": "Serves the LexChat chatbot script from the platform's own origin instead of loading it at runtime from the legacy external siteURL bundle.",
+   "pr": "The chatbot script loaded from an external new_assets host, so it could silently fail if that host was slow or blocked, had no version pinning and complicated a strict CSP.",
+   "wy": "Frontend tech debt and reliability: remove an unpinned runtime dependency on an external host and simplify CSP.",
+   "oc": "lexchat.js is to be vendored and served under the /newfront base path, with the Script src no longer interpolating siteURL and the chatbot initialising unchanged.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55098",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55098",
+  "summary": "[Tech Debt][Android] GDPR/excluded (scanned) bypass applied inconsistently in Exhibitor profile meeting gate",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-07T09:12:13.713+0100",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3811,
+  "ai": {
+   "s": "Makes the Android exhibitor profile apply the same GDPR scanned-contact bypass as the personal profile, so the Meet button no longer disappears for scanned team members.",
+   "pr": "With GDPR checks on, a scanned single team member with gdpr = 0 showed Meet on their personal profile but \"meetings not available\" on the exhibitor profile, because the excluded check was missing.",
+   "wy": "The two profiles contradicted each other, blocking legitimate meeting requests and confusing users.",
+   "oc": "The exhibitor profile meeting gate is to include the scanned/excluded status, so Meet availability matches the personal profile.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55120",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55120",
+  "summary": "[TechDept] Research and fix admin permission-zone security issues (BAC, CSRF, XSS)",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-07T16:37:18.667+0100",
+  "updated": "2026-09-22T11:21:03.096+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1065,
+  "ai": {
+   "s": "Re-verifies the 2018 security notes on admin permission zones against today's code and plans or makes fixes for confirmed access-control, CSRF and XSS issues.",
+   "pr": "Admin pages tagged in 2018 with security problems were never tracked in Jira, and a 2026 spot-check found the CSRF gaps largely still real.",
+   "wy": "Security risk reduction: confirmed access-control and CSRF weaknesses in the admin panel need to be fixed or tracked.",
+   "oc": "Each tagged zone is to be marked still-real or already-fixed, with similar issues grouped and fixes made or split into assigned sub-tasks.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55128",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55128",
+  "summary": "Translation: please apply the missing system translations.",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-07-07T17:24:46.755+0100",
+  "updated": "2026-09-23T23:24:33.948+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-57193",
+   "summary": "OT: Other Q3/4 2026",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 7902,
+  "ai": {
+   "s": "Applies missing and corrected system translations, chiefly German, across exhibitor profile, registration photo, product list and notification screens.",
+   "pr": "Several screens showed wrong or missing German system translations, including team-member limit messages with broken number placeholders and badly worded registration photo labels.",
+   "wy": "Correct localisation for German-speaking events such as Hamburg Messe and Frankfurter Buchmesse tenants.",
+   "oc": "The listed EN/DE strings were decomposed into child tickets and corrected; the story is in testing.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UI",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55145",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55145",
+  "summary": "Resolve circular dependencies in portal-ui module graph (60 cycles)",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-08T09:30:36.494+0100",
+  "updated": "2026-09-14T17:16:15.336+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "performance",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2417,
+  "ai": {
+   "s": "Breaks the 60 circular dependencies in the portal-ui module graph and adds a CI check so new cycles cannot creep back in.",
+   "pr": "madge reported 60 circular dependencies in portal-ui, 43 of them through the store barrel, risking undefined imports, fragile initialisation order and a larger bundle.",
+   "wy": "Frontend tech debt: cycles defeat tree-shaking, slow hot reload and cause load-order bugs.",
+   "oc": "Store barrel imports are to be replaced by direct slice imports, type-only cycles converted to import type, and a madge --circular CI check with a shrinking allowlist added.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Scalability"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55175",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55175",
+  "summary": "[iOS] Refactor project into multi-module SPM packages",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-08T19:40:13.650+0100",
+  "updated": "2026-09-14T17:17:17.346+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Refactors the iOS app project into multi-module Swift Package Manager packages (ticket has no further detail).",
+   "pr": "Not clearly specified beyond the ticket title.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; presumed to split the iOS codebase into separate SPM modules.",
+   "lens": "INTEG",
+   "pa": "Mobile App",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55238",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55238",
+  "summary": "API V3 Logs Admin Panel - UI Enhancements: Top Menu Button & Advanced Search",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-10T11:27:55.360+0100",
+  "updated": "2026-09-24T12:47:40.391+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2077,
+  "ai": {
+   "s": "Adds a top-menu shortcut to the API V3 Logs page and a stackable Advanced Search that filters logs by params, request body or response content.",
+   "pr": "After EP-50318 the V3 Logs page was only reachable by manual navigation and its filters could not search inside request or response payloads.",
+   "wy": "Two improvements proposed on EP-50318 were not yet actioned; support staff need to find specific API calls quickly.",
+   "oc": "A top navigation button is planned for all backend users, plus AND-combined conditions with Contains / Does not contain / == / != operators over serialised JSON.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55248",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55248",
+  "summary": "[TechDept] [EP] IDOR in ProfileController::signDocumentAction — buyer can sign/download any document via web endpoint",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-10T15:28:34.107+0100",
+  "updated": "2026-09-22T11:21:47.507+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "ai-analyzed",
+   "ai-valid"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1812,
+  "ai": {
+   "s": "Closes an IDOR in the hosted buyer Sign button endpoint so a buyer can no longer sign or download documents belonging to other categories or events.",
+   "pr": "POST /profile/signDocument accepted any document id without checking the buyer's category or event, letting a buyer render foreign documents to PDF.",
+   "wy": "Security: a major broken object-level authorisation flaw (CWE-639) on the endpoint the production web UI uses.",
+   "oc": "The endpoint is to get an allow-list check, an event-scope check and an isBuyer() role guard, mirroring the EP-55044 fix.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55249",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55249",
+  "summary": "[TechDept] [EP] IDOR in UploadController — docid POST param attaches uploaded file to any HostedBuyerBuyersDocuments",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-10T15:29:11.920+0100",
+  "updated": "2026-09-22T11:22:25.777+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "ai-analyzed",
+   "ai-valid"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1773,
+  "ai": {
+   "s": "Closes an IDOR in the hosted buyer upload endpoint so uploaded files can only be attached to documents in the buyer's own category and event.",
+   "pr": "The upload endpoint used the docid POST parameter unchecked, so a buyer could link their file to another category's or event's document requirement.",
+   "wy": "Security: the flaw broke the organiser's document-approval process and skewed hosted buyer document statistics.",
+   "oc": "The endpoint is to validate docid with the category allow-list and event-scope repository check, following the EP-55044 pattern.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55297",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55297",
+  "summary": "N+1 в InteractionScoresService::initForEvents при глобальном включении interaction scores (все ивенты тенанта)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-13T21:21:59.935+0100",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "ai-analyzed",
+   "ai-valid",
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1821,
+  "ai": {
+   "s": "Batches the interaction scores initialisation so enabling interaction scores globally no longer fires about three database queries per event across the tenant.",
+   "pr": "InteractionScoresService::initForEvents ran a config read, a COUNT and an INSERT per event, so switching the global flag on for all tenant events caused an N+1 query storm.",
+   "wy": "Performance: found in automated code review of EP-46974; large production tenants have hundreds or thousands of events.",
+   "oc": "Data is to be collected before the loop with one DISTINCT query, a single settings lookup and one chunked insertBatch after the loop.",
+   "lens": "INTEG",
+   "pa": "Networking & Interactions",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Scalability",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55304",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55304",
+  "summary": "[BE] ExhibitorEffectiveSettings: query LC-Pro orders as a fallback (settings-first) on the hot scan path",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-14T09:16:53.432+0100",
+  "updated": "2026-09-14T17:16:17.765+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2111,
+  "ai": {
+   "s": "Reorders the exhibitor LC-Pro settings checks so purchase orders are only queried when the category or exhibitor setting is off, cutting database load on the scan path.",
+   "pr": "Every LC-Pro getter queried purchase entitlements before the cheap settings resolver, on a hot path ScanController runs for each scan.",
+   "wy": "Performance follow-up raised in review of PR #4443 (EP-50210), whose own direction asked for purchase lookup as the fallback.",
+   "oc": "All LC-Pro getters are to evaluate settings first with purchase as fallback, with no behaviour change, after measuring the cost; close as won't-do if negligible.",
+   "lens": "COST",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Scalability",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55315",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55315",
+  "summary": "Adding tracking for sponsor and sponsored product clicks",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-14T12:17:58.501+0100",
+  "updated": "2026-09-24T17:47:40.964+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 5329,
+  "ai": {
+   "s": "Adds view and click tracking for the Sponsored Exhibitors and Sponsored Products sliders in the mobile app, so app activity counts in sponsor statistics.",
+   "pr": "EP-18109 moved sponsored cards into app sliders but never implemented analytics, so sponsor exposure in the app was missing from sponsor statistics.",
+   "wy": "Sponsor performance was undercounted for events with heavy app usage, weakening the case for sponsorship sales.",
+   "oc": "iOS and Android are to record slider views and clicks by the documented rules and feed the same statistics pipeline as web sponsored cards.",
+   "lens": "REV",
+   "pa": "Sponsorship",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Revenue Enabler",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55334",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55334",
+  "summary": "Exception Handler Implementation",
+  "status": "Ready for review",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-07-15T09:24:40.486+0100",
+  "updated": "2026-09-24T16:38:39.952+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1354,
+  "ai": {
+   "s": "Builds a serverless exceptions handler (SQS, Lambda, DynamoDB) with Grafana boards for all exceptions and bug candidates, plus a dry-run ledger of the Jira tickets it would raise.",
+   "pr": "Monolith exceptions were not grouped or surfaced systematically, so there was no reliable way to tell which exceptions represent real bugs.",
+   "wy": "Internal observability: the MVP proves grouping yields one ticket per bug before the system is allowed to create Jira tickets.",
+   "oc": "A spec sized from a 38-day sample of the live stream and a repo exist; the MVP delivers two Grafana boards and a dry-run ticket ledger, now in review.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55375",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55375",
+  "summary": "Translation Manager - Restrict English translation edits to authorised users",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-07-01T12:12:57.944+0100",
+  "updated": "2026-09-23T18:54:28.566+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EI-1",
+   "summary": "Multi-Tenant Translation Management Platform",
+   "status": "Done",
+   "statusCategory": "done"
+  },
+  "parent": null,
+  "descChars": 3809,
+  "ai": {
+   "s": "Restricts editing of English global translations in Translation Manager to specifically authorised users via a new EN-only permission.",
+   "pr": "Admins and Super Admins had identical translation rights, and the permission system had no notion of language, so English could not be locked without blocking every language.",
+   "wy": "Requested by Ajay Singh so that only four people can change English translations at global level.",
+   "oc": "Discovery defined a translations.update_en permission with service-layer locale guards, EN-only import gating and frontend hiding; open scope questions await confirmation.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55400",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55400",
+  "summary": "Apply New Product Module on Frontend",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-16T13:23:35.119+0100",
+  "updated": "2026-09-14T17:16:35.885+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1480,
+  "ai": {
+   "s": "Moves the frontend Products area onto the new DDD/CQRS Product module and v3 API introduced in EP-53873.",
+   "pr": "The frontend product area still used legacy monolith coupling rather than the new modular Product architecture.",
+   "wy": "Platform modernisation: align products with the new modular architecture and unified error taxonomy.",
+   "oc": "The frontend is to use existing or new v3 Product endpoints following CQRS, with errors mapped to the shared taxonomy, tests and OpenAPI docs.",
+   "lens": "INTEG",
+   "pa": "Exhibitor Marketplace",
+   "cf": "Medium",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55429",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55429",
+  "summary": "Participant Management: Separate Category and Role Columns",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-17T12:38:21.605+0100",
+  "updated": "2026-09-24T13:19:32.824+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2927,
+  "ai": {
+   "s": "Organisers see Category and Role as separate, independently filterable columns in Participant Management.",
+   "pr": "Category and Role were concatenated in one field, so organisers could not filter by role alone or get accurate participant counts without manual work.",
+   "wy": "Cleaner participant segmentation and reporting for organisers before, during and after events.",
+   "oc": "Participant Management is to show distinct Category and Role columns with separate filters and sorting.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55430",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55430",
+  "summary": "[SEO/GA4] Semantic H1 Tags for System Pages",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-17T13:08:21.393+0100",
+  "updated": "2026-09-17T17:58:39.416+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 4018,
+  "ai": {
+   "s": "Gives every listing and detail system page a single semantic H1 and passes page headings to the dataLayer, improving SEO and GA4 tracking.",
+   "pr": "System pages such as the exhibitor directory, programme and speaker profiles rendered headings as H2 or CSS-styled text, so crawlers missed the main subject and GA4 got empty heading values.",
+   "wy": "SEO ranking for events such as Frankfurter Buchmesse and complete GA4 analytics for organisers.",
+   "oc": "Each system page is to render one correct H1 mapped to the analytics payload, including session names on session detail pages.",
+   "lens": "DATA",
+   "pa": "Website Builder",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ }
+]

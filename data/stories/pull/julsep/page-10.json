@@ -1,0 +1,773 @@
+[
+ {
+  "k": "EP-57348",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57348",
+  "summary": "API V2 — Return filter_1 to filter_5 on sessions/get and sessions/getSession",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-09-15T15:58:24.997+0100",
+  "updated": "2026-09-21T16:46:58.793+0100",
+  "resolved": "2026-09-17T16:02:47.019+0100",
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "INTERNAL",
+   "DLG"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 7039,
+  "ai": {
+   "s": "API V2 session read endpoints now return filter_1 to filter_5, so integrators can read back the custom filters they set.",
+   "pr": "sessions/get and sessions/getSession did not include custom filter values, so values set via sessions/set could not be retrieved.",
+   "wy": "Complement to EP-57347, requested internally and by DLG.",
+   "oc": "Both endpoints return five filter fields in the request language, and delta queries pick up filter-only changes; done.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57350",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57350",
+  "summary": "Global Search: make the header search term hand-off to category listings deterministic",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-09-15T16:01:40.126+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "global-search",
+   "routing",
+   "tech-debt"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 8055,
+  "ai": {
+   "s": "Makes the header search term hand-off to category listings reliable, so choosing a category opens its listing already filtered by the term.",
+   "pr": "The search field pushed the route and dispatched the filter together, so the listing's own initialisation often wiped the term, replaced other facets and kept it out of the URL.",
+   "wy": "Global Search tech debt: the feature only sometimes worked and lost the term on refresh, share and Back.",
+   "oc": "The term is to travel in the URL and be seeded by the listing, preserving existing facets.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57360",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57360",
+  "summary": "Technical Analysis: Define session image cropping, aspect ratios, and overlay safe zones",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-16T06:27:14.722+0100",
+  "updated": "2026-09-16T06:27:15.008+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2261,
+  "ai": {
+   "s": "Documents session image cropping, aspect ratios and overlay safe zones across web and mobile, so organisers can design images that UI badges do not obscure.",
+   "pr": "Organisers had no specification of session image dimensions or where the Track badge and countdown overlays sit.",
+   "wy": "Requested for DLG's EuroTier 2026 following EP-57218 and EP-57215.",
+   "oc": "Developers are to map image containers, crop rules and overlay positions on web and mobile into a client-ready specification.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Client Commitment",
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57386",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57386",
+  "summary": "Widen the SearchField page-id helpers to string and make isKnownSearchPage a type guard",
+  "status": "Ready for release",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-09-16T11:42:05.613+0100",
+  "updated": "2026-09-23T18:18:40.920+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "global-search",
+   "tech-debt",
+   "typescript"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4843,
+  "ai": {
+   "s": "Widens the SearchField page-id helpers to plain strings and makes isKnownSearchPage a type guard, matching the untyped template data they receive.",
+   "pr": "Website Builder templates can hold 23 page ids but the type covered 12, so valid ids could not be expressed and tests relied on double assertions.",
+   "wy": "TypeScript correctness for Global Search on untyped stored template JSON.",
+   "oc": "The helper half shipped in EP-57242 across next14 branches; the story is ready for release.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57403",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57403",
+  "summary": "Client Manager: authenticated per-event actuals API for Event Calendar and Planhat reconciliation",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-16T13:57:05.312+0100",
+  "updated": "2026-09-23T19:13:10.936+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 5342,
+  "ai": {
+   "s": "Adds an authenticated Client Manager API that returns per-event platform actuals to the Event Calendar service and then Planhat.",
+   "pr": "Client Manager had no external request authentication and no way for other systems to pull per-event actuals.",
+   "wy": "Operations and Data Ops need actuals for the Event Calendar and Planhat reconciliation.",
+   "oc": "Unauthenticated or revoked requests are refused and authenticated ones get the specified fields; credential management is an open decision.",
+   "lens": "INTEG",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57406",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57406",
+  "summary": "[SEO] Participant Profiles: Implement noindex, follow Robots Directive and Self-Referencing Canonical Tags",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-16T16:15:18.976+0100",
+  "updated": "2026-09-24T10:23:26.488+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [
+   "Vinexposium"
+  ],
+  "epic": {
+   "k": "EP-57093",
+   "summary": "Technical SEO improvements",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 4917,
+  "ai": {
+   "s": "Participant profile pages render noindex, follow and a self-referencing canonical, so attendee profiles stay out of search results.",
+   "pr": "Around 4,600 public participant profiles were indexable and canonicalised wrongly to the homepage.",
+   "wy": "Attendee data privacy (GDPR), crawl budget and an SEO audit finding raised for Vinexposium.",
+   "oc": "SSR metadata for all participant profile routes is to output the robots directive and correct canonical URL.",
+   "lens": "DATA",
+   "pa": "Website Builder",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Compliance",
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57407",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57407",
+  "summary": "[SEO] Fix 2-Hop Redirect Chains for /newfront/page/* URLs",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-16T16:20:07.352+0100",
+  "updated": "2026-09-17T17:59:50.352+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1950,
+  "ai": {
+   "s": "Redirects legacy /newfront/page/* and /page/* links straight to the clean URL in one hop instead of two.",
+   "pr": "An SEO audit found 23 redirect chains, e.g. /newfront/page/about → /newfront/about → /about.",
+   "wy": "Faster loading, less wasted crawl budget and audit compliance.",
+   "oc": "Both legacy patterns are to redirect directly to /{slug} with a single 301/308.",
+   "lens": "EXP",
+   "pa": "Website Builder",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57408",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57408",
+  "summary": "[SEO] Include Exhibitor, Brand, and Product URLs in XML Sitemaps",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-16T16:21:17.640+0100",
+  "updated": "2026-09-24T14:50:33.450+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2088,
+  "ai": {
+   "s": "Adds published exhibitor, brand and product URLs to event XML sitemaps so search engines can discover them.",
+   "pr": "The sitemap from EP-56823 covered only website pages, news and sessions, missing about 3,300 catalogue pages for large events like Wine Paris.",
+   "wy": "SEO visibility for participating companies and a technical audit requirement.",
+   "oc": "Active, published exhibitors, brands and products are to be listed, with drafts and hidden items excluded.",
+   "lens": "EXP",
+   "pa": "Exhibitor Marketplace",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57411",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57411",
+  "summary": "Session Calendar (Mobile): Single-day view with dynamic date selector strip",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-16T18:29:46.648+0100",
+  "updated": "2026-09-17T15:24:01.919+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4474,
+  "ai": {
+   "s": "On mobile web the Session Calendar shows a single-day view only, with a date strip listing just the days that have sessions or exhibitor events.",
+   "pr": "Multi-day views were cramped and unreadable on small screens.",
+   "wy": "Clearer daily schedule navigation for attendees on mobile.",
+   "oc": "The multi-day/day switcher is to be removed on mobile and replaced by a dynamic horizontal date selector.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57419",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57419",
+  "summary": "Play & Win without an app update",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-16T23:39:20.591+0100",
+  "updated": "2026-09-18T16:19:31.627+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 3504,
+  "ai": {
+   "s": "Lets logged-in app users enter Play & Win from the current production app without an iOS or Android update.",
+   "pr": "A similar authenticated web flow for Lead Capture needed an app update, which Play & Win should avoid.",
+   "wy": "Launch a marketing promotion remotely without waiting for users to update.",
+   "oc": "Feasibility with existing auth is to be confirmed first; V1 stores user, event, submitted meeting number and timestamp only.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57428",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57428",
+  "summary": "[Exhibitor] Update AccountsInteractionsReport to expose sync_ts",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-09-17T08:24:48.179+0100",
+  "updated": "2026-09-24T13:00:08.139+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "DLG"
+  ],
+  "epic": {
+   "k": "EP-57297",
+   "summary": "accountsInteractions: sync_ts cursor field to fix incremental-sync data loss",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 593,
+  "ai": {
+   "s": "Exposes the new sync_ts value in AccountsInteractionsReport so the accountsInteractions API can page by processing time.",
+   "pr": "The report layer did not carry ClickHouse's sync_ts, so the incremental sync path could not use it.",
+   "wy": "Part of fixing incremental-sync data loss on /api/v2/statistics/accountsInteractions, reported by DLG.",
+   "oc": "The report schema and pipeline include sync_ts with existing time behaviour unchanged; in testing.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57430",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57430",
+  "summary": "[Exhibitor] Update SponsorAccountsInteractionsReport to expose sync_ts",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-09-17T08:29:22.529+0100",
+  "updated": "2026-09-24T13:06:09.875+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "DLG"
+  ],
+  "epic": {
+   "k": "EP-57297",
+   "summary": "accountsInteractions: sync_ts cursor field to fix incremental-sync data loss",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 707,
+  "ai": {
+   "s": "Exposes the new sync_ts value in SponsorAccountsInteractionsReport so the sponsorInteractions API can page by processing time.",
+   "pr": "The sponsor report layer did not carry sync_ts, so incremental sync could not use it.",
+   "wy": "Part of fixing incremental-sync data loss on /api/v2/statistics/sponsorInteractions, reported by DLG.",
+   "oc": "The report includes sync_ts with stable pages and unchanged time behaviour; in testing, with a duplicates question open.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57463",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57463",
+  "summary": "not-found pages return HTTP 200 instead of 404 — move Suspense boundaries into pages",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-17T13:08:29.131+0100",
+  "updated": "2026-09-17T13:08:29.305+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "routing",
+   "seo",
+   "tech-debt"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4214,
+  "ai": {
+   "s": "Makes not-found pages return a real HTTP 404 by moving Suspense boundaries into pages, so the status is set before streaming starts.",
+   "pr": "Blanket loading files flushed the shell with 200 before pages called notFound(), so every not-found response was a 200.",
+   "wy": "DevOps asked for real 404s; also affects SEO.",
+   "oc": "The two blanket loading.tsx files are to give way to page-level Suspense so notFound() can set 404.",
+   "lens": "EXP",
+   "pa": "Website Builder",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57471",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57471",
+  "summary": "Cloning: remap session type \"Visible to\" / \"Available to\" ids to the cloned event",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-09-17T14:13:08.776+0100",
+  "updated": "2026-09-24T16:51:33.861+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "tech-debt"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1667,
+  "ai": {
+   "s": "Cloning an event via \"create from parent\" now remaps session type \"Visible to\" and \"Available to\" category ids to the cloned event's categories.",
+   "pr": "The legacy copyType() path copied session type audience settings verbatim, pointing at the source event's categories.",
+   "wy": "Follow-up to EP-56645 for DLG-Feldtage.",
+   "oc": "copyType() remaps account and exhibitor category ids onto the target event; the main clone path already did; in testing.",
+   "lens": "INTEG",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57478",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57478",
+  "summary": "Track-Based Session Ordering in Calendar View",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-17T16:22:13.441+0100",
+  "updated": "2026-09-17T16:24:21.871+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 5545,
+  "ai": {
+   "s": "Orders sessions by track in the Calendar View so each track keeps the same column, with featured and sponsored sessions first.",
+   "pr": "The cascade placed sessions by start time and duration only, so a track could jump between columns across the day.",
+   "wy": "Raised by DLG (Dennis Schmitz) so attendees can scan one column per track.",
+   "oc": "The cascade algorithm is to assign stable track-based column positions with featured and sponsored sessions prioritised.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57489",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57489",
+  "summary": "request sized WebP variants instead of original images across portal-ui",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "High",
+  "created": "2026-09-17T17:37:28.678+0100",
+  "updated": "2026-09-23T18:21:43.507+0100",
+  "resolved": "2026-09-23T18:18:53.817+0100",
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "images",
+   "performance",
+   "tech-debt"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 14256,
+  "ai": {
+   "s": "Makes portal-ui request sized WebP image variants instead of original uploads, cutting image traffic and CloudFront cost.",
+   "pr": "64.6% of image traffic was unsized originals and no WebP was requested, with images at 811 GB a day and about 69 USD of the daily CloudFront bill.",
+   "wy": "Cost reduction and faster page loads.",
+   "oc": "The frontend requests sized WebP variants through the existing resize lambda; done.",
+   "lens": "COST",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Cost Reduction",
+    "Scalability"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57501",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57501",
+  "summary": "Catalog all consumers of ClickHouse analytics data (dashboards, reports, exports, APIs, UI)",
+  "status": "Done",
+  "statusCategory": "done",
+  "priority": "Medium",
+  "created": "2026-09-18T07:10:22.463+0100",
+  "updated": "2026-09-24T12:05:45.726+0100",
+  "resolved": "2026-09-24T12:05:45.699+0100",
+  "team": "Data Science",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-57500",
+   "summary": "Analytics Consumer Audit: Resolve Business Logic Discrepancies Across ClickHouse Data Consumers",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 948,
+  "ai": {
+   "s": "Catalogues every consumer of ClickHouse analytics data across dashboards, reports, exports, APIs and UI, with its data sources and business rules.",
+   "pr": "There was no inventory of what reads ClickHouse data or which business logic each consumer applies.",
+   "wy": "First step of the analytics consumer audit to resolve discrepancies between consumers.",
+   "oc": "A single catalogue lists consumers with owner, data sources and logic notes, reviewed by Bartosz Malec and Kostiantyn Shein; done.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57505",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57505",
+  "summary": "Fix \"same meaning, different calculation\" discrepancies",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-18T07:11:01.480+0100",
+  "updated": "2026-09-18T07:11:01.667+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-57500",
+   "summary": "Analytics Consumer Audit: Resolve Business Logic Discrepancies Across ClickHouse Data Consumers",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 854,
+  "ai": {
+   "s": "Aligns analytics consumers where the same metric is calculated differently, so numbers that should match do.",
+   "pr": "Some metrics with the same meaning were computed differently across consumers, giving mismatched numbers.",
+   "wy": "First-priority fix group of the analytics consumer audit.",
+   "oc": "Each bucket-1 discrepancy is to be fixed and validated against the canonical source, with before/after numbers documented.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57506",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57506",
+  "summary": "Present \"different meaning, same name\" findings to Product for naming/documentation decisions",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-18T07:11:10.480+0100",
+  "updated": "2026-09-18T07:11:10.644+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-57500",
+   "summary": "Analytics Consumer Audit: Resolve Business Logic Discrepancies Across ClickHouse Data Consumers",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 875,
+  "ai": {
+   "s": "Presents to Product the metrics that share a name but mean different things, so each can be renamed, documented or consolidated.",
+   "pr": "The same metric name was used for different concepts, confusing customers.",
+   "wy": "Part of the analytics consumer audit; naming is a product decision.",
+   "oc": "Findings are to be presented and a decision and owner recorded for every bucket-2 item.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ },
+ {
+  "k": "EP-57507",
+  "link": "https://expoplatform.atlassian.net/browse/EP-57507",
+  "summary": "[Stretch] Cross-check ClickHouse statistics against equivalent PostgreSQL data",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-09-18T07:11:21.232+0100",
+  "updated": "2026-09-18T07:11:21.429+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-57500",
+   "summary": "Analytics Consumer Audit: Resolve Business Logic Discrepancies Across ClickHouse Data Consumers",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1082,
+  "ai": {
+   "s": "Cross-checks prioritised ClickHouse statistics against the equivalent PostgreSQL data and triages any gaps (stretch goal).",
+   "pr": "ClickHouse and PostgreSQL values for the same statistic could diverge, as a meetings-count discrepancy already showed.",
+   "wy": "Stretch goal of the analytics consumer audit to find sync lag, logic divergence or data loss.",
+   "oc": "CH-vs-PG comparisons are to be documented per metric and gaps routed to the right owner.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:23:55Z"
+ }
+]

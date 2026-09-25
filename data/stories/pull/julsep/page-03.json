@@ -1,0 +1,779 @@
+[
+ {
+  "k": "EP-55447",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55447",
+  "summary": "Native Integration - Cvent (Event Management) — Phase 1: Inbound",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-20T01:14:40.665+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory",
+   "Native_integration",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-45437",
+   "summary": "Integration HUB - Integrations EPIC",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 26474,
+  "ai": {
+   "s": "Adds a native inbound Cvent integration to the Integration Hub, syncing attendees and exhibitors into ExpoPlatform with delta polling and a custom-questions import helper.",
+   "pr": "Clients running events in Cvent had no native way to bring Cvent attendees and exhibitors into ExpoPlatform, so data had to be moved by other means.",
+   "wy": "Integration Hub expansion: native connectors to major event platforms make ExpoPlatform easier to adopt alongside existing client tooling.",
+   "oc": "A polled OAuth2 Cvent → EP sync on the AutoUpdate engine is specified, matched on External ID, with a helper to pre-fill registration sections from Cvent question definitions; push-back is Phase 2.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Adoption",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55448",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55448",
+  "summary": "Native Integration - Eventbrite — Phase 1: Inbound",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-20T01:28:03.216+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory",
+   "Native_integration",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-45437",
+   "summary": "Integration HUB - Integrations EPIC",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 19999,
+  "ai": {
+   "s": "Adds a native inbound Eventbrite integration to the Integration Hub, importing Eventbrite attendees as visitors with delta sync.",
+   "pr": "Organisers selling tickets through Eventbrite had no native connector to bring those attendees into ExpoPlatform.",
+   "wy": "Integration Hub expansion to reduce manual data transfer for clients using Eventbrite.",
+   "oc": "A polled Eventbrite → EP visitor sync is specified, using a private OAuth2 bearer token, changed_since delta filtering and External ID matching; exhibitors are out of scope as Eventbrite has none.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Adoption",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55457",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55457",
+  "summary": "Introduce mandatory field mapping in data import",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-20T09:02:22.438+0100",
+  "updated": "2026-09-24T18:11:14.155+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2324,
+  "ai": {
+   "s": "Data import now blocks confirmation until each block's mandatory system fields are mapped, flagging the missing fields in the mapping popup.",
+   "pr": "Admins could confirm an import without mapping essential fields such as participant email or product owner, producing incomplete or broken records.",
+   "wy": "Data quality: prevent bad imports at the point of mapping rather than cleaning up afterwards.",
+   "oc": "Per-block mandatory fields (e.g. First Name, Last Name, Email for participants) are defined; Confirm stays disabled and unmapped fields are named until all are mapped.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55465",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55465",
+  "summary": "Implement Microsoft Clarity in Admin Panel",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-20T11:39:25.215+0100",
+  "updated": "2026-09-24T18:11:25.430+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 5764,
+  "ai": {
+   "s": "Adds Microsoft Clarity session recordings and heatmaps to the Admin Panel so Product can see how organiser clients actually use key workflows.",
+   "pr": "Product had no behavioural evidence of how organisers use the Admin Panel and relied on anecdotal support tickets to find friction.",
+   "wy": "A low-compliance-overhead first phase of EP-51003 analytics, shipped ahead of the slower GA4 legal review.",
+   "oc": "Clarity is to be deployed with masking on, separate staging and production projects and consent handling, gated on Legal updating the sub-processor list.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55469",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55469",
+  "summary": "Native Integration - Salesforce (CRM) — Phase 1: Inbound",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-20T13:51:56.589+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory",
+   "Native_integration",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-45437",
+   "summary": "Integration HUB - Integrations EPIC",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 27996,
+  "ai": {
+   "s": "Adds a native inbound Salesforce integration to the Integration Hub, syncing Contacts or Leads as visitors and Accounts as exhibitors.",
+   "pr": "Clients holding exhibitor and visitor data in Salesforce had no native connector to import it into ExpoPlatform.",
+   "wy": "Integration Hub expansion: CRM connectors reduce manual data handling and support client adoption.",
+   "oc": "A polled Salesforce → EP sync via SOQL on SystemModStamp is specified, with Connected App OAuth, External ID matching and daily API-limit awareness; push-back is Phase 2.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Adoption",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55470",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55470",
+  "summary": "Native Integration - Cvent (Event Management) — Phase 2: Push-Back",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-20T14:28:20.101+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory",
+   "Native_integration",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-45437",
+   "summary": "Integration HUB - Integrations EPIC",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 7232,
+  "ai": {
+   "s": "Adds Phase 2 push-back for the Cvent integration, writing ExpoPlatform visitor and exhibitor updates, including profile pictures and logos, back to Cvent.",
+   "pr": "The Phase 1 Cvent integration was inbound only, so changes made in ExpoPlatform never reached the client's Cvent records.",
+   "wy": "Two-way sync keeps client systems of record current without manual re-entry.",
+   "oc": "Independently toggleable visitor, exhibitor and image push-back subscriptions are specified, reusing Phase 1 auth and ID mapping, with image-loop prevention flagged as a risk.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55471",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55471",
+  "summary": "Native Integration - HubSpot (CRM) — Phase 2: Push-Back",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-20T14:29:21.881+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory",
+   "Native_integration",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-45437",
+   "summary": "Integration HUB - Integrations EPIC",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 5306,
+  "ai": {
+   "s": "Adds Phase 2 push-back for the HubSpot integration, writing ExpoPlatform visitor and exhibitor updates back to HubSpot Contacts and Companies.",
+   "pr": "The Phase 1 HubSpot integration was inbound only, so updates made in ExpoPlatform did not flow back to the client's CRM.",
+   "wy": "Two-way CRM sync keeps client data consistent across systems.",
+   "oc": "Toggleable push-back subscriptions with a dedicated outbound field mapping are specified, needing extra write scopes; image push-back is not possible on HubSpot.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55472",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55472",
+  "summary": "Native Integration - Salesforce (CRM) — Phase 2: Push-Back",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-20T14:30:29.019+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "DoDUserStory",
+   "Native_integration",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-45437",
+   "summary": "Integration HUB - Integrations EPIC",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 6301,
+  "ai": {
+   "s": "Adds Phase 2 push-back for the Salesforce integration, writing ExpoPlatform visitor and exhibitor updates back to Salesforce Contacts, Leads and Accounts.",
+   "pr": "The Phase 1 Salesforce integration was inbound only, so ExpoPlatform-side changes did not reach the client's Salesforce records.",
+   "wy": "Two-way CRM sync for clients whose system of record is Salesforce.",
+   "oc": "Toggleable push-back with its own outbound mapping is specified, sharing Phase 1 credentials and the daily API quota; image push-back is not applicable.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55476",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55476",
+  "summary": "Unify favouriting into FavouriteService with per-object-type handlers",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-07-20T15:08:24.699+0100",
+  "updated": "2026-09-14T17:16:44.834+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 829,
+  "ai": {
+   "s": "Consolidates all favouriting into one FavouriteService with per-object-type handlers instead of controller switch statements.",
+   "pr": "Favourite flows branched by object type in controller switches, and FavouriteService only handled the opted-out private path while public writes stayed in controllers and models.",
+   "wy": "Follow-up from the EP-53978 / PR #4431 review to reduce duplication and keep new favouriting logic in one place.",
+   "oc": "A single service with visitor, exhibitor, product, brand and session handlers is planned, with public writes migrating gradually and reads optionally consolidated.",
+   "lens": "INTEG",
+   "pa": "Networking & Interactions",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55477",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55477",
+  "summary": "Bulk connection delete is not private-favourite-aware",
+  "status": "Ready for testing",
+  "statusCategory": "indeterminate",
+  "priority": "Low",
+  "created": "2026-07-20T15:09:32.891+0100",
+  "updated": "2026-09-24T16:39:02.939+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [
+   "DLG"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 802,
+  "ai": {
+   "s": "Bulk connection delete now also removes opted-out users' private favourites, so they can bulk-remove what they bulk-added.",
+   "pr": "Bulk add correctly stored opted-out users' favourites privately, but bulk delete only touched account_connections and returned not_found for those private rows.",
+   "wy": "Found in QA scope inventory of the EP-53978 private favourites work; the asymmetry broke the mobile bulk-remove flow.",
+   "oc": "Bulk delete is aligned with single-disconnect behaviour and removes the owner's private favourite rows; the fix is in testing.",
+   "lens": "EXP",
+   "pa": "Networking & Interactions",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55482",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55482",
+  "summary": "N+1 queries in V3 Sponsors list — exhibitor logo gate resolves per-sponsor at serialization",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-20T16:06:43.765+0100",
+  "updated": "2026-09-14T17:16:42.426+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3180,
+  "ai": {
+   "s": "Removes an N+1 query pattern in the V3 Sponsors list, where each sponsor's exhibitor logo setting was resolved separately at serialisation.",
+   "pr": "SponsorResource::toArray() called getGatedImageUrl() per sponsor, lazily loading the linked exhibitor's effective settings with fresh database reads each time.",
+   "wy": "Performance regression introduced by EP-47975's exhibitor logo gating on the sponsor chain.",
+   "oc": "Logo gating is to be resolved once per page rather than per sponsor, keeping the same image output.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Scalability",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55496",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55496",
+  "summary": "Enforce view-only / event scope for admin permissions (deny-by-default in AccessControl)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-07-21T11:27:58.260+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3187,
+  "ai": {
+   "s": "Makes admin permissions deny-by-default so an admin set to view-only or no access on one event no longer gets full access on every other event.",
+   "pr": "AccessControl fell back to a permissive global default row for any event without an explicit permission row, so per-event restrictions did not hold across events.",
+   "wy": "Security finding split out of the EP-55010 admin lockout investigation; restricted admins could act on events they should not.",
+   "oc": "The fix to fetchAccessZone is scoped with explicit caution, as a naive deny-by-default could lock out many production admins across tenants.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55506",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55506",
+  "summary": "[BE] Global rate-limit for Utils::sendException with repeat counting",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-21T15:40:40.482+0100",
+  "updated": "2026-09-14T17:17:02.004+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2237,
+  "ai": {
+   "s": "Adds a global rate limit with repeat counting to exception notifications, so an outage no longer floods the alert channel with identical messages.",
+   "pr": "Utils::sendException() sent a notification on every call, so a failing dependency under traffic drowned other alerts in duplicates.",
+   "wy": "Generalises the local AI-search rate limit from EP-47675 to the whole platform and removes that workaround.",
+   "oc": "A per-call-site signature with memcached marker and counter suppresses repeats for 300s, reports the repeat count next time and fails open if the cache is down.",
+   "lens": "COST",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Operational Efficiency",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55562",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55562",
+  "summary": "[TechDept] [EP:dev] N+1 in participant export getParticipantData — per-event 'SELECT title' query per account (N×M events queries)",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-23T10:19:41.008+0100",
+  "updated": "2026-09-22T11:23:08.431+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1885,
+  "ai": {
+   "s": "Removes an N+1 in participant export, where a separate event-title query ran for every account and every event it was active in.",
+   "pr": "ExportTask::getParticipantData() issued an uncached SELECT title per account per active event, giving N×M+N queries and refetching the same titles.",
+   "wy": "Performance defect found in audit (moderate severity) on the export hot loop.",
+   "oc": "Event titles are to be loaded once and reused across the export, including the moderator all-events branch, with unchanged output.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Scalability",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55584",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55584",
+  "summary": "reduce dev-mode compilation graph: lazy-load heavy layout subtrees and enable webpack lazyCompilation",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-24T11:20:13.337+0100",
+  "updated": "2026-09-14T17:17:07.202+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "performance",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3102,
+  "ai": {
+   "s": "Cuts portal-ui dev-mode page compile times by lazy-loading heavy layout subtrees and enabling webpack lazyCompilation.",
+   "pr": "Each dev page transition compiled 11.5k–16k modules and took 20–35s, because the shared layout statically pulled in the form builder, draft-js and the messenger.",
+   "wy": "Developer productivity: slow dev compiles waste engineering time on every page change.",
+   "oc": "Measured with lazyCompilation: profile 35s to 15.7s, news 20s to 10.6s, groups 21.5s to 3.7s, with per-page graphs down to 9.9k–12.3k modules.",
+   "lens": "COST",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Operational Efficiency",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55587",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55587",
+  "summary": "Add relevant logs to data import",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-24T12:41:45.137+0100",
+  "updated": "2026-09-24T18:11:16.294+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 5707,
+  "ai": {
+   "s": "Each data import produces a result log, with a summary in Log Info and a downloadable per-row file showing what was created, updated or skipped and why.",
+   "pr": "Admins could not confirm what an import created or updated, or see which rows were skipped and for what reason.",
+   "wy": "Import transparency, so admins can trust and fix imports, especially where duplicates arise from fake email generation settings.",
+   "oc": "A summary with counts, status and fake-email state is logged, plus the uploaded file echoed back with Row, Action and Reason columns for re-upload.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55593",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55593",
+  "summary": "File size upload issue on data import",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-24T13:20:52.076+0100",
+  "updated": "2026-09-24T18:11:18.435+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2200,
+  "ai": {
+   "s": "Lets admins import one data file of any size and get one trustworthy result, instead of splitting large files by hand.",
+   "pr": "Large imports could not be processed in one pass, and manual splitting caused broken records, duplicate accounts across files and fragmented result logs.",
+   "wy": "Data integrity during bulk onboarding ahead of events, when errors matter most.",
+   "oc": "Required behaviours are set: one upload is one job and re-running after an interruption never duplicates data; the processing design is left to the team.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Scalability"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55599",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55599",
+  "summary": "[BE-NonTM]Translation: please apply the missing system translations.",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-07-26T16:51:49.945+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 2064,
+  "ai": {
+   "s": "Adds missing and corrected EN/DE notification translations for Frankfurter Buchmesse and DLG PotatoEurope exhibitors on live events.",
+   "pr": "Exhibitor notifications on live FBM and DLG events had missing German translations and wrong English wording, which could not be fixed in Translation Manager.",
+   "wy": "Urgent client need: the events were live and exhibitors were already using the platform.",
+   "oc": "Approval and time-change notification strings are to be added and corrected in EN and DE.",
+   "lens": "EXP",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55639",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55639",
+  "summary": "Move account creation earlier in Registration flow (prerequisite for cart approach) - ON HOLD",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-28T10:22:39.665+0100",
+  "updated": "2026-09-24T17:47:57.559+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-56158",
+   "summary": "On Hold Registration Stories and Post Registration work",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1660,
+  "ai": {
+   "s": "Creates the registrant's account before payment starts rather than after submission, as a prerequisite for the cart payment approach (on hold).",
+   "pr": "The account was created by a post-commit listener after the registration transaction, so no account_id existed when payment began.",
+   "wy": "Blocks the cart/basket payment approach in EP-55566, which needs a reserved account before payment.",
+   "oc": "Draft criteria move account creation ahead of payment, update ordering tests and audit dependent code; the story is on hold.",
+   "lens": "REV",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Revenue Enabler",
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ },
+ {
+  "k": "EP-55641",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55641",
+  "summary": "Handle VAT charged when VAT-number check service is unavailable at checkout - ON HOLD",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-28T10:22:52.611+0100",
+  "updated": "2026-09-24T17:48:09.009+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-56158",
+   "summary": "On Hold Registration Stories and Post Registration work",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1992,
+  "ai": {
+   "s": "Defines how checkout should handle VAT when the VAT-number check service is down, instead of silently overcharging exempt business customers (on hold).",
+   "pr": "When the VAT-number check was unavailable, VAT was charged even to reverse-charge B2B customers, and correction relied on someone noticing and refunding manually.",
+   "wy": "Invoice correctness and tax compliance; overcharged customers need formal invoice corrections.",
+   "oc": "Options to block checkout, charge and auto-correct with a refund and credit note, or retry are set out for a product and engineering decision; on hold.",
+   "lens": "REV",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Compliance",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:19:34Z"
+ }
+]

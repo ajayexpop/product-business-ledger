@@ -1,0 +1,798 @@
+[
+ {
+  "k": "EP-51167",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51167",
+  "summary": "Personalized Meeting Notes - Mobile (Part 2)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-31T21:17:07.983+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-47872",
+   "summary": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1985,
+  "ai": {
+   "s": "Adds a \"My Notes\" screen to the mobile app so attendees and exhibitors can review, edit, copy and delete all their meeting notes in one place.",
+   "pr": "Meeting notes could only be reached meeting by meeting, so users had no single place to review or manage everything they had written.",
+   "wy": "Second part of the Personalized Meeting Notes feature within the AI Meeting Notes (MTT) move from proof of concept to production.",
+   "oc": "A My Notes list, reached from My Schedule's overflow menu, shows each noted meeting with a note snippet and Edit, Copy, Delete and Go to meeting actions on iOS and Android.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Adoption"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51228",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51228",
+  "summary": "Extend Claude Code usage with skills, agents, hooks, rules etc",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-04-01T11:16:18.113+0100",
+  "updated": "2026-09-14T17:16:21.713+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 369,
+  "ai": {
+   "s": "Extends the team's Claude Code set-up with new rules, hooks, agents and skills to improve the quality of AI-generated solutions.",
+   "pr": "The team's Claude Code usage relied on a basic set-up without the rules, hooks, agents and skills that could improve generated code.",
+   "wy": "Internal efficiency: better AI tooling should raise the quality of AI-assisted frontend development.",
+   "oc": "Research into available Claude Code extensions (with reference resources listed) to find and add features to the team's set-up; no delivered result is recorded.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "Medium",
+   "rg": "Organization",
+   "bv": "Low",
+   "im": [
+    "AI Enablement",
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51239",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51239",
+  "summary": "Enable Luquid glass for iOS app",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-01T13:34:35.442+0100",
+  "updated": "2026-09-14T17:16:12.442+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1487,
+  "ai": {
+   "s": "Enables Apple's Liquid Glass design language in the iOS app so native navigation, tab bars and modals look right on iOS 26.",
+   "pr": "iOS 26 introduced the translucent Liquid Glass material, and the app had not been opted in or audited, risking inconsistent or broken visuals on key screens.",
+   "wy": "Tech debt: keep the iOS app current with Apple's platform design changes without regressing older iOS versions.",
+   "oc": "Liquid Glass enabled for iOS 26+, with a visual audit of dashboard, navigation, modals, lists and custom components, fixes for issues found and screenshots as evidence.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI",
+    "Future Proofing",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51276",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51276",
+  "summary": "[TechDept] Potential bug: if an exhibitor removes the equipment in status cancelled from the cart",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-04-02T10:37:53.871+0100",
+  "updated": "2026-09-22T11:20:12.094+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 598,
+  "ai": {
+   "s": "Fixes cancelled equipment remaining in the exhibitor cart, so a later re-approved payment cannot mark removed equipment as purchased.",
+   "pr": "After a payment was cancelled, its equipment moved to 'Cancelled' but still showed in the cart; if the exhibitor removed it and the payment was re-approved, equipment with no record in manuals_equipments counted as purchased.",
+   "wy": "Tech debt found after the payment-cancellation change; it prevents inconsistent order data in the Exhibitor Manual.",
+   "oc": "Cart and payment logic to be corrected so cancelled equipment is handled consistently and cannot become an orphaned 'purchased' item.",
+   "lens": "DATA",
+   "pa": "Exhibitor Manual",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51279",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51279",
+  "summary": "Remove legacy \"bm\" database from the codebase",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-04-02T11:11:53.658+0100",
+  "updated": "2026-09-14T17:16:56.388+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 8994,
+  "ai": {
+   "s": "Removes all code that reads from or writes to the legacy \"bm\" Business Matching PostgreSQL database, cutting dead integration code from the platform.",
+   "pr": "The application still synced data into a separate \"bm\" database for an external Business Matching engine, leaving tasks, models, trait methods and provider registrations that were no longer needed.",
+   "wy": "Technical debt reduction: retire a legacy data store and its maintenance cost; continues the clean-up started in EP-47347.",
+   "oc": "A prioritised removal plan covering BmTask, the 16 BM models, ExhibitorsTrait methods, controller calls and the bm/bm_replica provider registrations; DynamoDB-based BM results stay out of scope.",
+   "lens": "COST",
+   "pa": "Networking & Interactions",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51306",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51306",
+  "summary": "API V3 Migration - [POST] /api/v2/account/set to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:53:53.607+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 11867,
+  "ai": {
+   "s": "Adds a V3 POST endpoint to create event accounts, splitting account creation out of the combined V2 /account/set call.",
+   "pr": "In V2, /api/v2/account/set handled both creating and updating accounts in one endpoint, with no clean REST-style create call.",
+   "wy": "Part of the Public API V3 migration, giving integrators a modern, consistent API.",
+   "oc": "POST /api/v3/events/{eventId}/accounts specified with required and optional fields, photo upload or URL, validations and a standard response envelope; updates move to a separate PUT.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51307",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51307",
+  "summary": "API V3 Migration - /api/v2/account/checkToken to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:54:00.967+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1774,
+  "ai": {
+   "s": "Moves the account token-check endpoint to V3 so integrators can validate a Bearer token for an event under the accounts resource.",
+   "pr": "Token validation lived at /api/v2/account/checkToken, outside the event-scoped resource structure and response format the V3 API uses.",
+   "wy": "Part of the Public API V3 migration to standardise authentication and responses.",
+   "oc": "GET /api/v3/events/{eventId}/accounts/checkToken returns validity, account, event and expiry, with standard Bearer auth, the {code, data, errors} envelope and ISO 8601 dates.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51308",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51308",
+  "summary": "API V3 Migration - /api/v2/account/deleteSessions to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:54:10.869+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 91,
+  "ai": {
+   "s": "Migrates the account deleteSessions endpoint to the Public API V3.",
+   "pr": "The /api/v2/account/deleteSessions endpoint existed only in the V2 API.",
+   "wy": "Part of the Public API V3 endpoint migration.",
+   "oc": "Not clearly specified beyond the ticket title; a V3 equivalent of deleteSessions is expected.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51310",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51310",
+  "summary": "API V3 Migration - [POST] /api/v2/account/setSessions to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:54:20.888+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3768,
+  "ai": {
+   "s": "Adds a V3 endpoint that adds one or more sessions to an account's My Schedule, replacing V2 setSessions.",
+   "pr": "Adding sessions to an attendee's personal schedule via the API relied on the V2 /api/v2/account/setSessions endpoint.",
+   "wy": "Part of the Public API V3 migration, modelling the schedule as a calendar sub-resource.",
+   "oc": "POST /api/v3/events/{eventId}/accounts/{accountId}/calendar takes a sessionIds array, validates every ID before writing and rejects invalid input with a clear 422 error.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51311",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51311",
+  "summary": "API V3 Migration - /api/v2/account/deleteBulk to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:54:29.813+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 87,
+  "ai": {
+   "s": "Migrates the bulk account deletion endpoint to the Public API V3.",
+   "pr": "The /api/v2/account/deleteBulk endpoint existed only in the V2 API.",
+   "wy": "Part of the Public API V3 endpoint migration.",
+   "oc": "Not clearly specified beyond the ticket title; a V3 equivalent of deleteBulk is expected.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51312",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51312",
+  "summary": "API V3 Migration - /api/v2/account/delete to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:54:38.010+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 83,
+  "ai": {
+   "s": "Migrates the account delete endpoint to the Public API V3.",
+   "pr": "The /api/v2/account/delete endpoint existed only in the V2 API.",
+   "wy": "Part of the Public API V3 endpoint migration.",
+   "oc": "Not clearly specified beyond the ticket title; a V3 equivalent of account delete is expected.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51313",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51313",
+  "summary": "API V3 Migration - /api/v2/account/setCategory to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:54:46.685+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 88,
+  "ai": {
+   "s": "Migrates the account setCategory endpoint to the Public API V3.",
+   "pr": "The /api/v2/account/setCategory endpoint existed only in the V2 API.",
+   "wy": "Part of the Public API V3 endpoint migration.",
+   "oc": "Not clearly specified beyond the ticket title; a V3 equivalent of setCategory is expected.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51317",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51317",
+  "summary": "API V3 Migration - /api/v2/participants/{eventId}/deletedList to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:55:07.594+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2855,
+  "ai": {
+   "s": "Adds a V3 endpoint listing accounts deleted from an event, so integrations can sync removals incrementally.",
+   "pr": "Integrations needing to detect removed participants relied on the V2 /api/v2/participants/{eventId}/deletedList endpoint.",
+   "wy": "Part of the Public API V3 migration; supports integration sync flows.",
+   "oc": "GET /api/v3/events/{eventId}/accounts/deleted returns a paginated list of deleted accounts, with an optional timestamp filter for incremental sync.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51318",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51318",
+  "summary": "API V3 Migration - /api/v2/account/get to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:55:14.441+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3389,
+  "ai": {
+   "s": "Adds a V3 endpoint returning an account's full event profile, including custom questions, with lookup by ID, external ID or email.",
+   "pr": "Account profiles were retrieved through V2 /api/v2/account/get, without the V3 path structure and nested response format.",
+   "wy": "Part of the Public API V3 migration, giving integrators a consistent structured response.",
+   "oc": "GET /api/v3/events/{eventId}/accounts/{accountId} specified with filter options, x-lang support, a customQuestions array and standard error responses.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51325",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51325",
+  "summary": "API V3 Migration - /api/v2/event/delete to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:57:06.149+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 81,
+  "ai": {
+   "s": "Migrates the event delete endpoint to the Public API V3.",
+   "pr": "The /api/v2/event/delete endpoint existed only in the V2 API.",
+   "wy": "Part of the Public API V3 endpoint migration.",
+   "oc": "Not clearly specified beyond the ticket title; a V3 equivalent of event delete is expected.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51328",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51328",
+  "summary": "API V3 Migration - [POST] /api/v2/event/set to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:57:14.657+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 4408,
+  "ai": {
+   "s": "Adds a V3 POST endpoint to create events, with optional cloning of settings, template and exhibitors from an existing event.",
+   "pr": "In V2, /api/v2/event/set handled both creating and updating events in one endpoint.",
+   "wy": "Part of the Public API V3 migration, splitting create and update into clear REST operations.",
+   "oc": "POST /api/v3/events specified with required title, country, city, start and end, optional venue fields and cloneEventId, validated before anything is written.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51331",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51331",
+  "summary": "API V3 Migration - [POST] /api/v2/exhibitor/set to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:57:30.520+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 11844,
+  "ai": {
+   "s": "Adds a V3 POST endpoint to create exhibitors, splitting creation out of the combined V2 /exhibitor/set call.",
+   "pr": "In V2, /api/v2/exhibitor/set handled both creating and updating exhibitors in one endpoint.",
+   "wy": "Part of the Public API V3 migration to give integrators a modern, consistent API.",
+   "oc": "POST /api/v3/events/{eventId}/exhibitors specified with profile, contact, password and image fields plus validations; updates move to a separate PUT.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51334",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51334",
+  "summary": "API V3 Migration - /api/v2/exhibitor/get to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:57:45.226+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3448,
+  "ai": {
+   "s": "Adds a V3 endpoint returning an exhibitor's full event profile with structured country, city, hall, stand and custom field data.",
+   "pr": "Exhibitor profiles were retrieved through V2 /api/v2/exhibitor/get, without the V3 path structure and nested objects.",
+   "wy": "Part of the Public API V3 migration, giving integrators a consistent structured response.",
+   "oc": "GET /api/v3/events/{eventId}/exhibitors/{exhibitorId} specified with lookup by ID or external ID, x-lang support and standard error responses.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51335",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51335",
+  "summary": "API V3 Migration - /api/v2/exhibitor/delete to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:57:53.423+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2632,
+  "ai": {
+   "s": "Adds a V3 endpoint to delete an exhibitor from an event by ID, with cascade clean-up and visibility in the deleted-exhibitors feed.",
+   "pr": "Exhibitor deletion via the API relied on V2 /api/v2/exhibitor/delete, outside the V3 resource structure.",
+   "wy": "Part of the Public API V3 migration; supports integration sync flows.",
+   "oc": "DELETE /api/v3/events/{eventId}/exhibitors/{exhibitorId} removes the exhibitor, cleans up stands, products and team links and lists it in the deleted endpoint (EP-51410).",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ },
+ {
+  "k": "EP-51339",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51339",
+  "summary": "API V3 Migration - [POST] /api/v2/floorplan/setStand to V3 (/api/v3/floorplan/halls/{hallId}/stands)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:58:22.970+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2556,
+  "ai": {
+   "s": "Adds a V3 POST endpoint to create stands within a floor plan hall, including conference, check-in and buyer lounge flags.",
+   "pr": "In V2, /api/v2/floorplan/setStand handled both creating and updating stands in one endpoint.",
+   "wy": "Part of the Public API V3 migration, splitting create and update into clear REST operations.",
+   "oc": "POST /api/v3/floorplan/halls/{hallId}/stands specified with name and zone flags, returning 201 with the new stand; updates move to a separate PUT.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:54Z"
+ }
+]

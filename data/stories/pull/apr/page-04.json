@@ -1,0 +1,789 @@
+[
+ {
+  "k": "EP-51408",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51408",
+  "summary": "API V3 Migration - /api/v2/exhibitors/{eventId}/list to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T17:00:07.937+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2997,
+  "ai": {
+   "s": "Adds a V3 endpoint listing an event's exhibitors with pagination and incremental fetching by timestamp.",
+   "pr": "Exhibitor lists relied on V2 /api/v2/exhibitors/{eventId}/list, outside the standard event resource path.",
+   "wy": "Part of the Public API V3 migration; incremental fetching supports integration sync.",
+   "oc": "GET /api/v3/events/{eventId}/exhibitors with page, limit and timestamp filters, x-lang support and the standard response envelope.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51410",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51410",
+  "summary": "API V3 Migration - /api/v2/exhibitors/{eventId}/deletedList to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T17:12:31.537+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2587,
+  "ai": {
+   "s": "Adds a new V3 endpoint listing exhibitors deleted from an event, so integrations can detect and act on removals.",
+   "pr": "There was no API endpoint for integrations to find exhibitors removed from an event; V2 had no equivalent.",
+   "wy": "Needed for integration sync flows; mirrors the deleted-accounts endpoint in the V3 migration.",
+   "oc": "GET /api/v3/events/{eventId}/exhibitors/deleted returns a paginated list with deletion dates and an optional timestamp filter.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51411",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51411",
+  "summary": "API V3 Migration - [PUT] /api/v3/events/{eventId}/accounts/{accountId} to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T18:02:14.135+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 9390,
+  "ai": {
+   "s": "Adds a V3 PUT endpoint to update an existing event account by its internal ID, sending only the fields that change.",
+   "pr": "In V2, account updates were combined with creation in /api/v2/account/set, with no dedicated update call keyed on the internal ID.",
+   "wy": "Part of the Public API V3 migration, splitting create (EP-51306) and update into clear REST operations.",
+   "oc": "PUT /api/v3/events/{eventId}/accounts/{accountId} specified with all-optional fields, including status, profile data and photo.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51412",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51412",
+  "summary": "API V3 Migration - [PUT] /api/v3/events/{eventId} to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T18:02:23.264+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3622,
+  "ai": {
+   "s": "Adds a V3 PUT endpoint to update an existing event's details by its internal ID.",
+   "pr": "In V2, event updates were combined with creation in /api/v2/event/set.",
+   "wy": "Part of the Public API V3 migration, splitting create (EP-51328) and update into clear REST operations.",
+   "oc": "PUT /api/v3/events/{eventId} specified with optional title, country, city, dates and venue fields and validations.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51413",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51413",
+  "summary": "API V3 Migration - [PUT] /api/v3/events/{eventId}/exhibitors/{exhibitorId} to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T18:02:32.473+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 10659,
+  "ai": {
+   "s": "Adds a V3 PUT endpoint to update an existing exhibitor within an event by its internal ID.",
+   "pr": "In V2, exhibitor updates were combined with creation in /api/v2/exhibitor/set.",
+   "wy": "Part of the Public API V3 migration, splitting create (EP-51331) and update into clear REST operations.",
+   "oc": "PUT /api/v3/events/{eventId}/exhibitors/{exhibitorId} specified with all-optional profile, contact and image fields.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51414",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51414",
+  "summary": "API V3 Migration - [PUT] /api/v3/floorplan/stands/{standId}",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T18:02:39.947+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2452,
+  "ai": {
+   "s": "Adds a V3 PUT endpoint to update an existing floor plan stand, including its hall and zone flags.",
+   "pr": "In V2, /api/v2/floorplan/setStand handled both creating and updating stands.",
+   "wy": "Part of the Public API V3 migration, splitting create and update into clear REST operations.",
+   "oc": "PUT /api/v3/floorplan/stands/{standId} specified with optional hallId, name and conference, check-in and buyer lounge flags.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51415",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51415",
+  "summary": "API V3 Migration - [PUT] /api/v3/events/{eventId}/floorplan/halls/{hallId} to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T18:02:47.015+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2972,
+  "ai": {
+   "s": "Adds a V3 PUT endpoint to update an existing floor plan hall's name and image by its internal ID.",
+   "pr": "In V2, hall updates were combined with creation in /api/v2/floorplan/setHall.",
+   "wy": "Part of the Public API V3 migration, splitting create (EP-51340) and update into clear REST operations.",
+   "oc": "PUT /api/v3/events/{eventId}/floorplan/halls/{hallId} specified with optional name and image upload or URL.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51416",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51416",
+  "summary": "API V3 Migration - [PUT] /api/v3/events/{eventId}/news/{newsId} to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T18:02:53.720+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 4088,
+  "ai": {
+   "s": "Adds a V3 PUT endpoint to update an existing event news item by its ID.",
+   "pr": "In V2, news updates were combined with creation in /api/v2/news/set.",
+   "wy": "Part of the Public API V3 migration, splitting create (EP-51346) and update into clear REST operations.",
+   "oc": "PUT /api/v3/events/{eventId}/news/{newsId} specified with optional headline, body, teaser, author and image fields.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51418",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51418",
+  "summary": "API V3 - [PUT] /api/v3/events/{eventId}/sessions/{sessionId} (Update session)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T18:03:09.631+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 7717,
+  "ai": {
+   "s": "Adds a V3 PUT endpoint to update an existing session by its internal ID, sending only the fields that change.",
+   "pr": "In V2, session updates were combined with creation in /api/v2/sessions/set.",
+   "wy": "Part of the Public API V3 migration, splitting create (EP-51368) and update into clear REST operations.",
+   "oc": "PUT /api/v3/events/{eventId}/sessions/{sessionId} specified with optional title, type, track and other fields, validated against EP data.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51419",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51419",
+  "summary": "API V3 Migration - [PUT] /api/v3/events/{eventId}/accounts/{accountId}/calendar to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T18:03:19.720+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3839,
+  "ai": {
+   "s": "Adds a V3 PUT endpoint that replaces an account's whole My Schedule with a given list of sessions.",
+   "pr": "The API could add sessions to a schedule but had no way to overwrite it in full, so removed sessions stayed in place.",
+   "wy": "Part of the Public API V3 migration; complements POST /calendar (EP-51310).",
+   "oc": "PUT /api/v3/events/{eventId}/accounts/{accountId}/calendar replaces the schedule, removing sessions not in the new sessionIds list.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51563",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51563",
+  "summary": "User Onboarding Automation",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-08T10:09:59.714+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54531",
+   "summary": "Client Manager & Onboarding",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2456,
+  "ai": {
+   "s": "Builds a secured backend API so the HR onboarding tool can create Admin Panel and Client Manager users automatically instead of by hand.",
+   "pr": "Admin Panel users were created manually, so onboarding new staff depended on manual set-up of accounts, access and permissions.",
+   "wy": "Internal efficiency: automate user onboarding from the HR onboarding tool (follows EP-51115).",
+   "oc": "An API, secured with a long-lived token, that creates admin users with name, job title, email, admin category, event access and page permissions.",
+   "lens": "COST",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Organization",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Cost Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51597",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51597",
+  "summary": "Proper, consistent GDPR handling and filtering in Meeting Program, ",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-08T14:38:39.622+0100",
+  "updated": "2026-09-14T17:16:13.428+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 78,
+  "ai": {
+   "s": "Makes GDPR handling and filtering consistent across the Meeting Program.",
+   "pr": "Not clearly specified beyond the ticket title; the description is marked TBD.",
+   "wy": "Not clearly specified beyond the ticket title; implied compliance need.",
+   "oc": "Not clearly specified beyond the ticket title.",
+   "lens": "DATA",
+   "pa": "Networking & Interactions",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51609",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51609",
+  "summary": "Sold out tickets page setup",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-08T20:52:52.999+0100",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-916",
+   "summary": "Participant Registration on New UI",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 6512,
+  "ai": {
+   "s": "Lets organisers configure the Sold Out page shown when all registration tickets are gone, with image, title, description and call-to-action.",
+   "pr": "Organisers had no configurable page to tell participants that tickets had sold out and point them somewhere useful.",
+   "wy": "Part of Participant Registration on the new UI.",
+   "oc": "A Sold Out settings tab under Registration setup, after the Confirmation page tab, with toggleable image, title, description and button and default texts.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51611",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51611",
+  "summary": "Sold out tickets page",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-08T20:55:47.556+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-916",
+   "summary": "Participant Registration on New UI",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 5956,
+  "ai": {
+   "s": "Shows participants a clear Sold Out page when no tickets are available to them, with a route back to the event page.",
+   "pr": "Participants trying to register for a sold-out event, or one with no tickets for their category or country, had no clear sold-out message.",
+   "wy": "Part of Participant Registration on the new UI.",
+   "oc": "The Sold Out page replaces registration when tickets are sold out globally or for the participant's category or country, before or after email validation, using organiser content.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51613",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51613",
+  "summary": "Registration with payment",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-08T20:58:01.562+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-916",
+   "summary": "Participant Registration on New UI",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 6096,
+  "ai": {
+   "s": "Adds payment to the new registration flow, so paid items are paid before registration completes, with Basket exceptions.",
+   "pr": "The new registration flow needed a defined way to take payment for paid items booked during registration.",
+   "wy": "Part of Participant Registration on the new UI.",
+   "oc": "Submit on the Summary page redirects to the Payment page, then to the Confirmation page; private events with public access and reached limits add items to the Basket.",
+   "lens": "REV",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Revenue"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51615",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51615",
+  "summary": "Participant can select and purchase tickets during registration ",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-08T20:59:20.183+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-916",
+   "summary": "Participant Registration on New UI",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 10456,
+  "ai": {
+   "s": "Lets participants select and purchase tickets on a Tickets tab during registration, with category-based restrictions.",
+   "pr": "The new registration flow lacked a step for participants to choose tickets for specific event dates under their category.",
+   "wy": "Part of Participant Registration on the new UI.",
+   "oc": "A Tickets tab, shown when ticketing is on for participants, requires at least one ticket to continue, with add and remove feedback and category rules.",
+   "lens": "REV",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Revenue",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51617",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51617",
+  "summary": "Summary page",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-08T21:00:00.922+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 6595,
+  "ai": {
+   "s": "Adds a Summary page at the end of registration where participants review their details and paid items, apply discounts and proceed.",
+   "pr": "Participants had no consolidated view of their registration data and selected paid items before submitting or paying.",
+   "wy": "Registration flow improvement on the new UI.",
+   "oc": "A configurable Summary tab showing each chosen tab as a block with Edit links, organiser title and description, and paid items with discounts.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51619",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51619",
+  "summary": "Registration with limit",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-08T21:00:48.639+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-916",
+   "summary": "Participant Registration on New UI",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 6761,
+  "ai": {
+   "s": "Lets participants complete registration after the limit is reached, joining a waiting list and activating once the organiser approves.",
+   "pr": "The new registration flow had no defined behaviour when the registration limit was reached.",
+   "wy": "Part of Participant Registration on the new UI.",
+   "oc": "Over-limit registrations go to Waiting list status with a waiting list email; approval sends an activation link, and reserved paid items can then be paid.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51620",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51620",
+  "summary": "Event Setup",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-08T21:28:35.046+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Placeholder story for event set-up work.",
+   "pr": "Not clearly specified beyond the ticket title — no description was provided.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Not Clearly Specified",
+   "bv": "Low",
+   "im": []
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ },
+ {
+  "k": "EP-51621",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51621",
+  "summary": "Registration",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-08T21:29:11.170+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Placeholder story for registration work.",
+   "pr": "Not clearly specified beyond the ticket title — no description was provided.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "Low",
+   "rg": "Not Clearly Specified",
+   "bv": "Low",
+   "im": []
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:40Z"
+ }
+]

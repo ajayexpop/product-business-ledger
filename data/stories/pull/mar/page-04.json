@@ -1,0 +1,883 @@
+[
+ {
+  "k": "EP-50878",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50878",
+  "summary": "[Phase 1] Organizer NPS survey triggered at post-onboarding milestone",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T00:07:24.949+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50795",
+   "summary": "NPS/Feedback Collection",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1891,
+  "ai": {
+   "s": "Sends new organisers an NPS email a set number of days after onboarding completes, capturing early satisfaction before their first event.",
+   "pr": "There was no early signal on organiser satisfaction with the setup experience, when there is still time to course-correct.",
+   "wy": "Retention: an early-warning signal for Customer Success, secondary to the post-event organiser NPS.",
+   "oc": "Specified: a 0-10 NPS email after a configurable delay (default 7 days), tagged 'post-onboarding', within the shared 30-day cap, with CS alerts on detractors.",
+   "lens": "DATA",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Retention",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-50879",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50879",
+  "summary": "[Phase 1] No-login feedback landing page for survey responses",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T00:07:38.693+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50795",
+   "summary": "NPS/Feedback Collection",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2032,
+  "ai": {
+   "s": "Provides a fast, mobile-friendly, no-login landing page where survey recipients complete their feedback in under 60 seconds.",
+   "pr": "Response rates drop sharply when users must log in or face a complex form, so every survey link needs a frictionless page.",
+   "wy": "Maximise response rates for the NPS/CSAT feedback programme.",
+   "oc": "Specified: tokenised no-login page loading under 2 seconds on 4G, at most 3-4 questions, thank-you and already-responded messages, and per-event branding.",
+   "lens": "DATA",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-50880",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50880",
+  "summary": "[Phase 1] Email survey trigger timing and opt-out configuration",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T00:07:49.137+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50795",
+   "summary": "NPS/Feedback Collection",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1855,
+  "ai": {
+   "s": "Adds admin controls for feedback email timing and lets organisers opt individual events out of visitor and exhibitor surveys.",
+   "pr": "Without configurable triggers and opt-outs, surveys could go out at the wrong time or to audiences organisers had not agreed to survey.",
+   "wy": "Respect client preferences, e.g. private or NDA-governed events, while keeping the process under control.",
+   "oc": "Specified: global and per-event send delay, a global on/off, event-level opt-out that never suppresses organiser NPS, optional reminders and bounce logs.",
+   "lens": "DATA",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-50881",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50881",
+  "summary": "[Phase 1] Feedback data export and access for analysis",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T00:08:00.459+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50795",
+   "summary": "NPS/Feedback Collection",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2008,
+  "ai": {
+   "s": "Makes all collected survey responses exportable in a structured format so Product and CS can analyse them in existing BI tools.",
+   "pr": "Feedback data needed to be usable straight after Phase 1 launch without building a reporting interface.",
+   "wy": "Data accessibility and portability for the NPS/Feedback Collection programme.",
+   "oc": "Specified: on-demand CSV export with respondent type, event, survey type, score, text, timestamp and channel, confirmed portability and a documented retention policy.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-50882",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50882",
+  "summary": "[Phase 2] In-platform CSAT widget triggered by key user actions",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T00:08:30.914+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50795",
+   "summary": "NPS/Feedback Collection",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2337,
+  "ai": {
+   "s": "Shows a small, dismissible in-platform CSAT prompt after users complete key actions such as capturing a lead or booking a meeting.",
+   "pr": "Email surveys are retrospective and do not show which specific features cause friction in the moment.",
+   "wy": "More accurate, actionable, feature-level satisfaction data for the product team.",
+   "oc": "Specified: admin-configurable trigger rules, a non-blocking 1-5 or thumbs widget, a 14-day per-user cap and responses tagged by action, module and persona.",
+   "lens": "DATA",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-50883",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50883",
+  "summary": "[Phase 2] Module-specific thumbs up/down feedback on platform features",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T00:08:42.034+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50795",
+   "summary": "NPS/Feedback Collection",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2046,
+  "ai": {
+   "s": "Adds one-tap thumbs up/down feedback on individual platform modules to show which features work and which cause friction.",
+   "pr": "NPS and CSAT give aggregate scores but do not pinpoint which modules are causing friction.",
+   "wy": "High-volume micro-feedback builds a module-level signal over time.",
+   "oc": "Specified: contextual thumbs prompts on admin-configured modules, an optional comment, once per module per event, with aggregate counts in the data export.",
+   "lens": "DATA",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-50884",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50884",
+  "summary": "[Phase 2] Mobile in-app CSAT prompts post-event",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T00:08:54.961+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50795",
+   "summary": "NPS/Feedback Collection",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2483,
+  "ai": {
+   "s": "Prompts visitors and exhibitors in the mobile app for a CSAT rating when the event closes, deduplicated against email responses.",
+   "pr": "Post-event email surveys compete with inbox noise and are often opened late, even though many users experience the event mainly through the app.",
+   "wy": "Capture feedback while recall is highest, with higher completion than email.",
+   "oc": "Specified: an in-app modal on event close for active app users, completable in 30 seconds, one reminder, email link invalidated after an in-app response.",
+   "lens": "DATA",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-50940",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50940",
+  "summary": "Native Template Library",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T19:32:03.663+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50794",
+   "summary": "Mobile app builder template automation",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1544,
+  "ai": {
+   "s": "Adds a native template gallery to the App Builder so any TAM can preview and apply a pre-built mobile homepage template in one click.",
+   "pr": "TAMs had no native templates; one TAM kept HTML/CSS templates in a dummy event, and others had to copy raw code between Admin Panel environments.",
+   "wy": "Cut manual TAM setup effort and remove dependency on one person's workaround.",
+   "oc": "Specified: a 'Choose Template' gallery with thumbnails and full previews, inserting editable HTML/CSS into the custom block, with an overwrite warning.",
+   "lens": "COST",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Cost Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-50941",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50941",
+  "summary": "Brand Asset Forms with Variable Substitution",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T19:32:44.590+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50794",
+   "summary": "Mobile app builder template automation",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2319,
+  "ai": {
+   "s": "Adds brand asset forms to App Builder templates so TAMs enter colours, logo, background and font and the system generates the homepage HTML/CSS.",
+   "pr": "Even with templates, TAMs had to edit raw HTML/CSS to add client brand assets, which was error-prone and risked breaking live homepages.",
+   "wy": "Reduce TAM effort and errors in mobile app homepage setup.",
+   "oc": "Specified: templates with named variables, a validated form with colour picker and uploads, variable substitution with defaults, and re-editable asset values.",
+   "lens": "COST",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-50942",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50942",
+  "summary": "Section Builder with Property Controls",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-26T19:33:10.980+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-50794",
+   "summary": "Mobile app builder template automation",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1931,
+  "ai": {
+   "s": "Adds a section builder to the App Builder homepage so TAMs can toggle, reorder and configure sections without editing code.",
+   "pr": "Layout changes beyond brand assets needed manual HTML/CSS edits or escalation to the design team.",
+   "wy": "Let TAMs meet varied client layout needs without design-team escalation.",
+   "oc": "Specified: templates as ordered sections with visibility toggles, drag-and-drop order and per-section properties, assembled into HTML/CSS with brand assets kept.",
+   "lens": "COST",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Cost Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51013",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51013",
+  "summary": "Analytics strategy: map top user journeys & define event schema",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-28T01:53:27.905+0000",
+  "updated": "2026-09-14T16:26:45.293+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-51003",
+   "summary": "In-app analytics",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1611,
+  "ai": {
+   "s": "Defines the Admin Panel analytics strategy: the top user journeys to track and a signed-off event naming schema.",
+   "pr": "No agreed set of journeys or event naming existed, and poor schema design is hard to fix once historical data is collected.",
+   "wy": "A prerequisite source of truth for all in-app analytics instrumentation.",
+   "oc": "Specified: 5-10 mapped journeys, an object_action naming convention, standard event properties and a governance process, in a signed-off document.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51016",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51016",
+  "summary": "Integrate PostHog JS SDK into Admin Panel frontend",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-28T01:53:57.690+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-51003",
+   "summary": "In-app analytics",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1743,
+  "ai": {
+   "s": "Integrates the PostHog SDK into the Admin Panel frontend with route-change page views, consent gating and the EU cloud endpoint.",
+   "pr": "The Admin Panel captured no product analytics, and as an SPA its page views would not be tracked automatically.",
+   "wy": "Enables product analytics on Admin Panel usage, under the In-app analytics epic.",
+   "oc": "Specified: posthog-js on the EU host, API key from environment, virtual page views on route change, consent-only initialisation and disabled in local dev.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51017",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51017",
+  "summary": "Implement pseudonymous user identification on Admin Panel login",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-28T01:54:05.993+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-51003",
+   "summary": "In-app analytics",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1409,
+  "ai": {
+   "s": "Identifies logged-in Admin Panel users in PostHog by internal ID only, so per-user behaviour can be analysed without sending PII.",
+   "pr": "PostHog tracks anonymous users by default, and GDPR data minimisation rules out using emails or names as identifiers.",
+   "wy": "Per-user analytics while staying GDPR-compliant.",
+   "oc": "Specified: posthog.identify with the internal ID on login, non-PII properties only, reset on logout and legal/privacy sign-off.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51018",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51018",
+  "summary": "Instrument top Admin Panel user journeys with PostHog capture events",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-28T01:54:15.329+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-51003",
+   "summary": "In-app analytics",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1630,
+  "ai": {
+   "s": "Instruments the top Admin Panel journeys, such as event creation and exhibitor management, with structured PostHog events.",
+   "pr": "There was no structured data on how organisers navigate and use the Admin Panel.",
+   "wy": "Understand organiser behaviour to inform product decisions.",
+   "oc": "Specified: posthog.capture calls following the signed-off schema with standard properties and no PII, for event creation, registration, exhibitors, badges and agenda.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51019",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51019",
+  "summary": "Build funnel and retention reports in PostHog for top user journeys",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-28T01:54:25.253+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-51003",
+   "summary": "In-app analytics",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1484,
+  "ai": {
+   "s": "Builds PostHog funnel and retention reports for top Admin Panel journeys to show where organisers drop off and how often they return.",
+   "pr": "Once events flow, the Product team still lacks actionable views of drop-off points and retention.",
+   "wy": "Surface friction points and engagement trends for the product backlog.",
+   "oc": "Specified: at least 2 funnels, 1 week-over-week retention cohort and a user path analysis in a shared project, with drop-offs logged for the backlog.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51020",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51020",
+  "summary": "Enable PostHog session replay with PII field masking in Admin Panel",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-28T01:54:35.593+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-51003",
+   "summary": "In-app analytics",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1710,
+  "ai": {
+   "s": "Enables PostHog session replay in the Admin Panel with all personal and sensitive fields masked.",
+   "pr": "The Product team could not watch real sessions to understand qualitative behaviour, and unmasked recordings of Admin Panel data would breach GDPR.",
+   "wy": "Qualitative usage insight without recording PII.",
+   "oc": "Specified: session recording enabled after a PII field audit, masking applied and tested in staging, a documented field list and legal sign-off before production.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51021",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51021",
+  "summary": "Create internal Product team analytics dashboard in PostHog",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-28T01:54:43.520+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-51003",
+   "summary": "In-app analytics",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1627,
+  "ai": {
+   "s": "Creates a shared PostHog dashboard of Admin Panel KPIs as the Product team's single source of truth for platform usage.",
+   "pr": "Without a shared dashboard, team members would build ad-hoc queries with inconsistent metric definitions.",
+   "wy": "Consistent usage metrics for product decisions and a regular review cadence.",
+   "oc": "Specified: 'Admin Panel — Product Analytics' with WAU, event creation funnel, top features, retention and replay links, plus a documented 800K events/month review threshold.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51036",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51036",
+  "summary": "Enforce session-registration form before Add-to-Schedule (Mobile)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-30T10:31:20.557+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 5421,
+  "ai": {
+   "s": "Makes the mobile app show a session's registration form before adding it to the schedule, matching the website, so answers are captured.",
+   "pr": "On mobile, Add to Schedule added sessions requiring registration immediately, so attendees' registration answers were never captured.",
+   "wy": "Parity with the website and complete registration data for organisers.",
+   "oc": "Specified: form shown on iPhone and Android for free sessions requiring registration, added only on valid submit, with clear full-session and session-limit messages.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51087",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51087",
+  "summary": "Migrate image resize Lambda and API Gateway from us-east-1 to eu-west-1 for production",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-30T18:44:18.856+0100",
+  "updated": "2026-09-14T17:16:06.269+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1003,
+  "ai": {
+   "s": "Moves the production image resize Lambda and API Gateway from us-east-1 to eu-west-1 alongside the rest of production.",
+   "pr": "The resize Lambda ran in us-east-1 while S3 and other production services ran in eu-west-1, adding latency, cross-region transfer costs and inconsistency.",
+   "wy": "Cut latency and data transfer costs and keep infrastructure in one region.",
+   "oc": "Specified: Lambda and API Gateway deployed in eu-west-1, S3 redirects and CloudFront updated, IAM checked, end-to-end tested and the old stack decommissioned.",
+   "lens": "COST",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Infrastructure",
+    "Cost Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51115",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51115",
+  "summary": "API endpoint for Client Manager (super admin) account management",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-31T09:23:29.287+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54531",
+   "summary": "Client Manager & Onboarding",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1659,
+  "ai": {
+   "s": "Provides API endpoints to create Client Manager super admin accounts, reset passwords and regenerate 2FA QR codes for automated staff onboarding.",
+   "pr": "Client Manager accounts for new TAM and Engineering joiners were created manually because no API existed.",
+   "wy": "Internal efficiency: the HR onboarding automation tool needs it to set up backend access automatically.",
+   "oc": "Requested: create-account, reset-password and Google Authenticator QR endpoints with documented authentication.",
+   "lens": "COST",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Organization",
+   "bv": "Low",
+   "im": [
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51121",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51121",
+  "summary": "Deploy clickhouse migrations",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-31T10:12:49.876+0100",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-38698",
+   "summary": "Download leads and Scanned me lists refactor",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 116,
+  "ai": {
+   "s": "Deploys ClickHouse migrations for the leads download and Scanned Me lists refactor (ticket has no further detail).",
+   "pr": "Not clearly specified beyond the ticket title; the description only links a related ticket.",
+   "wy": "Not clearly specified beyond the ticket title; part of the Download leads and Scanned me lists refactor.",
+   "oc": "Not clearly specified beyond the ticket title; the ticket is on hold.",
+   "lens": "INTEG",
+   "pa": "Lead Intelligence",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Infrastructure"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ },
+ {
+  "k": "EP-51151",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51151",
+  "summary": "AutoUpdate system improvements ",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-31T17:39:30.610+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-54523",
+   "summary": "API V3 & Integrations 2026",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1882,
+  "ai": {
+   "s": "Improves the AutoUpdates integration system with CSV export of sync history, clearer status icons, a smaller Genesis batch size and better error visibility.",
+   "pr": "Sync results lacked export and clear status icons, the Genesis batch size caused worker failures, and some errors and failed integrations were not visible on dashboards.",
+   "wy": "Internal request to make integration syncs more reliable and easier to monitor.",
+   "oc": "Specified: CSV export, status icons per outcome, Genesis batch cut from 15 to 5, 'lost during processing' errors emitted, and failed integrations visible.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:17:45Z"
+ }
+]

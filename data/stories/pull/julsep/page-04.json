@@ -1,0 +1,743 @@
+[
+ {
+  "k": "EP-55686",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55686",
+  "summary": "[TechDept] [EP:dev] PaymentInvoiceService: tolerate null ambient lang when generating invoices (TypeError hardening)",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-29T10:27:33.106+0100",
+  "updated": "2026-09-22T11:23:20.981+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3765,
+  "ai": {
+   "s": "Hardens invoice generation so a null ambient language no longer throws a TypeError that could return a 500 after a payment has already succeeded.",
+   "pr": "PaymentInvoiceService defaulted language from a static that can be null into a typed string property, so in a narrow corner invoice generation could crash after booking side effects.",
+   "wy": "Tech debt agreed in the PR #4578 review: the hazard is real though rare, and would give clients a 500 for a recorded success.",
+   "oc": "Invoice generation is to tolerate a null language across the four no-language call sites, closing the TypeError path.",
+   "lens": "REV",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Risk Reduction",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55687",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55687",
+  "summary": "[Tech debt] - Chosen [Anchor option] is not updated after element [Anchor] rename",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-29T10:49:32.017+0100",
+  "updated": "2026-09-14T17:15:56.758+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 276,
+  "ai": {
+   "s": "Keeps the chosen anchor option on linked buttons and links in sync when the anchor element is renamed in the site builder.",
+   "pr": "After an anchor element was renamed, buttons and links pointing to it kept showing the old anchor option.",
+   "wy": "Frontend tech debt; stale anchor links break on-page navigation that organisers have set up.",
+   "oc": "Renaming an anchor is to update the anchor option selected on linked clickable elements.",
+   "lens": "EXP",
+   "pa": "Website Builder",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55703",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55703",
+  "summary": "Community-as-home-page redirect drops query params and URL fragment",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-07-29T14:08:04.377+0100",
+  "updated": "2026-09-14T17:16:19.275+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "routing",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 10164,
+  "ai": {
+   "s": "Makes the community-as-home-page redirect keep query parameters, the URL fragment and the locale, so links such as /#signIn still work.",
+   "pr": "With the community page set as home, the root rendered 200 then hard-navigated to a bare /community, dropping the query string, fragment and Redux store, and omitting the locale.",
+   "wy": "Frontend routing tech debt: deep links like the sign-in modal were silently broken on community-as-home sites.",
+   "oc": "The redirect target is to carry query, fragment and locale through, avoiding the lossy client-side hop.",
+   "lens": "EXP",
+   "pa": "Website Builder",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55769",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55769",
+  "summary": "Migrate Statistic Events from WebSocket to HTTP ingest gateway",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-07-30T19:45:29.331+0100",
+  "updated": "2026-09-18T14:24:56.062+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "analytics",
+   "frontend",
+   "tech-debt"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 15263,
+  "ai": {
+   "s": "Moves browser statistic events off the shared WebSocket to the data science team's HTTP ingest gateway, which validates and forwards them to S3 and ClickHouse.",
+   "pr": "Analytics went browser → WebSocket → our backend → DS, some events never arrived, and the message shape was awkward to consume.",
+   "wy": "The data science team is replacing the path, taking our backend out of the analytics flow.",
+   "oc": "The three analytics WS actions (statistics, online dwell, notification clicks) are to post to the ingest gateway; chat, presence and push stay on WebSocket.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Infrastructure"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55789",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55789",
+  "summary": "Enforce per-event access scope for configured admins (deny-by-default in AccessControl)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-07-31T12:31:10.883+0100",
+  "updated": "2026-09-24T17:48:11.076+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1904,
+  "ai": {
+   "s": "Admins restricted on one event stay restricted on every event they have not been explicitly granted, instead of falling back to the default access template.",
+   "pr": "An admin set to view-only or no access on one event resolved against the tenant's permissive DEFAULT SETTINGS on other events, silently bypassing the restriction.",
+   "wy": "Organisers expect per-event restrictions to hold; the bypass is a security and trust issue.",
+   "oc": "A new resolution order is defined: explicit row wins, any configured admin is denied elsewhere, and only never-configured admins use DEFAULT SETTINGS.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55805",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55805",
+  "summary": "Post Code Field Validation for Registration Forms",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-08-01T05:25:34.501+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 102,
+  "ai": {
+   "s": "Adds validation for the post code field on registration forms (details are in a linked Confluence page only).",
+   "pr": "Not clearly specified beyond the ticket title; presumably registration forms accepted post codes without format validation.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; presumed to validate post codes entered in registration forms.",
+   "lens": "EXP",
+   "pa": "Online Registration",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55842",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55842",
+  "summary": "All 404s return HTTP 200 — soft-404 caused by the next-i18n-router rewrite",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-03T13:22:44.552+0100",
+  "updated": "2026-09-14T17:15:58.845+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "routing",
+   "seo"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2360,
+  "ai": {
+   "s": "Makes non-existent pages return a real HTTP 404 instead of 200, fixing soft-404s caused by the next-i18n-router rewrite.",
+   "pr": "The locale-rewriting middleware dropped the 404 status, so every missing URL on every tenant site returned 200 OK with 404 content.",
+   "wy": "SEO and monitoring: junk paths were indexable and uptime checks could not tell broken routes from healthy ones.",
+   "oc": "The status loss is to be pinned down in the rewrite path and fixed so notFound() yields a 404 across the app, including site-builder slugs.",
+   "lens": "EXP",
+   "pa": "Website Builder",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55871",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55871",
+  "summary": "Utils::addToQueue reports its own SQS failure through itself — exponential retry loop that OOMs the process",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-04T13:33:09.396+0100",
+  "updated": "2026-09-14T17:16:46.734+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 4164,
+  "ai": {
+   "s": "Stops Utils::addToQueue reporting its own SQS failures through itself, which created a growing retry loop that ran the process out of memory.",
+   "pr": "When the SQS publish failed, the catch block called sendException, which re-entered addToQueue via the Discord queue, looping with payloads growing about sixfold per turn.",
+   "wy": "A generic reliability defect found during testing of EP-53978; any SQS outage or credential issue could crash processes.",
+   "oc": "The failure path is to be decoupled from the queue it reports on, so an SQS failure is logged once rather than looping to OOM.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Infrastructure"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55872",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55872",
+  "summary": "Re-check which interaction events reach ClickHouse for an opted-out actor, and decide per action",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-04T13:46:38.608+0100",
+  "updated": "2026-09-14T17:16:45.772+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3864,
+  "ai": {
+   "s": "Audits which interaction events still reach ClickHouse for users who opted out of networking, and decides per action whether to suppress them.",
+   "pr": "Consent was checked nowhere on the analytics write path, so opted-out users could still be identified to others through analytics; EP-53978 fixed only favourites.",
+   "wy": "Privacy and GDPR: decide the remaining ~40 action codes deliberately rather than defect by defect.",
+   "oc": "A per-action table over AnalyticsActionEnum is to record emit channel, whether it identifies the actor and the decision to keep or suppress.",
+   "lens": "DATA",
+   "pa": "Networking & Interactions",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Compliance",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55876",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55876",
+  "summary": "[TechDept] [adminUI] Sentry: tag events with tenant and user identity",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-08-04T15:17:07.055+0100",
+  "updated": "2026-09-22T11:24:01.013+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46540",
+   "summary": "Security and Observability",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2348,
+  "ai": {
+   "s": "Tags adminUI Sentry events with tenant, event and user identity so errors can be found by customer.",
+   "pr": "No Sentry event from adminUI carried tenant or user identity; setUser and setTag had zero uses across all 162 repos.",
+   "wy": "Observability: support and engineering need to search errors by customer.",
+   "oc": "After auth, setUser plus ep.tenant and ep.event_id tags are to be set and cleared on logout, using indexed tags rather than contexts.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55877",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55877",
+  "summary": "[portalUI] Sentry: tag events with tenant and user identity",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-08-04T15:17:42.414+0100",
+  "updated": "2026-09-24T14:11:22.291+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46540",
+   "summary": "Security and Observability",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2770,
+  "ai": {
+   "s": "Tags portalUI Sentry events with tenant, event and user identity so errors can be found by customer.",
+   "pr": "No Sentry event from portalUI carried any tenant or user identity, so errors could not be traced to a customer.",
+   "wy": "Observability, aligned with the adminUI sibling ticket so one search works across both projects.",
+   "oc": "After auth, setUser plus ep.tenant and ep.event_id tags are to be set and cleared on logout, using the same tag names as adminUI.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55878",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55878",
+  "summary": "[TechDept] [adminUI] Sentry: upload source maps so production stack traces are readable",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-04T15:17:55.799+0100",
+  "updated": "2026-09-22T11:24:12.123+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46540",
+   "summary": "Security and Observability",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2433,
+  "ai": {
+   "s": "Uploads adminUI source maps to Sentry so production stack traces show real functions and lines instead of minified bundle positions.",
+   "pr": "adminUI built with sourcemap: false and no Sentry Vite plugin, so production traces pointed at minified code.",
+   "wy": "Observability: readable traces are needed to diagnose production errors.",
+   "oc": "Hidden source maps are to be generated, uploaded via @sentry/vite-plugin with a secured CI token, deleted locally, and matched to the runtime release.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Operational Efficiency",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55879",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55879",
+  "summary": "[portalUI] Sentry: confirm source map upload is not silently skipped in CI",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-04T15:18:08.950+0100",
+  "updated": "2026-09-24T14:11:23.660+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46540",
+   "summary": "Security and Observability",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1601,
+  "ai": {
+   "s": "Confirms portalUI source map uploads to Sentry actually run in CI rather than being silently skipped when the auth token is missing.",
+   "pr": "portalUI's Sentry config used dryRun when SENTRY_AUTH_TOKEN was absent, so uploads could silently no-op and nobody would know.",
+   "wy": "Observability: silently minified traces are only discovered when someone needs them.",
+   "oc": "The token is to be checked or added as a secured pipeline variable, with an option to fail the production build when it is missing.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Operational Efficiency",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55880",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55880",
+  "summary": "[portalUI] Sentry: Report a problem action that flushes the replay buffer",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-08-04T15:19:19.010+0100",
+  "updated": "2026-09-14T17:16:43.898+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46540",
+   "summary": "Security and Observability",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2435,
+  "ai": {
+   "s": "Adds a portalUI \"Report a problem\" action that flushes the Sentry replay buffer and sends users to intake with the feedback event id.",
+   "pr": "Replays only uploaded on exceptions, so bugs that throw nothing, such as wrong totals or dead buttons, had no evidence.",
+   "wy": "Turns prose bug reports into reports with the actual session, breadcrumbs and network calls attached.",
+   "oc": "The action is to flush replay, call captureFeedback and pass the event id to intake, using the same URL parameter as adminUI and no SDK upgrade.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55881",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55881",
+  "summary": "[TechDept] [adminUI] Sentry: Report a problem action that flushes the replay buffer",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-08-04T15:19:41.260+0100",
+  "updated": "2026-09-22T11:24:22.119+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46540",
+   "summary": "Security and Observability",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2251,
+  "ai": {
+   "s": "Adds an adminUI \"Report a problem\" action that flushes the Sentry replay buffer and sends users to intake with the feedback event id.",
+   "pr": "Replays only uploaded on exceptions and just 5% of sessions were recorded, so non-throwing bugs arrived as unreproducible prose.",
+   "wy": "Gives support the real session evidence for reported problems and makes use of the replay buffer already kept.",
+   "oc": "The action is to await replay flush, call captureFeedback and pass the event id to intake on the current @sentry/react v10 SDK.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55882",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55882",
+  "summary": "[adminUI] Sentry: Report a problem action that flushes the replay buffer",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-08-04T15:19:48.471+0100",
+  "updated": "2026-09-14T17:16:35.416+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46540",
+   "summary": "Security and Observability",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2281,
+  "ai": {
+   "s": "Adds an adminUI \"Report a problem\" action that flushes the Sentry replay buffer and sends users to intake with the feedback event id (duplicate of the TechDept ticket).",
+   "pr": "Replays only uploaded on exceptions and just 5% of sessions were recorded, so non-throwing bugs arrived as unreproducible prose.",
+   "wy": "Gives support the real session evidence for reported problems and makes use of the replay buffer already kept.",
+   "oc": "The action is to await replay flush, call captureFeedback and pass the event id to intake on the current @sentry/react v10 SDK.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55889",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55889",
+  "summary": "Meeting report extension. Subject and Message",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-04T16:29:39.309+0100",
+  "updated": "2026-09-22T09:32:57.552+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "DoDUserStory"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 263,
+  "ai": {
+   "s": "Extends the meetings report with Subject and Message columns (detail is in a linked Confluence page only).",
+   "pr": "Not clearly specified beyond the ticket title; presumably the meetings report lacked the meeting subject and message.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; presumed to add Subject and Message columns to the meetings report.",
+   "lens": "DATA",
+   "pa": "Networking & Interactions",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55892",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55892",
+  "summary": "Decide the source of truth for favourite counters: keep ClickHouse-only (accept the gap) or emit favourites server-side",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-04T18:00:48.988+0100",
+  "updated": "2026-09-24T16:40:39.447+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 5924,
+  "ai": {
+   "s": "Decides the source of truth for profile favourite counters: keep ClickHouse and accept the gap, or emit favourites server-side.",
+   "pr": "Favourite counters summed a ClickHouse public count and a Postgres private count, so API-created favourites were missed and opted-out clicks double-counted.",
+   "wy": "Three parked defects (EP-55702, EP-55697, EP-55707) share this root cause and cannot be fixed until the decision is made.",
+   "oc": "A decision ticket lays out the measured under- and over-counts and why moving to Postgres alone is not possible.",
+   "lens": "DATA",
+   "pa": "Networking & Interactions",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55900",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55900",
+  "summary": "Replace ParamPOS with Iyzico",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-05T08:30:54.459+0100",
+  "updated": "2026-09-24T17:48:13.020+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1443,
+  "ai": {
+   "s": "Adds Iyzico as a native payment gateway, including instalments, to replace ParamPOS for organisers taking Turkish card payments.",
+   "pr": "ParamPOS could no longer process transactions, leaving events with Turkish card payments without a working gateway.",
+   "wy": "Keep registration revenue flowing for organisers who rely on Turkish card payments.",
+   "oc": "An Iyzico driver, Event Setup panel, validators and webhook handling are specified, recording payments like Stripe and PayPal with clear error states.",
+   "lens": "REV",
+   "pa": "Online Registration",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Revenue",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ },
+ {
+  "k": "EP-55952",
+  "link": "https://expoplatform.atlassian.net/browse/EP-55952",
+  "summary": "Unique Link Support in Marketing Campaigns",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-06T09:00:12.414+0100",
+  "updated": "2026-09-24T17:48:20.599+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "CloserStill"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 3548,
+  "ai": {
+   "s": "Organisers can import an external badge URL per participant and insert it into campaign emails as an \"External Badge Link\" variable.",
+   "pr": "The external_badge_url field could only be filled by the Visit G2/GES integration and could not be used in marketing campaigns.",
+   "wy": "Requested by CloserStill to send each participant a unique badge link from campaigns.",
+   "oc": "Participant CSV import is to set external_badge_url and the Email Builder is to offer an External Badge Link variable resolved per recipient.",
+   "lens": "EXP",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:25:03Z"
+ }
+]

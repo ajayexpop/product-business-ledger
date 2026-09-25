@@ -1,0 +1,587 @@
+[
+ {
+  "k": "EP-48497",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48497",
+  "summary": "Re: Security Report 01: User Enumeration via REST API Bypass on expoplatform.com",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-20T14:31:33.508+0000",
+  "updated": "2026-09-15T17:48:16.083+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-45281",
+   "summary": "Security vulnerabilities",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3765,
+  "ai": {
+   "s": "Addressed a reported WordPress REST API user-enumeration issue on the expoplatform.com marketing site that exposed user details.",
+   "pr": "A security researcher reported that /wp-json/wp/v2/users/ on expoplatform.com could be accessed despite restrictions, exposing user IDs, usernames and display names.",
+   "wy": "Security: exposed usernames enable brute-force, privacy and phishing risks on the public website.",
+   "oc": "The reported user-enumeration vulnerability was tracked for mitigation, such as restricting unauthenticated access to the users endpoint.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-48552",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48552",
+  "summary": "Extend Manual City Creation Validation to Include Region",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-27T13:17:00.370+0000",
+  "updated": "2026-09-22T17:44:48.273+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2397,
+  "ai": {
+   "s": "Manual City creation in the Country Manager now checks uniqueness on City, Region and Country, blocking true duplicates while allowing same-named cities elsewhere.",
+   "pr": "City uniqueness was checked on City and Country only, so records were created inconsistently and same-named cities in different regions were not handled correctly.",
+   "wy": "Consistent City records in the Country Manager across events.",
+   "oc": "A case-insensitive City + Region + Country uniqueness rule with a clear validation error for exact duplicates, allowing the same name in other regions or countries.",
+   "lens": "DATA",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-48610",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48610",
+  "summary": "Leads Block on Dashboard",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-28T14:54:31.920+0000",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-43511",
+   "summary": "Lead Qualification Dashboard",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 187,
+  "ai": {
+   "s": "Added a Leads block to the dashboard as part of the Lead Qualification Dashboard (details held on a linked Confluence page).",
+   "pr": "Not clearly specified beyond the ticket title; the description only links to a Confluence page.",
+   "wy": "Part of the Lead Qualification Dashboard epic.",
+   "oc": "Not clearly specified beyond the ticket title; presumed Leads block on the dashboard.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-48689",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48689",
+  "summary": "Move Force Update Logic to Backend",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-01-29T10:27:59.692+0000",
+  "updated": "2026-09-14T16:52:53.926+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 865,
+  "ai": {
+   "s": "Force updates for the mobile app are controlled from the backend, so critical fixes can be enforced during live events without waiting on App Store timelines.",
+   "pr": "Force updates depended on App Store release timelines, so users could run outdated app versions during live events, as highlighted by recent incidents such as Hyve.",
+   "wy": "Delayed updates hurt the live event experience and strain client relationships.",
+   "oc": "Backend-configured version rules that the app checks on launch to enforce mandatory updates when required.",
+   "lens": "INTEG",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Risk Reduction",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-48716",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48716",
+  "summary": "Email Digest",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "priority": "Urgent",
+  "created": "2026-01-29T16:12:26.432+0000",
+  "updated": "2026-09-24T23:32:52.275+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": {
+   "k": "EP-54526",
+   "summary": "Communication Channels — Email, Chat & Notifications",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 523,
+  "ai": {
+   "s": "Scoped an email digest for users as part of the communication channels work (details held on a linked Confluence page).",
+   "pr": "Not clearly specified beyond the ticket title; the description links to a Confluence page and a rough estimate only.",
+   "wy": "Part of the Communication Channels (Email, Chat and Notifications) epic.",
+   "oc": "Not clearly specified beyond the ticket title; presumed email digest, estimated at 24 to 29 days depending on whether it is company-based.",
+   "lens": "EXP",
+   "pa": "User Engagement & Communication",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Adoption",
+    "Retention"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-48761",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48761",
+  "summary": "Admin panel. Profile completition in Participants list",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-01-30T14:53:03.040+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "Hyve"
+  ],
+  "epic": {
+   "k": "EP-54530",
+   "summary": "Admin Panel Restructure & Navigation",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 524,
+  "ai": {
+   "s": "The Admin Panel participants list shows profile completion (details held on a linked Confluence page).",
+   "pr": "Not clearly specified beyond the ticket title; organisers presumably could not see participant profile completion in the list.",
+   "wy": "Part of the Admin Panel Restructure and Navigation epic.",
+   "oc": "Not clearly specified beyond the ticket title; presumed profile completion indicator in the participants list, estimated at 18 to 35 days.",
+   "lens": "DATA",
+   "pa": "Client Manager",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-48850",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48850",
+  "summary": "Client Manager: Organizer can send Event emails with a default no-reply reply address",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-03T12:08:46.310+0000",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54526",
+   "summary": "Communication Channels — Email, Chat & Notifications",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 533,
+  "ai": {
+   "s": "Event emails now default to a no-reply Reply-To address so attendees do not reply unless the organiser explicitly allows it.",
+   "pr": "Registration, marketing and meeting reminder emails did not default to a no-reply Reply-To, so attendee replies could arrive unintentionally.",
+   "wy": "Give organisers control over whether attendees can reply to event emails.",
+   "oc": "Registration, marketing and meeting reminder emails use a default no-reply Reply-To address; attendee-facing content is unchanged.",
+   "lens": "EXP",
+   "pa": "User Engagement & Communication",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Operational Efficiency"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-48956",
+  "link": "https://expoplatform.atlassian.net/browse/EP-48956",
+  "summary": "[TechDept] The frontend needs access to data for fields with conditional logic before any user interaction",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-05T11:41:36.447+0000",
+  "updated": "2026-09-22T11:19:47.976+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 898,
+  "ai": {
+   "s": "The Exhibitor Manual frontend receives conditional field keys and default values upfront, so conditional sections show or hide correctly on first render.",
+   "pr": "The backend sent conditional field data only after a user interacted with the field and saved, so the frontend could not decide which conditional sections to show initially.",
+   "wy": "Tech debt: admin-configured default values and checkbox conditions must apply before any interaction.",
+   "oc": "The sections response exposes conditional field keys and their default values before any user interaction.",
+   "lens": "INTEG",
+   "pa": "Exhibitor Manual",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-49059",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49059",
+  "summary": "[Client Manager][BE FE QA] New Client Manager / Splitted to Tasks",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-09T15:29:59.379+0000",
+  "updated": "2026-09-15T17:48:23.179+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-43651",
+   "summary": "New Client Manager",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 7291,
+  "ai": {
+   "s": "TAMs create customer environments, assign TAM, Sales and API teams and submit them for Finance approval in the redesigned Client Manager.",
+   "pr": "Client onboarding was siloed across TAMs, Finance and organisers, with no single system to create environments, assign internal teams and request approval.",
+   "wy": "First step of the Onboarding Journey, connecting previously siloed teams in one system.",
+   "oc": "A Customers Environments screen with status tabs, search and actions, a three-step Add New Customer flow, rejection resubmission, Team Members and Settings pages.",
+   "lens": "COST",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "Operational Efficiency",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-49141",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49141",
+  "summary": "Team Organizer SLO definition",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-10T14:51:17.550+0000",
+  "updated": "2026-09-23T20:49:57.015+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-49132",
+   "summary": "SLOs are established per team",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2574,
+  "ai": {
+   "s": "The Organizer team defined availability and latency SLOs for the endpoints it owns, giving measurable reliability targets for its part of the platform.",
+   "pr": "Endpoints owned by the Organizer team had no documented, measurable reliability targets, so service-level health was not visible.",
+   "wy": "Engineering-wide initiative for each team to establish SLOs and gain full visibility of platform health at service level.",
+   "oc": "An inventory of Organizer team endpoints with availability and latency SLOs, based on Grafana data and documented in Confluence using the SLO template.",
+   "lens": "DATA",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Infrastructure"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-49169",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49169",
+  "summary": "Event Creation Flow",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-11T07:42:31.208+0000",
+  "updated": "2026-09-15T17:48:16.083+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-51554",
+   "summary": "Event Manager (Admin Panel)",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 6183,
+  "ai": {
+   "s": "TAMs create events for approved clients through a two-step flow with live preview and module selection, then invite an organiser admin to onboarding.",
+   "pr": "Once a client environment was approved, TAMs had no guided way to create customer events and trigger organiser onboarding from the admin portal.",
+   "wy": "Part of the TAM Onboarding journey and the Event Manager epic.",
+   "oc": "A two-step event creation form (general information, modules) with live preview, unsaved-changes handling, an Event created modal to add and invite admins, and an Onboarding status column.",
+   "lens": "COST",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "Operational Efficiency",
+    "Adoption",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-49214",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49214",
+  "summary": "iOS/ Improve Login Flow UX When App Is Backgrounded or Device Sleeps",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-11T11:09:11.494+0000",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 414,
+  "ai": {
+   "s": "iOS login keeps its progress when the app is backgrounded or the device sleeps, instead of restarting the long data load.",
+   "pr": "Login involved lengthy data loading; if the app was backgrounded or the device slept, the loading restarted from the beginning, increasing wait time and frustration.",
+   "wy": "Improve the attendee login experience in the iOS app.",
+   "oc": "An improved iOS login flow that handles backgrounding and sleep without restarting data loading; the story is on hold.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-49250",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49250",
+  "summary": "Add control for custom filters in the Display Filters section",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-12T05:20:27.158+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-47879",
+   "summary": "Add Custom Filters for Exhibitor Events",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 894,
+  "ai": {
+   "s": "Organisers can control visibility, order and title of exhibitor event custom filters in Event Setup Display Filters.",
+   "pr": "Exhibitor event custom filters could not be configured in the Display Filters section, so organisers could not control how they appeared.",
+   "wy": "Part of the Add Custom Filters for Exhibitor Events epic, using the same taxonomy as event creation.",
+   "oc": "Custom filter controls under Event Setup, Display Filters, Exhibitor Events for visibility, order and title.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "Medium",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-49292",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49292",
+  "summary": "Adding Email to Lead Capture Screen",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-02-12T16:27:46.963+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Added the email address to the lead capture screen (ticket had no further detail).",
+   "pr": "Not clearly specified beyond the ticket title — no description was provided.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; presumed email field shown on the lead capture screen.",
+   "lens": "EXP",
+   "pa": "Lead Intelligence",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ },
+ {
+  "k": "EP-49305",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49305",
+  "summary": "Android/Regression/Check pls HTML of description section ( seems on any page but currently about RT)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-02-13T05:20:38.021+0000",
+  "updated": "2026-09-23T08:06:59.685+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "mig-on-hold",
+   "qa_android_regression"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 1041,
+  "ai": {
+   "s": "Checked HTML rendering of description sections in the Android app, noticed on round table pages during regression.",
+   "pr": "During Android regression, description HTML (seen on round tables, possibly on any page) appeared to render differently from iOS and the admin panel.",
+   "wy": "Regression quality: consistent rendering of organiser content across apps.",
+   "oc": "Not clearly specified beyond the ticket title; presumed correction of description HTML rendering on Android; on hold.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:16:56Z"
+ }
+]

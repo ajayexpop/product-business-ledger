@@ -1,0 +1,11 @@
+{
+ "batch": "mayjun",
+ "jql": "project = EP AND issuetype = Story AND created >= \"2026-05-01\" AND created < \"2026-07-01\" AND status != Rejected ORDER BY key ASC",
+ "expected": 262,
+ "written": 262,
+ "generated": 86,
+ "inherited": 176,
+ "noDescription": 9,
+ "missing": [],
+ "finishedAt": "2026-09-25T02:19:07Z"
+}

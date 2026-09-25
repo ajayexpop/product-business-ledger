@@ -1,0 +1,811 @@
+[
+ {
+  "k": "EP-51340",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51340",
+  "summary": "API V3 Migration - [POST] /api/v2/floorplan/setHall to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:58:30.961+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3713,
+  "ai": {
+   "s": "Adds a V3 POST endpoint to create floor plan halls for an event, with an optional hall image by upload or URL.",
+   "pr": "In V2, /api/v2/floorplan/setHall handled both creating and updating halls in one endpoint.",
+   "wy": "Part of the Public API V3 migration, splitting create and update into clear REST operations.",
+   "oc": "POST /api/v3/events/{eventId}/floorplan/halls specified with a unique hall name and image options; updates move to a separate PUT.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51342",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51342",
+  "summary": "API V3 Migration - /api/v2/location/floorplan to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:58:37.581+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1674,
+  "ai": {
+   "s": "Moves the floor plan location endpoint to V3 so integrators can retrieve an event's halls and layout data under the event resource.",
+   "pr": "Floor plan location data was only available from V2 /api/v2/location/floorplan.",
+   "wy": "Part of the Public API V3 migration to standardise paths and responses.",
+   "oc": "GET /api/v3/events/{eventId}/location/floorplan returns halls with conference, check-in and image data in the standard V3 envelope.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51345",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51345",
+  "summary": "API V3 Migration - /api/v2/meetings/export to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:59:01.252+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 84,
+  "ai": {
+   "s": "Migrates the meetings export endpoint to the Public API V3.",
+   "pr": "The /api/v2/meetings/export endpoint existed only in the V2 API.",
+   "wy": "Part of the Public API V3 endpoint migration.",
+   "oc": "Not clearly specified beyond the ticket title; a V3 equivalent of meetings export is expected.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51346",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51346",
+  "summary": "API V3 Migration - [POST] /api/v2/news/set to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:59:10.246+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 4033,
+  "ai": {
+   "s": "Adds a V3 POST endpoint to create event news items, with headline, body, teaser, author and images.",
+   "pr": "In V2, /api/v2/news/set handled both creating and updating news in one endpoint.",
+   "wy": "Part of the Public API V3 migration, splitting create and update into clear REST operations.",
+   "oc": "POST /api/v3/events/{eventId}/news specified with required fields, image upload or URL and x-lang support; updates are handled by EP-51416.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51348",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51348",
+  "summary": "API V3 Migration - /api/v2/categories/get to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:59:25.419+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2275,
+  "ai": {
+   "s": "Moves the categories endpoint to V3 so integrators can list an event's product and exhibitor categories with pagination.",
+   "pr": "Event categories were only available from V2 /api/v2/categories/get, outside the event-scoped path structure.",
+   "wy": "Part of the Public API V3 migration to standardise paths and responses.",
+   "oc": "GET /api/v3/events/{eventId}/categories returns a paginated category list with parent and order data and x-lang support.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51350",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51350",
+  "summary": "API V3 - [POST] /api/v3/events/{eventId}/sessions/{sessionId}/visitors (Add session visitor)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T13:59:40.839+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3231,
+  "ai": {
+   "s": "Adds a V3 endpoint to register an account as a visitor of a specific session, replacing V2 sessions/addVisitor.",
+   "pr": "Manually adding a participant to a session's attendee list via the API relied on V2 /api/v2/sessions/addVisitor.",
+   "wy": "Part of the Public API V3 migration.",
+   "oc": "POST /api/v3/events/{eventId}/sessions/{sessionId}/visitors takes an accountId and validates it before writing.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51351",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51351",
+  "summary": "API V3 - [DELETE] /api/v3/events/{eventId}/sessions/types/{typeId} (Remove session type)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T14:00:38.658+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2342,
+  "ai": {
+   "s": "Adds a V3 endpoint to delete a session type from an event by its ID, replacing V2 sessions/removeType.",
+   "pr": "Session types could only be removed via V2 /api/v2/sessions/removeType.",
+   "wy": "Part of the Public API V3 migration.",
+   "oc": "DELETE /api/v3/events/{eventId}/sessions/types/{typeId} specified with 404 handling; behaviour for types still assigned to sessions is to be confirmed with engineering.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51352",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51352",
+  "summary": "API V3 - [GET] /api/v3/events/{eventId}/sessions/locations (Get session locations)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T14:00:48.367+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3588,
+  "ai": {
+   "s": "Adds a V3 endpoint listing an event's session locations (rooms and stages) with date-modified filters and pagination.",
+   "pr": "Session locations were only available from V2 /api/v2/sessions/getLocations.",
+   "wy": "Part of the Public API V3 migration to standardise paths and responses.",
+   "oc": "GET /api/v3/events/{eventId}/sessions/locations with lastModified filters, localised titles and SESSIONS_BK permission checks.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51353",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51353",
+  "summary": "API V3 - [GET] /api/v3/events/{eventId}/sessions/speakers (Get session speakers)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T14:01:01.132+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3806,
+  "ai": {
+   "s": "Adds a V3 endpoint listing session speakers for an event, filterable by ID, external ID, email and modification date.",
+   "pr": "Session speakers were only available from V2 /api/v2/sessions/getSpeakers.",
+   "wy": "Part of the Public API V3 migration to standardise paths and responses.",
+   "oc": "GET /api/v3/events/{eventId}/sessions/speakers returns a paginated speaker list with localised fields and filters.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51356",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51356",
+  "summary": "API V3 - [DELETE] /api/v3/events/{eventId}/sessions/tags/{tagId} (Remove session tag)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T14:01:31.521+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2328,
+  "ai": {
+   "s": "Adds a V3 endpoint to delete a session tag from an event by its ID, replacing V2 sessions/removeTag.",
+   "pr": "Session tags could only be removed via V2 /api/v2/sessions/removeTag.",
+   "wy": "Part of the Public API V3 migration.",
+   "oc": "DELETE /api/v3/events/{eventId}/sessions/tags/{tagId} specified with 404 handling; behaviour for tags still in use is to be confirmed with engineering.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51362",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51362",
+  "summary": "API V3 - [DELETE] /api/v3/events/{eventId}/sessions/tracks/{trackId} (Remove session track)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T14:02:15.879+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2354,
+  "ai": {
+   "s": "Adds a V3 endpoint to delete a session track from an event by its ID, replacing V2 sessions/removeTrack.",
+   "pr": "Session tracks could only be removed via V2 /api/v2/sessions/removeTrack.",
+   "wy": "Part of the Public API V3 migration.",
+   "oc": "DELETE /api/v3/events/{eventId}/sessions/tracks/{trackId} specified with 404 handling; behaviour for tracks still in use is to be confirmed with engineering.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51364",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51364",
+  "summary": "API V3 - [GET] /api/v3/events/{eventId}/sessions/{sessionId} (Get session)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T14:02:36.088+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3134,
+  "ai": {
+   "s": "Adds a V3 endpoint returning full details of a single session, including location, type, track and tags.",
+   "pr": "Session details were only available from V2 /api/v2/sessions/getSession.",
+   "wy": "Part of the Public API V3 migration to standardise paths and responses.",
+   "oc": "GET /api/v3/events/{eventId}/sessions/{sessionId} with localised fields, nested objects and SESSIONS_BK permission checks.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51365",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51365",
+  "summary": "API V3 - [GET] /api/v3/events/{eventId}/sessions (Get sessions list)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T14:02:45.296+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3483,
+  "ai": {
+   "s": "Adds a V3 endpoint listing an event's sessions with pagination and incremental fetching by timestamp.",
+   "pr": "Session lists were only available from V2 /api/v2/sessions/get.",
+   "wy": "Part of the Public API V3 migration; incremental fetching supports integration sync.",
+   "oc": "GET /api/v3/events/{eventId}/sessions with timestamp filter, page and limit (max 500), localised fields and SESSIONS_BK permission checks.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51366",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51366",
+  "summary": "API V3 - [DELETE] /api/v3/events/{eventId}/sessions/{sessionId} (Remove session)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T14:02:54.658+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 2106,
+  "ai": {
+   "s": "Adds a V3 endpoint to delete a session from an event by its ID, replacing V2 sessions/removeSession.",
+   "pr": "Sessions could only be removed via V2 /api/v2/sessions/removeSession.",
+   "wy": "Part of the Public API V3 migration.",
+   "oc": "DELETE /api/v3/events/{eventId}/sessions/{sessionId} specified with validation and 404 handling.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51368",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51368",
+  "summary": "API V3 - [POST] /api/v3/events/{eventId}/sessions (Create session)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-02T14:03:12.875+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 8686,
+  "ai": {
+   "s": "Adds a V3 POST endpoint to create sessions, with type, language, track and other fields validated against EP data.",
+   "pr": "In V2, /api/v2/sessions/set handled both creating and updating sessions in one endpoint.",
+   "wy": "Part of the Public API V3 migration, splitting create and update into clear REST operations.",
+   "oc": "POST /api/v3/events/{eventId}/sessions specified with required fields, logo upload and validations; updates are handled by EP-51418.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51397",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51397",
+  "summary": "_Technical implementation and and further transformations",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T10:59:24.628+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-42404",
+   "summary": "AI Event Assistant (AGENT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3694,
+  "ai": {
+   "s": "Defines the technical architecture for the AI Event Assistant, layering a chat agent over specialised agents, deterministic tools and data.",
+   "pr": "The AI Event Assistant needed an agreed architecture for how a user-facing agent, specialised agents such as Agenda Builder and Search, and tools would work together.",
+   "wy": "Foundation for the AI Event Assistant product direction.",
+   "oc": "A write-up of abstraction layers and a comparison of router-based and hierarchical supervisor multi-agent architectures to guide implementation.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "Medium",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement",
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51399",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51399",
+  "summary": "Rework QR scans for Table Meetings",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T12:23:43.046+0100",
+  "updated": "2026-09-14T17:16:56.869+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 105,
+  "ai": {
+   "s": "Reworks QR code scanning for Table Meetings.",
+   "pr": "Not clearly specified beyond the ticket title; the description only links to EP-49075.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; QR scanning for Table Meetings is to be reworked.",
+   "lens": "EXP",
+   "pa": "Networking & Interactions",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": []
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51404",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51404",
+  "summary": "_Implement AI Agenda Builder (Agent)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T15:01:04.760+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-42404",
+   "summary": "AI Event Assistant (AGENT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 608,
+  "ai": {
+   "s": "Builds an AI Agenda Builder agent that combines an attendee's schedule with recommended sessions into a clash-free recommended agenda.",
+   "pr": "The AI Event Assistant had no component to turn session recommendations into a usable agenda that respects the attendee's existing schedule.",
+   "wy": "Part of the AI Event Assistant (Agent) initiative.",
+   "oc": "A non-user-facing agent, talking to other agents over A2A, that merges the schedule with recommended and exhibitor sessions with no overlaps.",
+   "lens": "AI",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51405",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51405",
+  "summary": "_Implement AI Search (Agent)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T15:24:00.830+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-42404",
+   "summary": "AI Event Assistant (AGENT)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 751,
+  "ai": {
+   "s": "Builds an AI Search agent that brings the AI Search service into the chatbot, with filtering, recommendations and actions.",
+   "pr": "The AI Search engine existed as a tool, but lacked an agent layer to choose extra tools and decide how to answer richer queries.",
+   "wy": "Part of the AI Event Assistant (Agent) initiative; depends on epic EP-48016.",
+   "oc": "Planned agent exposing advanced search in chat, enriched with details and connected entities, and actions such as favourite, message and request meeting.",
+   "lens": "AI",
+   "pa": "Not Clearly Specified",
+   "cf": "Medium",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "AI Enablement",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ },
+ {
+  "k": "EP-51407",
+  "link": "https://expoplatform.atlassian.net/browse/EP-51407",
+  "summary": "API V3 Migration - /api/v2/participants/{eventId}/list to V3",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-04-03T16:25:22.991+0100",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "Open_API",
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-46812",
+   "summary": "Migration of endpoints (Public API v3)",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 3909,
+  "ai": {
+   "s": "Adds a V3 endpoint listing an event's accounts with pagination, incremental fetching and a role filter that replaces V2 account/buyers.",
+   "pr": "Participant lists relied on V2 /api/v2/participants/{eventId}/list, with a separate deprecated /api/v2/account/buyers endpoint for buyers.",
+   "wy": "Part of the Public API V3 migration to follow REST conventions.",
+   "oc": "GET /api/v3/events/{eventId}/accounts with page, limit, timestamp and role filters and x-lang support.",
+   "lens": "INTEG",
+   "pa": "Public API V2 & Integrations",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Future Proofing"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:15:46Z"
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "k": "EP-48773",
+  "s": "Fixed 57 failing frontend test files (109 cases) surfaced after the Next14 migration, restoring a trustworthy CI test suite.",
+  "pr": "After migrating to Next14 (and from Jest to Vitest), 57 of 519 test files (109 test cases) were failing due to pre-existing component/test logic issues such as missing context providers, style-assertion mismatches, and async/mock configuration problems — not the migration itself.",
+  "wy": "A reliable, passing test suite is required to safely ship and refactor the frontend; failing tests undermine CI confidence.",
+  "oc": "Failing tests across auth, comments, documents, events, filters, lead capture, mixed cards, and meeting program components were fixed by adding missing context providers, correcting style assertions, and fixing async/mock handling.",
+  "lens": "INTEG",
+  "pa": "Not Clearly Specified",
+  "cf": "High",
+  "rg": "Run",
+  "bv": "Medium",
+  "im": [
+   "Maintenance",
+   "Technical Debt Reduction"
+  ]
+ },
+ {
+  "k": "EP-51830",
+  "s": "Introduced a net-new V3 endpoint to retrieve event sponsors with full profile, category and placement data, broadening the public API's coverage for partner integrations.",
+  "pr": "There was no V3 endpoint exposing sponsor data with profile, category and visibility/placement flags for programmatic retrieval.",
+  "wy": "Future Proofing / integration capability - expose sponsor data via the modern V3 API.",
+  "oc": "A new GET /api/v3/events/{eventId}/sponsors endpoint was delivered returning sponsor profile, category and placement configuration with pagination.",
+  "lens": "INTEG",
+  "pa": "Public API V2 & Integrations",
+  "cf": "High",
+  "rg": "Grow",
+  "bv": "Medium",
+  "im": [
+   "Risk Reduction",
+   "Cost Reduction"
+  ]
+ },
+ {
+  "k": "EP-50597",
+  "s": "Fixed disabled database cleanup that let stale records pile up across test runs and inflate counts in 3 test suites.",
+  "pr": "With database cleanup disabled in functional.suite.yml, DataFactory-created records persisted across runs, inflating counts in EventsReadRepositoryCest, DeleteBasketItemCest, and ActualTicketsCest.",
+  "wy": "Explicitly classified as a test-environment issue, not application logic.",
+  "oc": "Restoring database cleanup between test runs is expected to eliminate cross-test data leakage.",
+  "lens": "INTEG",
+  "pa": "Not Clearly Specified",
+  "cf": "High",
+  "rg": "Run",
+  "bv": "Low",
+  "im": []
+ },
+ {
+  "k": "EP-55152",
+  "s": "A tenant-by-tenant audit of category-data completeness gives a go/no-go signal on whether AI Agenda Builder's matching logic has enough signal to work.",
+  "pr": "AI Agenda Builder's matching logic relies on interest categories being set on both exhibitors/sessions and registered visitors, but no one had measured how complete that data actually is across live tenants.",
+  "wy": "A data-quality audit is needed before committing to a recommendation design, since poor category coverage would starve the matching algorithm regardless of its quality.",
+  "oc": "A tenant-by-tenant completeness audit of category assignment on exhibitors/sessions and registered visitors, checking taxonomy consistency, delivered as a short summary with a go/no-go recommendation for AI Agenda Builder feasibility.",
+  "lens": "AI",
+  "pa": "Not Clearly Specified",
+  "cf": "High",
+  "rg": "Grow",
+  "bv": "Medium",
+  "im": [
+   "Data & Analytics",
+   "AI Enablement"
+  ]
+ },
+ {
+  "k": "EP-49002",
+  "s": "Automatically removing deleted users from the Meeting Program keeps the matchmaking and scheduling data clean so meetings are not booked against accounts that no longer exist.",
+  "pr": "When users were deleted, they remained referenced in the Meeting Program, leaving stale participants that could break scheduling and matchmaking integrity.",
+  "wy": "Platform Health / Maintenance — stale deleted-user references caused data-integrity problems in the meeting workflow.",
+  "oc": "Deleted users are now stripped from the Meeting Program, so only valid participants appear in matchmaking and meeting data.",
+  "lens": "INTEG",
+  "pa": "Networking and Interactions",
+  "cf": "Medium",
+  "rg": "Run",
+  "bv": "Medium",
+  "im": [
+   "Risk Reduction",
+   "Cost Reduction"
+  ]
+ },
+ {
+  "k": "EP-49183",
+  "s": "A standing time-tracking practice has the team log synchronous meeting time monthly, giving leadership visibility into meeting overhead across the team.",
+  "pr": "There was no measurement of how much time the team spent in meetings and calls, so meeting overhead was invisible to management.",
+  "wy": "Internal Efficiency — leadership wanted quantified visibility into meeting time to manage overhead.",
+  "oc": "A monthly per-person meeting-time logging convention was set up (one sub-task per person per month) to capture synchronous meeting/call time; work is ongoing.",
+  "lens": "COST",
+  "pa": "Website Builder",
+  "cf": "Medium",
+  "rg": "Organization",
+  "bv": "Low",
+  "im": [
+   "Risk Reduction",
+   "Cost Reduction"
+  ]
+ },
+ {
+  "k": "EP-56316",
+  "s": "Catalogued all API endpoints used for Exhibitor CRUD to ground the upcoming Exhibitor CRUD module build.",
+  "pr": "Before building or refactoring exhibitor CRUD functionality, the team lacked a documented inventory of which endpoints perform create, read, update and delete on exhibitors.",
+  "wy": "Necessary discovery step to de-risk and scope the \"Implement Exhibitor CRUD\" epic.",
+  "oc": "A list of Exhibitor CRUD endpoints annotated by action type (Create/Read/Update/Delete) was produced.",
+  "lens": "INTEG",
+  "pa": "Not Clearly Specified",
+  "cf": "Medium",
+  "rg": "Transform",
+  "bv": "Low",
+  "im": [
+   "Future Proofing"
+  ]
+ },
+ {
+  "k": "EP-49841",
+  "s": "Completed systematic QA of the public Open API v2 endpoint /api/v2/exhibitor/get, hardening exhibitor data exposed to external integration partners so the published API behaves reliably and to spec.",
+  "pr": "The Open API v2 endpoint /api/v2/exhibitor/get had not been formally quality-assured, so defects, contract mismatches or edge-case failures could surface for external partners consuming exhibitor data, with no logged baseline of its behaviour.",
+  "wy": "Prioritised under the API V2 Quality Assurance initiative (Platform Health / internal quality drive) to certify each Open API endpoint before partners rely on it, rather than in response to a specific customer request.",
+  "oc": "The /api/v2/exhibitor/get endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for exhibitor data.",
+  "lens": "INTEG",
+  "pa": "Not Clearly Specified",
+  "cf": "Medium",
+  "rg": "Run",
+  "bv": "Medium",
+  "im": [
+   "Risk Reduction"
+  ]
+ },
+ {
+  "k": "EP-49598",
+  "s": "Switched translations to load dynamically in next14, reducing what needs to be bundled upfront.",
+  "pr": "Translations were likely bundled statically, which is inefficient for the next14 architecture.",
+  "wy": "Reduces bundle size and improves performance by loading translations on demand.",
+  "oc": "Translations now load dynamically in next14.",
+  "lens": "COST",
+  "pa": "Not Clearly Specified",
+  "cf": "Low",
+  "rg": "Run",
+  "bv": "Low",
+  "im": []
+ },
+ {
+  "k": "EP-52556",
+  "s": "Added validation to the color picker so invalid color values can no longer be entered.",
+  "pr": "Not clearly specified beyond the ticket title.",
+  "wy": "Not clearly specified beyond the ticket title.",
+  "oc": "Not clearly specified beyond the ticket title.",
+  "lens": "INTEG",
+  "pa": "Not Clearly Specified",
+  "cf": "Low",
+  "rg": "Run",
+  "bv": "Low",
+  "im": [
+   "UX"
+  ]
+ },
+ {
+  "k": "EP-47781",
+  "s": "Refactored iOS session/exhibitor event lists to remove in-memory filtering, likely a performance cleanup with no further detail available.",
+  "pr": "Not clearly specified beyond the ticket title; likely session/exhibitor event lists were filtered client-side, which does not scale well with large data sets.",
+  "wy": "Not clearly specified beyond the ticket title.",
+  "oc": "In-memory filters removed from Session/ExhibitorEvents as an implementation-level refactor.",
+  "lens": "INTEG",
+  "pa": "Not Clearly Specified",
+  "cf": "Low",
+  "rg": "Grow",
+  "bv": "Low",
+  "im": [
+   "Technical Debt Reduction",
+   "Scalability"
+  ]
+ },
+ {
+  "k": "EP-50723",
+  "s": "Checked/fixed iOS Crashlytics DSYM upload so crash reports can be properly symbolicated (ticket had no further detail).",
+  "pr": "Not clearly specified beyond the ticket title — no description was provided.",
+  "wy": "Not clearly specified beyond the ticket title.",
+  "oc": "Not clearly specified beyond the ticket title; presumed to ensure DSYM files upload correctly for crash symbolication.",
+  "lens": "INTEG",
+  "pa": "Not Clearly Specified",
+  "cf": "Low",
+  "rg": "Run",
+  "bv": "Low",
+  "im": []
+ }
+]

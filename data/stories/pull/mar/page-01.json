@@ -1,0 +1,776 @@
+[
+ {
+  "k": "EP-49911",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49911",
+  "summary": "Calendar View (Events) - Admin Panel",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-03T09:19:16.075+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54530",
+   "summary": "Admin Panel Restructure & Navigation",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 991,
+  "ai": {
+   "s": "Redesigns the Admin Panel events calendar with year-to-day time-scale views, search, filtering and click-through to each event's detail page.",
+   "pr": "The Admin Panel calendar view did not match the redesigned admin experience and lacked multiple time-scale views, event search and filtering.",
+   "wy": "Part of the broader Admin Panel redesign, bringing the calendar in line with the updated experience.",
+   "oc": "Specified: a calendar that toggles Year, 6-month, 3-month, Month, Week and Day views, with event search, filters and navigation to the event detail page.",
+   "lens": "EXP",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49912",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49912",
+  "summary": "Aanlytics View - Admin Panel",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-03T09:21:31.254+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54530",
+   "summary": "Admin Panel Restructure & Navigation",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1141,
+  "ai": {
+   "s": "Visually redesigns the Admin Panel Customers/analytics screen to match the new admin style while keeping all existing columns, filters and statistics.",
+   "pr": "The Customers screen, listing events per customer with platform statistics, was styled differently from the redesigned Admin Panel.",
+   "wy": "Part of the Admin Panel redesign; consistency of typography, colours, spacing and components across the panel.",
+   "oc": "Specified as a visual-only redesign following the design handoff, preserving region selector, event table, statistics columns, date and dropdown filters, 365 badge and pagination.",
+   "lens": "EXP",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49949",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49949",
+  "summary": "Add tests for helpers and common components",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-03T17:17:28.360+0000",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Adds automated tests for frontend helpers and common components (ticket has no further detail).",
+   "pr": "Not clearly specified beyond the ticket title; presumably helpers and common components lacked test coverage.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title; the ticket is on hold.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49991",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49991",
+  "summary": "Side Menu - Admin Panel",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-04T09:44:07.757+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54530",
+   "summary": "Admin Panel Restructure & Navigation",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1666,
+  "ai": {
+   "s": "Introduces a new expandable/collapsible side menu as the primary Admin Panel navigation for TAMs, Finance and future roles.",
+   "pr": "The Admin Panel had no consistent primary navigation that worked across all user roles in the redesigned experience.",
+   "wy": "Part of the Admin Panel redesign, giving every admin role one consistent way to reach top-level sections.",
+   "oc": "Specified: side menu with Customers Environments, Team Management, Settings and a user profile card, expanded and collapsed states, tooltips, active-page highlight and session-persistent state.",
+   "lens": "EXP",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49992",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49992",
+  "summary": "Client Manager Actions",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-04T09:44:31.029+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54531",
+   "summary": "Client Manager & Onboarding",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 1392,
+  "ai": {
+   "s": "Adds a three-dot action menu to each customer environment row so TAMs can reach details, keys, settings, API logs, edit and delete in one place.",
+   "pr": "Routine environment management tasks required opening the full environment view rather than being available from the Customers Environments table.",
+   "wy": "Part of the Admin Panel redesign within the Onboarding Journey, reducing clicks for routine environment management.",
+   "oc": "Specified: an eight-item contextual menu (Customer Details, App Updates, Key, Unique Accounts, Settings, API Logs, Edit, Delete) with a confirmation step before deletion.",
+   "lens": "COST",
+   "pa": "Client Manager",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49995",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49995",
+  "summary": "Two-party consent mechanism",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-04T09:53:05.626+0000",
+  "updated": "2026-09-15T17:48:17.823+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-49994",
+   "summary": "IMEX GDPR Requirements",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 5767,
+  "ai": {
+   "s": "Adds a two-party consent layer to AI Notes recordings: an environment acknowledgement for the initiator and tiered consent or notification for the recipient, with a full audit trail.",
+   "pr": "AI Notes recorded conversations with no recipient consent, no private-setting check, no real-time recording indicator and no consent audit trail.",
+   "wy": "Compliance: IMEX GDPR requirements and German recording law (§201 StGB) require informed consent and per-recording awareness.",
+   "oc": "Specified: once-per-event initiator acknowledgement, Tier 1 full consent and Tier 2 lightweight notification for recipients, a persistent recording indicator and consent audit logging.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Compliance",
+    "Risk Reduction",
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-49997",
+  "link": "https://expoplatform.atlassian.net/browse/EP-49997",
+  "summary": "Data deletion access",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-04T09:54:38.805+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-49994",
+   "summary": "IMEX GDPR Requirements",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 3538,
+  "ai": {
+   "s": "Gives AI Notes recipients a way to have their recordings deleted and defines what server-side deletion and data retention must cover.",
+   "pr": "Only the initiator could delete a recording, server-side deletion scope was ambiguous, and there was no defined retention period or disclosure for AI Notes data.",
+   "wy": "Compliance: GDPR Articles 17 and 5(1)(e), raised under the IMEX GDPR requirements.",
+   "oc": "Specified: a recipient deletion route (self-service or DSAR), removal of audio, transcript, summary, metadata and cached outputs, preserved consent audit logs, and a defined, disclosed retention policy.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Compliance",
+    "Risk Reduction",
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50111",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50111",
+  "summary": "AI note taker consent mechanism",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-06T11:51:27.063+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-47872",
+   "summary": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Adds a consent mechanism to the AI note taker (ticket has no further detail).",
+   "pr": "Not clearly specified beyond the ticket title; presumably the AI note taker lacked a consent step.",
+   "wy": "Not clearly specified beyond the ticket title; sits under moving the Meeting Transcription Tool from POC to production.",
+   "oc": "Not clearly specified beyond the ticket title.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50112",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50112",
+  "summary": "AI note taker data deletion controls",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-06T11:52:18.382+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-47872",
+   "summary": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Adds data deletion controls to the AI note taker (ticket has no further detail).",
+   "pr": "Not clearly specified beyond the ticket title; presumably users could not fully control deletion of AI note taker data.",
+   "wy": "Not clearly specified beyond the ticket title; sits under moving the Meeting Transcription Tool from POC to production.",
+   "oc": "Not clearly specified beyond the ticket title.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50113",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50113",
+  "summary": "Admin Panel Scope Restriction",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-06T11:55:29.705+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-49994",
+   "summary": "IMEX GDPR Requirements",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 2406,
+  "ai": {
+   "s": "Lets organisers restrict AI Notes to all badge scans, scheduled meetings only or specific attendee types, enforced in the app and on the server.",
+   "pr": "AI Notes had a single on/off toggle, so when enabled it was available for every badge scan, including open floors and hallways with higher bystander risk.",
+   "wy": "Compliance and client request: IMEX preferred limiting AI Notes to scheduled meetings to reduce GDPR risk.",
+   "oc": "Specified: per-event scope settings for admins, the Record button hidden for non-qualifying scans and server-side rejection of non-qualifying uploads.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Compliance",
+    "Risk Reduction",
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50247",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50247",
+  "summary": "Show notification bubble on mobile app",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-12T10:28:42.533+0000",
+  "updated": "2026-09-15T17:48:16.083+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54526",
+   "summary": "Communication Channels — Email, Chat & Notifications",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1486,
+  "ai": {
+   "s": "Shows numeric unread badges on the mobile app icon so attendees and exhibitors notice messages, meeting requests and schedule changes, with an opt-out setting.",
+   "pr": "The mobile app had no visual indicator of unread or pending items, so Busworld attendees and exhibitors were missing messages and meeting requests.",
+   "wy": "Client request from Busworld 2027, which runs as an ongoing community on the mobile app.",
+   "oc": "Specified: real-time app-icon badge counters capped at 99+, a default-on settings toggle stored server-side, independent of push notifications.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Client Commitment",
+    "Adoption",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50276",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50276",
+  "summary": "Move require section to the server side (useRedirectByRequirements)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-12T15:29:27.183+0000",
+  "updated": "2026-09-15T17:48:25.123+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2258,
+  "ai": {
+   "s": "Moves the profile-requirements redirect to the server so users with incomplete profiles are redirected before the page renders, removing a visible flash.",
+   "pr": "useRedirectByRequirements ran client-side after hydration, so the requested page briefly rendered before redirecting and the logic depended on hydrated Redux state.",
+   "wy": "Technical debt: the hook carried a TODO to move server-side, and the flash hurts user experience.",
+   "oc": "Specified: server-side redirects to /profile/edit or /profile/video, preserved on-page toast behaviour and removal of client router-based redirect logic.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction",
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50328",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50328",
+  "summary": "Hash check in integration update flow considers inactive AccountEvents",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-13T18:00:02.255+0000",
+  "updated": "2026-09-14T17:17:13.836+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 894,
+  "ai": {
+   "s": "Fixes the integration update hash check so previously deactivated visitors and exhibitors are reactivated when their data is reprocessed.",
+   "pr": "The hash check matched against inactive AccountEvents rows, threw DataUnchangedException and skipped the update, so deactivated entities were never reactivated.",
+   "wy": "Data integrity in integration imports: re-sent records must restore event participation.",
+   "oc": "Suggested fix: hash checks use active-only AccountEvents and skip comparison when none exists, letting the update proceed.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Risk Reduction",
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50351",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50351",
+  "summary": "Organizer toggle to enable feedback form and create report",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-16T10:26:35.111+0000",
+  "updated": "2026-09-14T15:25:38.475+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54528",
+   "summary": "Attendance & Event Analytics 2026",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 3656,
+  "ai": {
+   "s": "Adds an organiser toggle to switch on mobile-app event feedback collection and a downloadable Event Feedback report of submissions.",
+   "pr": "Event feedback was being built into the mobile app, but there was no way to store submissions, let organisers turn collection on or off, or report on it.",
+   "wy": "Part of Attendance & Event Analytics 2026, giving organisers attendee feedback data.",
+   "oc": "Specified: an off-by-default Event Feedback toggle after OTP Authentication that flags the app, stored submissions, and a report with rating, text, timestamp, name, email and role.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50410",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50410",
+  "summary": "Client Manager: Event Organizer can view correct Active Accounts metrics in the Visitor List so that Event data is not misrepresented",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-17T08:46:53.705+0000",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54528",
+   "summary": "Attendance & Event Analytics 2026",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 327,
+  "ai": {
+   "s": "Makes the Client Manager Visitor List distinguish active team members from total active accounts so event participation metrics are not misrepresented.",
+   "pr": "The Visitor List's Active Accounts metric blurred team members and total active accounts, misleading organisers about participation.",
+   "wy": "Accurate event participation reporting for organisers, under Attendance & Event Analytics 2026.",
+   "oc": "Specified at user-story level; the definition of an active attendee or team member is out of scope.",
+   "lens": "DATA",
+   "pa": "Client Manager",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50433",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50433",
+  "summary": "AI Meeting Notes — Lead Capture Pro Add-on",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-17T14:12:18.184+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-47872",
+   "summary": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 1790,
+  "ai": {
+   "s": "Offers AI Meeting Notes as a purchasable Lead Capture Pro add-on, giving exhibitors and their team members access once bought.",
+   "pr": "There was no way to sell access to AI Meeting Notes; it was not part of the Lead Capture Pro purchasing options.",
+   "wy": "Monetisation: extends Lead Capture Pro with a new paid option.",
+   "oc": "Specified: an AI Meeting Notes add-on card with toggle and price in the Admin Panel, a purchasing-page option, and post-purchase access for the exhibitor team.",
+   "lens": "REV",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "High",
+   "im": [
+    "Revenue",
+    "AI Enablement"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50443",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50443",
+  "summary": "Mobile app feedback",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-17T16:43:32.398+0000",
+  "updated": "2026-09-15T17:48:31.751+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-54524",
+   "summary": "Mobile App — 2026 Enhancements",
+   "status": "Ready to start",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Adds a feedback feature to the mobile app (ticket has no further detail).",
+   "pr": "Not clearly specified beyond the ticket title.",
+   "wy": "Not clearly specified beyond the ticket title; part of Mobile App 2026 enhancements.",
+   "oc": "Not clearly specified beyond the ticket title.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": []
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50457",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50457",
+  "summary": "Exhibitor Interactions Tests",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-18T09:13:40.457+0000",
+  "updated": "2026-09-14T17:17:04.649+0100",
+  "resolved": null,
+  "team": null,
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 0,
+  "ai": {
+   "s": "Adds tests for exhibitor interactions (ticket has no further detail).",
+   "pr": "Not clearly specified beyond the ticket title; presumably exhibitor interactions lacked test coverage.",
+   "wy": "Not clearly specified beyond the ticket title.",
+   "oc": "Not clearly specified beyond the ticket title.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50476",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50476",
+  "summary": "API test: notificationStatistic endpoint returns 2 stat entries instead of 4 for multiple notifications",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-03-18T14:31:42.566+0000",
+  "updated": "2026-09-14T16:52:43.142+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1076,
+  "ai": {
+   "s": "Fixes the notificationStatistic endpoint so multiple notifications return all four aggregated statistic entries, as the API test expects.",
+   "pr": "For multiple notification IDs the endpoint returned 2 statistic entries instead of the expected 4 (sent, web, iOS and Android clicks), failing the API test.",
+   "wy": "A failing API test signals incorrect notification statistics for multi-notification queries.",
+   "oc": "The multi-notification aggregation is to be corrected so testMultipleNotificationStatistics passes; root cause is still a hypothesis.",
+   "lens": "INTEG",
+   "pa": "User Engagement & Communication",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Maintenance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ },
+ {
+  "k": "EP-50494",
+  "link": "https://expoplatform.atlassian.net/browse/EP-50494",
+  "summary": "[Test fail] [address] CLI test: Visit/N200 AccountAttr not found after processing",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Low",
+  "created": "2026-03-19T07:18:47.939+0000",
+  "updated": "2026-09-14T16:52:42.604+0100",
+  "resolved": null,
+  "team": "Integration team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 357,
+  "ai": {
+   "s": "Fixes Visit and N200 integration processing so visitor custom attributes (AccountAttr) are stored, restoring 5 failing CLI tests.",
+   "pr": "After processing visitor data through the Visit and N200 integrations, AccountAttr records were not found, failing 5 CLI test files.",
+   "wy": "Failing integration tests indicate visitor attributes may not be saved during imports.",
+   "oc": "Visitor custom attributes are to be stored correctly during Visit/N200 processing so the affected tests pass.",
+   "lens": "INTEG",
+   "pa": "Public API & Integrations",
+   "cf": "Medium",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Maintenance",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:14:57Z"
+ }
+]

@@ -1,0 +1,760 @@
+[
+ {
+  "k": "EP-56162",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56162",
+  "summary": "[Tech Debt] ExhibitorEffectiveSettings: make category-less / AccountEvent-less exhibitors safe by construction (retire the $resolvable hotfix)",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "High",
+  "created": "2026-08-12T13:23:26.504+0100",
+  "updated": "2026-09-22T09:38:17.538+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 7173,
+  "ai": {
+   "s": "Makes exhibitor effective settings safe for exhibitors with no category or no owner event row, replacing the partial $resolvable hotfix.",
+   "pr": "ExhibitorEffectiveSettings threw an HTTP 500 for category-less or AccountEvent-less exhibitors; the EP-55072 hotfix guarded only the logo gate, leaving 13 other methods exposed.",
+   "wy": "Requested as tech debt on EP-55072 to close the whole bug group; these states keep arising in production, e.g. from event deletion.",
+   "oc": "Settings resolution is to handle missing category or owner rows by construction, so none of the public methods can 500 on them.",
+   "lens": "INTEG",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Technical Debt Reduction",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56164",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56164",
+  "summary": "Admin Panel/ Add Purchase History for Lead Capture Pro & Add-ons to Exhibitor Profile ",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-12T13:32:01.136+0100",
+  "updated": "2026-09-14T17:16:57.322+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 1957,
+  "ai": {
+   "s": "Adds a Purchase History section to the admin exhibitor profile showing Lead Capture Pro and add-on purchases with their transaction status.",
+   "pr": "The admin panel gave no visibility of whether an exhibitor had bought Lead Capture Pro or add-ons such as AI Notetaker, nor of the transaction status.",
+   "wy": "Support and account teams could not verify client purchase claims without escalating or digging through billing systems.",
+   "oc": "The section is to show purchases, add-ons, dates, status (successful, pending, failed, refunded) and ideally a transaction reference.",
+   "lens": "REV",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Operational Efficiency",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56167",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56167",
+  "summary": "Remove unused Lead Capture Pro purchase-page view analytics (EP-54359)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-12T14:40:03.155+0100",
+  "updated": "2026-09-23T23:24:50.806+0100",
+  "resolved": null,
+  "team": "Organizer team",
+  "labels": [
+   "mig-on-hold"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 2603,
+  "ai": {
+   "s": "Removes the unused Lead Capture Pro purchase-page view analytics added in EP-54359.",
+   "pr": "The LEAD_CAPTURE_PRO_VIEW tracking never saved any data, and the product owner withdrew the requirement.",
+   "wy": "Dead code clean-up after a withdrawn requirement.",
+   "oc": "The event dispatch, subscriber mapping, enum value, statistics classes and test are to be deleted so no reference remains.",
+   "lens": "COST",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56170",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56170",
+  "summary": "Alphabetical Sorting for Filter Items for sessions and Exhibitor Events",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "priority": "Medium",
+  "created": "2026-08-12T14:52:49.841+0100",
+  "updated": "2026-09-23T11:52:53.296+0100",
+  "resolved": null,
+  "team": "Visitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "HINTE"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 296,
+  "ai": {
+   "s": "Sorts filter items alphabetically for sessions and exhibitor events (detail is in a linked Confluence page only).",
+   "pr": "Not clearly specified beyond the ticket title; presumably filter items were not listed alphabetically.",
+   "wy": "Reported by HINTE; not otherwise specified.",
+   "oc": "Not clearly specified beyond the ticket title; rough estimates only (BE 6 days, FE 2, QA 4).",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "Low",
+   "rg": "Run",
+   "bv": "Low",
+   "im": [
+    "UX",
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56218",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56218",
+  "summary": "DS: analyse the whole prod-failed backlog in backup_events — only meeting create is covered today",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-13T12:30:21.076+0100",
+  "updated": "2026-09-14T17:16:36.764+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "analytics-ingest-loss"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 5959,
+  "ai": {
+   "s": "Analyses the full backlog of statistics events silently discarded by the pipeline, beyond the meeting-create slice already covered.",
+   "pr": "The statistics lambda drops events whose dictionary lookup fails, marking them prod-failed in backup_events with no alert, and the scale goes far beyond meeting create.",
+   "wy": "Found while repairing EP-55083 meeting data; client analytics may be losing many other event types.",
+   "oc": "The whole prod-failed backlog is to be sized and characterised by event type so each loss can be traced and repaired.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Data & Analytics",
+    "Risk Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56219",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56219",
+  "summary": "Include exhibitor events in sessions page",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-13T12:36:31.023+0100",
+  "updated": "2026-09-24T17:48:41.570+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "INTERNAL"
+  ],
+  "epic": null,
+  "parent": null,
+  "descChars": 4248,
+  "ai": {
+   "s": "Makes the mobile app's Sessions list and calendar view honour the organiser's \"Include Exhibitor Events in Sessions\" setting.",
+   "pr": "It was unconfirmed whether the app showed exhibitor events alongside sessions in both the list and calendar views when the setting was on, as web does.",
+   "wy": "Attendees should see one unified agenda across web and app.",
+   "oc": "Both app surfaces are to consume the same setting that governs web, listing exhibitor events with regular sessions when enabled.",
+   "lens": "EXP",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Grow",
+   "bv": "Medium",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56227",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56227",
+  "summary": "Location Filter for Sessions and Exhibitor Events (Web)",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "priority": "High",
+  "created": "2026-08-13T15:58:59.255+0100",
+  "updated": "2026-09-24T17:05:19.602+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [
+   "HINTE"
+  ],
+  "epic": {
+   "k": "EP-57511",
+   "summary": "New filters for Sessions and Exhibitor events",
+   "status": "Open",
+   "statusCategory": "new"
+  },
+  "parent": null,
+  "descChars": 104,
+  "ai": {
+   "s": "Adds a location filter for sessions and exhibitor events on web (detail is in a linked Confluence page only).",
+   "pr": "Not clearly specified beyond the ticket title and epic (New filters for Sessions and Exhibitor events).",
+   "wy": "Reported by HINTE; part of the new sessions and exhibitor events filters epic.",
+   "oc": "Not clearly specified beyond the ticket title; presumed to let attendees filter sessions and exhibitor events by location.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "Low",
+   "rg": "Grow",
+   "bv": "Low",
+   "im": [
+    "UX",
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56228",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56228",
+  "summary": "DS: continuous fix for meeting analytics — the broken events keep arriving until every app is updated",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-13T16:52:27.071+0100",
+  "updated": "2026-09-14T17:16:27.442+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "analytics-ingest-loss"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3519,
+  "ai": {
+   "s": "Sets up a continuous repair for meeting analytics, since old app versions will keep sending broken meeting events until every user updates.",
+   "pr": "Three app defects lose or misattribute meeting events at source, including 99% of iOS exhibitor-type meeting creates on IMEX event 1295, and a store release does not stop old versions.",
+   "wy": "A one-off migration cannot fix data that keeps arriving broken for months.",
+   "oc": "A mechanism building on the prod-failed detector is to repair incoming events continuously until the error rate reaches zero.",
+   "lens": "DATA",
+   "pa": "Organizer Analytics",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "High",
+   "im": [
+    "Data & Analytics",
+    "Client Commitment"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56294",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56294",
+  "summary": "account_events_dictionary PG view reports exhibitor owners as opted out — align it with the owner exemption the ClickHouse dictionaries apply",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T09:15:00.482+0100",
+  "updated": "2026-09-14T17:16:40.947+0100",
+  "resolved": null,
+  "team": "Exhibitor team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 4082,
+  "ai": {
+   "s": "Aligns the account_events_dictionary Postgres view with ClickHouse so exhibitor owners are no longer reported as opted out of networking.",
+   "pr": "The view computed consent from the raw gdpr_accept checkbox only, so owners with it unticked showed as opted out, unlike every other consent consumer.",
+   "wy": "One field had two definitions, giving inconsistent consent data across systems.",
+   "oc": "The view is to apply the same owner exemption as the ClickHouse dictionaries.",
+   "lens": "DATA",
+   "pa": "Networking & Interactions",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Compliance",
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56312",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56312",
+  "summary": "redirectToSignInIfNeeded loses the return URL when bouncing to /signin",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T11:34:54.896+0100",
+  "updated": "2026-09-14T17:16:59.420+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "auth",
+   "routing"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3076,
+  "ai": {
+   "s": "Keeps the return URL when unauthenticated users are sent to sign-in from a protected layout, so they land back on the page they opened.",
+   "pr": "redirectToSignInIfNeeded sent users to a bare /signin with no return path, and the sign-in page never read one, so deep links were lost.",
+   "wy": "Shared links to protected exhibitor or session pages should work after sign-in.",
+   "oc": "The layout guard is to pass the original destination via the existing goto convention and sign-in is to honour it.",
+   "lens": "EXP",
+   "pa": "Not Clearly Specified",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56313",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56313",
+  "summary": "Mobile apps still emit exhibitor favourite/unfavourite/view through the legacy POST /app/statistics/setActions — move them to the statistics WebSocket the apps already use for everything else",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T12:07:14.910+0100",
+  "updated": "2026-09-23T08:01:27.865+0100",
+  "resolved": null,
+  "team": "Mobile team",
+  "labels": [],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 4574,
+  "ai": {
+   "s": "Moves the mobile apps' exhibitor favourite, unfavourite and view statistics from the legacy setActions REST route to the statistics WebSocket.",
+   "pr": "Current iOS and Android builds sent exhibitor interactions through legacy POST /app/statistics/setActions while all other statistics went over WebSocket.",
+   "wy": "Unify statistics ingestion and retire the legacy route, which still carried live traffic across tenants.",
+   "oc": "The three exhibitor actions are to be emitted over the existing WebSocket channel and the legacy route dropped.",
+   "lens": "DATA",
+   "pa": "Mobile App",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56314",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56314",
+  "summary": "Migrate remaining require-sign-in navigation (JoinButtonInterface, session registration) off the dead callBackFunction to the goto convention",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T12:27:29.351+0100",
+  "updated": "2026-09-14T17:17:00.337+0100",
+  "resolved": null,
+  "team": "Staff Team",
+  "labels": [
+   "Frontend-dev",
+   "auth",
+   "routing"
+  ],
+  "reportedBy": [],
+  "epic": null,
+  "parent": null,
+  "descChars": 3251,
+  "ai": {
+   "s": "Moves the remaining require-sign-in navigation for session join and registration off a dead callback to the goto convention, so it works after login.",
+   "pr": "JoinButtonInterface and useSchedule relied on a callBackFunction that was never stored or read, so post-login navigation never ran.",
+   "wy": "Same root cause as EP-56255; users were not taken to registration or the session room after signing in.",
+   "oc": "Navigation branches are to use the goto query parameter, with business actions handled separately.",
+   "lens": "EXP",
+   "pa": "Session & Speakers",
+   "cf": "High",
+   "rg": "Run",
+   "bv": "Medium",
+   "im": [
+    "UX",
+    "Technical Debt Reduction"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56325",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56325",
+  "summary": "US-1: Access via unique email link (v1)",
+  "status": "Ready to start",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T15:27:12.067+0100",
+  "updated": "2026-09-14T15:27:08.959+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 509,
+  "ai": {
+   "s": "Exhibitors can open the ExpoIntelligence insights portal from a tokenised email link without an ExpoPlatform login.",
+   "pr": "Exhibitors had no login-free way to reach their insights portal.",
+   "wy": "Foundation for the Exhibitor Insights Portal, delivered through email campaigns.",
+   "oc": "A token scoped to one exhibitor and event with expiry, revocation and read-only access is specified; delivery and revocation ownership are still undefined.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56327",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56327",
+  "summary": "US-2: Solo exhibitor view",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T15:27:45.646+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 428,
+  "ai": {
+   "s": "A solo exhibitor lands directly on their own guided journey and full insights report in the ExpoIntelligence portal.",
+   "pr": "There was no insights view for an exhibitor without child stands.",
+   "wy": "Core use case of the Exhibitor Insights Portal.",
+   "oc": "All 7 sections are to populate from live data scoped to the exhibitor, with no stand switcher; sizing awaits metric definitions and spike EP-56324.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "Medium",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56328",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56328",
+  "summary": "US-3: Stand summary (parent + children)",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T15:28:01.156+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 490,
+  "ai": {
+   "s": "Parent exhibitors see a Stand Summary aggregating their own and all child exhibitors' KPIs in the insights portal.",
+   "pr": "Parent exhibitors had no combined view of leads, meetings, views, favourites and messages across their stand.",
+   "wy": "Exhibitors with sub-exhibitors need a stand-level picture.",
+   "oc": "Summed and deduplicated KPIs with a combined benchmark are specified; blocked on the dedup rule for buyers who met several children.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "Medium",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56329",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56329",
+  "summary": "US-4: Child switcher",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T15:28:09.333+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 492,
+  "ai": {
+   "s": "Parent exhibitors can switch from the Stand Summary into any individual child exhibitor's insights report.",
+   "pr": "There was no way for a parent to drill from the stand view into each exhibitor's own report.",
+   "wy": "Part of the Exhibitor Insights Portal parent/child experience.",
+   "oc": "A switcher listing parent and children is specified, with one-click return and children unable to see siblings; depends on US-3.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "Medium",
+   "rg": "Transform",
+   "bv": "Low",
+   "im": [
+    "UX"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56330",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56330",
+  "summary": "US-5: White-label branding",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T15:28:18.136+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 485,
+  "ai": {
+   "s": "The insights portal carries the event's own logo on the gate, report header and exports, falling back to the ExpoPlatform mark.",
+   "pr": "The portal had no event branding.",
+   "wy": "The portal should look like the organiser's product to its exhibitors.",
+   "oc": "The event logo is to be pulled from Admin → General → Logo via the Event API; flagged as the lowest-risk story for early pickup.",
+   "lens": "EXP",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Low",
+   "im": [
+    "UI"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56331",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56331",
+  "summary": "US-6: Guided journey + one-page report",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T15:28:28.849+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 902,
+  "ai": {
+   "s": "Builds the insights portal's guided journey and one-page report, with 12 insight cards over 7 sections and Excel/PDF export.",
+   "pr": "The approved prototype showed only hardcoded mock numbers with no metric definitions or data sources.",
+   "wy": "Deliver parity with the approved ExpoIntelligence prototype.",
+   "oc": "Every number is to trace to a defined metric query and exports include all unlocked sections; blocked on ~40 metric definitions.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "Data & Analytics",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56332",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56332",
+  "summary": "US-7: Benchmarks vs similar exhibitors",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T15:28:39.997+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 732,
+  "ai": {
+   "s": "Shows exhibitors their percentile position against an anonymised peer cohort from the same event.",
+   "pr": "Exhibitors had no benchmark against similar exhibitors.",
+   "wy": "Benchmarks give exhibitors context for their event performance.",
+   "oc": "Cohorts of at least 8 with non-identifiable peers are specified; blocked on Legal anonymity sign-off and an undefined cohort definition.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "Medium",
+   "im": [
+    "Data & Analytics",
+    "Compliance"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ },
+ {
+  "k": "EP-56333",
+  "link": "https://expoplatform.atlassian.net/browse/EP-56333",
+  "summary": "US-8: Buyer interaction insights",
+  "status": "Open",
+  "statusCategory": "new",
+  "priority": "Medium",
+  "created": "2026-08-18T15:28:51.393+0100",
+  "updated": "2026-09-15T17:47:44.086+0100",
+  "resolved": null,
+  "team": "Data Science",
+  "labels": [
+   "mig-in-preparation"
+  ],
+  "reportedBy": [],
+  "epic": {
+   "k": "EP-56322",
+   "summary": "ExpoIntelligence — Exhibitor Insights Portal",
+   "status": "In Progress",
+   "statusCategory": "indeterminate"
+  },
+  "parent": null,
+  "descChars": 915,
+  "ai": {
+   "s": "Shows exhibitors which buyers viewed, favourited, searched, messaged or met them, with profile context.",
+   "pr": "Exhibitors could not see buyer interactions in one insights view.",
+   "wy": "Buyer insight is a core value of the Exhibitor Insights Portal.",
+   "oc": "Listing only interacting buyers within lead-sharing rules is specified; blocked on undefined lead-sharing rules and buyer interaction coverage gaps.",
+   "lens": "DATA",
+   "pa": "Lead Intelligence",
+   "cf": "High",
+   "rg": "Transform",
+   "bv": "High",
+   "im": [
+    "Data & Analytics",
+    "Revenue Enabler"
+   ]
+  },
+  "aiSource": "generated",
+  "pulledAt": "2026-09-25T02:20:25Z"
+ }
+]

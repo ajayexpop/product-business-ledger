@@ -1,0 +1,9 @@
+{
+  "jql": "project = EP AND issuetype = Epic ORDER BY key ASC",
+  "expected": 365,
+  "written": 365,
+  "withParent": 0,
+  "levelsAbove": {},
+  "finishedAt": "2026-09-25T02:13:24Z",
+  "note": "No EP epic has a parent (verified: JQL `project = EP AND issuetype = Epic AND parent is not EMPTY` returns 0), so above.json is empty. team is null where customfield_10001 is absent or has an empty name."
+}

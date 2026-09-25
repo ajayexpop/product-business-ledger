@@ -436,7 +436,7 @@ function storyFull(s){
     ['Theme', `<span class="th"><i style="background:${col}"></i>${esc(lensName(s.lens))}</span>`],
     ['Product area', esc(s.pa||'—')],
     ['Team', esc(s.team||'—')],
-    ['Epic', esc(s.ep||'—')],
+    ['Epic', epicCell(s)],
     ['Business value', esc(s.bv||'—')],
     ['Revenue goal', esc(RGN[s.rg]||s.rg||'—')],
     ['Impact', (s.im&&s.im.length)?s.im.map(x=>esc(x)).join(', '):'—'],
@@ -555,7 +555,7 @@ function deliveryFiltered(){
         bv=document.getElementById('d-bv').value, q=document.getElementById('d-search').value.trim().toLowerCase();
   return D.stories.filter(s=>(!cl||s.pds.includes(cl))&&(!ln||s.lens===ln)&&(!tm||s.team===tm)&&(!st||s.sf===st)&&(!bv||s.bv===bv)
     &&(!pinnedMonth||s.mo===pinnedMonth)
-    &&(!q||(s.s||'').toLowerCase().includes(q)||s.k.toLowerCase().includes(q)||(s.ep||'').toLowerCase().includes(q)));
+    &&(!q||(s.s||'').toLowerCase().includes(q)||s.k.toLowerCase().includes(q)||(s.ep||'').toLowerCase().includes(q)||(s.ek||'').toLowerCase().includes(q)));
 }
 function chartMonths(list){
   const counts=D.months.map(m=>list.filter(s=>s.mo===m).length);
@@ -582,6 +582,7 @@ function renderDelivery(){
   const list=deliveryFiltered();
   document.getElementById('d-count').textContent=list.length+' of '+D.stories.length+' stories'+(pinnedMonth?' · '+fmtMo(pinnedMonth)+' pinned':'');
   if(dview==='tl'){ renderDeliveryTL(list); return; }
+  if(dview==='ep'){ renderDeliveryEpics(list); return; }
   const named=list.filter(s=>s.pds.length).sort((a,b)=>(b.sf==='Shipped')-(a.sf==='Shipped')||String(b.mo).localeCompare(String(a.mo)));
   const plat=list.filter(s=>!s.pds.length).sort((a,b)=>String(b.mo).localeCompare(String(a.mo)));
   const nel=document.getElementById('d-named');
@@ -997,12 +998,58 @@ document.getElementById('dtl').addEventListener('mousemove',e=>{
   showTip(e,`<b>${esc(el.dataset.label||'')} · ${esc(DMLAB[el.dataset.m])}</b>${bits.join('<br>')}<br><span style="opacity:.75">click for every story</span>`);
 });
 document.getElementById('dtl').addEventListener('mouseleave',hideTip);
+// ----- EPICS view: story -> epic from the Jira parent field (dl-epic-hierarchy)
+const EPICS=D.epics||{};
+let openEpic=null;
+function epicCell(s){
+  const e=s.ek&&EPICS[s.ek];
+  if(!e) return '<span class="sx-dim">no epic in Jira</span>';
+  const sib=D.stories.filter(x=>x.ek===s.ek).length;
+  return `<a href="${esc(jira(s.ek))}" target="_blank" rel="noopener">${esc(s.ek)}</a> ${esc(e.s)} <span class="sx-dim">· ${sib} ${sib===1?'story':'stories'} in the ledger</span>`;
+}
+function renderDeliveryEpics(list){
+  const g={};
+  list.forEach(s=>{const k=s.ek&&EPICS[s.ek]?s.ek:'';(g[k]=g[k]||[]).push(s)});
+  const keys=Object.keys(g).filter(k=>k).sort((a,b)=>g[b].length-g[a].length||a.localeCompare(b));
+  if(g['']) keys.push('');
+  const withEp=list.filter(s=>s.ek&&EPICS[s.ek]).length;
+  document.getElementById('d-ep-n').textContent=keys.filter(k=>k).length;
+  document.getElementById('d-ep-caveat').textContent=`${withEp} of ${list.length} stories in the filter sit under an epic; ${list.length-withEp} have none.`;
+  const el=document.getElementById('d-epics');
+  el.innerHTML=keys.length?keys.map(k=>{
+    const ss=g[k].slice().sort((a,b)=>String(b.mo).localeCompare(String(a.mo)));
+    const ship=ss.filter(s=>s.sf==='Shipped').length, prog=ss.length-ship;
+    const mos=ss.map(s=>s.mo).filter(Boolean).sort();
+    const span=mos.length?(mos[0]===mos[mos.length-1]?fmtMo(mos[0]):fmtMo(mos[0])+' – '+fmtMo(mos[mos.length-1])):'';
+    const lenses=[...new Set(ss.map(s=>s.lens))];
+    const e=EPICS[k], named=ss.filter(s=>s.pds.length).length;
+    const jst=e?(e.sc==='done'&&prog?' <span class="sx-warn">Jira marks it done, '+prog+' still in progress</span>':e.sc!=='done'&&!prog?' <span class="sx-warn">every story shipped, Jira still says '+esc(e.st)+'</span>':' <span class="sx-dim">Jira: '+esc(e.st)+'</span>'):'';
+    const open=openEpic===k;
+    return `<div class="sx">
+      <button class="sx-top" type="button" data-ept="${esc(k)}" aria-expanded="${open}">
+        <span class="k">${k?esc(k):'—'}</span>
+        <span class="s">${k?esc(e.s):'<b>No epic</b> — stories with no parent in Jira'}
+          <span class="m"><span class="thset">${lenses.map(l=>`<i style="background:${lensColor(l)}" title="${esc(lensName(l))}"></i>`).join('')}</span>${e&&e.team?`<span>${esc(e.team)}</span>`:''}${named?`<span>${named} named to a client</span>`:''}${jst}</span>
+        </span>
+        <span class="r"><span class="cyc">${ss.length} ${ss.length===1?'story':'stories'}</span>${ship} shipped${prog?' · '+prog+' in progress':''}<span>${esc(span)}</span></span>
+        <span class="arw">&rsaquo;</span>
+      </button>
+      <div class="sx-body"${open?'':' hidden'}>${k?`<a class="sx-link" href="${esc(jira(k))}" target="_blank" rel="noopener">Open ${esc(k)} in Jira</a>`:''}
+        <div class="dlist" style="margin-top:10px">${open?ss.map(s=>storyFull(s)).join(''):''}</div></div>
+    </div>`;
+  }).join(''):'<div class="empty">No story matches these filters.</div>';
+}
+document.getElementById('d-epics').addEventListener('click',e=>{
+  const b=e.target.closest('[data-ept]'); if(!b)return;
+  const k=b.dataset.ept; openEpic=openEpic===k?null:k; renderDeliveryEpics(deliveryFiltered());
+});
 document.getElementById('d-view').addEventListener('click',e=>{
   const b=e.target.closest('button'); if(!b)return;
   dview=b.dataset.v;
   document.querySelectorAll('#d-view button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
   document.getElementById('d-tl-view').hidden=dview!=='tl';
   document.getElementById('d-list-view').hidden=dview!=='list';
+  document.getElementById('d-ep-view').hidden=dview!=='ep';
   renderDelivery();
 });
 

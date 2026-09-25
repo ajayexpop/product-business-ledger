@@ -159,6 +159,7 @@
         <span class="seg" id="d-view">
           <button aria-pressed="true" data-v="tl">Timeline</button>
           <button aria-pressed="false" data-v="list">List</button>
+          <button aria-pressed="false" data-v="ep">Epics</button>
         </span>
       </label>
       <span class="count" id="d-count"></span>
@@ -183,6 +184,15 @@
         <span class="grp"><span id="d-cyc-key"></span></span>
       </div>
       <p class="small" style="color:var(--muted);font-size:12px;margin-top:8px">Bar widths scale against the busiest visible cell, so the grid re-scales as you filter. A story named to two clients appears in both rows and is counted once in each.</p>
+    </div>
+
+    <!-- epic view: story -> epic, the Jira hierarchy -->
+    <div id="d-ep-view" hidden>
+      <div class="banner">
+        <span class="ic" id="d-ep-n">0</span>
+        <span><b>Every story under the epic it belongs to in Jira.</b> Progress is read from the stories, never from the epic's own status, which at EP does not track its children. EP epics have nothing above them, so the hierarchy is two levels. <b id="d-ep-caveat"></b></span>
+      </div>
+      <div class="dlist" id="d-epics"></div>
     </div>
 
     <!-- list view -->

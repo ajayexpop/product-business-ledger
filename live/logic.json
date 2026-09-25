@@ -1,6 +1,6 @@
 {
- "version": 6,
- "updated": "2026-09-22",
+ "version": 7,
+ "updated": "2026-09-24",
  "updatedBy": "claude",
  "rules": [
   {
@@ -1257,6 +1257,16 @@
    "source": "Delivery Timeline dataset + live Jira"
   },
   {
+   "id": "dl-epic-hierarchy",
+   "group": "Delivery timeline",
+   "name": "Stories sit under the epic Jira gives them, and an epic's progress is read from its stories",
+   "kind": "reference",
+   "type": "longtext",
+   "value": "Epic = the story's Jira parent where that parent is an Epic (hierarchy level 1), read on each story pull; the epic may sit in another project (EI, HV). EP epics have no parent, so the hierarchy is two levels: story, then epic. The Epics view on the Delivery tab groups the ledger's stories by that epic and counts shipped and in progress from the stories themselves. The epic's own Jira status is shown only as Jira's, and flagged where it disagrees with its stories. A story with no parent is listed under No epic, never guessed from its title.",
+   "why": "The dataset carried an epic name and no key, so nothing could be grouped or opened, and 13 of the names had gone stale by 24 Sep as stories moved epics. Epic status is not read as progress because it does not track its children at EP (sv-epic-status).",
+   "source": "Ajay, 24 Sep 2026: \"we are missing story - epic hierarchy please add that so we can see that\". Checked live: 0 of 365 EP epics has a parent."
+  },
+  {
    "id": "ev-source",
    "group": "Events and deadlines",
    "name": "Where event dates come from",
@@ -2149,6 +2159,16 @@
    "source": "Product decision, Ajay, 22 Sep 2026. Added in build"
   },
   {
+   "id": "src-story-cache",
+   "group": "Source queries",
+   "name": "Every 2026 story is cached with its what, why and outcome, and later runs pull only the delta",
+   "kind": "reference",
+   "type": "longtext",
+   "value": "Scope: project = EP AND issuetype = Story AND created >= 2026-01-01 AND status != Rejected (1,192 on 24 Sep 2026). One record per story in data/stories/cache/stories.json: Jira fields, epic, and an ai block (summary, problem, why, outcome, theme, product area, business value, run/grow/transform, impact, confidence). The 650 page stories keep their inherited text; the other 546 were written on 24 Sep to data/stories/SPEC.md. A later run reads keys and updated dates for the whole scope, re-reads only stories whose updated moved, fetches descriptions and rewrites the ai block only for new stories or ones whose summary or description changed, and marks a story that leaves the scope rather than deleting it.",
+   "why": "Enriching 1,192 stories costs hours of reads and writing; a refresh should cost only what changed. It also documents the generator for the first time (runbook Source 3).",
+   "source": "Ajay, 24 Sep 2026. The cache is not yet on the page: the page still reports on the 650 until the 650-versus-1,192 decision is taken."
+  },
+  {
    "id": "pp-history",
    "group": "Pipeline ledger",
    "name": "Every change to the pipeline is recorded, and can be undone",
@@ -2305,6 +2325,28 @@
      "kind": "changed",
      "from": "v5 wording",
      "to": "reworded for the item form and History"
+    }
+   ]
+  },
+  {
+   "v": 7,
+   "at": "2026-09-24T21:30:00Z",
+   "by": "claude",
+   "note": "Story to epic hierarchy and the story cache: 2 rules added, 203 in all.",
+   "changes": [
+    {
+     "id": "dl-epic-hierarchy",
+     "name": "Stories sit under the epic Jira gives them, and an epic's progress is read from its stories",
+     "kind": "added",
+     "from": "—",
+     "to": "Epic = the story's Jira parent where that parent is an Epic (hierarchy level 1), read on each story pull; the epic may s…"
+    },
+    {
+     "id": "src-story-cache",
+     "name": "Every 2026 story is cached with its what, why and outcome, and later runs pull only the delta",
+     "kind": "added",
+     "from": "—",
+     "to": "Scope: project = EP AND issuetype = Story AND created >= 2026-01-01 AND status != Rejected (1,192 on 24 Sep 2026). One r…"
     }
    ]
   }
