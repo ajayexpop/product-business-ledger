@@ -6,14 +6,14 @@
   python3 tools/ledger.py check   split then build must reproduce live/index.html byte for byte
 
 The live file as the Artifact tool reads it is the service wrapper (first line, ending <body>) + '\n'
-+ the published page + '</body></html>'. dist/index.html is the published page only, as build2.py did.
++ the published page + '\n</body></html>'. dist/index.html is the published page only, as build2.py did.
 The logic seed embedded in the page is always written from live/logic.json (rule: the seed and
 logic.json are the same rules), with updatedBy 'seed'."""
 import json, os, re, shutil, sys, hashlib
 
 W = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 J = lambda *a: os.path.join(W, *a)
-WRAP_END = '</body></html>'
+WRAP_END = '\n</body></html>'   # the service adds a newline before it
 DATA = ('LEDGER', 'HYVE')          # stored as raw JSON text in data/<name>.json, byte-preserving
 
 def rd(p): return open(p, encoding='utf-8').read()

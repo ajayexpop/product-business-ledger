@@ -1,4 +1,4 @@
-# Client Ledger — working copy
+# Internal Product Business Ledger (formerly Client Ledger) — working copy
 
 The live artifact is the source of truth: https://claude.ai/artifact/Dpc9Z8uabRxLCryUSGML7G
 Always update **that URL** in place. Never publish without `url` (that would create a new artifact).
@@ -22,6 +22,8 @@ Always update **that URL** in place. Never publish without `url` (that would cre
 3. Edit `src/*`, `data/*`, or `live/logic.json` (rules). The page's `LOGIC_SEED` is always generated from `logic.json`: never edit them separately.
 4. `python3 tools/ledger.py build`, QA `dist/` (serve it locally, e.g. `python3 -m http.server -d dist`).
 5. Publish with `url` = the artifact URL, `file_path` = `dist/index.html`, `files` = `logic.json`, `flow.json` (only those that changed). Omit `icon` and `capabilities` so they are kept (`artifact`, `db`, `user`).
+   If the publish is refused as "not viewed", Read the saved live file the error names, confirm with `cmp` that `live/index.html` equals it, then republish the same `dist/index.html` (the service accepts it on a resend once verified).
+   After publishing, re-read and confirm the new live file equals `dist/qa.html` byte for byte.
 6. Database writes: pin `if_version` from `live/db`; any change to an item's own field writes its `h` history entry (`by: "claude"`) in the same update (`pp-history`). Jira columns go into `j` only, no history.
 7. Add a change-log row to `docs/methods-runbook.md` (rule first, rebuild second, record third).
 
