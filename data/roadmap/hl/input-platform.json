@@ -1,0 +1,1217 @@
+[
+ {
+  "k": "EP-28676",
+  "q": "2024-Q3",
+  "feature": "Account switcher",
+  "tags": [],
+  "summary": "Enhancing Account Switcher Visibility and Accessibility",
+  "epic": null,
+  "text": "Redesigned the web account switcher as a dropdown from the top-right menu and from the name on the profile page, with scrolling past five accounts. Users can switch between their own, team member, parent or child company accounts from a dropdown on desktop and mobile web."
+ },
+ {
+  "k": "EP-40207",
+  "q": "2025-Q3",
+  "feature": "Address validation",
+  "tags": [],
+  "summary": "Add region validation to backend",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-15209",
+  "q": "2023-Q2",
+  "feature": "Admin action log",
+  "tags": [],
+  "summary": "Admin logs. Add logs from clickhouse to admin panel",
+  "epic": null,
+  "text": "Replaced the admin logInfo page with a ClickHouse-backed admin action log, with event, date, controller and action filters, body search and XLS export. Admins can search and export a full log of admin actions, including who changed which setting and when, in the same design as the API logs page."
+ },
+ {
+  "k": "EP-17879",
+  "q": "2023-Q2",
+  "feature": "Admin action log",
+  "tags": [],
+  "summary": "Admin logs. Add new admin panel actions in admin logs",
+  "epic": null,
+  "text": "Added new admin panel actions to the admin logs. Admin logs cover the new admin panel."
+ },
+ {
+  "k": "EP-16764",
+  "q": "2023-Q2",
+  "feature": "Admin form validation",
+  "tags": [],
+  "summary": "Add fields with errors highlighting in exhibitors categories settings",
+  "epic": null,
+  "text": "Highlighted fields with errors in exhibitor category settings using the errors returned by the API. Admins see which category settings fields are missing."
+ },
+ {
+  "k": "EP-23019",
+  "q": "2024-Q1",
+  "feature": "Admin log-in-as-user action",
+  "tags": [],
+  "summary": "Adding a customer service button to “...” actions in exhibitor/ visitor list",
+  "epic": null,
+  "text": "Added a 'Customer Service' action to the three-dots menu in the admin exhibitor and visitor lists, logging the admin in as that user. Admins open a user's frontend profile in a new tab directly from the list, with the login recorded in the login logs."
+ },
+ {
+  "k": "EP-15967",
+  "q": "2023-Q2",
+  "feature": "Admin panel clarity",
+  "tags": [],
+  "summary": "Renaming settings in the Admin Panel",
+  "epic": null,
+  "text": "Renamed several Admin Panel settings from a supplied list and added a tooltip for Exhibitor Manual > Global Settings > Organizer Notifications. Confusing admin settings carry clearer names, and the organiser notifications field explains which emails or admins to enter."
+ },
+ {
+  "k": "EP-15966",
+  "q": "2023-Q2",
+  "feature": "Admin panel clarity",
+  "tags": [],
+  "summary": "Adding Tool Tips in the Admin Panel",
+  "epic": null,
+  "text": "Added tooltips across Admin Panel modules from a supplied list, renamed one Management tooltip and fixed Chat Bot setting spellings. Admin Panel settings carry explanatory tooltips, and the Mobile app page has its own green tooltip style."
+ },
+ {
+  "k": "EP-17816",
+  "q": "2023-Q2",
+  "feature": "Admin panel clarity",
+  "tags": [],
+  "summary": "Add intro copy to some Admin Portal pages",
+  "epic": null,
+  "text": "Added introductory copy, from a supplied list, to the top of several Admin Portal pages, replacing the Search page's 'Works only for ElasticSearch' note. Selected admin pages show a framed intro text explaining their purpose."
+ },
+ {
+  "k": "EP-38283",
+  "q": "2025-Q4",
+  "feature": "Admin panel clarity",
+  "tags": [],
+  "summary": "Hide the Maintenance notification",
+  "epic": null,
+  "text": "Removed the Friday post-release maintenance warning and next-maintenance text from the RC admin and manager admin panels. Admin panels no longer show the maintenance warning, with no leftover space or broken UI."
+ },
+ {
+  "k": "EP-34004",
+  "q": "2024-Q3",
+  "feature": "Admin panel experience",
+  "tags": [],
+  "summary": "Replace 'Loading event data' with Loader in admin panel",
+  "epic": null,
+  "text": "Replaced the 'Loading event data' text with a loader in the admin panel. The admin panel shows a loader while event data loads."
+ },
+ {
+  "k": "EP-32439",
+  "q": "2024-Q4",
+  "feature": "Admin panel experience",
+  "tags": [],
+  "summary": "Remove redundant settings from the admin panel",
+  "epic": null,
+  "text": "Removed settings left over from the old UI from exhibitor and general admin settings. Admin settings pages are shorter."
+ },
+ {
+  "k": "EP-23762",
+  "q": "2024-Q4",
+  "feature": "Admin panel experience",
+  "tags": [],
+  "summary": "Create empty state for the tables in admin panel",
+  "epic": null,
+  "text": "Added an empty-state image to empty admin panel tables. Empty admin tables clearly show they have no data."
+ },
+ {
+  "k": "EP-38372",
+  "q": "2025-Q1",
+  "feature": "Admin panel experience",
+  "tags": [],
+  "summary": "Update the Save and similar buttons to the Primary type",
+  "epic": null,
+  "text": "Updated Save and similar buttons across the frontend to the Primary style and fixed static green buttons. Buttons follow the design system."
+ },
+ {
+  "k": "EP-47917",
+  "q": "2026-Q1",
+  "feature": "Admin panel experience",
+  "tags": [],
+  "summary": "[BE] Admin Panel: Organizer can click save/apply changes to Event configuration without page redirection so that work across entities is uninterrupted",
+  "epic": "Admin Panel Restructure & Navigation",
+  "text": "Saving or applying changes across key Admin Panel modules no longer kicks organizers off the page, removing constant rework and navigation loss while they configure an event. Backend support so Save/Apply preserves the current view in Exhibitor Manual-Vendors, Marketing (News, Slugs, Campaigns) and the Mobile app builder."
+ },
+ {
+  "k": "EP-48874",
+  "q": "2026-Q1",
+  "feature": "Admin panel experience",
+  "tags": [],
+  "summary": "Client Manager: Show persistent banner in Admin Panel during event cloning to prevent changes",
+  "epic": "Admin Panel Restructure & Navigation",
+  "text": "A persistent, non-blocking banner now warns admins not to edit an event while it is being cloned, eliminating a recurring source of data corruption. A fixed informational banner is shown across all Admin Panel module pages of the source event while cloning runs, telling users not to make changes until it completes."
+ },
+ {
+  "k": "EP-52556",
+  "q": "2026-Q2",
+  "feature": "Admin panel improvements",
+  "tags": [],
+  "summary": "add validation to color picker",
+  "epic": null,
+  "text": "Added validation to the color picker so invalid color values can no longer be entered. Not clearly specified beyond the ticket title."
+ },
+ {
+  "k": "EP-52457",
+  "q": "2026-Q2",
+  "feature": "Admin panel pagination",
+  "tags": [],
+  "summary": "Implementing Universal Pagination Memory in Admin Panel for User Experience Enhancement - Required List ONLY",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "text": "Admin Panel lists remember each user's page, page size and sorting after a refresh or on returning, alongside the filters they already remembered. Organisers come back to exactly the view they left on participants, exhibitors, sessions and other lists."
+ },
+ {
+  "k": "EP-52989",
+  "q": "2026-Q2",
+  "feature": "Admin panel pagination",
+  "tags": [],
+  "summary": "Standardising Pagination in the Admin Panel for Consistency and User Experience",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "text": "Pagination across about 40 Admin Panel lists is standardised: always at the bottom, with the same design and page-size control. Organisers get the same pagination on every admin list, from participants and exhibitors to payments and check-in."
+ },
+ {
+  "k": "EP-53117",
+  "q": "2026-Q2",
+  "feature": "Admin panel pagination",
+  "tags": [],
+  "summary": "Implementing Universal Pagination Memory in Admin Panel for User Experience Enhancement - Good To Have List ONLY",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "text": "Admin Panel lists remember each user's page, page size and sorting after a refresh or on returning, alongside the filters they already remembered. Organisers come back to exactly the view they left on participants, exhibitors, sessions and other lists."
+ },
+ {
+  "k": "EP-28362",
+  "q": "2024-Q2",
+  "feature": "Admin panel redesign",
+  "tags": [],
+  "summary": "Admin panel primary/secondary colors changes",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-41912",
+  "q": "2025-Q2",
+  "feature": "Admin panel redesign",
+  "tags": [],
+  "summary": "Settings in old admin panel to apply in new admin pael ",
+  "epic": null,
+  "text": "Made changes made in the old admin panel apply in the new admin panel. Both admin panels show the same settings."
+ },
+ {
+  "k": "EP-43097",
+  "q": "2025-Q3",
+  "feature": "Admin panel redesign",
+  "tags": [],
+  "summary": "Add blure for bottom save/cancel bar",
+  "epic": null,
+  "text": "Gave the admin panel's bottom save and cancel bar a blurred background. The save bar matches the design."
+ },
+ {
+  "k": "EP-54462",
+  "q": "2026-Q3",
+  "feature": "Admin panel redesign",
+  "tags": [],
+  "summary": "[Admin Redesign] Event Setup Page",
+  "epic": "Admin Panel CSS Redesign - Phase 1 (5 Core Pages)",
+  "text": "The Event Setup admin page is restyled to the modern Untitled UI design language via CSS only, giving organisers a cleaner, more contemporary interface with no change to existing functionality. New Untitled UI CSS applied to the Event Setup page with markup and PHP untouched, matching the modern design language and passing QA before individual release."
+ },
+ {
+  "k": "EP-54463",
+  "q": "2026-Q3",
+  "feature": "Admin panel redesign",
+  "tags": [],
+  "summary": "[Admin Redesign] Categories Setup Page (Networking & Matchmaking)",
+  "epic": "Admin Panel CSS Redesign - Phase 1 (5 Core Pages)",
+  "text": "The Categories Setup admin page was restyled to the modern Untitled UI design via CSS only, with no functional changes. New Untitled UI CSS applied to the Categories Setup page with markup and PHP untouched, preserving category and networking/matchmaking configuration, and passing QA before release."
+ },
+ {
+  "k": "EP-54464",
+  "q": "2026-Q3",
+  "feature": "Admin panel redesign",
+  "tags": [],
+  "summary": "[Admin Redesign] Exhibitor List Page",
+  "epic": "Admin Panel CSS Redesign - Phase 1 (5 Core Pages)",
+  "text": "The Exhibitor List admin page is restyled to the modern Untitled UI design language via CSS only, giving organisers a cleaner interface with no change to existing functionality. New Untitled UI CSS applied to the Exhibitor List page with markup and PHP untouched, matching the modern design language and passing QA before individual release."
+ },
+ {
+  "k": "EP-54465",
+  "q": "2026-Q3",
+  "feature": "Admin panel redesign",
+  "tags": [],
+  "summary": "[Admin Redesign] Participants List Page",
+  "epic": "Admin Panel CSS Redesign - Phase 1 (5 Core Pages)",
+  "text": "The Participants List admin page is restyled to the modern Untitled UI design language via CSS only, giving organisers a cleaner interface with no change to existing functionality. New Untitled UI CSS applied to the Participants List page with markup and PHP untouched, matching the modern design language and passing QA before individual release."
+ },
+ {
+  "k": "EP-54466",
+  "q": "2026-Q3",
+  "feature": "Admin panel redesign",
+  "tags": [],
+  "summary": "[Admin Redesign] Sessions List Page",
+  "epic": "Admin Panel CSS Redesign - Phase 1 (5 Core Pages)",
+  "text": "The Sessions List admin page is restyled to the modern Untitled UI design language via CSS only, giving organisers a cleaner interface with no change to existing functionality. New Untitled UI CSS applied to the Sessions List page with markup and PHP untouched, matching the modern design language and passing QA before individual release."
+ },
+ {
+  "k": "EP-54547",
+  "q": "2026-Q3",
+  "feature": "Admin panel redesign",
+  "tags": [],
+  "summary": "[Admin Redesign] Event list",
+  "epic": "Admin Panel CSS Redesign - Phase 1 (5 Core Pages)",
+  "text": "The admin Event List page is being restyled to the modern Untitled UI design language as part of the Phase 1 admin redesign. Untitled UI CSS restyling of the Event List admin page, consistent with the other Phase 1 pages; specific details are not documented in the ticket."
+ },
+ {
+  "k": "EP-53413",
+  "q": "2026-Q2",
+  "feature": "Admin panel restructure",
+  "tags": [],
+  "summary": "Admin panel rearangement. Move Sponsorship",
+  "epic": "Admin Panel Restructure & Navigation",
+  "text": "Sponsorship becomes a top-level Admin Panel menu item right after Management, and a standalone module in Module Management. Organisers find sponsorship at the top level, with existing on/off states and functionality unchanged."
+ },
+ {
+  "k": "EP-44947",
+  "q": "2026-Q3",
+  "feature": "Admin profile fields",
+  "tags": [],
+  "summary": "Phone field for Admins",
+  "epic": null,
+  "text": "Added a phone field to admin profiles for use in campaign variables. Admin phone numbers can appear in emails."
+ },
+ {
+  "k": "EP-23885",
+  "q": "2024-Q1",
+  "feature": "Admin settings restructure",
+  "tags": [],
+  "summary": "Regroup the structure of Config page of Sessions in Admin panel",
+  "epic": null,
+  "text": "Regrouped the Sessions Config admin page into separate Sessions, Exhibitor events and General settings columns. Each section shows only its own settings, with 'Allow other location' and 'Allow Address' for both and existing functions unchanged."
+ },
+ {
+  "k": "EP-12814",
+  "q": "2023-Q2",
+  "feature": "Assigned account managers",
+  "tags": [],
+  "summary": "Assigning Visitor/Exhibitor to Admin team",
+  "epic": null,
+  "text": "Added an Assigned Admin column, assign pop-up, filter and sorting to the admin Exhibitors and Participants lists, plus several list table tidy-ups. Each exhibitor or participant can have one assigned admin, shown in the list and usable to filter and sort; assignment is also available via API and export."
+ },
+ {
+  "k": "EP-40531",
+  "q": "2025-Q2",
+  "feature": "Attendee onboarding experience",
+  "tags": [],
+  "summary": "Notification for Onboarding process",
+  "epic": null,
+  "text": "Added a web and app notification, sent 5 minutes after onboarding, saying the personalised recommendations page has been updated. Users who finish onboarding are notified and taken to their Recommendations page when they click."
+ },
+ {
+  "k": "EP-36617",
+  "q": "2025-Q2",
+  "feature": "Attendee onboarding experience",
+  "tags": [],
+  "summary": "Onboarding Experience - Admin Panel & Web & App API",
+  "epic": null,
+  "text": "Built an admin onboarding configuration page with live preview, texts, category groups, mandatory or optional completion and reappearance timing, plus web and app APIs. Admins configure a multilingual onboarding flow that web and app users complete or skip, with skipped users prompted again after a set time."
+ },
+ {
+  "k": "EP-40162",
+  "q": "2025-Q2",
+  "feature": "Attendee onboarding experience",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Onboarding Experience - App Part",
+  "epic": null,
+  "text": "Added the onboarding pop-up to the mobile app, asking participants to choose interest category groups on first login, as on the web. Participants select categories or skip (the pop-up returns after a set time unless mandatory), then see a customisable confirmation."
+ },
+ {
+  "k": "EP-37445",
+  "q": "2024-Q4",
+  "feature": "Clearer error messages",
+  "tags": [],
+  "summary": "Add error codes to front-end",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-37692",
+  "q": "2025-Q1",
+  "feature": "Clearer error messages",
+  "tags": [],
+  "summary": "Change text of error if there not enough symbols ",
+  "epic": null,
+  "text": "Clarified the error message when a value has too few characters. Users see a clearer 'too short' message."
+ },
+ {
+  "k": "EP-32016",
+  "q": "2024-Q3",
+  "feature": "Consent-gated embedded videos",
+  "tags": [],
+  "summary": "Block <iframe> video until consent is given - Videos in EXH profile",
+  "epic": null,
+  "text": "Added a 'Participant Consent for iframe videos on exhibitor page' setting, off by default, that blocks exhibitor profile iframe videos until the user consents. When enabled, exhibitor profile videos stay blocked until one consent click, which then unlocks videos across the service."
+ },
+ {
+  "k": "EP-28301",
+  "q": "2025-Q1",
+  "feature": "Country and city data",
+  "tags": [],
+  "summary": "Switching Country Manager to external API Service",
+  "epic": null,
+  "text": "Switched the Country Manager to an external WikiData API for country, city and region names and translations, with monthly automatic updates. Country, city and region data is imported and refreshed monthly, and admins can edit names and translations without them being overwritten."
+ },
+ {
+  "k": "EP-41750",
+  "q": "2025-Q2",
+  "feature": "Custom labels",
+  "tags": [],
+  "summary": "Cancel Registration and Delete My Account Globally labels customization in the pop-ups",
+  "epic": null,
+  "text": "Applied custom Cancel registration and Delete my account labels to their confirmation popups. Popups use the customised labels."
+ },
+ {
+  "k": "EP-39352",
+  "q": "2025-Q2",
+  "feature": "Custom labels",
+  "tags": [],
+  "summary": "Custom Label changes",
+  "epic": "Custom label changes",
+  "text": "Built a Content Settings page for editing page and section labels per language, with All and Modified only tabs, applied on web and app. Organisers can rename labels such as sponsor, session and cancel-registration titles per language and see which were changed."
+ },
+ {
+  "k": "EP-42398",
+  "q": "2025-Q2",
+  "feature": "Event timezone display",
+  "tags": [],
+  "summary": "Add timezone view in the admin panel to show selected TZ",
+  "epic": null,
+  "text": "Showed the saved time zone next to the event City setting, with a tooltip. Admins see the event time zone."
+ },
+ {
+  "k": "EP-23063",
+  "q": "2023-Q4",
+  "feature": "GDPR account deletion",
+  "tags": [],
+  "summary": "Create an Event selection page for GDPR politics to delete accounts",
+  "epic": null,
+  "text": "Created a single event selection page where users can choose events and request deletion of their account data. One link opens a page listing all events, letting a verified user select events and delete their account and data from them."
+ },
+ {
+  "k": "EP-14583",
+  "q": "2023-Q2",
+  "feature": "Inactive account login messages",
+  "tags": [],
+  "summary": "Correct naming of errors for inactive users (Web)",
+  "epic": null,
+  "text": "Replaced the login error for inactive users with 'Your account is inactive, please check your email and proceed with activation'. Inactive users trying to log in see one clear activation message across interfaces."
+ },
+ {
+  "k": "EP-15585",
+  "q": "2023-Q2",
+  "feature": "Inactive account login messages",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Correct naming of errors for inactive users (App)",
+  "epic": null,
+  "text": "Set a common inactive-account login error, sent from the backend, and added a 'Resend activation link' button to the iOS and Android apps, including for OTP login. Inactive users in the apps see 'You haven't activated your account yet…' and can resend the activation email, which leads back to the app."
+ },
+ {
+  "k": "EP-14942",
+  "q": "2023-Q2",
+  "feature": "Inactive account login messages",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Resend Activation Email for Inactive users in App",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-17488",
+  "q": "2023-Q2",
+  "feature": "Inactive account login messages",
+  "tags": [],
+  "summary": "Improvement in the flow of Sending activation email at user level : WEB",
+  "epic": null,
+  "text": "Streamlined web login for inactive accounts: a 10-second notice with a 'Resend activation link' action, taking priority over a wrong password. Unactivated users resend the activation link straight from the login notice; unknown accounts still get 'Incorrect login/password'."
+ },
+ {
+  "k": "EP-18121",
+  "q": "2023-Q2",
+  "feature": "Inactive account login messages",
+  "tags": [],
+  "summary": "\"Resend activation link\" for OTP",
+  "epic": null,
+  "text": "Added 'Resend activation link' to the one-time password flow for accounts that aren't activated. Unactivated users on OTP events can resend their activation email."
+ },
+ {
+  "k": "EP-40076",
+  "q": "2025-Q2",
+  "feature": "Landing page after login",
+  "tags": [],
+  "summary": "Extend Page Opened on Login Functionality",
+  "epic": "Hyve Communication improvements",
+  "text": "Added a custom internal URL option to the 'page opened on login' settings for exhibitors, participants and team members. After login, users land on the admin-defined internal page, with required fields and onboarding still handled first."
+ },
+ {
+  "k": "EP-17637",
+  "q": "2023-Q3",
+  "feature": "Loading states on listing pages",
+  "tags": [],
+  "summary": "Add loaders to listing pages",
+  "epic": null,
+  "text": "Added loaders to listing pages that had none, such as marketplace, sessions, delegates, events and exhibitor lists. Listing pages show a loader while data loads."
+ },
+ {
+  "k": "EP-21659",
+  "q": "2023-Q4",
+  "feature": "Loading states on listing pages",
+  "tags": [],
+  "summary": "Add a loader to the session page when we click on a new date",
+  "epic": null,
+  "text": "Added a loader to the sessions page when a new date is picked. Users see loading feedback when switching dates."
+ },
+ {
+  "k": "EP-23518",
+  "q": "2024-Q1",
+  "feature": "Local time display settings",
+  "tags": [],
+  "summary": "No local time option (Web)",
+  "epic": null,
+  "text": "Added a 'Do not show Local time on the Frontend (Web and App)' setting, off by default. When enabled, meetings, sessions, exhibitor events and blocked times show only event time on every frontend page."
+ },
+ {
+  "k": "EP-46596",
+  "q": "2025-Q4",
+  "feature": "Locale-aware date formats",
+  "tags": [],
+  "summary": "Date formats depend on locale",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-37093",
+  "q": "2024-Q4",
+  "feature": "Login and SSO options",
+  "tags": [],
+  "summary": "Add ability to use custom service on the newFront (login by token)",
+  "epic": null,
+  "text": "Switched customer service login to the new frontend using token login. Admins log in as users on the new frontend."
+ },
+ {
+  "k": "EP-48919",
+  "q": "2026-Q1",
+  "feature": "Login experience",
+  "tags": [],
+  "summary": "Make hover color for buttons for sign in page",
+  "epic": null,
+  "text": "Added a hover color state to sign-in page buttons for visual consistency. A hover color was added to the sign-in page buttons."
+ },
+ {
+  "k": "EP-36297",
+  "q": "2024-Q4",
+  "feature": "Login page",
+  "tags": [],
+  "summary": "Remove Not a member? Sign up. line",
+  "epic": null,
+  "text": "Hid the 'Not a member? Sign up.' line in the login window when registration is off, for password and OTP login. Closed-registration events don't invite sign-ups."
+ },
+ {
+  "k": "EP-38505",
+  "q": "2025-Q1",
+  "feature": "Login redirects",
+  "tags": [],
+  "summary": "Make redirect after login on the server to the selected page",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-19419",
+  "q": "2023-Q4",
+  "feature": "Login via badge scan",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Login via badge scan",
+  "epic": null,
+  "text": "Added badge-scan login to the mobile app, with admin on/off and allowed-category settings and a configurable login button; the MVP covers the OTP flow. App users can log in by scanning their badge, activating the account if needed, with errors for unknown accounts or disallowed categories."
+ },
+ {
+  "k": "EP-17025",
+  "q": "2023-Q2",
+  "feature": "Module management",
+  "tags": [],
+  "summary": "Module management improvement",
+  "epic": null,
+  "text": "Restructured Global and Event Module Management toggles so every admin panel menu tab and sub-tab can be switched on or off. Module Management covers all admin sections, including a separate Networking & Matchmaking section and per-subtab Analytics toggles."
+ },
+ {
+  "k": "EP-17456",
+  "q": "2023-Q2",
+  "feature": "Module management",
+  "tags": [],
+  "summary": "Make redirects on tabs in analytics (/admin/stat/general) when permissions in module managment is turned off",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-28153",
+  "q": "2024-Q4",
+  "feature": "Module management",
+  "tags": [],
+  "summary": "Hide module Hospitality, Exhibitor info (manual), Taxes field for tables and Enable payment in Global settings",
+  "epic": null,
+  "text": "Hid the retired Hospitality module, table section tax fields and exhibitor manual payment setting. Admins no longer see retired settings."
+ },
+ {
+  "k": "EP-11695",
+  "q": "2023-Q3",
+  "feature": "Multi-factor authentication",
+  "tags": [],
+  "summary": "MFA | Admins",
+  "epic": null,
+  "text": "Added an MFA tab to admin accounts to enable authenticator-app login for admins, exclude chosen admins and send MFA setup emails. With MFA on, admins log in with password plus an authenticator code; excluded admins use password only; setup emails can be sent singly or in bulk."
+ },
+ {
+  "k": "EP-34512",
+  "q": "2024-Q3",
+  "feature": "Multilingual admin panel",
+  "tags": [],
+  "summary": "[adminv2] Add language selector on the login page ",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-34511",
+  "q": "2024-Q3",
+  "feature": "Multilingual admin panel",
+  "tags": [],
+  "summary": "[adminv2] Choose language from storage on init",
+  "epic": null,
+  "text": "Made the new admin panel start in the language saved in local storage. The admin panel opens in the user's language."
+ },
+ {
+  "k": "EP-12541",
+  "q": "2023-Q1",
+  "feature": "One-time password login",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "OTP Android: allow entering password code by copypasting",
+  "epic": null,
+  "text": "Allowed pasting the one-time password into the Android app's OTP field. Android users can paste the full OTP code."
+ },
+ {
+  "k": "EP-18110",
+  "q": "2023-Q4",
+  "feature": "One-time password login",
+  "tags": [],
+  "summary": "OTP improvement",
+  "epic": null,
+  "text": "Changed the OTP login flow so an OTP is emailed on request regardless of account status, and inactive users become active once logged in. On public events any user can request an OTP by email and log in, with inactive accounts activated on successful login."
+ },
+ {
+  "k": "EP-54790",
+  "q": "2026-Q3",
+  "feature": "One-time password login",
+  "tags": [],
+  "summary": "Independent OTP Authentication Configuration for Company and Individual Profiles in Events",
+  "epic": null,
+  "text": "OTP login can be switched on separately for individual profiles and company (exhibitor) profiles, via a single email-first login form. Attendees keep passwordless login while exhibitors can use a password; existing events keep OTP on for both."
+ },
+ {
+  "k": "EP-26859",
+  "q": "2024-Q4",
+  "feature": "OTP login via WhatsApp and SMS",
+  "tags": [],
+  "summary": "OTP login workflow with Whatsapp/SMS",
+  "epic": null,
+  "text": "Extended OTP login so codes can be sent by WhatsApp and SMS as well as email, each enabled by its own toggle. Users receive OTPs through every enabled channel; SMS uses custom text and WhatsApp a preset template, both with login variables."
+ },
+ {
+  "k": "EP-39674",
+  "q": "2025-Q3",
+  "feature": "Participant category change warning",
+  "tags": [],
+  "summary": "Warning for Participant Category Change in Admin Panel",
+  "epic": "Hyve UX improvements",
+  "text": "Added a confirmation warning in the old-UI admin panel when saving a participant profile with a changed category. Admins must confirm category changes after being told they may affect access, visibility, matchmaking and meeting eligibility."
+ },
+ {
+  "k": "EP-12726",
+  "q": "2023-Q1",
+  "feature": "Participant email quality warnings",
+  "tags": [],
+  "summary": "*DWTC* Indication of Fake Email",
+  "epic": null,
+  "text": "Added a warning icon to accounts using a generated fake email in the admin participants list and meeting wizard. Accounts with an @expoplatform.eu email are marked 'This account is using fake email.' in the participants list and meeting wizard."
+ },
+ {
+  "k": "EP-14907",
+  "q": "2023-Q1",
+  "feature": "Participant email quality warnings",
+  "tags": [],
+  "summary": "Indication of Email errors in admin panel",
+  "epic": null,
+  "text": "Added 'Empty email' and 'MX issue' warnings alongside the existing fake-email warning in the participants list and meeting wizard. Organisers see a warning mark with the error name for participants with no email or a broken MX configuration."
+ },
+ {
+  "k": "EP-11098",
+  "q": "2023-Q1",
+  "feature": "Passwordless login",
+  "tags": [],
+  "summary": "Passwordless logination",
+  "epic": null,
+  "text": "Added passwordless one-time-password login on the front end, plus an admin-panel OTP button and an event setting to switch it on. Users log in with an emailed OTP valid for 3 minutes, with a 15-second resend cooldown; admins can generate and copy an OTP for any exhibitor or visitor."
+ },
+ {
+  "k": "EP-12623",
+  "q": "2023-Q1",
+  "feature": "Passwordless login",
+  "tags": [],
+  "summary": "Hide Password reset window when OTP is turned on",
+  "epic": null,
+  "text": "Hid the password reset popup on first login when one-time password login is on. OTP events no longer prompt users to change a password."
+ },
+ {
+  "k": "EP-22678",
+  "q": "2023-Q4",
+  "feature": "Performance improvements",
+  "tags": [],
+  "summary": "Cache for integrated Floorplan ",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-21993",
+  "q": "2023-Q4",
+  "feature": "Performance improvements",
+  "tags": [],
+  "summary": "Optimisation of the api/filters",
+  "epic": null,
+  "text": "Optimised the filters API used by the mobile apps, moving to the new filters and queued search syncing. Filter requests put much less load on the database."
+ },
+ {
+  "k": "EP-18599",
+  "q": "2023-Q4",
+  "feature": "Performance improvements",
+  "tags": [],
+  "summary": "FloorPlan optimization",
+  "epic": "Rewrite floorplan in threejs",
+  "text": null
+ },
+ {
+  "k": "EP-35921",
+  "q": "2024-Q4",
+  "feature": "Performance improvements",
+  "tags": [],
+  "summary": "Optimization of Account Attribute Retrieval",
+  "epic": null,
+  "text": "Optimised account attribute retrieval to avoid per-account requests. Account data loads with far fewer requests."
+ },
+ {
+  "k": "EP-35926",
+  "q": "2024-Q4",
+  "feature": "Performance improvements",
+  "tags": [],
+  "summary": "Optimize requests https://api-gitexplus.expoplatform.com/admin/appointments/tableMeetingsList",
+  "epic": null,
+  "text": "Optimised the admin table meetings list queries. The table meetings list loads faster."
+ },
+ {
+  "k": "EP-35927",
+  "q": "2024-Q4",
+  "feature": "Performance improvements",
+  "tags": [],
+  "summary": "Implement caching of expo_config when using it from backend",
+  "epic": null,
+  "text": "Cached event config on the backend too, clearing it on each save. Backend reads of event config are cached."
+ },
+ {
+  "k": "EP-36782",
+  "q": "2024-Q4",
+  "feature": "Performance improvements",
+  "tags": [],
+  "summary": "Optimization of front-end widgets related to search (exhibitors, products, brands)",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-36786",
+  "q": "2024-Q4",
+  "feature": "Performance improvements",
+  "tags": [],
+  "summary": "Optimization of random card output in these widgets",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-36019",
+  "q": "2024-Q4",
+  "feature": "Performance improvements",
+  "tags": [],
+  "summary": "The Sponsor page is loading slowly ",
+  "epic": null,
+  "text": "Reworked the admin sponsor page to load faster. The sponsor page loads faster."
+ },
+ {
+  "k": "EP-54157",
+  "q": "2026-Q2",
+  "feature": "Performance improvements",
+  "tags": [],
+  "summary": "Remove duplicated requests for banners, in case they are not added at all",
+  "epic": null,
+  "text": "Stopped the frontend from re-firing the same empty banner request on every navigation, cutting wasted API calls for placements with no banners configured. Empty-result caching stops re-requesting banners for empty placements within a session, while still picking up newly-added banners via TTL/reload, without affecting placements that do have banners."
+ },
+ {
+  "k": "EP-31026",
+  "q": "2024-Q2",
+  "feature": "Performance programme",
+  "tags": [],
+  "summary": "PG bouncer for production server",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-16638",
+  "q": "2023-Q4",
+  "feature": "Permission matrix",
+  "tags": [],
+  "summary": "Improve relations between Module Management and Permission Matrix for meetings and messages",
+  "epic": null,
+  "text": "Moved meeting and message permissions from module management into the permission matrix, with a general Messages toggle. Organisers control meetings and messages in one place, with the matrix disabled when a module is off."
+ },
+ {
+  "k": "EP-23021",
+  "q": "2024-Q1",
+  "feature": "Persistent admin list filters",
+  "tags": [],
+  "summary": "Persistent Filter and Search Behavior for Visitor, Exhibitor, Sponsor, and Session lists",
+  "epic": null,
+  "text": "Made filters and search persist per admin on the admin sponsor, participant, exhibitor and session lists until 'Clear Filters' is used. Each admin's filters and search survive navigation, refresh and closing the page, without affecting other admins."
+ },
+ {
+  "k": "EP-18005",
+  "q": "2023-Q2",
+  "feature": "Platform languages",
+  "tags": [],
+  "summary": "Arabic language option",
+  "epic": null,
+  "text": "Added Arabic as a platform language, labelled 'AR' in the language list, using a supplied translation file. Events can offer Arabic ('AR') as a language."
+ },
+ {
+  "k": "EP-46955",
+  "q": "2025-Q4",
+  "feature": "Platform languages",
+  "tags": [],
+  "summary": "[portalUI] Add missed keys and languages to the project (IS)",
+  "epic": null,
+  "text": "Added missing translation keys and languages, including Icelandic, to the frontend. The frontend supports Icelandic and fills gaps in other languages."
+ },
+ {
+  "k": "EP-47038",
+  "q": "2026-Q1",
+  "feature": "Platform languages",
+  "tags": [],
+  "summary": "Translation: please apply the missing system translations",
+  "epic": null,
+  "text": "Applied missing and corrected German system translations in the basket, discount codes, registration and meeting request. German events show correct basket and meeting terms."
+ },
+ {
+  "k": "EP-13513",
+  "q": "2023-Q1",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Optimization of sync with elastic after event clone",
+  "epic": null,
+  "text": "Delayed search index syncing after an event clone until the clone has finished. Cloned events sync to search only once the clone is complete."
+ },
+ {
+  "k": "EP-17299",
+  "q": "2023-Q2",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Change sync of the whole event to bulk of Elasticsearch",
+  "epic": null,
+  "text": "Switched whole-event search syncing to the bulk API. Full event syncs to search run in bulk."
+ },
+ {
+  "k": "EP-17384",
+  "q": "2023-Q2",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Marketplace page requests optimization: re-organize request for Exhibitors in list-view.",
+  "epic": null,
+  "text": "Split the exhibitor search endpoint so categories and products load only in the marketplace list view. Marketplace exhibitor views load faster; list view requests full data."
+ },
+ {
+  "k": "EP-18427",
+  "q": "2023-Q2",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Include additional indexes",
+  "epic": null,
+  "text": "Added search indexes for participant company and job title and news author. Search finds participants by company and job title and news by author."
+ },
+ {
+  "k": "EP-42371",
+  "q": "2025-Q2",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Postgresql IndexPack04",
+  "epic": null,
+  "text": "Added PostgreSQL indexes on connections, product media, schedule contacts, admin access and template modules. Common queries run faster."
+ },
+ {
+  "k": "EP-38507",
+  "q": "2025-Q2",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "[Expo-react-components]: optimization for MultiSelect with a lof of options (virtualization, load on scroll, load on search ... ) ",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-44197",
+  "q": "2025-Q3",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Add caching of data from geoapify.com",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-45987",
+  "q": "2025-Q4",
+  "feature": "Platform performance",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Reduce number of requests from app to server",
+  "epic": null,
+  "text": "Reduced app requests for recommendation IDs, filters and onboarding settings with debouncing and conditions. The apps send far fewer of these requests."
+ },
+ {
+  "k": "EP-45899",
+  "q": "2025-Q4",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Optimize response data for delegate search",
+  "epic": null,
+  "text": "Optimised the response data for delegate search. Delegate search responses are lighter."
+ },
+ {
+  "k": "EP-48260",
+  "q": "2026-Q1",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Reduce db_route connection usage in expoplatform-ws-ValidateUser Lambda",
+  "epic": null,
+  "text": "Added a per-Lambda cache for routing data in ValidateUser, cutting database connections and reducing RDS exhaustion risk under load. The Lambda now caches db_route data per warm container with a configurable TTL, falling back to the database only when the cache is empty or expired, with no functional change to routing behavior."
+ },
+ {
+  "k": "EP-49453",
+  "q": "2026-Q1",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "[next14] turn off request to /auth when token in nulll",
+  "epic": null,
+  "text": "Stopped the server from making an unnecessary auth request when there is no token, cutting wasted server-side calls. Server no longer issues the /auth request when the token is null."
+ },
+ {
+  "k": "EP-54861",
+  "q": "2026-Q3",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "replace barrel imports with deep imports for MUI and expo-react-components",
+  "epic": null,
+  "text": "Barrel imports across ~2,600 files are converted to deep imports and guarded by a lint rule, improving bundle size and dev build speed. Barrel imports are codemod-converted to deep imports, a `no-restricted-imports` ESLint rule is added to prevent regressions, and the convention doc is ported into admin-ui."
+ },
+ {
+  "k": "EP-49045",
+  "q": "2026-Q3",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Optimization next14",
+  "epic": null,
+  "text": "Applied performance optimizations to the Next14 frontend; the ticket does not specify which metrics or areas. Performance optimizations were applied to the Next14 frontend, per the ticket title."
+ },
+ {
+  "k": "EP-57336",
+  "q": "2026-Q3",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "manifest.webmanifest is re-fetched on every App Router navigation (max-age=0, no ETag)",
+  "epic": null,
+  "text": "Fixed the web app manifest to cache for an hour like the site's icons, eliminating a needless full network round-trip on every single page navigation. Replaced the Next.js file-convention manifest with a custom route handler serving the same manifest JSON with the same hour-long cache policy as the icons, verified to produce zero repeat network requests within the cache window."
+ },
+ {
+  "k": "EP-57489",
+  "q": "2026-Q3",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "request sized WebP variants instead of original images across portal-ui",
+  "epic": null,
+  "text": "Makes portal-ui request sized WebP image variants instead of original uploads, cutting image traffic and CloudFront cost. The frontend requests sized WebP variants through the existing resize lambda; done."
+ },
+ {
+  "k": "EP-53978",
+  "q": "2026-Q3",
+  "feature": "Private favourites for opted-out users",
+  "tags": [],
+  "summary": "Enhancing Privacy for Opted-Out Users: Favouriting Features and GDPR Compliance",
+  "epic": "IMEX GDPR Requirements",
+  "text": "Opted-out attendees can favourite users, exhibitors and products privately; these favourites never expose them, count as leads or appear in the API. Favouriting works for everyone on web and app; counters note they may include anonymous favourites, and privacy holds if users later opt in."
+ },
+ {
+  "k": "EP-57577",
+  "q": "2026-Q3",
+  "feature": "Private favourites for opted-out users",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Mobile app: allow opted-out users to favourite exhibitors, visitors and products",
+  "epic": null,
+  "text": "Opted-out users can now favourite and unfavourite exhibitors, visitors and products in the mobile app, privately, as they already could on web. The favourite affordance shows for opted-out users on all three surfaces, stored privately so the other party is never identified; done."
+ },
+ {
+  "k": "EP-49221",
+  "q": "2026-Q1",
+  "feature": "Profile completion",
+  "tags": [],
+  "summary": "Participant Profile Completion Calculation Update",
+  "epic": "Hyve Q1.26 delievery",
+  "text": "Participant profile completion counts only the fields a participant can see and edit, each weighted equally, including photo. Fields that are hidden by conditions, not editable or disabled no longer drag down completion."
+ },
+ {
+  "k": "EP-49202",
+  "q": "2026-Q1",
+  "feature": "Profile completion",
+  "tags": [],
+  "summary": "Admin panel. Profile completition in Participants list",
+  "epic": "Hyve Q1.26 delievery",
+  "text": "A sortable Profile completion column in the Admin Panel participants list, matching the frontend value, with a recalculate button. Organisers sort participants by profile completion and refresh values after imports or bulk changes."
+ },
+ {
+  "k": "EP-34576",
+  "q": "2024-Q4",
+  "feature": "Profile editing",
+  "tags": [],
+  "summary": "Dynamic Edit Profile Labels",
+  "epic": null,
+  "text": "Made the profile edit page title dynamic: 'Edit Company profile' for exhibitors and 'Edit Personal profile' for all personal accounts, including admins. Users see a profile edit page title that matches their account type."
+ },
+ {
+  "k": "EP-11778",
+  "q": "2023-Q1",
+  "feature": "Public page access settings",
+  "tags": [],
+  "summary": "Detach public pages from content preview | Require Login Setting",
+  "epic": null,
+  "text": "Tied access to public File pages to the exhibitor sign-in access setting instead of the content-preview login toggle. File and exhibitor pages are open without login under Open access and require login under Sign in only, whatever the preview toggle."
+ },
+ {
+  "k": "EP-35819",
+  "q": "2024-Q4",
+  "feature": "Regional data hosting",
+  "tags": [],
+  "summary": "Create aws resources on australia",
+  "epic": null,
+  "text": "Created AWS resources in the Australia region: queues, DynamoDB tables and log groups. The platform can run in an Australian region."
+ },
+ {
+  "k": "EP-16297",
+  "q": "2023-Q2",
+  "feature": "Registration spam protection",
+  "tags": [],
+  "summary": "The exhibitor registration reCapthca ",
+  "epic": null,
+  "text": "Added reCAPTCHA as a mandatory step in frontend exhibitor registration. Exhibitor registration includes reCAPTCHA, protecting the form from spam submissions."
+ },
+ {
+  "k": "EP-16797",
+  "q": "2023-Q4",
+  "feature": "Reliable exports",
+  "tags": [],
+  "summary": "re work exports to new schema with statuses ",
+  "epic": "Each task runned via workers should return an status",
+  "text": "Reworked exports to a status-controlled schema that automatically reruns an incompletely processed batch up to 3 times. Exports look and behave the same but recover from transient glitches instead of hanging."
+ },
+ {
+  "k": "EP-1094",
+  "q": "2024-Q1",
+  "feature": "Reliable exports",
+  "tags": [],
+  "summary": "Exhibitor Manual export rework",
+  "epic": null,
+  "text": "Reworked the Exhibitor Manual export to run through SQS. Admins download the Exhibitor Manual report via a queued job, with all respective information present in the file."
+ },
+ {
+  "k": "EP-45768",
+  "q": "2025-Q4",
+  "feature": "Rich text editor improvements",
+  "tags": [],
+  "summary": "Add \"remove styling\" button for TextEditor",
+  "epic": null,
+  "text": "Added a 'remove styling' button to the text editor. Admins can strip pasted styles."
+ },
+ {
+  "k": "EP-12583",
+  "q": "2023-Q1",
+  "feature": "Searchable profile fields",
+  "tags": [],
+  "summary": "Add search function to data fields",
+  "epic": null,
+  "text": "Added live search to all select-type profile fields: Country, City, State/Region, Nationality and custom Select, including multiselect. Typing in a select field filters options by any case-insensitive match and shows 'No results found' when nothing matches."
+ },
+ {
+  "k": "EP-10562",
+  "q": "2024-Q1",
+  "feature": "Security hardening",
+  "tags": [],
+  "summary": "Web secure fixes",
+  "epic": "VAPT report / secure fixes",
+  "text": "Fixed security issues in the frontend, admin panel and server listed in a security report supplied by a client. The reported security issues across frontend, admin panel and server were addressed."
+ },
+ {
+  "k": "EP-10563",
+  "q": "2024-Q1",
+  "feature": "Security hardening",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Applications secure fixes",
+  "epic": "VAPT report / secure fixes",
+  "text": "Fixed security issues in the Android and iOS apps listed in a security report supplied by a client. The reported security issues in the Android and iOS apps were addressed."
+ },
+ {
+  "k": "EP-34239",
+  "q": "2024-Q3",
+  "feature": "Security hardening",
+  "tags": [],
+  "summary": "Add account_id to activation_code hash generation",
+  "epic": null,
+  "text": "Added the account ID to activation code hash generation. Activation codes are unique per account."
+ },
+ {
+  "k": "EP-35880",
+  "q": "2024-Q4",
+  "feature": "Security hardening",
+  "tags": [],
+  "summary": "Add secure token to scanBadge endpoint",
+  "epic": null,
+  "text": "Added an HMAC security token header to the app's badge scan endpoint. Badge scan requests are signed."
+ },
+ {
+  "k": "EP-43090",
+  "q": "2025-Q2",
+  "feature": "Security hardening",
+  "tags": [],
+  "summary": "Remove token and id from request",
+  "epic": null,
+  "text": "Removed token and ID parameters from the regular app's visitors requests. Visitor requests are lighter."
+ },
+ {
+  "k": "EP-45748",
+  "q": "2025-Q4",
+  "feature": "Security hardening",
+  "tags": [],
+  "summary": "XSS in places where HTML should work",
+  "epic": "Security vulnerabilities",
+  "text": null
+ },
+ {
+  "k": "EP-52804",
+  "q": "2026-Q2",
+  "feature": "Security hardening",
+  "tags": [],
+  "summary": "Add rate limiting to /api/v1/resend endpoint",
+  "epic": null,
+  "text": "Added rate limiting to /api/v1/resend after a real attack sent 1,116 requests in 15 minutes to flood participant inboxes. The endpoint now allows 5 requests per minute per IP, blocks abusive IPs for 5 minutes with a 429 response, while legitimate single requests keep working."
+ },
+ {
+  "k": "EP-52467",
+  "q": "2026-Q2",
+  "feature": "Security hardening",
+  "tags": [],
+  "summary": "Meet API Standards for api/v1/schedule/note",
+  "epic": null,
+  "text": "Closed data-leakage and auth-bypass gaps in the schedule/note API, removing internal server details from error responses. Removed sensitive data leakage from error responses and an undocumented internal IP field, enforced auth-token validation and input bounds; API contract alignment work continuing."
+ },
+ {
+  "k": "EP-52816",
+  "q": "2026-Q3",
+  "feature": "Selective event cloning",
+  "tags": [],
+  "summary": "Extend Event Cloning to Support Selective Cloning of Sponsors, News, Sessions, Local Categories, and Floor Plan",
+  "epic": "Client Manager & Onboarding",
+  "text": "Organizers can now choose exactly which content categories carry over when cloning an event, eliminating up to two days of manual cleanup. The clone dialog now offers independent checkboxes per content category with a confirmation summary, so only selected data is copied and manual post-clone cleanup is removed."
+ },
+ {
+  "k": "EP-17970",
+  "q": "2023-Q3",
+  "feature": "SSO login options",
+  "tags": [],
+  "summary": "Customize entire error page for non existing records which try to login via SAML SSO   - configure through web builder",
+  "epic": null,
+  "text": "Added a 'Use as error page' toggle to custom website builder pages for SAML SSO users not found on the event. Clients design their own error page for SSO users validated by the IdP but missing from EP or the event."
+ },
+ {
+  "k": "EP-17967",
+  "q": "2023-Q3",
+  "feature": "SSO login options",
+  "tags": [],
+  "summary": "Remove log in pop up  - Web Only",
+  "epic": null,
+  "text": "Replaced the web login pop-up for SAML SSO with an in-tab login that returns users to the page or action that required sign-in. SSO users sign in within the same tab, land back where they started, and skip login when already authenticated at the IdP."
+ },
+ {
+  "k": "EP-20669",
+  "q": "2024-Q2",
+  "feature": "SSO options",
+  "tags": [],
+  "summary": "IMEX - SAML User is always directed to Event homepage and not intended page invoking the process",
+  "epic": null,
+  "text": "Added a SAML settings trigger to return users to the page they originally requested after authenticating. With the trigger on, users land on their intended page after SAML authentication; other clients' behaviour is unchanged."
+ },
+ {
+  "k": "EP-48719",
+  "q": "2026-Q1",
+  "feature": "SSO options",
+  "tags": [],
+  "summary": "Separate login buttons",
+  "epic": "Participant Registration on New UI",
+  "text": "Login now offers two clear paths, SAML SSO for buyers and standard EP login for API-created team members, so both can authenticate. A sign-in modal now offers two options: SAML redirect to the identity provider, or the standard EP login flow."
+ },
+ {
+  "k": "EP-49318",
+  "q": "2026-Q1",
+  "feature": "SSO options",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Adding additional login option on mobile app",
+  "epic": "Mobile App — 2026 Enhancements",
+  "text": "Adding a configurable second external login button to the mobile app lets a client offer attendees an alternate webview-based sign-in path, satisfying a specific customer requirement. A second external login button was added to the native login screen (type 'Both'), opening the existing webview login flow with configurable label/colour, plus new App Builder/API settings to control it."
+ },
+ {
+  "k": "EP-55082",
+  "q": "2026-Q3",
+  "feature": "Trusted embed domains",
+  "tags": [],
+  "summary": "Whitelist Trusted Embed Domains for Authenticated Iframe Content",
+  "epic": null,
+  "text": "Organizers can now whitelist trusted external domains so authenticated content, like On-Demand Sessions, plays correctly when embedded on partner sites. A new 'Security settings / Trusted embed domains' section in Event Setup lets organizers add and remove whitelisted domains; for those origins the auth cookie is issued SameSite=None; Secure so embedded authenticated Sessions play seamlessly."
+ },
+ {
+  "k": "EP-45868",
+  "q": "2026-Q2",
+  "feature": "User profile improvements",
+  "tags": [],
+  "summary": "[portalUI] add loader to the buttons with downloading files in the user profile",
+  "epic": null,
+  "text": "Added loaders to the download buttons for scanned contacts in the user menu. Users see progress on lead downloads."
+ }
+]

@@ -1,0 +1,75 @@
+{
+ "k": "EP-23019",
+ "histories": 33,
+ "historiesRead": 33,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-02-07T09:23:33.157+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-07T09:23:34.911+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-07T09:26:06.025+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2024-02-07T11:36:33.370+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-07T11:36:45.839+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-07T11:36:47.517+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-13T12:10:21.941+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-02-14T15:20:09.670+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Alex Talala"
+  },
+  {
+   "at": "2024-02-16T08:35:15.376+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-22T09:03:02.599+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790320428639.txt"
+}

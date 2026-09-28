@@ -1,0 +1,81 @@
+{
+ "k": "EP-14310",
+ "histories": 39,
+ "historiesRead": 39,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-03-01T11:35:49.984+0000",
+   "from": "Incoming request",
+   "to": "Estimated request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-03-29T09:00:15.409+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-03-29T09:00:17.818+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-04T12:46:48.495+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-04T12:46:50.286+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-04T12:46:54.643+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-07T09:57:39.061+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-07T09:57:42.540+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-07T09:57:57.565+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-07T10:41:33.534+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2023-04-13T09:49:27.438+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790317448153.txt"
+}

@@ -1,0 +1,75 @@
+{
+ "k": "EP-17967",
+ "histories": 29,
+ "historiesRead": 29,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-06-13T10:21:27.362+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-06-13T10:21:30.562+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-06-13T10:21:33.440+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-06-30T10:14:24.748+0100",
+   "from": "Ready to estimate",
+   "to": "Ready for development",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-06-30T11:43:32.595+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Maksym Nosenko"
+  },
+  {
+   "at": "2023-06-30T11:43:35.542+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Maksym Nosenko"
+  },
+  {
+   "at": "2023-08-23T13:58:44.284+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-08-23T13:59:00.166+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-08-23T13:59:01.603+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-08-23T13:59:03.600+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790314348618.txt"
+}

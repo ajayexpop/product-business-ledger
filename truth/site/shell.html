@@ -1,0 +1,39 @@
+<title>Product Truth</title>
+<meta name="description" content="Internal hub: what we delivered, what is hurting each client, what they ask for, and where to act next.">
+<style>
+/*CSS*/
+</style>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top" id="top">
+  <div class="top-in">
+    <div class="brand">
+      <span class="eyebrow">ExpoPlatform · internal</span>
+      <span class="title">Product Truth</span>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Sections" id="tabs"></nav>
+    <div class="top-tools">
+      <button class="search-btn" id="openSearch" type="button" aria-label="Search clients, needs and stories (press /)">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14"/></svg>
+        <span>Search</span><kbd>/</kbd>
+      </button>
+      <button class="icon-btn guide-btn" id="openGuide" type="button" aria-label="How to read this hub" title="How to read this hub"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M6.3 6.3a1.8 1.8 0 1 1 2.5 1.7c-.5.2-.8.6-.8 1.1v.4M8 11.6v.1"/></svg></button>
+      <span class="pill" id="livePill" role="status" aria-live="polite">Connecting to Jira…</span>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1"></main>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden></aside>
+<div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Search" hidden>
+  <div class="palette-box">
+    <label class="sr" for="q">Search</label>
+    <input id="q" type="search" autocomplete="off" placeholder="Search a client, a need, a story or a Jira key">
+    <div class="palette-res" id="qres" role="listbox"></div>
+    <div class="palette-foot"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script id="truth-data" type="application/json">/*DATA*/</script>
+<script>
+/*APP*/
+</script>

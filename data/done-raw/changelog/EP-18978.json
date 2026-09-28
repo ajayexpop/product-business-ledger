@@ -1,0 +1,75 @@
+{
+ "k": "EP-18978",
+ "histories": 37,
+ "historiesRead": 37,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-07-07T09:04:15.560+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-07T09:04:17.215+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-07T09:04:18.932+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-07T09:04:20.847+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-07T12:28:39.395+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-07-07T12:33:31.772+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-07-07T13:26:13.919+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2023-07-10T08:05:20.403+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-07-11T10:48:40.392+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-14T09:54:45.798+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790314433855.txt"
+}

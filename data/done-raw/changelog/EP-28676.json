@@ -1,0 +1,93 @@
+{
+ "k": "EP-28676",
+ "histories": 55,
+ "historiesRead": 55,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-04-19T13:03:04.928+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-04-19T13:03:06.576+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-04-19T13:03:07.927+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-05-16T14:41:18.381+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2024-06-19T16:46:18.863+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-06-19T16:46:21.244+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-06-19T19:56:50.959+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-06-21T09:49:58.943+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-08-12T13:54:35.563+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-08-14T13:26:29.124+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-08-19T07:42:16.199+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Iurii Drozdov"
+  },
+  {
+   "at": "2024-08-21T08:49:29.678+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Iurii Drozdov"
+  },
+  {
+   "at": "2024-08-29T08:53:07.436+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790315024948.txt"
+}

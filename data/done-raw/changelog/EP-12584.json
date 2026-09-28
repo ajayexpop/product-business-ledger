@@ -1,0 +1,153 @@
+{
+ "k": "EP-12584",
+ "histories": 72,
+ "historiesRead": 72,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-02-08T11:53:50.035+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-08T12:13:53.078+0000",
+   "from": "Considering",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-08T12:14:02.232+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-09T10:43:05.068+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-02-09T11:03:44.759+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-02-09T11:03:50.714+0000",
+   "from": "Ready for development",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-02-10T10:02:19.367+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-15T09:19:52.840+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Ievgenii Akimov"
+  },
+  {
+   "at": "2023-02-20T10:18:26.306+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-02-20T12:17:18.194+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2023-02-20T13:43:31.572+0000",
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2023-02-20T13:43:34.438+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2023-02-20T13:43:36.891+0000",
+   "from": "In progress",
+   "to": "On-hold",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2023-02-23T10:43:44.463+0000",
+   "from": "On-hold",
+   "to": "In progress",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-23T10:43:46.309+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-27T16:19:39.246+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-27T16:19:41.405+0000",
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-27T16:19:43.331+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-01T10:38:28.312+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Ievgenii Akimov"
+  },
+  {
+   "at": "2023-03-01T15:20:53.731+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2023-03-02T14:37:59.954+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2023-03-07T09:54:21.381+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-09T10:15:47.133+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790321372034.txt"
+}

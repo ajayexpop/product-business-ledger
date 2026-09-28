@@ -1,0 +1,87 @@
+{
+ "k": "EP-16700",
+ "histories": 38,
+ "historiesRead": 38,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-05-04T14:25:11.962+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-05-04T15:03:38.536+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-04T15:12:09.858+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2023-05-04T15:15:27.298+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-04T15:15:32.111+0100",
+   "from": "Ready for development",
+   "to": "Ready for decomposition",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-04T15:45:31.813+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-04T15:45:34.285+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-05T10:50:30.578+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-05T13:02:30.623+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-05-05T16:15:44.038+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-05-08T09:37:51.630+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-11T08:03:11.038+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790314217729.txt"
+}

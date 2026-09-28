@@ -1,0 +1,57 @@
+{
+ "k": "EP-21095",
+ "histories": 15,
+ "historiesRead": 15,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-10-03T15:38:36.727+0100",
+   "from": "Incoming request",
+   "to": "Ready for development",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-10-05T13:33:28.845+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Maksym Nosenko"
+  },
+  {
+   "at": "2023-10-05T13:33:30.555+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Maksym Nosenko"
+  },
+  {
+   "at": "2024-05-10T14:43:23.092+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-05-10T14:43:24.826+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-05-10T14:43:26.804+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-05-10T14:43:28.489+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790320666245.txt"
+}

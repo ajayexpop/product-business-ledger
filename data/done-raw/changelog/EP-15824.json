@@ -1,0 +1,129 @@
+{
+ "k": "EP-15824",
+ "histories": 66,
+ "historiesRead": 66,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-04-11T11:44:06.103+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-06-29T13:06:30.885+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-06-29T13:06:32.043+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-07-03T13:49:34.401+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-07-25T12:48:15.647+0100",
+   "from": "Estimated request",
+   "to": "Awaiting details",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-07-26T10:03:52.367+0100",
+   "from": "Awaiting details",
+   "to": "Considering",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-07-27T11:29:41.486+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-07-27T11:29:46.563+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-07-27T11:29:53.310+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-11T09:17:30.115+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-08-11T10:06:17.168+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-08-11T10:06:19.353+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-08-11T10:06:21.198+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-08-11T10:06:23.391+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-08-11T10:06:25.761+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-08-17T15:48:39.517+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-08-17T15:49:59.578+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-08-23T13:23:56.586+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2023-08-31T11:06:55.558+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790317618618.txt"
+}

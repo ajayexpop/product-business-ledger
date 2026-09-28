@@ -1,0 +1,39 @@
+{
+ "k": "EP-23966",
+ "histories": 144,
+ "historiesRead": 100,
+ "truncated": true,
+ "statusTransitions": [
+  {
+   "at": "2024-02-09T13:55:23.978+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-02-22T10:45:39.639+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2024-02-27T09:50:15.636+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-07-04T12:00:32.981+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790314706767.txt"
+}

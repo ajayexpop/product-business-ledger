@@ -1,0 +1,99 @@
+{
+ "k": "EP-15967",
+ "histories": 39,
+ "historiesRead": 39,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-04-25T10:22:14.848+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-04-25T10:22:19.036+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-04-25T10:22:23.336+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-04-25T10:22:26.157+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-06-07T11:15:02.351+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-06-07T11:15:04.278+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-06-08T15:41:50.451+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-06-08T15:41:51.877+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-06-09T14:22:34.415+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "a.otkidach"
+  },
+  {
+   "at": "2023-06-09T14:22:37.963+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "a.otkidach"
+  },
+  {
+   "at": "2023-06-12T11:33:47.911+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-06-12T11:33:51.107+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-06-12T13:06:53.521+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-06-15T10:44:03.483+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "a.otkidach"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790321368776.txt"
+}

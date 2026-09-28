@@ -1,0 +1,533 @@
+[
+ {
+  "id": "reg-language-preference",
+  "what": "Exhibitor and visitor registration forms can include a Language Preference field. It defaults to the event language and is supported in import and export, and all emails and system notifications use the chosen language.",
+  "why": "Registrants at multilingual events need to receive their emails and notifications in a language they read, not only the event's main language.",
+  "outcome": "Organisers add one field to the form, and each registrant gets their messages in the language they picked at sign-up.",
+  "who": [
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-7417: tech brief adds Language Preference so visitors and exhibitors select their preferred language; emails and notifications follow it. No problem stated."
+ },
+ {
+  "id": "reg-form-field-options",
+  "what": "Custom text fields can be set as website fields, shown as clickable links. Custom select fields can list states/regions or cities. Confirmation page scripts can show the registrant's category, or \"No category\" when none was chosen.",
+  "why": "Website answers were not clickable on the front end, and organisers had no way to show different visitor categories on the confirmation page, as separate pages per category were not possible.",
+  "outcome": "Organisers collect richer details at registration, and registrants see their own category on the confirmation page.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-7851: 'Website field is not clickable on front, need to fix that'. EP-14498: value says clients need categories displayed on confirmation pages since separate pages per category are not possible."
+ },
+ {
+  "id": "reg-default-category",
+  "what": "Each event is created with a default participant category that cannot be deleted and has its own limits and settings. Participants with no category, or whose category is deleted, are assigned to it.",
+  "why": "Participants without a category had no category settings or limits applied to them.",
+  "outcome": "Every participant is covered by category rules, so organisers do not have to chase uncategorised profiles or fix them after a category is removed.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-14938: original request 'default category which will be assigned to participants without category'; wwo_a why: participants without a category had no settings or limits."
+ },
+ {
+  "id": "mobile-language-wording-2023",
+  "what": "The mobile apps offer US English, picked from the phone's locale, with US spellings such as \"Favorites\". The \"Matchmaking information\" section on public profiles in the app is now called \"Profile Information\".",
+  "why": "US users are more comfortable with US spelling in the app, and \"Profile Information\" is easier to understand than \"Matchmaking\" on a public profile.",
+  "outcome": "App users in the US read the app in familiar spelling, and everyone sees a clearer label on profiles.",
+  "who": [
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-12277 value: more user-friendly for US users to see US English. EP-12279 value: more user-friendly to read 'Profile Information' instead of 'Matchmaking'."
+ },
+ {
+  "id": "reg-category-setup",
+  "what": "Participant categories can be reordered by drag and drop or sorted A to Z and Z to A, and that order is used in frontend filters, registration, booking, admin profiles and the app. Custom questions reject duplicate answer names.",
+  "why": "Editing or adding a category changed the order shown on the frontend, and restoring it meant setting up categories, tickets and discounts again.",
+  "outcome": "Organisers set the category order once and it stays put across the platform, and each answer option in a question stays distinct.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17102 problem statement: changes to existing categories or adding a new one changed the ticket order; restoring needed setup from scratch. EP-20197: unique answer names."
+ },
+ {
+  "id": "mobile-android-redesign",
+  "what": "The Android app has redesigned delegate, buyer, exhibitor, product and brand lists, and new session cards and pages with a Live tag, prices and a book button for paid sessions. It adds a no-results screen and icons share one style and size.",
+  "why": "The Android lists and sessions needed to match the iOS app and the web design, and icons across the app were inconsistent in style and size.",
+  "outcome": "Android users browse people, exhibitors, products and sessions in the same layout as iOS, can spot live sessions and book paid ones from the session page.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-1130: #webandmobilealignment, redesign session cards to updated design. EP-16391..16394: 'same as for ios'. EP-7197: icons different in style and size, need to unite."
+ },
+ {
+  "id": "reg-utm-tracking",
+  "what": "UTM parameters from the registration link are carried through to the registration confirmation page, where Google Analytics can read them.",
+  "why": "UTM codes did not reach the confirmation page, so organisers could not track completed registrations in Google Analytics.",
+  "outcome": "Organisers can see which campaigns bring in completed registrations and compare their marketing channels.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-20762: 'the relevant tracking UTM code doesn't appear on the Confirmation Page ... they unable to track the necessary info'."
+ },
+ {
+  "id": "mobile-arabic-multilingual",
+  "what": "The mobile app is available in Arabic. Edit profile, floor plan, basket, exhibitor events and delegates pages inside the app open in the app's language when the event supports it, otherwise in English.",
+  "why": "Multilingual support is a core requirement for many events, and in-app pages opened in English whatever language the phone and app used.",
+  "outcome": "App users can work through the whole app, including profile, floor plan and basket pages, in their own language.",
+  "who": [
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-20409 value: 'one of the main requirements is multilanguage'. EP-23090: 'no matter which language setup on phone ... all webview pages can be open only in default english'."
+ },
+ {
+  "id": "reg-category-cloning",
+  "what": "A Duplicate button copies a participant or exhibitor category with all its settings as a named copy. The categories table adapts to the screen and can be reordered by drag and drop.",
+  "why": "Categories often differ by only one or two settings, yet organisers had to set every option again each time they created a new category.",
+  "outcome": "Organisers set up new categories faster by cloning an existing one and changing only the settings that differ.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23224: problem statement says organisers set up category parameters for each user type; client needed to change one setting; value 'Minimize efforts when setting up the platform'."
+ },
+ {
+  "id": "reg-print-badge-link",
+  "what": "A Print Your Badge variable can be added to the visitor registration confirmation page. The link opens the visitor's badge in a new tab, the same as the print option in the profile and admin panel.",
+  "why": "Some visitors never receive their confirmation email, for example because of a mistyped address, which left them without an easy way to get their badge.",
+  "outcome": "Visitors can print or save their badge as soon as they finish registering, without waiting for an email.",
+  "who": [
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-10489: 'Some users ... don't receive emails because their email domains are not verified or because of language ... Now they want to display the Print Badge link on the confirmation page'."
+ },
+ {
+  "id": "mobile-in-app-updates",
+  "what": "Organisers can enable in-app updates in the app builder and choose between required and optional update prompts, which the apps show when a newer version is released.",
+  "why": "Without a dependable in-app update system, users were missing bug fixes, new features and security improvements.",
+  "outcome": "App users are told when a new version is out, and organisers can require an update when a fix matters for the event.",
+  "who": [
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17855 problem statement: 'Users are being deprived of essential bug fixes, new features, and security improvements due to the lack of a dependable and efficient in-app update system'."
+ },
+ {
+  "id": "reg-basket-discounts-invoices",
+  "what": "The new basket applies discounts per section, with multibuy discounts before discount codes, one code at a time. Invoice payment has its own submit step, and a session's Add to basket link adds it to the basket when opened.",
+  "why": "The new basket needed the discount rules of the previous basket, and organisers needed a link that puts a session straight into a buyer's basket.",
+  "outcome": "Buyers get the correct discount on tickets and sessions, and organisers can share a link that takes people straight to paying for a session.",
+  "who": [
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-26659: 'For our new basket we have to implement the logic of discounts that we had for the old one'. EP-26652: link purpose is to add the session to the basket directly. EP-30801: invoice submit method."
+ },
+ {
+  "id": "reg-field-timestamps",
+  "what": "Any registration field can be set to record the time of input. The latest input time before registration is completed is stored in event local time and exported as a column next to the field.",
+  "why": "Under GDPR double opt-in rules, organisers must record exactly when a registrant agreed to future communication.",
+  "outcome": "Organisers have a timestamped record of consent for each registrant in their export, ready for compliance checks.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-26281: 'As per the double opt-in regulations outlined in GDPR, organizers must obtain user consent ... the system must accurately record the timestamp of their consent'."
+ },
+ {
+  "id": "mobile-app-behaviour-2024",
+  "what": "On launch, the app checks that the user's event still exists. If not, the user is logged out and shown the event selection screen, or the login for the only available event. Collapsing a section on Android keeps the screen in place.",
+  "why": "Organisers who run the same show each year need app users moved on from an event that has been removed, and on Android the screen jumped to an unexpected place when a section was collapsed.",
+  "outcome": "App users land on a current event instead of an old one, and Android users keep their place when they tap show less.",
+  "who": [
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-31013 whoFor: organisers on multi-year contracts running a similar show next year; app validates event ID. EP-34002: 'screen position becomes in unexpected place'."
+ },
+ {
+  "id": "reg-new-basket-payment",
+  "what": "A new participant basket holds tickets, sessions and on-demand sessions, and the exhibitor basket holds manual equipment and lead capture items, with discounts, taxes, totals and payment per section or in full on a new payment page.",
+  "why": "Participants and exhibitors need one place to collect what they have booked and pay now or later, and the payment page existed only in the old interface.",
+  "outcome": "Buyers see what they owe before paying by card, PayPal or Parampos, and items stay reserved for 15 minutes while they pay. Organisers can hide the basket or discounts.",
+  "who": [
+   "Registrants",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-923 wwo_a why: one place to collect tickets and sessions and pay now or later. EP-26932: 'the participant's payment page is done only in the old UI'. EP-23328: 15-min reservation. EP-26539: PayPal, Parampos. EP-27695/30067: modules."
+ },
+ {
+  "id": "reg-new-ticketing",
+  "what": "Organisers create, edit and clone tickets from a new Tickets list in the admin panel, setting name, description, which participant categories can buy each ticket and its check-in zones. Ticket content can be translated.",
+  "why": "Organisers sell tickets both for entry to the event and for upgrading a participant's category, and need to control who can buy each ticket and where it is valid.",
+  "outcome": "Organisers set up tickets for each audience in one place, and visitors read ticket details in their chosen language, with English as the fallback.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "implied",
+  "evidence": "EP-26628: 'Ticketing in new iteration is for upgrading the category of the user and buying a ticket for entering the event'. EP-26629, EP-30803: category, check-in zones, translations. No problem stated."
+ },
+ {
+  "id": "reg-app-basket-payment",
+  "what": "The basket tab in the iOS and Android apps opens the new basket with items, prices, discounts and availability checks. The payment page is adapted for the app with PayPal and Parampos, and session pages in the app add to the same basket.",
+  "why": "The basket and payment page had moved to the new web interface, but the app still opened the old basket.",
+  "outcome": "App users add sessions and pay without leaving the app, and what they add in the app also appears in their basket on the web.",
+  "who": [
+   "App users",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-30723: 'By clicking on it we have a basket that is opened in the old front. Now since the basket is moving to a new front, the tab should open a page in the new front'. EP-31477: page built for web only. EP-35249: mirrored in web."
+ },
+ {
+  "id": "reg-ticket-pricing-tiers",
+  "what": "Tickets can have a fixed price or a dynamic price made of several consecutive date ranges up to the event's last day. Each range has its own name, colour and price, such as Early bird.",
+  "why": "Organisers often charge different prices for the same ticket depending on when people buy it.",
+  "outcome": "Organisers run time-limited offers such as early bird pricing, and registrants see which price period applies from the tag on the ticket.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "implied",
+  "evidence": "EP-26895: Price Type with Fixed price or Dynamic price with several named, coloured time ranges. No problem stated."
+ },
+ {
+  "id": "reg-ticket-visibility-country",
+  "what": "Tickets can be shown per participant category and country, with a country selector in the registration tickets step that syncs with the Country field. An optional setting lets other combinations continue at no charge.",
+  "why": "Organisers needed to sell different sets of tickets depending on the country a registrant selects, and some wanted other countries to register free rather than be stopped.",
+  "outcome": "Registrants see only the tickets that apply to them, and organisers can charge for chosen countries while letting everyone else register at no cost.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-34940 problem statement: 'ability to sell different sets of tickets based on the country they are selecting'. EP-37154: client wanted a set price for one country and category, free otherwise, instead of the error."
+ },
+ {
+  "id": "reg-vat-rules",
+  "what": "VAT on payments is calculated from where the billing and paying companies are located, with EU VAT number validation and a setting to turn the rules off. For example, tax is zero when a non-EU billing company charges an EU payer.",
+  "why": "The VAT due on a sale depends on where the seller and the buyer are based, so a single tax rate does not fit cross-border payments.",
+  "outcome": "Buyers are charged the VAT that applies to their situation, and organisers can turn the rules off when they manage tax another way.",
+  "who": [
+   "Organisers",
+   "Registrants",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-32621: tables of current and new VAT logic by billing and paying company location, EU VAT validation, Disable VAT rules. No problem stated."
+ },
+ {
+  "id": "mobile-app-builder-options",
+  "what": "In the app builder, custom block pages can be shown only to logged-out users, custom blocks can link to the app sign-in page and other app pages, and Gilroy can be chosen for headings and text. The preview shows the real app view.",
+  "why": "Organisers want to show different content to people before and after they log in, and to guide them from a custom page to signing in.",
+  "outcome": "Organisers give logged-out users a clear route to sign in, style the app with their chosen font, and check pages in a preview that matches the app.",
+  "who": [
+   "Organisers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-32358, EP-32359 value: 'Clear differentiation for users & improved user journey'. EP-27462: Gilroy font. EP-35827: preview in iframe to show real app view. EP-32270: Download all hidden in preview only."
+ },
+ {
+  "id": "mobile-tiered-menus",
+  "what": "The app menu uses a tiered structure. Main items show first, and their sub-items appear indented when the parent is expanded, with the parent staying visible.",
+  "why": "The app showed every menu level as one continuous list, which cluttered navigation and made it hard to tell which items belonged together.",
+  "outcome": "App users find what they need in a shorter, grouped menu, and organisers can structure long menus without overwhelming people.",
+  "who": [
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-27309 current behaviour: 'displays all menu items ... as a single continuous list. This results in cluttered navigation, making it difficult for users to identify parent-child relationships'."
+ },
+ {
+  "id": "reg-payment-setup-checks",
+  "what": "Saving a payment integration now checks that its required fields are filled in, and an invalid PayPal secret key for the active test or live mode blocks saving with a clear message. UK VAT number checks use the updated government service.",
+  "why": "Payment integrations must be fully and correctly configured to meet security standards, and the UK VAT number checking service changed how it is accessed.",
+  "outcome": "Organisers find setup mistakes when they save, before a buyer reaches checkout, and UK VAT numbers keep being checked.",
+  "who": [
+   "Organisers",
+   "Registrants",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-38109: 'in order to maintain security standards we need to make sure that the client will fill in all the necessary fields'. EP-38286: PayPal key check. EP-32998: UK VAT API moving to application restricted."
+ },
+ {
+  "id": "mobile-event-selector-2025",
+  "what": "On Android, the event selection and login screens show each event's country and city, and current and past events are ordered by event time. Favourite icons on iOS were replaced with higher-quality versions.",
+  "why": "App users with access to several events need to tell them apart and find the current one quickly.",
+  "outcome": "App users choose the right event at a glance, by place and date, and see crisp favourite icons on iOS.",
+  "who": [
+   "App users",
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-38532, EP-33551: summaries only (country/city on choose event screen; order current/past by event time). EP-39633: 'current quality appears quite low'. No problem stated for the selector."
+ },
+ {
+  "id": "reg-tickets-profile-basket",
+  "what": "Participants have a Tickets tab listing their tickets and those still available. Tickets have their own basket section with discount codes and taxes and are held for 15 minutes during payment. Tickets with sales can only be viewed.",
+  "why": "Changing a ticket after people have bought it risks altering the conditions they paid for, and buyers could not see which basket items had become unavailable until they refreshed.",
+  "outcome": "Participants buy more tickets from their profile, organisers get a warning before turning ticketing off with sales, and buyers see at once which items dropped out.",
+  "who": [
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-38218: 'protect the integrity of purchased tickets and avoid user complaints about changed conditions'. EP-38168: 'can't see what items are unavailable until the refresh'. EP-26632, EP-37664, EP-37784, EP-41971."
+ },
+ {
+  "id": "reg-disable-repeated-registration",
+  "what": "A Disable Repeated Registration visitor setting treats people as new registrants even if their email is already registered for another event on the platform. Duplicate prevention, continuous registration and buyer upgrade still apply.",
+  "why": "Organisers running many events found that returning visitors were sent a one-time code or asked for an old password from another event before they could finish registering.",
+  "outcome": "Returning visitors register in the same simple flow as everyone else, without codes or password resets from past events.",
+  "who": [
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-42940 background: email used for another event triggers OTP or password; 'Organizer aren't happy with this flow, since they are hosting a lot of e[vents]'. Value: simplify repeated registration."
+ },
+ {
+  "id": "reg-orders-invoices-profile",
+  "what": "The participant profile has an Orders section with an Ordered items tab listing purchased tickets and sessions, newest first, and an Invoices tab listing paid orders with sortable columns, item breakdowns and invoice download.",
+  "why": "Participants who pay for tickets and sessions need to see what they have bought and get the receipts for each payment.",
+  "outcome": "Participants check their purchases and download invoices themselves, and organisers can hide the orders tab per role.",
+  "who": [
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-26637: invoices 'contain the receipts for all paid transactions'. EP-26636: ordered items tab. EP-40442: My Orders module per role. No problem stated."
+ },
+ {
+  "id": "reg-ticket-category-upgrades",
+  "what": "When category changes are allowed, participants can buy a ticket of an equal or higher-value category, replacing their current category tickets and paying the difference, on desktop and in the app. Their category shows on the dashboard.",
+  "why": "Participants who want more access after registering need a way to move to a higher category without starting over.",
+  "outcome": "Participants upgrade from their profile and pay only the difference, and can always see which category they are in.",
+  "who": [
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-26633: users can upgrade category by buying a new ticket until sales end. EP-30343: charging the price difference. EP-26634: category indicator. No problem stated."
+ },
+ {
+  "id": "mobile-resync-builder-2025",
+  "what": "A Re-sync button on the app's Settings page fetches the latest event data, up to once an hour. Logged-in users also find Cancel Registration and Delete My Account there. Old workaround text blocks were removed from the app builder.",
+  "why": "To see up-to-date event data, app users had to log in again, force close or reinstall the app.",
+  "outcome": "App users fix out-of-date information themselves in one tap, without logging out or reinstalling.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-41330 user story: fetch up-to-date data 'without needing to re-login, force close, or uninstall the app'; key results mention fewer support queries. EP-42436: workaround text blocks removed."
+ },
+ {
+  "id": "reg-phone-validation",
+  "what": "The phone field checks the format of the number entered.",
+  "why": "A phone number with the wrong format cannot be used to reach the registrant.",
+  "outcome": "Registrants spot a mistyped number as they enter it, and organisers get phone numbers in a usable format.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "implied",
+  "evidence": "EP-44198: summary only, 'Add validation of the phone field by value format'. No description."
+ },
+ {
+  "id": "reg-multilingual-invoices-tax",
+  "what": "Invoices can be translated, with a logo, footer and terms per language and translated labels. Tax names can be set per event language and appear translated on invoices, the basket, exhibitor manuals, tickets and ordered items.",
+  "why": "The platform is meant to be fully multilingual, but invoices and tax names were still shown in one language only.",
+  "outcome": "Buyers receive invoices and see tax names in their event language, so organisers can run paid events in several languages.",
+  "who": [
+   "Organisers",
+   "Registrants",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40498: 'Currently, we don't have a translation for the invoices'. EP-43163: 'Our platform is declared as fully multilingual but we still have some gaps ... Tax name is one of such gaps'."
+ },
+ {
+  "id": "mobile-scrolling-location-text",
+  "what": "In the app, long location text on session, exhibitor event, round table and speed networking detail pages scrolls continuously across the location button, and stays still when it fits.",
+  "why": "On smaller screens, long venue, building and room names were cut off with an ellipsis, hiding details attendees need to find their way.",
+  "outcome": "Attendees read the full location on the page and head to the right room without opening another screen.",
+  "who": [
+   "Attendees",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-44837 'Problem today': 'the location button truncates with ellipsis. Critical wayfinding details are hidden'."
+ },
+ {
+  "id": "reg-invoice-payment-registration",
+  "what": "With a new setting on, participants can choose to pay by invoice when buying paid items during registration. Their paid sessions are scheduled, and the activation email is sent once the organiser confirms payment in Invoice payments.",
+  "why": "Organisers and participants needed an offline way to pay when registering, instead of card payment only.",
+  "outcome": "Participants can register now and pay by invoice, while organisers keep access closed until they have confirmed the payment.",
+  "who": [
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-34905 value: 'It will give an offline payment option to register'; goal: gate profile activation until invoice payment is confirmed."
+ },
+ {
+  "id": "reg-category-lock",
+  "what": "An optional registration setting, off by default, locks the participant category field in the admin panel so no admin can change a participant's category.",
+  "why": "Organisers wanted accidental category changes fully prevented, especially for participants imported with categories already assigned, as a warning alone did not stop them.",
+  "outcome": "Participants keep the category they were registered or imported with, and organisers avoid the knock-on effects of a mistaken change.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45795: feedback asks for 'full prevention of incidental participant category changes', relevant for integrations where users are uploaded with categories; an earlier warning existed, now a hard restriction."
+ },
+ {
+  "id": "reg-ticketing-version-switch",
+  "what": "A New Ticketing module toggle selects the old or new ticketing, globally or per event. Each version keeps its own tickets and settings, and users' tickets are kept when the version changes.",
+  "why": "Organisers need to move from the old ticketing to the new one at their own pace, without disrupting events already set up.",
+  "outcome": "Organisers try the new ticketing on one event while others stay as they are, with no tickets lost in the switch.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-46947 background: 'To enable an earlier release of the new Ticketing and ensure a smooth transition from the old Ticketing, we need a feature flag that allows the Organizer to choose'."
+ },
+ {
+  "id": "reg-new-ticketing-country",
+  "what": "The new ticketing can show each ticket only to registrants from chosen countries, during registration and on the Ticketing page, with a setting, a country choice per ticket and country markers.",
+  "why": "Organisers who sell different tickets by country needed the same control in the new ticketing that the older ticketing already offered.",
+  "outcome": "Registrants see only the tickets that apply to where they are from, and organisers can move to the new ticketing without losing country pricing.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-33039 goal: 'allow organizers to define ticket visibility based on the user's country ... users only see tickets applicable to their location'; note: similar feature implemented for Old UI Registration."
+ },
+ {
+  "id": "mobile-usability-2026",
+  "what": "Sessions and exhibitor events have shareable links that open the session in the app when it is installed, or on the web. On iOS, empty About me sections are hidden on delegate profiles, and the Tickets page shows a spinner while it updates.",
+  "why": "Organisers need a simple way to promote specific sessions to app users, and the Tickets page gave no sign it was working while updating.",
+  "outcome": "Organisers share a link that takes people straight to a session, and app users see tidy profiles and know when their tickets are still loading.",
+  "who": [
+   "Organisers",
+   "App users",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-44893 background: 'Organizers need a simple way to promote specific program items to app users'. EP-49024 ai problem: screen looked frozen with no feedback. EP-47476: hide About me if empty."
+ },
+ {
+  "id": "mobile-global-resync-no-logout",
+  "what": "The global resync in the admin panel now performs a full reset of the app's event data without logging users out, in the same way as the resync in the app's settings.",
+  "why": "The admin panel's global resync logged every user out during a full data reset, which disrupted attendees during live events.",
+  "outcome": "Organisers can push a full data refresh mid-event and attendees stay logged in and carry on using the app.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-49211 ai problem: 'The admin-panel global resync logged all users out during a full database reset/resync, disrupting attendees during live events'."
+ },
+ {
+  "id": "mobile-offline-favourites",
+  "what": "On Android and iOS, tapping Favourite without an internet connection shows the app's standard connection-lost message, across lists, profiles and recommendations.",
+  "why": "Tapping favourite while offline gave no feedback, so users could not tell whether their action had been saved.",
+  "outcome": "App users know straight away when a favourite has not been saved and can try again once they are back online.",
+  "who": [
+   "App users",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52358, EP-52359 ai problem: 'Tapping favourite/unfavourite while offline produced no feedback at all, leaving users unsure whether their action registered'."
+ },
+ {
+  "id": "reg-new-registration",
+  "what": "Registration starts with email verification, which blocks duplicates and resumes unfinished or repeat registrations with details pre-filled. Tabs with an order summary cover conditional fields, tickets, sessions, terms and payment.",
+  "why": "Registrants should only be asked what applies to them, settle paid items before registration completes, and not re-enter everything when they return or register again.",
+  "outcome": "Registrants check everything on one summary before paying, category links show only the right tickets, and organisers switch each event to the new flow when ready.",
+  "who": [
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "Confluence why lines: EP-54663 'paid bookings are settled before registration completes'; EP-54668 'doesn't ask for information that doesn't apply'; EP-54684 'don't have to re-enter everything'; EP-54685; EP-55250 toggle."
+ },
+ {
+  "id": "reg-approval-buyer-waitlist",
+  "what": "Private events with public access and buyer registrations go to the organiser for approval, then are paid via the basket. Participants can upgrade to buyer with details pre-filled, and sign-ups over a limit join a waiting list.",
+  "why": "Organisers want to accept open or invited registrations while keeping control of who gets in and how many, and invited participants should not have to register again to become buyers.",
+  "outcome": "Organisers approve each registrant before access and payment, manage capacity from the waiting list, and participants become buyers without starting over.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "Confluence why: EP-54680 'accept open registrations while the organiser keeps control'; EP-54681 organiser approves each buyer; EP-54682 'don't have to register again from scratch'; EP-54683 'control capacity'."
+ },
+ {
+  "id": "reg-branded-registration-pages",
+  "what": "Organisers set up participant and buyer welcome pages with a hero image, title and description per language. Confirmation pages support merge variables such as QR code and badge link, scripts or a custom page. Sold-out pages have a button.",
+  "why": "People arriving at registration should see a welcome that matches the event, a confirmation with their own details, and clear guidance when tickets have run out.",
+  "outcome": "Organisers brand each registration step from the admin panel, and registrants get their badge details on confirmation or a route back to the event when sold out.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "Confluence why: EP-54656 'branded first impression that matches the event'; EP-54658 'confirming registration with personal details'; EP-54661 'told tickets are no longer available and guided somewhere useful'."
+ },
+ {
+  "id": "reg-checkout-payment-improvements",
+  "what": "Bookings with a total of zero skip the payment form and go straight to the success page. The transaction and invoice payment pages can be searched by payer name or email. In the app, the terms of use open in the device browser.",
+  "why": "Free bookings still went through a payment form, admins had to scroll long payment lists to find a payer, and opening the terms in the app replaced the registration screen.",
+  "outcome": "Registrants finish free bookings in one step and keep their place when reading the terms, and organisers find any payment record in seconds.",
+  "who": [
+   "Registrants",
+   "Organisers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-55358 ai problem: 100%-discount basket still forced a payment form. EP-54690: no search, admins scrolled paginated lists. EP-54612: Terms of Use replaced the registration web-view."
+ },
+ {
+  "id": "mobile-branding-typography",
+  "what": "An event app's custom typeface, previously used only on the My Account and Event Info screens, now covers all remaining Android screens. The mobile app also shows ExpoPlatform branding.",
+  "why": "With the custom font on only two screens, the rest of the Android app used default fonts and did not match the event's intended look.",
+  "outcome": "App users see one consistent typeface on every Android screen, in line with the event's branding.",
+  "who": [
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-56372 ai problem: 'Only the My Account and Event Info screens used the new Gabarito font; the remaining layouts were left on inconsistent default fonts'. EP-54106: ExpoPlatform branding in app."
+ }
+]

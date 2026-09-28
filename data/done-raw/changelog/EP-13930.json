@@ -1,0 +1,75 @@
+{
+ "k": "EP-13930",
+ "histories": 35,
+ "historiesRead": 35,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-02-20T09:55:45.305+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-02-20T09:55:48.993+0000",
+   "from": "Considering",
+   "to": "Awaiting details",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-02-20T09:55:51.020+0000",
+   "from": "Awaiting details",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-02-21T07:13:19.824+0000",
+   "from": "Considering",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-02-21T15:05:25.406+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-02-28T12:57:26.797+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-03-01T07:45:20.272+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-03-07T09:44:36.429+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-03-07T09:44:40.193+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-03-08T19:41:40.386+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790319701161.txt"
+}

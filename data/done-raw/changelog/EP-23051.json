@@ -1,0 +1,63 @@
+{
+ "k": "EP-23051",
+ "histories": 61,
+ "historiesRead": 61,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-11-01T13:37:03.852+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-11-01T13:40:30.206+0000",
+   "from": "Considering",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-12-05T09:13:44.894+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-01-09T17:02:57.282+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-01-11T10:47:47.752+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-01-31T13:35:10.003+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-01-31T13:35:12.057+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-02-01T10:22:30.385+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790320668011.txt"
+}

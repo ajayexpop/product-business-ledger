@@ -1,0 +1,496 @@
+[
+ {
+  "id": "next-0",
+  "what": "Exhibitors will get an insights portal, opened from a secure read-only email link without logging in, with pages on their leads, buyer intent and product interest, and their team's activity.",
+  "why": "Exhibitors need one place to see how their participation is working: who their leads are, what buyers in their categories looked for, and how their team used the platform.",
+  "outcome": "Exhibitors will see lead quality, leads not yet followed up, the categories buyers filtered by and where they have no product profile, so they know where to act next.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-57343 US-1 (token link, no login, read-only); Story 1 API stub; Story 3 Page 02 leads (hot/warm/cold, leads not actioned); Story 4 Page 03 (top filter/category selections, categories with no product profile); Story 5 Page 04 team engagement. No problem stated beyond 'foundation'."
+ },
+ {
+  "id": "next-1",
+  "what": "The app will add calendar views for sessions and for exhibitor events, with 1-day and 3-day grids, overlap handling, track filters and search. The calendar will also gain all-day and multi-day sessions and redesigned session cards.",
+  "why": "Browsing sessions as a flat list makes it hard to see overlapping sessions or plan a day by time slot, and the exhibitor events screen in the app had only a list.",
+  "outcome": "Attendees and exhibitors will plan their day visually by time slot, see what overlaps, and find sessions by track, with the track tab using the name the organiser configured.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "Session Calendar View - Mobile: user story 'navigate the programme visually by day and time slot', problem 'flat List View, hard to see overlapping sessions'; Exhibitor Events Calendar View: 'today only offers a flat list'; By Track drawer label story."
+ },
+ {
+  "id": "next-2",
+  "what": "Sessions and exhibitor events on the web will get location and language filters and important custom category filters shown in the filter pop-up, and filter options will be sorted alphabetically.",
+  "why": "Attendees looking through a large programme need more ways to narrow sessions and exhibitor events, and long filter lists are easier to scan in alphabetical order.",
+  "outcome": "Attendees will find sessions and exhibitor events by where they take place and the language they are held in, and pick filter options faster from an ordered list.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "Titles only: Alphabetical Sorting for Filter Items; Location Filter (Web); Required (Important) Custom Category Filters in popup; Language Filter (Web). Descriptions are links only; no problem stated."
+ },
+ {
+  "id": "next-3",
+  "what": "The v3 Public API will list products across all events with the events each belongs to, return a product's details for every event, and add, update or remove a product's event-specific categories and custom fields.",
+  "why": "In the new API a product exists once and is linked to several events, so integrations need to manage its event-specific data without deleting or duplicating the product itself.",
+  "outcome": "Integrations will keep one product record across events, change its categories and custom fields per event, and remove it from one event while it stays on the others.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "API V3 product stories: 'global vs event-scoped product architecture: the product entity itself is decoupled from any specific event'; DELETE 'global product entity remains intact... on every other event'."
+ },
+ {
+  "id": "next-4",
+  "what": "Event sites will generate their sitemap and robots file with the site, listing full page addresses in every language, add a language switcher search engines can follow, and keep participant profile pages out of search results.",
+  "why": "The sitemap listed relative, redirecting addresses that search engines discard and left out other-language pages, while participant profile pages could be indexed and show personal data in search.",
+  "outcome": "Organisers' event pages in each language can be found through search, and attendees' profiles stay out of public search results.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "Sitemap story: '51 are relative paths... Google discards them', 'No /fr/ URLs at all'; Participant Profiles SEO story: 'not to index public attendee profile URLs or surface personal user data'. Hreflang story is Done."
+ },
+ {
+  "id": "next-7",
+  "what": "The embedded analytics dashboards will get a Meeting Analytics tab showing the admin panel's meeting statistics, filtered by event, dates and meeting tags, with separate figures for each selected tag.",
+  "why": "Meeting statistics are only in the older analytics page of the admin panel, not in the embedded dashboards where organisers view their other event analytics.",
+  "outcome": "Organisers will review meeting requests and outcomes next to attendee and exhibitor analytics, and compare meeting tags side by side. The existing meetings page stays as it is.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-57343: 'showing the meeting statistics we currently show in Analytics > General > Meetings'; 'legacy... page stays as it is'; event, date and meeting-tag filters, separate figures per tag."
+ },
+ {
+  "id": "next-8",
+  "what": "Registrant custom reports now include paid amount and payment status, with a filter for successful payments. Module management will add multi-tier gating for the new registration, globally and per event.",
+  "why": "Payment details and registration answers sat in separate reports, so organisers had to cross-reference them to know which registrants had actually paid.",
+  "outcome": "Organisers get one list of paid registrants with their form answers, without matching two reports by hand.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-55944 (Done): 'one accurate list of registrants who've actually paid, without cross-referencing the separate Payments report'. EP-57634 (In Progress): title only."
+ },
+ {
+  "id": "next-9",
+  "what": "Each field mapping in the Integration Hub will get a 'Null if empty' control. When it is off, an empty value from the connected system is skipped and the existing value is kept. It stays on by default.",
+  "why": "When a connected system sends an empty value for a field that already holds data, the sync overwrites it, and this can clear data such as exhibitor categories.",
+  "outcome": "Integration managers will protect key fields from being cleared by a sync, while still letting chosen fields be cleared on purpose.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-56121: 'returned null for category fields, it overwrote valid data... wiping exhibitor categories'; 'not a Genesis-specific problem'; default ticked preserves current behaviour."
+ },
+ {
+  "id": "next-10",
+  "what": "The Android app will check downloaded ExpoFP floor plan files correctly, so the offline copy is kept instead of being deleted, and the floor plan opens without a connection.",
+  "why": "An incorrect file check in the app's offline floor plan handling rejected and deleted every download, so the offline floor plan never became available.",
+  "outcome": "Attendees will be able to open the floor plan in the Android app even when the venue connection is poor or missing.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-54991: 'the integrity check can fail permanently: the downloaded ZIP is deleted and the offline floor plan never becomes available'."
+ },
+ {
+  "id": "next-11",
+  "what": "A new SAML integration setting will create a platform account automatically when someone signs in through the external identity provider and has no account yet, provided the sign-in carries enough details.",
+  "why": "People who sign in through an organisation's SAML identity provider need a platform account, and creating those accounts in advance is extra setup.",
+  "outcome": "Organisers will let users sign in with their existing credentials without preparing their accounts first.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-1095: 'if account doesn't exist in our database (and in request from external system there are enough info for account creation) need automatically create account'. No problem stated."
+ },
+ {
+  "id": "next-12",
+  "what": "We are scoping the move of the exhibitor list search to AI search: how it will replace the current search, the changes needed, the risks and a phased plan.",
+  "why": "Moving search to a new engine touches indexing, filters and sorting, so the work needs a clear plan before it is built.",
+  "outcome": "The switch to AI search can then be planned and built in stages, keeping existing filters and sorting in mind.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-55778 spike (Ready for review): technical brief with target state, gap analysis, risks incl. 'backward compatibility with existing filters/sorting', phased plan; implementation is EP-55996 (not in this row)."
+ },
+ {
+  "id": "dlg-item-0",
+  "what": "Exhibitor registration on the event website now includes reCAPTCHA as a required step.",
+  "why": "Exhibitor registration without reCAPTCHA received a lot of spam sign-ups, and the form had been switched off because of it.",
+  "outcome": "Organisers can keep exhibitor registration open while automated spam sign-ups are stopped.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16297: 'does not include reCaptcha and we receive a lot of spam. Because of that the exhibitor registration was disabled.' (evidence tier C)"
+ },
+ {
+  "id": "dlg-item-1",
+  "what": "Participant categories can be ordered by drag and drop or sorted A to Z and Z to A, and new categories are added at the end of the list. The saved order is used on the event website and in the app.",
+  "why": "Editing or adding a participant category reshuffled the order shown in registration, and restoring it meant setting up categories, tickets and discounts again.",
+  "outcome": "Organisers show tickets and categories in the sequence they choose, such as regular before student passes, and keep it when they make changes.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17102: 'when we apply any changes to the existing categories or add a new category the ticket order is changed. To restore it we need to start from scratch'. (tier C)"
+ },
+ {
+  "id": "dlg-item-2",
+  "what": "An admin setting connects the app to Aditus. When it is on, the app's badge page lists the user's Aditus tickets, found by email, and each opens its badge, with clear screens when none is found or the device is offline.",
+  "why": "Events using Aditus as the registration partner needed the app to show the Aditus badges attendees registered with, so those badges can be scanned.",
+  "outcome": "Attendees open the badge they registered with straight from the app, and organisers use one badge for scanning.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-25790 whoFor: 'DLG and other clients that are using Aditus as their registration vendor', value: 'Ability to display custom badges for scanning'. (tier A)"
+ },
+ {
+  "id": "dlg-item-3",
+  "what": "Lead downloads can be switched on or off for an exhibitor category or a single exhibitor, and the setting applies to their team members. When off, the Download leads option is hidden on web and in the app.",
+  "why": "Lead downloads could only be switched on or off for every exhibitor in an event at once, whatever their category.",
+  "outcome": "Organisers decide which exhibitor categories or individual exhibitors can download leads, for example as part of a package.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-13663: 'At the moment the download lead options can be turned on/off for all the exhibitors in an event.' (tier C)"
+ },
+ {
+  "id": "dlg-item-4",
+  "what": "Organisers can attach a form of questions that exhibitors must answer when they submit an event, with a policy to accept. The answers show, read-only, in the event details in the admin panel.",
+  "why": "Organisers reviewing exhibitor events for security needed information from exhibitors before approving an event.",
+  "outcome": "Organisers read each exhibitor's answers in one place when reviewing an event and approve it with the information they asked for.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-26093: 'Events Security concern. Organizer should be able to create a list of questions for Exhibitor to answer during submitting Event... Answers should be displayed in Admin panel'. Evidence tier W: not a DLG request."
+ },
+ {
+  "id": "dlg-item-5",
+  "what": "Sessions have a product category display filter, set up the same way as the one for exhibitor events, and available on the All Sessions, On-demand and Round tables tabs.",
+  "why": "Visitors could filter exhibitor events by product category, but that filter was not available for sessions.",
+  "outcome": "Visitors find sessions by one or more product categories when the organiser switches the filter on.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-29933: 'In display filters... the product category filter is not available. The same setting as exists for the exhibitor events'. (tier B)"
+ },
+ {
+  "id": "dlg-item-6",
+  "what": "A registration setting limits the product categories exhibitors can choose to their own activity categories, with a placeholder if they have none. With it off, the behaviour is as before.",
+  "why": "Without the setting, picking a product category outside an exhibitor's activity categories adds it to them automatically, even beyond the category limit.",
+  "outcome": "Organisers keep exhibitors' products within the activity categories they chose, so category listings stay consistent.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-33961: 'If selected category is not selected as Activity category, it will be added to Activity categories automatically, even if Exhibitor Activity categories limit is reached'. Behaviour stated, not framed as a problem. (tier S)"
+ },
+ {
+  "id": "dlg-item-7",
+  "what": "The exhibitor API accepts a sponsor pop-up parameter, so the sponsor pop-up in an exhibitor's profile can be switched on or off when exhibitors are created or updated through the API.",
+  "why": "Your exhibitor data arrives through the API, which had no parameter for the sponsor pop-up, so it had to be switched on by hand for each exhibitor.",
+  "outcome": "Your data feed sets the sponsor pop-up for every exhibitor in one step, with no manual edits in the admin panel.",
+  "who": [
+   "Organisers",
+   "Sponsors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-32201: 'DLG pushes data for their exhibitors via the API; however, our api/v2/exhibitor/set API documentation does not include a parameter... the client would need to manually enable it for each exhibitor'. (tier A)"
+ },
+ {
+  "id": "dlg-item-8",
+  "what": "Admin notifications have a language switcher, so the title and message are written for each event language, with a primary language as fallback. Notifications can also go to app users who are not logged in.",
+  "why": "Visitors use the platform in different languages, and a notification written once reaches everyone in that one language.",
+  "outcome": "Web visitors get notifications in their profile language and app users in their device language, including those not yet logged in.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "App users"
+  ],
+  "basis": "implied",
+  "evidence": "EP-31011: language switcher, primary language, web by profile language, app by device language; EP-32750: 'Non-Logged In App Users' checkbox. whoFor/value TBA; no problem stated. (tiers S, C)"
+ },
+ {
+  "id": "dlg-item-9",
+  "what": "Custom pages in the app builder can be set to show only to visitors who are not logged in. A sign-in link for custom content opens the right login page for the event's sign-in settings.",
+  "why": "Visitors who have not logged in need different app content from those who have, and a direct way to reach sign-in from custom pages.",
+  "outcome": "Organisers show sign-up or welcome content only to logged-out visitors, and it disappears once they log in.",
+  "who": [
+   "Organisers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-32358/EP-32359 whoFor: 'All clients using our mobile app module', value: 'Clear differentiation for users & improved user journey'. (tier S)"
+ },
+ {
+  "id": "dlg-item-10",
+  "what": "The sponsor page in the admin panel has been reworked to load faster.",
+  "why": "The sponsor page in the admin panel was taking a long time to load.",
+  "outcome": "Organisers manage sponsors without waiting for the page to load.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-36019: 'The Sponsor page is loading quite long in the admin panel. We spotted around 28 seconds'. (tier C)"
+ },
+ {
+  "id": "dlg-item-11",
+  "what": "German translations were corrected and completed across the platform, using EuroTier 2024 as the reference and applied to every event, including booking, order, invoice, recommendation and profile link labels.",
+  "why": "Some German wording on the platform was missing or incorrect.",
+  "outcome": "Visitors and exhibitors at German-language events see consistent German terms throughout.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40706: 'Made to Eurotier 2024... probably needs to be corrected globally', 'Translation is not displayed here'; EP-41169: 'apply translation globally, DLG Services - Eurotier 24 as basis'. (tier B)"
+ },
+ {
+  "id": "dlg-item-12",
+  "what": "Tax settings have a language selector, so tax names are set for each event language and shown in that language on invoices, in the basket, in exhibitor manuals, on tickets and on ordered items.",
+  "why": "The platform is meant to be fully multilingual, but tax names were still shown in one language only.",
+  "outcome": "Buyers see tax names on invoices and at checkout in the same language as the rest of their order.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-43163: 'Our platform is declared as fully multilingual but we still have some gaps... Tax name is one of such gaps'; 'Invoices (this is the most important place)'. (tier C)"
+ },
+ {
+  "id": "dlg-item-13",
+  "what": "The Aditus custom badge page setting has been reinstated in the admin panel.",
+  "why": "The Aditus custom badge setting was no longer available in the admin panel and needed to be brought back.",
+  "outcome": "Organisers switch the Aditus badge page on or off for each event themselves.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-44694: 'We need to reinstate the Custom Badge Page with Aditus in our Admin Panel.' (tier C)"
+ },
+ {
+  "id": "dlg-item-14",
+  "what": "Favourite exhibitors and bookmarked stands on the ExpoFP floor plan sync both ways: favouriting an exhibitor bookmarks its stand, and bookmarking a stand favourites the exhibitors on it.",
+  "why": "Visitors kept their interests in two places, exhibitor favourites and floor plan bookmarks, and had to manage them twice.",
+  "outcome": "Visitors mark an exhibitor once and find it both in their favourites and on the floor plan.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-44186: 'So that I can manage my interests across exhibitor lists and the floorplan without duplicated effort or confusion'. Only for ExpoFP floor plan. (tier S)"
+ },
+ {
+  "id": "dlg-item-15",
+  "what": "When a custom Aditus badge cannot be loaded, the app now opens a clear error page for no connection or no ticket found, in English and German, instead of switching to the standard badge page.",
+  "why": "When a custom badge could not be retrieved, the app showed an error and then moved users to the standard badge page, without telling them what to do.",
+  "outcome": "Visitors know why their badge did not load and what to do next, such as checking their connection or visiting the information desk.",
+  "who": [
+   "Attendees",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-48297: 'our fallback... is to show an error message and then revert to the native badge page... We want to inform the user of the problem they are having so they can take the needed action.' (tier C)"
+ },
+ {
+  "id": "dlg-item-16",
+  "what": "We tested, on the live Agritechnica 2025 event, whether the ExpoFP floor plan source on the web can be switched without display or functionality problems.",
+  "why": "During Agritechnica 2025 an ExpoFP update reached the app but not the web, so bus routes showed only in the app, and the web source was left unchanged to avoid risk during the event.",
+  "outcome": "The test shows whether future ExpoFP updates can be applied to the web during an event, so web and app floor plans can stay in step.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-47929: 'web version was not updated, which resulted in bus routes being displayed only in the mobile app'; 'investigate: if we change the floor plan URL on the live event, will there be any issues'. Investigation only. Evidence tier W."
+ },
+ {
+  "id": "dlg-item-17",
+  "what": "Hall and stand lists in the floor plan admin can be sorted in natural alphanumeric order, and several or all halls and stands can be selected and deleted at once.",
+  "why": "Without sorting or multi-select, organisers of large events such as Agritechnica had to scroll, search and delete halls one by one, which was slow and prone to mistakes.",
+  "outcome": "Organisers find a hall or stand quickly and remove many in one action.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-51701: 'particularly problematic for large events (e.g., Agritechnica with 27 halls), where organizers must manually scroll, search, and delete each hall individually'. Evidence tier W: example only."
+ },
+ {
+  "id": "dlg-item-18",
+  "what": "We investigated why finished events could show missing data in the app: documenting the root cause, fix options such as longer retention or a separate sync for archived events, and a support policy after an event ends.",
+  "why": "Visitors reopening past events in the app sometimes found data missing, and earlier cases were only worked around by hand.",
+  "outcome": "Organisers get a clear policy for how long finished events stay available in the app, with a planned fix instead of one-off workarounds.",
+  "who": [
+   "Organisers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52820: 'affects clients trying to access finished events, leading to missing data'; 'immediate workaround... regenerating the zero sync file, but the root cause remains unexplored'. Acceptance criteria are investigation deliverables. Evidence tier W."
+ },
+ {
+  "id": "dlg-item-19",
+  "what": "Visitors who opt out of networking can favourite exhibitors, visitors and products on web and in the app. These favourites stay private: they never identify the visitor or count as leads.",
+  "why": "Visitors want to bookmark content while keeping full control of their data, in line with strict GDPR expectations in Germany.",
+  "outcome": "Opted-out visitors plan their visit like everyone else, and the exhibitors and people they favourite never learn who they are.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-53978 confluence why: 'Attendees want to bookmark content while keeping full control of their data under strict GDPR expectations, especially in Germany'; EP-57577: app parity with web. (tiers S, C)"
+ },
+ {
+  "id": "dlg-item-20",
+  "what": "Exhibitor import, and adding exhibitors from the global database, now attach the exhibitor's existing brands and brand-product links to the new event, with no new import column and no duplicate brands.",
+  "why": "Brands are long-term assets used in sponsorship and search, but they were not carried over on import, so they had to be recreated for every event edition.",
+  "outcome": "Organisers of recurring events bring exhibitors' brands into each new edition automatically.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-55642 confluence why: 'Brands are long-term assets used in sponsorship and search, but exhibitors had to recreate them for every event edition'. (tier S)"
+ },
+ {
+  "id": "dlg-item-21",
+  "what": "The Sessions API can now set and return the five custom session filters. Values are matched and returned in the requested language, and an invalid value is reported without blocking the rest of the update.",
+  "why": "Custom session filters could be set in the session import and the admin panel, but not through the API that your session data integration uses.",
+  "outcome": "Your integration sets and reads session filters directly, and changes to filters alone are picked up in delta syncs.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-57347: 'The Session import file and Admin Panel already support 5 configurable filters... These are not currently exposed via the Open API V2'; comment 'After the DLG escalation'. EP-57348: delta queries pick up filter-only changes. (tier A)"
+ },
+ {
+  "id": "dlg-item-22",
+  "what": "SAML single sign-on has its own settings page in the integrations catalogue, with the same fields and validation as before. Existing SAML setups keep working with no data migration.",
+  "why": "SAML settings sat on the shared general settings page while other integrations had their own pages, and you asked for a dedicated SAML page as an urgent request.",
+  "outcome": "Your team finds and manages single sign-on settings in one dedicated place in the integrations catalogue.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-57684: 'DLG has asked, as an urgent request, for SAML to have its own dedicated settings page'; reuses existing storage, no data migration. (tier A)"
+ },
+ {
+  "id": "dlg-next-0",
+  "what": "Participants will be able to add an academic title at registration, shown before their name on web session cards, speaker lists and profiles and in the app, without cutting the name short. A minimal first release is in preparation.",
+  "why": "The platform has no academic title field, so titles are entered through workarounds such as typing them into the first-name field, and names appear wrong for German-speaking audiences.",
+  "outcome": "Organisers will set the academic titles offered for each event, and participants will see names and titles shown correctly across the event.",
+  "who": [
+   "Organisers",
+   "Speakers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-57544: 'There is no academic title, so DLG and FBM are pushing credentials through workarounds (a custom title1 select, and titles typed into the first-name field), and DACH participants see names... wrong for their market'. EP-57533 scope; EP-57562 minimal release (Ready to start)."
+ },
+ {
+  "id": "dlg-next-1",
+  "what": "Sessions and exhibitor events on the web will get a language filter.",
+  "why": "At events with sessions and exhibitor events in more than one language, visitors need to find the ones held in a language they understand.",
+  "outcome": "Visitors will narrow the programme to sessions and exhibitor events in their language.",
+  "who": [
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-57253: title only; description is a link. (tier S)"
+ },
+ {
+  "id": "dlg-next-2",
+  "what": "The session calendar will show all-day sessions, and will keep each track in the same column across the day, following your track order, with featured and sponsored sessions first.",
+  "why": "Sessions are placed in calendar columns by start time and length only, so one track can move between columns during the day. You raised this in a weekly call.",
+  "outcome": "Visitors will scan down one column to see every session in a track.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-57478: 'the same Track can appear in column 1 at 10:00 but jump to column 3 at 13:00'; 'DLG raised this in the Sep 8 weekly call'. EP-57098 all-day sessions: title only (tier W)."
+ },
+ {
+  "id": "dlg-next-3",
+  "what": "Web pages opened inside the EuroTier iOS app, such as registration, will load without analytics or marketing tags and without the cookie banner. Only strictly necessary cookies will remain.",
+  "why": "App store rules treat web pages inside an app as part of the app, so tracking on those pages would need a tracking permission prompt. You chose a tracking-free in-app page over opening registration in the browser.",
+  "outcome": "Visitors will register inside the app without a cookie banner, and the app stays within app store privacy rules and GDPR.",
+  "who": [
+   "App users",
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-57824: 'Apple App Review treats web content shown inside an app as app functionality'; 'The customer (DLG) rejected opening registration in Safari and has approved a tracking-free, in-app version of the page'. (tier A; status Ready for testing)"
+ },
+ {
+  "id": "dlg-next-4",
+  "what": "The exhibitor and sponsor interaction statistics APIs will include a processing-time marker, so integrations can page through records by when they were processed, with stable pages.",
+  "why": "Integrations that sync interaction statistics in steps need a reliable marker of what has already been processed, so each run picks up the right records.",
+  "outcome": "Your systems will pull interaction statistics in steps and pick up newly processed records, while the existing time field works as today.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Sponsors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-57428/EP-57430: 'new processing-time cursor contract', 'supports cursor-based pagination and downstream deduplication', 'Keep existing time behavior unchanged'. Data-loss problem appears only in the AI summary, not the description. (tier C)"
+ },
+ {
+  "id": "dlg-next-5",
+  "what": "When an event is created from a parent event, session types will keep their 'Visible to' and 'Available to' settings pointing at the new event's categories.",
+  "why": "In that cloning path, session type audience settings were copied as they were and kept pointing at the original event's categories.",
+  "outcome": "Organisers will clone an event and find session types shown to the right audiences without resetting them.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-57471: 'Legacy create from parent... copied the type verbatim and did NOT remap'. Evidence tier W: follow-up fix, not a request. Status In testing."
+ },
+ {
+  "id": "dlg-next-6",
+  "what": "Removing many connections at once will also remove an opted-out visitor's private favourites, matching how single removals already work.",
+  "why": "Opted-out visitors could add favourites in bulk, stored privately, but bulk removal did not touch those private favourites.",
+  "outcome": "Opted-out visitors will clear favourites in bulk, the same way they added them.",
+  "who": [
+   "Attendees",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-55477: 'an opted-out user can bulk-add favourites but cannot bulk-remove them'. (tier C; Ready for testing)"
+ }
+]

@@ -1,0 +1,105 @@
+{
+ "k": "EP-15109",
+ "histories": 42,
+ "historiesRead": 42,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-04-03T19:44:11.721+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-03T19:44:13.823+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-04T11:25:00.929+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-04T11:25:06.148+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-04T11:27:36.790+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-04-11T07:21:45.949+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-04-11T10:08:27.591+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-04-11T16:40:30.535+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2023-04-11T16:40:37.462+0100",
+   "from": "Ready for release",
+   "to": "Ready for development",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2023-04-11T16:40:40.431+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2023-04-11T16:40:43.078+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2023-04-11T16:40:45.347+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2023-04-12T11:42:10.132+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-04-12T13:43:24.375+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-04-13T09:47:29.080+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790319999964.txt"
+}

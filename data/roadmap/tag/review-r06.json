@@ -1,0 +1,1202 @@
+[
+ {
+  "k": "EP-43285",
+  "summary": "[expo-react-components] hide endIcon when in the Button component",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Hid the Button component's end icon under the same conditions as its start icon. Button icons behave consistently."
+ },
+ {
+  "k": "EP-43557",
+  "summary": "Timepicker and Datepicker different space from right for icon and inside timepicker popper different cursor view",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Aligned time and date picker icon spacing and kept the pointer cursor in the time popup. The pickers look and behave consistently."
+ },
+ {
+  "k": "EP-43653",
+  "summary": "Refactor manual save with condition (remove findFromMaster from validateConditions)",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored manual condition saving to avoid reading from the master database. Manual saves handle replica lag cleanly."
+ },
+ {
+  "k": "EP-43669",
+  "summary": "[PortalUI] Replace the component TextField",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the frontend's own TextField with the component library version everywhere. Text fields come from the shared library."
+ },
+ {
+  "k": "EP-44177",
+  "summary": "[portalUI] Add a limit in the MultipleSelect to avoid unnecessry virtualization ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Added a length limit to the frontend multiple select to avoid unnecessary virtualisation. Small lists render without virtualisation."
+ },
+ {
+  "k": "EP-44202",
+  "summary": "[portalUI] page is down when ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Kept pages working when the page element data request fails or times out. Pages stay up if element data fails."
+ },
+ {
+  "k": "EP-44234",
+  "summary": "[portal-ui] make one general component from UserInfoBlock and UserInfoRT",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Merged two user info components into one general component. User info displays through one component."
+ },
+ {
+  "k": "EP-44236",
+  "summary": "[portal-ui] change id=\"modalContent\" to class name in ModalWindow",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the modal content ID with a class and used a proper dialog title. The modal component is cleaner."
+ },
+ {
+  "k": "EP-44347",
+  "summary": "[expo-react-components]: Add new custom variant for TextField",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Added a custom TextField variant matching the design. Text fields match the design system."
+ },
+ {
+  "k": "EP-44553",
+  "summary": "[adminv2] added pipeline to the project",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Added a global pipeline to the new admin panel: builds for production and tests on RC. Admin panel builds and tests run automatically."
+ },
+ {
+  "k": "EP-44947",
+  "summary": "Phone field for Admins",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin profile fields",
+  "text": "Added a phone field to admin profiles for use in campaign variables. Admin phone numbers can appear in emails."
+ },
+ {
+  "k": "EP-45177",
+  "summary": "Unnecessary bg for label in text field",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Made text field labels transparent in the admin panel. Labels blend with fields."
+ },
+ {
+  "k": "EP-45199",
+  "summary": "Because of very long page name page access table could be broken",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Stopped long page names breaking the page access table layout. The table stays aligned with long names."
+ },
+ {
+  "k": "EP-45209",
+  "summary": "CustomListingContentManager. Move buttons to ActionButtons (after modals will be changed)",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved custom listing content manager buttons into the ActionButtons prop. Buttons use the shared pattern."
+ },
+ {
+  "k": "EP-45331",
+  "summary": "[expo-react-components] Fix `showMaxLength` for defaultValue in TextField",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed showMaxLength with a default value in TextField. Character counters work with prefilled fields."
+ },
+ {
+  "k": "EP-45494",
+  "summary": "[PortalUI] Use AI to rewrite children from props into native React children",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote frontend components to pass children natively instead of through props. Components use native children."
+ },
+ {
+  "k": "EP-45515",
+  "summary": "[adminUI] Use AI to rewrite children from props into native React children",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote admin UI components to pass children natively instead of through props. Admin components use native children."
+ },
+ {
+  "k": "EP-45734",
+  "summary": "[admin-ui] Replace IconButton+Menu with MenuWithThreeDots",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the ticket card's icon button and menu with the shared three-dots menu. Ticket cards use the shared menu."
+ },
+ {
+  "k": "EP-45766",
+  "summary": "Replace IconButton with Rating from MUI in FeedbackRating",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced feedback rating icon buttons with the MUI Rating component in the site builder. Feedback ratings match the design."
+ },
+ {
+  "k": "EP-45768",
+  "summary": "Add \"remove styling\" button for TextEditor",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Rich text editor improvements",
+  "text": "Added a 'remove styling' button to the text editor. Admins can strip pasted styles."
+ },
+ {
+  "k": "EP-45773",
+  "summary": "[adminv2] Change Button + IconButton to SplitButton in ExhibitorHeaderActions",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced exhibitor header actions with a split button. The header actions match the design."
+ },
+ {
+  "k": "EP-45774",
+  "summary": "[adminv2] Remove IconButton from ExhibitorAnalyticLeadRating",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed an icon button from the exhibitor lead rating analytics. The component matches the design."
+ },
+ {
+  "k": "EP-45779",
+  "summary": "[adminv2] Replace IconButton with Box in AppStatisticsCard",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced an icon button with a box in the app statistics card. The card follows the design."
+ },
+ {
+  "k": "EP-45780",
+  "summary": "[adminv2] Replace IconButton with Box in InteractionsSuppliers",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced an icon button with a box in the suppliers interactions card. The card follows the design."
+ },
+ {
+  "k": "EP-45781",
+  "summary": "[adminv2] Replace IconButton with Box in ItemStatisticsCard",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced an icon button with a box in the item statistics card. The card follows the design."
+ },
+ {
+  "k": "EP-45782",
+  "summary": "[adminv2] Replace IconButton with Box in components",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced icon buttons with boxes in analytics rating, statistics and currency components. The components follow the design."
+ },
+ {
+  "k": "EP-45868",
+  "summary": "[portalUI] add loader to the buttons with downloading files in the user profile",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "User profile improvements",
+  "text": "Added loaders to the download buttons for scanned contacts in the user menu. Users see progress on lead downloads."
+ },
+ {
+  "k": "EP-45876",
+  "summary": "Change IconButton with Box in MatchmakingInfoCard",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced an icon button with a box in the matchmaking info card. The card matches the design."
+ },
+ {
+  "k": "EP-45899",
+  "summary": "Optimize response data for delegate search",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Optimised the response data for delegate search. Delegate search responses are lighter."
+ },
+ {
+  "k": "EP-45903",
+  "summary": "Replace buttons with box in ExhibitorEventsFormPreview.tsx",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Created a shared preview component for exhibitor event forms and online rooms. Both previews use one component."
+ },
+ {
+  "k": "EP-45904",
+  "summary": "replace IconButton + menu with MenuWithThreeDots in  ExhibitorEventsList.tsx",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the exhibitor events list menu with the shared three-dots menu. The list uses the shared menu."
+ },
+ {
+  "k": "EP-45917",
+  "summary": "Replace Table with Table from expo-components in ProfileRatingsContent",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the profile ratings table with the component library table. The ratings table matches the design."
+ },
+ {
+  "k": "EP-45987",
+  "summary": "Reduce number of requests from app to server",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Reduced app requests for recommendation IDs, filters and onboarding settings with debouncing and conditions. The apps send far fewer of these requests."
+ },
+ {
+  "k": "EP-46142",
+  "summary": "Create one preview component",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Created one preview component for exhibitor event forms and online rooms, using CSS variables for colour. Both use one preview component."
+ },
+ {
+  "k": "EP-46542",
+  "summary": "Authentication Flow Discovery (All Teams)",
+  "epic": "Authentication Enablement",
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Documented every authentication flow, login form, token exchange and session handler across teams. All authentication flows are documented."
+ },
+ {
+  "k": "EP-46827",
+  "summary": "Fix translate in components/profile/common/UploadedMediaFiles.tsx",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Made the delete-files confirmation one translatable sentence. The confirmation translates correctly."
+ },
+ {
+  "k": "EP-46837",
+  "summary": "[adminUI] Add sentry to the project",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added Sentry error tracking to the admin UI. Admin UI errors are captured."
+ },
+ {
+  "k": "EP-46912",
+  "summary": "[adminUI] Add to apiCall correct response  add type void",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Corrected the admin API call return type and fixed resulting type errors. API calls are typed correctly."
+ },
+ {
+  "k": "EP-46955",
+  "summary": "[portalUI] Add missed keys and languages to the project (IS)",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform languages",
+  "text": "Added missing translation keys and languages, including Icelandic, to the frontend. The frontend supports Icelandic and fills gaps in other languages."
+ },
+ {
+  "k": "EP-47025",
+  "summary": "Implement EBS snapshots with AWS DLM",
+  "epic": "DS infrastructure and monitoring",
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Implemented automated EBS snapshots with AWS DLM plus weekly ClickHouse backups to S3, encrypted and restore-tested. Full-instance backups run daily without downtime, meeting ISO 27001 needs."
+ },
+ {
+  "k": "EP-47038",
+  "summary": "Translation: please apply the missing system translations",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform languages",
+  "text": "Applied missing and corrected German system translations in the basket, discount codes, registration and meeting request. German events show correct basket and meeting terms."
+ },
+ {
+  "k": "EP-47709",
+  "summary": "[adminv2] Make our test faster",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Sped up the new admin panel tests with a shared parent component for theme and store. Admin tests run faster."
+ },
+ {
+  "k": "EP-49202",
+  "summary": "Admin panel. Profile completition in Participants list",
+  "epic": "Hyve Q1.26 delievery",
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Profile completion",
+  "text": "A sortable Profile completion column in the Admin Panel participants list, matching the frontend value, with a recalculate button. Organisers sort participants by profile completion and refresh values after imports or bulk changes."
+ },
+ {
+  "k": "EP-49221",
+  "summary": "Participant Profile Completion Calculation Update",
+  "epic": "Hyve Q1.26 delievery",
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Profile completion",
+  "text": "Participant profile completion counts only the fields a participant can see and edit, each weighted equally, including photo. Fields that are hidden by conditions, not editable or disabled no longer drag down completion."
+ },
+ {
+  "k": "EP-52457",
+  "summary": "Implementing Universal Pagination Memory in Admin Panel for User Experience Enhancement - Required List ONLY",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin panel pagination",
+  "text": "Admin Panel lists remember each user's page, page size and sorting after a refresh or on returning, alongside the filters they already remembered. Organisers come back to exactly the view they left on participants, exhibitors, sessions and other lists."
+ },
+ {
+  "k": "EP-52989",
+  "summary": "Standardising Pagination in the Admin Panel for Consistency and User Experience",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin panel pagination",
+  "text": "Pagination across about 40 Admin Panel lists is standardised: always at the bottom, with the same design and page-size control. Organisers get the same pagination on every admin list, from participants and exhibitors to payments and check-in."
+ },
+ {
+  "k": "EP-53117",
+  "summary": "Implementing Universal Pagination Memory in Admin Panel for User Experience Enhancement - Good To Have List ONLY",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin panel pagination",
+  "text": "Admin Panel lists remember each user's page, page size and sorting after a refresh or on returning, alongside the filters they already remembered. Organisers come back to exactly the view they left on participants, exhibitors, sessions and other lists."
+ },
+ {
+  "k": "EP-53413",
+  "summary": "Admin panel rearangement. Move Sponsorship",
+  "epic": "Admin Panel Restructure & Navigation",
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin panel restructure",
+  "text": "Sponsorship becomes a top-level Admin Panel menu item right after Management, and a standalone module in Module Management. Organisers find sponsorship at the top level, with existing on/off states and functionality unchanged."
+ },
+ {
+  "k": "EP-53978",
+  "summary": "Enhancing Privacy for Opted-Out Users: Favouriting Features and GDPR Compliance",
+  "epic": "IMEX GDPR Requirements",
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Private favourites for opted-out users",
+  "text": "Opted-out attendees can favourite users, exhibitors and products privately; these favourites never expose them, count as leads or appear in the API. Favouriting works for everyone on web and app; counters note they may include anonymous favourites, and privacy holds if users later opt in."
+ },
+ {
+  "k": "EP-54790",
+  "summary": "Independent OTP Authentication Configuration for Company and Individual Profiles in Events",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "One-time password login",
+  "text": "OTP login can be switched on separately for individual profiles and company (exhibitor) profiles, via a single email-first login form. Attendees keep passwordless login while exhibitors can use a password; existing events keep OTP on for both."
+ },
+ {
+  "k": "EP-7344",
+  "summary": "Rewrite Phone field validation and country code substitution",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote phone field validation and country code substitution. Phone numbers validate per country with the correct code and flag."
+ },
+ {
+  "k": "EP-17283",
+  "summary": "If the name of the hall contains an apostrophe, the entire javascript on the exhibitor registration page breaks down",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the exhibitor registration page breaking when a hall name contains an apostrophe. Hall names with apostrophes no longer break registration."
+ },
+ {
+  "k": "EP-20197",
+  "summary": "Prohibit same \"names\" responses for answers options\"",
+  "epic": null,
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "Registration custom questions",
+  "text": "Blocked duplicate answer option names in questions. Each answer option has a unique name."
+ },
+ {
+  "k": "EP-20337",
+  "summary": "Move method to Basket Service",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved adding a session to the basket into the basket service. Session basket logic sits with the rest of the basket logic."
+ },
+ {
+  "k": "EP-20546",
+  "summary": "Exclude \"Expo Category\" and \"Confirm Email\" fields",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Excluded 'Expo Category' and 'Confirm Email' from the exhibitor custom listing table fields. Those fields can't be picked for the custom listing table."
+ },
+ {
+  "k": "EP-23156",
+  "summary": "Check EU VAT API requests count",
+  "epic": "Basket&Payment page upgrade",
+  "theme": "reg",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Audited EU VAT API request volumes by form and looked for duplicate requests. VAT API usage was checked for duplicates."
+ },
+ {
+  "k": "EP-23359",
+  "summary": "Remove checkbox value on /api/v1/basket/delete request",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Made basket deletion also remove the checkbox value. Removing an item from the basket clears its checkbox."
+ },
+ {
+  "k": "EP-26652",
+  "summary": "Add to the basket link for adding the session to the basket",
+  "epic": null,
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "Sessions in the basket",
+  "text": "Made the Add to basket link on session pages add the session directly when opened. A shared link adds a session to the basket."
+ },
+ {
+  "k": "EP-26659",
+  "summary": "Applying of the discounts",
+  "epic": null,
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "Discounts",
+  "text": "Implemented discounts in the new basket: per-section discounts, multibuy then code discounts, one code at a time, remembered and auto-applied. Discount codes and multibuy discounts work in the new basket."
+ },
+ {
+  "k": "EP-29730",
+  "summary": "Interrelated settings with payments",
+  "epic": "Basket&Payment page upgrade",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New basket and payment page",
+  "text": "Verified payment settings with the new basket and payment pages: payee type, transactions, invoice options, totals, module toggle, invoice email. Payment settings work with the new basket and payment integrations."
+ },
+ {
+  "k": "EP-30801",
+  "summary": "Change logic for invoice payment",
+  "epic": null,
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "Invoice payment",
+  "text": "Split invoice payment into its own submit step, leaving checkout to validate payment data. Invoice payments update status through a dedicated step."
+ },
+ {
+  "k": "EP-31418",
+  "summary": "[Ticketing&Invoicing](Part 3) [FE] Ticketing tab to be displayed via iframe - blocked by Registration",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "Ticketing in the new UI",
+  "text": "Displayed the new ticketing tab inside the old admin registration page via an iframe. Admins manage tickets in the new UI from the registration pipeline."
+ },
+ {
+  "k": "EP-32998",
+  "summary": "Check and implement new changes to the UK VAT API service",
+  "epic": null,
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "VAT and tax rules",
+  "text": "Checked and implemented changes to the UK VAT number checking API. UK VAT number checks follow the updated API."
+ },
+ {
+  "k": "EP-33039",
+  "summary": "[Ticketing&Invoicing] Visibility of Tickets by Country",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "Ticket visibility by country",
+  "text": "Added ticket visibility by country to the new ticketing: a setting, per-ticket country selection and country markers. Organisers show each ticket only to users from chosen countries."
+ },
+ {
+  "k": "EP-33119",
+  "summary": "1 Confirmation page setup for Participant",
+  "epic": "Participant Registration on New UI",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Organisers can configure the Participant confirmation page: image, title, rich-text description with merge variables, an optional script, or a custom Website Builder page. After registering, participants land on a personalised confirmation page with values like name, QR code and print-badge link filled in."
+ },
+ {
+  "k": "EP-34191",
+  "summary": "The tax name should be displayed on the front and admin panel",
+  "epic": "Basket&Payment page upgrade",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New basket and payment page",
+  "text": "Displayed the admin-set tax name in the basket and admin panel. The tax name organisers enter appears to buyers."
+ },
+ {
+  "k": "EP-34242",
+  "summary": "Investigate and fix the problems with PayPal",
+  "epic": "Basket&Payment page upgrade",
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Investigated and fixed PayPal integration problems: payments possible with Payments off and missing invoices. PayPal payments follow the Payments setting and produce invoices."
+ },
+ {
+  "k": "EP-34607",
+  "summary": "The tax name should be displayed on the front and admin panel (except Participant's basket) ",
+  "epic": null,
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New basket and payment page",
+  "text": "Displayed the admin-set tax name in the exhibitor basket, payment pages, registration, admin payment reports and new invoices. The organiser's tax name appears everywhere tax is shown."
+ },
+ {
+  "k": "EP-34669",
+  "summary": "Basket Payments refactor",
+  "epic": "Basket&Payment page upgrade",
+  "theme": "reg",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the payments service from the basket namespace to the universal services. Payments logic is shared."
+ },
+ {
+  "k": "EP-34965",
+  "summary": "Spiner while recalculating the text",
+  "epic": "Basket&Payment page upgrade",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New basket and payment page",
+  "text": "Showed a spinner and disabled the pay button while VAT is recalculated on the payment page, on desktop, mobile and the app basket. Buyers can't pay mid-recalculation."
+ },
+ {
+  "k": "EP-35239",
+  "summary": "Include all currencies in the database",
+  "epic": "Basket&Payment page upgrade",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New basket and payment page",
+  "text": "Let organisers pick any currency in payment settings, with the most traded currencies first. Organisers set any currency themselves."
+ },
+ {
+  "k": "EP-35249",
+  "summary": "Connect the session page in the app with new UI Basket",
+  "epic": "Basket&Payment page upgrade",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New basket and payment page",
+  "text": "Connected the app's session page to the new basket, mirroring additions on web. App users can add sessions to the basket."
+ },
+ {
+  "k": "EP-35631",
+  "summary": "Fixing the avoiding payment in PayPal",
+  "epic": "Basket&Payment page upgrade",
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Added and enforced a PayPal secret key so payments can't be bypassed. PayPal payments are verified with a secret key."
+ },
+ {
+  "k": "EP-35833",
+  "summary": "Disable “Pay” Button to Prevent Multiple Requests",
+  "epic": "Basket&Payment page upgrade",
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Disabled the Pay button while a payment request is processing. Only one payment request is sent per click."
+ },
+ {
+  "k": "EP-36099",
+  "summary": "(Part 2) Changes to the logic of All locations selector",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New UI ticketing",
+  "text": "Made tickets set to All locations include check-in zones created later. All-location tickets cover every check-in zone."
+ },
+ {
+  "k": "EP-36591",
+  "summary": "Ticket is cloned afer clicking on Create button",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Changed ticket cloning to open a Clone ticket popup that creates the copy only on Save, with translations prefixed 'Copy of'. Admins review a cloned ticket before it's created."
+ },
+ {
+  "k": "EP-37398",
+  "summary": "Changing the text for confirmation window after the payment is done",
+  "epic": null,
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New basket and payment page",
+  "text": "Changed the payment confirmation window text in participant and exhibitor baskets to confirm success and the email sent. Buyers see a clear payment confirmation."
+ },
+ {
+  "k": "EP-38109",
+  "summary": "Validation of Required Fields for Payment Integrations",
+  "epic": null,
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "Payment integrations",
+  "text": "Validated required fields for active payment integrations on save, and blocked payment in the basket when configuration is incomplete. Payment integrations can't run half-configured."
+ },
+ {
+  "k": "EP-38133",
+  "summary": "(Part 2) Refactor of the discounts to introduce a new one",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "theme": "reg",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored basket discounts to support a new ticket exchange discount, retesting code and multibuy discounts. Discounts can be extended with new types."
+ },
+ {
+  "k": "EP-38136",
+  "summary": "(Part 2) No Pay for this order button if we have only one section",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "Ticketing",
+  "text": "Showed only a Pay button when the basket has a single section. Single-section baskets have one Pay button."
+ },
+ {
+  "k": "EP-38168",
+  "summary": "(Part 2) Rerendering of the basket after deletion and items becoming unavailable",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "Ticketing",
+  "text": "Re-rendered the basket after a pay attempt finds unavailable items, so buyers see which items are affected. The basket shows unavailable items immediately and payment continues for the rest."
+ },
+ {
+  "k": "EP-38223",
+  "summary": "A new Slider for Orders tab",
+  "epic": "(New UI) Orders page",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New orders page",
+  "text": "Replaced the Slick slider with Swiper in the Orders tab. The Orders tab uses Swiper."
+ },
+ {
+  "k": "EP-38389",
+  "summary": "(invoice template) - ACI Asia-Pacific & Middle East Regional Assembly, Conference and Exhibition 2025 - invoice has odd lines in the payment summary ",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Widened the invoice payment summary table so long labels don't break across lines, shrinking text if still too long. Invoice payment summaries display cleanly."
+ },
+ {
+  "k": "EP-38900",
+  "summary": "*SYF* Restrict the decimal value to 2 decimal places.",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Limited tax values on visitor registration to two decimal places. Tax shows at most two decimals."
+ },
+ {
+  "k": "EP-39585",
+  "summary": "The discounts should be according to the event time zone",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Made discount code start and end dates use the event's time zone instead of UTC. Discount codes open and close at the event's local time."
+ },
+ {
+  "k": "EP-40393",
+  "summary": "Fix payment form (after country manager deploying)",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Prefilled country, city and region on the payment page when paying as a company. Company payment forms are prefilled from the profile."
+ },
+ {
+  "k": "EP-40442",
+  "summary": "[Ticketing] Create module for ordered items",
+  "epic": "(New UI) Orders page",
+  "theme": "reg",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Added a My Orders module per role, globally and per event, to show or hide the My Orders tab on web and in the app. Admins can hide My Orders for participants, buyers or team members."
+ },
+ {
+  "k": "EP-40498",
+  "summary": "Translation for invoices",
+  "epic": null,
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "Invoice translations",
+  "text": "Added translation for invoices: per-language logo, footer and terms, and translated invoice labels. Invoices can be issued in the event's languages."
+ },
+ {
+  "k": "EP-40677",
+  "summary": "[admin panel] Fix location select in Ticketing",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the ticketing location select with 3,200 partly repeated options. Ticket locations are easier to pick."
+ },
+ {
+  "k": "EP-41207",
+  "summary": "Update JavaScript Payment Form Scripts with Revised Endpoint URLs",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Built a Stripe payment form script and updated PayPal and Parampos forms to the new cities endpoint. Payment forms use one cities endpoint."
+ },
+ {
+  "k": "EP-41932",
+  "summary": "Discounts in registration | showing 0 price",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Showed the normal discount view, with price breakdown and confirmation, when a discount brings a ticket to zero. Free-after-discount tickets are clearly confirmed."
+ },
+ {
+  "k": "EP-41971",
+  "summary": "[Part 2] Warning while turning off Ticketing",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "Ticketing",
+  "text": "Warned admins before turning off ticketing when users have already bought tickets. Admins confirm before disabling ticketing with sales."
+ },
+ {
+  "k": "EP-42686",
+  "summary": "TypeError from discord: must be of the type int, string given",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed a type error in OTP code checking. OTP checks accept the code format sent."
+ },
+ {
+  "k": "EP-42697",
+  "summary": "Remove basket item type models",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed the old per-type basket item models. The basket no longer carries legacy models."
+ },
+ {
+  "k": "EP-42895",
+  "summary": "Check ticket and ticketNew types in basket",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Made the new basket display both old and new ticket types. The basket handles every ticket type."
+ },
+ {
+  "k": "EP-43180",
+  "summary": "Registration does not end with a \"Thank you\" page",
+  "epic": null,
+  "theme": "reg",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed registration ending on a blank page instead of the thank-you page. Registrants see the thank-you page."
+ },
+ {
+  "k": "EP-54656",
+  "summary": "Story 1. Main Participant registration page setup",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Organisers can set up the Participant registration welcome page in the Admin Panel: hero image, title and description, each switchable, with a flip-sides layout. The registration landing page shows the organiser's image and multilingual welcome text, with save, cancel and unsaved-changes warnings in setup."
+ },
+ {
+  "k": "EP-54657",
+  "summary": "Story 2. Main Buyer registration page setup",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Organisers can set up the Buyer registration welcome page: hero image, title and description, each switchable, with a flip-sides layout. Buyer registration opens on a branded, multilingual welcome page configured in the Admin Panel."
+ },
+ {
+  "k": "EP-54658",
+  "summary": "Story 3. Confirmation page setup for Participant",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Organisers can configure the Participant confirmation page: image, title, rich-text description with merge variables, an optional script, or a custom Website Builder page. After registering, participants land on a personalised confirmation page with values like name, QR code and print-badge link filled in."
+ },
+ {
+  "k": "EP-54659",
+  "summary": "Story 4. Confirmation page setup for Buyer",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Organisers can configure the Buyer confirmation page: image, title, rich-text description with merge variables, an optional script, or a custom Website Builder page. Buyers land on a personalised confirmation page after registering, set up in the Admin Panel."
+ },
+ {
+  "k": "EP-54661",
+  "summary": "Story 5. Sold out tickets page setup",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Organisers can configure a Sold Out page shown when all registration tickets are gone: image, title, description and a button with a custom link. A branded, multilingual Sold Out page replaces the registration form when tickets run out."
+ },
+ {
+  "k": "EP-54662",
+  "summary": "Story 6. Sold out tickets page",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Participants see the Sold Out page when no tickets remain for them, including when tickets are limited by participant category or country. The Sold Out page appears at the right point in the registration flow, in the chosen language, with a button back to the event."
+ },
+ {
+  "k": "EP-54663",
+  "summary": "Story 7. Registration with payment",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Registration now sends attendees with paid items to the payment page on submit, after an availability check; free registrations complete directly. Paid items are paid before confirmation; for private events with public access or a reached registration limit, items go to the basket instead."
+ },
+ {
+  "k": "EP-54664",
+  "summary": "Story 8. Registration: Visitor can verify Email on Registration Landing Page",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "A registration landing page where visitors enter and verify their email before the Participant registration form, with required and format checks. Duplicate emails are blocked, returning or unfinished registrations are routed to their flows, and closed registration redirects to a set URL."
+ },
+ {
+  "k": "EP-54665",
+  "summary": "Story 9. Registration: Visitor can verify Email on Buyer Registration Landing Page",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "A Buyer registration landing page where visitors verify their email before the Buyer form; existing participants confirm identity by email link. Buyers start with email verification; logged-in participants upgrading to Buyer skip it; existing buyers are blocked from duplicates."
+ },
+ {
+  "k": "EP-54667",
+  "summary": "Story 11. Registration: Participant can select and purchase Tickets during Registration",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "A mandatory Tickets step in registration where participants pick tickets, limited by category, with availability checks and a one-hour reservation hold. Participants must add a ticket to continue; tickets respect category, visibility and stock rules, and buyers skip the step."
+ },
+ {
+  "k": "EP-54668",
+  "summary": "Story 12. Registration: Condition logic for Grids and Fields during Registration",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Condition logic in the new registration: grids and their fields show or hide by participant category or by the answer to a conditional question. Hidden grids skip their required fields, empty tabs disappear, and behaviour matches the new Edit Profile."
+ },
+ {
+  "k": "EP-54669",
+  "summary": "Story 13. Tabs navigation",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Tab navigation for the new registration: previous/next buttons, clickable visited tabs, and a side menu with event image, title, tab list and order summary. Registration has a side navigation showing progress and paid items; skipping past unfilled required fields is blocked."
+ },
+ {
+  "k": "EP-54670",
+  "summary": "Story 14. Grids and fields layout",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "The new registration uses the Edit Profile grid and field layout, with all field attributes and system fields (email, country, category) pre-filled. Registration forms honour required, hidden, disabled and conditional fields, keep data between tabs and adapt to screen size."
+ },
+ {
+  "k": "EP-54671",
+  "summary": "Story 15. Sessions as part of Registration",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "A Sessions tab in registration where participants browse, search, filter and book paid and free sessions, with 'at least one' or 'all sessions' rules. Paid sessions go to the order summary, free ones to the schedule, and full sessions are hidden."
+ },
+ {
+  "k": "EP-54672",
+  "summary": "Story 16. Summary",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "A Summary step at the end of registration showing submitted details and paid items, with edit links, discount codes, terms and reCAPTCHA. Participants review everything in one place and proceed to payment or submit; unavailable required items block completion."
+ },
+ {
+  "k": "EP-54673",
+  "summary": "Story 17. Terms and Conditions",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Terms and Conditions in the new registration: participants view the full text in a pop-up and must agree when the organiser makes it required. Registration can't complete until required terms are accepted, matching the old registration."
+ },
+ {
+  "k": "EP-54674",
+  "summary": "Story 18. Email notifications for Registration",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "The new registration sends the same emails as the old one: confirmation, pending approval, waiting list and unfinished-registration reminders. Organisers' existing email templates and settings work unchanged with the new registration."
+ },
+ {
+  "k": "EP-54676",
+  "summary": "Story 20. Embed Participant Category in Registration URLs",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "A participant category embedded in the registration URL filters tickets to that category and pre-fills and locks the category field. Category-specific registration links work in the new registration, falling back to standard behaviour for invalid categories."
+ },
+ {
+  "k": "EP-54677",
+  "summary": "Story 21. Confirmation page for Participant",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Participants see a confirmation page after registering, with the organiser's image and text, merge variables such as QR code and badge link, and scripts. Every completed registration ends on a multilingual, personalised confirmation page, or the organiser's custom page."
+ },
+ {
+  "k": "EP-54678",
+  "summary": "Story 22. Confirmation page for Buyer",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Buyers see a dedicated confirmation page after Buyer registration, with image, text, merge variables, optional scripts and multilingual content. Buyer registration ends on a branded confirmation page, or a custom page chosen by the organiser."
+ },
+ {
+  "k": "EP-54679",
+  "summary": "Story 23. Public Registration",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Public registration in the new flow: participants register without organiser approval and activate their profile from the registration email. Public-event registration covers email checks, activation, registration limits, repeat and unfinished registrations, and payment."
+ },
+ {
+  "k": "EP-54680",
+  "summary": "Story 24. Registration to Private event with Public access",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Registration for private events with public access: participants submit for approval, paid items are reserved, and payment happens after approval. After approval, participants log in to a basket they must pay before their profile becomes active, on web and in the app."
+ },
+ {
+  "k": "EP-54681",
+  "summary": "Story 25. Registration of Buyers",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Buyer registration from an agent's link: buyers register with a new email, submit for organiser approval, and pay reserved items after approval. Approved buyers pay for reserved items in a basket that can't be closed, then their profile becomes active."
+ },
+ {
+  "k": "EP-54682",
+  "summary": "Story 26. Upgrade from Participant to Buyer",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Existing participants can upgrade to Buyer via an agent's link; their details are pre-filled and the upgrade waits for organiser approval. Logged-in participants go straight to the Buyer form; others confirm by email. They become buyers once the organiser approves."
+ }
+]

@@ -1,0 +1,29 @@
+{
+ "about": "Full set of done EP stories, dated by statuscategorychangedate (when the story entered the Done category). Counted 25 Sep 2026.",
+ "cloudId": "5b73f5ec-0b08-4542-9edd-183c0c37bf0c",
+ "jql": {
+  "2023": "project = EP AND issuetype = Story AND statusCategory = Done AND status != Rejected AND statusCategoryChangedDate >= \"2023-01-01\" AND statusCategoryChangedDate < \"2024-01-01\" ORDER BY key ASC",
+  "2024": "project = EP AND issuetype = Story AND statusCategory = Done AND status != Rejected AND statusCategoryChangedDate >= \"2024-01-01\" AND statusCategoryChangedDate < \"2025-01-01\" ORDER BY key ASC",
+  "2025": "project = EP AND issuetype = Story AND statusCategory = Done AND status != Rejected AND statusCategoryChangedDate >= \"2025-01-01\" AND statusCategoryChangedDate < \"2026-01-01\" ORDER BY key ASC",
+  "2026": "project = EP AND issuetype = Story AND statusCategory = Done AND status != Rejected AND statusCategoryChangedDate >= \"2026-01-01\" AND statusCategoryChangedDate < \"2027-01-01\" ORDER BY key ASC"
+ },
+ "totals": {
+  "2023": 611,
+  "2024": 552,
+  "2025": 577,
+  "2026": 754
+ },
+ "fields": [
+  "summary",
+  "status",
+  "created",
+  "statuscategorychangedate",
+  "resolutiondate",
+  "parent",
+  "components",
+  "labels",
+  "customfield_10001",
+  "fixVersions"
+ ],
+ "note": "The earlier data/<year>/stories.json (709) used resolved-date JQL and missed 1,031 done stories with no resolution."
+}

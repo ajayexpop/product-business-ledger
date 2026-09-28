@@ -1,0 +1,541 @@
+[
+ {
+  "id": "sessions-exhibitor-events-launch",
+  "theme": "sessions",
+  "q": "2023-Q1",
+  "title": "Exhibitor events",
+  "benefit": "Let exhibitors create their own events, which organisers approve and publish alongside the conference programme.",
+  "detail": "Exhibitors create events from the frontend within organiser-set limits and durations; organisers approve or reject them, create events for exhibitors in admin and import them by XLS. Exhibitor events have their own Marketplace tab, booked-attendee lists, stand-restricted locations, invite links and an Events tab in My schedule.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-8869",
+   "EP-11663",
+   "EP-8870",
+   "EP-11664",
+   "EP-13539"
+  ]
+ },
+ {
+  "id": "sessions-session-filter-improvements-2023q1",
+  "theme": "sessions",
+  "q": "2023-Q1",
+  "title": "Session filters and speaker display",
+  "benefit": "Give attendees more ways to filter sessions and show speakers who have not yet activated their accounts.",
+  "detail": "Tracks can be shown as a session filter, and up to five renamable standard filters can be configured per event. A toggle shows inactive, invited or uploaded speakers on the frontend, and attendees are taken straight to the online session room after signing in.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-12563",
+   "EP-12365",
+   "EP-10629",
+   "EP-14618"
+  ]
+ },
+ {
+  "id": "sessions-exhibitor-event-controls",
+  "theme": "sessions",
+  "q": "2023-Q2",
+  "title": "Exhibitor event editing controls",
+  "benefit": "Lock approved exhibitor events against changes and give organisers clearer status and import options.",
+  "detail": "A session-type toggle stops exhibitors editing or deleting events once approved, while organisers can still edit them. Ended events show a Past status, imports accept child exhibitor and contact IDs, and events are checked against session-type and stand hours.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-13125",
+   "EP-15676"
+  ]
+ },
+ {
+  "id": "sessions-exhibitor-events-app-webview",
+  "theme": "sessions",
+  "q": "2023-Q2",
+  "title": "Exhibitor events in the app",
+  "benefit": "Let app users browse all exhibitor events, add them to their schedule and see the ones they have booked.",
+  "detail": "The iOS and Android apps gain an all exhibitor events list with date switching and filters, and a My exhibitor events page listing booked events, with a Download My Schedule button to save the schedule as a PDF.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-14321",
+   "EP-14310",
+   "EP-16775"
+  ]
+ },
+ {
+  "id": "sessions-session-import-schedule-download",
+  "theme": "sessions",
+  "q": "2023-Q2",
+  "title": "Session import and schedule download",
+  "benefit": "Import and export session filters in bulk and download a personal schedule from a clearly named button.",
+  "detail": "The five session filters are included in the sessions XLS import and export. The Export data button on My Schedule and Team Schedule becomes Download My Schedule, and session loading was sped up with additional database indexes.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16749",
+   "EP-15375",
+   "EP-18389"
+  ]
+ },
+ {
+  "id": "sessions-session-speaker-management-2023q3",
+  "theme": "sessions",
+  "q": "2023-Q3",
+  "title": "Session and speaker management improvements",
+  "benefit": "Avoid double-booking speakers, control anonymous questions and give speakers their own menu page.",
+  "detail": "Speakers and moderators with blocked time can no longer be assigned to clashing sessions unless organisers allow it. Organisers can hide the Ask anonymously option in session rooms, speakers get a separate menu item, and the apps show the price on past paid sessions.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-19325",
+   "EP-18536",
+   "EP-18460",
+   "EP-21415",
+   "EP-21399"
+  ]
+ },
+ {
+  "id": "sessions-native-exhibitor-events-app",
+  "theme": "sessions",
+  "q": "2023-Q4",
+  "title": "Native exhibitor events in the app",
+  "benefit": "Browse, search and filter exhibitor events in a native app page that follows the same rules as the web.",
+  "detail": "A native page with Exhibitor Events and On-demand tabs replaces the web view. The apps honour slot blocking, non-removable events, visibility, tracks and speaker, moderator and sponsor display, and moderators are marked with an icon in profiles, lists and sessions.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-18257",
+   "EP-21137",
+   "EP-21963",
+   "EP-21681",
+   "EP-21682",
+   "EP-21683",
+   "EP-21685",
+   "EP-21686",
+   "EP-21687",
+   "EP-23610",
+   "EP-23609"
+  ]
+ },
+ {
+  "id": "sessions-multilingual-exhibitor-events",
+  "theme": "sessions",
+  "q": "2023-Q4",
+  "title": "Multilingual exhibitor events",
+  "benefit": "Publish exhibitor event names and descriptions in several languages on the web and in the app.",
+  "detail": "A language switcher lets users read exhibitor events in any supported language, defaulting to the language set by the organiser, with translated event names and descriptions.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-23529"
+  ]
+ },
+ {
+  "id": "sessions-other-locations",
+  "theme": "sessions",
+  "q": "2024-Q1",
+  "title": "Other locations for sessions and events",
+  "benefit": "Place sessions and exhibitor events at venues outside the floor plan, with addresses shown on web and app cards.",
+  "detail": "Organisers manage a predefined list of other locations for sessions and exhibitor events, can allow a custom alternative location, and can add an address that appears on session cards, in the API and in export and import. The iOS and Android apps show the address on cards.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-16777",
+   "EP-16736",
+   "EP-16739",
+   "EP-26791",
+   "EP-24407"
+  ]
+ },
+ {
+  "id": "sessions-schedule-improvements-2024q1",
+  "theme": "sessions",
+  "q": "2024-Q1",
+  "title": "Schedule and invite link improvements",
+  "benefit": "Stop attendees adding items that clash with blocked time and show times in event time only if preferred.",
+  "detail": "Direct invite links for meetings, sessions and exhibitor events add the item and open the schedule, or name the clashing item. A setting hides local time on web and app, session speakers and moderators can be added to exhibitor events, and app session pages gain loading and not-found states.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-23542",
+   "EP-24305",
+   "EP-16928",
+   "EP-21759",
+   "EP-21758"
+  ]
+ },
+ {
+  "id": "sessions-exhibitor-event-reporting",
+  "theme": "sessions",
+  "q": "2024-Q2",
+  "title": "Content reporting for exhibitor events",
+  "benefit": "Let attendees report offensive exhibitor events and let organisers reject events on security grounds.",
+  "detail": "Users report exhibitor events with preset reasons and organisers review the reports against a content policy for exhibitors. A final Rejected for security concern status requires a reason, with filters and a rejection reason column.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16951",
+   "EP-16950"
+  ]
+ },
+ {
+  "id": "sessions-sessions-list-improvements-2024q2",
+  "theme": "sessions",
+  "q": "2024-Q2",
+  "title": "Sessions list and schedule download options",
+  "benefit": "Show exhibitor events on the Sessions page and choose which profile fields go into downloaded schedules.",
+  "detail": "An optional setting lists exhibitor events alongside sessions with a Session Format filter. Registration fields can be flagged for inclusion in the XLS schedule download, and exhibitors can search speakers and moderators by name or title when creating events.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-26029",
+   "EP-23548",
+   "EP-27790"
+  ]
+ },
+ {
+  "id": "sessions-exhibitor-event-approval-workflow",
+  "theme": "sessions",
+  "q": "2024-Q3",
+  "title": "Exhibitor event approval workflow",
+  "benefit": "Review exhibitor events with security questions, auto-approval by type and notifications at every step.",
+  "detail": "Organisers can require exhibitors to answer custom security questions and accept a policy on submission, auto-approve events by event type, and save changes without approving or rejecting. Email and platform notifications cover submission, approval, rejection and change requests.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-26093",
+   "EP-32197",
+   "EP-23521",
+   "EP-16921"
+  ]
+ },
+ {
+  "id": "sessions-internal-notes-flags",
+  "theme": "sessions",
+  "q": "2024-Q3",
+  "title": "Internal notes and critical flags",
+  "benefit": "Keep back-office notes on sessions and exhibitor events and flag the critical ones for follow-up.",
+  "detail": "Sessions and exhibitor events gain an internal Notes field and a Flag as critical checkbox, visible only in the back office, with a filter, export columns and import support.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-29190",
+   "EP-29221"
+  ]
+ },
+ {
+  "id": "sessions-session-import-filtering-2024q3",
+  "theme": "sessions",
+  "q": "2024-Q3",
+  "title": "Session import and filtering improvements",
+  "benefit": "Import multilingual sessions, link speakers by external code and filter sessions by product category.",
+  "detail": "The session import maps a name and description field per frontend language and attaches speakers and moderators by external code. A product category display filter is available on the All Sessions, On-demand and Round tables tabs.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16932",
+   "EP-16934",
+   "EP-29933"
+  ]
+ },
+ {
+  "id": "sessions-clickable-custom-locations",
+  "theme": "sessions",
+  "q": "2024-Q3",
+  "title": "Clickable custom locations",
+  "benefit": "Add a link to a session or exhibitor event location so attendees can open it from the card.",
+  "detail": "With the setting on, other locations can carry a URL that opens from session and exhibitor event cards on the web and in the apps, inside the app for internal pages or in the browser for external ones.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-16920",
+   "EP-32851"
+  ]
+ },
+ {
+  "id": "sessions-schedule-list-view-app",
+  "theme": "sessions",
+  "q": "2024-Q3",
+  "title": "Schedule list view in the app",
+  "benefit": "View a day of meetings, sessions and events as a chronological list in the app.",
+  "detail": "The app schedule gains a list view grouping meetings, sessions, events and blocked time by hour, and the default view setting now applies to the apps.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-21405"
+  ]
+ },
+ {
+  "id": "sessions-session-ratings",
+  "theme": "sessions",
+  "q": "2024-Q4",
+  "title": "Session ratings",
+  "benefit": "Collect star ratings and feedback on attended sessions on the web and in the app.",
+  "detail": "Attendees rate sessions they attended with stars and a short comment, or mark that a session did not take place, from a ratings page or a prompt after the session. The apps prompt for ratings singly or in batches, and organisers export ratings with user details.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-19438",
+   "EP-36711",
+   "EP-37170",
+   "EP-36710",
+   "EP-33802"
+  ]
+ },
+ {
+  "id": "sessions-session-scheduling-improvements-2024q4",
+  "theme": "sessions",
+  "q": "2024-Q4",
+  "title": "Session scheduling safeguards",
+  "benefit": "Get warned about location and time clashes when creating sessions and exhibitor events.",
+  "detail": "A warning appears on front end and admin when a session or exhibitor event is set at the same location and an overlapping time as another. Time zone validation was added, and the Sessions page shows an empty state when there are no sessions.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16924",
+   "EP-32196",
+   "EP-35795"
+  ]
+ },
+ {
+  "id": "sessions-session-details-app-2025q1",
+  "theme": "sessions",
+  "q": "2025-Q1",
+  "title": "Session details in the app",
+  "benefit": "See full locations on session cards and moderators in the speakers list in the app.",
+  "detail": "Session and exhibitor event cards in the iOS and Android apps display the complete location, and the iOS speakers list also shows moderators.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-38220",
+   "EP-25578"
+  ]
+ },
+ {
+  "id": "sessions-easy-session-check-in",
+  "theme": "sessions",
+  "q": "2025-Q2",
+  "title": "Easy session check-in",
+  "benefit": "Let attendees check in to sessions and exhibitor events even if they did not add them to their schedule.",
+  "detail": "An optional Easy Entrance setting in Sessions config allows check-in without errors for sessions and exhibitor events not in the attendee’s schedule.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-40189"
+  ]
+ },
+ {
+  "id": "sessions-custom-session-filters-app",
+  "theme": "sessions",
+  "q": "2025-Q2",
+  "title": "Custom session filters in the app",
+  "benefit": "Filter sessions in the app with the same custom filters used on the web, in the attendee’s language.",
+  "detail": "Custom session filters are available in the mobile apps, working with existing filters and search, and custom filter items can be translated.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-39304",
+   "EP-41291"
+  ]
+ },
+ {
+  "id": "sessions-agenda-sharing-2025q2",
+  "theme": "sessions",
+  "q": "2025-Q2",
+  "title": "Agenda sharing improvements",
+  "benefit": "Choose who receives an exhibitor’s agenda and show child exhibitors on session cards.",
+  "detail": "A Send Agenda pop-up in the admin exhibitor list and profile explains the action and lets organisers pick recipients, including team members. Session cards can show child exhibitors.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-40075",
+   "EP-30370"
+  ]
+ },
+ {
+  "id": "sessions-exhibitor-event-applications",
+  "theme": "sessions",
+  "q": "2025-Q3",
+  "title": "Applications for exhibitor events",
+  "benefit": "Let attendees apply for places at exhibitor events and let organisers approve applicants on the web and in the app.",
+  "detail": "Exhibitor events can use an application deadline with manual or first-come approval. Organisers review applicants on an Applications tab with status filters, search and clash details; applicants are notified and emailed when approved or rejected, and can request or cancel places in the app.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-39836",
+   "EP-41663",
+   "EP-41666",
+   "EP-44664",
+   "EP-39841",
+   "EP-45600"
+  ]
+ },
+ {
+  "id": "sessions-session-attendee-management",
+  "theme": "sessions",
+  "q": "2025-Q3",
+  "title": "Session attendee management",
+  "benefit": "Manage who is scheduled for or has attended a session from a dedicated tab.",
+  "detail": "Attendees and Favourited move from the session and exhibitor event edit page to a separate Attendees tab, where organisers add or remove scheduled users and mark attendance. After saving, organisers stay on the session’s edit page instead of returning to the list.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-41665",
+   "EP-44247"
+  ]
+ },
+ {
+  "id": "sessions-speaker-profile-events-app",
+  "theme": "sessions",
+  "q": "2025-Q3",
+  "title": "Speaker profile events in the app",
+  "benefit": "See the exhibitor events a speaker or moderator is taking part in from their app profile.",
+  "detail": "Speaker and moderator profiles in the mobile app gain an Events block listing their active, visible exhibitor events with date, time and an add-to-schedule button.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-40261"
+  ]
+ },
+ {
+  "id": "sessions-exhibitor-event-auto-approval",
+  "theme": "sessions",
+  "q": "2026-Q1",
+  "title": "Exhibitor event auto-approval rules",
+  "benefit": "Set up automatic approval for exhibitor event applications with a required capacity limit.",
+  "detail": "A new auto-approval interface and mechanism for exhibitor event applications, a required limit when the approval process is on, and removal of rejection notifications. Exhibitor events are sorted consistently in exhibitor profiles, and app content settings include exhibitor events.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-46201",
+   "EP-46203",
+   "EP-46204",
+   "EP-46207",
+   "EP-47797",
+   "EP-46550"
+  ]
+ },
+ {
+  "id": "sessions-external-session-registration",
+  "theme": "sessions",
+  "q": "2026-Q2",
+  "title": "External session registration links",
+  "benefit": "Send attendees from a session’s Register button to an external registration or payment page.",
+  "detail": "Organisers set a per-session external registration URL with a custom button label and an external-link icon, used during the pre-event and live event.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-52375"
+  ]
+ },
+ {
+  "id": "sessions-now-upcoming-sessions-app",
+  "theme": "sessions",
+  "q": "2026-Q2",
+  "title": "Now and upcoming sessions",
+  "benefit": "Jump straight to what is on now and next in the app’s session list.",
+  "detail": "On the current day, the mobile Sessions list scrolls to the current time with a now separator and highlights Now and Upcoming sessions.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-48378"
+  ]
+ },
+ {
+  "id": "sessions-session-cards-admin-filters-2026q2",
+  "theme": "sessions",
+  "q": "2026-Q2",
+  "title": "Session cards and admin filters",
+  "benefit": "Find sessions faster in admin and see type and host details on session cards.",
+  "detail": "The admin Sessions and Exhibitor Events pages gain filter sections such as session type. Detail cards show the session or exhibitor event type, and exhibitor event cards show the hosting exhibitor’s name.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-48239",
+   "EP-53048",
+   "EP-53049"
+  ]
+ },
+ {
+  "id": "sessions-session-calendar-view",
+  "theme": "sessions",
+  "q": "2026-Q3",
+  "title": "Session calendar view",
+  "benefit": "Browse the agenda in a day, week or multi-day calendar, search it and add sessions without leaving the view.",
+  "detail": "The calendar handles overlapping sessions, shows a live now indicator and marks sessions already in the attendee’s schedule. Search by title or speaker, a slide-out drawer with session details and bookmarking, logged-out browsing and optional exhibitor events in the mobile calendar are included.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-54343",
+   "EP-54324",
+   "EP-55558",
+   "EP-51704",
+   "EP-51705",
+   "EP-51706",
+   "EP-57107",
+   "EP-44911"
+  ]
+ },
+ {
+  "id": "sessions-session-display-settings",
+  "theme": "sessions",
+  "q": "2026-Q3",
+  "title": "Default view and track colours",
+  "benefit": "Choose the default layout of the Sessions page and give tracks custom colours.",
+  "detail": "A Default view setting in Sessions config makes List, Grid or Calendar the first layout attendees see on the Sessions and Exhibitor Events pages, and tracks can have custom colours.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-55021",
+   "EP-55466"
+  ]
+ },
+ {
+  "id": "sessions-exhibitor-event-locations-2026q3",
+  "theme": "sessions",
+  "q": "2026-Q3",
+  "title": "Exhibitor event location improvements",
+  "benefit": "Place exhibitor events at any floor plan location and translate predefined locations.",
+  "detail": "An optional setting lets exhibitor events use any live floor plan location, not just the exhibitor’s stand. Predefined other locations can be stored per language, and exhibitor events show even when no team member is assigned.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-55020",
+   "EP-54081",
+   "EP-54235"
+  ]
+ }
+]

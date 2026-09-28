@@ -1,0 +1,658 @@
+[
+ {
+  "id": "comms-chat-comments-2023q1",
+  "what": "Comments in Feed and Groups update live and support replies. Web chat windows minimise to a tab with unread badges, and exhibitors see their own team members first when creating a group chat.",
+  "why": "Web users wanted to keep chatting while browsing other content, and exhibitor admins could only add favourites or existing contacts to group chats, not their own team.",
+  "outcome": "Attendees follow and answer comment threads as they happen, keep several chats open while browsing, and exhibitors pull colleagues into group chats quickly.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-12037: user story to minimise chats so users can check content while chatting; EP-13046: group chat list limited to favourites and existing chats"
+ },
+ {
+  "id": "web-seo-tracking-2023",
+  "what": "Every website page has an H1 heading, markup errors reported by the W3C validator are fixed and internal links are crawlable. Form tracking codes fire only when a form passes validation and submits.",
+  "why": "The validator reported markup problems on site pages, and forms were tracked in analytics on click even when fields had not been filled in.",
+  "outcome": "Event websites are easier for search engines to read, and organisers' form analytics count only genuine, completed submissions.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-14868: W3C validator found problems; EP-15216: forms tracked in GA4 by clicking without filling in fields"
+ },
+ {
+  "id": "comms-multilingual-marketing-emails",
+  "what": "Email sender and campaign templates have a language selector, so organisers can write each marketing email per language. Recipients get the version in their selected language, or the default language.",
+  "why": "Registration and system emails could already be written per language, but marketing emails from the email sender and campaigns could not.",
+  "outcome": "Organisers reach a multilingual audience in each recipient's own language from one template, without separate sends per language.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-7416: multi-language templates exist for registration and system emails but are missing for email senders and campaigns"
+ },
+ {
+  "id": "web-new-builder-launch",
+  "what": "A new visual website builder has a main menu for blocks, pages, device previews, languages, history, global settings, save and publish, plus site-wide fonts, colours, buttons, favicon, SEO and custom headers and footers.",
+  "why": "Organisers needed to brand and structure their own event websites, and wanted to try the new builder while keeping the old one available.",
+  "outcome": "Organisers style a whole site from one place, set up headers and footers themselves, preview pages by device and switch each event between the old and new builders.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-18895: organisers brand header/footer themselves; EP-17908: keep old builder while trying the new one as a beta"
+ },
+ {
+  "id": "web-events-listing-2023",
+  "what": "Event date ranges on the events listing use compact formats for events within one month, across two months or across two years. The filter reset button appears only when filters are applied.",
+  "why": "The previous date format read poorly for events that spanned two months.",
+  "outcome": "Visitors read each event's dates at a glance and see a reset option only when there is something to reset.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-18740: format is not good if an event lasts two months"
+ },
+ {
+  "id": "comms-email-nurturing",
+  "what": "Campaign email variables show recommended exhibitors, products, sessions and news as cards with meeting, message and favourite actions, plus incoming meetings, unanswered chats, activity counts and a sign-in link to the profile.",
+  "why": "Organisers need campaign emails that bring each recipient's own recommendations, meetings and messages to them and let them act on these directly.",
+  "outcome": "Organisers send personalised emails from ready templates in every event, and recipients open profiles, book meetings or reply to chats straight from the email.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-14458..EP-20862: variable redesigns built from the Recommendations section with action buttons; EP-20862 rolled templates out to all events. No problem stated"
+ },
+ {
+  "id": "comms-messenger-improvements-2023q3",
+  "what": "Messenger has filters for who started a chat and for the meeting status between the two sides. On mobile web, private chat has a back-to-list button, a fixed header and a fixed message input.",
+  "why": "Users wanted to view and manage chats by who started them and by meeting status, and to chat comfortably on a phone browser.",
+  "outcome": "Users find chats that need follow-up, such as those with a pending meeting, and send messages on mobile web without the page layout getting in the way.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-20716: filters so chats can be viewed by initiator and by meeting status; EP-7084: mobile private chat improvements"
+ },
+ {
+  "id": "comms-segmented-push-notifications",
+  "what": "Admin notifications can target users by advanced profile filters, or by what they have in their schedule: a particular session, exhibitor event, type, track or tag.",
+  "why": "Admin notifications could only be sent by user category or role.",
+  "outcome": "Organisers send each message only to the people it concerns, such as those who scheduled a given session, instead of a whole category.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-13566: currently it allows sending only by user Category or Role"
+ },
+ {
+  "id": "web-dynamic-blocks",
+  "what": "The website builder has static content blocks (text, media, cards, testimonials, countdown, app download, FAQ) and dynamic blocks for exhibitors, products, brands, sponsors, speakers, sessions and news taken from event data.",
+  "why": "Organisers need to show their event's exhibitors, sessions, speakers and other content on the website without adding each item by hand.",
+  "outcome": "Organisers pick slider or grid layouts, filter by category, tag or specific items, set sorting and cards per row, and the blocks show live event data.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Sponsors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-12606, EP-21629..EP-22334: block specs with slider/static, filters, sorting; no problem stated"
+ },
+ {
+  "id": "web-display-updates-2023",
+  "what": "An attendee widget shows a rotating selection of attendee cards without meeting, message or favourite buttons. The Twitter logo and name are updated to X in the email builder, registration pages, profiles and exhibitor services.",
+  "why": "Twitter rebranded to X, so social links needed the new name and logo. Organisers also need a way to display attendees on a page without interaction controls.",
+  "outcome": "Websites show a changing set of attendees, and social icons across emails, registration and profiles match the current X branding.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-21984: due to Twitter rebranding; EP-22016 widget has no stated reason (implied part)"
+ },
+ {
+  "id": "web-media-gallery",
+  "what": "The website builder gallery stores images, videos and files with uploads, nested folders, sorting, gallery and list views, video conversion, and rename, preview and move actions. Settings control when the new builder is used.",
+  "why": "Organisers need one place to keep and organise the media their event website uses.",
+  "outcome": "Organisers find, reuse and manage site media without re-uploading files, and turn the new builder on per event when they are ready.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-8831: gallery tech brief; EP-18894: module and event settings. No problem stated"
+ },
+ {
+  "id": "comms-campaigns-refresh",
+  "what": "The campaigns list and campaign page are redesigned with filters, empty states and statistics. Organisers can duplicate campaigns, are warned about unsaved changes or empty templates, and see export data only after a send.",
+  "why": "Parts of the campaign pages had confusing filters, navigation and labels, and users risked losing changes or sending empty emails.",
+  "outcome": "Organisers set up campaigns faster by duplicating existing ones, avoid sending empty emails or losing edits, and check send and open statistics from the list.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-20555: confusing table header/labels; EP-20661: 'link input' term confusing, unsaved-changes and empty-template warnings"
+ },
+ {
+  "id": "comms-message-limits",
+  "what": "A setting in the email recommendations panel lets organisers choose how many incoming messages, up to ten, the incoming messages variable shows in each recipient's email.",
+  "why": "Organisers need to decide how much message content appears in their emails.",
+  "outcome": "Organisers keep emails the length they want while still reminding recipients of recent unanswered messages.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-21855: setting for the number of messages displayed in the email, max 10. Card benefit/detail describe a limit on messages participants can send; the story does not support that"
+ },
+ {
+  "id": "web-language-consent-2024",
+  "what": "The website language selector defaults to the visitor's browser language when the site offers it, and visitors can still switch language manually.",
+  "why": "On multilingual sites, pages opened in one default language, so organisers had to share separate links per language and visitors had to choose it themselves.",
+  "outcome": "Visitors land on the site in their own language, and organisers can share one link for every language.",
+  "who": [
+   "Attendees",
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23702: only one default language, separate links shared per language; value: participants won't have to choose manually"
+ },
+ {
+  "id": "web-rich-content-2024",
+  "what": "A Custom Content block offers backgrounds, overlays and a rich-text editor with tables, columns, images and YouTube. Text modules have a WYSIWYG editor, a Title & Subtitle block has six layouts and custom HTML can run JavaScript.",
+  "why": "The new builder lacked the old builder's custom content block, title and subtitle modules and text editor, so organisers could not add lists, images or iframes to text.",
+  "outcome": "Organisers format text and build free-form sections in the new builder, and keep the page design and heading structure they had before.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-20868: custom content block missing from new builder; EP-23051: text editor absent; EP-23990: legacy users need Title and Subtitle modules"
+ },
+ {
+  "id": "comms-badge-codes-in-emails",
+  "what": "Badge barcode and QR code variables are available in campaign emails and in the buyer acceptance email, showing each recipient's internal or external badge code for the check-in app to scan.",
+  "why": "Badge codes could only be sent from visitor emails or the email sender, so organisers could not send them to team members or in hosted buyer emails.",
+  "outcome": "Organisers send badge codes to team members and hosted buyers before the show from the module they already use, and recipients arrive ready to scan in.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-22505: email sender cannot send badge codes to team members; EP-15823: variables only in Visitor Approval template or Email Sender"
+ },
+ {
+  "id": "comms-company-job-title-user-cards",
+  "what": "Participant cards in community, team members, meetings, messenger, profiles and sessions show company name and job title, on the web and in the mobile app.",
+  "why": "Organisers wanted users to see people's professional affiliation and position quickly, to support networking.",
+  "outcome": "Attendees and exhibitors recognise who they are dealing with before they open a profile, message or meeting request.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23519 / EP-24992: user story, so users can quickly identify professional affiliations and positions"
+ },
+ {
+  "id": "web-multilingual-sites",
+  "what": "Website blocks are shared across language versions with independent text, so each language keeps the same structure. A language can be desynced and later restored, and favourite blocks make common content quicker to add.",
+  "why": "Organisers running a site in several languages need each version to keep the same layout while the text is translated.",
+  "outcome": "Organisers change a page once for every language, translate only the words, and reuse favourite blocks across pages.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-18901: multilanguage sync spec; no problem stated"
+ },
+ {
+  "id": "web-editing-controls-2024",
+  "what": "Autosave in the site builder is off by default and can be turned on. Every video block has an autoplay setting, and links support mailto, tel and on-page anchor types.",
+  "why": "Organisers need control over when their changes are saved, whether videos play by themselves and where links take visitors.",
+  "outcome": "Organisers save when they choose, decide how videos behave, and link straight to an email address, phone number or page section.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-28604: disable autosave with option to switch on; EP-28605, EP-29275: no problem stated"
+ },
+ {
+  "id": "comms-email-group-improvements-2024q2",
+  "what": "An Activation Link variable in the email sender takes recipients to their profile and activates it. The Groups tab shows the active search term and filters, as other sections already do.",
+  "why": "Registration emails had the activation link variable but the email sender did not, and Groups did not show what users were searching or filtering by.",
+  "outcome": "Organisers activate profiles from any email-sender message, and users can see and adjust their search in Groups.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-27950: registration emails have this variable, email sender needs it; EP-22911: other sections show the search filter"
+ },
+ {
+  "id": "web-custom-forms",
+  "what": "Form blocks embed a chosen marketing form inline, beside an image or video, as a pop-up or as a sidebar, with colour and typography settings and display triggers. A feedback pop-up collects ratings, and forms can be multilingual.",
+  "why": "Organisers wanted to collect visitor feedback without building a form in marketing, and custom forms were not yet available in several languages.",
+  "outcome": "Organisers capture leads and feedback on their event site where visitors are, styled to the site and in each visitor's language.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-32973: collect user insights without building a marketing form; EP-30562: custom forms not multilingual"
+ },
+ {
+  "id": "web-builder-improvements-2024q3",
+  "what": "A Banner block shows several linked banners in three sizes with timed rotation. The page list shows each page's address slug, and cloning an event copies its new-builder website.",
+  "why": "Banners from the old builder were missing in the new one, and organisers sell rotating banner visibility on their sites.",
+  "outcome": "Organisers offer rotating banner space to sponsors and exhibitors, see page addresses in the list and reuse a website when they clone an event.",
+  "who": [
+   "Organisers",
+   "Sponsors",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-21888: banners not available as in legacy builder; clients sell visibility/rotating banners"
+ },
+ {
+  "id": "web-custom-css-html-2024",
+  "what": "Organisers can edit the old builder's global CSS from the custom CSS window, custom CSS supports pseudo-classes such as hover, custom HTML can show full screen, and anchor IDs and custom CSS pass to the header and footer.",
+  "why": "Organisers who customise their site with code need to reach existing styles and style every part of the page, including hover states and the header and footer.",
+  "outcome": "Organisers fine-tune the site's look with their own CSS and HTML without losing earlier styling work.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-34498: ability to edit old global CSS; EP-34099, EP-34123, EP-33622: no problem stated"
+ },
+ {
+  "id": "web-embeddable-widgets",
+  "what": "In widget mode the portal reports its content height to the page that embeds it, and the frame is tracked for the session so its height stays correct.",
+  "why": "A client wanted embedded frames to size themselves to their content.",
+  "outcome": "Organisers embed portal widgets in their own websites without fixed-height frames, empty space or inner scroll bars.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-33266: client wants to set iframe height to the content"
+ },
+ {
+  "id": "web-team-editing",
+  "what": "The website builder shows who else is working, updates changes live, locks a block while someone edits it, shares autosave and warns before a version is restored.",
+  "why": "Several people need to work on the same website at the same time without causing problems for each other.",
+  "outcome": "Organiser teams build one site together, see who is working where and avoid overwriting each other's changes.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-22484: several users working in the same builder without making problems for each other"
+ },
+ {
+  "id": "comms-campaign-editor-redesign",
+  "what": "Campaign variables appear as tags with settings behind a gear icon, with a sender details section and clearer statistics. Unsaved-changes warnings and save confirmations cover all admin email template editors.",
+  "why": "Campaign variables merged into the text with unclear settings, and users could not tell whether template edits had been saved.",
+  "outcome": "Organisers spot and adjust variables easily, know their template changes are saved and are warned before leaving unsaved edits.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23413: added variants merge with the text; EP-30386: no confirmation that changes to templates are saved"
+ },
+ {
+  "id": "comms-networking-list-filters",
+  "what": "Delegate, speaker, buyer, exhibitor, pavilion and product lists can be filtered by existing chats, by who started meetings and by meeting status. Organisers switch the filters on in display filters.",
+  "why": "Attendees and exhibitors need to find the people and companies they have already messaged or met without scanning a long list.",
+  "outcome": "Users focus on their existing conversations and meetings, such as contacts awaiting a reply, straight from the lists they browse.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-27888: whoFor all customers, value 'easier networking'; no problem stated"
+ },
+ {
+  "id": "web-block-design-2024",
+  "what": "Cards in card-row and counter blocks can be reordered by drag and drop, FAQ blocks take more than eight questions and images use a chosen aspect ratio. Cards have rounded corners and lighter shadows.",
+  "why": "Admins had to remove and re-add cards to reorder them, FAQs were capped at eight, and marketing teams did not know what image sizes to prepare.",
+  "outcome": "Organisers rearrange content in place, publish full FAQ lists and get consistent images across devices without guessing sizes.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-35443: remove and re-add cards to change order; EP-25939: max 8 FAQs; EP-24028: how would I know what size to use"
+ },
+ {
+  "id": "web-popups-logos-2024",
+  "what": "Custom HTML can appear as a pop-up with display triggers, auto-close and per-device settings. A social links block sits on the page edge, and header and footer logos can be static or link to any URL.",
+  "why": "The old builder let custom content run as a pop-up and the new builder did not. Organisers also needed more control over logo links and clarity on SSL setup for custom domains.",
+  "outcome": "Organisers promote banners and messages in pop-ups, keep social links in view and send logo clicks where they want.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-34162: legacy had custom pop-up, new builder lacked it; EP-35265: improve navigation and branding flexibility; EP-28249: clarifies a set-up step"
+ },
+ {
+  "id": "comms-campaign-sending-chat-limits",
+  "what": "Campaigns send to every selected recipient in one action, without duplicates, as shown in campaign statistics. A daily limit on starting new chats applies on web and apps and tells users when they can try again.",
+  "why": "Mass send-outs to large filtered audiences did not work in the campaign tool. Users also need protection from accounts starting new chats at a very high rate.",
+  "outcome": "Organisers reach large audiences with one send and can confirm delivery in the statistics, and attendees are not flooded with new chats.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-35350: impossible to make a mass send-out with the Campaign tool; EP-35014 chat limit has no stated reason (implied part)"
+ },
+ {
+  "id": "comms-multilingual-admin-notifications",
+  "what": "Organisers write notification titles and messages per language with a fallback language. Web users get them in their profile language, app users in their device language, and pushes can reach app users who are not logged in.",
+  "why": "Organisers with multilingual audiences need notifications in each user's language, including for app users who have not signed in.",
+  "outcome": "Organisers write once per language and every user, signed in or not, receives the message in a language they read, opening the chosen page.",
+  "who": [
+   "Organisers",
+   "App users",
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-31011, EP-32750: tech briefs, whoFor/value TBA; no problem stated"
+ },
+ {
+  "id": "web-seo-custom-pages",
+  "what": "Every content, dynamic, header and footer block on builder pages renders in the server response, with configurable H1 to H6 heading tags, semantic section elements, image alt text and working buttons.",
+  "why": "Builder blocks needed correct SEO markup in the page source and descriptive image alt text for blind users.",
+  "outcome": "Organisers' custom pages can be read and indexed by search engines, and images can be described for screen-reader users.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-32699 etc.: blocks need SEO tags in server response; IMG should contain ALT with text for blind users"
+ },
+ {
+  "id": "web-block-updates",
+  "what": "Website blocks are versioned. Outdated blocks show an indicator, a single update lists the changes before you confirm, and a bulk update applies across a page.",
+  "why": "New block settings were not applied automatically to blocks added before a release.",
+  "outcome": "Organisers bring existing pages up to date with new block features when they choose, after checking what will change.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-38778: new settings not automatically applied to blocks added before the release"
+ },
+ {
+  "id": "web-server-rendered-pages",
+  "what": "Community, events, news, brand, exhibitor, participant, product, session, group, manual, marketplace and floor plan pages move to a new framework, many returning their content from the server, keeping existing blocks and actions.",
+  "why": "Event website pages need their content available in the page source so search engines can read it, without losing the blocks and actions visitors use.",
+  "outcome": "Organisers' exhibitor, session, news and profile pages can be found through search, while visitors keep meeting, message and favourite actions.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-37489 etc.: page data must be included in the response body; no problem stated. Some pages (marketplace, participants, manual, groups list) render content client-side"
+ },
+ {
+  "id": "web-page-access",
+  "what": "Header and footer links and block buttons can be shown to everyone, to logged-in or to logged-out visitors. A page access tab controls who can open each custom page.",
+  "why": "Visitors could open pages that should be restricted by using direct links to them.",
+  "outcome": "Organisers show each visitor the right links and keep restricted pages closed even when someone has the direct address.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-38225: stop visitors using direct links to pages that should be restricted"
+ },
+ {
+  "id": "web-builder-improvements-2025q1",
+  "what": "Custom page URLs no longer include /page, slugs can be typed in full before validation, and card images can link to a URL. Header menu items have a font size slider, and news paging is kept after approvals.",
+  "why": "The /page segment did not suit clients, organisers wanted the header menu to match their branding, and moderating news reset the admin list.",
+  "outcome": "Organisers share clean page addresses, match the menu to their brand, link card images and moderate news without losing their place.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-36242: /page doesn't fit clients' needs; EP-39361: header menu to match branding; EP-24408: pagination reset creates inconvenience"
+ },
+ {
+  "id": "comms-longer-group-descriptions",
+  "what": "The character limit for community group short descriptions is raised from 200 to 400.",
+  "why": "200 characters was not enough to explain what a group is about.",
+  "outcome": "Organisers describe each group clearly, so attendees can tell which groups are relevant before joining.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-39625: limit of 200 is insufficient to convey what the group is about"
+ },
+ {
+  "id": "web-header-styling-2025",
+  "what": "Header titles and subtitles show on mobile, with character limits and colour settings. The portal adds CSS classes or data attributes for user role, category and login state, for custom styling.",
+  "why": "On mobile the header showed only the logo, and title and subtitle fields had no character limits or colour settings, causing layout problems.",
+  "outcome": "Visitors on phones see the event name and dates in the header, and organisers can style pages differently by role, category or login state.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40342: on mobile header only displays the logo; no character limit or colour settings"
+ },
+ {
+  "id": "web-alt-text-sitemap",
+  "what": "Every image in the builder, including header and footer, has an optional alt text field with SEO tips and a warning when empty. The sitemap lists every builder page that logged-out visitors can see.",
+  "why": "Alt text matters for SEO and screen readers, and the builder had no way to add it to images.",
+  "outcome": "Organisers describe their images so search engines index them and screen readers can read them, and public pages appear in the sitemap.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-36256: no option to add alt text; crucial for SEO and accessibility"
+ },
+ {
+  "id": "comms-configurable-session-reminders",
+  "what": "Organisers choose reminder times from 0 to 60 minutes before a session or exhibitor event starts, replacing fixed reminder times. Reminders apply on the web and in the app and are resent if the start time changes.",
+  "why": "Session reminder times were fixed, and organisers needed to adjust them.",
+  "outcome": "Attendees with busy event days get reminders when the organiser judges best, so they do not miss sessions they planned to attend.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-36743: hardcoded reminder times; whoFor attendees with busy schedules, value helps users not forget sessions"
+ },
+ {
+  "id": "comms-personal-assistant-emails",
+  "what": "A Personal Assistant Email field in participant registration copies emails sent to participants, buyers and team members to the assistant's address.",
+  "why": "Participants needed a way to have an assistant receive their emails, as the contact person feature already allows for exhibitors.",
+  "outcome": "Busy participants have an assistant follow their event emails, such as confirmations and meeting updates, without forwarding each one.",
+  "who": [
+   "Attendees",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40074: allow participants to designate a personal assistant; similar to Contact Person for exhibitors"
+ },
+ {
+  "id": "web-mobile-cards-2025",
+  "what": "The four-card view used in system page elements stays on one row until the smallest screen breakpoint.",
+  "why": "Four-card rows need to keep a tidy layout on smaller screens.",
+  "outcome": "Visitors on tablets and phones see four-card rows laid out as intended for longer before they stack.",
+  "who": [
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-43030: 'it should be in 1 line until last breakpoint'; no problem stated"
+ },
+ {
+  "id": "comms-advanced-targeting",
+  "what": "Campaign and notification filters cover session, round table and exhibitor event attributes, profile completeness and meeting programme activity. Campaign variables show each recipient's meeting programme status and round tables.",
+  "why": "Organisers wanted to update users on meeting programme and round table progress through campaigns and notifications, instead of keeping many separate email templates.",
+  "outcome": "Organisers nudge the right people, such as those with incomplete profiles or no meeting requests, with emails that show their own programme status.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40080/EP-40078/EP-40081: Campaigns/Admin Notifications used instead of an extensive list of email templates"
+ },
+ {
+  "id": "comms-registration-email-variables",
+  "what": "Registration email templates for visitors, speakers, moderators and exhibitors can use every system and custom registration form field, grouped as General, System and Custom. Leaderboard tooltips are reworded.",
+  "why": "Only a limited set of standard fields was available as variables in registration emails.",
+  "outcome": "Organisers personalise registration emails with any answer from the form, such as a custom field value, without workarounds.",
+  "who": [
+   "Organisers",
+   "Registrants",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-37164: currently only a limited set of standard system fields is available"
+ },
+ {
+  "id": "comms-notification-email-improvements-2025q4",
+  "what": "Notifications in the dropdown menu open the related profile or session. A participant information request email template and a Send Information Request action in profiles and lists let organisers ask for missing details.",
+  "why": "Organisers had no way to email one participant individually, with their own text, to request more information.",
+  "outcome": "Organisers chase missing registration details from the participant's profile in a few clicks, and users jump from a notification to what it is about.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45418: no way to send individualised emails requesting additional information"
+ },
+ {
+  "id": "web-custom-grids",
+  "what": "Custom grids take one to six cells, can sit inside other grids and accept text, buttons, images and video by drag and drop. Cells resize and wrap on smaller screens, and a Buttons block adds as many styled buttons as needed.",
+  "why": "Organisers often ask for two or three columns and found the way content stacked on mobile unsatisfactory, and building columns needed CSS.",
+  "outcome": "Organisers build multi-column layouts and button groups themselves without code, and pages still work on phones.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-47651 (Confluence): organisers often ask for two or three columns and complained about mobile stacking"
+ },
+ {
+  "id": "web-carousel-editor-2026",
+  "what": "Blocks switch from a swiping slider to a static layout when there are not enough slides. Text editor controls follow their own design instead of taking on the builder's theme.",
+  "why": "A slider with too few items to scroll, and editor controls styled by the builder theme, did not match the intended design.",
+  "outcome": "Visitors see short sets of cards laid out cleanly, and organisers get text editor controls that look as designed.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-37770: controls inherit theme from builder but need to be according to design; EP-46421: no description. Detail says controls 'inherit the builder's theme', the opposite of the story"
+ },
+ {
+  "id": "comms-messenger-status-filters",
+  "what": "Messenger has a conversation status filter: all chats, two-way chats where both sides have written, or one-way chats where only one side has. It works alongside the existing filters.",
+  "why": "Users wanted to tell active two-way conversations from ones that have had no reply.",
+  "outcome": "Attendees and exhibitors find chats still waiting for an answer and follow up on them quickly.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-47792 (Confluence): so users can quickly tell active two-way conversations from unanswered ones"
+ },
+ {
+  "id": "web-card-styling-2026",
+  "what": "Card views that lacked them now have border and shadow options, and each card has a toggle to show or hide its call-to-action button.",
+  "why": "Some card views had border and shadow options while others did not, and hiding a button on one card needed custom CSS.",
+  "outcome": "Organisers give cards a consistent look across a page and choose which cards show a button, without writing code.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-50364: styling inconsistent across card views; EP-50339: forced to use custom CSS to hide buttons"
+ },
+ {
+  "id": "web-footer-2026",
+  "what": "Footer columns can be aligned, sized and deleted, text position has its own setting and the logo and text block width can be set. The 'Powered by ExpoPlatform' footer branding can be shown or hidden per event.",
+  "why": "Footer column layout had needed custom CSS, columns could only have their title hidden, and it was unclear how logo position worked with text off.",
+  "outcome": "Organisers lay out the footer precisely themselves, remove columns they do not need and place the logo and text clearly.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-37947: CSS tasks for footer columns; EP-37526: can only hide title, not delete column; EP-37518: unclear how Logo position works. Branding toggle is Superadmin-only (EP-54112)"
+ },
+ {
+  "id": "comms-campaign-recommendation-blocks",
+  "what": "Recommendation blocks for exhibitors, products, news and sponsors in campaign emails have clear boundaries and full-width card layouts, on desktop and mobile, matching the visitor-side design.",
+  "why": "Recommendation blocks in campaign templates had no clear containers and left unused space, looking inconsistent next to the full-width sponsors block.",
+  "outcome": "Organisers send emails where each recommendation block is easy to tell apart, and recipients scan recommended items more easily.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-50897: blocks lacked clear containers and wasted horizontal space"
+ },
+ {
+  "id": "web-ai-builder",
+  "what": "Organisers describe a styling change in everyday words. The builder sends the block's structure and design tokens through a secure server-side connection, shows the generated CSS for review and applies it to that block only.",
+  "why": "Styling a block needed CSS knowledge, and custom CSS could spill into global styles and break other parts of the site.",
+  "outcome": "Organisers restyle a block in plain language, check the result before applying it and keep the rest of the site unchanged.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52651: style a block without CSS knowledge; EP-52650: changes can't break other blocks or the rest of the site"
+ },
+ {
+  "id": "web-tracking-links",
+  "what": "Each marketing tracking link has an edit action to update its name and landing page URL, with validation. The tracked link people use stays the same.",
+  "why": "Correcting a tracking link's name or landing page meant recreating it and replacing every reference on the website and in campaigns.",
+  "outcome": "Organisers fix or redirect a tracking link in place, and links already shared keep working.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-54929: could not edit links; recreating and replacing every reference was tedious and error-prone"
+ },
+ {
+  "id": "web-header-2026",
+  "what": "Headers can scroll with the page, stay fixed or hide while scrolling down, and links flow over up to three rows. Mobile header search shows the categories selector, and its panel pushes content down instead of covering it.",
+  "why": "Mobile header search lacked the categories selector that desktop had, and its panel covered page content.",
+  "outcome": "Organisers choose how the header behaves and fits its links, and visitors on phones search by category without the panel hiding the page.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-55199: mobile search categories selector never rendered unlike desktop; panel overlaid content. EP-39660/EP-39685 have no stated problem"
+ },
+ {
+  "id": "comms-custom-smtp",
+  "what": "A setting lets organisers send platform emails, including registration, meeting, message, campaign and reminder emails, through their own SMTP service.",
+  "why": "Some organisers need platform emails to go out through their own mail service.",
+  "outcome": "Organisers send event emails through their own mail service, set up once in the platform.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-15768: create setting for custom SMTP; lists email senders to check; no problem stated"
+ }
+]

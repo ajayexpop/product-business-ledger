@@ -1,0 +1,129 @@
+{
+ "k": "EP-42161",
+ "histories": 59,
+ "historiesRead": 59,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2025-05-13T12:10:02.022+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2025-05-13T12:10:06.358+0100",
+   "from": "Considering",
+   "to": "Awaiting details",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2025-05-13T12:10:09.659+0100",
+   "from": "Awaiting details",
+   "to": "Considering",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2025-05-13T12:10:13.580+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2025-05-13T12:10:19.548+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2025-05-13T12:10:22.088+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2025-07-22T12:40:31.526+0100",
+   "from": "Estimated request",
+   "to": "Awaiting Estimation",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-07-22T12:40:33.924+0100",
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-07-22T12:40:38.171+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-07-22T12:41:28.260+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-07-22T12:41:30.575+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-08-06T14:44:39.107+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Siarhei Nechayeu"
+  },
+  {
+   "at": "2025-09-08T09:23:17.003+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2025-09-09T14:55:58.956+0100",
+   "from": "In progress",
+   "to": "On-hold",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2025-09-10T08:18:23.589+0100",
+   "from": "On-hold",
+   "to": "In progress",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2025-09-16T11:25:32.012+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2025-09-16T13:26:17.658+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-09-17T08:25:59.272+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-09-17T17:08:41.634+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Siarhei Nechayeu"
+  },
+  {
+   "at": "2026-09-15T17:46:35.857+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790322080476.txt"
+}

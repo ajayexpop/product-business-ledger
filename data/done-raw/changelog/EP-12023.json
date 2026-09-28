@@ -1,0 +1,87 @@
+{
+ "k": "EP-12023",
+ "histories": 70,
+ "historiesRead": 70,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-01-10T14:57:52.985+0000",
+   "from": "Incoming request",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-10T15:04:00.365+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-10T15:54:17.831+0000",
+   "from": "Brief ready for review",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-10T16:15:25.935+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-10T16:15:28.142+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-11T14:03:25.607+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-13T07:35:41.064+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Anton Samoylenko"
+  },
+  {
+   "at": "2023-01-16T12:15:39.581+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Anton Samoylenko"
+  },
+  {
+   "at": "2023-01-17T09:44:55.739+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "oleh bosiuk"
+  },
+  {
+   "at": "2023-01-18T11:32:23.671+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "oleh bosiuk"
+  },
+  {
+   "at": "2023-01-30T10:58:09.761+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-30T10:58:15.851+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790316810230.txt"
+}

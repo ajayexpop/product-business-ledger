@@ -1,0 +1,126 @@
+{
+  "createdAt": "2026-09-22",
+  "flags": {
+    "drift": false,
+    "dueSoon": false,
+    "noEstimate": false,
+    "noJira": false,
+    "overEstimate": false,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-area": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "area",
+      "from": "(Sessions & Scheduling / Admin",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "Sessions"
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "October 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-10"
+    },
+    "h0imp-status": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "status",
+      "from": "In progress (Sub-tasks decomposed: BE in progress, FE & QA ready to start)",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "In Progress"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "h0mig-rationale": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "migrate",
+      "note": "the old Why, word for word",
+      "to": "German organizers / enterprise customers requested alphabetical sorting of Tracks, Tags and Types to improve discoverability on events with large taxonomy sets. Supports multilingual events by sorting according to the attendee's active language locale."
+    },
+    "h0mig-why": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "why",
+      "from": "German organizers / enterprise customers requested alphabetical sorting of Tracks, Tags and Types to improve discoverability on events with large taxonomy sets. Supports multilingual events by sorting according to the attendee's active language locale.",
+      "k": "migrate",
+      "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
+      "to": ""
+    }
+  },
+  "j": {
+    "aggOrigDays": null,
+    "assignee": "Evgen Polivach",
+    "canon": "In Progress",
+    "due": "2026-10-07",
+    "origDays": null,
+    "priority": "Medium",
+    "resolved": null,
+    "spentDays": 2.74,
+    "status": "In Progress",
+    "summary": "Alphabetical Sorting for Filter Items for sessions and Exhibitor Events",
+    "team": "Visitor team",
+    "teamField": "customfield_10001",
+    "type": "Story"
+  },
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": 12,
+    "daysKind": "point"
+  },
+  "order": 170,
+  "raw": {
+    "area": "(Sessions & Scheduling / Admin",
+    "month": "October 2026",
+    "status": "In progress (Sub-tasks decomposed: BE in progress, FE & QA ready to start)"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-22",
+  "v": {
+    "area": "Sessions",
+    "deps": "Backend dynamic sorting and response order_num renumbering for active locale. Risk: mobile smoke test coordination needed; public API v3 remains on manual DB order by design.",
+    "driver": "",
+    "estimate": "12d",
+    "feature": "Alphabetical Sorting for Filter Items for sessions and Exhibitor Events",
+    "impact": "",
+    "key": "EP-56170",
+    "month": "2026-10",
+    "notes": "",
+    "owner": "Kavi",
+    "priority": "Customer",
+    "rationale": "German organizers / enterprise customers requested alphabetical sorting of Tracks, Tags and Types to improve discoverability on events with large taxonomy sets. Supports multilingual events by sorting according to the attendee's active language locale.",
+    "status": "In Progress",
+    "team": "",
+    "why": ""
+  }
+}

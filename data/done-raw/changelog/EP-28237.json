@@ -1,0 +1,75 @@
+{
+ "k": "EP-28237",
+ "histories": 21,
+ "historiesRead": 21,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-04-08T17:06:39.755+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-04-08T17:06:41.523+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-04-08T17:06:49.043+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-04-08T17:37:04.961+0100",
+   "from": "Ready to estimate",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-04-09T06:48:32.097+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2024-04-09T06:52:30.106+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2024-04-09T11:35:36.965+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-04-09T11:35:39.028+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-04-09T11:35:41.587+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-04-11T09:58:32.133+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790315004732.txt"
+}

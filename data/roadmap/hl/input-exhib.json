@@ -1,0 +1,1520 @@
+[
+ {
+  "k": "EP-46483",
+  "q": "2026-Q1",
+  "feature": "Attend a stand",
+  "tags": [],
+  "summary": "Attend a stand",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Added 'Attend a stand': after favouriting an exhibitor, users can say when they plan to visit, and exhibitors see who is coming. Exhibitors know which visitors intend to come to their stand."
+ },
+ {
+  "k": "EP-47311",
+  "q": "2026-Q1",
+  "feature": "Attend a stand",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Attend a Stand. App listing using vebview.",
+  "epic": null,
+  "text": "Added Attend a Stand list views to the app through webviews, configurable in the app builder for participants and exhibitors. App users can see their planned stand visits, and exhibitors their expected visitors."
+ },
+ {
+  "k": "EP-28237",
+  "q": "2024-Q2",
+  "feature": "Contact sharing settings",
+  "tags": [],
+  "summary": "Renaming setting under Contact Sharing",
+  "epic": null,
+  "text": "Renamed the 'Booked an event' option to 'Booked an exhibitor event' in Networking & Matchmaking contact sharing settings. The contact sharing setting reads 'Booked an exhibitor event'."
+ },
+ {
+  "k": "EP-28308",
+  "q": "2024-Q3",
+  "feature": "Contact sharing settings",
+  "tags": [],
+  "summary": "Renaming setting under Contact Sharing",
+  "epic": null,
+  "text": "Renamed the Contact Sharing setting 'Watch On-demand/Online session' to 'Watch On-demand/Online sponsored session', including the reason in leads exports. Downloaded leads show the reason 'Watched On-demand/Online sponsored session'."
+ },
+ {
+  "k": "EP-25692",
+  "q": "2024-Q1",
+  "feature": "Custom fields on product pages",
+  "tags": [],
+  "summary": "Need display on Product page data from custom field ",
+  "epic": null,
+  "text": "Showed product custom field data on product pages. Product pages display custom fields."
+ },
+ {
+  "k": "EP-12725",
+  "q": "2023-Q3",
+  "feature": "Custom table listings",
+  "tags": [],
+  "summary": "*DWTC* Option to have Custom Listing",
+  "epic": null,
+  "text": "Added optional 'Custom Listing' table views for the marketplace exhibitor list and the delegates list, with an admin table builder for choosing and ordering fields. When enabled, users can switch to a brand-coloured table of selected fields with fixed name, logo or photo and interaction columns, scrolling horizontally."
+ },
+ {
+  "k": "EP-20781",
+  "q": "2023-Q3",
+  "feature": "Custom table listings",
+  "tags": [],
+  "summary": "Custom listing additional features",
+  "epic": null,
+  "text": "Improved custom exhibitor and pavilion listings with 3/4-line titles, full-name tooltips and a clickable '+x' tag opening all categories. Users can read full exhibitor names on hover and open a pop-up listing all of an exhibitor's categories."
+ },
+ {
+  "k": "EP-14937",
+  "q": "2023-Q2",
+  "feature": "Default categories",
+  "tags": [],
+  "summary": "Exhibitor default category ",
+  "epic": null,
+  "text": "Added a pinned, undeletable Default category to exhibitor categories, created automatically for each new event. Uncategorised exhibitors inherit the Default category's configurable settings and limits, except values set manually on the exhibitor; it is hidden from frontend filters."
+ },
+ {
+  "k": "EP-29011",
+  "q": "2024-Q3",
+  "feature": "Event cloning with products",
+  "tags": [],
+  "summary": "Option to clone products with \"Active Status\"",
+  "epic": null,
+  "text": "Added a 'Clone only Active Products' option to event cloning, shown when exhibitor products are kept. Organisers can clone an event carrying over only active products; otherwise all products are cloned as inactive."
+ },
+ {
+  "k": "EP-29132",
+  "q": "2024-Q3",
+  "feature": "Event cloning with products",
+  "tags": [],
+  "summary": "Option to clone Brands",
+  "epic": null,
+  "text": "Added an 'Exhibitors' brands remain' option to event cloning that copies brands with their exhibitors, products, logo, categories, About, social links and translations. Cloned events keep all brands and their content, but not interaction data such as favourites."
+ },
+ {
+  "k": "EP-23968",
+  "q": "2024-Q3",
+  "feature": "Exhibitor account redesign",
+  "tags": [],
+  "summary": "Exhibitor Account. Security page",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "text": "Built the exhibitor account Security page in the admin panel: set username and password, email them to the exhibitor, and view a login information table. Admins set a validated password and email it, and see paginated logins with date, IP, device and source, including SSO and customer service logins."
+ },
+ {
+  "k": "EP-23970",
+  "q": "2024-Q3",
+  "feature": "Exhibitor account redesign",
+  "tags": [],
+  "summary": "Exhibitor Account. Sponsorship page",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "text": "Built a Sponsorship page in the exhibitor account admin with collapsible Banners and Sponsor video sections and a shortcut to sponsorship settings. Admins upload, toggle and preview sponsored banners for web and app locations, one or two per location, and manage the online room entrance video."
+ },
+ {
+  "k": "EP-23973",
+  "q": "2024-Q3",
+  "feature": "Exhibitor account redesign",
+  "tags": [],
+  "summary": "Exhibitor Account. Analytics dashboard",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "text": "Built an Analytics dashboard in the admin exhibitor account covering leads and other metrics, including team members, compared with the event average. Admins see an exhibitor's activity over its whole data period, such as online and offline leads, against the average per active exhibitor."
+ },
+ {
+  "k": "EP-23966",
+  "q": "2024-Q3",
+  "feature": "Exhibitor account redesign",
+  "tags": [],
+  "summary": "Exhibitor Account. Header and footer",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "text": "Built the header and footer for the redesigned admin exhibitor account: logo placeholder, navigation, sticky header, Save/Cancel footer and unsaved-changes warning. Admin exhibitor pages have a sticky navigation header, a per-tab Save/Cancel footer and a warning when leaving with unsaved edits."
+ },
+ {
+  "k": "EP-23971",
+  "q": "2024-Q3",
+  "feature": "Exhibitor account redesign",
+  "tags": [],
+  "summary": "Exhibitor Account. Team members page",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "text": "Built a new admin Team members page for exhibitor accounts: searchable, paginated table with lead capture toggles and actions, plus a Contact person form. Admins can list, search, add, edit, delete and print badges for an exhibitor's team members and toggle lead capture per member."
+ },
+ {
+  "k": "EP-23969",
+  "q": "2024-Q3",
+  "feature": "Exhibitor account redesign",
+  "tags": [],
+  "summary": "Exhibitor Account. Settings page",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "text": "Built the exhibitor account Settings page in the admin panel, with category-synchronised settings, custom overrides and reset, and renamed several category settings to positive wording. Admins see which exhibitor settings follow the category or are customised, reset them to category, and manage Download Leads, video and product search visibility."
+ },
+ {
+  "k": "EP-23967",
+  "q": "2024-Q3",
+  "feature": "Exhibitor account redesign",
+  "tags": [],
+  "summary": "Exhibitor Account. Registration Info",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "text": "Added a Registration info tab to the exhibitor account in admin, mirroring the exhibitor registration pipeline tabs and fields. Admins view and edit an exhibitor's registration fields by pipeline tab, in each content language, including logo upload."
+ },
+ {
+  "k": "EP-23972",
+  "q": "2024-Q3",
+  "feature": "Exhibitor account redesign",
+  "tags": [],
+  "summary": "Exhibitor Account. Floorplan page",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "text": "Built the Floor plan tab of the redesigned admin exhibitor account, where admins pick halls, find stands and assign or remove stands on the plan. Admins assign exhibitors to stands via a searchable selector and hall images, with selected stands listed and highlighted; the tab hides without a floor plan."
+ },
+ {
+  "k": "EP-31630",
+  "q": "2024-Q3",
+  "feature": "Exhibitor admin profile fields",
+  "tags": [],
+  "summary": "Additional System Fields - Exhibitor Admin Profile",
+  "epic": null,
+  "text": "Added Registration URL, External ID, an editable Exhibitor URL and Exhibitor Tags to the exhibitor admin profile under the language switcher. Admins see registration URL and external ID, set tags, and can change the profile URL, which updates frontend profile links."
+ },
+ {
+  "k": "EP-13284",
+  "q": "2023-Q1",
+  "feature": "Exhibitor and product cards",
+  "tags": [],
+  "summary": "Zip Code Field | Exhibitor & Product Card",
+  "epic": null,
+  "text": "Added a Zip code option to the Show in exhibitor and product cards setting, off by default. When enabled, the zip code appears after city and state in the address block on exhibitor and product cards."
+ },
+ {
+  "k": "EP-55625",
+  "q": "2026-Q3",
+  "feature": "Exhibitor and sponsor cards",
+  "tags": [],
+  "summary": "Add MultiStandLocation component and migrate sponsors to ExhibitorCard",
+  "epic": null,
+  "text": "Adds a MultiStandLocation component so multi-stand exhibitors display readably, and merges Sponsors onto ExhibitorCard so sponsor listings show location, tags and products. New MultiStandLocation component ships in expo-react-components; ExhibitorCard now builds its own location from exhibitor.halls; ISponsor is merged into IExhibitor so SponsorsPopup renders full ExhibitorCards; the old SponsorCard is deprecated but not deleted, pending consumer migration."
+ },
+ {
+  "k": "EP-52566",
+  "q": "2026-Q2",
+  "feature": "Exhibitor brand profiles",
+  "tags": [],
+  "summary": "Removal of Google+ from Brand Creation Social Media Links",
+  "epic": null,
+  "text": "Google+ is removed from the brand social links on the add and edit brand pages, and no longer shows on brand profiles. Brand forms show only live networks, and event websites and apps no longer render Google+ links."
+ },
+ {
+  "k": "EP-45361",
+  "q": "2025-Q3",
+  "feature": "Exhibitor dashboard",
+  "tags": [],
+  "summary": "exhibitor dashboard remove weeks and days filter and set years by default",
+  "epic": null,
+  "text": "Removed the day, week, month and year selector from the exhibitor dashboard Top Performers block. The Top Performers block always shows results based on all-time data."
+ },
+ {
+  "k": "EP-16707",
+  "q": "2023-Q2",
+  "feature": "Exhibitor event leads",
+  "tags": [],
+  "summary": "Exhibitor events. Interactions and Leads generation",
+  "epic": null,
+  "text": "Added a 'Booked an event' column to the exhibitor Interactions dashboard and contact-sharing settings to turn bookings into leads. Exhibitors holding events see bookings as interactions and, if enabled, as leads in Download leads, optionally hiding private details."
+ },
+ {
+  "k": "EP-24776",
+  "q": "2024-Q1",
+  "feature": "Exhibitor exports",
+  "tags": [],
+  "summary": "Exhibitor export: change custom fields list",
+  "epic": null,
+  "text": "Rebuilt the exhibitor export custom field list from the exhibitor parameters, resolving duplicate fields. Exhibitor exports offer a consistent field list."
+ },
+ {
+  "k": "EP-54733",
+  "q": "2026-Q2",
+  "feature": "Exhibitor insights",
+  "tags": [],
+  "summary": "Display  Company Name in Interaction Dashboards ",
+  "epic": null,
+  "text": "The Interaction Dashboard in participant and exhibitor profiles shows each listed participant's company name, truncated with a tooltip. Users can see which company each person they interacted with belongs to."
+ },
+ {
+  "k": "EP-56919",
+  "q": "2026-Q3",
+  "feature": "Exhibitor insights portal",
+  "tags": [],
+  "summary": "Story 2: Page 01 — Celebrate your wins",
+  "epic": "ExpoIntelligence — Exhibitor Insights Portal",
+  "text": "Delivered real, precisely-defined metrics (leads, meetings, profile views, peer benchmarking) for the ExpoIntelligence dashboard's \"Celebrate your wins\" page, replacing placeholder data. Every metric on Page 01 (leads captured, meetings held, profile views, message reply rate, peer benchmarking, best single day, etc.) now returns a real, queryable value with no -1 placeholders remaining, reconciled so totals match across cards."
+ },
+ {
+  "k": "EP-26041",
+  "q": "2024-Q3",
+  "feature": "Exhibitor interaction dashboard",
+  "tags": [],
+  "summary": "Leader Dashboard",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "text": "Built a Lead Dashboard in the admin panel as a refreshed Interaction Dashboard, with tabs for interactions, sponsor pop-ups, banners, list interactions and QR scans. Organisers see per-exhibitor or per-sponsor interaction counts with event averages, detailed tooltips and totals."
+ },
+ {
+  "k": "EP-44730",
+  "q": "2026-Q3",
+  "feature": "Exhibitor logo settings",
+  "tags": [],
+  "summary": "Logo option as an exhibitor settings",
+  "epic": null,
+  "text": "An 'Allow logo' setting per exhibitor category with an exhibitor-level override; when off, exhibitors can't upload a logo and the default shows publicly. Disallowed logos are hidden on web and app per event, and come back automatically if the setting is turned on again."
+ },
+ {
+  "k": "EP-15338",
+  "q": "2023-Q2",
+  "feature": "Exhibitor manual",
+  "tags": [],
+  "summary": "Exhibitor Manual sections need to have the possibility to being divided by their links ",
+  "epic": null,
+  "text": "Made Exhibitor Manual section links open their specific section, while the main Online Exhibitor Services link opens the first unsubmitted page. Each section link opens its own section regardless of submissions or deadlines."
+ },
+ {
+  "k": "EP-36646",
+  "q": "2024-Q4",
+  "feature": "Exhibitor manual",
+  "tags": [],
+  "summary": "Hide the fields from the Table section in manual",
+  "epic": null,
+  "text": "Hid two payment-related fields from exhibitor manual table sections in admin and on the frontend. Tables no longer show irrelevant fields."
+ },
+ {
+  "k": "EP-38608",
+  "q": "2025-Q1",
+  "feature": "Exhibitor manual badge limits",
+  "tags": [],
+  "summary": "Improved Badge Limit Logic in Exhibitor Manuals",
+  "epic": null,
+  "text": "Enforced a hard badge limit in the Exhibitor Manual by disabling Add once the quota is reached. At the limit the Add button is disabled with a tooltip and 'The number of badges is limited (N).' replaces the fee message."
+ },
+ {
+  "k": "EP-23915",
+  "q": "2024-Q2",
+  "feature": "Exhibitor manual deadlines",
+  "tags": [],
+  "summary": "RNG  - Changing deadlines of Exhibitor Manual or remove tasks when expired / toggle off when closed without deleting data. ( as people submit after the data and it is un usable).",
+  "epic": null,
+  "text": "Added a 'successfully updated the deadline' confirmation to Exhibitor Manual sections and reworded the live-form warning to say changing the deadline won't require refilling. Organisers can change section deadlines with confirmation and without exhibitors having to resubmit."
+ },
+ {
+  "k": "EP-40746",
+  "q": "2025-Q3",
+  "feature": "Exhibitor manual discounts",
+  "tags": [],
+  "summary": "Discount Functionality for Exhibitor Manuals",
+  "epic": null,
+  "text": "Extended discount codes to exhibitor manual items, limited to the Equipment section, with exhibitor category and item targeting and an XLS usage export. Exhibitors and team members apply valid codes to eligible Equipment items in the basket, and admins see and download discount usage."
+ },
+ {
+  "k": "EP-40027",
+  "q": "2025-Q1",
+  "feature": "Exhibitor manual profile submission",
+  "tags": [],
+  "summary": "Save and submit Exhibitor profile on the \"Submit\" button click in Exhibitor Manual",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-20410",
+  "q": "2023-Q4",
+  "feature": "Exhibitor manual translation",
+  "tags": [],
+  "summary": "Translation tool for Exhibitor Manual",
+  "epic": null,
+  "text": "Added language switching and translation to every Exhibitor Manual section and the section names in the admin panel. Organisers enter Exhibitor Manual content per platform language, as already possible for the registration pipeline."
+ },
+ {
+  "k": "EP-12718",
+  "q": "2023-Q1",
+  "feature": "Exhibitor marketing content",
+  "tags": [],
+  "summary": "Add load indication for Marketing Content",
+  "epic": null,
+  "text": "Added an upload spinner to the marketing content dropzones on the exhibitor profile and product add/edit pages. A spinner shows in the dropzone until a marketing content file has fully uploaded."
+ },
+ {
+  "k": "EP-11932",
+  "q": "2023-Q1",
+  "feature": "Exhibitor marketing content",
+  "tags": [],
+  "summary": "Marketing content limit on individual level",
+  "epic": null,
+  "text": "Added marketing content permission and limit settings on the individual exhibitor, with 'last saved' precedence over category-level settings. Organisers set per-exhibitor content limits that category changes, imports and the API do not overwrite once changed locally."
+ },
+ {
+  "k": "EP-7239",
+  "q": "2023-Q1",
+  "feature": "Exhibitor marketing content",
+  "tags": [],
+  "summary": "NA: Marketing content description to be extended to 3000 characters",
+  "epic": null,
+  "text": "Added a per-exhibitor-category 'File description characters limit' setting for marketing content and relaid the content screens with a More button. Organisers set the description limit per category (0 = unlimited, default 200); descriptions sit below the thumbnail and expand via a More button."
+ },
+ {
+  "k": "EP-10301",
+  "q": "2023-Q1",
+  "feature": "Exhibitor news",
+  "tags": [],
+  "summary": "Allow selection of number of characters for the news description ",
+  "epic": null,
+  "text": "Added an 'Article characters limit' setting per exhibitor category, replacing the hardcoded 1,000-character cap on exhibitor news. Organisers set the news character limit per category (0 for unlimited); existing over-limit articles stay but cannot be saved until trimmed."
+ },
+ {
+  "k": "EP-16131",
+  "q": "2023-Q2",
+  "feature": "Exhibitor news",
+  "tags": [],
+  "summary": "Text Editor - Exhibitor News",
+  "epic": null,
+  "text": "Added the full text editor to exhibitor news on the front end: headings, bold, italic, underline, lists, alignment, quote, photo and link. Exhibitors format news articles with the same ten editor options as in profile editing."
+ },
+ {
+  "k": "EP-41849",
+  "q": "2025-Q2",
+  "feature": "Exhibitor news",
+  "tags": [],
+  "summary": "News header image | Change the cropper ratio to 1/5",
+  "epic": null,
+  "text": "Changed the admin news header cropper to the 1:5 ratio used on the frontend, leaving existing images unchanged. News headers look the same in admin and on the site."
+ },
+ {
+  "k": "EP-17348",
+  "q": "2023-Q3",
+  "feature": "Exhibitor overview report",
+  "tags": [],
+  "summary": "Download detailed report (parent+child)",
+  "epic": null,
+  "text": "Added an Exhibitor Overview XLS download to the exhibitor profile menu, covering the exhibitor and its child exhibitors for the whole event. Exhibitors download one row per company with views, products, content, chats, meetings, badge scans and RFP stats when enabled."
+ },
+ {
+  "k": "EP-31674",
+  "q": "2024-Q3",
+  "feature": "Exhibitor profile creation",
+  "tags": [],
+  "summary": "Make password not required for new Exhibitor profile",
+  "epic": null,
+  "text": "Made the password optional on the new admin exhibitor profile, keeping the old password when left empty. Admins can change an exhibitor's username without touching the password."
+ },
+ {
+  "k": "EP-13852",
+  "q": "2023-Q2",
+  "feature": "Exhibitor profile editor",
+  "tags": [],
+  "summary": "Text Editor",
+  "epic": null,
+  "text": "Restored the rich text editor for About the company in the new-UI exhibitor profile editor and verified all ten formatting options. Exhibitors can format About the company with headings, lists, alignment, quotes, photos and links, and saved text and images persist."
+ },
+ {
+  "k": "EP-38749",
+  "q": "2026-Q1",
+  "feature": "Exhibitor profile improvements",
+  "tags": [],
+  "summary": "Need add some loader in \"Team members\" ( contacts) section on exhibitor public profile page ",
+  "epic": null,
+  "text": "Added a loader to the team members section of exhibitor profiles. Users see that team members are loading."
+ },
+ {
+  "k": "EP-34459",
+  "q": "2024-Q3",
+  "feature": "Exhibitor profile social links",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android/ Use social link for EXH account from exh object ( profilenew request)",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-34458",
+  "q": "2024-Q3",
+  "feature": "Exhibitor profile social links",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "iOS/ Use social link for EXH account from exh object ( profilenew request) ",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-38865",
+  "q": "2025-Q1",
+  "feature": "Exhibitor profile video embeds",
+  "tags": [],
+  "summary": "Add validation to the Embedded code video field in Exhibitor profile",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-39511",
+  "q": "2025-Q1",
+  "feature": "Exhibitor profile video embeds",
+  "tags": [],
+  "summary": "Add validation to the Embedded code video field on Product page, in Groups, etc. AND add scroll if needed",
+  "epic": null,
+  "text": "Validated embedded video code on product, group, feed and exhibitor event pages, adding scrollbars where needed. Embedded videos are validated across these pages."
+ },
+ {
+  "k": "EP-53945",
+  "q": "2026-Q2",
+  "feature": "Exhibitor team management",
+  "tags": [],
+  "summary": "Update on Team Member Creation Rules for Exhibitors and Login Uniqueness Validation",
+  "epic": "Exhibitor profile",
+  "text": "Creating team members and other users now checks for duplicate logins, not duplicate emails, with a clear 'already used as a login' error. Legitimate team members can be created, duplicate logins are still prevented, and the rule is the same in admin, portal and API."
+ },
+ {
+  "k": "EP-50974",
+  "q": "2026-Q2",
+  "feature": "Exhibitor visibility permissions",
+  "tags": [],
+  "summary": "Extend Exhibitor Permissions to Products",
+  "epic": null,
+  "text": "Closed a permission gap that let restricted or guest users see/interact with an Exhibitor's Products even when the Exhibitor itself was restricted. Products now inherit their Exhibitor's resolved visibility and Message/Meeting interaction restrictions, consistently across web and mobile, including for users with multiple roles/categories."
+ },
+ {
+  "k": "EP-5445",
+  "q": "2023-Q2",
+  "feature": "Lead capture",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Change Code to scan QR codes for colocated events ",
+  "epic": null,
+  "text": "Allowed mobile app users to scan badges of accounts from co-located events in the same database, behind a new contact-sharing toggle. With the setting on, other-event scans are saved with an 'other event' ribbon, and scan reports and leads files gain an 'Event name' column."
+ },
+ {
+  "k": "EP-8788",
+  "q": "2023-Q2",
+  "feature": "Lead capture",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "EMEA: Lead capture page - company name & person name clickable to lead the person to company profile/personal profile",
+  "epic": null,
+  "text": "Made the person's name and, for team members, the company name clickable on the mobile lead capture screen after a badge scan. Tapping the name opens the person's public profile; tapping a team member's company opens their exhibitor's profile; non-team members' company stays plain text."
+ },
+ {
+  "k": "EP-18953",
+  "q": "2023-Q3",
+  "feature": "Lead capture",
+  "tags": [],
+  "summary": "Filter all duplicated of scans ",
+  "epic": null,
+  "text": "Filtered duplicate scans, same barcode and time, out of the exhibitor scanned contacts report. The scanned contacts report has no duplicates."
+ },
+ {
+  "k": "EP-44306",
+  "q": "2026-Q1",
+  "feature": "Lead capture",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": " Logic for Scan Badges Page - Lead Capture Pro",
+  "epic": null,
+  "text": "Redirected exhibitors without Lead Capture Pro from the app's scan badge page to the Lead Capture Pro purchase page. Exhibitors are led to buy Lead Capture Pro instead of hitting an error."
+ },
+ {
+  "k": "EP-47877",
+  "q": "2026-Q1",
+  "feature": "Lead capture",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Autosave on Lead Capture Form",
+  "epic": "Lead Capture pro settings",
+  "text": "Lead capture in the mobile booth now autosaves the moment an exhibitor leaves the form, guaranteeing no scanned lead or partial data is ever lost even on flaky venue networks. Lead data now autosaves on exit, back action, app close, or network loss (queued locally and synced), creating or updating a lead and recording engagement."
+ },
+ {
+  "k": "EP-40302",
+  "q": "2026-Q2",
+  "feature": "Lead capture",
+  "tags": [],
+  "summary": "Scanned Visitor QR includs also team members",
+  "epic": null,
+  "text": "Included team members in the Scanned Visitor QR lead setting, listed as QR visitor with full data in the leads file. Scanned team members appear in exhibitors' leads."
+ },
+ {
+  "k": "EP-51659",
+  "q": "2026-Q2",
+  "feature": "Lead capture",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Changing badge display logic",
+  "epic": "Mobile App — 2026 Enhancements",
+  "text": "Added a badge-scan-gated email visibility setting in the mobile app so attendee emails appear only after their badge is scanned, balancing privacy with lead capture at IMEX. A new toggle 'Show Visitor email ONLY after badge scan' was added; when enabled with profile email hidden, email appears on a profile only after a successful badge scan."
+ },
+ {
+  "k": "EP-46360",
+  "q": "2026-Q2",
+  "feature": "Lead capture",
+  "tags": [],
+  "summary": "Lead capture notes field. Character limitation",
+  "epic": null,
+  "text": "Limited lead capture notes to 500 characters, including spaces and emoji. Lead notes have a set length."
+ },
+ {
+  "k": "EP-21095",
+  "q": "2024-Q2",
+  "feature": "Lead capture badge matching",
+  "tags": [],
+  "summary": "User Data in Scanned List & Exports | Unrecognized Badge Scans",
+  "epic": null,
+  "text": "Added server-side matching of unrecognised badge scans against the event database, syncing account details when a match is found. Unrecognised scans that match an event account are filled in with that user's data, as for recognised badges."
+ },
+ {
+  "k": "EP-11114",
+  "q": "2023-Q3",
+  "feature": "Lead capture custom questions",
+  "tags": [],
+  "summary": "EMEA. Custom Questions stage2. Additional questions",
+  "epic": null,
+  "text": "Extended lead capture additional questions with select, multiselect, radio group, checkbox and checkbox group types. Organisers add custom lead questions of six types through a pop-up, with configurable answer options, on the admin and front end."
+ },
+ {
+  "k": "EP-7074",
+  "q": "2023-Q3",
+  "feature": "Lead capture custom questions",
+  "tags": [],
+  "summary": "EMEA: Ability for Company profile to add Custom questions for its team members in the Lead capture form, via a pool of Questions",
+  "epic": null,
+  "text": "Added a Lead Questions tab for exhibitor admins to create custom lead capture questions (text, select, radio and more) for their team members. When enabled, exhibitor team members see their company's custom questions on the lead capture screen, with answers in the leads report."
+ },
+ {
+  "k": "EP-12942",
+  "q": "2023-Q3",
+  "feature": "Lead capture custom questions",
+  "tags": [],
+  "summary": "EMEA. Custom Questions two new features",
+  "epic": null,
+  "text": "Relabelled new custom questions from 'New' to 'Unpublished' on the front and added a 'Lead questions' button to the admin exhibitor profile. Admins can open an exhibitor's lead questions from the profile page, and unpublished custom questions are labelled 'Unpublished' in summaries."
+ },
+ {
+  "k": "EP-48886",
+  "q": "2026-Q1",
+  "feature": "Lead capture custom questions",
+  "tags": [],
+  "summary": "Custom Questions Page UI Improvements (Exhibitor Profile)",
+  "epic": "Exhibitor profile",
+  "text": "A tidier Custom Questions page in the exhibitor profile: the summary block shows only its title and the button now reads '+ Add New Question'. Exhibitors see a cleaner page with a shorter, clearer add-question button in English and French."
+ },
+ {
+  "k": "EP-48813",
+  "q": "2026-Q3",
+  "feature": "Lead capture custom questions",
+  "tags": [],
+  "summary": "Lead Capture Pro – Full Access to Custom Questions",
+  "epic": "Lead Capture pro settings",
+  "text": "Exhibitors who buy Custom Questions in Lead Capture Pro now get unlimited lead-capture questions automatically, strengthening the paid upsell. Purchasing Custom Questions now automatically sets Standard and Additional Lead Capture Questions to unlimited (overriding any Organizer limit, non-revertible) and enables all Standard questions by default with no manual admin configuration."
+ },
+ {
+  "k": "EP-43294",
+  "q": "2025-Q3",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "[portalUI] close ability to buylead-capture-pro for unauthorized user",
+  "epic": null,
+  "text": "Limited buying Lead Capture Pro to exhibitors and team members, asking others to log in. Only exhibitor users can buy Lead Capture Pro."
+ },
+ {
+  "k": "EP-43200",
+  "q": "2025-Q3",
+  "feature": "Lead Capture Pro",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Lead Capture Pro logic for App",
+  "epic": "Selling lead capture ",
+  "text": "Added Lead Capture Pro visibility logic to the app so exhibitors and team members see Scan Badges only if Lead Capture Pro is off or they bought the package. With Lead Capture Pro on, only exhibitors who purchased lead capture see the Scan Badges page; other users are unaffected."
+ },
+ {
+  "k": "EP-40864",
+  "q": "2025-Q3",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "Lead Capture Journey",
+  "epic": "Selling lead capture ",
+  "text": "Built a 'Lead Capture Pro' module with admin settings for paid packages and UI customisation, plus analytics, for exhibitors to buy lead capture. Organisers sell a Lead Capture package that gives an exhibitor's whole team access, and track payments and revenue."
+ },
+ {
+  "k": "EP-44314",
+  "q": "2025-Q3",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "Lead Capture Pro logination improvement",
+  "epic": null,
+  "text": "Kept users on the Lead Capture Pro page after logging in so they can finish buying. The purchase journey continues after login."
+ },
+ {
+  "k": "EP-52952",
+  "q": "2026-Q2",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "Update Lead Contribution Logic for Exhibitors Based on Meeting Appointments",
+  "epic": "Lead Capture pro settings",
+  "text": "Leads from meetings booked with an exhibitor now go to the team members in the meeting, not the exhibitor; exhibitor-only meetings still count for the exhibitor. Exhibitor and team-member lead files stay consistent with no duplicates, including when files are regenerated."
+ },
+ {
+  "k": "EP-46050",
+  "q": "2026-Q2",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "Standard Questions Default State Configuration",
+  "epic": null,
+  "text": "An organiser setting to turn on all standard lead questions by default for every exhibitor, including new ones, in the app's lead retrieval. Exhibitors start with all standard questions on and can switch individual ones off; limits apply when they edit."
+ },
+ {
+  "k": "EP-50125",
+  "q": "2026-Q2",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "Product QR Codes: Category-Level Access Control",
+  "epic": "Lead Capture pro settings",
+  "text": "Product QR codes move from a global setting to a per exhibitor-category toggle, off by default; buying Lead Capture Pro always grants access. Exhibitors see product QR codes in product editing on web only when their category allows it or they bought it."
+ },
+ {
+  "k": "EP-50127",
+  "q": "2026-Q2",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "Lead Capture Pro — Settings Consolidation",
+  "epic": "Lead Capture pro settings",
+  "text": "Exhibitor category and profile settings gain Lead Capture, Product QR Codes and AI Meeting Notes, grouped with lead questions in one Lead Capture Pro block. Organisers manage every Lead Capture Pro feature for categories and exhibitors from one consistent block."
+ },
+ {
+  "k": "EP-50126",
+  "q": "2026-Q2",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "Product QR Codes: Exhibitor-Level Access Control",
+  "epic": "Lead Capture pro settings",
+  "text": "A per-exhibitor Product QR codes toggle that follows the exhibitor's category, with a custom override and reset; Lead Capture Pro still takes priority. Organisers can switch product QR codes on or off for one exhibitor without affecting the rest of its category."
+ },
+ {
+  "k": "EP-54261",
+  "q": "2026-Q2",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "Removal of Global Settings related to Lead Capture Pro and Adjustments to QR Codes Export in Admin Panel",
+  "epic": "Lead Capture pro settings",
+  "text": "Redundant global Lead Capture Pro settings are removed, and QR code exports for exhibitors and products are always available. Organisers can always export exhibitor and product QR codes, with no conflicting global toggles."
+ },
+ {
+  "k": "EP-49735",
+  "q": "2026-Q2",
+  "feature": "Lead Capture Pro",
+  "tags": [
+   "AI"
+  ],
+  "summary": "AI Notetaker Access Control (by Exhibitor Category)",
+  "epic": "Lead Capture pro settings",
+  "text": "An AI notes toggle per exhibitor category (off by default) controls who can use the app's AI notetaker; participants never get it. Exhibitors and their teams get AI meeting notes in the app only when their category allows it."
+ },
+ {
+  "k": "EP-49740",
+  "q": "2026-Q2",
+  "feature": "Lead Capture Pro",
+  "tags": [
+   "AI"
+  ],
+  "summary": "AI Notes — Per-Exhibitor / Per-Category Control",
+  "epic": "Lead Capture pro settings",
+  "text": "An AI notes toggle per exhibitor, synced to the exhibitor category with a custom override and reset, controlling access to the app's AI notetaker. Exhibitors and their team get the AI notetaker only where enabled; participants never get it."
+ },
+ {
+  "k": "EP-50123",
+  "q": "2026-Q2",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "Lead Capture Access Control by Exhibitor Category",
+  "epic": "Lead Capture pro settings",
+  "text": "Lead Capture access moves from a global Exhibitor Manual setting to a per exhibitor-category toggle; buying Lead Capture Pro always grants access. Exhibitors and their teams get lead capture in the app only if their category allows it or they bought it."
+ },
+ {
+  "k": "EP-50124",
+  "q": "2026-Q2",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "Lead Capture: Exhibitor-Level Granular Control",
+  "epic": "Lead Capture pro settings",
+  "text": "A per-exhibitor Lead capture toggle that follows the exhibitor's category, with a custom override and reset; Lead Capture Pro buyers always get access. Organisers switch lead capture on or off for one exhibitor and their team without affecting others in the category."
+ },
+ {
+  "k": "EP-54359",
+  "q": "2026-Q2",
+  "feature": "Lead Capture Pro",
+  "tags": [],
+  "summary": "Additional logic for LC, Custom Questions and Product QR",
+  "epic": "Lead Capture pro settings",
+  "text": "The Lead Capture Pro purchase page now marks features already granted via Category or Profile settings as 'Purchased,' preventing double charges. The purchase page now detects features granted via Category or Profile settings and marks them as Purchased, so exhibitors and their team members are not offered items they already hold."
+ },
+ {
+  "k": "EP-50535",
+  "q": "2026-Q3",
+  "feature": "Lead Capture Pro settings",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Create Lead Capture Pro settings config for profile level",
+  "epic": "Lead Capture pro settings",
+  "text": "The mobile app now enforces per-profile entitlements for Lead Capture and AI Meeting Notes, gating recording permissions per team member. The app reads backend per-profile flags to enable Lead Capture and AI Meeting Notes independently for each exhibitor owner and team member, with build-time gating of the recording module and mic/phone permissions and runtime gating via aiNoteTakerEnabled."
+ },
+ {
+  "k": "EP-32169",
+  "q": "2024-Q4",
+  "feature": "Lead capture questions",
+  "tags": [],
+  "summary": "Improve Lead Questions logic on global, category and exhibitor levels",
+  "epic": null,
+  "text": "Reworked lead questions across global, category and exhibitor levels: 'Additional' naming, per-category standard questions with limits, global toggles controlling lower levels. Organisers control standard and additional lead questions consistently at every level."
+ },
+ {
+  "k": "EP-26547",
+  "q": "2024-Q2",
+  "feature": "Lead capture settings",
+  "tags": [],
+  "summary": "Lead capture availability settings",
+  "epic": null,
+  "text": "Defined lead capture availability: free for everyone, per exhibitor or per team member, with basket and price effects and unavailable markers. Organisers control who gets lead capture and whether it's paid."
+ },
+ {
+  "k": "EP-22713",
+  "q": "2024-Q2",
+  "feature": "Lead downloads",
+  "tags": [],
+  "summary": "Download leads improvements",
+  "epic": null,
+  "text": "Moved Download leads from the user menu to a button under Preview profile, with background file generation, a loader and a timestamped download link. Users generate the leads file from their profile without interruption on refresh and download it when ready; the Download leads module still applies per group."
+ },
+ {
+  "k": "EP-13663",
+  "q": "2024-Q3",
+  "feature": "Lead downloads",
+  "tags": [],
+  "summary": "Download leads feature on Exhibitor Category level and Individual exhibitor level",
+  "epic": null,
+  "text": "Added 'Download Leads' on/off settings at exhibitor category level and individual exhibitor level, applying to their team members. When off for a category or exhibitor, the 'Download leads' menu item disappears for that exhibitor and its team members on web and app."
+ },
+ {
+  "k": "EP-16456",
+  "q": "2023-Q2",
+  "feature": "Lead exports",
+  "tags": [],
+  "summary": "Leads Download to Include - All Meeting Requests",
+  "epic": null,
+  "text": "Added an 'Include all meeting statuses' contact-sharing toggle so leads exports include pending, incoming, confirmed and cancelled meetings. Web Download Leads and app Scanned Badges files list leads from meetings of all statuses, past and future, without duplicates."
+ },
+ {
+  "k": "EP-42570",
+  "q": "2025-Q2",
+  "feature": "Lead scan reasons",
+  "tags": [],
+  "summary": "Change name of the Reason for Scannyng of any code -- make it more obvious in the report",
+  "epic": null,
+  "text": "Renamed the any-code scan reason to 'Scanned Badge (any code)' in reports. Reports distinguish any-code scans."
+ },
+ {
+  "k": "EP-23400",
+  "q": "2025-Q1",
+  "feature": "Lead scan sync",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Force scanned list sync",
+  "epic": null,
+  "text": "Added a 'Force scans sync' button to mobile app settings and a Help button in the scans list pointing to it. Users can force their locally edited scans to sync to the server so offline notes and ratings appear in the leads file."
+ },
+ {
+  "k": "EP-24094",
+  "q": "2023-Q4",
+  "feature": "Lead scanning in app",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android|Lead scan| Need remove redirection on user profile after tapping on user name ",
+  "epic": null,
+  "text": "Stopped Android lead scanning from opening the user profile when the name is tapped during a scan. Scanning stays on the scan screen; profiles open from the scanned list."
+ },
+ {
+  "k": "EP-24160",
+  "q": "2024-Q1",
+  "feature": "Leads export",
+  "tags": [],
+  "summary": "Leads Export: Exhibitor Event - Date / Time",
+  "epic": null,
+  "text": "Added 'Exhibitor Event Date' and 'Exhibitor Event Time' columns to the leads export, with time zones handled. Leads exports show the date and time of the exhibitor event behind each lead."
+ },
+ {
+  "k": "EP-24161",
+  "q": "2024-Q1",
+  "feature": "Leads export",
+  "tags": [],
+  "summary": "Inclusion of 'Meeting Rating Notes' in Leads Export",
+  "epic": null,
+  "text": "Added a 'Meeting Rating Notes' column to the leads export, controlled by a new Contact Sharing toggle that is off by default. When enabled, leads exports include the notes staff entered for each rated meeting."
+ },
+ {
+  "k": "EP-11579",
+  "q": "2023-Q1",
+  "feature": "Marketplace catalogue",
+  "tags": [],
+  "summary": "Need possibility to display 24 items on the catalogue page instead of 12 by default",
+  "epic": null,
+  "text": "Added a general setting for the default number of marketplace items per page (8 to 60, default 12). The marketplace opens with the per-page count set in admin; existing events keep 12."
+ },
+ {
+  "k": "EP-34438",
+  "q": "2024-Q4",
+  "feature": "Marketplace default view",
+  "tags": [],
+  "summary": "(exhibitor profile) - MRO Events - option to set up a default view on exhibitor marketplace page",
+  "epic": null,
+  "text": "Added a Default Marketplace view setting (Cards, List or Short list) applied to marketplace pages and widgets. Organisers set the default marketplace view; it falls back to List where Short list is unavailable and is ignored where custom exhibitor listing applies."
+ },
+ {
+  "k": "EP-39031",
+  "q": "2025-Q1",
+  "feature": "Marketplace exhibitor cards",
+  "tags": [],
+  "summary": "Display country names on Parent Exhibitor in Marketplace ",
+  "epic": null,
+  "text": "Made Country and City display on all exhibitor cards in the marketplace card view, including parent exhibitors, on the Exhibitors and Pavilions tabs. Every exhibitor card in marketplace card view, parent companies included, shows the exhibitor's country and city."
+ },
+ {
+  "k": "EP-49295",
+  "q": "2026-Q2",
+  "feature": "Multilingual exhibitor manual",
+  "tags": [],
+  "summary": "Exhibitor Tools: Organizer can upload Exhibitor Manual documents per Event language",
+  "epic": "Exhibitor profile",
+  "text": "Letting organizers upload one Exhibitor Manual document with a separate file per event language replaces the messy multi-entry workaround and is the admin-side half of proper multilingual manuals. Organizers can now upload language-specific files for each enabled event language within a single Exhibitor Manual entry (admin-side; the frontend half is EP-49298)."
+ },
+ {
+  "k": "EP-49298",
+  "q": "2026-Q2",
+  "feature": "Multilingual exhibitor manual",
+  "tags": [],
+  "summary": "Online Exhibitor Services-Frontend Experience / BE tbd after EP-49295",
+  "epic": "Exhibitor profile",
+  "text": "On the exhibitor-facing side, exhibitors now see only the Exhibitor Manual file matching their selected event language, completing the multilingual manual experience. Online Exhibitor Services now serves each exhibitor the Exhibitor Manual document in their selected event language only."
+ },
+ {
+  "k": "EP-27619",
+  "q": "2024-Q2",
+  "feature": "Parent and child companies",
+  "tags": [],
+  "summary": "Parent/Child - Exhibitor Assignment",
+  "epic": null,
+  "text": "Added a 'Parent/Child auto assign' script to general settings that links exhibitors sharing an email address as parent and children. API managers run the script to make the first exhibitor with a shared email the parent and later ones its children, with the last run shown."
+ },
+ {
+  "k": "EP-26157",
+  "q": "2024-Q3",
+  "feature": "Parent and child companies",
+  "tags": [],
+  "summary": "Add checks to API, import, etc., so parent exhbitor can't be set as a child (and vice versa) for himself",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-37234",
+  "q": "2025-Q1",
+  "feature": "Parent and child companies",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Settings to define labels for Parent-Child (Frontend)",
+  "epic": null,
+  "text": "Added a 'Manage Parent-Child namings' pop-up with multilingual labels for Pavilions, Parent Company, Child Company(s) and Head office. Organisers set their own Parent-Child labels per language, used on marketplace tabs, exhibitor cards, profiles and filters on web and apps."
+ },
+ {
+  "k": "EP-37846",
+  "q": "2025-Q1",
+  "feature": "Parent and child companies",
+  "tags": [],
+  "summary": "Admin panel/ Sponsors/ Update field name from \"App exhibitor list\" to \"App exhibitor/pavilion  list\"",
+  "epic": null,
+  "text": "Renamed the sponsor setting 'App exhibitor list' to 'App exhibitor/pavilion list'. The setting name covers pavilions."
+ },
+ {
+  "k": "EP-38531",
+  "q": "2025-Q1",
+  "feature": "Parent and child companies",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "iOS/Parent-child/ Translations - update horizontal exhibitor card view ",
+  "epic": null,
+  "text": "Showed child companies on two rows on iOS horizontal exhibitor cards. iOS cards show more child companies."
+ },
+ {
+  "k": "EP-37800",
+  "q": "2025-Q1",
+  "feature": "Parent and child companies",
+  "tags": [],
+  "summary": "Control if Child companies indication is present (WEB)",
+  "epic": null,
+  "text": "Added a 'Do not indicate Child companies' exhibitor setting, off by default, that hides child company indications on the web frontend. When enabled, marketplace cards, profiles, filters, community, favourites, matchmaking and builder blocks show only the parent company indication."
+ },
+ {
+  "k": "EP-11754",
+  "q": "2023-Q1",
+  "feature": "Parent and child exhibitors",
+  "tags": [],
+  "summary": "Parent-Child management on Frontend v.1",
+  "epic": "Parent-Child. Parents adding/creating children on frontend",
+  "text": "Added a 'My child exhibitors' front-end page where parent exhibitors search, add or create child exhibitors, with admin toggle and category rules. Parent exhibitors manage child exhibitors themselves; new children get a category per admin rule and a credentials email, or auto-generated logins for SSO."
+ },
+ {
+  "k": "EP-37278",
+  "q": "2025-Q1",
+  "feature": "Parent and child exhibitors",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Settings to define labels for Parent-Child (App)",
+  "epic": null,
+  "text": "Added a Manage Parent-Child namings pop-up with multilingual labels for Pavilions, Parent Company, Child Company, Child Company(s) and Head office, used on web and apps. Organisers can rename parent-child labels per language, and the new labels appear on exhibitor cards, profiles, filters and the Pavilions page."
+ },
+ {
+  "k": "EP-32830",
+  "q": "2025-Q1",
+  "feature": "Parent and child exhibitors",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Parent / Child - App",
+  "epic": null,
+  "text": "Brought parent/child exhibitor relations to the mobile apps: parent and child labels, a Pavilions tab, and a Head Office/Child Exhibitors filter. App exhibitor lists mark parent and child companies, a Pavilions tab lists pavilions with child counts, and users can filter by parent or child."
+ },
+ {
+  "k": "EP-37305",
+  "q": "2025-Q1",
+  "feature": "Parent and child exhibitors",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Sort child exhibitors in the alphabetical accending order (A-z) in the frontend and mobile app endpoints",
+  "epic": null,
+  "text": "Sorted child exhibitors alphabetically in frontend and app responses. Child exhibitors appear A–Z."
+ },
+ {
+  "k": "EP-37805",
+  "q": "2025-Q2",
+  "feature": "Parent and child exhibitors",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Control if Child companies indication is present (APP)",
+  "epic": "Parent/child display control + country\\city for parents",
+  "text": "Added a 'Do not indicate Child companies' exhibitor setting that hides child-company indications in the apps. When on, app exhibitor lists, pavilion lists and public profiles show only the Parent company indication, not child relations."
+ },
+ {
+  "k": "EP-41483",
+  "q": "2025-Q2",
+  "feature": "Parent and child exhibitors",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Add country / city information - Parent Exhibitors",
+  "epic": "Parent/child display control + country\\city for parents",
+  "text": "Added a country and city row for parent exhibitors and pavilions across app exhibitor lists, pavilion lists, event pages, schedule and brand profiles. App cards and profiles for parent exhibitors and pavilions show their country and city."
+ },
+ {
+  "k": "EP-38486",
+  "q": "2025-Q2",
+  "feature": "Parent and child exhibitors",
+  "tags": [],
+  "summary": "FBM - Parent/Child script Enhancements 2025",
+  "epic": null,
+  "text": "Enhanced the Parent/Child auto-assign script: cp_email matching, is_parent_exhibitor logic, password email option, daily scheduled run, run report and emailed report. Parent/child assignment runs daily at a set time after Momentus pushes, sends password emails as configured and emails a report of processed exhibitors."
+ },
+ {
+  "k": "EP-17039",
+  "q": "2023-Q2",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Sync to Elasticsearch only in the end of importing products",
+  "epic": null,
+  "text": "Paused search syncing during product imports and synced once at the end. Imports trigger a single search sync."
+ },
+ {
+  "k": "EP-16538",
+  "q": "2023-Q2",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Check only updated fields of Product while sync to Elasticsearch",
+  "epic": null,
+  "text": "Synced exhibitors and products to search only when their searchable fields change. Fewer unnecessary search syncs."
+ },
+ {
+  "k": "EP-17329",
+  "q": "2023-Q2",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Remove duplicated queries from Marketplace page",
+  "epic": null,
+  "text": "Removed duplicated queries from the marketplace page. The marketplace page makes fewer queries."
+ },
+ {
+  "k": "EP-33961",
+  "q": "2024-Q3",
+  "feature": "Product categories",
+  "tags": [],
+  "summary": "Extend logic of adding of Product categories",
+  "epic": null,
+  "text": "Added a setting to allow only an exhibitor's Activity Categories to be selected as Product Categories. When on, the product category pop-up lists only the exhibitor's activity categories, or a placeholder if none; when off, behaviour is unchanged."
+ },
+ {
+  "k": "EP-24228",
+  "q": "2024-Q4",
+  "feature": "Product categories",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "To amend the order of product category on front end for both web & app",
+  "epic": null,
+  "text": "Added drag-and-drop ordering of category filters in admin categorisation, applied to category pickers across web and the app's edit-profile webview. Organisers set and save the category filter order, and exhibitors and participants see that order when adding categories."
+ },
+ {
+  "k": "EP-47919",
+  "q": "2026-Q1",
+  "feature": "Product category custom filters",
+  "tags": [],
+  "summary": "[BE]Networking: Event Organizer can clone Product Category custom filters within an Event so that they don’t have to recreate them manually for each new Event",
+  "epic": null,
+  "text": "Organizers can now clone Product Category custom filters within an event, eliminating the manual rebuild of complex filter sets every time a new event is created or cloned. Backend capability to clone Product Category custom filters within an event during the pre-event phase."
+ },
+ {
+  "k": "EP-7323",
+  "q": "2024-Q2",
+  "feature": "Product form requirements",
+  "tags": [],
+  "summary": "Product Description and Product Image Mandatory",
+  "epic": null,
+  "text": "Added 'Required product image' and 'Required product description' toggles to product form settings. When on, exhibitors cannot save a product without a main picture or description, and the fields are marked with an asterisk."
+ },
+ {
+  "k": "EP-10479",
+  "q": "2023-Q2",
+  "feature": "Product limits and defaults",
+  "tags": [],
+  "summary": "Forbid exhibitors to add active products for those who are not allowed & let them arrive on Active products by default in the company profile.",
+  "epic": null,
+  "text": "Added settings to block product creation once an exhibitor's active-product limit is reached and to choose the default products tab. Organisers can disable '+ Add Product' at the limit, set All/Active/Inactive as the default tab; a disclaimer and toggle tooltips explain status."
+ },
+ {
+  "k": "EP-13930",
+  "q": "2023-Q1",
+  "feature": "Products and brands",
+  "tags": [],
+  "summary": "Show all products attached to one brand",
+  "epic": null,
+  "text": "Added a 'Show all (n)' button to a brand's window in the exhibitor section, opening a paginated page of that exhibitor's products for the brand. Brands with more than 6 products link to a full product list with brand identification, pagination and a 'Back to <Brand Name>' button."
+ },
+ {
+  "k": "EP-55642",
+  "q": "2026-Q3",
+  "feature": "Products and brands",
+  "tags": [],
+  "summary": "Enhancing Exhibitor Import to Attach Brands Across Events",
+  "epic": "Exhibitor profile",
+  "text": "Exhibitor import and adding exhibitors from the global database now attach their existing brands, and brand–product links, to the new event. Recurring events carry exhibitors' brands over automatically, with no new import column and no duplicate brands."
+ },
+ {
+  "k": "EP-14378",
+  "q": "2023-Q1",
+  "feature": "Profile blocks polish",
+  "tags": [],
+  "summary": "EMEA_ Enhancement is viewing All sponsored session under exhibitor profile on frontend",
+  "epic": null,
+  "text": "Changed the cursor to a hand pointer on 'Show all' buttons across exhibitor, participant, product, brand, group and community profile blocks. Hovering 'Show all' on profile blocks shows a hand cursor."
+ },
+ {
+  "k": "EP-12034",
+  "q": "2023-Q1",
+  "feature": "Profile category selection",
+  "tags": [],
+  "summary": "EMEA: Remove product category auto selection",
+  "epic": null,
+  "text": "Added a 'Bulk selection of sub-category items' setting, shown when parent categories are selectable, and applied it to profile category pop-ups. Organisers choose whether ticking a category also ticks its sub-categories; when off, only the clicked checkbox is checked on exhibitor and visitor profiles."
+ },
+ {
+  "k": "EP-35452",
+  "q": "2025-Q1",
+  "feature": "Profile category selection",
+  "tags": [],
+  "summary": "Category Selection Process",
+  "epic": null,
+  "text": "Redesigned the interest, activity and product category selection pop-up with a two-panel view for custom filters and direct-match search. Across profile, product, brand, news and admin edit pages, users pick categories by custom filter and search; the RFP module keeps the old picker."
+ },
+ {
+  "k": "EP-55645",
+  "q": "2026-Q3",
+  "feature": "Region filters",
+  "tags": [],
+  "summary": "Region filters",
+  "epic": null,
+  "text": "An optional Regions subfilter under Country for exhibitor, product, brand, pavilion, delegate, speaker and buyer listings on web. Visitors expand a country to pick regions, like category subfilters; it's off by default and web only."
+ },
+ {
+  "k": "EP-36732",
+  "q": "2025-Q1",
+  "feature": "Search within category filters",
+  "tags": [],
+  "summary": "Search bar option for Categories",
+  "epic": null,
+  "text": "Added a 'Search Within Filters' setting that shows a search field in category filters with 10 or more items across marketplace, delegate and news pages. When enabled, users can search long category filters by direct match in every enabled language, alongside a redesigned page search."
+ },
+ {
+  "k": "EP-40743",
+  "q": "2025-Q2",
+  "feature": "Search within category filters",
+  "tags": [],
+  "summary": "Hierarchical search results display for Categories",
+  "epic": null,
+  "text": "Replaced flat category search results with a hierarchical display showing parent and child categories across marketplace, delegate and other listing filters. Category search in exhibitor, product, speaker, news, product finder and other filters returns matches with their parent and child categories."
+ },
+ {
+  "k": "EP-35019",
+  "q": "2024-Q4",
+  "feature": "Sponsor banners",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Unclickable Banners",
+  "epic": null,
+  "text": "Added app banner settings blocks and a 'Disable Links' toggle for each web and app sponsor banner location. Admins can make banners unclickable, with no redirect and no click stats recorded, on web and app."
+ },
+ {
+  "k": "EP-43244",
+  "q": "2025-Q2",
+  "feature": "Sponsor banners",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android/ Update  banner tap behavior for Sponsored Banners without website link",
+  "epic": null,
+  "text": "Opened the linked exhibitor's profile on Android when a sponsored banner has no website link, respecting the permission matrix. Android banner taps lead to the exhibitor."
+ },
+ {
+  "k": "EP-43245",
+  "q": "2025-Q3",
+  "feature": "Sponsor banners",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "iOS/ Update  banner tap behavior for Sponsored Banners without website link",
+  "epic": null,
+  "text": "Opened the linked exhibitor's profile on iOS when a sponsored banner has no website link, respecting the permission matrix. iOS banner taps lead to the exhibitor."
+ },
+ {
+  "k": "EP-18978",
+  "q": "2023-Q3",
+  "feature": "Sponsor display options",
+  "tags": [],
+  "summary": "Choosing the way sponsors displayed",
+  "epic": "[Old] Global Search functionality",
+  "text": "Added a 'Slider for sponsors' toggle so sponsors can be shown all at once in rows of six instead of a moving slider on the exhibitors page. With the slider off, all marked sponsors appear in static rows above exhibitors, still subject to search and filters."
+ },
+ {
+  "k": "EP-18109",
+  "q": "2023-Q3",
+  "feature": "Sponsor display options",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Sponsors block for exhibitor and product list in app.",
+  "epic": null,
+  "text": "Added a sponsors slider above the exhibitor and product lists in the app, matching the web, with sponsor limits, colours and ordering from the admin panel. The app shows sponsored exhibitors and products in their own slider."
+ },
+ {
+  "k": "EP-20725",
+  "q": "2023-Q4",
+  "feature": "Sponsor display options",
+  "tags": [],
+  "summary": "Buttons for Sponsor cards on Marketplace",
+  "epic": null,
+  "text": "Restored interaction buttons and location to sponsor and sponsored product cards on the marketplace, shown on hover. Hovering a sponsor card shows location and meet/message buttons, subject to permissions and limits, and interactions are counted in sponsor reports again."
+ },
+ {
+  "k": "EP-41570",
+  "q": "2025-Q4",
+  "feature": "Sponsor limits",
+  "tags": [],
+  "summary": "Add the tooltip for the Custom Sponsor limit field",
+  "epic": null,
+  "text": "Added a 'use 0 for unlimited' hint to the custom sponsor limit setting. Admins know how to set unlimited sponsors."
+ },
+ {
+  "k": "EP-35640",
+  "q": "2024-Q4",
+  "feature": "Sponsor listings",
+  "tags": [],
+  "summary": "Display the sponsors with the pagination",
+  "epic": null,
+  "text": "Loaded marketplace sponsors in batches of 12, capping the expanded view at 48. Sponsor sliders load faster without changing their look."
+ },
+ {
+  "k": "EP-22966",
+  "q": "2023-Q4",
+  "feature": "Sponsor management",
+  "tags": [],
+  "summary": "Search and filter for sponsor categories on the sponsors page ",
+  "epic": null,
+  "text": "Added a search bar and a Sponsor categories filter to the admin sponsors page, working like the exhibitors list. Admins search sponsors and filter them by sponsor category."
+ },
+ {
+  "k": "EP-11115",
+  "q": "2023-Q1",
+  "feature": "Sponsor placements",
+  "tags": [],
+  "summary": "Sponsor banners in profile",
+  "epic": null,
+  "text": "Added one- or two-banner sponsor slots to every page of Exhibitor and Visitor My profile, configured per sponsor and in sponsor settings. Sponsors can be assigned banners on My profile pages per device; banners rotate between sponsors and link out, with an external-link warning if enabled."
+ },
+ {
+  "k": "EP-12564",
+  "q": "2023-Q1",
+  "feature": "Sponsor placements",
+  "tags": [],
+  "summary": "Featured exhibitors to be configurable at Exhibitor Category level",
+  "epic": null,
+  "text": "Added Is sponsor and Show in Search List toggles to exhibitor category settings under Online presence > Sponsorship. Turning the toggles on sets sponsorship and search-list featuring for all exhibitors in the category, including via import, API and category change."
+ },
+ {
+  "k": "EP-12584",
+  "q": "2023-Q1",
+  "feature": "Sponsor placements",
+  "tags": [],
+  "summary": "Sponsor Pop Up - Category Level Config",
+  "epic": null,
+  "text": "Added a 'Show sponsor pop-up' toggle to exhibitor category settings, shown when 'Is sponsor' is on, that sets the pop-up for all exhibitors in the category. Category changes flow to exhibitors, including via import, API and category change, without overwriting manual per-exhibitor settings."
+ },
+ {
+  "k": "EP-16209",
+  "q": "2023-Q2",
+  "feature": "Sponsor placements",
+  "tags": [],
+  "summary": "*Improvement* In Sponsor Banner for Mobile and Tablet View",
+  "epic": null,
+  "text": "Reworked marketplace sponsor banners on tablet and mobile, grouping the Search Top and three left-hand banners above the filters at fixed responsive sizes. On smaller screens, marketplace banners and the Product finder sit in a compact block above the filters; the desktop layout is unchanged."
+ },
+ {
+  "k": "EP-17760",
+  "q": "2023-Q2",
+  "feature": "Sponsor placements",
+  "tags": [],
+  "summary": "Sponsors and sponsored products cards are 6 in a raw",
+  "epic": null,
+  "text": "Showed six sponsor and sponsored product cards per row and renamed Sponsors to Sponsored Products on the products page. Sponsor rows show six cards; the products page says Sponsored Products."
+ },
+ {
+  "k": "EP-17790",
+  "q": "2023-Q3",
+  "feature": "Sponsor placements",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Sponsor exhibitors/products optimization for apps",
+  "epic": null,
+  "text": "Added sponsor flag and sponsor order attributes to exhibitor and product objects for the apps. The apps can show sponsored exhibitors and products in order."
+ },
+ {
+  "k": "EP-13907",
+  "q": "2023-Q3",
+  "feature": "Sponsor placements",
+  "tags": [],
+  "summary": "Move Sponsors to the separate section ",
+  "epic": "[Old] Global Search functionality",
+  "text": "Moved sponsors into a separate framed section of six cards above exhibitors on the marketplace, with an auto-scrolling carousel. Sponsors show as clickable cards with picture, name and location, scrolling automatically when there are more than six."
+ },
+ {
+  "k": "EP-27558",
+  "q": "2024-Q2",
+  "feature": "Sponsor placements",
+  "tags": [],
+  "summary": "Rename the sponsor block name in the app ",
+  "epic": null,
+  "text": "Added 'Name on the Exhibitors List Page' and 'Name on the Products List Page' sponsor settings (up to 60 characters) for web and app. Organisers rename the sponsors and sponsored products sections on the marketplace exhibitor and product lists."
+ },
+ {
+  "k": "EP-39105",
+  "q": "2025-Q1",
+  "feature": "Sponsor profiles",
+  "tags": [],
+  "summary": "Remove tab header from sponsor profile and add back button",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-21461",
+  "q": "2023-Q3",
+  "feature": "Sponsor statistics",
+  "tags": [],
+  "summary": "The clicks should be counted in the sponsor stats",
+  "epic": null,
+  "text": "Counted clicks on sponsor and sponsored product cards in search statistics. Sponsor statistics include clicks."
+ },
+ {
+  "k": "EP-23935",
+  "q": "2024-Q1",
+  "feature": "Sponsor statistics",
+  "tags": [],
+  "summary": "Look of the sponsors and sponsored products stats in export file",
+  "epic": null,
+  "text": "Changed the layout of sponsor and sponsored product stats in the export file to the second of two proposed designs. Sponsor stats in the export use the new layout, resolving bugs EP-23298 and EP-23297."
+ },
+ {
+  "k": "EP-20605",
+  "q": "2024-Q1",
+  "feature": "Sponsor statistics",
+  "tags": [],
+  "summary": "Sponsors stats should count only the sponsors that we have on the screen",
+  "epic": null,
+  "text": "Counted sponsor and sponsored product views only when they're visible in the slider, pausing it off-screen. Sponsor statistics reflect sponsors people actually saw."
+ },
+ {
+  "k": "EP-50051",
+  "q": "2026-Q1",
+  "feature": "Sponsor visibility controls",
+  "tags": [],
+  "summary": "Random sorting for Sponsors and Sponsored products",
+  "epic": "Admin Panel Restructure & Navigation",
+  "text": "Sponsors and sponsored products on the marketplace can be sorted by matchmaking, set priority, or a new random order on each refresh. Organisers can rotate sponsor exposure fairly, on web and app."
+ },
+ {
+  "k": "EP-52414",
+  "q": "2026-Q2",
+  "feature": "Sponsor visibility controls",
+  "tags": [],
+  "summary": "Increasing Sponsor Limit to 150 for legacy view",
+  "epic": "Admin Panel Restructure & Navigation",
+  "text": "The legacy marketplace sponsors view shows up to 150 sponsors (6 per row, up to 25 rows) in expanded view, instead of 48. Events with many sponsors can show all of them on the marketplace, with an updated admin tooltip."
+ },
+ {
+  "k": "EP-50249",
+  "q": "2026-Q2",
+  "feature": "Sponsor visibility controls",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Random sorting for sponsors in app",
+  "epic": "Admin Panel Restructure & Navigation",
+  "text": "The mobile app now supports matchmaking-based and randomized sorting of sponsors and sponsored products, aligning mobile sponsor visibility with the new web admin controls. Mobile now reads the active sorting mode from the API and renders sponsors and sponsored products By matchmaking (score order) or Random (in-app shuffle, re-shuffled on each screen re-entry), while preserving existing set-priority behaviour and display limits."
+ },
+ {
+  "k": "EP-53036",
+  "q": "2026-Q2",
+  "feature": "Sponsor visibility controls",
+  "tags": [],
+  "summary": "Session: Always display Sponsor Name on Session cards and pages",
+  "epic": "Sessions & Agenda UX (New UI)",
+  "text": "Ensures a paid Sponsor's organization name is always shown across Session cards, pages, modals, recommendations and round-table/exhibitor-event surfaces, even when no logo is uploaded. Sponsor organization name now always displays across all session-related surfaces, alongside the logo or a standardized placeholder when none exists."
+ },
+ {
+  "k": "EP-47680",
+  "q": "2026-Q3",
+  "feature": "Sponsored placements in search",
+  "tags": [],
+  "summary": "Global Search. Sponsorship banner",
+  "epic": "Search Anatomy",
+  "text": "Sponsored banners on the new Global Search page (one or two), managed in sponsor and exhibitor settings, with an option to disable the link. Organisers can sell Global Search banners, with impressions and clicks in banner statistics and the XLSX export."
+ },
+ {
+  "k": "EP-53768",
+  "q": "2026-Q3",
+  "feature": "Sponsored placements in search",
+  "tags": [],
+  "summary": "Global Search. Sponsored Products",
+  "epic": "Search Anatomy",
+  "text": "A rotating Sponsored Products block on the Global Search page, with a configurable label, sponsor colour, arrows and product sorting rules. Sponsored products rotate on the search page, respect visibility restrictions, and feed the same product statistics as the marketplace."
+ },
+ {
+  "k": "EP-53767",
+  "q": "2026-Q3",
+  "feature": "Sponsored placements in search",
+  "tags": [],
+  "summary": "Global Search. Sponsored Exhibitors",
+  "epic": "Search Anatomy",
+  "text": "A rotating Sponsored Exhibitors card on the Global Search page, with the organiser's label, sponsor bar colour, arrows and sponsor sorting rules. Sponsors rotate every five seconds regardless of the query, and views and clicks count in the same statistics as the marketplace."
+ },
+ {
+  "k": "EP-11165",
+  "q": "2023-Q1",
+  "feature": "Sponsored session insights",
+  "tags": [],
+  "summary": "Include session interactions in the  dashboard of exhibitor who is sponsoring it",
+  "epic": null,
+  "text": "Added 'Booked a session' and 'Attended session' columns to the sponsoring exhibitor's dashboard interactions table. Sponsors see who booked or attended (online, offline or on demand) their sponsored sessions, and the data remains after sponsorship ends."
+ },
+ {
+  "k": "EP-7172",
+  "q": "2023-Q1",
+  "feature": "Sponsored sessions on exhibitor profiles",
+  "tags": [],
+  "summary": "EMEA: Sponsored Session Should be Visible on Company Profile",
+  "epic": null,
+  "text": "Added a Sponsored Sessions block to the exhibitor profile in the webview, reusing the session card, slider and Show All behaviour. Exhibitor profiles automatically show a sponsored-sessions block when the exhibitor sponsors sessions, and hide it when they sponsor none."
+ },
+ {
+  "k": "EP-39354",
+  "q": "2025-Q1",
+  "feature": "Sponsored sessions on exhibitor profiles",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Sponsored sessions & Sessions We Speak At Block in Profiles",
+  "epic": null,
+  "text": "Added 'Sessions we speak at' and 'Sponsored sessions' blocks to exhibitor profiles in the mobile apps, respecting visibility, active and hidden rules. Exhibitor profiles list sessions and events their team speaks at or sponsors, two cards at a time with Show More, filtered by visibility."
+ },
+ {
+  "k": "EP-40242",
+  "q": "2025-Q2",
+  "feature": "Team member form settings",
+  "tags": [],
+  "summary": "Control if Telephone and Job Title fields in the add TM form are required",
+  "epic": null,
+  "text": "Added 'Use for team member creation' to the Telephone and Job Title registration fields, replacing static fields in the team member form. Team member forms use the registration form's phone and job title settings."
+ },
+ {
+  "k": "EP-17339",
+  "q": "2023-Q3",
+  "feature": "Team member interaction controls",
+  "tags": [],
+  "summary": "Exhibitor to define if team members can interact (WEB)",
+  "epic": null,
+  "text": "Added exhibitor-level connection settings on web: a table of toggles letting exhibitors, and optionally parent exhibitors, allow or block team members' meetings and chats. Exhibitors switch meetings and chats per team member; the settings flow through the API, exports and imports, with new errors for blocked meetings."
+ },
+ {
+  "k": "EP-17343",
+  "q": "2023-Q3",
+  "feature": "Team member interaction controls",
+  "tags": [],
+  "summary": "Extract interaction settings in xls file for Organizer",
+  "epic": null,
+  "text": "Added 'Meetings Allowed' and 'Chats Allowed' yes/no columns to the Team Members export and matching attributes to /api/v2/account/get and /set. Team member meeting and chat permissions appear in the XLS export and can be read and set through the public API."
+ },
+ {
+  "k": "EP-17974",
+  "q": "2023-Q3",
+  "feature": "Team member interaction controls",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Exhibitor to define if team members can interact (App)",
+  "epic": null,
+  "text": "Applied exhibitor-set team member connection settings in the mobile apps, hiding interaction buttons and adding restriction errors and notifications. In the apps, blocked team members cannot chat or schedule or confirm meetings, see explanatory tooltips, and are notified when disabled."
+ },
+ {
+  "k": "EP-27290",
+  "q": "2024-Q2",
+  "feature": "Visitor invitation statistics",
+  "tags": [],
+  "summary": "Invite Visitors - Statistics",
+  "epic": null,
+  "text": "Added Invite Visitors statistics: an admin tab with status counts, top 5 exhibitors, filters, search and Excel export, plus a Statistics tab in the exhibitor profile. Invite registrations are attributed to exhibitors; admins and exhibitors see funnel counts and invitee lists and export them."
+ }
+]

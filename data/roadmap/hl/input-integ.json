@@ -1,0 +1,1092 @@
+[
+ {
+  "k": "EP-37381",
+  "q": "2025-Q1",
+  "feature": "A2Z integration",
+  "tags": [],
+  "summary": "A2Z Enhancements",
+  "epic": null,
+  "text": "Extended the A2Z native integration with a BoothStatus filter for importing exhibitors and mapping of PavilionCode and HallCode to select custom fields. Only exhibitors matching the chosen BoothStatus are imported from A2Z, with pavilion and hall codes mapped into registration custom fields."
+ },
+ {
+  "k": "EP-25790",
+  "q": "2024-Q2",
+  "feature": "Aditus badge integration",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Custom Badge Page Integration with Aditus",
+  "epic": null,
+  "text": "Added an Aditus external badges integration: admin settings and a mobile app badge page listing the user's Aditus tickets by email. When enabled, the app's badge menu shows the user's tickets from Aditus, each opening its badge web page, with not-found and offline screens."
+ },
+ {
+  "k": "EP-46657",
+  "q": "2026-Q1",
+  "feature": "Aditus integration",
+  "tags": [],
+  "summary": "Aditus - Exhibitor and Team member data push",
+  "epic": "Integration HUB - Integrations EPIC",
+  "text": "Pushed exhibitor and team member admin data to Aditus, with SSO so admins add team members there. Exhibitors are created in Aditus and their team flows back."
+ },
+ {
+  "k": "EP-40301",
+  "q": "2025-Q2",
+  "feature": "Aditus participant integration",
+  "tags": [],
+  "summary": "InfoSalons/Aditus Participant API.",
+  "epic": null,
+  "text": "Added a native InfoSalons/Aditus integration that pulls participants and team members for one or more event IDs, with category mapping, badge fields and email options. Admins sync registrations from InfoSalons/Aditus with resync, mapped categories, external QR/barcode badges and optional invite emails set separately for visitors and team members."
+ },
+ {
+  "k": "EP-44694",
+  "q": "2025-Q3",
+  "feature": "Aditus participant integration",
+  "tags": [],
+  "summary": "Custom Badge Page with Aditus - Reinstate the Settings on Admin Panel",
+  "epic": null,
+  "text": "Reinstated the Aditus custom badge page setting in the admin panel. Admins can enable the Aditus badge page again."
+ },
+ {
+  "k": "EP-11456",
+  "q": "2023-Q1",
+  "feature": "ASP events integration",
+  "tags": [],
+  "summary": "Integration with ASP events system to pull in Exhibitors, Sessions and Speakers",
+  "epic": null,
+  "text": "Built an integration with the ASP events API to pull exhibitors, sessions and speakers, with a configurable site UUID per event. Exhibitors (linked by account number, updated by modified date), speakers and sessions sync from ASP; main contacts become admin team members."
+ },
+ {
+  "k": "EP-42403",
+  "q": "2025-Q2",
+  "feature": "ASP events integration",
+  "tags": [],
+  "summary": "ASP - Data Push Back",
+  "epic": null,
+  "text": "Built a push-back from EP to ASP of exhibitors in selected categories, approved news, and exhibitor manual brochures, images and videos, with token authentication. Exhibitor, news and content data entered on EP flows to ASP with the agreed field mapping; API managers choose which exhibitor categories are pushed."
+ },
+ {
+  "k": "EP-43006",
+  "q": "2025-Q3",
+  "feature": "ASP events integration",
+  "tags": [],
+  "summary": "ASP API Field Mapping Changes",
+  "epic": null,
+  "text": "Changed the ASP push-back field mapping to the product export columns and let API managers set the PDF ID from which brochures are sent. Products map to ASP with name and categories added, and only PDFs from the chosen EP ID onwards are sent to ASP."
+ },
+ {
+  "k": "EP-25344",
+  "q": "2024-Q1",
+  "feature": "ASP integration",
+  "tags": [],
+  "summary": "ASP Integration - Sessions/Filtering/Speakers Enhancements",
+  "epic": null,
+  "text": "Enhanced the ASP integration to import moderators (chairpersons), filter sessions by stream, and bring only speakers attached to imported sessions. API managers enter stream values to import only the wanted sessions, with their moderators and speakers and no unrelated speaker data."
+ },
+ {
+  "k": "EP-28688",
+  "q": "2024-Q2",
+  "feature": "ASP integration",
+  "tags": [],
+  "summary": "ASP Integration - Enhancements",
+  "epic": null,
+  "text": "Enhanced the ASP integration: exhibitor custom fields and category, '||' stream separator, field update locks, stream-name tracks and session types. ASP imports bring custom fields, categories and session types, use standard separators, and can skip updating chosen fields."
+ },
+ {
+  "k": "EP-30037",
+  "q": "2024-Q2",
+  "feature": "ASP integration",
+  "tags": [],
+  "summary": "ASP Exhibitor Integration - Send Email Functionality",
+  "epic": null,
+  "text": "Added an option to the ASP exhibitor integration to email newly created exhibitors their password automatically. Exhibitors created via ASP get their password email."
+ },
+ {
+  "k": "EP-33726",
+  "q": "2024-Q4",
+  "feature": "ASP session integration",
+  "tags": [],
+  "summary": "ASP Integration Enhancements",
+  "epic": null,
+  "text": "Added a second filtering layer to the ASP native integration, filtering incoming sessions by Seminar name as well as Streams. ASP-imported sessions can be filtered by Streams and by Seminar name."
+ },
+ {
+  "k": "EP-48618",
+  "q": "2026-Q1",
+  "feature": "CDS integration",
+  "tags": [],
+  "summary": "CDS - Participant Integration with Pagination",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "text": "The CDS participant integration now supports paginated pulls with full field mapping and admin-configurable parameters, enabling reliable large-volume registration sync for the client. Implemented paginated participant import mapping reg fields to participant data, email-based update matching, and admin-panel settings for OrderType and IncludeItems."
+ },
+ {
+  "k": "EP-46776",
+  "q": "2026-Q2",
+  "feature": "CDS integration",
+  "tags": [],
+  "summary": "CDS - Participant Integration",
+  "epic": "Integration HUB - Integrations EPIC",
+  "text": "Built a participant integration with the CDS registration system, with a field mapping. Participants can be imported from CDS."
+ },
+ {
+  "k": "EP-27396",
+  "q": "2024-Q2",
+  "feature": "CRM sessions integration",
+  "tags": [],
+  "summary": "Sessions integration with DWTC CRM",
+  "epic": null,
+  "text": "Built an integration with DWTC's CRM API, switched on in event setup, to pull sessions and speakers along with tracks, types and tags. Session and speaker data, including tracks, types and tags, flow from DWTC's system into ExpoPlatform when the integration is on."
+ },
+ {
+  "k": "EP-23579",
+  "q": "2024-Q1",
+  "feature": "Crowd Connected integration",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": " Pass User ID through to Crowd Connected",
+  "epic": null,
+  "text": "Made the mobile apps send the ExpoPlatform internal user ID to ExpoFP / Crowd Connected as an alias via the SDK on Android and iOS. When the ExpoFP integration is set up, apps pass 'expoplatform_internal_id' (the exhibitor owner ID for exhibitors) to Crowd Connected."
+ },
+ {
+  "k": "EP-23578",
+  "q": "2024-Q3",
+  "feature": "Crowd Connected integration",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Push messaging through Crowd Connected on app",
+  "epic": null,
+  "text": "Built a notifications API for CrowdConnected to call directly, replacing its Firebase integration, with category targeting via the Subject field. CrowdConnected messages of up to 235 characters, with app, external or no link, are stored in the app's native notification centre for the targeted categories or users."
+ },
+ {
+  "k": "EP-52290",
+  "q": "2026-Q2",
+  "feature": "D2i integration",
+  "tags": [],
+  "summary": "D2i - Native Integration Build",
+  "epic": "Integration HUB - Integrations EPIC",
+  "text": "A new native integration was built to pull registration and attendee data from D2i's Engage API into ExpoPlatform using the standard hub-and-spoke pattern. A native D2i integration now searches and paginates the Engage Registrations API, supports delta sync via lastModified, and ingests attendee data into ExpoPlatform with D2i as the source of truth."
+ },
+ {
+  "k": "EP-19915",
+  "q": "2023-Q3",
+  "feature": "Exhibitor event location in API and imports",
+  "tags": [],
+  "summary": "Text Field for \"Other\"  option in Session Location for Exhibitor events is missing in Imports and API",
+  "epic": null,
+  "text": "Added an other_location parameter to session imports and /api/v2/sessions/set for exhibitor event 'Other' locations. Exhibitor events created by import or API can carry a custom Other location text, with validation."
+ },
+ {
+  "k": "EP-34460",
+  "q": "2024-Q3",
+  "feature": "ExpoFP and Crowd Connected app setup",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "ExpoFP/CrowdConnected settings during app creation",
+  "epic": null,
+  "text": "Added ExpoFP and Crowd Connected flags to app config so their SDKs and permissions are included only when an event uses them. Apps include ExpoFP and Crowd Connected only when enabled."
+ },
+ {
+  "k": "EP-26327",
+  "q": "2024-Q2",
+  "feature": "ExpoFP data integration",
+  "tags": [],
+  "summary": "ExpoFP - Data Integration",
+  "epic": null,
+  "text": "Built an ExpoFP data integration that pushes exhibitor name, stand ID, order ID, description, logo and category whenever an exhibitor is created, edited or deleted. With 'Transmit exhibitor data to ExpoFP' ticked, exhibitor changes on ExpoPlatform sync automatically to the ExpoFP floor plan."
+ },
+ {
+  "k": "EP-18322",
+  "q": "2023-Q3",
+  "feature": "ExpoFP floor plan integration",
+  "tags": [],
+  "summary": "Sessions in ExpoFP integration",
+  "epic": null,
+  "text": "Extended the ExpoFP floorplan integration to support sessions with a physical location, covering offline sessions and exhibitor events. Offline sessions and exhibitor events with a physical location can be shown on ExpoFP floorplans as on the native floorplan."
+ },
+ {
+  "k": "EP-17756",
+  "q": "2023-Q3",
+  "feature": "ExpoFP floor plan integration",
+  "tags": [],
+  "summary": "ExpoFP Floorplan | Integration",
+  "epic": null,
+  "text": "Integrated the ExpoFP floor plan on web, enabled via an API token, with exhibitor, custom location and session search, deep links and wayfinding. Organisers can switch on ExpoFP; stands and locations are searchable and clickable, link to profiles, and wayfinding shows travel time and distance."
+ },
+ {
+  "k": "EP-20080",
+  "q": "2023-Q3",
+  "feature": "ExpoFP floor plan integration",
+  "tags": [],
+  "summary": "ExpoFP || Add field for account token",
+  "epic": null,
+  "text": "Added an 'API Token' field for ExpoFP to general settings, passed to the front end and apps via API. The front end and apps use the token configured in admin, defaulting to the previous value."
+ },
+ {
+  "k": "EP-32423",
+  "q": "2024-Q4",
+  "feature": "ExpoFP floor plan sync",
+  "tags": [],
+  "summary": "Gather exhibitor changes and send them to the ExpoFP together once in 10 minutes",
+  "epic": null,
+  "text": "Batched exhibitor changes to ExpoFP every 10 minutes, using a new table that links platform records to external integration IDs. ExpoFP receives exhibitor changes in batches, and integrations can track external IDs."
+ },
+ {
+  "k": "EP-54115",
+  "q": "2026-Q3",
+  "feature": "ExpoFP floor plan sync",
+  "tags": [],
+  "summary": "ExpoFP - Migration to HUB",
+  "epic": "Native Integrations - Migrations",
+  "text": "The ExpoFP floorplan integration was migrated onto the Integration Hub's auto-update framework, gaining self-healing sync and a logs viewer. ExpoFP now runs on the Hub's auto-update schema: removed exhibitors are recreated automatically, exhibitor changes batch into a dedicated five-minute sync run, one month of sync history is retained, and the integration inherits the Hub logs viewer."
+ },
+ {
+  "k": "EP-45950",
+  "q": "2025-Q4",
+  "feature": "Genesis World integration",
+  "tags": [],
+  "summary": "Phase 1 - HINTE - Genesis World Integration",
+  "epic": "HINTE - Genesis World Integration",
+  "text": null
+ },
+ {
+  "k": "EP-54452",
+  "q": "2026-Q3",
+  "feature": "Integration hub matching rules",
+  "tags": [],
+  "summary": "Integration Hub - Change on Matching Mechanism",
+  "epic": "Native Integrations - Migrations",
+  "text": "Added an 'Email First' matching strategy for native integrations so an attendee's profile and history no longer fragment when their email changes upstream. A new 'Email First' matching strategy falls back to External ID when email matching would create a duplicate, and the existing 'Both' option is renamed to 'External ID First' with no behaviour change for current users."
+ },
+ {
+  "k": "EP-47958",
+  "q": "2026-Q1",
+  "feature": "Integration role mapping",
+  "tags": [],
+  "summary": "Add team member role matching to the mapping schema",
+  "epic": "API V3 & Integrations 2026",
+  "text": "Integrations can now assign HYVE-matched contacts as admins automatically, without downgrading existing admin roles on every resync. Role can be defined via integration settings/mapping; HYVE rule sets admin when member email matches the exhibitor contact; existing roles are preserved on resync when not explicitly mapped."
+ },
+ {
+  "k": "EP-55251",
+  "q": "2026-Q3",
+  "feature": "Integrations page",
+  "tags": [],
+  "summary": "Integrations page - Back-end work",
+  "epic": "Integrations page",
+  "text": "A new backend endpoint powers the Admin Panel Integrations page with a single catalog of every integration, tagged by category with per-event status. GET /api/v1/integrations returns the full integrations catalog (hub + legacy) with names, descriptions, category tags, icons, and a per-event derived active flag; the catalog is maintained in code with a Confluence registry mirror and responses cached 10 minutes per event and language."
+ },
+ {
+  "k": "EP-57684",
+  "q": "2026-Q3",
+  "feature": "Integrations page",
+  "tags": [],
+  "summary": "Integrations catalog: move SAML 2.0 settings to a dedicated integration page (urgent – DLG)",
+  "epic": "Integrations page",
+  "text": "SAML 2.0 settings now have their own page in the Integrations catalog instead of the shared legacy settings page. A page at /admin/integrations/saml on the hub template reuses existing storage with no data migration, and the catalog entry points to it; done."
+ },
+ {
+  "k": "EP-14473",
+  "q": "2023-Q4",
+  "feature": "Klipso integration",
+  "tags": [],
+  "summary": "Build an integration between EP and Klipso",
+  "epic": null,
+  "text": "Built an integration that pulls exhibitor data from Klipso into EP, with settings, a Sync button, per-minute updates and text-based category mapping. Admins configure Klipso credentials and sync exhibitors automatically every minute, with a two-pass sync that builds parent-child links."
+ },
+ {
+  "k": "EP-23914",
+  "q": "2023-Q4",
+  "feature": "Klipso integration",
+  "tags": [],
+  "summary": "Klipso Integration - Addition of two parameters",
+  "epic": null,
+  "text": "Added the cp_email and username parameters to the existing Klipso native integration. The Klipso integration sends cp_email and username over its certificate-secured connection."
+ },
+ {
+  "k": "EP-24104",
+  "q": "2023-Q4",
+  "feature": "Klipso integration",
+  "tags": [],
+  "summary": "Klipso Integration - Addition of Custom Questions",
+  "epic": null,
+  "text": "Extended the Klipso integration so API managers can specify exhibitor custom questions to import into ExpoPlatform. Named custom questions from Klipso exhibitor registration are brought into ExpoPlatform, with per-question enable/disable options."
+ },
+ {
+  "k": "EP-31213",
+  "q": "2024-Q3",
+  "feature": "Klipso integration",
+  "tags": [],
+  "summary": "Klipso Integration - Team member admin",
+  "epic": null,
+  "text": "Mapped the contact person fields received from the Klipso integration (cp_email, cp_title, cp_name, cp_surname) to the team member admin on EP. Exhibitors synced from Klipso get their team member admin filled in automatically from the contact person data."
+ },
+ {
+  "k": "EP-38131",
+  "q": "2025-Q1",
+  "feature": "Klipso integration",
+  "tags": [],
+  "summary": "Klipso Native Integration - Status change on Team Member Admin",
+  "epic": null,
+  "text": "Added a Receive Admin Team Member as ACTIVE toggle to Klipso integration settings, shown only when Populate Admin Account is on. When on, team member admins imported from Klipso arrive with Active status; when off they stay Uploaded, as before."
+ },
+ {
+  "k": "EP-38098",
+  "q": "2025-Q1",
+  "feature": "Klipso integration",
+  "tags": [],
+  "summary": "Klipso Integration - Multiple Hall/Stands",
+  "epic": null,
+  "text": "Extended the Klipso integration to support multiple halls and stands separated by ';', as in the Open API schema. Exhibitors imported through Klipso can carry several halls and stands."
+ },
+ {
+  "k": "EP-41455",
+  "q": "2025-Q2",
+  "feature": "Klipso integration",
+  "tags": [],
+  "summary": "Klipso Native Integration - Exhibitor Product Categories Enhancement",
+  "epic": null,
+  "text": "Added a 'Fetch Product Categories' option to the Klipso integration that copies exhibitors' product categories from a selected earlier event by external ID. Exhibitors imported via Klipso to a new show automatically get the product categories they had at the selected event."
+ },
+ {
+  "k": "EP-45440",
+  "q": "2025-Q4",
+  "feature": "Map Your Show integration",
+  "tags": [],
+  "summary": "Integration Hub - Map Your Show",
+  "epic": "Integration HUB - Integrations EPIC",
+  "text": "Built a Map Your Show integration in the Integration Hub, fetching exhibitors by ID list via the MYS REST API, with custom fields and product categories mapped. Exhibitor data is imported from Map Your Show, with custom fields mapped by value and product categories mapped via an uploaded Excel file."
+ },
+ {
+  "k": "EP-48154",
+  "q": "2026-Q1",
+  "feature": "Map Your Show integration",
+  "tags": [],
+  "summary": "MYS Stage 2",
+  "epic": "API V3 & Integrations 2026",
+  "text": "The final tranche of work for the MYS native integration was delivered, closing out the remaining gaps so the MYS client's end-to-end integration needs are fully met. Completed the remaining MYS integration tasks (stage 2) covering the outstanding user needs."
+ },
+ {
+  "k": "EP-22242",
+  "q": "2023-Q4",
+  "feature": "MapsPeople indoor maps integration",
+  "tags": [],
+  "summary": "Include value of MapsPeople \"Enable\" toggle to the API",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-28229",
+  "q": "2024-Q2",
+  "feature": "Meeting tags in export and API",
+  "tags": [],
+  "summary": "Expose Meeting Tags in Export & API",
+  "epic": null,
+  "text": "Added meeting tags to the Meetings export file and the /api/v2/meetings/export endpoint. The export has a 'Meeting tags' column (comma-separated) and the API returns tags separated by double pipes."
+ },
+ {
+  "k": "EP-42364",
+  "q": "2025-Q4",
+  "feature": "N200 integration",
+  "tags": [],
+  "summary": "HYVE - N200 API V2. Error handling and automation",
+  "epic": "HYVE - N200 API V2",
+  "text": "Added retry automation (six retries, from 15 seconds to 1 hour) to the N200 API V2 integration, plus stakeholder alerts for repeated 500 errors and a daily failed-accounts email. Failed N200 syncs retry automatically, and stakeholders are warned of error spikes and sent daily lists of accounts that could not sync."
+ },
+ {
+  "k": "EP-42362",
+  "q": "2025-Q4",
+  "feature": "N200 integration",
+  "tags": [],
+  "summary": "HYVE - N200 API V2. Sync from EP to GES",
+  "epic": "HYVE - N200 API V2",
+  "text": "Added GES webhook-based real-time updates and a configurable end-of-day push of all accounts from EP back to GES. EP fetches GES updates as they happen and, at the hour the API manager sets, pushes all exhibitors and participants back to GES."
+ },
+ {
+  "k": "EP-42360",
+  "q": "2025-Q4",
+  "feature": "N200 integration",
+  "tags": [],
+  "summary": "HYVE - N200 API V2. New version on N200 using V2",
+  "epic": "HYVE - N200 API V2",
+  "text": "Moved the N200 (GES Visit) integration to the V2 API for pulling and pushing participants and exhibitors, with per-field push-back checkboxes. EP syncs visitors and partners with GES via V2, pushes back chosen field updates, and keeps existing V1 custom functions working."
+ },
+ {
+  "k": "EP-42363",
+  "q": "2025-Q4",
+  "feature": "N200 integration",
+  "tags": [],
+  "summary": "HYVE - N200 API V2. New logs",
+  "epic": "HYVE - N200 API V2",
+  "text": "Added API logs in the admin panel for the native integration, recording time, method, parameters, response and HTTP status of every request. Super Admins can filter integration request logs by any field and time range and export them to XLSX, as with Open API logs."
+ },
+ {
+  "k": "EP-42361",
+  "q": "2025-Q4",
+  "feature": "N200 integration",
+  "tags": [],
+  "summary": "HYVE - N200 API V2. Handles of deletes",
+  "epic": "HYVE - N200 API V2",
+  "text": "Handled GES deletions via API V2: deleted participants are deactivated, and deleted partners are detached with their sponsorship, events, team and products handled. Deletions in GES inactivate participants, cancel their meetings and sessions, and detach exhibitors while cancelling events and deactivating members and products."
+ },
+ {
+  "k": "EP-47117",
+  "q": "2025-Q4",
+  "feature": "N200 integration",
+  "tags": [],
+  "summary": "N200 Addition of Profile Picture for accounts",
+  "epic": null,
+  "text": "Mapped the profilePhotoUrl parameter from the N200 integration to the account profile picture. Accounts pulled from N200 carry the profile picture URL supplied by the vendor."
+ },
+ {
+  "k": "EP-50158",
+  "q": "2026-Q1",
+  "feature": "N200 integration",
+  "tags": [],
+  "summary": "Profile Picture sync in GES/Visit integration",
+  "epic": "Native Integrations - Migrations",
+  "text": "Attendee profile pictures now sync back to the GES/Visit integration with EP as the source of truth, keeping partner systems visually consistent with the EP platform. A profile-picture push-back capability was implemented for the GES/Visit integration, with profile pictures excluded from update mappings to prevent infinite update loops."
+ },
+ {
+  "k": "EP-50667",
+  "q": "2026-Q1",
+  "feature": "Native integration hub",
+  "tags": [],
+  "summary": "Native Integration Hub - Addition of new field",
+  "epic": null,
+  "text": "Added a Default Language field to the Native Integration Hub's Exhibitor Create/Update mappings. The Default Language field is now available in the Exhibitor Create and Update mappings."
+ },
+ {
+  "k": "EP-46288",
+  "q": "2026-Q2",
+  "feature": "Native integration hub",
+  "tags": [],
+  "summary": "Integration HUB Migration - Aventri V2",
+  "epic": "Integration HUB - Integrations EPIC",
+  "text": "Migrated the Aventri (Stova) integration to the integration hub, keeping its functions and default field mapping. Aventri imports run through the integration hub."
+ },
+ {
+  "k": "EP-47099",
+  "q": "2026-Q2",
+  "feature": "Native integration hub",
+  "tags": [],
+  "summary": "Integration HUB Migration - Infosalon/Aditus",
+  "epic": "Native Integrations - Migrations",
+  "text": "Migrated the InfoSalons/Aditus integration to the integration hub, keeping its functions and default mapping. Aditus imports run through the integration hub."
+ },
+ {
+  "k": "EP-45439",
+  "q": "2026-Q2",
+  "feature": "Native integration hub",
+  "tags": [],
+  "summary": "Integration HUB Migration - A2Z",
+  "epic": "Integration HUB - Integrations EPIC",
+  "text": "Migrated the A2Z (Map Your Show) integration to the integration hub, pulling exhibitors, categories, custom fields and contacts. A2Z imports run through the integration hub."
+ },
+ {
+  "k": "EP-39525",
+  "q": "2025-Q1",
+  "feature": "Partner meeting permissions",
+  "tags": [],
+  "summary": "GES - allow_meetings",
+  "epic": null,
+  "text": "Added Custom Question Name and Response fields to the N200/GES integration to control which participants can have meetings. Once configured, the Open API's allow_meeting parameter returns 0 or null per participant based on their GES response."
+ },
+ {
+  "k": "EP-39524",
+  "q": "2025-Q1",
+  "feature": "Partner single sign-on",
+  "tags": [],
+  "summary": "GES - Single Sign-on (SSO)",
+  "epic": null,
+  "text": "Added a GES SSO option to the Team Member-Admin relogination menu, using a shared key, event ID, external ID and API host set in the GES integration block. When SSO is configured, team member admins jump to GES logged in to register staff, with clear errors if setup is incomplete."
+ },
+ {
+  "k": "EP-41108",
+  "q": "2025-Q2",
+  "feature": "Partner single sign-on",
+  "tags": [],
+  "summary": "GES SSO Button - Relocate",
+  "epic": null,
+  "text": "Moved the GES SSO option from the team member admin relogination menu to the exhibitor company menu, under Team Members, renamed 'Register Your Staff'. Exhibitors reach GES staff registration from a 'Register Your Staff' menu item."
+ },
+ {
+  "k": "EP-44419",
+  "q": "2026-Q1",
+  "feature": "Public API account creation",
+  "tags": [],
+  "summary": "Super Admins - Emails can be used when creating accounts using the API",
+  "epic": null,
+  "text": "Blocked the v2 account API from creating accounts with an email already used by an admin. The API rejects emails already taken by admins."
+ },
+ {
+  "k": "EP-23662",
+  "q": "2023-Q4",
+  "feature": "Public API accounts",
+  "tags": [],
+  "summary": "Edit profile add activity category limit from API",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-18331",
+  "q": "2023-Q3",
+  "feature": "Public API exports",
+  "tags": [],
+  "summary": "Export Buyers - Via API",
+  "epic": null,
+  "text": "Added a buyers-only export option through the API, matching the existing buyers-only filter in the Visitor export file. Buyer records can be retrieved on their own through the API, as they already could in the admin Visitor export."
+ },
+ {
+  "k": "EP-35900",
+  "q": "2025-Q1",
+  "feature": "Public API exports",
+  "tags": [],
+  "summary": "/api/v2/meetings/export - New parameters",
+  "epic": null,
+  "text": "Added created_from and created_to timestamp parameters to /api/v2/meetings/export to filter meetings by creation date. API clients filter meetings by creation date, alone or combined with the appointment time range."
+ },
+ {
+  "k": "EP-40013",
+  "q": "2025-Q2",
+  "feature": "Public API exports",
+  "tags": [],
+  "summary": "/api/v2/meetings/export - New parameter for IMEX",
+  "epic": null,
+  "text": "Added a last_modified timestamp and lastmodified_from/lastmodified_to filters to the /api/v2/meetings/export endpoint. API clients can export only meetings modified within a time range, before a date or since a date, and see each meeting's last modification time."
+ },
+ {
+  "k": "EP-20177",
+  "q": "2023-Q3",
+  "feature": "Public API product images",
+  "tags": [],
+  "summary": "Accept URL for the images[] field for /api/v2/product/set endpoint",
+  "epic": null,
+  "text": "Allowed image URLs in the images[] field of the /api/v2/product/set endpoint, including multiple URLs. API clients can create or update products with images supplied as one or more URLs, which are added to the product."
+ },
+ {
+  "k": "EP-21351",
+  "q": "2023-Q3",
+  "feature": "Public API sessions",
+  "tags": [],
+  "summary": "/api/v2/sessions/get - Parameters \"speakers\" and \"moderators\"",
+  "epic": null,
+  "text": "Changed the speakers and moderators parameters in the v2 sessions API to arrays of IDs. Sessions API returns speaker and moderator ID arrays."
+ },
+ {
+  "k": "EP-11708",
+  "q": "2023-Q1",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "Account Interactions public endpoint. Formatting changes + doc",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-12023",
+  "q": "2023-Q1",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "Replacing the halls and stand numbers for exhibitor via API parameters should replace the pre-scheduled existing meetings with the new Halls & stand numbers",
+  "epic": null,
+  "text": "Added an API parameter so replacing an exhibitor's hall and stand numbers also updates the location of their pre-scheduled meetings. Exhibitor API imports with replacement hall and stand values update the location of all that exhibitor's existing meetings."
+ },
+ {
+  "k": "EP-9435",
+  "q": "2023-Q1",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "API endpoints int the public API to pull out meeting data in its entirety",
+  "epic": null,
+  "text": "Added a paginated public API endpoint returning full meeting data, matching the fields of the meetings export file. External systems can retrieve every meeting export field, from Meeting ID to Creator, through the API with pagination."
+ },
+ {
+  "k": "EP-15587",
+  "q": "2023-Q2",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "Add additional filter param for /api/v2/meetings/export endpoint to fetch incremental updates ",
+  "epic": null,
+  "text": "Added account ID, time from/to (epoch), order-by and ASC/DESC parameters to the /api/v2/meetings/export endpoint. API clients retrieve only meetings modified in a time window or for one account, sorted as needed."
+ },
+ {
+  "k": "EP-16716",
+  "q": "2023-Q2",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "Exhibitor Id need to add from session export file, /api/v2/sessions/getSession  and /api/v2/sessions/get API resposne for Exhibitor events",
+  "epic": null,
+  "text": "Added the Exhibitor ID for exhibitor event sessions to the sessions export and the /api/v2/sessions/getSession and /get API responses. Session exports and v2 session API responses include the Exhibitor ID for exhibitor events."
+ },
+ {
+  "k": "EP-24220",
+  "q": "2024-Q1",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "Add Networking Opt IN/OUT parameter to the /api/v2/account/set endpoint",
+  "epic": null,
+  "text": "Added a boolean Networking opt-in/out parameter to the /api/v2/account/set endpoint, defaulting to false. API integrations can set whether an attendee appears in matchmaking and attendee lists, triggering the same settings as the opt-in button."
+ },
+ {
+  "k": "EP-25280",
+  "q": "2024-Q1",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": " Add time filter to API request of /api/v2/statistics/accountsInteractions and /api/v2/statistics/pageVisits",
+  "epic": null,
+  "text": "Aligned the from/to filters of /api/v2/statistics/accountsInteractions and /pageVisits to Unix timestamps and updated the Swagger docs. Both endpoints accept timestamp from/to (either or both optional), return actions in that window, and error on invalid formats."
+ },
+ {
+  "k": "EP-32201",
+  "q": "2024-Q3",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "Sponsor pop-up parameter on api/v2/exhibitor/set",
+  "epic": null,
+  "text": "Added a boolean sponsor_popup parameter to the api/v2/exhibitor/set endpoint to control the exhibitor 'Sponsor pop-up' setting. Integrators can switch the Sponsor pop-up on or off for each exhibitor through the API when creating sponsors."
+ },
+ {
+  "k": "EP-26427",
+  "q": "2024-Q4",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "/api/v2/product/set - Addition of parameter \"status\"",
+  "epic": null,
+  "text": "Added a status parameter (Active/Inactive) to the /api/v2/product/set endpoint. API clients can activate or deactivate products; deactivation clears Product TM, Sample event and Sponsorship, as when done manually."
+ },
+ {
+  "k": "EP-35903",
+  "q": "2025-Q1",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "Remove Team Members via API",
+  "epic": null,
+  "text": "Changed the public API /account/set so sending 0 for both exhibitor_id and exhibitor_external_id detaches a team member from their exhibitor. Integrations detach team members from an exhibitor on the event via the API, and assign them by passing an exhibitor ID."
+ },
+ {
+  "k": "EP-40281",
+  "q": "2025-Q1",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "Badge QR - Exposing it to the api/v2/account/get",
+  "epic": null,
+  "text": "Exposed the participant's badge QR code in api/v2/account/get, as a deep link with scan parameters or as a plain QR string. The account API returns the badge QR, including account and barcode IDs when deep links are on, or the QR code string when off."
+ },
+ {
+  "k": "EP-35897",
+  "q": "2025-Q2",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "API V1 Visitors list Migration to API V2",
+  "epic": null,
+  "text": "Built a new /api/v2/participants/list endpoint returning all participant data with pagination (100 by default) and timestamp filtering. Clients fetch complete participant records page by page, filtered by update time, replacing V1 /visitors?getSynchronise=true."
+ },
+ {
+  "k": "EP-36021",
+  "q": "2025-Q3",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "API V1 Synchronize data Migration to API V2",
+  "epic": null,
+  "text": "Built an API V2 endpoint returning all exhibitors and their details with pagination and timestamp filtering, including parent/child IDs. Clients fetch all exhibitor data, including child exhibitor IDs, from one paginated V2 endpoint and can request only records updated since a timestamp."
+ },
+ {
+  "k": "EP-44632",
+  "q": "2025-Q4",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "/api/v2/participants/{eventId}/list -> Requested Parameter Addition for IMEX",
+  "epic": null,
+  "text": "Added retrieval of deleted participant IDs for an event, as a deleted_users option on the participants list API and then as a new endpoint filtered by event and time. API clients can get the EP IDs of participant accounts deleted from an event, optionally within a timeframe."
+ },
+ {
+  "k": "EP-54772",
+  "q": "2026-Q3",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "[Open API V2] New endpoint for \"sponsor\" analytics for accounts",
+  "epic": null,
+  "text": "A new public API endpoint now exposes sponsor interaction analytics, views, clicks, favourites, meetings and messages, previously invisible. New GET /api/v2/statistics/sponsorInteractions endpoint returning paginated, filterable sponsor interaction rows (account, action, object, time) sourced from the sponsor statistics store under its own contract."
+ },
+ {
+  "k": "EP-57347",
+  "q": "2026-Q3",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "API V2 — Add filter_1 to filter_5 support on sessions/set",
+  "epic": null,
+  "text": "API V2 sessions/set now accepts filter_1 to filter_5, so integrations can set custom session filters, matched in the request language. Filters are applied leniently with per-slot errors, cleared with an empty string, and matched in the request language; done."
+ },
+ {
+  "k": "EP-57348",
+  "q": "2026-Q3",
+  "feature": "Public API v2 endpoints",
+  "tags": [],
+  "summary": "API V2 — Return filter_1 to filter_5 on sessions/get and sessions/getSession",
+  "epic": null,
+  "text": "API V2 session read endpoints now return filter_1 to filter_5, so integrators can read back the custom filters they set. Both endpoints return five filter fields in the request language, and delta queries pick up filter-only changes; done."
+ },
+ {
+  "k": "EP-46710",
+  "q": "2025-Q4",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "GET - Event List",
+  "epic": "Add new endpoints (v3)",
+  "text": "Added a GET /api/v3/events endpoint that lists the environment's events, with an optional active filter. API clients can retrieve event IDs, titles, start and end dates and active status, all events or only active ones."
+ },
+ {
+  "k": "EP-46512",
+  "q": "2025-Q4",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "GET - Exhibitor Categories",
+  "epic": "Add new endpoints (v3)",
+  "text": "Added a GET /api/v3/exhibitors/{eventId}/categories endpoint returning each exhibitor category's id, name, order number and default flag. API clients can retrieve an event's exhibitor categories in sort order."
+ },
+ {
+  "k": "EP-46511",
+  "q": "2025-Q4",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "GET - Participant Categories",
+  "epic": "Add new endpoints (v3)",
+  "text": "Added the GET /api/v3/participants/{eventId}/categories endpoint. The API returns an event's participant categories with id, name, sort order and default flag."
+ },
+ {
+  "k": "EP-45064",
+  "q": "2025-Q4",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "Accounts - New Endpoint on API V3",
+  "epic": "Add new endpoints (v3)",
+  "text": "Proposed a new API V3 endpoint, api/v3/account/getcustomquestions, returning all custom questions and options from the visitor registration pipeline by event ID. API clients can fetch an event's custom registration questions and their options."
+ },
+ {
+  "k": "EP-46489",
+  "q": "2026-Q1",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "GET - Check if the Account exists in the environment",
+  "epic": "Add new endpoints (v3)",
+  "text": "Added a v3 participants lookup endpoint returning every event instance of an account by ID, external ID or email. Integrations can check whether an account exists."
+ },
+ {
+  "k": "EP-46513",
+  "q": "2026-Q1",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "GET - Visitor Registration Pipeline Custom Questions",
+  "epic": "Add new endpoints (v3)",
+  "text": "Added a v3 endpoint returning visitor registration custom questions and options. Integrations can read visitor registration questions."
+ },
+ {
+  "k": "EP-46514",
+  "q": "2026-Q1",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "GET - Exhibitor Registration Pipeline Custom Questions",
+  "epic": "Add new endpoints (v3)",
+  "text": "Added a v3 endpoint returning exhibitor registration custom questions and options. Integrations can read exhibitor registration questions."
+ },
+ {
+  "k": "EP-47892",
+  "q": "2026-Q1",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 - Meetings Export Migration",
+  "epic": "Add new endpoints (v3)",
+  "text": "Meetings export was migrated to the V3 public API with rich filtering and incremental sync, letting integration partners pull meeting data reliably and at scale. Delivered GET /api/v3/meetings with pagination, time/created/modified filters, account filtering and timestamp-based incremental fetch returning ISO8601 data."
+ },
+ {
+  "k": "EP-45958",
+  "q": "2026-Q1",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API - Check-in data",
+  "epic": "Add new endpoints (v3)",
+  "text": "Added a check-in data endpoint to the API with pagination, time filters and check-in fields. Check-in data can be pulled through the API."
+ },
+ {
+  "k": "EP-45065",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "Exhibitors - New Endpoint on API V3",
+  "epic": "Add new endpoints (v3)",
+  "text": "Proposed an API endpoint to fetch exhibitor registration custom questions, to be defined with API v3. The endpoint was scoped for API v3."
+ },
+ {
+  "k": "EP-51830",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 - [GET] /api/v3/events/{eventId}/sponsors",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "Introduced a net-new V3 endpoint to retrieve event sponsors with full profile, category and placement data, broadening the public API's coverage for partner integrations. A new GET /api/v3/events/{eventId}/sponsors endpoint was delivered returning sponsor profile, category and placement configuration with pagination."
+ },
+ {
+  "k": "EP-51438",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 - [GET] /api/v3/events/{eventId}/products (New Endpoint - Not present in V2)",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "Introduced a net-new V3 endpoint to retrieve event products programmatically, expanding what partners can pull from the platform via the public API. A new GET /api/v3/events/{eventId}/products endpoint was delivered with exhibitor, status and updated-since filters, localisation and pagination."
+ },
+ {
+  "k": "EP-52613",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 - [GET] /api/v3/events/{eventId}/sponsor-categories",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "A new public API v3 endpoint was delivered that returns the sponsor categories configured for an event, letting integrators resolve sponsor category IDs. A GET /api/v3/events/{eventId}/sponsor-categories endpoint now returns paginated sponsor categories (id and title) with bearer authentication, enabling integrators to map sponsor category IDs to names."
+ },
+ {
+  "k": "EP-51337",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 Migration - /api/v2/floorplan/getStands to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "Migrated the floorplan getStands endpoint to the modern V3 API, event-scoped with hall and last-modified filters, advancing the public API toward a consistent, partner-friendly contract. getStands is now available as GET /api/v3/events/{eventId}/floorplan/stands with hall and last-modified-range filters and pagination."
+ },
+ {
+  "k": "EP-51338",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 Migration - /api/v2/floorplan/getHalls to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "Migrated the floorplan getHalls endpoint to the V3 API, giving partners an event-scoped, paginated halls resource as part of the broader API modernization. Halls are now served via GET /api/v3/events/{eventId}/floorplan/halls with pagination and standard error envelopes."
+ },
+ {
+  "k": "EP-51344",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 Migration - /api/v2/location/countries to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "Migrated the global countries reference endpoint to V3 with localisation and sorting, continuing the standardisation of reference data on the modern API. Countries are now served via GET /api/v3/locations/countries with localisation (x-lang), ISO codes, sorting and pagination."
+ },
+ {
+  "k": "EP-51343",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 Migration - /api/v2/location/regions to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "Migrated the global regions reference endpoint to V3 with localisation and modified-since filtering, modernising shared reference data for partner integrations. Regions are now served via GET /api/v3/locations/regions with country filter, localisation (x-lang), sorting and modified-since filters."
+ },
+ {
+  "k": "EP-51360",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 Migration - /api/v2/sessions/getTracks to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "Migrated the event session-tracks endpoint to V3 with event scoping, localisation and modified-since filtering, completing more of the session-metadata V3 set. Session tracks are now served via GET /api/v3/events/{eventId}/sessions/tracks with localisation, modified-since filters and pagination."
+ },
+ {
+  "k": "EP-51359",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 Migration - /api/v2/sessions/getTypes to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "Migrated the event session-types endpoint to V3 with event scoping, localisation and modified-since filtering, part of the session-metadata API modernization. Session types are now served via GET /api/v3/events/{eventId}/sessions/types with localisation, modified-since filters and pagination."
+ },
+ {
+  "k": "EP-51355",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 Migration - /api/v2/sessions/getTags to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "Migrated the event session-tags endpoint to V3 with event scoping, localisation and modified-since filtering, extending the modern API to session metadata. Session tags are now served via GET /api/v3/events/{eventId}/sessions/tags with localisation (x-lang), modified-since filters and pagination."
+ },
+ {
+  "k": "EP-51354",
+  "q": "2026-Q2",
+  "feature": "Public API v3",
+  "tags": [],
+  "summary": "API V3 Migration - /api/v2/sessions/getLanguages to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "Migrated the global session-languages reference endpoint to V3, keeping it un-scoped as before while adopting standard sorting and pagination for partners. Session languages are now served via GET /api/v3/sessions/languages (global) with sorting and pagination."
+ },
+ {
+  "k": "EP-52837",
+  "q": "2026-Q3",
+  "feature": "Public API v3 products",
+  "tags": [],
+  "summary": "API V3 - [POST] /api/v3/products (Create global product, no event relation)",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "Ships the Public API v3 POST /products endpoint to create a global, event-independent product record, advancing the v3 API migration and the global-vs-event product architecture. A new POST /api/v3/products endpoint that creates a global product tied to an exhibitor, with input validation and a standardized response envelope, no event binding."
+ },
+ {
+  "k": "EP-52841",
+  "q": "2026-Q3",
+  "feature": "Public API v3 products",
+  "tags": [],
+  "summary": "API V3 - [DELETE] /api/v3/products/{id} (Delete product globally, cascades all event relations)",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "A new Public API v3 endpoint lets integrators delete a product globally in one call, cascading its removal across every event automatically. A DELETE /api/v3/products/{productId} endpoint that hard-deletes the global product and cascades removal of all event-scoped bindings (categories, custom fields, sponsorship, status) with 404 validation and a standard response envelope."
+ },
+ {
+  "k": "EP-52840",
+  "q": "2026-Q3",
+  "feature": "Public API v3 products",
+  "tags": [],
+  "summary": "API V3 - [PATCH] /api/v3/products/{id} (Update global product fields)",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "A new Public API v3 endpoint lets integrators update a product's global fields directly, separating global data from event-scoped data. A PATCH /api/v3/products/{productId} endpoint that updates only global product fields with partial-update semantics, 404 and 422 validation, and a standard response envelope, rejecting event-scoped fields."
+ },
+ {
+  "k": "EP-55242",
+  "q": "2026-Q3",
+  "feature": "Public API v3 products",
+  "tags": [],
+  "summary": "API V3 - [POST] /api/v3/products/{id}/video (Upload product video)",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "A new Public API v3 endpoint lets integrators upload a hosted video file to a global product, switching the product's video type to uploaded, as part of the v3 product media architecture. POST /api/v3/products/{productId}/uploadVideo stores an uploaded video, sets the product's hosted video URL, and switches its video type to uploaded, with validations and standard response envelope (in progress)."
+ },
+ {
+  "k": "EP-55534",
+  "q": "2026-Q3",
+  "feature": "Public API v3 products",
+  "tags": [],
+  "summary": "API V3 - [DELETE] /api/v3/products/{id}/media/{mediaId} (Remove product media file)",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "New Public API v3 endpoint removes a product media file safely, only physically deleting it once no other owner still references it. New DELETE /api/v3/products/{id}/media/{mediaId} endpoint unlinks a media file from a product; the underlying file/row is physically deleted only when no other owner (exhibitor, schedule, message, etc.) still references it."
+ },
+ {
+  "k": "EP-55240",
+  "q": "2026-Q3",
+  "feature": "Public API v3 products",
+  "tags": [],
+  "summary": "API V3 - [POST] /api/v3/products/{id}/images (Upload product image from a file or a URL)",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "A new Public API v3 endpoint lets integrators upload images to a global product, with a main-image flag and preserved image ordering. POST /api/v3/products/{productId}/uploadImage uploads PNG/JPEG images to a global product, using a main flag to replace or append, preserving image order, with standard validations and response envelope (in progress)."
+ },
+ {
+  "k": "EP-55533",
+  "q": "2026-Q3",
+  "feature": "Public API v3 products",
+  "tags": [],
+  "summary": "API V3 - [POST] /api/v3/products/{id}/media (Upload product media file)",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "New Public API v3 endpoint lets integrators upload media files to a global product, completing the v3 product-media capability. New POST /api/v3/products/{id}/media endpoint supporting up to 10 files per product, content-based format validation, a 5MB cap, PDF thumbnailing, and a standardized response envelope."
+ },
+ {
+  "k": "EP-55241",
+  "q": "2026-Q3",
+  "feature": "Public API v3 products",
+  "tags": [],
+  "summary": "API V3 - [DELETE] /api/v3/products/{id}/images/{imageId} (Remove product image)",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "A new Public API v3 endpoint lets integrators remove an image from a global product, correctly nulling the main-image reference when needed. DELETE /api/v3/products/{productId}/images/{imageId} removes an image — nulling the product's main-image id if it was the main image, else dropping it from the list — while preserving remaining order, with 404 validations and standard response envelope (in progress)."
+ },
+ {
+  "k": "EP-55243",
+  "q": "2026-Q3",
+  "feature": "Public API v3 products",
+  "tags": [],
+  "summary": "API V3 - [DELETE] /api/v3/products/{id}/video (Remove product video)",
+  "epic": "Migration of endpoints (Public API v3)",
+  "text": "A new Public API v3 endpoint lets integrators unset a global product's uploaded video, clearing the video URL and association as the counterpart to the video-upload endpoint. DELETE /api/v3/products/{productId}/removeVideo clears the product's video URL and uploaded-video association, with 404 validation and standard response envelope; the post-unset video-type behaviour remains an open item pending core PATCH alignment (in progress)."
+ },
+ {
+  "k": "EP-17775",
+  "q": "2023-Q3",
+  "feature": "Reach5 login integration",
+  "tags": [],
+  "summary": "Please add reach 5 settings functionality to the EP internal buyer registration pop up for all buyers to register using EP reg link ",
+  "epic": null,
+  "text": "Integrated Reach5 login into the EP buyer registration pop-up used on the repeat-registration link. Buyers registering via EP's link for Vinexpo Meetings Korea, Vinexpo India and Vinexpo Explorer Quebec log in with their Reach5 credentials."
+ },
+ {
+  "k": "EP-18360",
+  "q": "2024-Q3",
+  "feature": "Reach5 registration login",
+  "tags": [],
+  "summary": "Autologged in mode + Reach 5 in EP Registration - VinExpo",
+  "epic": null,
+  "text": "Linked EP's internal visitor registration login with Reach5, checking an email on both systems and creating EP accounts from Reach5 data. Users existing in Reach5 or EP are logged in; Reach5-only users get an EP account created from their data; unknown users see a standard error."
+ },
+ {
+  "k": "EP-36147",
+  "q": "2025-Q1",
+  "feature": "Reach5 SSO",
+  "tags": [],
+  "summary": "Reach5 SSO",
+  "epic": null,
+  "text": "Added Reach5 SSO login: the frontend receives a Reach5 authorization code, and the backend exchanges it for an access token via a new /api/v1/reach5Login endpoint. A valid Reach5 code logs the participant into ExpoPlatform and takes them to their dashboard, using the standard login response."
+ },
+ {
+  "k": "EP-26245",
+  "q": "2024-Q1",
+  "feature": "Stand sync via API",
+  "tags": [],
+  "summary": "Improve transmission of exhibitor stands to the EP via API, so remain posibility to replace them",
+  "epic": null,
+  "text": "Updated scheduled meeting locations automatically when exhibitor halls and stands change via the API, without replacement parameters. Meeting locations follow stand changes pushed via API and integrations."
+ },
+ {
+  "k": "EP-54645",
+  "q": "2026-Q3",
+  "feature": "Swoogo integration",
+  "tags": [],
+  "summary": "Native Integration - Swoogo",
+  "epic": "Integration HUB - Integrations EPIC",
+  "text": "A new inbound Swoogo integration automatically syncs registrants, speakers, and exhibitors, deduplicated by company, including cancellations. In progress: a polled, OAuth2, external-ID-matched inbound integration with four flows (account and exhibitor set/delete), team-member matching, delta cursors, and full field mappings, running on the Integration Hub AutoUpdate engine."
+ },
+ {
+  "k": "EP-14604",
+  "q": "2023-Q2",
+  "feature": "Visit badge and scanner integration",
+  "tags": [],
+  "summary": "Visit G2 pull external leads to EP",
+  "epic": "Visit G2 Implementation (External page for badge/scanner)",
+  "text": "Added a 'Sync scanned leads' setting to the Visit integration that pulls leads scanned in Visit into the EP database. With the setting on, Visit-scanned leads merge with internal leads and appear in the interactions dashboard and leads downloads."
+ },
+ {
+  "k": "EP-14603",
+  "q": "2023-Q2",
+  "feature": "Visit badge and scanner integration",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Visit G2 external scanner",
+  "epic": "Visit G2 Implementation (External page for badge/scanner)",
+  "text": "Added a 'Use external leads scanner' Visit integration setting and stored each Visit account's embeddedVisitConnectURL for the mobile apps. When enabled and the URL exists, the apps open the vendor's scanner web app with an offline-capable stored session; otherwise the internal scanner shows."
+ },
+ {
+  "k": "EP-14602",
+  "q": "2023-Q2",
+  "feature": "Visit badge and scanner integration",
+  "tags": [],
+  "summary": "Visit G2 external badge",
+  "epic": "Visit G2 Implementation (External page for badge/scanner)",
+  "text": "Added a 'Use external badge' Visit integration setting and stored each Visit account's embeddedDigitalBadgeURL for frontend and mobile. When enabled and the URL exists, web and apps show the external badge (cached for offline use in apps); otherwise the internal badge shows."
+ },
+ {
+  "k": "EP-15993",
+  "q": "2023-Q2",
+  "feature": "Visit badge and scanner integration",
+  "tags": [],
+  "summary": "Identifier setting for Visit integration",
+  "epic": null,
+  "text": "Added an Identifier setting to the Visit integration to choose email or external ID as the main identifier. Organisers choose in General Settings whether Visit integration matches users by email or by external ID."
+ },
+ {
+  "k": "EP-56245",
+  "q": "2026-Q3",
+  "feature": "Visit badge and scanner integration",
+  "tags": [],
+  "summary": "VISIT Native Integration - Updates on Sync Mechanism",
+  "epic": "Native Integrations - Migrations",
+  "text": "Replaces VISIT's uncontrollable webhook resync (which could flood the queue) with guarded, observable AutoUpdate polling and a configurable near-real-time sync interval. VISIT visitor/exhibitor sync migrated to AutoUpdate's revision-based polling (guarded against overlapping runs, visible in sync history); webhooks removed entirely; a new configurable per-subscription polling interval (VISIT gets 1 minute vs. the 5-minute default) preserves VISIT's near-instant feel; profile-picture push-back migrated to its own AutoUpdate subscription."
+ }
+]

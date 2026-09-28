@@ -1,0 +1,364 @@
+[
+ {
+  "id": "exhib-parent-child-launch",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-content-limits",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-marketplace-2023q1",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-sponsor-banners-category",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-sponsored-sessions-profile",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-setup-2023q2",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-performance-2023q2",
+  "verdict": "fix",
+  "fix": {
+   "title": "Marketplace and import efficiency",
+   "benefit": "The marketplace page runs fewer queries, and product imports update search once at the end.",
+   "detail": "Duplicate queries were removed from the marketplace page. Product search indexing now runs once at the end of an import, and exhibitors and products are re-indexed only when a searchable field changes."
+  },
+  "reason": "Title/benefit claim faster loading with no measurement (EP-17329 only removes duplicate queries); detail tied field-level re-indexing to imports, EP-16538 applies it to exhibitor and product changes generally"
+ },
+ {
+  "id": "exhib-colocated-scans",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Exhibitors capture visitors from co-located shows in one scan list, see which event each lead came from, and open a person's or team company's profile after scanning."
+  },
+  "reason": "'every visitor' overstates EP-5445, which only lets other-event badges be saved to the scan list"
+ },
+ {
+  "id": "exhib-leads-meetings-events",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-rich-text",
+  "verdict": "fix",
+  "fix": {
+   "why": "The profile editor had no way to add photos or links and removed photos on save, so organisers were editing exhibitor descriptions in the admin panel instead."
+  },
+  "reason": "EP-13852: links could not be added at the front; only photos (non-word characters) were stripped on save"
+ },
+ {
+  "id": "exhib-sponsor-layout-2023q2",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Sponsor banners no longer fill the first screen on tablets and phones, and sponsor rows hold six cards.",
+   "detail": "On smaller screens, marketplace sponsor banners and the product finder sit in a compact block above the filters. Sponsor and sponsored product cards are laid out six in a row.",
+   "outcome": "Visitors on small screens see sponsor banners and the lists together, and sponsor rows hold six cards instead of five."
+  },
+  "reason": "EP-17760 (six per row) is not tablet/phone specific and does not mention desktop; benefit/detail read as if it were a small-screen change and outcome added 'on desktop'"
+ },
+ {
+  "id": "exhib-custom-lead-questions",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-custom-listings",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-sponsor-section",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-overview-report",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Exhibitors see their event activity for every company they manage in one download."
+  },
+  "reason": "'without asking the organiser for a report' is a past pain EP-17348 does not mention"
+ },
+ {
+  "id": "exhib-team-interaction",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-manual-translation",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-sponsor-mgmt-2023q4",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-exports-2024q1",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-leads-2024q2",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Download leads moved to a button on the profile, generating the file in the background with a timestamped link. Unrecognised badge scans are matched against the event database and filled in with the attendee's details, and organisers can set who gets lead capture."
+  },
+  "reason": "EP-26547 sets who gets lead capture (free, per exhibitor, per team member), not when it is available"
+ },
+ {
+  "id": "exhib-settings-2024q2",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Organisers can make product images and descriptions mandatory and rename the sponsor sections on exhibitor and product lists, and product pages show custom field data. Exhibitor manual deadlines can be changed with confirmation and without exhibitors resubmitting.",
+   "what": "Organisers can make product images and descriptions mandatory and rename the sponsor sections on exhibitor and product lists. Product pages show custom field data, and manual deadlines can be changed with a confirmation.",
+   "outcome": "Products include an image and description when the organiser requires them, sponsor sections carry the organiser's own label, and deadlines move without exhibitors having to fill forms again."
+  },
+  "reason": "EP-25692 just displays custom fields on product pages, it is not an organiser option; 'Product listings arrive complete' overstates EP-7323 (image and description only)"
+ },
+ {
+  "id": "exhib-invite-stats",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-exhibitor-account",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Manage an exhibitor's details, settings, team, security, sponsorship and stands from one redesigned admin account.",
+   "detail": "The admin exhibitor account has new pages for registration info, settings, team members, security, sponsorship, floor plan and analytics against the event average, plus a refreshed interaction dashboard. Profiles show registration URL, external ID and tags, and the password can be left empty to keep the current one."
+  },
+  "reason": "EP-31674 makes the password optional when editing so the old one is kept, not 'new profiles no longer need a password'; 'every part' overstates the listed pages"
+ },
+ {
+  "id": "exhib-parent-child-auto",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-event-cloning",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-lead-download-controls",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-profile-2024q3",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Limit product categories to an exhibitor's activities, and apps take exhibitor social links from the profile.",
+   "detail": "A setting restricts product categories to an exhibitor's own activity categories. The iOS and Android apps take exhibitor social links from the exhibitor's own profile data.",
+   "what": "A setting limits the product categories exhibitors can choose to their own activity categories. The iOS and Android apps take an exhibitor's social links from its own profile data.",
+   "why": "Organisers need exhibitors' product categories to stay within the exhibitor's own activity categories.",
+   "outcome": "Product categories stay consistent with each exhibitor's activities, and app users see the social links set on the exhibitor's profile."
+  },
+  "reason": "EP-34458/EP-34459 (no text) only change where the apps read social links from, not a new display; 'registered for' in why is not in EP-33961"
+ },
+ {
+  "id": "exhib-lead-question-levels",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-marketplace-2024q4",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-sponsor-banners-2024q4",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Make sponsor banners display-only, and load marketplace sponsors in batches.",
+   "detail": "A 'Disable links' toggle for each web and app banner location makes banners unclickable, with no redirect or click statistics. Marketplace sponsors now load from the server in batches of 12, with the display unchanged."
+  },
+  "reason": "EP-35640 is back-end batching of 12 with the display unchanged; there is no user-facing paging through sponsor lists"
+ },
+ {
+  "id": "exhib-parent-child-app",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-profile-2025q1",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Show the sessions a company speaks at or sponsors in the app, and validate embedded video code."
+  },
+  "reason": "'safely' implies a security guarantee; EP-38865/EP-39511 only add validation of embed code"
+ },
+ {
+  "id": "exhib-manual-2025q1",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Enforce badge limits and save the exhibitor profile with the manual's Submit button.",
+   "detail": "The Add button is disabled with an explanation once the badge limit is reached, the exhibitor profile is saved and submitted with the Submit button, and unused payment fields are hidden in table sections."
+  },
+  "reason": "'reliably' implies a past failure no story states (EP-40027 has no text); EP-36646 hides two payment fields, it is not an option to hide fields"
+ },
+ {
+  "id": "exhib-category-search",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-lead-scan-2025q2",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-parent-child-2025q2",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-team-news-2025q2",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Decide which team member fields are required and crop news headers to the ratio shown on the site."
+  },
+  "reason": "'better news header images' overstates EP-41849, which aligns the admin cropper ratio with the site"
+ },
+ {
+  "id": "exhib-lead-capture-pro",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-manual-discounts",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-dashboard-banners-2025q3",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-attend-stand",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Attendees mark the stands they plan to visit and when, and exhibitors see who intends to come.",
+   "detail": "After favouriting an exhibitor, attendees can say they plan to visit its stand and when, and exhibitors see who intends to come. Organisers switch it on per participant category, and list views are available in the app."
+  },
+  "reason": "'take part in stand activity' is wrong: EP-46483 is a one-directional intention to visit; detail was too vague to be useful"
+ },
+ {
+  "id": "exhib-profile-2026q1",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Reuse product category filters within an event and see when team members are still loading."
+  },
+  "reason": "'load smoothly' overstates EP-38749, which only adds a loader"
+ },
+ {
+  "id": "exhib-lead-app-2026q1",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Lead details are saved automatically if an exhibitor leaves the form or loses connection."
+  },
+  "reason": "'Never lose a scanned lead' is an absolute guarantee; EP-47877 autosaves on exit, app close or network loss and syncs later"
+ },
+ {
+  "id": "exhib-lcp-access",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-permissions-2026q2",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-lead-2026q2",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "With the setting on, attendee emails show only to exhibitors who scan their badge, and exhibitors see which company each lead is from and which colleague earned it."
+  },
+  "reason": "EP-51659 is an optional toggle that works with profile email hidden; the outcome stated it as always true"
+ },
+ {
+  "id": "exhib-multilingual-manual",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-sponsor-visibility",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-insights-portal",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Exhibitors review their main event results on one page and see how they compare with other exhibitors."
+  },
+  "reason": "'without assembling figures from separate reports' is a past pain EP-56919 does not mention (basis is implied)"
+ },
+ {
+  "id": "exhib-lcp-profile",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-profile-2026q3",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "exhib-search-sponsors",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "All claims supported by the stories; rules and limits met"
+ }
+]

@@ -1,0 +1,645 @@
+[
+ {
+  "id": "exhib-parent-child-launch",
+  "what": "Parent exhibitors have a 'My child exhibitors' page on the event website where they search for, add or create child exhibitors. Organisers switch it on and set which category new children receive.",
+  "why": "Parent companies need to look after their own child exhibitors without asking the organiser to set up each one.",
+  "outcome": "Parent exhibitors manage their child companies themselves, and new children get login details by email, or automatic logins where single sign-on is used.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-11754: tech brief specifies the 'My child exhibitors' page with add/create, category rule and credentials email; no problem stated"
+ },
+ {
+  "id": "exhib-content-limits",
+  "what": "Organisers set marketing content limits on each exhibitor, description length limits for marketing files and article length limits for news per category (0 for unlimited). Uploads show a spinner.",
+  "why": "Limits could only be set per category, descriptions were capped at 200 characters and news at 1,000, and large uploads showed no sign of progress.",
+  "outcome": "Exhibitors can write fuller file descriptions and news articles, organisers control content per company, and users know to wait until an upload finishes.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-11932: limits only at category level; EP-7239: 200-symbol description limit; EP-10301: 1000-character news limit; EP-12718: users could leave page during large uploads"
+ },
+ {
+  "id": "exhib-marketplace-2023q1",
+  "what": "Organisers set the default number of marketplace items per page, can show zip codes on exhibitor and product cards, and choose whether ticking a category ticks its sub-categories. Brands link to their full product list.",
+  "why": "Ticking a top category also ticked every sub-category, so profiles could not be filtered accurately, and brand lists showed at most six products.",
+  "outcome": "Users pick precise categories so they can be found by filters, visitors see every product of a brand, and organisers choose how many items each page shows.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-12034: tier 1 auto-selected tiers 2 and 3, not accurate for filtering; EP-13930: max 6 products per brand; EP-11579: per-page default"
+ },
+ {
+  "id": "exhib-sponsor-banners-category",
+  "what": "One or two rotating sponsor banners can appear on every My profile page, set per device. Exhibitor categories gain 'Is sponsor', 'Show in search list' and 'Show sponsor pop-up' toggles for all their exhibitors.",
+  "why": "Featuring an exhibitor at the top of the list is part of the exhibitor package, and organisers wanted to set sponsorship and the pop-up per category, not per company.",
+  "outcome": "Organisers apply sponsorship to a whole category in one place, including through import and the API, without overwriting settings made on an individual exhibitor.",
+  "who": [
+   "Organisers",
+   "Sponsors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-12564: featuring is part of the exhibitor package, configure at category level; EP-12584: configure pop-up at category level, not company level"
+ },
+ {
+  "id": "exhib-sponsored-sessions-profile",
+  "what": "Exhibitor profiles show a Sponsored sessions block when the exhibitor sponsors sessions. The sponsor's dashboard adds 'Booked a session' and 'Attended session' columns for online, onsite and on-demand attendance.",
+  "why": "Sponsored sessions were only visible on the session page, and exhibitor sponsors wanted to see everyone who booked or attended the sessions they sponsor.",
+  "outcome": "Visitors find an exhibitor's sessions from its profile, and sponsors see who engaged with their sessions, with the data kept after the sponsorship ends.",
+  "who": [
+   "Sponsors",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-7172: sponsored session visible only on session page, client required it on exhibitor profile; EP-11165: exhibitor-sponsor wants to see all who interacted with sponsored sessions"
+ },
+ {
+  "id": "exhib-setup-2023q2",
+  "what": "Each new event has a Default exhibitor category for exhibitors without one. Organisers can block new products once the active-product limit is reached and set the default products tab. Manual section links open their own section.",
+  "why": "Uncategorised exhibitors had no category settings, exhibitors added products without noticing they stayed inactive, and every manual link opened the first unsubmitted section.",
+  "outcome": "Uncategorised exhibitors get sensible limits, exhibitors know before they add a product that it will stay inactive, and organisers can share a link to any manual section.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-10479: exhibitors added inactive products without noticing and complained; EP-15338: users land on first unsubmitted section; EP-14937: default category for exhibitors without category"
+ },
+ {
+  "id": "exhib-performance-2023q2",
+  "what": "Duplicate queries were removed from the marketplace page. Product search indexing runs once at the end of an import, and exhibitors and products are re-indexed only when a searchable field changes.",
+  "why": "Product imports sent a large number of search sync requests while they ran.",
+  "outcome": "The marketplace page runs fewer queries, and imports update search with a single sync instead of many requests along the way.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17039: 'We have a lot of requests for syncing to Elasticsearch while import of products'; EP-17329, EP-16538"
+ },
+ {
+  "id": "exhib-colocated-scans",
+  "what": "With a contact-sharing setting on, the app saves badge scans of people from co-located events in the same database, labelled 'other event', and scan reports gain an event name column. Names on the scan screen open profiles.",
+  "why": "Exhibitors at co-located events need to capture leads from badges issued by the other events, and app users wanted to go from a scanned badge to the person's profile.",
+  "outcome": "Exhibitors capture every visitor at a co-located show in one scan list, see which event each lead came from, and open a person's or team company's profile after scanning.",
+  "who": [
+   "Exhibitors",
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-5445: organisers with co-located events can scan QR codes across events; EP-8788: as app user I want to click the name and go to the profile"
+ },
+ {
+  "id": "exhib-leads-meetings-events",
+  "what": "Exhibitors holding their own events see bookings in the Interactions dashboard and, if enabled, as leads in Download leads. A setting includes pending, incoming, confirmed and cancelled meetings in leads files.",
+  "why": "Exhibitor events produced no interactions or leads, and the leads export showed only meetings that had taken place, leaving out requests and cancelled meetings.",
+  "outcome": "Exhibitors follow up everyone who booked their event or asked for a meeting, from one leads file without duplicates, with private details hidden if chosen.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16707: interactions and lead generation from exhibitor events not done; EP-16456: leads export only shows meetings which have happened"
+ },
+ {
+  "id": "exhib-rich-text",
+  "what": "The full text editor is available for 'About the company' in the exhibitor profile editor and for exhibitor news, with headings, bold, italic, underline, lists, alignment, quotes, photos and links.",
+  "why": "The profile editor removed photos and links on save, so organisers were editing exhibitor descriptions in the admin panel instead.",
+  "outcome": "Exhibitors format their company description and news themselves, and the photos and links they add are kept when they save.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-13852: no way to add photos or links at the front; client makes changes at the backend; saving on front removes photos"
+ },
+ {
+  "id": "exhib-sponsor-layout-2023q2",
+  "what": "On tablets and phones, marketplace sponsor banners and the product finder sit in a compact block above the filters. Sponsor and sponsored product cards show six in a row, and the products page says Sponsored Products.",
+  "why": "On phones and tablets, sponsor banners filled the first screen and pushed the exhibitor and news lists out of view.",
+  "outcome": "Visitors on small screens see sponsor banners and the lists together, and sponsors are shown in fuller rows on desktop.",
+  "who": [
+   "Sponsors",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16209: on mobile or tablet the banner takes the first view and occupies the screen space"
+ },
+ {
+  "id": "exhib-custom-lead-questions",
+  "what": "Exhibitor admins create custom lead capture questions for their team, with text, select, multiselect, radio and checkbox types. Answers appear in the leads report, and organisers can open them from the admin exhibitor profile.",
+  "why": "Team members could only answer the fixed default lead questions, and exhibitors wanted to add their own questions to qualify leads.",
+  "outcome": "Exhibitor teams record the details their company needs when scanning a badge, and the scanned contacts report has duplicate scans filtered out.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-7074: whoFor 'help end users in qualifying their lead in a better way'; EP-11114: first stage had only simple inputs; EP-18953: duplicate scans filtered"
+ },
+ {
+  "id": "exhib-custom-listings",
+  "what": "The exhibitor and delegate lists have an optional table view, with an admin builder for choosing and ordering fields. Tables use event branding, show full names on hover and open a pop-up with all categories.",
+  "why": "Organisers wanted exhibitor and delegate lists shown as tables of the registration fields they choose, and long names and extra categories were cut off.",
+  "outcome": "Visitors scan exhibitors and delegates side by side by the fields that matter to the event, and can read full names and every category.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-12725: new table views displaying fields marked 'show in custom list'; EP-20781: long names truncated, +x categories not viewable"
+ },
+ {
+  "id": "exhib-sponsor-section",
+  "what": "Sponsors appear in their own framed section of cards above the exhibitor list, as an auto-scrolling carousel or static rows. The app shows a sponsors block on exhibitor and product lists, and card clicks count in sponsor statistics.",
+  "why": "In the app, sponsors were mixed into the top of the main lists with a coloured border, and organisers wanted the option to show every sponsor at once.",
+  "outcome": "Sponsors stand apart from other exhibitors on the web and in the app, and organisers can show sponsors the clicks their cards received.",
+  "who": [
+   "Sponsors",
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-18109: sponsors in app shown in main list with coloured border; EP-18978: client wants to demonstrate all sponsors; EP-21461: clicks counted in stats"
+ },
+ {
+  "id": "exhib-overview-report",
+  "what": "An Exhibitor Overview spreadsheet in the exhibitor profile menu lists views, products, content, chats, meetings and badge scans for the exhibitor and each of its child exhibitors across the event.",
+  "why": "Organisers had a supplier overview report in the admin panel, but exhibitors had no similar report for their own company and child companies.",
+  "outcome": "Exhibitors see their event activity for every company they manage in one download, without asking the organiser for a report.",
+  "who": [
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17348: Supplier overview exists in admin; need similar report on frontend limited to current exhibitor and its childs"
+ },
+ {
+  "id": "exhib-team-interaction",
+  "what": "Exhibitors, and optionally parent exhibitors, switch meetings and chats on or off for each team member. The app hides blocked actions and explains why, and the settings appear in the team members export and the public API.",
+  "why": "Users could only set their own meeting and message preferences, and exhibitors needed to decide whether each team member can interact at all.",
+  "outcome": "Exhibitors control which staff take meetings and chats for the company, and organisers can export or sync those permissions.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17339/EP-17974: ability exists on personal level; needed on exhibitor level whether team member can interact at all; EP-17343: organisers extract settings"
+ },
+ {
+  "id": "exhib-manual-translation",
+  "what": "Every exhibitor manual section, including section names, can be switched between the platform languages and translated in the admin panel, as registration already allowed.",
+  "why": "The exhibitor manual had no language switch in the admin panel, so organisers could not add content in their event's other languages.",
+  "outcome": "Organisers publish the exhibitor manual in each language their event runs in, so exhibitors read it in their own language.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-20410: 'We don't have a language switch at the admin panel for exhibitor manual. So, we are not able to add content in Arabic'"
+ },
+ {
+  "id": "exhib-sponsor-mgmt-2023q4",
+  "what": "Admins search sponsors and filter them by sponsor category on the sponsors page. Sponsor and sponsored product cards on the marketplace show location and meeting and message buttons on hover.",
+  "why": "Sponsor cards had lost their interaction buttons, which left sponsor interaction statistics empty, and the sponsors page had no search or filters.",
+  "outcome": "Visitors can meet or message a sponsor straight from its card, sponsors see those interactions in their reports, and admins find a sponsor quickly.",
+  "who": [
+   "Sponsors",
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-20725: removing buttons left sponsor interaction stats empty; EP-22966: search/filter like exhibitors list"
+ },
+ {
+  "id": "exhib-exports-2024q1",
+  "what": "Leads exports add exhibitor event date and time and, if enabled, meeting rating notes. The exhibitor export field list was updated, and sponsor statistics exports use a clearer layout and count only sponsors shown on screen.",
+  "why": "Leads exports lacked when each exhibitor event took place and the notes behind meeting ratings, and the sponsor statistics layout was confusing.",
+  "outcome": "Exhibitors and organisers plan follow-up with the timing and feedback behind each lead, and sponsor statistics reflect the sponsors people actually saw.",
+  "who": [
+   "Exhibitors",
+   "Organisers",
+   "Sponsors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-24160: absence of date/time of exhibitor event; EP-24161: sales analyst wants rating notes; EP-23935: stats confusing; EP-20605: views counted for all sponsors"
+ },
+ {
+  "id": "exhib-leads-2024q2",
+  "what": "Download leads is a button on the profile that builds the file in the background with a timestamped link. Unrecognised badge scans are matched to the event database, and organisers set who has lead capture.",
+  "why": "Downloads from the user menu put a heavy load on the platform and were hard to find, and badges printed by third-party vendors or scanned offline showed as unrecognised.",
+  "outcome": "Exhibitors get their leads file without waiting on the page, and scanned visitors show full details even when the badge was not recognised at scan time.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-22713: menu download increases load, users struggled to find it; EP-21095: third-party printed or offline badges unrecognised; EP-26547: availability settings"
+ },
+ {
+  "id": "exhib-settings-2024q2",
+  "what": "Organisers can make product images and descriptions mandatory, show custom field data on product pages and rename the sponsor sections on exhibitor and product lists. Manual deadlines can be changed with a confirmation.",
+  "why": "Only product name and category were required, sponsor section names could not be changed in the app, and organisers need to move manual deadlines without losing submitted data.",
+  "outcome": "Product listings arrive complete, sponsor sections carry the organiser's own label, and deadlines move without exhibitors having to fill forms again.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-7323: only categories and name mandatory, client wants image/description mandatory; EP-27558: rename sponsor block; EP-23915: value 'will not lose data if deadline is adjusted'"
+ },
+ {
+  "id": "exhib-invite-stats",
+  "what": "Visitor registrations from exhibitor invitations are attributed to the inviting exhibitor. Admins get a statistics tab with status counts, top exhibitors, filters, search and Excel export, and exhibitors see their own figures.",
+  "why": "Organisers and exhibitors need to track how exhibitor invitations progress from sent to registered, active and checked in.",
+  "outcome": "Organisers see which exhibitors bring in visitors, and exhibitors follow their own invitees through each status in their profile.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-27290: dashboard must display counts in 'Sent', 'In Progress', 'Done', 'Active', 'Checked In'; value 'data driven insights on invite visitors'"
+ },
+ {
+  "id": "exhib-exhibitor-account",
+  "what": "The admin exhibitor account has pages for registration info, settings, team members, security, sponsorship, floor plan and analytics against the event average, plus a refreshed interaction dashboard and extra profile fields.",
+  "why": "Organisers often need to send exhibitors a new password, and assigning a stand from the exhibitor account showed no stand names and took many clicks.",
+  "outcome": "Organisers handle an exhibitor's details, team, logins, banners, stands and results from one account, and can change a username without resetting the password.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23968: exhibitors often lose passwords, admin needs to send new; EP-23972: no stand names, many clicks; EP-31674: username change without password reset"
+ },
+ {
+  "id": "exhib-parent-child-auto",
+  "what": "A general setting runs a script that makes the first exhibitor with a shared email address the parent and later ones its children, and shows when it last ran. The API and import stop an exhibitor being its own parent or child.",
+  "why": "Organisers need one person to manage several exhibitors, but exhibitor data arriving through an external system's API carries no parent and child structure.",
+  "outcome": "Exhibitors that share a contact are grouped under one parent without manual linking, and one person can manage all of them.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-27619: one person managing multiple exhibitors; data lands via API and the provider does not have parent/child structure"
+ },
+ {
+  "id": "exhib-event-cloning",
+  "what": "Event cloning can carry over only active products, and can copy brands with their exhibitors, products, logo, categories, description, social links and translations. Interaction data such as favourites is not copied.",
+  "why": "Organisers do not want to rely on exhibitors logging in to reactivate products and re-enter brands each time an event is cloned.",
+  "outcome": "Exhibitors start the new edition with their products live and brands in place, and only need to manage them rather than add them again.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-29011 value: organisers don't have to rely on exhibitors to login and activate products; EP-29132: data already added, they just need to manage it"
+ },
+ {
+  "id": "exhib-lead-download-controls",
+  "what": "Download leads can be switched on or off per exhibitor category or per exhibitor, which also applies to their team members on the web and in the app. Contact-sharing settings now name exhibitor events and sponsored sessions.",
+  "why": "Download leads could only be switched on or off for every exhibitor in the event at once.",
+  "outcome": "Organisers offer lead downloads to the exhibitors who should have them, and everyone can tell which interactions produce a lead.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-13663: 'At the moment the download lead options can be turned on/off for all the exhibitors in an event'; EP-28237/EP-28308 renames for clarity"
+ },
+ {
+  "id": "exhib-profile-2024q3",
+  "what": "A setting limits the product categories exhibitors can choose to their own activity categories. The iOS and Android apps show an exhibitor's social links from its profile.",
+  "why": "Organisers need exhibitors' product categories to stay within the activities the exhibitor registered for.",
+  "outcome": "Product categories stay consistent with each exhibitor's activities, and app users can reach an exhibitor's social channels from its profile.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "implied",
+  "evidence": "EP-33961: setting 'Allow only Exhibitor Activity Categories to be selected as Product Categories'; EP-34458/EP-34459 social links; no problem stated"
+ },
+ {
+  "id": "exhib-lead-question-levels",
+  "what": "Lead capture questions can be managed at global, exhibitor category and individual exhibitor level. Standard questions can be switched on per category, custom questions are now called Additional, and global switches govern lower levels.",
+  "why": "Organisers need different lead questions for different exhibitor groups while keeping one set of rules for the event.",
+  "outcome": "Organisers set lead questions once for the event and adjust them where a category or exhibitor needs something different.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-32169: tech brief for global, category and exhibitor level settings, rename Custom to Additional; no problem stated"
+ },
+ {
+  "id": "exhib-marketplace-2024q4",
+  "what": "Organisers set the default marketplace view to cards, list or short list, and drag and drop category filters into order. The order applies to category pickers on the web and in the app.",
+  "why": "Organisers wanted the marketplace to open in the view closest to their exhibitor listing, and the product category order could not be managed.",
+  "outcome": "Visitors see listings the way the organiser intends, and exhibitors and participants meet the most important categories first when choosing.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-34438: organiser would like to choose the default view closer to their current listing; EP-24228 value: product category order can't be managed"
+ },
+ {
+  "id": "exhib-sponsor-banners-2024q4",
+  "what": "A 'Disable links' toggle for each web and app banner location makes sponsor banners unclickable, with no redirect and no click statistics. Marketplace sponsors load in batches of 12 instead of all at once.",
+  "why": "Sponsor banners were always clickable and sent users to the homepage even when no link was set.",
+  "outcome": "Organisers can run display-only banners without sending visitors to the wrong page, and sponsor sections look the same as before.",
+  "who": [
+   "Organisers",
+   "Sponsors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-35019: 'banners are clickable, redirecting users to the homepage regardless of not having any URL'; EP-35640: batches of 12"
+ },
+ {
+  "id": "exhib-parent-child-app",
+  "what": "The apps mark parent and child companies, add a Pavilions tab with child counts and a head office or child filter, and sort children A to Z. Organisers rename these labels per language, and parent cards show country and city.",
+  "why": "App users need to tell head offices, pavilions and child companies apart to understand how companies are related, and some organisers use different words for them.",
+  "outcome": "App users browse company groups and pavilions in the app as on the web, in the terms the event uses, and see where each company is based.",
+  "who": [
+   "App users",
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-32830: user wants to view Head Offices, Pavilions and Child Companies distinctly to understand hierarchy; EP-37234: some clients use different wording"
+ },
+ {
+  "id": "exhib-profile-2025q1",
+  "what": "App exhibitor profiles add 'Sessions we speak at' and 'Sponsored sessions' blocks that follow visibility rules. Embedded video code is validated on profiles, products, groups and feeds, and sponsor profiles have a back button.",
+  "why": "Exhibitors want event attendees to find the sessions they sponsor or speak at from their profile.",
+  "outcome": "Attendees reach an exhibitor's sessions straight from its profile in the app, and embedded videos only accept valid code.",
+  "who": [
+   "Exhibitors",
+   "Attendees",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-39354: 'As an exhibitor, I want to display my sponsored sessions and sessions I will be speaking at... so that event attendees can easily find and engage'"
+ },
+ {
+  "id": "exhib-manual-2025q1",
+  "what": "In the exhibitor manual, the Add button is disabled with an explanation once the badge limit is reached, the Submit button saves and submits the exhibitor profile, and unused payment fields are hidden in table sections.",
+  "why": "Exhibitors could add badges beyond their allowance, with only a notice about possible extra charges.",
+  "outcome": "Organisers keep badge numbers within each exhibitor's quota, and exhibitors know their limit before they try to add more.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-38608: goal to enforce a hard limit so exhibitors cannot exceed their allotted badge quota; previously a fee message"
+ },
+ {
+  "id": "exhib-category-search",
+  "what": "A redesigned category picker offers a two-panel view by custom filter with direct search. Category filters with many items can show a search field on marketplace, delegate and news pages, with matches shown with their parents and children.",
+  "why": "Complex category trees made choosing categories hard and slow, and finding a category in a long filter meant searching by hand.",
+  "outcome": "Users pick the right categories for their profile faster, and visitors narrow long filters by typing, while still seeing where each match sits.",
+  "who": [
+   "Exhibitors",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-35452: user challenges caused by complexity of category trees; EP-36732 value: minimise manual search; EP-40743: clients found flat search inconvenient"
+ },
+ {
+  "id": "exhib-lead-scan-2025q2",
+  "what": "A 'Force scans sync' button in the app settings, with a Help link from the scans list, sends locally edited scans, notes and ratings to the server. The reason for scans of any code is labelled more clearly in reports.",
+  "why": "Users who edited scan notes without internet, for example on a flight, found their edits missing from the leads file they downloaded.",
+  "outcome": "Exhibitors make sure notes and ratings added offline reach their leads file, and can tell badge scans from other code scans in reports.",
+  "who": [
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23400: users updating notes offline during a flight saw a difference between the leads file and their list; EP-42570 label"
+ },
+ {
+  "id": "exhib-parent-child-2025q2",
+  "what": "A 'Do not indicate child companies' setting hides child relations on the web and in the apps. App cards and profiles show country and city for parent exhibitors and pavilions, and automatic assignment can run daily with an emailed report.",
+  "why": "Users want to see where parent exhibitors and pavilions are based, and organisers needed parent and child assignment to run without manual scripts.",
+  "outcome": "Organisers choose whether company groups are shown, and receive a report after each daily run of the assignment.",
+  "who": [
+   "Organisers",
+   "App users",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-41483: user wants country/city for parent exhibitors to identify locations; EP-38486: problems needed manual scripts, daily run and emailed report"
+ },
+ {
+  "id": "exhib-team-news-2025q2",
+  "what": "Organisers control whether telephone and job title are required when team members are added, using the registration form's field settings. The news header cropper in the admin panel uses the 1:5 ratio shown on the site.",
+  "why": "News headers were cropped at a different ratio in the admin panel from the one used on the site, so previews and the live page did not match.",
+  "outcome": "Organisers collect the team member details the event needs, and news headers look the same in the admin preview as on the site.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-41849: 4/5 crop in admin vs 1/5 on front causes discrepancies; EP-40242: Tel and Job Title use registration field settings"
+ },
+ {
+  "id": "exhib-lead-capture-pro",
+  "what": "Organisers configure paid lead capture packages and how they are presented, and track payments and revenue. Exhibitors buy access for their whole team, and in the app the Scan Badges page shows only for those who have bought it.",
+  "why": "Lead capture was available but not packaged as a product organisers could sell to exhibitors.",
+  "outcome": "Organisers offer lead capture as a paid extra, and exhibitors who log in to buy it return to the purchase page to finish.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40864: 'we currently have a lead capture solution... not structured as a sellable product'; EP-44314: login returns user to Lead Capture Pro page"
+ },
+ {
+  "id": "exhib-manual-discounts",
+  "what": "Discount codes apply to items in the exhibitor manual's Equipment section, targeted by exhibitor category and item. Exhibitors and team members apply codes in the basket, and admins see and export discount usage.",
+  "why": "Organisers sell equipment to exhibitors through the manual's Equipment section and needed discounts there, as they already had for participants.",
+  "outcome": "Organisers run equipment offers for chosen exhibitor groups and see who used each code, and exhibitors get the discount at checkout.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40746: discounts for Exhibitor Manuals as an extension of existing participant discounts; client sells equipment through Equipment sections"
+ },
+ {
+  "id": "exhib-dashboard-banners-2025q3",
+  "what": "The exhibitor dashboard's Top Performers block always shows all-time results, with no date selector. On iOS and Android, tapping a sponsored banner that has no website link opens the linked exhibitor's profile.",
+  "why": "The Top Performers date selector confused users, who expected all-time results, and banners without a link showed an error on iOS and did nothing on Android.",
+  "outcome": "Exhibitors read their top performers at a glance, and app users who tap a sponsor banner reach that exhibitor.",
+  "who": [
+   "Exhibitors",
+   "Sponsors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45361: client feedback that selector is confusing; EP-43244/EP-43245: iOS error message, Android no visual change"
+ },
+ {
+  "id": "exhib-attend-stand",
+  "what": "After favouriting an exhibitor, users can say they plan to visit its stand and when, and exhibitors see who intends to come. List views are also available in the app, set up in the app builder.",
+  "why": "Organisers wanted to let attendees show their intention to visit an exhibitor's stand.",
+  "outcome": "Attendees keep a list of stands they plan to visit, and exhibitors can prepare for the visitors who say they are coming.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-46483: 'Organizer wants to allow users to indicate their intention to attend an exhibitor's stand'; EP-47311 app list views via webview"
+ },
+ {
+  "id": "exhib-profile-2026q1",
+  "what": "Organisers can clone product category custom filters within an event instead of rebuilding them. The team members section of public exhibitor profiles shows a loader while it fills.",
+  "why": "Product category custom filters had to be set up again by hand, and profiles with many team members looked empty while the list loaded.",
+  "outcome": "Organisers reuse filter sets quickly when setting up an event, and visitors can tell that an exhibitor's team is still loading.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-47919 ai.problem: custom filters reconfigured by hand; EP-38749: with many team members user can't tell info is coming"
+ },
+ {
+  "id": "exhib-lead-app-2026q1",
+  "what": "The app's lead capture form saves automatically when an exhibitor leaves it, closes the app or loses connection, then syncs. Exhibitors without Lead Capture Pro are sent to its purchase page, and custom questions are tidier.",
+  "why": "Lead details could be lost if an exhibitor left the form or lost connection before saving, and users without access saw an error they took for an app fault.",
+  "outcome": "Exhibitors keep the details they enter on the stand even on weak venue networks, and know how to get lead capture when they do not have it.",
+  "who": [
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-47877: risk of losing data if navigated away or network dropped; EP-44306: 'You don't have access' error, users assume app issue"
+ },
+ {
+  "id": "exhib-lcp-access",
+  "what": "Organisers switch lead capture, product QR codes and AI meeting notes on per exhibitor category or per exhibitor, in one Lead Capture Pro settings block. Features already granted show as purchased on the purchase page.",
+  "why": "Organisers need to give these features to some exhibitors only, free or as part of Lead Capture Pro, and standard lead questions started off, so exhibitors often forgot to turn them on.",
+  "outcome": "Organisers package lead tools by exhibitor group or give them to one exhibitor, exhibitors are not asked to pay for what they already have, and standard questions can start on.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-50123/EP-50125 confluence: offer to some exhibitors only, free or with LCP; EP-54359: already-granted features marked Purchased; EP-46050: standard questions off by default, often forgotten"
+ },
+ {
+  "id": "exhib-permissions-2026q2",
+  "what": "Products follow their exhibitor's visibility and message and meeting restrictions on the web and in the apps. Adding a team member checks for a duplicate login rather than a duplicate email, and Google+ is removed from brand links.",
+  "why": "Restrictions set for an exhibitor did not reach its products, and exhibitors were blocked from adding a team member whose email matched another exhibitor's contact email.",
+  "outcome": "Organisers' permission rules hold for products as well as exhibitors, and exhibitors can add the right team members while logins stay unique.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-50974: restrictions did not extend to Products; EP-53945 confluence: exhibitors wrongly blocked when email matched another contact email; EP-52566 Google+"
+ },
+ {
+  "id": "exhib-lead-2026q2",
+  "what": "A setting shows attendee emails in the app only after their badge is scanned. Scanned visitor QR leads include team members, meeting leads go to the team members present, notes allow 500 characters and dashboards show companies.",
+  "why": "Organisers needed attendee emails kept hidden until a badge scan, and interaction dashboards did not show which company each person belonged to.",
+  "outcome": "Attendees share their email only with exhibitors who scan them, and exhibitors see which company each lead is from and which colleague earned it.",
+  "who": [
+   "Exhibitors",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-51659: need attendee emails hidden until badge scan; EP-54733: listed users showed no company; EP-52952: client asked leads credited to meeting participants"
+ },
+ {
+  "id": "exhib-multilingual-manual",
+  "what": "Organisers upload a separate file for each event language within one exhibitor manual document entry, and in Online Exhibitor Services exhibitors see only the file for their selected language.",
+  "why": "Manual documents had no language setting, so organisers made one entry per language and exhibitors saw every version at once.",
+  "outcome": "Organisers manage each manual document in one place, and exhibitors open the version in the language they chose.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-49295 ai.problem: separate entries per language and all variants showed at once, confusing exhibitors; EP-49298 frontend"
+ },
+ {
+  "id": "exhib-sponsor-visibility",
+  "what": "Sponsors and sponsored products can be shown in random order on the web and in the app, or by matchmaking score. The legacy view shows up to 150 sponsors, and sponsor names always appear on session cards and pages.",
+  "why": "At events with many sponsors, users always saw the same sponsors first, the legacy view capped sponsors at 48, and sponsors without a logo could lose their name on sessions.",
+  "outcome": "Organisers share exposure more evenly between sponsors, can show every sponsor at larger events, and sponsors are credited on the sessions they support.",
+  "who": [
+   "Sponsors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-50051 confluence: clients with hundreds of sponsors frustrated users saw same top sponsors; EP-52414: limit of 48; EP-53036: name missing when no logo"
+ },
+ {
+  "id": "exhib-insights-portal",
+  "what": "The first page of the exhibitor insights portal shows leads captured, meetings held, profile views, message reply rate, best single day and a comparison with peers, all from the event's own data.",
+  "why": "Exhibitors need to see what their participation in the event produced, in one place.",
+  "outcome": "Exhibitors review their event results without assembling figures from separate reports, and see how they compare with other exhibitors.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-56919 ai.outcome: Page 01 metrics (leads, meetings, profile views, reply rate, peer benchmarking, best single day) return real values; no customer problem stated"
+ },
+ {
+  "id": "exhib-lcp-profile",
+  "what": "The app applies lead capture and AI meeting notes access separately for each exhibitor owner and team member. Exhibitors who buy custom questions get unlimited standard and additional lead questions, with standard ones on.",
+  "why": "The app only had one event-wide AI notes switch, and exhibitors who bought custom questions were still held to the organiser's question limits.",
+  "outcome": "Organisers give lead tools to the right people in each exhibitor team, and exhibitors who pay for custom questions can build the full form they need.",
+  "who": [
+   "Exhibitors",
+   "Organisers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-50535 ai.problem: mobile only knew a single global AI Note Taker toggle; EP-48813 ai.problem: capped by organiser limits even after purchasing"
+ },
+ {
+  "id": "exhib-profile-2026q3",
+  "what": "An optional Region filter under Country narrows exhibitor, product, brand, pavilion, delegate, speaker and buyer listings on the web. Exhibitor import and the global database attach existing brands, and logos can be allowed per category.",
+  "why": "The country filter could not narrow results to a region, and exhibitors had to recreate their brands for every event edition.",
+  "outcome": "Visitors find exhibitors and people in their region, exhibitors keep their brands from one edition to the next, and organisers control who may show a logo.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-55645: organisers collect region and want visitors to narrow within a country; EP-55642: exhibitors had to recreate brands each edition; EP-44730: control which exhibitors may upload a logo"
+ },
+ {
+  "id": "exhib-search-sponsors",
+  "what": "Global search shows one or two sponsorship banners plus rotating sponsored exhibitor and sponsored product blocks, with the organiser's labels and colours. Sponsor cards show location, tags and products, and multiple stands read clearly.",
+  "why": "The new global search page had no place to promote sponsors, and exhibitors with several stands showed a truncated, unreadable location.",
+  "outcome": "Organisers can offer sponsors placements on the search page, with views and clicks in the usual sponsor statistics, and visitors can read every stand an exhibitor has.",
+  "who": [
+   "Organisers",
+   "Sponsors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-53767/EP-53768: search page had no surface to promote sponsors; EP-47680: banner stats; EP-55625: multi-stand location unreadable, sponsor cards lacked location/tags"
+ }
+]

@@ -1,0 +1,93 @@
+{
+ "k": "EP-32358",
+ "histories": 59,
+ "historiesRead": 59,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-07-23T13:31:23.662+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-07-23T13:31:25.572+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-07-23T13:31:27.006+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-07-23T16:27:29.027+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-09-10T12:37:01.430+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-09-10T12:37:03.019+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-09-10T18:14:19.107+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-09-11T11:30:51.833+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-09-11T11:56:41.621+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-09-23T10:51:49.279+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-09-23T10:51:54.960+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-09-25T10:39:59.687+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-10-03T11:15:07.000+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790318902181.txt"
+}

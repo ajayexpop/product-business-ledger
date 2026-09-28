@@ -1,0 +1,99 @@
+{
+ "k": "EP-24107",
+ "histories": 35,
+ "historiesRead": 35,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-12-05T18:17:41.019+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-12-05T18:17:43.008+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-12-05T18:17:44.585+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-12-07T10:27:33.498+0000",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-12-07T12:57:33.947+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-12-07T12:57:36.593+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-12-07T13:04:16.165+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-12-07T13:14:53.157+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-12-07T20:13:32.626+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-12-08T08:17:04.880+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-12-08T10:05:10.724+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-12-08T13:16:09.598+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-12-08T19:56:44.636+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2023-12-08T19:56:48.070+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790318363450.txt"
+}

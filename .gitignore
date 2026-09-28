@@ -1,4 +1,35 @@
 dist/
+ledger/dist/
 .DS_Store
 __pycache__/
-data/stories/pull/*_w/
+ledger/data/stories/pull/*_w/
+ledger/data/stories/pa/*_w/
+data/done-raw/page-*.json
+data/done-raw/work/
+
+# Raw Jira pulls: descriptions contain credentials pasted into tickets (passwords, API keys, webhooks). Never commit.
+data/roadmap/enrich/
+data/roadmap/enriched/
+data/roadmap/dlg/raw/
+analysis/raw/
+analysis/work/
+
+# Product Truth: generated (rebuild with python3 truth/tools/truth.py run)
+truth/spine/
+truth/dist/
+ledger/dist/
+data/roadmap/wwo/input/
+data/roadmap/live/
+dist-journey/
+
+# Raw ticket and page text with credentials pasted in (test-account passwords, API keys, auth tokens, signed links).
+# Kept on disk as tool inputs, never committed (scan of 28 Sep 2026).
+requests/raw/
+requests/db/items.json
+requests/db/items.csv
+requests/db/comments.csv
+intel/work/
+data/2023/stories.json
+data/2024/stories.json
+data/2025/stories.json
+data/done-raw/records.json

@@ -1,0 +1,63 @@
+{
+ "k": "EP-44623",
+ "histories": 16,
+ "historiesRead": 16,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2025-08-20T11:02:37.794+0100",
+   "from": "Incoming request",
+   "to": "Immediate Estimation",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-08-20T15:43:04.365+0100",
+   "from": "Immediate Estimation",
+   "to": "COMPLETE",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-08-20T15:51:37.840+0100",
+   "from": "COMPLETE",
+   "to": "Ready for development",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-08-20T15:51:40.749+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-08-20T15:51:43.077+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-08-20T15:51:45.583+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-08-20T15:51:50.265+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-08-20T15:51:52.920+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T17:46:35.857+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790322327604.txt"
+}

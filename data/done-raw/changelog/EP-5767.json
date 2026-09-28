@@ -1,0 +1,153 @@
+{
+ "k": "EP-5767",
+ "histories": 78,
+ "historiesRead": 78,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2022-09-30T07:59:35.814+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Romain Dejoie"
+  },
+  {
+   "at": "2022-11-09T10:40:28.438+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2022-11-09T10:40:32.146+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2022-11-09T10:40:34.891+0000",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2022-11-16T17:13:15.644+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-11-16T17:13:31.762+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-11-16T17:13:35.884+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-12-02T09:46:23.952+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-12-08T07:30:43.351+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2022-12-29T08:15:13.674+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-01-06T09:12:31.164+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Alex Talala"
+  },
+  {
+   "at": "2023-02-03T15:26:53.060+0000",
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Alex Talala"
+  },
+  {
+   "at": "2023-02-07T09:32:45.590+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Alex Talala"
+  },
+  {
+   "at": "2023-02-07T09:32:49.214+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Alex Talala"
+  },
+  {
+   "at": "2023-02-08T21:05:21.232+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-02-08T21:05:39.553+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-02-09T09:58:39.305+0000",
+   "from": "Ready for release",
+   "to": "Ready for development",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-02-09T09:58:41.012+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-02-10T13:17:34.577+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-02-13T08:12:21.742+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-02-13T11:07:02.726+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-02-16T10:15:08.056+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Oleksii Tur"
+  },
+  {
+   "at": "2023-02-16T10:15:11.144+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Oleksii Tur"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790319436069.txt"
+}

@@ -1,0 +1,105 @@
+{
+ "k": "EP-28249",
+ "histories": 41,
+ "historiesRead": 41,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-06-21T12:58:31.507+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-06-21T12:58:33.111+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-06-21T12:58:34.811+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-06-21T12:58:36.444+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-06-25T10:55:15.972+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-06-25T10:55:17.487+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-06-25T10:55:19.646+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-06-25T10:55:21.508+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-10-29T10:42:44.474+0000",
+   "from": "Ready for development",
+   "to": "Ready for decomposition",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-10-29T14:57:44.587+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2024-10-29T14:57:47.214+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2024-10-29T17:19:59.531+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2024-10-30T16:52:06.142+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Maksym Bilan"
+  },
+  {
+   "at": "2024-10-30T16:52:42.244+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Maksym Bilan"
+  },
+  {
+   "at": "2024-11-01T12:35:34.887+0000",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790318546607.txt"
+}

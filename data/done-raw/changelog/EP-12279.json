@@ -1,0 +1,63 @@
+{
+ "k": "EP-12279",
+ "histories": 18,
+ "historiesRead": 18,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-01-17T13:07:24.611+0000",
+   "from": "Incoming request",
+   "to": "Ready for development",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-01-17T14:04:30.762+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-01-17T15:35:48.298+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Arman Тuralin"
+  },
+  {
+   "at": "2023-01-17T17:03:28.892+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2023-01-18T15:11:13.528+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-01-18T15:11:13.715+0000",
+   "from": "Ready for release",
+   "to": "Ready for release",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2023-04-13T13:18:39.341+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-04-13T13:18:41.248+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "toolu_01EFNBurQY6e63wud9CfaXem.txt"
+}

@@ -1,0 +1,99 @@
+{
+ "k": "EP-16456",
+ "histories": 66,
+ "historiesRead": 66,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-04-26T17:07:14.141+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-04-26T17:07:16.929+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-04-26T17:07:18.297+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-04-26T17:07:19.958+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-04-28T06:53:25.583+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-04-28T08:25:03.914+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-01T10:44:17.798+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-05-03T12:06:50.504+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-03T12:58:39.390+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Mikhail Fedorenko"
+  },
+  {
+   "at": "2023-05-04T13:39:52.336+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Mikhail Fedorenko"
+  },
+  {
+   "at": "2023-05-04T15:27:09.680+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Oleksandr Korzh"
+  },
+  {
+   "at": "2023-05-11T09:15:44.690+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Oleksandr Korzh"
+  },
+  {
+   "at": "2023-05-15T09:40:37.804+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-18T07:31:41.942+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790320028369.txt"
+}

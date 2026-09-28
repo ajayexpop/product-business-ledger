@@ -1,0 +1,117 @@
+{
+ "k": "EP-2749",
+ "histories": 68,
+ "historiesRead": 68,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2022-04-08T13:19:46.315+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-04-11T09:16:51.473+0100",
+   "from": "Considering",
+   "to": "Estimated request",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-31T19:52:39.372+0000",
+   "from": "Estimated request",
+   "to": "Awaiting details",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:52:41.091+0000",
+   "from": "Awaiting details",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:52:44.975+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:52:46.903+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:52:49.420+0000",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:54:26.625+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:54:28.683+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:54:31.290+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:54:32.905+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:54:34.921+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:54:37.120+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:54:38.536+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:54:40.480+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:54:42.190+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-01-31T19:54:43.983+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790320637852.txt"
+}

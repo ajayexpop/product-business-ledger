@@ -1,0 +1,584 @@
+[
+ {
+  "id": "integ-event-system-import",
+  "theme": "integ",
+  "q": "2023-Q1",
+  "title": "Event system content import",
+  "benefit": "Pull exhibitors, sessions and speakers automatically from an external event management system.",
+  "detail": "Exhibitors, sessions and speakers sync from the external system, configured per event, with exhibitors matched by account number and main contacts added as admin team members.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-11456"
+  ]
+ },
+ {
+  "id": "integ-api-meeting-data",
+  "theme": "integ",
+  "q": "2023-Q2",
+  "title": "Meeting data in the public API",
+  "benefit": "Retrieve full meeting data through the public API, including incremental updates since your last sync.",
+  "detail": "A paginated endpoint returns every meeting with the same fields as the meetings export, with filters by account and time and sort options. Session responses include the exhibitor ID for exhibitor events, updating an exhibitor's hall and stand also moves their pre-scheduled meetings, and the account interactions endpoint was documented.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-9435",
+   "EP-11708",
+   "EP-12023",
+   "EP-15587",
+   "EP-16716"
+  ]
+ },
+ {
+  "id": "integ-visit-badge-scanner",
+  "theme": "integ",
+  "q": "2023-Q2",
+  "title": "Visit badge and scanner integration",
+  "benefit": "Use Visit digital badges and the Visit lead scanner inside the platform, with scanned leads pulled back in.",
+  "detail": "Organisers can switch on the external Visit badge and lead scanner for web and app, sync leads scanned in Visit into the platform, and choose email or external ID as the matching identifier.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-14602",
+   "EP-14603",
+   "EP-14604",
+   "EP-15993"
+  ]
+ },
+ {
+  "id": "integ-expofp-floor-plan",
+  "theme": "integ",
+  "q": "2023-Q3",
+  "title": "ExpoFP floor plan integration",
+  "benefit": "Show the interactive ExpoFP floor plan on the event site, with search, deep links and wayfinding.",
+  "detail": "Enabled with an account token, the ExpoFP floor plan lets attendees search exhibitors, custom locations and sessions, including in-person sessions and exhibitor events with a physical location.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-17756",
+   "EP-18322",
+   "EP-20080"
+  ]
+ },
+ {
+  "id": "integ-reach5-buyer-registration",
+  "theme": "integ",
+  "q": "2023-Q3",
+  "title": "Reach5 login for buyer registration",
+  "benefit": "Let returning buyers log in with their Reach5 account in the buyer registration pop-up.",
+  "detail": "Reach5 login was added to the buyer registration pop-up used on the repeat-registration link.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-17775"
+  ]
+ },
+ {
+  "id": "integ-public-api-2023q4",
+  "theme": "integ",
+  "q": "2023-Q4",
+  "title": "Public API improvements",
+  "benefit": "Do more through the public API, from exporting buyers to creating products with image links.",
+  "detail": "A buyers-only export is available through the API, product images can be sent as URLs, session responses include speakers and moderators, exhibitor event 'Other' locations can be set, the indoor maps toggle is exposed and activity category limits can be set when editing profiles.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-18331",
+   "EP-20177",
+   "EP-21351",
+   "EP-19915",
+   "EP-22242",
+   "EP-23662"
+  ]
+ },
+ {
+  "id": "integ-klipso-integration",
+  "theme": "integ",
+  "q": "2023-Q4",
+  "title": "Klipso integration",
+  "benefit": "Import exhibitors from Klipso automatically, with categories and custom questions kept up to date.",
+  "detail": "The integration pulls exhibitor data from Klipso every minute or on demand with a Sync button, maps categories by text, brings in chosen exhibitor custom questions and passes contact email and username.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-14473",
+   "EP-23914",
+   "EP-24104"
+  ]
+ },
+ {
+  "id": "integ-event-system-import-enhancements",
+  "theme": "integ",
+  "q": "2024-Q2",
+  "title": "Event system import enhancements",
+  "benefit": "Control exactly which sessions, speakers and exhibitor details are imported from the external event system.",
+  "detail": "Imports now bring in moderators, only the speakers of imported sessions, exhibitor custom fields and categories, tracks and session types, and can filter sessions by stream and seminar name. Fields can be locked from updates and welcome emails sent to imported exhibitors.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-25344",
+   "EP-28688",
+   "EP-30037",
+   "EP-33726"
+  ]
+ },
+ {
+  "id": "integ-public-api-2024q2",
+  "theme": "integ",
+  "q": "2024-Q2",
+  "title": "Public API improvements",
+  "benefit": "Set networking opt-in, filter statistics by time and export meeting tags through the public API.",
+  "detail": "The account endpoint accepts a networking opt-in parameter, statistics endpoints filter by Unix timestamps, stand transmission via the API was improved and meeting tags appear in the meetings export and its endpoint.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-24220",
+   "EP-25280",
+   "EP-26245",
+   "EP-28229"
+  ]
+ },
+ {
+  "id": "integ-aditus-app-badges",
+  "theme": "integ",
+  "q": "2024-Q2",
+  "title": "Aditus badges in the app",
+  "benefit": "Show attendees their Aditus tickets on the badge page of the mobile app.",
+  "detail": "When the Aditus badge integration is switched on, the app's badge menu lists the user's Aditus tickets, found by email.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-25790"
+  ]
+ },
+ {
+  "id": "integ-expofp-data-sync",
+  "theme": "integ",
+  "q": "2024-Q2",
+  "title": "ExpoFP exhibitor data sync",
+  "benefit": "Keep ExpoFP floor plans current with exhibitor details sent automatically from the platform.",
+  "detail": "Exhibitor name, stand, order ID, description, logo and category are pushed to ExpoFP whenever an exhibitor changes, with changes grouped and sent together every ten minutes.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-26327",
+   "EP-32423"
+  ]
+ },
+ {
+  "id": "integ-crm-session-import",
+  "theme": "integ",
+  "q": "2024-Q2",
+  "title": "CRM session import",
+  "benefit": "Import sessions and speakers from a CRM, along with their tracks, types and tags.",
+  "detail": "A CRM integration, switched on in event setup, pulls sessions and speakers into the agenda with their tracks, types and tags.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-27396"
+  ]
+ },
+ {
+  "id": "integ-crowd-connected",
+  "theme": "integ",
+  "q": "2024-Q3",
+  "title": "Crowd Connected location and messaging",
+  "benefit": "Send location-based push messages through Crowd Connected and link app users to their location data.",
+  "detail": "The apps pass each user's ID to Crowd Connected, Crowd Connected can send notifications with category targeting through a dedicated API, and ExpoFP and Crowd Connected settings can be entered when an app is created.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-23579",
+   "EP-23578",
+   "EP-34460"
+  ]
+ },
+ {
+  "id": "integ-reach5-registration",
+  "theme": "integ",
+  "q": "2024-Q3",
+  "title": "Reach5 accounts at registration",
+  "benefit": "Let visitors register with an existing Reach5 account, with their details carried across.",
+  "detail": "Visitor registration checks an email against both systems and creates platform accounts from Reach5 data.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-18360"
+  ]
+ },
+ {
+  "id": "integ-public-api-2024q4",
+  "theme": "integ",
+  "q": "2024-Q4",
+  "title": "Public API exhibitor and product controls",
+  "benefit": "Switch an exhibitor's sponsor pop-up and activate or deactivate products through the public API.",
+  "detail": "The exhibitor endpoint accepts a sponsor pop-up parameter, and the product endpoint accepts an active or inactive status.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-32201",
+   "EP-26427"
+  ]
+ },
+ {
+  "id": "integ-reach5-sso",
+  "theme": "integ",
+  "q": "2025-Q1",
+  "title": "Reach5 single sign-on",
+  "benefit": "Let attendees sign in with Reach5 single sign-on.",
+  "detail": "The site accepts a Reach5 authorisation code and exchanges it for an access token to log the user in.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-36147"
+  ]
+ },
+ {
+  "id": "integ-a2z-enhancements",
+  "theme": "integ",
+  "q": "2025-Q1",
+  "title": "A2Z integration enhancements",
+  "benefit": "Choose which A2Z exhibitors to import by booth status and map their pavilion and hall.",
+  "detail": "Only exhibitors with the selected booth status are imported, and pavilion and hall codes map to chosen custom fields.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-37381"
+  ]
+ },
+ {
+  "id": "integ-visit-sso-meetings",
+  "theme": "integ",
+  "q": "2025-Q1",
+  "title": "Visit staff sign-on and meeting rights",
+  "benefit": "Let exhibitors register their staff through single sign-on and control who can have meetings from Visit data.",
+  "detail": "A 'Register Your Staff' option under Team Members signs exhibitor admins into the partner system, and a custom question and response set in the Visit integration decides which participants can have meetings.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-39524",
+   "EP-39525",
+   "EP-41108"
+  ]
+ },
+ {
+  "id": "integ-klipso-enhancements",
+  "theme": "integ",
+  "q": "2025-Q2",
+  "title": "Klipso integration enhancements",
+  "benefit": "Bring exhibitor admins, multiple stands and product categories across from Klipso.",
+  "detail": "Contact person details become the exhibitor's admin team member, optionally set as active, exhibitors can have several halls and stands, and product categories can be copied from an earlier event.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-31213",
+   "EP-38131",
+   "EP-38098",
+   "EP-41455"
+  ]
+ },
+ {
+  "id": "integ-aditus-participants",
+  "theme": "integ",
+  "q": "2025-Q2",
+  "title": "Aditus participant sync",
+  "benefit": "Sync participants and team members from Aditus for one or more events.",
+  "detail": "Registrations are pulled from Aditus with category mapping, badge fields and email options, and the Aditus badge page settings are available again in the admin panel.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-40301",
+   "EP-44694"
+  ]
+ },
+ {
+  "id": "integ-public-api-2025q2",
+  "theme": "integ",
+  "q": "2025-Q2",
+  "title": "Public API improvements",
+  "benefit": "Filter meeting exports by creation and change dates, remove team members and fetch badge QR codes through the API.",
+  "detail": "The meetings export accepts created and last-modified date filters, sending empty exhibitor IDs detaches a team member, and the account endpoint returns the participant's badge QR code.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-35900",
+   "EP-35903",
+   "EP-40281",
+   "EP-40013"
+  ]
+ },
+ {
+  "id": "integ-event-system-push-back",
+  "theme": "integ",
+  "q": "2025-Q3",
+  "title": "Event system data push-back",
+  "benefit": "Send exhibitors, news and exhibitor content from the platform back to the external event system.",
+  "detail": "Exhibitors in selected categories, approved news and exhibitor manual brochures, images and videos flow to the external system with an agreed field mapping, including product export columns.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-42403",
+   "EP-43006"
+  ]
+ },
+ {
+  "id": "integ-api-v2-lists",
+  "theme": "integ",
+  "q": "2025-Q3",
+  "title": "Participant and exhibitor list endpoints",
+  "benefit": "Fetch all participants and exhibitors through paginated API v2 endpoints that return only what changed.",
+  "detail": "New endpoints list participants and exhibitors with their details, including parent and child companies, with timestamp filters. Deleted participant IDs can also be retrieved.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-35897",
+   "EP-36021",
+   "EP-44632"
+  ]
+ },
+ {
+  "id": "integ-visit-api-v2",
+  "theme": "integ",
+  "q": "2025-Q4",
+  "title": "Visit integration on API V2",
+  "benefit": "Sync participants and exhibitors with Visit in near real time, with automatic retries and full request logs.",
+  "detail": "The integration moved to Visit's V2 API, receives updates as they happen, pushes chosen fields back and runs an end-of-day push. Deletions are handled, profile pictures sync both ways, failed calls retry automatically and every request is logged in the admin panel.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-42360",
+   "EP-42361",
+   "EP-42362",
+   "EP-42363",
+   "EP-42364",
+   "EP-47117",
+   "EP-50158"
+  ]
+ },
+ {
+  "id": "integ-genesis-world",
+  "theme": "integ",
+  "q": "2025-Q4",
+  "title": "Genesis World integration",
+  "benefit": "Connect the platform with the Genesis World CRM.",
+  "detail": "The first phase of a native integration with Genesis World was delivered.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-45950"
+  ]
+ },
+ {
+  "id": "integ-public-api-v3",
+  "theme": "integ",
+  "q": "2025-Q4",
+  "title": "Public API v3",
+  "benefit": "Start building on the new Public API v3, beginning with events, categories and registration questions.",
+  "detail": "The first v3 endpoints list an environment's events, exhibitor and participant categories, and the custom questions of the visitor registration pipeline.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-46710",
+   "EP-46512",
+   "EP-46511",
+   "EP-45064"
+  ]
+ },
+ {
+  "id": "integ-map-your-show",
+  "theme": "integ",
+  "q": "2026-Q1",
+  "title": "Map Your Show integration",
+  "benefit": "Import exhibitors from Map Your Show, with custom fields and product categories.",
+  "detail": "Built on the integration hub, the integration fetches exhibitors from the Map Your Show API with their custom fields and product categories, and a second stage completed the remaining requirements.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-45440",
+   "EP-48154"
+  ]
+ },
+ {
+  "id": "integ-public-api-v3-expansion",
+  "theme": "integ",
+  "q": "2026-Q1",
+  "title": "More Public API v3 endpoints",
+  "benefit": "Check accounts, read registration questions, export meetings and pull check-in data through Public API v3.",
+  "detail": "New v3 endpoints check whether an account exists, return visitor and exhibitor registration custom questions, export meetings with filters and incremental sync, and provide check-in data. Emails can also be used when creating accounts through the API.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-46489",
+   "EP-46513",
+   "EP-46514",
+   "EP-47892",
+   "EP-45958",
+   "EP-44419"
+  ]
+ },
+ {
+  "id": "integ-hub-mapping",
+  "theme": "integ",
+  "q": "2026-Q1",
+  "title": "Integration hub mapping improvements",
+  "benefit": "Map more data through the integration hub, including team member roles, default language and Aditus exhibitor data.",
+  "detail": "Team member roles can be set in the mapping without downgrading existing admins on resync, exhibitor mappings include a default language field, and exhibitor and team member data can be pushed to Aditus.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-46657",
+   "EP-47958",
+   "EP-50667"
+  ]
+ },
+ {
+  "id": "integ-cds-participants",
+  "theme": "integ",
+  "q": "2026-Q2",
+  "title": "CDS participant integration",
+  "benefit": "Sync large volumes of registrations from CDS reliably.",
+  "detail": "Participants are pulled from CDS page by page with full field mapping, matched by email for updates, with order type and included items set in the admin panel.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-48618",
+   "EP-46776"
+  ]
+ },
+ {
+  "id": "integ-d2i",
+  "theme": "integ",
+  "q": "2026-Q2",
+  "title": "D2i integration",
+  "benefit": "Import registration and attendee data from D2i automatically.",
+  "detail": "A native integration searches and pages through D2i registrations and syncs only changed records, with D2i as the source of truth.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-52290"
+  ]
+ },
+ {
+  "id": "integ-hub-migrations",
+  "theme": "integ",
+  "q": "2026-Q2",
+  "title": "Integrations move to the integration hub",
+  "benefit": "Run the Aventri, Aditus and A2Z integrations on the integration hub.",
+  "detail": "The Aventri V2, Aditus and A2Z integrations were migrated to the integration hub.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-46288",
+   "EP-47099",
+   "EP-45439"
+  ]
+ },
+ {
+  "id": "integ-public-api-v3-content",
+  "theme": "integ",
+  "q": "2026-Q2",
+  "title": "Public API v3 content endpoints",
+  "benefit": "Pull sponsors, products, floor plan halls and stands, session metadata and reference data through Public API v3.",
+  "detail": "New v3 endpoints return sponsors and sponsor categories, products and exhibitors, and event-scoped floor plan halls and stands. Session tracks, types, tags and languages, countries and regions follow with localisation, sorting, paging and modified-since filters.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-45065",
+   "EP-51830",
+   "EP-51438",
+   "EP-52613",
+   "EP-51337",
+   "EP-51338",
+   "EP-51344",
+   "EP-51343",
+   "EP-51360",
+   "EP-51359",
+   "EP-51355",
+   "EP-51354"
+  ]
+ },
+ {
+  "id": "integ-integrations-page",
+  "theme": "integ",
+  "q": "2026-Q3",
+  "title": "Integrations catalogue",
+  "benefit": "See every available integration in one catalogue in the admin panel, with its category and status for your event.",
+  "detail": "A new Integrations page lists hub and existing integrations with descriptions, category tags and whether each is active for the event. SAML 2.0 settings now have their own page in the catalogue.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-55251",
+   "EP-57684"
+  ]
+ },
+ {
+  "id": "integ-hub-sync",
+  "theme": "integ",
+  "q": "2026-Q3",
+  "title": "More reliable integration syncing",
+  "benefit": "Keep partner data in step with self-healing sync, sync history and email-first matching.",
+  "detail": "ExpoFP and Visit now run on the hub's automatic update engine, with removed exhibitors recreated, sync history and logs, and a configurable polling interval. An 'Email First' matching option keeps attendee profiles together when their email changes upstream.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-54115",
+   "EP-56245",
+   "EP-54452"
+  ]
+ },
+ {
+  "id": "integ-api-v3-products",
+  "theme": "integ",
+  "q": "2026-Q3",
+  "title": "Product management in Public API v3",
+  "benefit": "Create, update and delete products across all events through the API, including their images, videos and media.",
+  "detail": "New v3 endpoints create global products, update global fields, delete a product from every event in one call, and upload or remove images, videos and media files, keeping image order and the main image.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-52837",
+   "EP-52840",
+   "EP-52841",
+   "EP-55240",
+   "EP-55241",
+   "EP-55242",
+   "EP-55243",
+   "EP-55533",
+   "EP-55534"
+  ]
+ },
+ {
+  "id": "integ-public-api-v2-2026q3",
+  "theme": "integ",
+  "q": "2026-Q3",
+  "title": "API sponsor analytics and session filters",
+  "benefit": "Read sponsor interaction analytics and set custom session filters through the public API.",
+  "detail": "A new endpoint returns sponsor views, clicks, favourites, meetings and messages, and session endpoints can set and return up to five custom filters.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-54772",
+   "EP-57347",
+   "EP-57348"
+  ]
+ },
+ {
+  "id": "integ-swoogo",
+  "theme": "integ",
+  "q": "2026-Q3",
+  "title": "Swoogo integration",
+  "benefit": "Sync registrants, speakers and exhibitors from Swoogo automatically, including cancellations.",
+  "detail": "The inbound integration runs on the integration hub, matches records by external ID, groups exhibitors by company and keeps team members linked.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-54645"
+  ]
+ }
+]

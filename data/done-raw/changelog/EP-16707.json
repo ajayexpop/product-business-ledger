@@ -1,0 +1,75 @@
+{
+ "k": "EP-16707",
+ "histories": 25,
+ "historiesRead": 25,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-05-08T12:51:12.761+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-05-08T12:51:14.190+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-05-08T12:57:44.552+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-05-08T12:57:46.179+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-05-09T06:39:55.927+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-05-12T07:08:52.890+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-05-12T14:36:22.255+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-05-12T17:27:49.785+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-05-18T09:56:03.607+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Christian Morales"
+  },
+  {
+   "at": "2023-05-18T09:56:06.904+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Christian Morales"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790317616610.txt"
+}

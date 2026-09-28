@@ -1,0 +1,464 @@
+[
+ {
+  "id": "reg-language-preference",
+  "theme": "reg",
+  "q": "2023-Q1",
+  "title": "Registration language preference",
+  "benefit": "Let registrants choose their preferred language at sign-up so their emails and notifications arrive in that language.",
+  "detail": "A Language Preference system field was added to exhibitor and visitor registration forms, defaulting to the event language and supported in import and export. All emails and system notifications then use the chosen language.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-7417"
+  ]
+ },
+ {
+  "id": "reg-form-field-options",
+  "theme": "reg",
+  "q": "2023-Q1",
+  "title": "Registration form field options",
+  "benefit": "Build richer registration forms with website, state/region and city fields, and show the registrant’s category on the confirmation page.",
+  "detail": "Custom text fields can be set as website fields that render as clickable links. Custom select fields can list states/regions or cities. Confirmation page scripts gain a category variable, showing “No category” when none was chosen.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-7851",
+   "EP-9415",
+   "EP-14498"
+  ]
+ },
+ {
+  "id": "reg-default-category",
+  "theme": "reg",
+  "q": "2023-Q2",
+  "title": "Default participant category",
+  "benefit": "Every event now has a default participant category, so uncategorised participants always get sensible limits and settings.",
+  "detail": "The default category is created with each event, cannot be deleted and has its own limits and settings. Participants without a category, or whose category is deleted, fall back to it.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-14938"
+  ]
+ },
+ {
+  "id": "reg-category-setup",
+  "theme": "reg",
+  "q": "2023-Q3",
+  "title": "Category and form setup improvements",
+  "benefit": "Control the order participant categories appear in, and avoid duplicate answer options in custom questions.",
+  "detail": "Participant categories can be reordered by drag and drop or sorted A–Z/Z–A, and that order is used in frontend filters, registration, booking, admin profiles and the app. Custom questions no longer accept answer options with the same name.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-17102",
+   "EP-20197"
+  ]
+ },
+ {
+  "id": "reg-utm-tracking",
+  "theme": "reg",
+  "q": "2023-Q4",
+  "title": "UTM tracking on confirmation pages",
+  "benefit": "Attribute registrations to campaigns in Google Analytics, as UTM codes now carry through to the confirmation page.",
+  "detail": "UTM parameters from the registration URL are passed through to the registration confirmation page, so registrations can be attributed in Google Analytics.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-20762"
+  ]
+ },
+ {
+  "id": "reg-category-cloning",
+  "theme": "reg",
+  "q": "2024-Q1",
+  "title": "Category cloning",
+  "benefit": "Duplicate participant and exhibitor categories with all their settings, then change only what differs.",
+  "detail": "A Duplicate button copies a category with all its settings as a named copy. The categories table is also adaptive and supports drag-and-drop ordering.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-23224"
+  ]
+ },
+ {
+  "id": "reg-print-badge-link",
+  "theme": "reg",
+  "q": "2024-Q1",
+  "title": "Print badge link on confirmation page",
+  "benefit": "Let visitors print their badge straight from the registration confirmation page.",
+  "detail": "A Print Your Badge variable can be added to the visitor confirmation page; the link opens the visitor’s badge in a new tab, matching the print option in the profile and admin panel.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-10489"
+  ]
+ },
+ {
+  "id": "reg-basket-discounts-invoices",
+  "theme": "reg",
+  "q": "2024-Q2",
+  "title": "Discount, invoice and basket improvements",
+  "benefit": "Apply discounts more reliably, pay by invoice with updated logic and add sessions to the basket from a direct link.",
+  "detail": "Discount application was improved, the invoice payment logic was updated, and sessions gained an “add to basket” link so attendees can place them in their basket directly.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-26659",
+   "EP-30801",
+   "EP-26652"
+  ]
+ },
+ {
+  "id": "reg-field-timestamps",
+  "theme": "reg",
+  "q": "2024-Q2",
+  "title": "Registration field timestamps",
+  "benefit": "Record when a registrant filled in a specific form field and see it in the export.",
+  "detail": "Any registration field can be flagged to record the time of input. The latest input time before registration completes is stored in event local time and exported as a column next to the field.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-26281"
+  ]
+ },
+ {
+  "id": "reg-new-basket-payment",
+  "theme": "reg",
+  "q": "2024-Q4",
+  "title": "New basket and payment page",
+  "benefit": "Participants and exhibitors can collect items in a redesigned basket and pay by card, PayPal or Parampos on a new payment page.",
+  "detail": "The participant basket holds tickets, sessions and on-demand sessions; the exhibitor basket holds manual equipment and lead capture items. Both show discounts, taxes and totals and allow payment per section or in full. Items are reserved for 15 minutes on the payment page, and the Basket and Discounts modules control what users see.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-923",
+   "EP-24017",
+   "EP-26932",
+   "EP-27695",
+   "EP-30067",
+   "EP-34965",
+   "EP-37398",
+   "EP-35239",
+   "EP-34191",
+   "EP-34607",
+   "EP-29730",
+   "EP-23328",
+   "EP-26539"
+  ]
+ },
+ {
+  "id": "reg-app-basket-payment",
+  "theme": "reg",
+  "q": "2024-Q4",
+  "title": "Basket and payment in the app",
+  "benefit": "Participants can use the new basket and pay for items inside the iOS and Android apps.",
+  "detail": "The app basket tab opens the new basket with items, prices, discounts and availability checks. The payment page is adapted to the app with PayPal and Parampos support, and session pages in the app connect to the new basket.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-30723",
+   "EP-31477",
+   "EP-35249"
+  ]
+ },
+ {
+  "id": "reg-new-ticketing",
+  "theme": "reg",
+  "q": "2024-Q4",
+  "title": "New ticketing",
+  "benefit": "Create, edit and clone tickets in a new admin ticketing area, targeted by participant category and check-in location.",
+  "detail": "Organisers manage tickets from a new Tickets list, setting name, description, category availability and check-in zones on community and regular events. Ticket content can be translated and shows in the visitor’s chosen language.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-26628",
+   "EP-26629",
+   "EP-30803"
+  ]
+ },
+ {
+  "id": "reg-ticket-pricing-tiers",
+  "theme": "reg",
+  "q": "2024-Q4",
+  "title": "Ticket pricing tiers",
+  "benefit": "Sell tickets at different prices across named sales periods, such as early bird.",
+  "detail": "Tickets can have a fixed price or a dynamic price with several consecutive, named and coloured date ranges up to the event’s last day, each shown with its own price tag.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-26895"
+  ]
+ },
+ {
+  "id": "reg-ticket-visibility-country",
+  "theme": "reg",
+  "q": "2024-Q4",
+  "title": "Ticket visibility by country",
+  "benefit": "Show registrants only the tickets that apply to their category and country.",
+  "detail": "Tickets can be made visible per category and country, with a country selector in the registration tickets step that syncs with the Country field. An optional setting lets unlisted combinations continue at no charge instead of showing an error.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-34940",
+   "EP-37154"
+  ]
+ },
+ {
+  "id": "reg-vat-rules",
+  "theme": "reg",
+  "q": "2024-Q4",
+  "title": "Updated VAT rules",
+  "benefit": "Charge VAT correctly based on where the billing and paying companies are located.",
+  "detail": "VAT calculation now considers billing and paying company location, EU VAT number validation and a setting to disable VAT rules; for example, tax is zero when a non-EU billing company charges an EU payer.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-32621"
+  ]
+ },
+ {
+  "id": "reg-payment-setup-checks",
+  "theme": "reg",
+  "q": "2025-Q1",
+  "title": "Payment setup checks",
+  "benefit": "Catch payment integration mistakes before they affect checkout, with validation of required fields and PayPal keys.",
+  "detail": "Required fields for payment integrations are now validated, and an invalid PayPal secret key for the active test or live mode blocks saving with a clear message. The UK VAT validation service connection was also updated.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-38109",
+   "EP-38286",
+   "EP-32998"
+  ]
+ },
+ {
+  "id": "reg-tickets-profile-basket",
+  "theme": "reg",
+  "q": "2025-Q2",
+  "title": "Tickets in the profile and basket",
+  "benefit": "Participants can view their tickets and buy more from their profile, with new tickets paid for through the basket.",
+  "detail": "A Tickets tab shows purchased and available tickets. Tickets have their own basket section with discount codes and taxes, and are held for 15 minutes during payment. Organisers get ticketing settings and an on/off toggle with a warning, and tickets with sales become view-only.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-26630",
+   "EP-26632",
+   "EP-37664",
+   "EP-37784",
+   "EP-38218",
+   "EP-38168",
+   "EP-38136",
+   "EP-33497",
+   "EP-41971",
+   "EP-36099"
+  ]
+ },
+ {
+  "id": "reg-ticket-category-upgrades",
+  "theme": "reg",
+  "q": "2025-Q2",
+  "title": "Ticket category upgrades",
+  "benefit": "Let participants upgrade to a higher category by buying a ticket and paying only the difference.",
+  "detail": "When category changes are allowed, participants can buy a ticket of an equal or higher-value category, replacing their current tickets, on desktop and in the app. Their current category is shown on the dashboard and ticketing pages.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-26633",
+   "EP-30343",
+   "EP-26634"
+  ]
+ },
+ {
+  "id": "reg-orders-invoices-profile",
+  "theme": "reg",
+  "q": "2025-Q2",
+  "title": "Orders and invoices in the profile",
+  "benefit": "Participants can see everything they have bought and download their invoices from their profile.",
+  "detail": "The profile Orders section has an Ordered items tab listing purchased tickets and sessions, and an Invoices tab listing paid orders with sortable columns, item breakdowns and invoice download.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-38223",
+   "EP-26637",
+   "EP-26636",
+   "EP-40442"
+  ]
+ },
+ {
+  "id": "reg-disable-repeated-registration",
+  "theme": "reg",
+  "q": "2025-Q2",
+  "title": "Option to disable repeated registration",
+  "benefit": "Treat returning visitors as new registrants when an event should not reuse accounts from other events.",
+  "detail": "A visitor setting lets users register without a one-time code or their old password even if their email exists on other events, while duplicate prevention, continuous registration and buyer upgrade still apply.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-42940"
+  ]
+ },
+ {
+  "id": "reg-multilingual-invoices-tax",
+  "theme": "reg",
+  "q": "2025-Q3",
+  "title": "Translated invoices and tax names",
+  "benefit": "Show invoices and tax names in each event language.",
+  "detail": "Invoices can be translated, and tax names can be set per event language so they appear translated on invoices, the basket, exhibitor manuals, tickets and ordered items.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-40498",
+   "EP-43163"
+  ]
+ },
+ {
+  "id": "reg-phone-validation",
+  "theme": "reg",
+  "q": "2025-Q3",
+  "title": "Phone number validation",
+  "benefit": "Reduce invalid phone numbers with format validation on the phone field.",
+  "detail": "The phone field now validates the format of the value entered.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-44198"
+  ]
+ },
+ {
+  "id": "reg-invoice-payment-registration",
+  "theme": "reg",
+  "q": "2025-Q4",
+  "title": "Invoice payment during registration",
+  "benefit": "Let participants choose to pay by invoice when buying paid items during registration.",
+  "detail": "With the new setting on, registrants can pay by invoice; their paid sessions are scheduled, and the activation email is sent once the organiser confirms payment in Invoice payments.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-34905"
+  ]
+ },
+ {
+  "id": "reg-ticketing-version-switch",
+  "theme": "reg",
+  "q": "2025-Q4",
+  "title": "Switch between ticketing versions",
+  "benefit": "Choose old or new ticketing per event or for all events without losing existing tickets.",
+  "detail": "A module toggle selects the ticketing version per event or globally. Each version keeps its own tickets and settings, and users’ tickets are kept.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-46947"
+  ]
+ },
+ {
+  "id": "reg-category-lock",
+  "theme": "reg",
+  "q": "2025-Q4",
+  "title": "Lock participant categories",
+  "benefit": "Prevent participant categories being changed in the admin panel once registration is set up.",
+  "detail": "An optional registration setting, off by default, locks the participant category field in the admin panel for all admins.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-45795"
+  ]
+ },
+ {
+  "id": "reg-new-ticketing-country",
+  "theme": "reg",
+  "q": "2026-Q1",
+  "title": "Country visibility in new ticketing",
+  "benefit": "Target new-style tickets by the registrant’s country as well as category.",
+  "detail": "Ticket visibility by country, previously available in the older ticketing, is now part of the new ticketing.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-33039"
+  ]
+ },
+ {
+  "id": "reg-new-registration",
+  "theme": "reg",
+  "q": "2026-Q3",
+  "title": "New registration experience",
+  "benefit": "Registrants move through a rebuilt, step-by-step registration with tickets, sessions, a summary and payment in one flow.",
+  "detail": "Email verification catches duplicates and resumes unfinished or repeat registrations with data pre-filled. Tabs with a live order summary cover conditional fields, tickets held during checkout, session booking, discount codes, terms and payment. Category links pre-filter tickets, and organisers switch each event to the new flow when ready.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-54663",
+   "EP-54664",
+   "EP-54665",
+   "EP-54667",
+   "EP-54668",
+   "EP-54669",
+   "EP-54670",
+   "EP-54671",
+   "EP-54672",
+   "EP-54673",
+   "EP-54674",
+   "EP-54676",
+   "EP-54679",
+   "EP-54684",
+   "EP-54685",
+   "EP-55250",
+   "EP-31418"
+  ]
+ },
+ {
+  "id": "reg-branded-registration-pages",
+  "theme": "reg",
+  "q": "2026-Q3",
+  "title": "Branded registration pages",
+  "benefit": "Brand the registration welcome, confirmation and sold-out pages for participants and buyers without custom code.",
+  "detail": "A visual constructor sets hero image, title and description per language for welcome pages. Confirmation pages support merge variables such as name, QR code and badge link, scripts or a custom website page. A sold-out page offers a configurable call-to-action button.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-54656",
+   "EP-54657",
+   "EP-54658",
+   "EP-54659",
+   "EP-54661",
+   "EP-54662",
+   "EP-54677",
+   "EP-54678",
+   "EP-33119"
+  ]
+ },
+ {
+  "id": "reg-approval-buyer-waitlist",
+  "theme": "reg",
+  "q": "2026-Q3",
+  "title": "Approval, buyer and waiting-list flows",
+  "benefit": "Run approval-based, buyer and capacity-limited registrations in the new flow, with payment collected after approval.",
+  "detail": "Private events with public access and buyer registrations submit for organiser approval, then pay through the basket once activated. Participants can upgrade to buyer with pre-filled data, and registrations over the limit join a waiting list with its own email.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-54680",
+   "EP-54681",
+   "EP-54682",
+   "EP-54683"
+  ]
+ },
+ {
+  "id": "reg-checkout-payment-improvements",
+  "theme": "reg",
+  "q": "2026-Q3",
+  "title": "Checkout and payment admin improvements",
+  "benefit": "Complete free bookings in one step, find payments quickly and keep app registrants in the flow when reading the terms.",
+  "detail": "Bookings with a total of zero skip the payment form and go straight to the success page. Transaction and invoice payment pages can be searched by payer name or email. In the app, the terms of use open in the device browser.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-55358",
+   "EP-54690",
+   "EP-54612"
+  ]
+ }
+]

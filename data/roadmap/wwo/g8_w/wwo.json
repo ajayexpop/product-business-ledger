@@ -1,0 +1,690 @@
+[
+ {
+  "id": "platform-passwordless-login",
+  "what": "Organisers can switch on one-time password login per event. Users get an emailed code valid for three minutes with a short resend cooldown, the password reset prompt is hidden, and Android users can paste the code.",
+  "why": "Admins needed a way to help users with login trouble straight away, and with codes in use there is no password to change.",
+  "outcome": "Attendees sign in with an emailed code instead of remembering a password, and admins can generate a code for any exhibitor or visitor who is stuck.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-11098: admins needed to help users with login problems immediately via a one-time password; EP-12623: with OTP on there is no password to change"
+ },
+ {
+  "id": "platform-participant-email-warnings",
+  "what": "The admin participants list and meeting wizard mark accounts that use a generated placeholder email, have no email, or have an email domain that cannot receive mail, with the error named beside the warning.",
+  "why": "An admin had scheduled meetings with accounts on generated placeholder emails, and organisers needed to spot such accounts before it happened again.",
+  "outcome": "Organisers see at a glance which participants cannot receive email before booking meetings or sending messages to them.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-12726: admin team member scheduled meetings with accounts on fake emails and needed to avoid this; EP-14907 extends to empty email and MX issues"
+ },
+ {
+  "id": "platform-profile-and-page-access-2023q1",
+  "what": "Country, city, region, nationality and custom select fields in profiles have live search, including multi-select. Access to public file pages follows the exhibitor sign-in access setting instead of the content preview toggle.",
+  "why": "Users wanted to search for their answer when filling in a profile, and file pages required login even when the exhibitor page they belong to was open.",
+  "outcome": "Users find the option they need by typing, and file pages open or require login consistently with the exhibitor page they belong to.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-12583: user story wants to search answers in select fields; EP-11778: file page wrongly required login when content preview toggle was on"
+ },
+ {
+  "id": "platform-module-management",
+  "what": "Global and event module management were restructured so every admin menu tab and sub-tab can be switched on or off, with a separate networking and matchmaking section. Analytics tabs redirect correctly when a module is off.",
+  "why": "Not every admin menu item could be switched off, so clients could see functions that were not relevant to them.",
+  "outcome": "Organisers keep the admin panel to the sections their event uses, without dead ends in analytics when a module is turned off.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17025: not all tabs and subtabs switchable in Module management; needed to prevent showing clients functions not relevant to them"
+ },
+ {
+  "id": "platform-admin-action-log",
+  "what": "A new admin action log lists actions taken in the admin panel, with event, date, controller and action filters, search within request content and XLS export. Actions in the newer admin panel are recorded too.",
+  "why": "Admin panel users needed to see a log of every action done in the admin panel, and only actions from the old panel were being logged.",
+  "outcome": "Organisers can look up who changed which setting and when, and export the history for review.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-15209: admin panel user should see logs of all actions in admin panel; EP-17879: only old admin panel actions were collected"
+ },
+ {
+  "id": "platform-arabic-language",
+  "what": "Arabic is available as a platform language for events, shown as AR in the language list.",
+  "why": "Some events have a main audience that prefers to use the platform in Arabic.",
+  "outcome": "Organisers can offer their event platform in Arabic so attendees use it in their preferred language.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-18005: value field says main audience of event prefer to use platform in Arabic"
+ },
+ {
+  "id": "platform-assigned-admins",
+  "what": "The admin exhibitor and participant lists have an assigned admin column, an assignment pop-up, and filtering and sorting by assigned admin. Assignments are also available through the API and export.",
+  "why": "Organisers needed a way to make one admin responsible for each exhibitor or participant and to see who looks after whom.",
+  "outcome": "Organiser teams split accounts between admins and each admin can filter the list down to the accounts they own.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-12814: need mechanism of assigning a user to an Admin, only one admin per user, filter and sort by assigned admin"
+ },
+ {
+  "id": "platform-admin-panel-guidance",
+  "what": "Several confusing admin settings were renamed, tooltips were added across admin modules, selected pages open with a short intro explaining their purpose, and fields with errors are highlighted in exhibitor category settings.",
+  "why": "Clients found some admin settings hard to understand and needed clearer names, descriptions and page explanations.",
+  "outcome": "Organisers understand what a setting or page does before changing it, and can see which category settings fields need fixing.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-15967: rename settings so clients and TAMs understand them easily; EP-15966 value: make each setting more descriptive; EP-17816: clarify what each page is about"
+ },
+ {
+  "id": "platform-inactive-account-activation",
+  "what": "Inactive users see one clear activation message on web and in the iOS and Android apps, with a resend activation link action, including for one-time password login. The activation notice takes priority over a wrong-password error.",
+  "why": "Users who had not activated their account saw a wrong or missing error, and on web had to enter their email three times to get the activation email.",
+  "outcome": "Users who missed their activation email can resend it straight from the login screen and get into the platform without contacting support.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-14583/EP-15585: incorrect or no error for inactive users on web, Android, iOS; EP-17488: user had to enter email 3 times to send activation email"
+ },
+ {
+  "id": "platform-search-performance-2023",
+  "what": "Search indexing after event cloning waits for the clone to finish, whole-event indexing runs in bulk, marketplace exhibitor list requests were reorganised, and participant company, job title and news author were added to search.",
+  "why": "Categories and products slowed the marketplace list view, event syncs to search took long, and syncing during a clone caused errors.",
+  "outcome": "Attendees get marketplace listings that load faster, can search people by company or job title, and search results are ready sooner after an event is set up.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17384: page load time mostly caused by categories and products; EP-17299: reduce event sync time; EP-13513: sync before clone finished created errors"
+ },
+ {
+  "id": "platform-registration-spam-protection",
+  "what": "Frontend exhibitor registration includes a mandatory reCAPTCHA step.",
+  "why": "Exhibitor registration without reCAPTCHA received a lot of spam and had been switched off because of it.",
+  "outcome": "Organisers can keep exhibitor registration open without spam sign-ups filling their exhibitor list.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16297: exhibitor registration had no reCaptcha, received a lot of spam and was disabled"
+ },
+ {
+  "id": "platform-admin-mfa",
+  "what": "Admin accounts have an MFA tab where organisers enable authenticator-app login for admins, exclude chosen admins, and send MFA setup emails one at a time or in bulk.",
+  "why": "Admin accounts give access to event and attendee data, so organisers need more than a password protecting them.",
+  "outcome": "Admins sign in with a password plus an authenticator code, while chosen admins can be kept on password-only login.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-11695: describes MFA tab for admins with Google or Microsoft authenticator; no problem statement given"
+ },
+ {
+  "id": "platform-sso-sign-in-2023",
+  "what": "The web login pop-up for SAML single sign-on is replaced by in-tab sign-in that returns users to where they started. Organisers can design a website page to show SSO users who are not found on the event.",
+  "why": "The pop-up needed browser pop-ups enabled and confused users, and users not found on the event landed on a static page that could not be configured.",
+  "outcome": "Attendees using single sign-on stay in the same tab and land back where they were, and those not registered see a page the organiser has designed.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17967: pop-ups need enabling, confuse end users, security concerns; EP-17970: static unconfigurable page caused end-user confusion"
+ },
+ {
+  "id": "platform-module-permission-alignment",
+  "what": "Meeting and message permissions moved from module management into the permission matrix, with a general messages switch, and the matrix is disabled when a module is off.",
+  "why": "Module management settings for meetings and messages were only applied on the frontend, which made permissions unclear.",
+  "outcome": "Organisers manage meetings and messages from one place and can trust that the settings they choose apply everywhere.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16638: MM settings on backend not taken into account, only frontend; feature adds clarity and transparency in permissions"
+ },
+ {
+  "id": "platform-floor-plan-performance",
+  "what": "Integrated floor plans are cached and optimised, and the filters service used by the mobile apps was moved to the newer filters with queued search syncing.",
+  "why": "Repeated filter requests from the mobile apps put heavy load on the database.",
+  "outcome": "Attendees get floor plans and filters that respond faster, and the platform handles busy event days with less strain.",
+  "who": [
+   "Attendees",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-21993: old filters caused huge database load from multiple app requests; EP-22678/EP-18599 floor plan caching and optimisation have no description"
+ },
+ {
+  "id": "platform-loading-indicators",
+  "what": "Listing pages such as marketplace, sessions, delegates, events and exhibitor lists show a loader while content loads, and the sessions page shows a loader when switching to another date.",
+  "why": "Without loading feedback, users could not tell whether a page was still loading or had no content.",
+  "outcome": "Attendees can see that content is on its way instead of facing a blank or stale list.",
+  "who": [
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-17637: check which listing pages have no loader and add one; EP-21659: add loader on new date; no problem stated"
+ },
+ {
+  "id": "platform-badge-scan-login",
+  "what": "Badge-scan login in the mobile app can be switched on per event, limited to chosen categories and shown with a configurable login button. It works with one-time password login and activates the account.",
+  "why": "At the event, typing an email and password on a phone is slow, and attendees already carry a badge that identifies them.",
+  "outcome": "App users sign in by scanning their badge, and see a clear error if the account is unknown or their category is not allowed.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-19419: describes badge scan login settings and flow; no problem statement given"
+ },
+ {
+  "id": "platform-gdpr-account-deletion",
+  "what": "A single event selection page lists the events a verified user belongs to, so they can select events and delete their account and data from them.",
+  "why": "Google Play requires a clickable account deletion link to publish apps, in line with the GDPR right to erasure.",
+  "outcome": "Users can remove their data from one or several events themselves through one link, and event apps meet the store requirement.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23063: Google needs a clickable link to delete an account to publish the app, per GDPR Article 17"
+ },
+ {
+  "id": "platform-otp-login-improvement",
+  "what": "A one-time code is emailed on request whatever the account status, and inactive users become active once they sign in with it. On public events any user can request a code by email and sign in.",
+  "why": "Users whose account was not yet active could not complete one-time password login.",
+  "outcome": "Attendees on public events get in with a single emailed code, without a separate activation step.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-18110: send OTP no matter if active or not, user becomes active on login; no problem statement given"
+ },
+ {
+  "id": "platform-admin-workflow-2024q1",
+  "what": "A customer service action in the exhibitor and visitor lists signs an admin in as that user in a new tab. Filters and search persist per admin on sponsor, participant, exhibitor and session lists, and session settings are regrouped by area.",
+  "why": "Signing in as a user took an extra step, filters reset after opening a record, which hurt busy onsite info desks, and session and exhibitor event settings were mixed.",
+  "outcome": "Organisers help users faster from the list, keep their filtered view while working through records, and find session settings where they expect them.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23019: had to open account first; EP-23021: filters reset, problem for client at busy onsite counters; EP-23885: session vs exhibitor event settings not distinguished"
+ },
+ {
+  "id": "platform-local-time-setting",
+  "what": "An event setting, off by default, shows only event time, without the user's local time, for meetings, sessions, exhibitor events and blocked times on every web and app page.",
+  "why": "Showing users' local time next to event time was confusing for events whose attendees span several time zones.",
+  "outcome": "Attendees read one time for everything on the schedule and avoid mistakes from converting between time zones.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23518: local time on schedule view confusing and irrelevant for events spanning multiple time zones"
+ },
+ {
+  "id": "platform-reliable-exports",
+  "what": "Exports run on a status-controlled process that reruns an incompletely processed batch up to three times, and the exhibitor manual export runs as a queued job with all details included in the file.",
+  "why": "Exports could get stuck on temporary database errors or messages that failed to reach the queue, and the exhibitor manual export needed to be quicker and more stable.",
+  "outcome": "Organisers get their export file even after a temporary glitch, without restarting it or asking for help.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16797: export would stop on unexpected database error or network issue; EP-1094: make Exhibitor Manual export quicker and more stable"
+ },
+ {
+  "id": "platform-security-hardening-2024q1",
+  "what": "Issues identified in a security assessment were fixed in the website, admin panel and server, and in the Android and iOS apps.",
+  "why": "A security assessment of the platform flagged vulnerabilities in the web, admin panel, server and mobile apps.",
+  "outcome": "Organisers, exhibitors and attendees use a platform where the reported security findings have been addressed.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-10562/EP-10563: security report listed issues in frontend, admin panel, server and Android and iOS apps"
+ },
+ {
+  "id": "platform-admin-colours",
+  "what": "The primary and secondary colours of the admin panel were changed.",
+  "why": "The admin panel's look needed updating to the current colour scheme.",
+  "outcome": "Organisers work in an admin panel with the refreshed primary and secondary colours.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-28362: summary only, no description or stated reason"
+ },
+ {
+  "id": "platform-saml-return-to-page",
+  "what": "A SAML setting returns single sign-on users to the page they originally requested after they authenticate, instead of the event homepage. Other events keep their current behaviour.",
+  "why": "Users opening a signed-in page such as the dashboard were always sent to the homepage after single sign-on.",
+  "outcome": "Attendees land straight on the page they wanted after signing in, without navigating back to it.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-20669: when SAML invoked user always taken to homepage, not the dashboard page they launched"
+ },
+ {
+  "id": "platform-admin-panel-languages",
+  "what": "The new admin panel has a language selector on the login page, opens in the language chosen last time, and shows a loader instead of a loading message while event data loads.",
+  "why": "Admins working in a language other than English needed to choose it before signing in and not reset it on every visit.",
+  "outcome": "Organiser teams work in their own language from the login screen onwards, every time they open the admin panel.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-34512/EP-34511: add language selector and use language from local storage; no problem statement given"
+ },
+ {
+  "id": "platform-consent-gated-videos",
+  "what": "An optional setting, off by default, keeps embedded videos on exhibitor profiles blocked until the user consents. One consent unlocks videos across the service.",
+  "why": "Embedded third-party videos should not load before the user accepts the technology behind them.",
+  "outcome": "Organisers can meet consent requirements for exhibitor videos, and attendees give consent once instead of on every video.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-32016: video must be unavailable until consent accepted, one-time consent for the whole service; value: for security"
+ },
+ {
+  "id": "platform-account-switcher",
+  "what": "The web account switcher is a dropdown available from the top-right menu and from the name on the profile page, with scrolling when there are more than five accounts.",
+  "why": "Users with several accounts needed a more visible, quicker way to switch between them.",
+  "outcome": "Users move between their own, team member, parent and child company accounts in a couple of clicks on desktop and mobile web.",
+  "who": [
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-28676: value says more prominent placement of account switcher; desired state adds visible indicator of multiple accounts"
+ },
+ {
+  "id": "platform-otp-whatsapp-sms",
+  "what": "One-time login codes can be sent by WhatsApp and SMS as well as email. Each channel has its own toggle, and users receive codes through every enabled channel. SMS uses custom text and WhatsApp a preset template.",
+  "why": "Codes could only be sent by email, and organisers wanted an easier sign-in flow with codes available by WhatsApp and SMS.",
+  "outcome": "Attendees get their login code on the channel they check most, and organisers choose which channels to offer.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-26859: whoFor says easier logination flow with OTP; value: OTP codes available through WhatsApp and SMS; previously email template only"
+ },
+ {
+  "id": "platform-admin-panel-2024q4",
+  "what": "Redundant settings left from the old interface were removed, admin tables show an empty state, and the retired hospitality module, table section tax fields and exhibitor manual payment setting are hidden.",
+  "why": "Admin pages carried settings that no longer did anything, and empty tables did not show clearly that there was no data.",
+  "outcome": "Organisers see only settings that still apply and can tell at once when a table is empty.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-32439: settings redundant; EP-28153: hospitality no longer relevant, tables no longer have prices; EP-23762: empty tables need an image"
+ },
+ {
+  "id": "platform-australia-hosting",
+  "what": "Cloud infrastructure, including queues, data tables and log groups, was set up in an Australian region.",
+  "why": "Some events need their platform run on infrastructure located in Australia.",
+  "outcome": "Organisers can have their event platform hosted in an Australian region.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-35819: AWS resources created in Australia; no reason stated"
+ },
+ {
+  "id": "platform-performance-2024q4",
+  "what": "Database connection pooling was added, account attributes and event configuration are retrieved and cached more efficiently, and admin table meeting lists, sponsor pages and exhibitor, product and brand search widgets were optimised.",
+  "why": "The admin sponsor page was loading slowly, and loading hundreds of accounts sent a separate request for each one.",
+  "outcome": "Organisers wait less for sponsor pages and meeting lists, and attendees get search widgets that load faster.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-36019: sponsor page loading around 28 seconds; EP-35921: requests executed separately for 300-500 accounts"
+ },
+ {
+  "id": "platform-security-hardening-2024q4",
+  "what": "Activation codes are generated with the account identifier included, and the app's badge scanning endpoint requires a secure signed token.",
+  "why": "Some registration emails went out with duplicate activation codes, and badge scan requests needed protection against misuse.",
+  "outcome": "Each user gets an activation code unique to their account, and badge scans come only from trusted apps.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-34239: activation code duplication in a batch of registration emails; EP-35880: add HMAC token header, no reason stated"
+ },
+ {
+  "id": "platform-sign-in-profile-2024q4",
+  "what": "The profile edit page title reflects the account type, the frontend shows error codes, the sign-up prompt is hidden in the login window when registration is off, and the new frontend supports login by token from a custom service.",
+  "why": "Closed-registration events still invited sign-ups in the login window, and profile pages used the same title for company and personal accounts.",
+  "outcome": "Users see a login window and profile titles that match their event and account, and admins can sign in as users on the new frontend.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-36297: once registration off the sign-up line is not needed; EP-34576: title per account type; EP-37445/EP-37093 no stated reason"
+ },
+ {
+  "id": "platform-buttons-validation-2025q1",
+  "what": "Save and similar buttons across the frontend use the primary button style, fixed-colour green buttons were corrected, and the error shown when an entry has too few characters was reworded.",
+  "why": "Buttons looked inconsistent across pages, and the error for a too-short entry did not say clearly what was wrong.",
+  "outcome": "Users spot the main action on each page easily and know how to fix a value that is too short.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-38372: update Save buttons to Primary; EP-37692: change error text for too few symbols; no problem stated"
+ },
+ {
+  "id": "platform-country-city-data",
+  "what": "The country manager imports country, city and region names and translations from an external reference service and updates them automatically every month. Admin edits to names and translations are kept.",
+  "why": "Geographical data needs to stay accurate and current in every supported language.",
+  "outcome": "Organisers and users pick from up-to-date country, city and region lists in their language without manual upkeep.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-28301: value says more accurate and up-to-date information, for all clients"
+ },
+ {
+  "id": "platform-attendee-onboarding",
+  "what": "Organisers set up a multilingual onboarding pop-up with live preview, texts, category groups, mandatory or optional completion and reappearance timing. It runs on web and app, and users are told when recommendations update.",
+  "why": "New users needed a way to choose their interest categories on first use so they receive personalised recommendations.",
+  "outcome": "Attendees get relevant recommendations from their first visit, and organisers decide how strongly to prompt them to pick interests.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-36617: admin configures onboarding so users select interest categories and receive personalized recommendations"
+ },
+ {
+  "id": "platform-custom-labels",
+  "what": "A content settings page lets organisers edit page and section labels per language, with all and modified-only views, applied on web and app, including the cancel registration and delete account pop-ups.",
+  "why": "Organisers needed to match page and section titles to their event's branding and tone without developer work.",
+  "outcome": "Organisers rename labels such as sponsors or sessions in each language themselves and can see which ones they changed.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-39352: content settings page lets organizers customize titles to match event branding and tone"
+ },
+ {
+  "id": "platform-admin-panel-2025q2",
+  "what": "The admin panel shows the saved event time zone next to the event city setting, and settings changed in the previous admin panel now apply in the new one.",
+  "why": "Changes made in the old admin panel were often not shown in the new admin panel.",
+  "outcome": "Organisers can check the event time zone at a glance and see the same settings whichever admin panel they use.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-41912: changes in old admin panel often not displayed in new admin panel; EP-42398 time zone display, no reason stated"
+ },
+ {
+  "id": "platform-landing-page-after-login",
+  "what": "The page opened on login for exhibitors, participants and team members can be a custom internal URL, and the redirect is handled on the server. Required fields and onboarding still come first.",
+  "why": "Organisers want users sent straight to pages such as the meeting programme after login.",
+  "outcome": "Organisers guide exhibitors and attendees to the page that matters most, and users start there without searching for it.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40076: clients want to direct users to specific pages such as the Meeting Program immediately after login"
+ },
+ {
+  "id": "platform-performance-security-2025q2",
+  "what": "Additional database indexes were added, multi-select fields with many options load on demand, and token and identifier parameters were removed from app visitor requests.",
+  "why": "Those parameters triggered unnecessary database checks, and fields with very long option lists needed to load without delay.",
+  "outcome": "Users open long option lists and people listings faster, with less account data sent in each request.",
+  "who": [
+   "Attendees",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-43090: token and id params initialise unnecessary database checks; EP-42371/EP-38507 no stated reason"
+ },
+ {
+  "id": "platform-admin-safeguards-2025q3",
+  "what": "Admins confirm participant category changes after a warning that they may affect access, visibility and matchmaking. Region values are validated when saved, and the save and cancel bar has a blurred background.",
+  "why": "Participant categories could be changed and saved by accident without a clear warning of the consequences.",
+  "outcome": "Organisers avoid accidental category changes that would alter what a participant can see and who they are matched with.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-39674: no clear warning when category changed, can lead to accidental changes without understanding consequences"
+ },
+ {
+  "id": "platform-editor-admin-2025q4",
+  "what": "The text editor has a remove styling button, and the outdated maintenance warning was removed from the admin panels.",
+  "why": "Text pasted from other sites carried its inline styles, and the maintenance warning no longer matched the release schedule.",
+  "outcome": "Organisers paste content and clear its formatting in one click, and no longer see an irrelevant maintenance notice.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45768: remove all styles after copying text from another site; EP-38283: warning irrelevant since release day and time changed"
+ },
+ {
+  "id": "platform-performance-2025q4",
+  "what": "The apps send fewer requests for recommendations, filters and onboarding settings, delegate search responses are lighter, and location lookup data is cached.",
+  "why": "Three app requests were being sent in unusually high numbers and overloading the server.",
+  "outcome": "App users get a quicker app and delegate search, and the platform stays responsive when many attendees use it.",
+  "who": [
+   "App users",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45987: 3 requests overload server by anomaly number of requests; EP-45899/EP-44197 no stated reason"
+ },
+ {
+  "id": "platform-security-hardening-2025q4",
+  "what": "Cross-site scripting issues were fixed in places where HTML content is supported.",
+  "why": "Places that accept HTML content need protection so harmful scripts cannot run for other users.",
+  "outcome": "Organisers can keep using rich HTML content while visitors are protected from injected scripts.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-45748: summary only, no description"
+ },
+ {
+  "id": "platform-locale-dates-translations",
+  "what": "Date formats follow each user's language, missing translation keys and languages such as Icelandic were added to the frontend, and missing or wrong German system translations were corrected.",
+  "why": "Dates in one fixed format and gaps in translations make the platform harder to read in other languages.",
+  "outcome": "Attendees read dates in the format they are used to and see the platform fully in their language.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-46596: summary only; EP-46955 adds missing keys and Icelandic; EP-47038 lists wrong German translations; no problem statement"
+ },
+ {
+  "id": "platform-sign-in-options-2026q1",
+  "what": "The sign-in window offers SAML single sign-on or standard login, the mobile app can show a configurable second external login button, and sign-in buttons have a hover colour.",
+  "why": "With single sign-on on, team members who must use standard login had no clean way in, and the app offered only one login option.",
+  "outcome": "Users sign in the way that suits their account, whether through single sign-on or standard login, on web and in the app.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-48719: API-created team members had no clean path with SAML on; EP-49318: native login supported only one option, client needed a second"
+ },
+ {
+  "id": "platform-profile-completion",
+  "what": "Profile completion counts only fields a participant can see and edit, weighted equally, and the admin participants list has a sortable profile completion column with a recalculate button.",
+  "why": "The completion score counted fields participants could not see or edit, and organisers could not see completion from the participants list.",
+  "outcome": "Organisers find incomplete profiles quickly and follow up, and participants see a score that reflects fields they can actually fill.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-49221: percentage should reflect only fields available to the participant; EP-49202: organisers could not see completion in participants list"
+ },
+ {
+  "id": "platform-admin-save-cloning",
+  "what": "Saving or applying changes in exhibitor manual vendors, marketing and the mobile app builder keeps organisers on the same page. A persistent banner across admin pages warns not to edit an event while it is being cloned.",
+  "why": "Save redirected users away from the page they were working on, and edits made during cloning led to inconsistent event setups.",
+  "outcome": "Organisers keep their place while configuring an event and avoid breaking a clone by editing the source event too early.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-47917: Save/Apply redirected users away causing rework; EP-48874: edits mid-clone produced inconsistent setups"
+ },
+ {
+  "id": "platform-admin-navigation-pagination",
+  "what": "Pagination is standardised across admin lists and remembers each user's page, page size and sorting on return. Sponsorship is a top-level menu item and module, and the colour picker rejects invalid values.",
+  "why": "Pagination looked and behaved differently across admin lists, and refreshing or returning reset lists to page one.",
+  "outcome": "Organisers return to exactly the list view they left and find sponsorship without digging through the menu.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52989: pagination inconsistently placed and designed; EP-52457: customer reported refresh reset lists to page one; EP-52556 no stated reason"
+ },
+ {
+  "id": "platform-performance-2026q2",
+  "what": "Empty banner placements are no longer requested on every navigation, unnecessary sign-in checks and database connections were removed, and file download buttons in the user menu show a loader.",
+  "why": "The site repeated the same empty banner request and sign-in check on page changes, adding needless calls to the server.",
+  "outcome": "Attendees move between pages with fewer wasted requests and can see that a lead download is in progress.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-54157: same empty banner request re-fired on every navigation; EP-49453: auth request made when token null; EP-45868 no stated reason"
+ },
+ {
+  "id": "platform-security-hardening-2026q2",
+  "what": "The resend endpoint is rate limited per IP with temporary blocking, and the schedule note API no longer exposes internal server details in errors and enforces authorisation.",
+  "why": "The resend endpoint had no rate limit and was used to flood participants with registration emails, and the note API exposed internal details in errors.",
+  "outcome": "Participants are protected from repeated unwanted registration emails, and organisers' data is better protected behind proper checks.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52804: attacker used resend endpoint with no rate limiting to trigger registration emails; EP-52467: errors leaked internal paths and IPs, auth gaps"
+ },
+ {
+  "id": "platform-performance-2026q3",
+  "what": "The portal requests resized WebP images instead of original uploads, the web app manifest is cached instead of refetched on every page change, and frontend bundles and builds were optimised.",
+  "why": "Pages were downloading full-size original images and refetching the same manifest file on every navigation.",
+  "outcome": "Attendees get pages and images that load faster with less data used, especially on mobile connections.",
+  "who": [
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-57489: most image traffic was unsized originals, no WebP; EP-57336: manifest re-fetched in full on every navigation"
+ },
+ {
+  "id": "platform-private-favourites",
+  "what": "Users who opt out of networking can favourite and unfavourite exhibitors, visitors, speakers and products on web and in the app. Their favourites stay private, never count as leads and never identify them.",
+  "why": "Favouriting was only open to opted-in attendees and exposed them to third parties, so privacy-conscious attendees could not bookmark anything.",
+  "outcome": "Attendees keep a personal shortlist while staying private, and exhibitors see favourite counts without receiving opted-out users as leads.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-53978: favouriting only for opted-in attendees and exposed them; opted-out attendees could not engage without sacrificing privacy; EP-57577 app parity"
+ },
+ {
+  "id": "platform-admin-redesign",
+  "what": "The event setup, categories setup, event list, exhibitor list, participants list and sessions list pages were restyled to a new modern design, with no change to how they work.",
+  "why": "The most used admin pages had dated styling that was inconsistent with a modern design language.",
+  "outcome": "Organisers work in a cleaner interface on their most used pages without relearning any steps.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-54462 to EP-54466: pages used dated styling inconsistent with a modern design language; CSS only, no functional changes"
+ },
+ {
+  "id": "platform-selective-cloning",
+  "what": "The clone dialog offers separate checkboxes for sponsors, news, sessions, local categories and other content categories, with a confirmation summary, so only selected content is copied.",
+  "why": "Cloning copied sponsors, news, sessions, local categories and floor plan every time, and teams then had to delete unwanted content by hand.",
+  "outcome": "Organisers start a new edition with only the content they want to keep and skip the manual clean-up after cloning.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52816: cloning force-copied sponsors, news, sessions, local categories and floor plan, which had to be deleted by hand"
+ },
+ {
+  "id": "platform-auth-settings-2026q3",
+  "what": "One-time password sign-in can be set separately for company and individual profiles per event through a single email-first login form, and admin accounts have a phone field for use in emails.",
+  "why": "Corporate email servers often block one-time password emails, so exhibitors on company addresses could not sign in.",
+  "outcome": "Attendees keep passwordless sign-in while exhibitors can use a password, and existing events keep one-time passwords on for both.",
+  "who": [
+   "Exhibitors",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-54790: corporate email servers often block OTP emails, so exhibitors on company emails could not log in; EP-44947: admin phone variable had no field"
+ },
+ {
+  "id": "platform-trusted-embed-domains",
+  "what": "A security settings section in event setup lets organisers add and remove trusted external domains, so authenticated content such as on-demand sessions plays when embedded on those sites.",
+  "why": "When sessions were embedded on partner sites, browsers blocked the sign-in cookie and sent logged-in attendees to the homepage instead of playing the video.",
+  "outcome": "Organisers can share authenticated sessions on approved partner sites, and attendees watch them there without being redirected.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-55082: browsers blocked the auth cookie on iframe embeds, redirecting logged-in attendees to the homepage instead of playing the video"
+ }
+]

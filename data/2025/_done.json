@@ -1,0 +1,59 @@
+{
+ "year": "2025",
+ "yearBasis": "doneDate = last move from a not-done status into a done status (COMPLETE/DONE/Done), from the changelog; resolutiondate if none",
+ "jql": "project = EP AND issuetype = Story AND status = Done AND resolved >= \"2022-12-01\" AND resolved < \"2026-02-01\" ORDER BY key ASC",
+ "written": 229,
+ "withStartDate": 228,
+ "withWWO": 224,
+ "noDescription": 5,
+ "withClient": 135,
+ "changelogTruncated": [
+  "EP-27246",
+  "EP-36732",
+  "EP-32830",
+  "EP-35452",
+  "EP-28301",
+  "EP-30274",
+  "EP-38636",
+  "EP-36617",
+  "EP-35513",
+  "EP-39352",
+  "EP-39133",
+  "EP-26632",
+  "EP-42801",
+  "EP-41378"
+ ],
+ "worklogTruncated": [
+  "EP-27246",
+  "EP-28301",
+  "EP-36617"
+ ],
+ "startDateMayBeLate": [
+  "EP-27246",
+  "EP-36732",
+  "EP-32830",
+  "EP-35452",
+  "EP-28301",
+  "EP-30274",
+  "EP-36617",
+  "EP-35513",
+  "EP-39352",
+  "EP-39133",
+  "EP-26632",
+  "EP-42801",
+  "EP-41378"
+ ],
+ "noInProgressTransition": [
+  "EP-38636"
+ ],
+ "noDescriptionKeys": [
+  "EP-33800",
+  "EP-30228",
+  "EP-44623",
+  "EP-44841",
+  "EP-45950"
+ ],
+ "missingChangelog": [],
+ "missingWWO": [],
+ "finishedAt": "2026-09-25T07:59:40Z"
+}

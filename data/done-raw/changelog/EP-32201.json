@@ -1,0 +1,123 @@
+{
+ "k": "EP-32201",
+ "histories": 50,
+ "historiesRead": 50,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-07-18T12:31:42.380+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-07-18T12:31:44.005+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-07-18T12:31:45.550+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-08-21T13:07:18.509+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-08-22T10:52:11.228+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-08-22T10:54:32.502+0100",
+   "from": "Tech Brief",
+   "to": "Incoming request",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-08-22T10:55:06.867+0100",
+   "from": "Incoming request",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-08-22T10:56:06.737+0100",
+   "from": "Ready for development",
+   "to": "Incoming request",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-08-22T10:57:02.246+0100",
+   "from": "Incoming request",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-08-22T14:49:36.240+0100",
+   "from": "Ready for development",
+   "to": "Ready for decomposition",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-08-22T14:49:38.824+0100",
+   "from": "Ready for decomposition",
+   "to": "Brief ready for review",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-08-27T16:55:02.915+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-08-28T12:11:23.925+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2024-08-28T12:11:25.831+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2024-08-28T12:12:17.090+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2024-08-30T09:22:27.948+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Alex Talala"
+  },
+  {
+   "at": "2024-08-30T14:38:21.928+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Alex Talala"
+  },
+  {
+   "at": "2024-09-05T10:42:48.791+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Volodymyr Borisenko"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790315225273.txt"
+}

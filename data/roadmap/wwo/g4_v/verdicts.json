@@ -1,0 +1,528 @@
+[
+ {
+  "id": "sessions-exhibitor-events-launch",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Exhibitors publish events and see who booked them, organisers keep approval in their hands, and attendees find and book exhibitor events on their own Marketplace tab and in My schedule."
+  },
+  "reason": "outcome said attendees find exhibitor events 'in the same place as sessions'; EP-11663 moved them out of Sessions onto their own Marketplace tab"
+ },
+ {
+  "id": "sessions-session-filter-improvements-2023q1",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Attendees filter sessions by the fields that matter for each event, see speakers before they activate their accounts, and land in the online room straight after signing in."
+  },
+  "reason": "outcome 'see every speaker' overstates: EP-10629 keeps blocked, banned and waitlisted speakers hidden"
+ },
+ {
+  "id": "analytics-report-columns-2023",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-exhibitor-event-controls",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers keep approved events stable, review later edits side by side before approving them, and import events for child exhibitors and contacts."
+  },
+  "reason": "outcome 'before they go live' is not in the source; EP-13125 only says post-approval edits are shown before and after for review"
+ },
+ {
+  "id": "sessions-exhibitor-events-app-webview",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-session-import-schedule-download",
+  "verdict": "fix",
+  "fix": {
+   "detail": "The five session filters are included in the sessions XLS import and export. The Export data button on My Schedule and Team Schedule becomes Download My Schedule, and sessions gained additional indexes for online type, dates and description.",
+   "what": "The five session filters are included in the sessions XLS import and export. The Export data button on My Schedule and Team Schedule is now Download My Schedule, and sessions have extra indexes for online type, dates and description."
+  },
+  "reason": "detail/what claim indexes sped up session loading; EP-18389 only adds indexes (online type, dates, description), no speed result stated"
+ },
+ {
+  "id": "analytics-new-analytics",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-export-progress",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Exports show a percentage progress indicator and a cancel button, and a clear status while the file is being generated. The check-in export uses far fewer database queries."
+  },
+  "reason": "detail 'check-in export runs faster' is not shown; EP-16615 only reduces a query that ran up to 1,000 times a second"
+ },
+ {
+  "id": "analytics-mobile-app-stats",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-session-speaker-management-2023q3",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Avoid double-booking speakers, control anonymous questions and give the app's speaker list its own menu item.",
+   "detail": "Speakers and moderators with blocked time can no longer be assigned to clashing sessions unless organisers allow it. Organisers can hide the Ask anonymously option in session rooms, the app's speaker list moves to its own menu item, and the apps show the price on past paid sessions."
+  },
+  "reason": "benefit/detail said speakers get their own menu page; EP-18460 moves the app's speakers list out of the sessions page into its own menu item"
+ },
+ {
+  "id": "analytics-custom-checkin-reports",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-dashboard-improvements-2023",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "ai-global-search-launch",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-native-exhibitor-events-app",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-multilingual-exhibitor-events",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-login-source",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "ai-search-refinements-2023q4",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Search from one simpler search bar, with products, brands, sessions and exhibitor events matched on more fields.",
+   "outcome": "Attendees use the same search bar across the main listing pages, find sessions by speaker and events by exhibitor, and only see people they are permitted to see."
+  },
+  "reason": "benefit 'find content faster' and 'more accurate ranking' are unsupported; outcome 'every page' overstates (EP-19987 lists specific pages)"
+ },
+ {
+  "id": "sessions-other-locations",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-schedule-improvements-2024q1",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-checkin-analytics-refresh",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers follow attendance through the event, check each participant's daily movements, export the list and manage check-in zones that stay in sync with the floor plan."
+  },
+  "reason": "outcome said zones are managed 'from the floor plan'; EP-24654 manages them on the Check-in zones page, synced with the floor plan"
+ },
+ {
+  "id": "analytics-mobile-analytics-page",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-meetings-tab",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-standard-report",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "ai-admin-ai-assistant",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "ai-global-search-expansion",
+  "verdict": "fix",
+  "fix": {
+   "detail": "The search engine now covers every main section with section-specific multipliers and filters, is on by default for new events and matches exhibitor names on exhibitor events. The Android app keeps search results when users return from a profile.",
+   "why": "Search needed to reach every main section of the event with the same ranking, and on Android going back from a profile reloaded the results page.",
+   "basis": "implied"
+  },
+  "reason": "detail 'update more reliably' is vague: EP-35825 keeps Android results on Back; why led with an internal database-efficiency reason (EP-23759) while the main change (EP-13096) states no problem, so basis implied"
+ },
+ {
+  "id": "ai-recommendation-display",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-exhibitor-event-reporting",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-sessions-list-improvements-2024q2",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-export-additions-2024",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-exhibitor-event-approval-workflow",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-clickable-custom-locations",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-internal-notes-flags",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-schedule-list-view-app",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-session-import-filtering-2024q3",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-report-time-zones",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-session-report-additions",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers review reported and rejected exhibitor events, with when each was created and last edited, from one export for security checks."
+  },
+  "reason": "outcome 'edit history' overstates; EP-31429 adds only date of creation and date of last edit"
+ },
+ {
+  "id": "ai-related-exhibitor-recommendations",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-session-ratings",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-session-scheduling-improvements-2024q4",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers and exhibitors spot a location and time clash before saving and can change it or save anyway."
+  },
+  "reason": "outcome claimed a result ('fewer overlapping sessions are created'); EP-16924 value states it only as an aim"
+ },
+ {
+  "id": "analytics-team-schedule-export",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-marketplace-supply-demand",
+  "verdict": "fix",
+  "fix": {
+   "detail": "The supply and demand graph tooltip names the product category, and categories that share the same values are listed clearly in one tooltip."
+  },
+  "reason": "detail 'all categories are displayed on the same scale' is wrong; EP-31157 lists categories with the same set of values together in one tooltip"
+ },
+ {
+  "id": "ai-ai-exhibitor-search",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-session-details-app-2025q1",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-login-checkin-exports-2025",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "ai-unified-recommendations",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-agenda-sharing-2025q2",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-custom-session-filters-app",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-easy-session-check-in",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-total-meetings-graph",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-exhibitor-event-applications",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-session-attendee-management",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-speaker-profile-events-app",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "App users see the exhibitor events a speaker is taking part in from one profile and add them to their schedule there."
+  },
+  "reason": "outcome 'every event' overstates; EP-40261 lists only active, visible exhibitor events"
+ },
+ {
+  "id": "analytics-meeting-programme-reports",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-programme-roundtable-reports",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-exhibitor-event-auto-approval",
+  "verdict": "fix",
+  "fix": {
+   "why": "Organisers need to decide on many applications within a set number of places, and users did not appreciate rejection messages.",
+   "basis": "implied"
+  },
+  "reason": "why 'fair, quick way' is not stated anywhere (writer's evidence admits fairness implied); only the rejection part is stated in EP-46207, so basis implied"
+ },
+ {
+  "id": "analytics-export-additions-2026",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-programme-report-additions-2026",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "ai-mobile-search",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "ai-ai-search-relevance",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Find the right exhibitor even with language or accent variants, spacing differences or partial names, with suggestions when nothing matches.",
+   "detail": "Exact name matches now outrank description mentions in results and autocomplete, language and accent variants of names are recognised, spaced and joined-up names match, parent and child exhibitors follow a consistent order, and empty searches offer 'Did you mean' and category suggestions.",
+   "outcome": "Attendees reach the exhibitor they mean even with a name in another language, different spacing or a partial name, and get 'Did you mean' and category suggestions instead of an empty page."
+  },
+  "reason": "benefit/outcome said 'spelling variants' and detail 'country variants'; EP-49808 covers language (endonym/exonym) and accent variants; 'helpful' dropped. Note: all stories were fixes found in a client search pilot"
+ },
+ {
+  "id": "sessions-external-session-registration",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-now-upcoming-sessions-app",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-session-cards-admin-filters-2026q2",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Filter sessions and exhibitor events in admin and see type and host details on session cards.",
+   "outcome": "Organisers narrow the admin session and event lists with filters instead of scanning, and attendees see what an item is and who hosts it without going back to the list."
+  },
+  "reason": "benefit 'find sessions faster' / outcome 'quickly' have no evidence; EP-48239 only adds filter sections"
+ },
+ {
+  "id": "analytics-event-reporting-dashboards",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "dashboards, KPI cards, trends, filters, drill-down and why supported by EP-52363 to EP-52369 and EP-54553; caveat: EP-52369 (products) and EP-52392 were 'in testing' when summarised, confirm status"
+ },
+ {
+  "id": "analytics-colocated-checkins",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-faster-exports",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers download session and booking reports more reliably, including on large events."
+  },
+  "reason": "outcome 'without long waits or failed exports' is absolute; EP-50643/EP-54274 only make the exports faster and more stable"
+ },
+ {
+  "id": "analytics-ga4-support",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "analytics-meeting-outcome-columns",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "ai-ai-event-assistant",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "In the assistant's first phase, attendees can ask what is on and get relevant sessions back instead of scrolling the full agenda."
+  },
+  "reason": "EP-50773 is the sessions tool for the Phase-1 AI agent proof of concept; outcome presented it as generally available, now tied to the first phase as the detail already says"
+ },
+ {
+  "id": "ai-ai-search-service",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Attendees search by meaning across the event, narrow results with the filters they already use and page beyond the first set of results, with current data."
+  },
+  "reason": "outcome 'page through every relevant match' overstates EP-54179 (offset paging beyond the first set)"
+ },
+ {
+  "id": "ai-recommendation-service",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Get category-based recommendations and matching scores from a rebuilt recommendation service with a shorter wait on an event's first request.",
+   "outcome": "Attendees get category-based recommendations and matches, with a shorter wait the first time an event's recommendations are requested."
+  },
+  "reason": "benefit/outcome claim it 'responds quickly'; EP-49473 only says first-request time was significantly reduced from 30-50 seconds"
+ },
+ {
+  "id": "sessions-session-calendar-view",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by EP-51704/05/06, EP-54324, EP-57107; caveat: EP-51704 (calendar component) ai summary said 'In progress, not yet released' when written, confirm it shipped before publishing"
+ },
+ {
+  "id": "sessions-session-display-settings",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "sessions-exhibitor-event-locations-2026q3",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Exhibitors place events where they actually happen, attendees see the right location in their language, and exhibitor events show even without an assigned team member."
+  },
+  "reason": "outcome 'every exhibitor event is listed' overstates; EP-54235 only fixes events with no team member (visibility rules still apply)"
+ },
+ {
+  "id": "analytics-sponsorship-engagement-reporting",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Measure sponsor performance by asset in a sponsorships dashboard.",
+   "detail": "A sponsorships dashboard shows views, clicks and click-through rate per sponsor and asset, backed by a new sponsor interactions report, and existing dashboard graphs were refined.",
+   "what": "A sponsorships dashboard shows views, clicks and click-through rate per sponsor and asset, with sponsor KPI cards, backed by a new sponsor interactions report.",
+   "why": "Organisers could not easily report sponsor performance by asset such as banners, brand pages and links.",
+   "outcome": "Organisers show each sponsor how their banners, pages and links performed, counting confirmed sponsors only.",
+   "who": [
+    "Organisers",
+    "Sponsors"
+   ]
+  },
+  "reason": "EP-57186 app homepage click/impression report is 'explicitly scoped as a one-off' client request, not a platform capability, so removed from all fields; also EP-52370 was 'in testing' when summarised, confirm status before publishing"
+ },
+ {
+  "id": "ai-unified-global-search",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "ai-ai-search-categories",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the listed stories; rules and limits met"
+ },
+ {
+  "id": "ai-admin-assistant-redesign",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers ask the admin assistant for help in a redesigned chat window."
+  },
+  "reason": "outcome 'cleaner' is an unsupported judgement; EP-53589 only says redesigned"
+ }
+]

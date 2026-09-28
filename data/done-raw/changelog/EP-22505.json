@@ -1,0 +1,141 @@
+{
+ "k": "EP-22505",
+ "histories": 69,
+ "historiesRead": 69,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-10-11T10:19:27.825+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-10-11T10:19:29.844+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-10-11T10:19:32.801+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-10-20T08:56:14.528+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-01T12:38:41.820+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-01T12:38:45.271+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-05T09:38:50.480+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-02-07T08:21:50.780+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-07T08:21:52.897+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-07T08:21:55.132+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-07T22:23:53.448+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-02-16T08:34:22.409+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-16T08:34:35.451+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-22T09:02:59.381+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-27T08:22:50.125+0000",
+   "from": "COMPLETE",
+   "to": "Ready for development",
+   "by": "Anton Samokhvalov"
+  },
+  {
+   "at": "2024-02-27T08:22:55.209+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Anton Samokhvalov"
+  },
+  {
+   "at": "2024-02-27T08:22:58.237+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Anton Samokhvalov"
+  },
+  {
+   "at": "2024-02-27T08:23:03.980+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Anton Samokhvalov"
+  },
+  {
+   "at": "2024-02-27T08:23:06.193+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Anton Samokhvalov"
+  },
+  {
+   "at": "2024-02-27T08:28:06.179+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Anton Samokhvalov"
+  },
+  {
+   "at": "2024-02-27T08:44:14.273+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790322067440.txt"
+}

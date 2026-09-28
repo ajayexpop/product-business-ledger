@@ -1,0 +1,111 @@
+{
+ "k": "EP-27462",
+ "histories": 46,
+ "historiesRead": 46,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-03-20T05:20:08.411+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-03-20T05:20:10.331+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-03-20T05:20:11.952+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-06-11T11:51:57.702+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-06-12T13:07:08.336+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-06-12T13:07:09.891+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-06-12T13:07:13.007+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-06-12T13:12:42.846+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-06-12T13:47:08.263+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-07-12T11:48:02.363+0100",
+   "from": "In progress",
+   "to": "On-hold",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-09-13T11:56:53.388+0100",
+   "from": "On-hold",
+   "to": "Ready for development",
+   "by": "Vova Berezovskyi"
+  },
+  {
+   "at": "2024-09-13T14:48:04.548+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-09-24T08:29:25.756+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-09-24T08:29:27.966+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-09-24T08:29:33.156+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2024-10-03T09:36:40.200+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790318546559.txt"
+}

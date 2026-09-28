@@ -1,0 +1,126 @@
+{
+  "createdAt": "2026-09-22",
+  "flags": {
+    "drift": true,
+    "dueSoon": true,
+    "noEstimate": false,
+    "noJira": false,
+    "overEstimate": false,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-area": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "area",
+      "from": "Session",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "Sessions"
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "September 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-09"
+    },
+    "h0imp-status": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "status",
+      "from": "In progress (Targeting Release on 30 Sep 2026)",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "In Progress"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "h0mig-rationale": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "migrate",
+      "note": "the old Why, word for word",
+      "to": "Solves visual clutter when multiple overlapping or parallel sessions occur in the same time slot. Replaces cramped, illegible cards with a clean card design and a dedicated \"+X more\" overflow drawer."
+    },
+    "h0mig-why": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "why",
+      "from": "Solves visual clutter when multiple overlapping or parallel sessions occur in the same time slot. Replaces cramped, illegible cards with a clean card design and a dedicated \"+X more\" overflow drawer.",
+      "k": "migrate",
+      "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
+      "to": ""
+    }
+  },
+  "j": {
+    "aggOrigDays": null,
+    "assignee": "Evgen Polivach",
+    "canon": "In Testing",
+    "due": "2026-09-23",
+    "origDays": null,
+    "priority": "Medium",
+    "resolved": null,
+    "spentDays": 0.06,
+    "status": "In testing",
+    "summary": "Redesigned Session Cards in Calendar View with Overflow Indicator",
+    "team": "Visitor team",
+    "teamField": "customfield_10001",
+    "type": "Story"
+  },
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": 7,
+    "daysKind": "point"
+  },
+  "order": 140,
+  "raw": {
+    "area": "Session",
+    "month": "September 2026",
+    "status": "In progress (Targeting Release on 30 Sep 2026)"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-22",
+  "v": {
+    "area": "Sessions",
+    "deps": "",
+    "driver": "",
+    "estimate": "7d",
+    "feature": "Redesigned Session Cards in Calendar View with Overflow Indicator",
+    "impact": "Attendees: instant readability for packed time slots with one-click access to all concurrent sessions. Organizers & Speakers: eliminates hidden or compressed sessions, giving equal visibility to all tracks.",
+    "key": "EP-57015",
+    "month": "2026-09",
+    "notes": "Deployed under parent EP-57118; FE by Oleksandr Zakablukov, QA by Olena Khromei.",
+    "owner": "Kavi",
+    "priority": "Customer",
+    "rationale": "Solves visual clutter when multiple overlapping or parallel sessions occur in the same time slot. Replaces cramped, illegible cards with a clean card design and a dedicated \"+X more\" overflow drawer.",
+    "status": "In Progress",
+    "team": "",
+    "why": ""
+  }
+}

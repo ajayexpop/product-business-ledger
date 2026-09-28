@@ -1,0 +1,69 @@
+{
+ "k": "EP-39031",
+ "histories": 38,
+ "historiesRead": 38,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2025-01-30T09:40:15.503+0000",
+   "from": "Incoming request",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-01-30T16:52:35.890+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-01-30T16:52:38.413+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-01-30T19:41:43.099+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2025-01-30T19:41:47.136+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2025-01-30T19:41:50.133+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2025-01-31T08:48:55.942+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2025-01-31T10:44:58.681+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2025-01-31T11:36:16.456+0000",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:46:35.857+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790316995673.txt"
+}

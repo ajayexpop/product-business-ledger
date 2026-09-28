@@ -1,0 +1,40 @@
+{
+ "artifact": "https://claude.ai/artifact/WS7mJGdC1y2RzsPTScKu6d",
+ "version": "1790565657-42b7",
+ "readAt": "2026-09-28",
+ "capabilities": {
+  "artifact": {},
+  "db": {},
+  "user": {
+   "scopes": [
+    "profile"
+   ]
+  },
+  "sample": {},
+  "mcp": {
+   "servers": [
+    {
+     "server": "Atlassian",
+     "tools": [
+      "searchJiraIssuesUsingJql"
+     ]
+    },
+    {
+     "server": "Planhat",
+     "tools": [
+      "list_model_records"
+     ]
+    },
+    {
+     "server": "Google Drive",
+     "tools": [
+      "get_file_metadata",
+      "search_files"
+     ]
+    }
+   ]
+  }
+ },
+ "db": "live/db: every collection exported 28 Sep 2026 (pipeline, config, sync, jira, refresh, visits; ledger and ledger-events empty)",
+ "previous": "https://claude.ai/artifact/Dpc9Z8uabRxLCryUSGML7G now shows a 'moved' page (moved/index.html); its final ledger page and database are in backup/2026-09-28/"
+}

@@ -1,0 +1,99 @@
+{
+ "k": "EP-20410",
+ "histories": 81,
+ "historiesRead": 81,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-08-22T10:31:10.682+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-22T10:31:13.035+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-22T10:31:14.881+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-22T10:31:16.660+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-10-13T09:43:22.797+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2023-10-13T09:43:26.069+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2023-10-13T09:43:32.757+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2023-10-16T10:01:35.276+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Oleksandr Zakharov"
+  },
+  {
+   "at": "2023-10-16T10:01:37.630+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Oleksandr Zakharov"
+  },
+  {
+   "at": "2023-10-18T14:00:40.260+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-10-25T13:37:44.706+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2023-10-31T13:11:46.797+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-10-31T13:11:49.204+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-11-20T08:10:44.058+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790320506239.txt"
+}

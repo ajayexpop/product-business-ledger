@@ -1,0 +1,87 @@
+{
+ "k": "EP-19838",
+ "histories": 22,
+ "historiesRead": 22,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-08-03T12:50:46.902+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2023-08-03T12:50:49.820+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2023-08-03T12:50:54.634+0100",
+   "from": "Brief ready for review",
+   "to": "Tech Brief",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2023-08-03T12:50:57.396+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2023-08-03T12:52:42.839+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-08-03T12:52:47.141+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-08-03T12:56:15.765+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2023-08-07T09:27:37.315+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-08-07T09:27:45.032+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-08-07T09:27:54.807+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-08-07T09:28:00.525+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2023-08-07T09:28:02.692+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790314446292.txt"
+}

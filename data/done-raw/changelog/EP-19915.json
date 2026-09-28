@@ -1,0 +1,63 @@
+{
+ "k": "EP-19915",
+ "histories": 27,
+ "historiesRead": 27,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-08-02T17:26:29.388+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-08T12:04:55.300+0100",
+   "from": "Considering",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-08-09T12:59:03.109+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-08-11T13:21:55.788+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2023-08-14T09:05:45.486+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-08-15T16:41:23.183+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2023-08-23T13:05:05.059+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2023-08-31T11:06:13.159+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790317938840.txt"
+}

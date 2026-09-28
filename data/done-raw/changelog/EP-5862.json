@@ -1,0 +1,51 @@
+{
+ "k": "EP-5862",
+ "histories": 129,
+ "historiesRead": 100,
+ "truncated": true,
+ "statusTransitions": [
+  {
+   "at": "2022-08-11T08:39:50.727+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2022-12-01T08:15:33.857+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2022-12-01T08:15:35.911+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2022-12-01T08:15:43.843+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2022-12-01T08:15:46.354+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2022-12-02T09:42:51.622+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790320650356.txt"
+}

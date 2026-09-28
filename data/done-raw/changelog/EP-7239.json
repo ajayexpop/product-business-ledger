@@ -1,0 +1,87 @@
+{
+ "k": "EP-7239",
+ "histories": 82,
+ "historiesRead": 82,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2022-08-28T18:01:59.936+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Romain Dejoie"
+  },
+  {
+   "at": "2022-08-29T14:35:00.331+0100",
+   "from": "Considering",
+   "to": "Estimated request",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-20T10:17:15.998+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-24T14:25:27.109+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-24T16:07:28.115+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-25T12:11:20.808+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-01-25T14:04:25.859+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-01-30T10:30:14.071+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-01-30T11:56:26.431+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "oleh bosiuk"
+  },
+  {
+   "at": "2023-02-01T08:50:43.945+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "oleh bosiuk"
+  },
+  {
+   "at": "2023-02-06T14:52:26.318+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-09T08:33:28.071+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790313651581.txt"
+}

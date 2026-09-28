@@ -1,0 +1,428 @@
+[
+ {
+  "id": "onsite-badge-builder-controls",
+  "theme": "onsite",
+  "q": "2023-Q1",
+  "title": "Badge builder layout controls",
+  "benefit": "Lay out printed badges precisely, with per-field alignment, margins, rotation, duplication and resizable codes.",
+  "detail": "Every field in the badge builder, including QR codes, can be aligned left, centre or right, given left and right margins, rotated 180 degrees and duplicated; QR codes and barcodes can be resized and the category field moved. Badge links and codes can also be added to the category-switch registration email.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-9800",
+   "EP-9801",
+   "EP-9802",
+   "EP-9803",
+   "EP-9812",
+   "EP-9822",
+   "EP-11106"
+  ]
+ },
+ {
+  "id": "onsite-interactive-floor-plans-launch",
+  "theme": "onsite",
+  "q": "2023-Q1",
+  "title": "Interactive floor plans",
+  "benefit": "Give attendees a new interactive floor plan on web and app, with exhibitor names on stands and one-click links from exhibitor cards.",
+  "detail": "Admins draw and delete stands, show exhibitor names and stand labels that scale with zoom, hide stands or labels, and add sponsor banners at the top or side. Stand locations across the platform open the stand on the plan, the apps use the new floor plan, and hall and stand names are checked for duplicates on import.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-6677",
+   "EP-10211",
+   "EP-10209",
+   "EP-11652",
+   "EP-11659",
+   "EP-11711"
+  ]
+ },
+ {
+  "id": "onsite-qr-code-pdf-export",
+  "theme": "onsite",
+  "q": "2023-Q1",
+  "title": "QR code PDF export",
+  "benefit": "Export participants’ and exhibitors’ QR codes as a printable PDF, filtered by category and status.",
+  "detail": "Organisers generate a PDF in the background with one large QR code per page alongside the holder’s details, including external codes.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-8049"
+  ]
+ },
+ {
+  "id": "onsite-expofp-stand-linking",
+  "theme": "onsite",
+  "q": "2023-Q2",
+  "title": "ExpoFP floor plan linking",
+  "benefit": "Send attendees from any stand link on web or app straight to the right stand on an ExpoFP floor plan.",
+  "detail": "Organisers choose dynamic linking, a static URL or no link. Stand links on marketplace, exhibitor, product, session, exhibitor event, schedule and recommendation pages, and on app profiles and lists, follow the setting.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-14266",
+   "EP-15370",
+   "EP-15109"
+  ]
+ },
+ {
+  "id": "onsite-external-code-scanning",
+  "theme": "onsite",
+  "q": "2023-Q2",
+  "title": "External QR and barcode scanning",
+  "benefit": "Scan external QR codes, barcodes and co-located event badges at check-in, in the app and at kiosks.",
+  "detail": "Unknown codes are saved rather than rejected, and the check-in list report shows each scanned code and, where recognised, its event. An optional setting lets the mobile app scan and store any code, and kiosks check in participants whose external codes came from an integration or the API.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-2338",
+   "EP-5714",
+   "EP-5643",
+   "EP-15575",
+   "EP-16698"
+  ]
+ },
+ {
+  "id": "onsite-kiosk-improvements",
+  "theme": "onsite",
+  "q": "2023-Q2",
+  "title": "Kiosk check-in improvements",
+  "benefit": "Help visitors find themselves and register faster at self-service kiosks.",
+  "detail": "Kiosk search by name or email now returns every matching participant, loaded in batches. The kiosk registration form supports the same conditional logic as the web registration form builder.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-14045",
+   "EP-14036"
+  ]
+ },
+ {
+  "id": "onsite-live-location-expofp",
+  "theme": "onsite",
+  "q": "2023-Q3",
+  "title": "Live location on ExpoFP floor plans",
+  "benefit": "Show app users their own position as a blue dot on ExpoFP floor plans, powered by Crowd Connected.",
+  "detail": "The mobile apps use Crowd Connected as the location provider for ExpoFP floor plans, with foreground, background and reminder permission prompts.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-20467"
+  ]
+ },
+ {
+  "id": "onsite-android-scanning-no-google",
+  "theme": "onsite",
+  "q": "2023-Q3",
+  "title": "Badge scanning on more Android devices",
+  "benefit": "Scan badges in the Android app on devices without Google Play services, such as Huawei phones.",
+  "detail": "The Android app uses an alternative barcode scanner on devices that lack Google Play services, so badge scanning works on them too.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-15213"
+  ]
+ },
+ {
+  "id": "onsite-floor-plan-improvements-2023",
+  "theme": "onsite",
+  "q": "2023-Q4",
+  "title": "Floor plan improvements",
+  "benefit": "Navigate the floor plan more easily, with a smoother view, clearer filters and direct links to sessions.",
+  "detail": "The floor plan view was rebuilt and improved; unneeded hall arrows are hidden for single-hall events; the Visited quick filter lists visited stands; quick filters show a no-results message; and sessions or events on a stand open their public profile.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-15556",
+   "EP-18025",
+   "EP-20136",
+   "EP-20222",
+   "EP-20149"
+  ]
+ },
+ {
+  "id": "onsite-meeting-location-floor-plan",
+  "theme": "onsite",
+  "q": "2024-Q1",
+  "title": "Meeting locations on the floor plan",
+  "benefit": "Tap a meeting’s location in the app to open the floor plan at that spot.",
+  "detail": "Meeting cards in the app make the location clickable in any meeting status, opening internal, MapsPeople or ExpoFP floor plans focused on the meeting place.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-23543"
+  ]
+ },
+ {
+  "id": "onsite-badge-printing-improvements",
+  "theme": "onsite",
+  "q": "2024-Q2",
+  "title": "Badge printing improvements",
+  "benefit": "Print badges in bulk from the participants page and track badge printing.",
+  "detail": "The batch print tool works with or without filters: organisers confirm the badge count, a file is generated in the background and a download button appears when ready. Badge print statistics are captured, and exhibitors without badges see a clear message pointing them to where badges are printed.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-10207",
+   "EP-17524",
+   "EP-33643"
+  ]
+ },
+ {
+  "id": "onsite-checkin-app-zones",
+  "theme": "onsite",
+  "q": "2024-Q2",
+  "title": "Check-in app zones and actions",
+  "benefit": "Choose the zone, action and session before scanning in the check-in app, with alerts for duplicate scans.",
+  "detail": "Staff pick check-in, check-out or session scanning and the zone before they start. Session scans require the item in the attendee’s schedule, a short cooldown avoids accidental double scans, and repeat same-day scans are flagged.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-23669"
+  ]
+ },
+ {
+  "id": "onsite-expofp-app-redesign",
+  "theme": "onsite",
+  "q": "2024-Q2",
+  "title": "Redesigned ExpoFP floor plans in-app",
+  "benefit": "Search for a booth and get directions on ExpoFP floor plans in the app, with a redesigned layout.",
+  "detail": "Search results, stand details, get-directions and route panels were redesigned on Android and iOS. Users choose a start point from their current location with Crowd Connected or on the map, swap points and see the route.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-24164"
+  ]
+ },
+ {
+  "id": "onsite-invisual-integration",
+  "theme": "onsite",
+  "q": "2024-Q2",
+  "title": "InVisual floor plan integration",
+  "benefit": "Use InVisual floor plans natively on web and app, linked to exhibitors, sessions and favourites.",
+  "detail": "Admins configure InVisual in settings. Users open the map from exhibitor, session and event locations, scan venue QR codes into the app or web view, and keep favourites in sync.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-27382"
+  ]
+ },
+ {
+  "id": "onsite-floor-plan-display-2025",
+  "theme": "onsite",
+  "q": "2025-Q2",
+  "title": "Floor plan display improvements",
+  "benefit": "Keep the floor plan consistent with the rest of the event website.",
+  "detail": "Exhibitor filters on the floor plan page follow the order set in display filters, and the floor plan uses the standard website builder header instead of its own mini header.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-36287",
+   "EP-38711"
+  ]
+ },
+ {
+  "id": "onsite-gps-ips-positioning",
+  "theme": "onsite",
+  "q": "2025-Q2",
+  "title": "GPS and indoor positioning options",
+  "benefit": "Show attendees their live GPS position on floor plans on Android as on iOS, and choose GPS, indoor positioning or both.",
+  "detail": "Android app users see their GPS position on InVisual floor plans, with permission prompts. For ExpoFP with Crowd Connected, organisers choose IPS only, GPS only or IPS plus GPS in general settings.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-40070",
+   "EP-40363"
+  ]
+ },
+ {
+  "id": "onsite-ticket-validation-checkin",
+  "theme": "onsite",
+  "q": "2025-Q2",
+  "title": "Ticket validation at check-in",
+  "benefit": "Validate attendees’ tickets when their badge is scanned in the check-in app.",
+  "detail": "On each scan the app checks that a ticket is held, valid for the date, not expired and valid for the check-in zone, and shows clear messages such as “No ticket found” or “Wrong check-in zone”. No checks run when ticketing is off.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-28422"
+  ]
+ },
+ {
+  "id": "onsite-badge-templates-redesign",
+  "theme": "onsite",
+  "q": "2025-Q2",
+  "title": "Redesigned badge templates",
+  "benefit": "Create badges with a redesigned templating and output process.",
+  "detail": "Badge templating and badge output were redesigned.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-41901"
+  ]
+ },
+ {
+  "id": "onsite-category-at-checkin",
+  "theme": "onsite",
+  "q": "2025-Q3",
+  "title": "Attendee category at check-in",
+  "benefit": "See each attendee’s category when checking them in, in the check-in app and at kiosks.",
+  "detail": "The check-in app shows the participant category after a scan and in the manual-add and scanned lists, and kiosks show the visitor category next to names. The app’s logout button is easier to find and asks for confirmation.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-42819",
+   "EP-42609",
+   "EP-44841"
+  ]
+ },
+ {
+  "id": "onsite-live-badge-ring",
+  "theme": "onsite",
+  "q": "2025-Q3",
+  "title": "Animated ring on live digital badges",
+  "benefit": "Help staff spot screenshots of badges and check attendee category at a glance.",
+  "detail": "Live digital badges can show a moving ring around the QR code in the attendee’s category colour, switched on per event.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-43589"
+  ]
+ },
+ {
+  "id": "onsite-stand-bookmarking",
+  "theme": "onsite",
+  "q": "2025-Q3",
+  "title": "Stand bookmarking on floor plans",
+  "benefit": "Bookmark stands, sessions, events and custom locations on the ExpoFP floor plan in the app.",
+  "detail": "App users bookmark a location with a confirmation message and revisit their bookmarks from a list in the floor plan header.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-41743"
+  ]
+ },
+ {
+  "id": "onsite-expofp-hall-stands",
+  "theme": "onsite",
+  "q": "2025-Q4",
+  "title": "ExpoFP stands with hall numbers",
+  "benefit": "Link exhibitors to ExpoFP stands whether stand numbers include the hall or not.",
+  "detail": "The apps follow ExpoFP’s “Map with Hall” setting, matching stands as hall plus stand (for example “Halle 3.0 G61”) or stand only (“G61”).",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-45853"
+  ]
+ },
+ {
+  "id": "onsite-offline-expofp",
+  "theme": "onsite",
+  "q": "2026-Q1",
+  "title": "Offline ExpoFP floor plans",
+  "benefit": "Use ExpoFP floor plans in the app without an internet connection.",
+  "detail": "The mobile apps provide full offline support for ExpoFP floor plans.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-45052"
+  ]
+ },
+ {
+  "id": "onsite-bookmark-favourites-sync",
+  "theme": "onsite",
+  "q": "2026-Q1",
+  "title": "Bookmarks synced with favourites",
+  "benefit": "Keep favourites and floor plan bookmarks in step automatically.",
+  "detail": "Favourites and floor plan bookmarks now sync in both directions, so an item saved in one place appears in the other.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-44186"
+  ]
+ },
+ {
+  "id": "onsite-checkin-qr-2026",
+  "theme": "onsite",
+  "q": "2026-Q1",
+  "title": "Check-in and QR code improvements",
+  "benefit": "Use a simplified participant QR code and a refined zone filter in the check-in list.",
+  "detail": "Admins can choose a new “Simplified Participant QR” code type, and the zone filter in the admin check-in list has new limits.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-44749",
+   "EP-40616"
+  ]
+ },
+ {
+  "id": "onsite-aditus-badge-errors",
+  "theme": "onsite",
+  "q": "2026-Q1",
+  "title": "Clearer custom badge errors with Aditus",
+  "benefit": "Tell attendees what to do when their Aditus custom badge cannot be shown.",
+  "detail": "Instead of silently falling back to the standard badge, users are taken to a clear error page for no-connection and no-information cases, available in English and German.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-48297"
+  ]
+ },
+ {
+  "id": "onsite-ocr-badge-scanning",
+  "theme": "onsite",
+  "q": "2026-Q2",
+  "title": "OCR badge scanning",
+  "benefit": "Capture badge details by reading the printed text with OCR when scanning.",
+  "detail": "Badge scanning can use optical character recognition to read badges.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-45778"
+  ]
+ },
+ {
+  "id": "onsite-floor-plan-management-2026",
+  "theme": "onsite",
+  "q": "2026-Q2",
+  "title": "Floor plan management improvements",
+  "benefit": "Manage halls and stands on large internal floor plans faster.",
+  "detail": "Halls and stands can be sorted in natural order and deleted in bulk with multi-select, and hidden halls can be opened from an exhibitor’s card.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-51701",
+   "EP-20247"
+  ]
+ }
+]

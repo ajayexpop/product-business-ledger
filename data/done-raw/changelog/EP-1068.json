@@ -1,0 +1,51 @@
+{
+ "k": "EP-1068",
+ "histories": 248,
+ "historiesRead": 100,
+ "truncated": true,
+ "statusTransitions": [
+  {
+   "at": "2023-12-21T10:54:48.253+0000",
+   "from": "On-hold",
+   "to": "In progress",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-12-21T10:54:50.453+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-12-21T13:10:49.642+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2024-02-01T14:45:56.039+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-16T11:31:49.013+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2024-02-16T11:31:58.665+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790315672366.txt"
+}

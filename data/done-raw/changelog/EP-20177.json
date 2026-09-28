@@ -1,0 +1,135 @@
+{
+ "k": "EP-20177",
+ "histories": 55,
+ "historiesRead": 55,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-08-10T10:32:39.880+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-10T10:32:42.745+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-10T10:32:44.290+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-10T17:32:24.083+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-15T07:46:03.593+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-08-15T10:10:21.054+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-08-16T09:57:26.311+0100",
+   "from": "Brief ready for review",
+   "to": "Tech Brief",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-16T09:57:28.445+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-16T09:57:30.283+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-08-16T11:50:34.423+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-08-17T12:35:15.727+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Anton Samoylenko"
+  },
+  {
+   "at": "2023-08-17T15:07:15.243+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Anton Samoylenko"
+  },
+  {
+   "at": "2023-08-17T15:09:29.533+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Anton Samoylenko"
+  },
+  {
+   "at": "2023-08-17T15:09:32.946+0100",
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Anton Samoylenko"
+  },
+  {
+   "at": "2023-08-17T15:09:54.008+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Anton Samoylenko"
+  },
+  {
+   "at": "2023-08-17T15:09:57.293+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Anton Samoylenko"
+  },
+  {
+   "at": "2023-08-18T09:07:12.459+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-08-18T13:38:23.409+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-08-28T09:26:27.997+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-09-04T10:04:56.458+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790314447739.txt"
+}

@@ -1,0 +1,75 @@
+{
+ "k": "EP-11652",
+ "histories": 30,
+ "historiesRead": 30,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-01-11T12:07:42.359+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Akbar Bobomurodov"
+  },
+  {
+   "at": "2023-01-11T12:07:45.750+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Akbar Bobomurodov"
+  },
+  {
+   "at": "2023-01-11T12:07:53.435+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Akbar Bobomurodov"
+  },
+  {
+   "at": "2023-01-11T12:07:55.710+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Akbar Bobomurodov"
+  },
+  {
+   "at": "2023-01-11T12:08:01.962+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Akbar Bobomurodov"
+  },
+  {
+   "at": "2023-01-12T09:19:54.972+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Akbar Bobomurodov"
+  },
+  {
+   "at": "2023-01-14T17:47:58.124+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2023-01-20T11:01:47.858+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Denys Bunchuk"
+  },
+  {
+   "at": "2023-01-24T11:49:55.314+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-01-26T10:30:44.907+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790321167344.txt"
+}

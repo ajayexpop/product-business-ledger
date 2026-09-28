@@ -1,0 +1,129 @@
+{
+ "k": "EP-34162",
+ "histories": 70,
+ "historiesRead": 70,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-09-13T18:30:51.993+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-09-13T18:30:54.204+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-09-13T18:30:56.242+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-09-17T13:14:11.961+0100",
+   "from": "Ready to estimate",
+   "to": "Awaiting details",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-09-17T16:42:34.518+0100",
+   "from": "Awaiting details",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-09-17T16:42:36.580+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-09-17T16:42:39.662+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-10-04T10:10:27.551+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-10-04T10:58:01.495+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-10-07T10:55:32.384+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-10-07T14:46:11.000+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-10-07T16:35:57.245+0100",
+   "from": "Ready for decomposition",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-10-07T16:35:59.190+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-10-07T16:36:01.200+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-10-07T16:36:04.145+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-10-07T16:36:06.142+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-10-11T10:42:20.645+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Maksym Bilan"
+  },
+  {
+   "at": "2024-10-16T15:43:21.761+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Maksym Bilan"
+  },
+  {
+   "at": "2024-10-31T10:38:56.237+0000",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790321001420.txt"
+}

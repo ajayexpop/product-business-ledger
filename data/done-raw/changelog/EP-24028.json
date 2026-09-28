@@ -1,0 +1,105 @@
+{
+ "k": "EP-24028",
+ "histories": 58,
+ "historiesRead": 58,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-12-04T10:06:12.451+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-12-04T10:06:14.175+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-12-04T10:06:15.749+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-02-06T13:19:11.042+0000",
+   "from": "Ready to estimate",
+   "to": "Rejected request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-02-22T08:25:54.239+0000",
+   "from": "Rejected request",
+   "to": "Awaiting details",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-10-24T10:47:03.084+0100",
+   "from": "Awaiting details",
+   "to": "Estimated request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-11-05T13:13:58.339+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-11-05T13:14:00.191+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-11-05T14:56:54.344+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-11-05T17:06:16.962+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-11-06T10:53:13.047+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-11-06T10:53:15.874+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-11-11T09:07:35.648+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Maksym Bilan"
+  },
+  {
+   "at": "2024-11-11T09:08:01.086+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Maksym Bilan"
+  },
+  {
+   "at": "2024-11-21T14:26:46.200+0000",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790320849989.txt"
+}

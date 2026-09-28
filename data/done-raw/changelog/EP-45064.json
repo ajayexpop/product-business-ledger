@@ -1,0 +1,81 @@
+{
+ "k": "EP-45064",
+ "histories": 32,
+ "historiesRead": 32,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2025-10-15T09:41:54.657+0100",
+   "from": "Incoming request",
+   "to": "Awaiting Estimation",
+   "by": "Bartosz Malec"
+  },
+  {
+   "at": "2025-10-30T00:07:24.935+0000",
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Pedro Goncalves"
+  },
+  {
+   "at": "2025-12-18T09:42:41.903+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-12-18T09:43:33.560+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-12-18T09:43:39.678+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-12-18T09:43:47.638+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-12-18T09:43:55.968+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-12-18T09:44:01.681+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-12-18T09:44:05.377+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-12-18T09:44:19.155+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-12-18T09:44:43.289+0000",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2026-09-15T17:47:02.931+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790322066703.txt"
+}

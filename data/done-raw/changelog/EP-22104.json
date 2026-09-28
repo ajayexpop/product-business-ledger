@@ -1,0 +1,75 @@
+{
+ "k": "EP-22104",
+ "histories": 17,
+ "historiesRead": 17,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-10-03T13:06:55.395+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-10-03T13:06:59.381+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-10-03T13:07:01.901+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-10-03T13:07:03.761+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-10-03T13:07:05.891+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-10-03T13:07:08.167+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-10-12T10:15:35.581+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-10-17T16:05:04.891+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2023-11-21T12:14:40.042+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-11-21T12:15:43.056+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Ruslan Semenov"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790314446339.txt"
+}

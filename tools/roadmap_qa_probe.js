@@ -1,0 +1,111 @@
+// In-page QA probe for the Product Journey pages (tools/roadmap_qa.py injects it). In light and dark: checks text contrast
+// (WCAG AA) on every visible text element, horizontal page overflow, escaped HTML or undefined values, clicks every
+// filter chip and toggle, both views, opens every feature card, list row, pill, coming-next and client card and checks the
+// sheet shows title, benefit, What, Why, Outcome and who, walks Previous / Next, and confirms removed items never appear.
+(async () => {
+  const R = {errors: [], steps: 0, issues: [], opened: 0, notes: []};
+  let cur = 'load';
+  addEventListener('error', e => R.errors.push({step: cur, msg: String(e.message) + ' @' + e.lineno}));
+  const W = ms => new Promise(r => setTimeout(r, ms));
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const vis = el => { if (!el) return false; const r = el.getBoundingClientRect(); const cs = getComputedStyle(el); return r.width > 0 && r.height > 0 && cs.visibility !== 'hidden' && cs.display !== 'none' && +cs.opacity !== 0; };
+  const desc = el => { const c = (el.getAttribute('class') || '').split(' ').filter(Boolean).slice(0, 2).join('.'); const t = (el.innerText || el.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 40); return el.tagName.toLowerCase() + (el.id ? '#' + el.id : '') + (c ? '.' + c : '') + (t ? ' «' + t + '»' : ''); };
+  const seen = new Set();
+  const issue = o => { const k = o.kind + '|' + (o.el || '') + '|' + (o.text || '') + '|' + (o.theme || ''); if (seen.has(k)) return; seen.add(k); R.issues.push(o); };
+  const REMOVED = ['Meeting scheduling upgrades', 'Next-generation speed networking'];
+
+  const parse = c => { const m = c.match(/rgba?\(([^)]+)\)/); if (!m) return null; const p = m[1].split(/[ ,\/]+/).filter(Boolean).map(Number); return {r: p[0], g: p[1], b: p[2], a: p.length > 3 ? p[3] : 1}; };
+  const lum = c => { const f = v => { v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }; return .2126 * f(c.r) + .7152 * f(c.g) + .0722 * f(c.b); };
+  const blend = (top, bot) => ({r: top.r * top.a + bot.r * (1 - top.a), g: top.g * top.a + bot.g * (1 - top.a), b: top.b * top.a + bot.b * (1 - top.a), a: 1});
+  function bgOf(el) {
+    const stack = [];
+    for (let e = el; e; e = e.parentElement) {
+      const cs = getComputedStyle(e);
+      if (cs.backgroundImage && cs.backgroundImage !== 'none' && !/gradient/.test(cs.backgroundImage)) return null;
+      const c = parse(cs.backgroundColor); if (c && c.a > 0) { stack.push(c); if (c.a >= 1) break; }
+    }
+    let base = {r: 255, g: 255, b: 255, a: 1}; if (stack.length && stack[stack.length - 1].a >= 1) base = stack.pop();
+    while (stack.length) base = blend(stack.pop(), base);
+    return base;
+  }
+  function contrast(theme) {
+    const els = $$('body *').filter(e => !e.closest('script,style,#__qa,.dots,.legend i,.chap .num') && [...e.childNodes].some(n => n.nodeType === 3 && n.nodeValue.trim()) && vis(e));
+    let checked = 0;
+    els.forEach(e => {
+      const cs = getComputedStyle(e); const fg = parse(cs.color); if (!fg) return;
+      const bg = bgOf(e); if (!bg) return;
+      const f = blend(fg, bg); const L1 = lum(f), L2 = lum(bg); const ratio = (Math.max(L1, L2) + .05) / (Math.min(L1, L2) + .05);
+      const size = parseFloat(cs.fontSize), bold = +cs.fontWeight >= 700; const need = (size >= 24 || (size >= 18.6 && bold)) ? 3 : 4.5;
+      checked++;
+      if (ratio < need) issue({kind: 'contrast', theme, el: desc(e), text: ratio.toFixed(2) + ' < ' + need});
+    });
+    R.notes.push(theme + ': contrast checked on ' + checked + ' text elements');
+  }
+  function check(label) {
+    cur = label; R.steps++;
+    if (document.documentElement.scrollWidth > innerWidth + 1) issue({kind: 'page-scrolls-sideways', el: label, text: document.documentElement.scrollWidth + ' > ' + innerWidth});
+    const tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let n;
+    while ((n = tw.nextNode())) {
+      const t = n.nodeValue, el = n.parentElement;
+      if (!el || el.closest('script,style,#__qa') || !vis(el)) continue;
+      if (/<\/?(br|b|i|span|div|p|a|small|strong|em|li|ul|h\d)\b[^>]*>|&(lt|gt|amp|quot|nbsp|#\d+);/i.test(t)) issue({step: label, kind: 'escaped-html', el: desc(el), text: t.trim().slice(0, 60)});
+      if (/\bundefined\b|\bNaN\b|\[object Object\]|\bnull\b/.test(t) && !el.closest('#excluded,.src')) issue({step: label, kind: 'bad-value', el: desc(el), text: t.trim().slice(0, 60)});
+      if (REMOVED.some(x => t.includes(x)) && !el.closest('#excluded')) issue({step: label, kind: 'removed-item-visible', el: desc(el), text: t.trim().slice(0, 60)});
+    }
+    $$('.card,.ncard,.ccard,.w,.list button,.chapters a').forEach(el => { if (vis(el) && el.scrollWidth > el.clientWidth + 3) issue({step: label, kind: 'overflow', el: desc(el), text: String(el.scrollWidth - el.clientWidth)}); });
+  }
+  const sheetOk = (label) => {
+    const s = $('#sheet'); if (s.hidden) { issue({kind: 'sheet-did-not-open', el: label}); return false; }
+    const t = $('#pTitle').textContent.trim(), b = $('#pBenefit').textContent.trim();
+    const k = [...$$('#pWWO .w h4')].map(h => h.textContent.trim()).join('/');
+    if (!t) issue({kind: 'sheet-no-title', el: label});
+    if (!b) issue({kind: 'sheet-no-benefit', el: label + ' ' + t});
+    if (k !== 'What/Why/Outcome') issue({kind: 'sheet-missing-wwo', el: label + ' ' + t, text: k});
+    if (!$('#pWho').textContent.trim()) issue({kind: 'sheet-missing-who', el: label + ' ' + t});
+    if (REMOVED.includes(t)) issue({kind: 'removed-item-visible', el: label, text: t});
+    s.getAnimations({subtree: true}).forEach(a => a.finish()); const sr = s.getBoundingClientRect(); if (sr.right > innerWidth + 1 || sr.left < -1) issue({kind: 'sheet-off-screen', el: label});
+    return true;
+  };
+  const close = async () => { $('#pClose').click(); await W(20); };
+  async function openAll(sel, label) {
+    const btns = $$(sel).filter(vis); let n = 0;
+    for (const b of btns) { b.click(); await W(10); if (sheetOk(label)) n++; if (n === 1) check(label + ' sheet'); await close(); }
+    R.opened += n; return n;
+  }
+
+  await W(300);
+  for (const theme of ['light', 'dark']) {
+    if (theme === 'dark') { $('#themeBtn').click(); await W(80); if (document.documentElement.getAttribute('data-theme') !== 'dark') issue({kind: 'theme-toggle-failed'}); }
+    else if (document.documentElement.getAttribute('data-theme') !== 'light') issue({kind: 'not-light-by-default', text: String(document.documentElement.getAttribute('data-theme'))});
+    check(theme + ' load'); contrast(theme);
+    // open a first card and check sheet contrast too
+    const c0 = $$('.card').find(vis); if (c0) { c0.click(); await W(30); sheetOk(theme + ' first card'); contrast(theme + ' sheet'); await close(); }
+  }
+  $('#themeBtn').click(); await W(50);  // back to light
+
+  // every card, list row, coming-next card and client card
+  const counts = {};
+  counts.cards = await openAll('#timeline .card', 'card');
+  counts.rows = await openAll('#timeline .list button', 'list row');
+  counts.next = await openAll('#next .ncard', 'coming next');
+  counts.client = await openAll('#forclient .ccard', 'client card');
+  R.notes.push('opened ' + JSON.stringify(counts));
+  // prev / next walks
+  const f = $$('#timeline .card').find(vis); if (f) { f.click(); await W(20); let steps = 0; while (!$('#pNext').disabled && steps < 5) { $('#pNext').click(); await W(10); sheetOk('next-walk'); steps++; } if (!steps) issue({kind: 'sheet-next-disabled'}); $('#pPrev').click(); await W(10); sheetOk('prev-walk'); await close(); }
+  // filters
+  for (const b of $$('#themeChips .tchip, #whoChips .tchip')) { $$('#themeChips .tchip')[0].click(); if (b.closest('#themeChips')) $$('#whoChips .tchip')[0].click(); b.click(); await W(15); check('chip ' + b.textContent.trim()); if (!$$('#timeline .card,#timeline .list button,#timeline .empty').some(vis)) issue({kind: 'filter-shows-nothing-and-no-empty-state', el: b.textContent.trim()}); if ($('#timeline .empty') && vis($('#timeline .empty'))) R.notes.push('empty for ' + b.textContent.trim()); }
+  $$('#themeChips .tchip')[0].click(); $$('#whoChips .tchip')[0].click(); await W(20);
+  for (const id of ['#fHead', '#fAI', '#fMobile', '#fClient']) { const b = $(id); if (!b || b.hidden) continue; b.click(); await W(15); check('toggle ' + id); if (!$$('#timeline .card,#timeline .list button,#timeline .empty').some(vis)) issue({kind: 'toggle-shows-nothing', el: id}); b.click(); await W(15); }
+  // lanes
+  $('#vLanes').click(); await W(40); check('lanes');
+  const pills = $$('#lanes .pill').filter(vis); R.notes.push('pills ' + pills.length);
+  for (const p of pills.slice(0, 60)) { p.click(); await W(8); sheetOk('pill'); await close(); }
+  const np = $$('#lanes .pill.nx').filter(vis); for (const p of np) { p.click(); await W(8); sheetOk('next pill'); await close(); }
+  $('#vTimeline').click(); await W(40); check('back to timeline');
+  // search (internal only)
+  const q = $('#q'); if (q && !q.hidden) { q.value = 'EP-7417'; q.dispatchEvent(new Event('input')); await W(400); check('search'); if (!$$('#timeline .card,#timeline .list button').some(vis)) issue({kind: 'search-found-nothing', text: 'EP-7417'}); q.value = ''; q.dispatchEvent(new Event('input')); await W(400); }
+  // keyboard: escape closes
+  const c1 = $$('.card').find(vis); if (c1) { c1.click(); await W(20); document.dispatchEvent(new KeyboardEvent('keydown', {key: 'Escape'})); await W(20); if (!$('#sheet').hidden) issue({kind: 'escape-does-not-close'}); }
+  const pre = document.createElement('pre'); pre.id = '__qa'; pre.textContent = JSON.stringify(R); document.body.append(pre);
+  if (parent !== window) parent.postMessage({__qa: pre.textContent}, '*');
+})();

@@ -1,0 +1,127 @@
+{
+  "createdAt": "2026-09-22",
+  "flags": {
+    "drift": false,
+    "dueSoon": false,
+    "noEstimate": false,
+    "noJira": false,
+    "overEstimate": false,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "October 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-10"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "h0mig-driver": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "migrate",
+      "note": "pre-filled: Why it matters names the client: \"DLG commitment\" (pp-driver-prefill)",
+      "to": "81808"
+    },
+    "h0mig-rationale": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "migrate",
+      "note": "the old Why, word for word",
+      "to": "DLG commitment"
+    },
+    "h0mig-why": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "why",
+      "from": "DLG commitment",
+      "k": "migrate",
+      "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
+      "to": ""
+    }
+  },
+  "j": {
+    "aggOrigDays": 15,
+    "assignee": null,
+    "canon": "Planned",
+    "due": null,
+    "origDays": null,
+    "priority": "Medium",
+    "resolved": null,
+    "spentDays": 0.06,
+    "status": "Open",
+    "summary": "New filters for Sessions and Exhibitor events",
+    "team": "Exhibitor team",
+    "teamField": "customfield_10001",
+    "type": "Epic"
+  },
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": 16,
+    "daysKind": "point"
+  },
+  "order": 110,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-22",
+      "basis": "Why it matters names the client: \"DLG commitment\"",
+      "by": "Claude",
+      "field": "Why it matters",
+      "name": "DLG Markets GmbH",
+      "quote": "DLG commitment",
+      "value": "81808"
+    }
+  },
+  "raw": {
+    "area": "Sessions",
+    "month": "October 2026",
+    "status": "Planned"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-22",
+  "v": {
+    "area": "Sessions",
+    "deps": "New reported issues on Global Search may delay delivery",
+    "driver": "81808",
+    "estimate": "16d",
+    "feature": "New filters for Sessions and Exhibitor events",
+    "impact": "DLG expects to have this feature",
+    "key": "EP-57511",
+    "month": "2026-10",
+    "notes": "Targeted release date is 14th Oct",
+    "owner": "Alex",
+    "priority": "Customer",
+    "rationale": "DLG commitment",
+    "status": "Planned",
+    "team": "",
+    "why": ""
+  }
+}

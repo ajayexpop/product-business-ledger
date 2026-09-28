@@ -1,0 +1,177 @@
+{
+ "k": "EP-11659",
+ "histories": 103,
+ "historiesRead": 100,
+ "truncated": true,
+ "statusTransitions": [
+  {
+   "at": "2023-01-17T14:26:58.870+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-01-17T14:27:00.632+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-01-17T14:27:01.588+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-01-17T14:27:04.067+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-01-17T14:43:10.119+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-01-26T07:27:03.757+0000",
+   "from": "In progress",
+   "to": "Ready for development",
+   "by": "Akbar Bobomurodov"
+  },
+  {
+   "at": "2023-01-31T07:50:17.541+0000",
+   "from": "Ready for development",
+   "to": "Ready for decomposition",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-02-02T11:46:31.077+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-02-02T11:46:40.841+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-02-09T10:12:40.364+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-02-09T10:20:44.878+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-02-21T10:17:57.852+0000",
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-02-21T10:18:01.123+0000",
+   "from": "Ready for development",
+   "to": "On-hold",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-02-23T09:14:36.554+0000",
+   "from": "On-hold",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-03-09T15:28:38.048+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2023-03-09T15:28:43.362+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2023-03-17T16:47:31.094+0000",
+   "from": "Task in testing",
+   "to": "Open",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2023-03-17T16:51:44.768+0000",
+   "from": "Open",
+   "to": "Ready for testing",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2023-03-17T16:52:41.561+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2023-03-20T10:13:11.275+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-03-21T09:00:02.521+0000",
+   "from": "Ready for release",
+   "to": "Ready for development",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2023-03-21T09:00:04.921+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2023-03-21T09:00:24.907+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2023-03-21T09:00:26.814+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2023-03-28T10:19:52.931+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-03-28T10:19:59.158+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-03-30T09:15:20.049+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790313459770.txt"
+}

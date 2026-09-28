@@ -1,0 +1,75 @@
+{
+ "k": "EP-10598",
+ "histories": 61,
+ "historiesRead": 61,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-03-15T13:24:02.627+0000",
+   "from": "Incoming request",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-15T13:24:10.450+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-20T11:44:42.637+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-03-21T13:21:55.949+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-22T07:02:39.155+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-03-22T12:46:49.631+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-03-28T11:16:04.921+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "oleh bosiuk"
+  },
+  {
+   "at": "2023-03-29T14:48:52.041+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "oleh bosiuk"
+  },
+  {
+   "at": "2023-04-03T08:28:34.320+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-04-06T08:55:33.862+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790319506883.txt"
+}

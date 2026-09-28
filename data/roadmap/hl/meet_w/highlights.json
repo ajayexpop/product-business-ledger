@@ -1,0 +1,547 @@
+[
+ {
+  "id": "meet-auto-cancellation",
+  "theme": "meet",
+  "q": "2023-Q1",
+  "title": "Automatic meeting cancellation",
+  "benefit": "Automatically cancel a participant's meetings and bookings when they become inactive or move to a category without meetings.",
+  "detail": "Organisers can switch on automatic cancellation of confirmed, incoming and pending meetings, session bookings and exhibitor events when a participant's status is no longer active, and of meetings a user started when they move to a category that does not allow meetings, with the reason stated.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-12587",
+   "EP-12585"
+  ]
+ },
+ {
+  "id": "meet-confirmation-location-rules",
+  "theme": "meet",
+  "q": "2023-Q1",
+  "title": "Meeting confirmation and location rules",
+  "benefit": "Auto-confirm meetings for chosen participant categories and keep meeting locations accurate once the in-person event ends.",
+  "detail": "Meeting auto-confirmation can be switched on per participant category. After the last in-person slot, requests offer only online meetings, and when 'other location' is allowed without preset options, requesters type the location themselves. Availability checks on the meeting schedule were also made faster.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-10663",
+   "EP-12036",
+   "EP-14891",
+   "EP-10875"
+  ]
+ },
+ {
+  "id": "meet-speaker-schedule-blocking",
+  "theme": "meet",
+  "q": "2023-Q2",
+  "title": "Schedule blocking for speakers",
+  "benefit": "Stop meetings from being booked over speakers' and moderators' sessions, and keep blocking events from clashing with confirmed meetings.",
+  "detail": "Speakers' and moderators' calendars are blocked during their sessions and exhibitor events for meeting requests and confirmations. Slot-blocking exhibitor events can no longer be booked over confirmed meetings, blocked time, other blocking events or speaker duties.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16776",
+   "EP-17284"
+  ]
+ },
+ {
+  "id": "meet-rescheduling-controls",
+  "theme": "meet",
+  "q": "2023-Q2",
+  "title": "Meeting rescheduling controls",
+  "benefit": "Reschedule meetings faster from the existing slot, and hide rescheduling for chosen roles and categories on web and app.",
+  "detail": "The rescheduling time grid now opens on the meeting's current date with its time preselected. A 'Disallow meeting reschedule for' setting hides the Reschedule button on meeting cards for selected roles and categories, on web and in the app.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-16261",
+   "EP-17344",
+   "EP-17598"
+  ]
+ },
+ {
+  "id": "meet-request-improvements-2023q2",
+  "theme": "meet",
+  "q": "2023-Q2",
+  "title": "Meeting request improvements",
+  "benefit": "Attach files to meeting requests, return to where you started after booking, and run the meetings grid in 20-minute steps.",
+  "detail": "Requesters can attach a file to a meeting request in the app when organisers enable it. Users can be returned to the page where they started a request, keeping filters and pagination. A 20-minute time step was added to the meetings grid, with matching maximum meeting lengths.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-10170",
+   "EP-10598",
+   "EP-18170"
+  ]
+ },
+ {
+  "id": "meet-cards-improvements",
+  "theme": "meet",
+  "q": "2023-Q2",
+  "title": "Meeting and matchmaking card improvements",
+  "benefit": "See who you are meeting and where at a glance, with clearer meeting cards and company names on matchmaking cards.",
+  "detail": "Calendar meeting cards now show the other party and location first, then time and title. Matchmaking cards show the participant's company name. In the admin meeting management pages, participant photos and names link to their edit pages, and contact sharing settings are grouped into three labelled sections.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16028",
+   "EP-16700",
+   "EP-15162",
+   "EP-17817"
+  ]
+ },
+ {
+  "id": "meet-badge-scan-completion",
+  "theme": "meet",
+  "q": "2023-Q3",
+  "title": "Meeting completion by badge scan",
+  "benefit": "Mark confirmed meetings as completed simply by scanning the other participant's badge, with completion visible in exports and the API.",
+  "detail": "Badge-scan auto-completion covers regular meetings, with an option to complete meetings scanned outside the meeting time. Completion appears in exports and the API. A scan by any of an exhibitor's team members completes meetings the exhibitor joined before adding team members.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-15159",
+   "EP-20254"
+  ]
+ },
+ {
+  "id": "meet-calendar-sync-improvements",
+  "theme": "meet",
+  "q": "2023-Q3",
+  "title": "Calendar sync improvements",
+  "benefit": "Get clearer meeting details in synced Outlook and Google Calendar entries.",
+  "detail": "Synced Outlook meeting entries include a structured block with companies, participants, title and message. A Google Calendar option excludes attendee emails and puts participant names in the event description instead, matching the Outlook behaviour.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16103",
+   "EP-18010"
+  ]
+ },
+ {
+  "id": "meet-blocked-time",
+  "theme": "meet",
+  "q": "2023-Q3",
+  "title": "Blocked time management",
+  "benefit": "Manage blocked time directly from your schedule, and let exhibitors block time for their team members.",
+  "detail": "Blocked time is now a schedule item with its own cards and edit and delete actions, managed from the Schedule and Team Schedule pages through an 'Add blocked time' pop-up. Exhibitor companies can set blocked time for team members, and blocked time can apply to exhibitor events only. Allowance settings gained explanatory tooltips.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-17281",
+   "EP-12377",
+   "EP-20318",
+   "EP-22218"
+  ]
+ },
+ {
+  "id": "meet-schedule-calendar-view",
+  "theme": "meet",
+  "q": "2023-Q3",
+  "title": "New schedule calendar view",
+  "benefit": "See your schedule in a calendar view that separates committed meetings from optional activities, on web and in the app.",
+  "detail": "Schedule pages are split into Diary and Optional Activities, with team member selection, activity filters and a legend. The app gained a matching calendar view for My Schedule and Team Schedule. Organisers set the default view and items shown, and a new time picker shows unavailable slots.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-18403",
+   "EP-18404",
+   "EP-20058",
+   "EP-20489",
+   "EP-20612"
+  ]
+ },
+ {
+  "id": "meet-schedule-downloads",
+  "theme": "meet",
+  "q": "2023-Q3",
+  "title": "Schedule downloads in Excel and app",
+  "benefit": "Download your schedule as an Excel file, including team and child company details, or have it emailed from the app.",
+  "detail": "Participants can choose PDF or XLS schedule downloads, with team and parent/child company columns for exhibitors. App users can request their schedule and receive it by email as an attachment. Downloaded files now include personal blocked time.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-17285",
+   "EP-17287",
+   "EP-20214",
+   "EP-20775"
+  ]
+ },
+ {
+  "id": "meet-new-meeting-request-flow",
+  "theme": "meet",
+  "q": "2023-Q3",
+  "title": "New meeting request flow",
+  "benefit": "Book a meeting on a single page that shows both sides' live availability for date, time, location and duration.",
+  "detail": "An optional new meeting request flow brings participants, date, time, location and duration onto one page. Users see all bookable dates for both sides, each choice updates the remaining options, and clear error messages explain what needs fixing.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-17352",
+   "EP-21476"
+  ]
+ },
+ {
+  "id": "meet-meeting-ratings",
+  "theme": "meet",
+  "q": "2023-Q3",
+  "title": "Meeting ratings",
+  "benefit": "Ask attendees to rate their meetings after each meeting, daily or after the event, by email, WhatsApp or SMS.",
+  "detail": "Organisers choose when ratings are requested for each role or category. Digest emails list meetings to rate and link straight to the ratings page or the app, and the email template is now named 'Meeting Ratings'.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-12571",
+   "EP-20842"
+  ]
+ },
+ {
+  "id": "meet-reassign-team-members",
+  "theme": "meet",
+  "q": "2023-Q3",
+  "title": "Reassign team members to meetings",
+  "benefit": "Let exhibitors swap which team member attends a meeting, including across child companies.",
+  "detail": "When enabled, a Reassign members button on exhibitor meeting cards opens a pop-up to choose another available team member for the meeting.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-17345"
+  ]
+ },
+ {
+  "id": "meet-favourites-dashboard",
+  "theme": "meet",
+  "q": "2023-Q3",
+  "title": "User favourites dashboard",
+  "benefit": "See every participant's favourites with meeting status and notes, and start meetings from them as an organiser.",
+  "detail": "A favourites dashboard in Networking & Matchmaking lists each favourite with its meeting status, notes and the admin who shared it, and shared filter links now record who shared them.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-12576"
+  ]
+ },
+ {
+  "id": "meet-hosted-buyer-teams",
+  "theme": "meet",
+  "q": "2023-Q3",
+  "title": "Hosted buyer team setup",
+  "benefit": "Bring exhibitor team members into a hosted buyer programme with a single approval and the right category automatically.",
+  "detail": "For private events with public registration, buyer-category team members need only one hosted buyer acceptance. A default category setting assigns a buyer category to team members that exhibitors create themselves.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-2749",
+   "EP-15824"
+  ]
+ },
+ {
+  "id": "meet-schedule-limits-2023q4",
+  "theme": "meet",
+  "q": "2023-Q4",
+  "title": "Schedule and meeting limit improvements",
+  "benefit": "Move through event dates more easily and get clearer agenda exports and meeting limit settings.",
+  "detail": "The Schedule page date selector shows all relevant dates with back and forward arrows. The agenda PDF can include the event logo and date headings. Exhibitor category meeting limits no longer treat zero as unlimited, and delegate page custom filters no longer offer an 'other' option.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-21730",
+   "EP-22560",
+   "EP-23431",
+   "EP-23511"
+  ]
+ },
+ {
+  "id": "meet-prefilled-requests",
+  "theme": "meet",
+  "q": "2024-Q1",
+  "title": "Prefilled meeting requests",
+  "benefit": "Save a default subject, message, duration and file once and have them pre-filled in every new meeting request.",
+  "detail": "In the new web meeting request flow, users save default meeting information from a pop-up or their profile settings, and can still edit it on each request.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-17353"
+  ]
+ },
+ {
+  "id": "meet-limits-auto-confirm",
+  "theme": "meet",
+  "q": "2024-Q2",
+  "title": "Meeting limits with auto-confirmation",
+  "benefit": "Keep auto-confirmed meetings within category limits, with clear messages on web and in the app when a limit is reached.",
+  "detail": "Auto-confirmation respects category daily and total confirmation limits, and the limit settings were renamed with clearer tooltips. The apps enforce the same meeting and message limits as the web, with specific error messages for pending and confirmation limits.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-18393",
+   "EP-24046"
+  ]
+ },
+ {
+  "id": "meet-schedule-while-booking",
+  "theme": "meet",
+  "q": "2024-Q2",
+  "title": "Schedule view while booking",
+  "benefit": "Check your own or your team's schedule without leaving the meeting request page.",
+  "detail": "The new meeting request flow gained a 'See my Schedule' drawer with a team member selector for exhibitors, and a 'View Today's Schedule' pop-up that keeps form data intact. The break between meetings set by organisers is now always stated on the request screen.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-27719",
+   "EP-24925",
+   "EP-29078"
+  ]
+ },
+ {
+  "id": "meet-recommended-sorting",
+  "theme": "meet",
+  "q": "2024-Q3",
+  "title": "Recommended for you sorting",
+  "benefit": "Sort exhibitors, products, delegates, speakers and buyers by AI matchmaking relevance with 'Recommended for you'.",
+  "detail": "With matchmaking on, listing pages offer 'Recommended for you' alongside A–Z sorting, optionally as the default, with explanatory text. Choosing a column sort in custom listings switches off recommended sorting.",
+  "level": "headline",
+  "tags": [
+   "AI"
+  ],
+  "stories": [
+   "EP-27225",
+   "EP-32584",
+   "EP-32719"
+  ]
+ },
+ {
+  "id": "meet-exhibitor-recommendations",
+  "theme": "meet",
+  "q": "2024-Q4",
+  "title": "Exhibitor recommendations when booking",
+  "benefit": "See recommended exhibitors when starting a meeting with an exhibitor from any page.",
+  "detail": "An exhibitor recommendations pop-up now appears across all pages where a meeting with an exhibitor can be started.",
+  "level": "standard",
+  "tags": [
+   "AI"
+  ],
+  "stories": [
+   "EP-34005"
+  ]
+ },
+ {
+  "id": "meet-blocked-time-team-schedule",
+  "theme": "meet",
+  "q": "2024-Q4",
+  "title": "Blocked time and team schedule improvements",
+  "benefit": "Limit blocked time to event days and find team members quickly on the Team Schedule page.",
+  "detail": "An 'Allow blocked time outside the event days' setting restricts blocked-time pickers to event dates and times when switched off. The Team Schedule member selector gained search by name and company.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-34594",
+   "EP-35119"
+  ]
+ },
+ {
+  "id": "meet-automatic-calendar-sync",
+  "theme": "meet",
+  "q": "2025-Q1",
+  "title": "Automatic calendar sync",
+  "benefit": "Keep meetings and sessions in step with your external calendar automatically after a one-time consent.",
+  "detail": "Meetings and sessions sync to users' external calendars in the background every six hours, so additions, changes and deletions arrive without manual action.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-30274"
+  ]
+ },
+ {
+  "id": "meet-real-time-matchmaking",
+  "theme": "meet",
+  "q": "2025-Q1",
+  "title": "Real-time matchmaking",
+  "benefit": "Switch on real-time matchmaking recommendations from the admin panel and see their status live.",
+  "detail": "The admin Matchmaking page now runs on the real-time recommender, with an Enable toggle and a live status of in progress, error or completed. Switching it off shuts the pipeline down.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-34318"
+  ]
+ },
+ {
+  "id": "meet-wizard-profile-2025q1",
+  "theme": "meet",
+  "q": "2025-Q1",
+  "title": "Meeting wizard and profile improvements",
+  "benefit": "Spot team members with email problems when booking for them, and share profile links in one click.",
+  "detail": "The admin meeting wizard marks team members with fake, empty or undeliverable emails. Profile pages gained a Copy button for the public profile link, with a bulk export of links for team members. Meeting limits are displayed more clearly on the front end.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-36721",
+   "EP-34934",
+   "EP-39067"
+  ]
+ },
+ {
+  "id": "meet-meet-button-availability",
+  "theme": "meet",
+  "q": "2025-Q2",
+  "title": "Meeting button availability checks",
+  "benefit": "Only offer meetings with exhibitors who have a team member available, on web and in the app.",
+  "detail": "The Meeting button on exhibitor, pavilion and product cards and profiles checks team member permissions, opt-in, settings and limits. If no team member is available, the button is hidden in the app and the web suggests alternatives.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-37473",
+   "EP-35513"
+  ]
+ },
+ {
+  "id": "meet-ratings-in-app",
+  "theme": "meet",
+  "q": "2025-Q2",
+  "title": "Meeting ratings in the app",
+  "benefit": "Rate completed meetings in the mobile app with stars, comments and the likely business outcome.",
+  "detail": "Completed meetings in the app show a 'Rate This Meeting' button with 1–5 stars, comments, likely business outcome or 'did not take place', and ratings can be edited later.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-40631"
+  ]
+ },
+ {
+  "id": "meet-ai-meeting-notes",
+  "theme": "meet",
+  "q": "2025-Q3",
+  "title": "AI meeting notes",
+  "benefit": "Record meetings in the app after a badge scan and receive an AI summary by email.",
+  "detail": "A first release of AI meeting notes in the app covers voice sample onboarding, recording from the Scans tab after a badge scan, explicit consent and emailed AI summaries. Organisers switch it on in the app builder.",
+  "level": "headline",
+  "tags": [
+   "AI",
+   "Mobile"
+  ],
+  "stories": [
+   "EP-42801"
+  ]
+ },
+ {
+  "id": "meet-admin-wizard-2025q3",
+  "theme": "meet",
+  "q": "2025-Q3",
+  "title": "Admin meeting wizard improvements",
+  "benefit": "Find the right team member fast when booking meetings for exhibitors in the admin panel.",
+  "detail": "The meeting wizard team member dropdown is sorted A–Z, shows job title and company and supports search. The exhibitor profile Team Members table combines columns and adds a phone column.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-44527"
+  ]
+ },
+ {
+  "id": "meet-remaining-meetings",
+  "theme": "meet",
+  "q": "2025-Q4",
+  "title": "Remaining meetings with auto-confirm",
+  "benefit": "Cap auto-confirmed meetings at the exhibitor category limit and show how many meetings remain.",
+  "detail": "When auto-confirm is on, exhibitor category meeting limits still apply, and the remaining meeting count is displayed on the front end.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-46592"
+  ]
+ },
+ {
+  "id": "meet-matchmaking-booking-2026q1",
+  "theme": "meet",
+  "q": "2026-Q1",
+  "title": "Matchmaking and booking improvements",
+  "benefit": "Get more precise matchmaking and spot every available time slot when booking.",
+  "detail": "Matchmaking was refined for more precise results, and the meeting time picker now shows a scroll hint so users see that more slots are available below.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-44267",
+   "EP-47793"
+  ]
+ },
+ {
+  "id": "meet-personalised-meeting-notes",
+  "theme": "meet",
+  "q": "2026-Q2",
+  "title": "Personalised AI meeting notes",
+  "benefit": "Get AI meeting notes tailored to you, in the meeting's language, and revisit them from a notes list on web and mobile.",
+  "detail": "Each user receives personalised meeting notes, with a notes list on web to revisit notes tied to their meetings, and personalised notes on mobile. Outputs are produced in the language the meeting was held in, and action points go to all participants as one shared list.",
+  "level": "headline",
+  "tags": [
+   "AI",
+   "Mobile"
+  ],
+  "stories": [
+   "EP-49217",
+   "EP-49577",
+   "EP-51149",
+   "EP-48113",
+   "EP-23843"
+  ]
+ },
+ {
+  "id": "meet-meeting-setup-2026q2",
+  "theme": "meet",
+  "q": "2026-Q2",
+  "title": "Meeting setup improvements",
+  "benefit": "Set up matchmaking categories faster and get improved table meeting setup and meeting cards in the app.",
+  "detail": "Selecting a parent category in Networking & Matchmaking now selects all its child categories. The app gained improvements to table meeting setup and meeting cards.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-47953",
+   "EP-6281"
+  ]
+ },
+ {
+  "id": "meet-ai-notes-add-on",
+  "theme": "meet",
+  "q": "2026-Q3",
+  "title": "AI meeting notes add-on",
+  "benefit": "Offer AI meeting notes to exhibitors as a paid Lead Capture Pro add-on they can buy themselves.",
+  "detail": "Organisers enable AI meeting notes as a Lead Capture Pro add-on and set its price in the event's payment currency. Exhibitors see and buy it on the Lead Capture Pro page, unlocking AI transcription for their whole team.",
+  "level": "headline",
+  "tags": [
+   "AI"
+  ],
+  "stories": [
+   "EP-49766",
+   "EP-49988"
+  ]
+ },
+ {
+  "id": "meet-meeting-management-2026q3",
+  "theme": "meet",
+  "q": "2026-Q3",
+  "title": "Meeting management improvements",
+  "benefit": "Respond to meetings in bulk without waiting for large teams to load, and restrict meetings with exhibitors without teams in the app.",
+  "detail": "Bulk Respond now opens instantly regardless of team size and refreshes after changes are applied. The mobile app respects the setting that restricts meetings with exhibitors who have no team members.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-56351",
+   "EP-54268"
+  ]
+ }
+]

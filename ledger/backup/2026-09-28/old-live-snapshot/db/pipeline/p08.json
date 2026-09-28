@@ -1,0 +1,116 @@
+{
+  "createdAt": "2026-09-22",
+  "flags": {
+    "drift": false,
+    "dueSoon": true,
+    "noEstimate": false,
+    "noJira": false,
+    "overEstimate": true,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "Sept 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-09"
+    },
+    "h0imp-status": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "status",
+      "from": "Ready for deploy",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "Ready for Release"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "h0mig-rationale": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "migrate",
+      "note": "the old Why, word for word",
+      "to": "Re-architects session search endpoints (/sessionsCalendarView and /sessionsDates) to replace inefficient single-day/week queries with an inclusive, bounded date-range (dayFrom..dayTo up to 31 days) and a single unpaginated date picker fetch."
+    },
+    "h0mig-why": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "why",
+      "from": "Re-architects session search endpoints (/sessionsCalendarView and /sessionsDates) to replace inefficient single-day/week queries with an inclusive, bounded date-range (dayFrom..dayTo up to 31 days) and a single unpaginated date picker fetch.",
+      "k": "migrate",
+      "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
+      "to": ""
+    }
+  },
+  "j": {
+    "aggOrigDays": 5,
+    "assignee": "Oleksii Tur",
+    "canon": "Ready for Release",
+    "due": "2026-09-22",
+    "origDays": 5,
+    "priority": "High",
+    "resolved": null,
+    "spentDays": 7.59,
+    "status": "Ready for release",
+    "summary": "[API] Multi-day Session Calendar View Enhancements",
+    "team": "Exhibitor team",
+    "teamField": "customfield_10001",
+    "type": "Story"
+  },
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": 5,
+    "daysKind": "point"
+  },
+  "order": 80,
+  "raw": {
+    "area": "Sessions",
+    "month": "Sept 2026",
+    "status": "Ready for deploy"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-22",
+  "v": {
+    "area": "Sessions",
+    "deps": "",
+    "driver": "",
+    "estimate": "5d",
+    "feature": "[API] Multi-day Session Calendar View Enhancements",
+    "impact": "Platform & Attendees: eliminates rendering lag and multiple round trips during multi-day calendar navigation. Engineering & QA: clean OpenAPI contract with standardized envelope and server-side timezone boundary resolution.",
+    "key": "EP-57107",
+    "month": "2026-09",
+    "notes": "",
+    "owner": "Kavi",
+    "priority": "Strategic",
+    "rationale": "Re-architects session search endpoints (/sessionsCalendarView and /sessionsDates) to replace inefficient single-day/week queries with an inclusive, bounded date-range (dayFrom..dayTo up to 31 days) and a single unpaginated date picker fetch.",
+    "status": "Ready for Release",
+    "team": "",
+    "why": ""
+  }
+}

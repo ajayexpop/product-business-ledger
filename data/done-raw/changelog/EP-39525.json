@@ -1,0 +1,105 @@
+{
+ "k": "EP-39525",
+ "histories": 45,
+ "historiesRead": 45,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2025-02-14T08:51:26.437+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2025-02-14T08:51:28.186+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2025-02-14T08:51:30.070+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2025-02-14T15:24:31.097+0000",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2025-02-21T12:08:07.920+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-02-21T13:02:33.294+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-02-21T13:02:35.925+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-03-06T17:03:46.232+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2025-03-06T17:03:58.049+0000",
+   "from": "Ready for development",
+   "to": "Ready for decomposition",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2025-03-07T09:57:43.324+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2025-03-07T09:57:46.083+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2025-03-07T10:01:23.651+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2025-03-11T23:28:17.594+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-03-12T14:26:18.992+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-03-20T12:00:58.782+0000",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:46:35.857+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790321944793.txt"
+}

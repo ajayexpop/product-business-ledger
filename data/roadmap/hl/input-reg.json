@@ -1,0 +1,892 @@
+[
+ {
+  "k": "EP-23328",
+  "q": "2024-Q4",
+  "feature": "Basket item reservation",
+  "tags": [],
+  "summary": "Reservation of the items on payment page",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Added a 15-minute reservation of all basket items once a participant or exhibitor reaches the payment page. Items in the order stay purchasable for 15 minutes whatever admins change; when time runs out, a session-expired notice redirects the user."
+ },
+ {
+  "k": "EP-23224",
+  "q": "2024-Q1",
+  "feature": "Category cloning",
+  "tags": [],
+  "summary": "Ability to clone participant and exhibitor categories",
+  "epic": null,
+  "text": "Added a 'Duplicate' button for participant and exhibitor categories that copies all settings, plus an adaptive, draggable categories table. Organisers clone a category as 'name copy N' with inherited settings and then change only what differs."
+ },
+ {
+  "k": "EP-14938",
+  "q": "2023-Q2",
+  "feature": "Default categories",
+  "tags": [],
+  "summary": "Participant default category",
+  "epic": null,
+  "text": "Added an undeletable default participant category, created with each event and assigned to participants without a category, with its own limits and settings. Uncategorised participants inherit the default category's settings and limits, and participants in a deleted category fall back to it."
+ },
+ {
+  "k": "EP-26659",
+  "q": "2024-Q2",
+  "feature": "Discounts",
+  "tags": [],
+  "summary": "Applying of the discounts",
+  "epic": null,
+  "text": "Implemented discounts in the new basket: per-section discounts, multibuy then code discounts, one code at a time, remembered and auto-applied. Discount codes and multibuy discounts work in the new basket."
+ },
+ {
+  "k": "EP-55358",
+  "q": "2026-Q3",
+  "feature": "Free booking checkout",
+  "tags": [],
+  "summary": "Skip the payment form when the basket total is 0 (100% discount) in the Booking flow",
+  "epic": null,
+  "text": "Free (100%-discount) bookings now complete in one step, skipping a redundant payment form for a frictionless checkout. When the total is 0 the booking completes directly to the success page; the payment form is skipped with server-side price re-checks."
+ },
+ {
+  "k": "EP-30801",
+  "q": "2024-Q2",
+  "feature": "Invoice payment",
+  "tags": [],
+  "summary": "Change logic for invoice payment",
+  "epic": null,
+  "text": "Split invoice payment into its own submit step, leaving checkout to validate payment data. Invoice payments update status through a dedicated step."
+ },
+ {
+  "k": "EP-34905",
+  "q": "2025-Q4",
+  "feature": "Invoice payment",
+  "tags": [],
+  "summary": "[InvoicePayment][BE][FE] Invoice Payment for Participants in Registration",
+  "epic": null,
+  "text": "Added an 'Allow payment with Invoice in Registration' toggle so participants in the old registration UI can pay by invoice when buying paid items. Invoice registrants get paid sessions scheduled, but the activation email is sent only after the organiser confirms payment in Invoice payments."
+ },
+ {
+  "k": "EP-40498",
+  "q": "2025-Q2",
+  "feature": "Invoice translations",
+  "tags": [],
+  "summary": "Translation for invoices",
+  "epic": null,
+  "text": "Added translation for invoices: per-language logo, footer and terms, and translated invoice labels. Invoices can be issued in the event's languages."
+ },
+ {
+  "k": "EP-7417",
+  "q": "2023-Q1",
+  "feature": "Multilingual registration and emails",
+  "tags": [],
+  "summary": "New system field of \"Language Preference\" in the Registration Form.",
+  "epic": null,
+  "text": "Added a 'Language Preference' system field to the exhibitor and visitor registration forms, plus import and export support. Registrants pick a language at sign-up (defaulting to the event language), and all their emails and system notifications use it."
+ },
+ {
+  "k": "EP-43163",
+  "q": "2025-Q3",
+  "feature": "Multilingual tax names",
+  "tags": [],
+  "summary": "Multilingual Tax name",
+  "epic": null,
+  "text": "Added a language selector to Taxes settings so tax names can be set per event language. Tax names appear in the chosen language on invoices, basket, exhibitor manuals, tickets and ordered items."
+ },
+ {
+  "k": "EP-29730",
+  "q": "2024-Q2",
+  "feature": "New basket and payment page",
+  "tags": [],
+  "summary": "Interrelated settings with payments",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Verified payment settings with the new basket and payment pages: payee type, transactions, invoice options, totals, module toggle, invoice email. Payment settings work with the new basket and payment integrations."
+ },
+ {
+  "k": "EP-34191",
+  "q": "2024-Q3",
+  "feature": "New basket and payment page",
+  "tags": [],
+  "summary": "The tax name should be displayed on the front and admin panel",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Displayed the admin-set tax name in the basket and admin panel. The tax name organisers enter appears to buyers."
+ },
+ {
+  "k": "EP-34607",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [],
+  "summary": "The tax name should be displayed on the front and admin panel (except Participant's basket) ",
+  "epic": null,
+  "text": "Displayed the admin-set tax name in the exhibitor basket, payment pages, registration, admin payment reports and new invoices. The organiser's tax name appears everywhere tax is shown."
+ },
+ {
+  "k": "EP-35239",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [],
+  "summary": "Include all currencies in the database",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Let organisers pick any currency in payment settings, with the most traded currencies first. Organisers set any currency themselves."
+ },
+ {
+  "k": "EP-34965",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [],
+  "summary": "Spiner while recalculating the text",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Showed a spinner and disabled the pay button while VAT is recalculated on the payment page, on desktop, mobile and the app basket. Buyers can't pay mid-recalculation."
+ },
+ {
+  "k": "EP-35249",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Connect the session page in the app with new UI Basket",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Connected the app's session page to the new basket, mirroring additions on web. App users can add sessions to the basket."
+ },
+ {
+  "k": "EP-24017",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [],
+  "summary": "(New UI) My Basket for the exhibitor",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Built the new-UI exhibitor basket for Exhibitor Manual equipment and lead capture items, with sections, quantities, taxes, totals and per-section or full payment. Exhibitors add items from the manual, adjust quantities, see subtotal, tax and grand total, and pay for everything or one section."
+ },
+ {
+  "k": "EP-30723",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Basket for the mobile app (for participants)",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Pointed the mobile app basket tab for participants to the new-front basket page, keeping all basket functionality. In iOS and Android apps the basket opens the new-UI page with items, prices, discounts, availability checks and payment, without header or footer."
+ },
+ {
+  "k": "EP-31477",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Payment page for the mobile app",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Adapted the participant payment page for the mobile app web view, without header or Back button, supporting PayPal and Parampos. App users complete payments in a mobile layout and the payment is recorded as on the web, with a confirmation page."
+ },
+ {
+  "k": "EP-27695",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [],
+  "summary": "Include module \"Basket\" for all participants and exhibitors",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Made the Basket module control the new UI basket icon for participants, buyers and team members, and added the module for exhibitors. Turning the Basket module off hides the basket icon for that user group even if items are in it; exhibitors now have the module too."
+ },
+ {
+  "k": "EP-30067",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [],
+  "summary": "Connect module Discounts to a new UI basket",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Connected the Discounts module to the new UI basket so deactivating it hides discount tabs, fields, labels and invoice columns. Disabling Discounts removes unpaid basket discounts and hides discount UI, while discounts already in invoices or created payments are kept."
+ },
+ {
+  "k": "EP-923",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [],
+  "summary": "(New UI) My Basket for the participant",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Built a participant basket in the new UI holding booked tickets, sessions and on-demand sessions, with sections, discount codes and per-section payment. A basket popup opens whenever an item is added, showing subtotal, discount, tax and grand total, with Pay, Pay later and pay-per-section options."
+ },
+ {
+  "k": "EP-26932",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [],
+  "summary": "Payment page upgrade for participant",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Built the participant payment page in the new UI with individual/company payee selection, card fields with validation and an order summary. Participants pay by card in the new UI, entering invoice details as an individual or company, with discount, tax and grand total shown."
+ },
+ {
+  "k": "EP-37398",
+  "q": "2024-Q4",
+  "feature": "New basket and payment page",
+  "tags": [],
+  "summary": "Changing the text for confirmation window after the payment is done",
+  "epic": null,
+  "text": "Changed the payment confirmation window text in participant and exhibitor baskets to confirm success and the email sent. Buyers see a clear payment confirmation."
+ },
+ {
+  "k": "EP-38223",
+  "q": "2025-Q1",
+  "feature": "New orders page",
+  "tags": [],
+  "summary": "A new Slider for Orders tab",
+  "epic": "(New UI) Orders page",
+  "text": "Replaced the Slick slider with Swiper in the Orders tab. The Orders tab uses Swiper."
+ },
+ {
+  "k": "EP-26637",
+  "q": "2025-Q2",
+  "feature": "New orders page",
+  "tags": [],
+  "summary": "Invoices tab",
+  "epic": "(New UI) Orders page",
+  "text": "Added an Invoices tab to the participant profile Orders section, listing paid transactions with sortable date, discount and total columns and invoice download. Participants see each paid order, expand it to view the tickets and sessions bought with tax and discount, and download the invoice."
+ },
+ {
+  "k": "EP-26636",
+  "q": "2025-Q2",
+  "feature": "New orders page",
+  "tags": [],
+  "summary": "Ordered items tab",
+  "epic": "(New UI) Orders page",
+  "text": "Added an Ordered items tab to the participant profile listing purchased tickets and sessions, newest first. Participants browse what they bought; session cards reflect later changes but keep the purchase price and have no action buttons."
+ },
+ {
+  "k": "EP-40442",
+  "q": "2025-Q2",
+  "feature": "New orders page",
+  "tags": [],
+  "summary": "[Ticketing] Create module for ordered items",
+  "epic": "(New UI) Orders page",
+  "text": "Added a My Orders module per role, globally and per event, to show or hide the My Orders tab on web and in the app. Admins can hide My Orders for participants, buyers or team members."
+ },
+ {
+  "k": "EP-54656",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 1. Main Participant registration page setup",
+  "epic": "New Registration - development",
+  "text": "Organisers can set up the Participant registration welcome page in the Admin Panel: hero image, title and description, each switchable, with a flip-sides layout. The registration landing page shows the organiser's image and multilingual welcome text, with save, cancel and unsaved-changes warnings in setup."
+ },
+ {
+  "k": "EP-54657",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 2. Main Buyer registration page setup",
+  "epic": "New Registration - development",
+  "text": "Organisers can set up the Buyer registration welcome page: hero image, title and description, each switchable, with a flip-sides layout. Buyer registration opens on a branded, multilingual welcome page configured in the Admin Panel."
+ },
+ {
+  "k": "EP-54658",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 3. Confirmation page setup for Participant",
+  "epic": "New Registration - development",
+  "text": "Organisers can configure the Participant confirmation page: image, title, rich-text description with merge variables, an optional script, or a custom Website Builder page. After registering, participants land on a personalised confirmation page with values like name, QR code and print-badge link filled in."
+ },
+ {
+  "k": "EP-54659",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 4. Confirmation page setup for Buyer",
+  "epic": "New Registration - development",
+  "text": "Organisers can configure the Buyer confirmation page: image, title, rich-text description with merge variables, an optional script, or a custom Website Builder page. Buyers land on a personalised confirmation page after registering, set up in the Admin Panel."
+ },
+ {
+  "k": "EP-54661",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 5. Sold out tickets page setup",
+  "epic": "New Registration - development",
+  "text": "Organisers can configure a Sold Out page shown when all registration tickets are gone: image, title, description and a button with a custom link. A branded, multilingual Sold Out page replaces the registration form when tickets run out."
+ },
+ {
+  "k": "EP-54662",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 6. Sold out tickets page",
+  "epic": "New Registration - development",
+  "text": "Participants see the Sold Out page when no tickets remain for them, including when tickets are limited by participant category or country. The Sold Out page appears at the right point in the registration flow, in the chosen language, with a button back to the event."
+ },
+ {
+  "k": "EP-54663",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 7. Registration with payment",
+  "epic": "New Registration - development",
+  "text": "Registration now sends attendees with paid items to the payment page on submit, after an availability check; free registrations complete directly. Paid items are paid before confirmation; for private events with public access or a reached registration limit, items go to the basket instead."
+ },
+ {
+  "k": "EP-54664",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 8. Registration: Visitor can verify Email on Registration Landing Page",
+  "epic": "New Registration - development",
+  "text": "A registration landing page where visitors enter and verify their email before the Participant registration form, with required and format checks. Duplicate emails are blocked, returning or unfinished registrations are routed to their flows, and closed registration redirects to a set URL."
+ },
+ {
+  "k": "EP-54665",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 9. Registration: Visitor can verify Email on Buyer Registration Landing Page",
+  "epic": "New Registration - development",
+  "text": "A Buyer registration landing page where visitors verify their email before the Buyer form; existing participants confirm identity by email link. Buyers start with email verification; logged-in participants upgrading to Buyer skip it; existing buyers are blocked from duplicates."
+ },
+ {
+  "k": "EP-54667",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 11. Registration: Participant can select and purchase Tickets during Registration",
+  "epic": "New Registration - development",
+  "text": "A mandatory Tickets step in registration where participants pick tickets, limited by category, with availability checks and a one-hour reservation hold. Participants must add a ticket to continue; tickets respect category, visibility and stock rules, and buyers skip the step."
+ },
+ {
+  "k": "EP-54668",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 12. Registration: Condition logic for Grids and Fields during Registration",
+  "epic": "New Registration - development",
+  "text": "Condition logic in the new registration: grids and their fields show or hide by participant category or by the answer to a conditional question. Hidden grids skip their required fields, empty tabs disappear, and behaviour matches the new Edit Profile."
+ },
+ {
+  "k": "EP-54669",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 13. Tabs navigation",
+  "epic": "New Registration - development",
+  "text": "Tab navigation for the new registration: previous/next buttons, clickable visited tabs, and a side menu with event image, title, tab list and order summary. Registration has a side navigation showing progress and paid items; skipping past unfilled required fields is blocked."
+ },
+ {
+  "k": "EP-54670",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 14. Grids and fields layout",
+  "epic": "New Registration - development",
+  "text": "The new registration uses the Edit Profile grid and field layout, with all field attributes and system fields (email, country, category) pre-filled. Registration forms honour required, hidden, disabled and conditional fields, keep data between tabs and adapt to screen size."
+ },
+ {
+  "k": "EP-54671",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 15. Sessions as part of Registration",
+  "epic": "New Registration - development",
+  "text": "A Sessions tab in registration where participants browse, search, filter and book paid and free sessions, with 'at least one' or 'all sessions' rules. Paid sessions go to the order summary, free ones to the schedule, and full sessions are hidden."
+ },
+ {
+  "k": "EP-54672",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 16. Summary",
+  "epic": "New Registration - development",
+  "text": "A Summary step at the end of registration showing submitted details and paid items, with edit links, discount codes, terms and reCAPTCHA. Participants review everything in one place and proceed to payment or submit; unavailable required items block completion."
+ },
+ {
+  "k": "EP-54673",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 17. Terms and Conditions",
+  "epic": "New Registration - development",
+  "text": "Terms and Conditions in the new registration: participants view the full text in a pop-up and must agree when the organiser makes it required. Registration can't complete until required terms are accepted, matching the old registration."
+ },
+ {
+  "k": "EP-54674",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 18. Email notifications for Registration",
+  "epic": "New Registration - development",
+  "text": "The new registration sends the same emails as the old one: confirmation, pending approval, waiting list and unfinished-registration reminders. Organisers' existing email templates and settings work unchanged with the new registration."
+ },
+ {
+  "k": "EP-54676",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 20. Embed Participant Category in Registration URLs",
+  "epic": "New Registration - development",
+  "text": "A participant category embedded in the registration URL filters tickets to that category and pre-fills and locks the category field. Category-specific registration links work in the new registration, falling back to standard behaviour for invalid categories."
+ },
+ {
+  "k": "EP-54677",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 21. Confirmation page for Participant",
+  "epic": "New Registration - development",
+  "text": "Participants see a confirmation page after registering, with the organiser's image and text, merge variables such as QR code and badge link, and scripts. Every completed registration ends on a multilingual, personalised confirmation page, or the organiser's custom page."
+ },
+ {
+  "k": "EP-54678",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 22. Confirmation page for Buyer",
+  "epic": "New Registration - development",
+  "text": "Buyers see a dedicated confirmation page after Buyer registration, with image, text, merge variables, optional scripts and multilingual content. Buyer registration ends on a branded confirmation page, or a custom page chosen by the organiser."
+ },
+ {
+  "k": "EP-54679",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 23. Public Registration",
+  "epic": "New Registration - development",
+  "text": "Public registration in the new flow: participants register without organiser approval and activate their profile from the registration email. Public-event registration covers email checks, activation, registration limits, repeat and unfinished registrations, and payment."
+ },
+ {
+  "k": "EP-54680",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 24. Registration to Private event with Public access",
+  "epic": "New Registration - development",
+  "text": "Registration for private events with public access: participants submit for approval, paid items are reserved, and payment happens after approval. After approval, participants log in to a basket they must pay before their profile becomes active, on web and in the app."
+ },
+ {
+  "k": "EP-54681",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 25. Registration of Buyers",
+  "epic": "New Registration - development",
+  "text": "Buyer registration from an agent's link: buyers register with a new email, submit for organiser approval, and pay reserved items after approval. Approved buyers pay for reserved items in a basket that can't be closed, then their profile becomes active."
+ },
+ {
+  "k": "EP-54682",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 26. Upgrade from Participant to Buyer",
+  "epic": "New Registration - development",
+  "text": "Existing participants can upgrade to Buyer via an agent's link; their details are pre-filled and the upgrade waits for organiser approval. Logged-in participants go straight to the Buyer form; others confirm by email. They become buyers once the organiser approves."
+ },
+ {
+  "k": "EP-54683",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 27. Registrations with limit",
+  "epic": "New Registration - development",
+  "text": "With a registration limit set, people who register after it's reached join a waiting list and get a waiting-list email instead of an activation link. Waiting-list registrants can't log in until approved; approved ones activate and pay reserved items in a basket. A modal offers the list if spots run out mid-registration."
+ },
+ {
+  "k": "EP-54684",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 28. Continue unfinished Registration",
+  "epic": "New Registration - development",
+  "text": "Visitors who return with an email that has an unfinished registration can get an email link to resume it, with their earlier answers kept. Unfinished registrations can be resumed across all registration types, unless the organiser turns the option off."
+ },
+ {
+  "k": "EP-54685",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 29. Repeated Registration",
+  "epic": "New Registration - development",
+  "text": "Visitors who already have an account from another event confirm by email link and get their standard profile fields pre-filled in the new registration. Repeat registrants see their name, company, position and other system fields filled in and can edit them."
+ },
+ {
+  "k": "EP-55250",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "Story 30. Enable New UI Registration Toggle",
+  "epic": "New Registration - development",
+  "text": "New \"Use New UI Registration\" toggle lets organizers migrate each event from legacy to new registration on their own schedule, defaulting off to protect existing events. A new \"Use New UI Registration\" toggle in Event Setup > General > Settings, defaulting OFF; frontend registration routing and admin menu visibility switch between legacy and new flows based on the toggle, with the setting change taking effect immediately."
+ },
+ {
+  "k": "EP-33119",
+  "q": "2026-Q3",
+  "feature": "New registration experience",
+  "tags": [],
+  "summary": "1 Confirmation page setup for Participant",
+  "epic": "Participant Registration on New UI",
+  "text": "Organisers can configure the Participant confirmation page: image, title, rich-text description with merge variables, an optional script, or a custom Website Builder page. After registering, participants land on a personalised confirmation page with values like name, QR code and print-badge link filled in."
+ },
+ {
+  "k": "EP-26628",
+  "q": "2024-Q4",
+  "feature": "New UI ticketing",
+  "tags": [],
+  "summary": "(Part 1) Tickets list in Admin panel",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Built the new admin Tickets list for ticketing (category upgrade and event entry) and removed the old Ticketing page and My booking module. Organisers enable ticketing and create and manage tickets from a page with distinct empty, enabled and created states."
+ },
+ {
+  "k": "EP-26629",
+  "q": "2024-Q4",
+  "feature": "New UI ticketing",
+  "tags": [],
+  "summary": "(Part 1) Tickets creation/edit in Admin panel",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Built ticket creation, editing and cloning in the admin panel, with name, description, category availability and check-in location settings. Organisers create tickets for all or specific participant categories and chosen check-in zones, on both community and regular events."
+ },
+ {
+  "k": "EP-30803",
+  "q": "2024-Q4",
+  "feature": "New UI ticketing",
+  "tags": [],
+  "summary": "(Part 1) Multilanguage for ticketing",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Extended the multilanguage tool to new-UI tickets, covering name, description, category, validity dates, range tag and price expiry. Ticket content shows in the visitor's chosen language, falling back to English, and translations carry over to cloned tickets and events."
+ },
+ {
+  "k": "EP-36099",
+  "q": "2025-Q1",
+  "feature": "New UI ticketing",
+  "tags": [],
+  "summary": "(Part 2) Changes to the logic of All locations selector",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Made tickets set to All locations include check-in zones created later. All-location tickets cover every check-in zone."
+ },
+ {
+  "k": "EP-46947",
+  "q": "2025-Q4",
+  "feature": "New UI ticketing",
+  "tags": [],
+  "summary": "[T&I]Feature flag for new Ticketing",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Added a 'New Ticketing' module toggle to choose between old and new ticketing per event or globally. Organisers switch ticketing versions; each keeps its own tickets and settings, and users' tickets are not lost."
+ },
+ {
+  "k": "EP-45795",
+  "q": "2025-Q4",
+  "feature": "Participant category lock",
+  "tags": [],
+  "summary": "Disabled category selection",
+  "epic": "Hyve Q4 (End of October Deliverables)",
+  "text": "Added a 'Disable category change' registration setting that locks the participant category field in the admin panel for all admins. When enabled, no admin can change any participant's category in the admin panel; it is off by default."
+ },
+ {
+  "k": "EP-17102",
+  "q": "2023-Q3",
+  "feature": "Participant category ordering",
+  "tags": [],
+  "summary": "Ticketing order ",
+  "epic": null,
+  "text": "Added drag-and-drop ordering and A–Z/Z–A sorting to the participant categories list, independent of ticketing order. The saved category order shows in frontend filters, registration and booking, admin profiles and the app."
+ },
+ {
+  "k": "EP-26539",
+  "q": "2024-Q4",
+  "feature": "Payment integrations",
+  "tags": [],
+  "summary": "Setting up payment integrations for the new front",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Brought the PayPal and Parampos payment integrations to the new-UI payment page and tidied the Stripe code there. New-UI payments work via Stripe, PayPal buttons and Parampos (with 3-D Secure), and are recorded in transactions and related admin totals."
+ },
+ {
+  "k": "EP-38109",
+  "q": "2025-Q1",
+  "feature": "Payment integrations",
+  "tags": [],
+  "summary": "Validation of Required Fields for Payment Integrations",
+  "epic": null,
+  "text": "Validated required fields for active payment integrations on save, and blocked payment in the basket when configuration is incomplete. Payment integrations can't run half-configured."
+ },
+ {
+  "k": "EP-38286",
+  "q": "2025-Q1",
+  "feature": "Payment integrations",
+  "tags": [],
+  "summary": "Check secret key of PayPal for validity",
+  "epic": null,
+  "text": "Added a validity check of the PayPal secret key on save in the admin Integrations page, for the active test or live mode. With PayPal enabled, an invalid secret key for the active mode blocks saving and shows ‘Incorrect PayPal Credentials’."
+ },
+ {
+  "k": "EP-44198",
+  "q": "2025-Q3",
+  "feature": "Phone number validation",
+  "tags": [],
+  "summary": "Add validation of the phone field by value format",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-14498",
+  "q": "2023-Q1",
+  "feature": "Registration confirmation page scripts",
+  "tags": [],
+  "summary": "Need Participant Category type as a variable script in registration Form confirmation page",
+  "epic": null,
+  "text": "Added a {category} variable to the Additional Scripts of the visitor and buyer registration confirmation pages. Confirmation pages can display the registrant's category name, or 'No category' when none was chosen."
+ },
+ {
+  "k": "EP-10489",
+  "q": "2024-Q1",
+  "feature": "Registration confirmation page variables",
+  "tags": [],
+  "summary": "Adding More Variables in Visitor Confirmation Page",
+  "epic": null,
+  "text": "Added a 'Print Your Badge' variable for the visitor registration confirmation page. The confirmation page shows a Print Badge link that opens the user's badge in a new tab, the same as the admin and profile print option."
+ },
+ {
+  "k": "EP-7851",
+  "q": "2023-Q1",
+  "feature": "Registration custom fields",
+  "tags": [],
+  "summary": "EMEA: Add the option to make custom text field as a website field",
+  "epic": null,
+  "text": "Added a 'website' option to custom text fields in exhibitor and visitor registration settings and made website fields clickable on the front. Custom text fields can be set as website fields, and those values render as clickable links on the front."
+ },
+ {
+  "k": "EP-9415",
+  "q": "2023-Q1",
+  "feature": "Registration custom fields",
+  "tags": [],
+  "summary": "EMEA: Add option for state/region and city field in the custom select field",
+  "epic": null,
+  "text": "Added State/Region and City as types for the custom Select form element in exhibitor and visitor registration settings. Organisers can build custom select fields that list states/regions or cities."
+ },
+ {
+  "k": "EP-20197",
+  "q": "2023-Q3",
+  "feature": "Registration custom questions",
+  "tags": [],
+  "summary": "Prohibit same \"names\" responses for answers options\"",
+  "epic": null,
+  "text": "Blocked duplicate answer option names in questions. Each answer option has a unique name."
+ },
+ {
+  "k": "EP-26281",
+  "q": "2024-Q2",
+  "feature": "Registration field timestamps",
+  "tags": [],
+  "summary": "FBF: Add the option to record timestamp for a specific field in the registration form",
+  "epic": null,
+  "text": "Added a per-field option in registration forms to record the timestamp of input, exported as a TS column beside the field. For flagged fields, the latest input time before registration completes is stored in event local time and appears in the export."
+ },
+ {
+  "k": "EP-54612",
+  "q": "2026-Q3",
+  "feature": "Registration in the app",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Open T&Cs in new browser",
+  "epic": null,
+  "text": "During mobile registration, tapping Terms of Use now opens it in the device's external browser instead of hijacking the registration web-view. On both iOS and Android, the Terms of Use link opens in an external browser without disturbing the current registration screen, and returning users find their progress intact."
+ },
+ {
+  "k": "EP-42940",
+  "q": "2025-Q2",
+  "feature": "Repeated registration flow",
+  "tags": [],
+  "summary": "Repeated registration flor flow for users",
+  "epic": null,
+  "text": "Added a 'Disable Repeated Registration' visitor setting that treats users as new registrants even if their email is registered for other events in the same environment. When on, users register without OTP or old passwords; continuous registration, duplicate prevention and buyer upgrade still apply."
+ },
+ {
+  "k": "EP-26652",
+  "q": "2024-Q2",
+  "feature": "Sessions in the basket",
+  "tags": [],
+  "summary": "Add to the basket link for adding the session to the basket",
+  "epic": null,
+  "text": "Made the Add to basket link on session pages add the session directly when opened. A shared link adds a session to the basket."
+ },
+ {
+  "k": "EP-26895",
+  "q": "2024-Q4",
+  "feature": "Ticket pricing tiers",
+  "tags": [],
+  "summary": "(Part 1) Setting few timeranges with different pricing",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Added a Price Type to tickets: Fixed price for one sales period or Dynamic price with several named, coloured date ranges such as Early bird. Admins can set consecutive sales ranges with different prices up to the event's last day, each shown with its own price tag on the ticket."
+ },
+ {
+  "k": "EP-34940",
+  "q": "2024-Q4",
+  "feature": "Ticket visibility by country",
+  "tags": [],
+  "summary": "Visibility by country for tickets in Old UI Registration",
+  "epic": null,
+  "text": "Added Visibility by Country per user category on old-UI tickets, with a country selector in the registration Tickets tab, behind a new module. Registrants choose category and country and see only tickets for that pair; the country syncs with the Country field, with a message when none match."
+ },
+ {
+  "k": "EP-37154",
+  "q": "2024-Q4",
+  "feature": "Ticket visibility by country",
+  "tags": [],
+  "summary": "Addition to the Visibility by country for tickets in Old UI Registration",
+  "epic": null,
+  "text": "Added a 'Don't hide tickets' toggle to old-UI ticket visibility by country, letting unlisted country and category combinations proceed at a price of 0. With the toggle on, unlisted combinations check out at 0 with a 0 invoice; configured combinations are charged normally; off keeps the error."
+ },
+ {
+  "k": "EP-33039",
+  "q": "2026-Q1",
+  "feature": "Ticket visibility by country",
+  "tags": [],
+  "summary": "[Ticketing&Invoicing] Visibility of Tickets by Country",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Added ticket visibility by country to the new ticketing: a setting, per-ticket country selection and country markers. Organisers show each ticket only to users from chosen countries."
+ },
+ {
+  "k": "EP-26630",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "(Part 1) Ticketing settings in Admin panel",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Added new ticketing settings in the admin panel: a Ticketing on/off toggle, plus Hide on Summary, Allow to change category and a ticketing page description. Organisers prepare tickets before enabling ticketing, control category switching via tickets, and set the ticketing page intro text."
+ },
+ {
+  "k": "EP-38218",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "(Part 2) Restriction and Conditional Behavior for Purchased Tickets",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Blocked editing and deleting tickets with sales, replacing those actions with a read-only View page. Sold tickets can only be viewed; stale edit or delete attempts show an error; actions return when the sold counter drops to 0."
+ },
+ {
+  "k": "EP-38168",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "(Part 2) Rerendering of the basket after deletion and items becoming unavailable",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Re-rendered the basket after a pay attempt finds unavailable items, so buyers see which items are affected. The basket shows unavailable items immediately and payment continues for the rest."
+ },
+ {
+  "k": "EP-38136",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "(Part 2) No Pay for this order button if we have only one section",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Showed only a Pay button when the basket has a single section. Single-section baskets have one Pay button."
+ },
+ {
+  "k": "EP-26632",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "(Part 2) Tickets in Participant profile",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Added a Tickets tab to the participant profile listing My tickets and Available tickets for purchase, with translatable labels. Participants (not exhibitors or buyers) view purchased tickets and buy others from their profile, with cards matching registration."
+ },
+ {
+  "k": "EP-37664",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "(Part 2) Introducing new tickets to the basket",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Introduced new tickets as a purchasable object in the basket, with its own section, counter, discount codes and taxes. Users buy new tickets from a basket section with discount codes and default or custom taxes applied, and pay for tickets separately."
+ },
+ {
+  "k": "EP-30343",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "(Part 2) Tickets in the basket | Upgrading the category ",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Added ticket category upgrades to the basket on desktop and app web view, charging the price difference. Users upgrade by paying the difference; orders where new tickets cost less than those replaced cannot be paid, with an explanatory tooltip."
+ },
+ {
+  "k": "EP-37784",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "(Part 2) Reservation of tickets on the payment page",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Extended 15-minute payment-page reservation to the new tickets, shielding reserved tickets from admin changes and limits during checkout. Tickets in an order are held for 15 minutes despite hiding, deletion, status or category changes, then released if not bought."
+ },
+ {
+  "k": "EP-26633",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "(Part 2) Tickets upgrade",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Added ticket category upgrades: with Allow to change category on, users can buy a ticket of another category of equal or higher value, replacing their current category tickets. Users can upgrade category repeatedly until sales end; other category tickets are disabled while one is chosen, and Available for all tickets are kept."
+ },
+ {
+  "k": "EP-26634",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "(Part 2) Category indication in Participant profile",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Added a participant category indicator to the dashboard and ticketing pages, with a Check Tickets button, CSS hooks and translations. Participants see their current category on dashboard and ticketing pages when the registration form has a category field, updated after changes."
+ },
+ {
+  "k": "EP-33497",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "(Part 2)  Behaviour of ticketing toggle",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Extended the ticketing toggle so turning it off hides the Ticketing page and available tickets and makes basket tickets unavailable. With ticketing off, only users who bought tickets still see them in My Tickets and Ordered Items; basket tickets are skipped at payment until it is back on."
+ },
+ {
+  "k": "EP-41971",
+  "q": "2025-Q2",
+  "feature": "Ticketing",
+  "tags": [],
+  "summary": "[Part 2] Warning while turning off Ticketing",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Warned admins before turning off ticketing when users have already bought tickets. Admins confirm before disabling ticketing with sales."
+ },
+ {
+  "k": "EP-31418",
+  "q": "2026-Q2",
+  "feature": "Ticketing in the new UI",
+  "tags": [],
+  "summary": "[Ticketing&Invoicing](Part 3) [FE] Ticketing tab to be displayed via iframe - blocked by Registration",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Displayed the new ticketing tab inside the old admin registration page via an iframe. Admins manage tickets in the new UI from the registration pipeline."
+ },
+ {
+  "k": "EP-54690",
+  "q": "2026-Q3",
+  "feature": "Transaction and invoice search",
+  "tags": [],
+  "summary": "[Invoice&Payments] Search Functionality on Transaction Dashboard and Invoice Payments Pages",
+  "epic": null,
+  "text": "Event admins can now search the Transaction Dashboard and Invoice Payments pages by payer name, surname, or email, replacing manual scrolling. A search field (name, surname, email) was added above pagination on both the Transaction Dashboard and Invoice Payments pages, querying the Account Name column to locate payment records instantly."
+ },
+ {
+  "k": "EP-20762",
+  "q": "2023-Q4",
+  "feature": "UTM tracking on registration",
+  "tags": [],
+  "summary": "UTM codes on the Confirmation Pages",
+  "epic": null,
+  "text": "Carried the UTM codes from the registration URL through to the registration Confirmation page. UTM parameters appear on the Confirmation page, so registrations can be attributed in Google Analytics."
+ },
+ {
+  "k": "EP-32621",
+  "q": "2024-Q4",
+  "feature": "VAT and tax rules",
+  "tags": [],
+  "summary": "Changes to the current VAT logic",
+  "epic": "Basket&Payment page upgrade",
+  "text": "Changed VAT calculation rules for payments by billing and paying company location, EU VAT validation and the 'Disable VAT rules' setting. Tax is zero for a non-EU billing company charging an EU payer, and for EU-to-EU sales where the billing company has no VAT number."
+ },
+ {
+  "k": "EP-32998",
+  "q": "2025-Q1",
+  "feature": "VAT and tax rules",
+  "tags": [],
+  "summary": "Check and implement new changes to the UK VAT API service",
+  "epic": null,
+  "text": "Checked and implemented changes to the UK VAT number checking API. UK VAT number checks follow the updated API."
+ }
+]

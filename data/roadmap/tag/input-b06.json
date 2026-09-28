@@ -1,0 +1,3464 @@
+[
+ {
+  "k": "EP-43562",
+  "summary": "MP || FE Exhibitor Profile Details Pop-up",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2025-09-17T17:15:56.009+0100",
+  "text": "Added an exhibitor profile pop-up to the Meeting Program Matches list Exhibitors tab, showing logo, location, favourite, About, stands, tags, categories and matchmaking info. Participants click an exhibitor card to see its key profile details in a scrollable modal."
+ },
+ {
+  "k": "EP-43904",
+  "summary": "MP || FE Relevance Actions and Message",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2025-09-17T17:16:36.906+0100",
+  "text": "Added an optional message pop-up of up to 200 characters when marking someone Relevant or Super Relevant in the Meeting Program, with a message icon and details view. Relevance marks can carry a note visible to both sides, and mutual messages are shown together; undoing a mark deletes its message."
+ },
+ {
+  "k": "EP-43871",
+  "summary": "MP || FE Confirmation List Section: Structure & Logic",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2025-09-17T17:17:31.516+0100",
+  "text": "Built the Meeting Program Confirmation List for 1st and 2nd round meetings, with confirm/decline, auto-Pending at deadlines, Confirm All and a progress summary. Participants confirm or decline generated meetings per round, see deadlines, counts and their role, and unanswered meetings turn Pending."
+ },
+ {
+  "k": "EP-43809",
+  "summary": "MP || FE User Cards in Confirmation List",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2025-09-17T17:17:52.434+0100",
+  "text": "Built Meeting Program Confirmation List user cards with match score, role, favourite, sponsored mark and one-time Confirm/Decline buttons. Participants confirm or decline proposed meetings once; cards then show Pending, Confirmed or Declined, and unanswered cards turn Pending when the period ends."
+ },
+ {
+  "k": "EP-43717",
+  "summary": "MP || FE Matches List: Search, Filters & Sorting",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2025-09-17T17:18:18.504+0100",
+  "text": "Defined search, filters and sorting for the Meeting Program Matches list tabs: My Picks, Picked Me, Mutual Matches and Exhibitors. Cards sort by Super Relevant, Relevant then unmarked, each by matchmaking score, with role, match type and delegate or marketplace filters."
+ },
+ {
+  "k": "EP-43872",
+  "summary": "MP || FE Schedule Block in Meeting Program (User)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2025-09-17T17:19:55.503+0100",
+  "text": "Added a personal Schedule block to the participant's Meeting Program view, showing confirmed meetings by block once schedules are sent. Users see their meetings in time order with the other participant, sponsored mark, role and table number, alongside blocked timeslots."
+ },
+ {
+  "k": "EP-44044",
+  "summary": "MP || Decrease tableplacement",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2025-09-17T17:20:47.657+0100",
+  "text": "Sent Meeting Program data to the data science team to optimise table placement. Table placement is optimised to reduce empty slots."
+ },
+ {
+  "k": "EP-41254",
+  "summary": "MP || Sponsored Meetings limit",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Admin Interface",
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2025-09-17T17:21:36.319+0100",
+  "text": "Added a Sponsored meetings limit setting (default on, 30) to the Onsite meetings section of exhibitor category settings for Meeting Program sessions. Organisers cap sponsored meetings per exhibitor category (0 blocks them, off means unlimited); the limit shows on MP session pages, emails and exhibitor settings."
+ },
+ {
+  "k": "EP-42383",
+  "summary": "MP || User info pop-up (Frontend)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2025-09-17T17:21:48.979+0100",
+  "text": "Added a user info pop-up to Meeting Program cards on the front end showing profile, role, interests and matchmaking information. Clicking a user card opens a scrollable pop-up with photo, job, company, role, About, interest categories and a Favorite button."
+ },
+ {
+  "k": "EP-43263",
+  "summary": "MP || Reports for Meeting Program",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2025-09-17T17:22:25.030+0100",
+  "text": "Added a 'Generate XLS Report' button to Meeting Program details producing a multi-tab export of relevance actions, acceptances and meetings. Admins download a timestamped report with per-attendee generated, accepted, rejected and confirmed meeting counts, sponsored and free."
+ },
+ {
+  "k": "EP-45361",
+  "summary": "exhibitor dashboard remove weeks and days filter and set years by default",
+  "epic": null,
+  "components": [
+   "Profile"
+  ],
+  "labels": [],
+  "doneAt": "2025-09-19T09:24:42.871+0100",
+  "text": "Removed the day, week, month and year selector from the exhibitor dashboard Top Performers block. The Top Performers block always shows results based on all-time data."
+ },
+ {
+  "k": "EP-39841",
+  "summary": "App Improvements for Exhibitor Events",
+  "epic": "Hyve Exhibitor Events improvements",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "exev"
+  ],
+  "doneAt": "2025-09-19T10:56:25.515+0100",
+  "text": "Added exhibitor event approval flow to the mobile app: Submit and Cancel request buttons, conflict checks and schedule handling. App users request to join approval-based events, which appear in their schedule at once and are removed if rejected; approved ones show as Scheduled."
+ },
+ {
+  "k": "EP-42572",
+  "summary": "Add caching of auth codes and auth tokens",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-09-19T21:27:56.632+0100",
+  "text": null
+ },
+ {
+  "k": "EP-40080",
+  "summary": "Advanced Filters for Admin Notifications ",
+  "epic": "Hyve Communication improvements",
+  "components": [
+   "Marketing"
+  ],
+  "labels": [
+   "hyvecomms"
+  ],
+  "doneAt": "2025-09-23T10:18:51.388+0100",
+  "text": "Added advanced targeting filters to admin notifications: round table tags, types, tracks and names, and activity filters such as incomplete profiles or no meeting requests. Organisers can target notifications at participants by session participation, profile completeness and meeting or round table activity, with thresholds."
+ },
+ {
+  "k": "EP-45275",
+  "summary": "Error in Autocomplete after incorrect data from back-end",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-09-23T11:44:54.205+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45512",
+  "summary": "Android/ Investigate opportunity update screen view ( OTP LOGIN)  ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-09-24T13:30:51.358+0100",
+  "text": null
+ },
+ {
+  "k": "EP-43557",
+  "summary": "Timepicker and Datepicker different space from right for icon and inside timepicker popper different cursor view",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-09-25T10:49:34.132+0100",
+  "text": null
+ },
+ {
+  "k": "EP-44837",
+  "summary": "Rotating Location Text on Button",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2025-09-25T13:21:11.949+0100",
+  "text": "Made long location text on session, exhibitor event, round table and speed networking detail buttons scroll horizontally in a continuous loop in the app. Attendees can read the full location on the button as it scrolls when it overflows, and it stays static when it fits."
+ },
+ {
+  "k": "EP-45001",
+  "summary": "Added types to the mocks for meeting program",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-09-25T14:57:41.232+0100",
+  "text": null
+ },
+ {
+  "k": "EP-44527",
+  "summary": "Improvements in Meeting Wizard & Exhibitor Profile (Admin Panel)",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2025-09-26T10:38:48.245+0100",
+  "text": "Improved the admin meeting wizard's team member dropdown (A–Z sort, job title, company, search) and the exhibitor profile Team Members table (combined columns, new phone column). Admins find team members quickly when appointing meetings and see name, email, job, company and phone on the exhibitor profile."
+ },
+ {
+  "k": "EP-45600",
+  "summary": "iOS/ Provide Exhibitors events page loading update",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2025-09-30T03:08:49.793+0100",
+  "text": null
+ },
+ {
+  "k": "EP-42717",
+  "summary": "[adminv2] Rewrite LoginForm to TS",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-03T11:34:35.564+0100",
+  "text": null
+ },
+ {
+  "k": "EP-44553",
+  "summary": "[adminv2] added pipeline to the project",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-03T14:51:51.853+0100",
+  "text": null
+ },
+ {
+  "k": "EP-44177",
+  "summary": "[portalUI] Add a limit in the MultipleSelect to avoid unnecessry virtualization ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-03T14:52:51.803+0100",
+  "text": null
+ },
+ {
+  "k": "EP-43235",
+  "summary": "[adminUI] rewrite validation from yup to zod in the LoginForm",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-03T15:10:36.221+0100",
+  "text": null
+ },
+ {
+  "k": "EP-43510",
+  "summary": "[environment variables ] Separate website builder GraphQLApi ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-05T10:22:44.157+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45158",
+  "summary": "Add more tests for the meeting program",
+  "epic": "Hyve Meeting Program",
+  "components": [],
+  "labels": [
+   "MeetingProgram"
+  ],
+  "doneAt": "2025-10-06T07:52:54.977+0100",
+  "text": null
+ },
+ {
+  "k": "EP-44786",
+  "summary": "12-hour based time for Meeting program",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "TechDebt"
+  ],
+  "doneAt": "2025-10-06T07:54:15.400+0100",
+  "text": null
+ },
+ {
+  "k": "EP-43220",
+  "summary": "Move FiltersWrapper to the UI folder and refactor to remove unnecessary wrappers",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-06T07:54:28.679+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45199",
+  "summary": "Because of very long page name page access table could be broken",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-06T08:46:08.215+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45177",
+  "summary": "Unnecessary bg for label in text field",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-06T08:46:27.595+0100",
+  "text": null
+ },
+ {
+  "k": "EP-44426",
+  "summary": "Social networks have no description tooltip in FormBuilder",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-06T08:46:40.301+0100",
+  "text": null
+ },
+ {
+  "k": "EP-44960",
+  "summary": "Remove followCursor for mobile in RestrictionTooltip",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-09T09:16:20.161+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45515",
+  "summary": "[adminUI] Use AI to rewrite children from props into native React children",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-09T10:36:37.659+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45988",
+  "summary": "Fix test on rc after master merge",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-10T10:15:20.615+0100",
+  "text": null
+ },
+ {
+  "k": "EP-44202",
+  "summary": "[portalUI] page is down when ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-10T10:16:59.031+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45564",
+  "summary": "Profile menu does not close on click away and position is wrong ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-10T12:14:51.325+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45748",
+  "summary": "XSS in places where HTML should work",
+  "epic": "Security vulnerabilities",
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-14T09:48:48.941+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45987",
+  "summary": "Reduce number of requests from app to server",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-14T16:27:34.360+0100",
+  "text": null
+ },
+ {
+  "k": "EP-46154",
+  "summary": "Minimize curl open clients in the addToQueue method",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-15T14:46:14.313+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45323",
+  "summary": "Double \"web address\" in link settings on website builder",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-16T08:47:40.470+0100",
+  "text": null
+ },
+ {
+  "k": "EP-41432",
+  "summary": "MP || Pre-registered list. Counters and dashboards (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-16T10:00:12.520+0100",
+  "text": "Added role counters and Connections and Meetings dashboards to the Meeting Program Pre-registered list tab. Organisers see active users by role, relevant, super relevant and mutual relevant counts, and meetings by total, confirmed, pending and declined."
+ },
+ {
+  "k": "EP-45352",
+  "summary": "[portal-ui]: Fix avatar sizes ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-16T11:00:42.526+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45678",
+  "summary": "Rename variable in the MeetingProgramConditions to participantConditions",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-16T12:00:04.246+0100",
+  "text": null
+ },
+ {
+  "k": "EP-42364",
+  "summary": "HYVE - N200 API V2. Error handling and automation",
+  "epic": "HYVE - N200 API V2",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "hyveint"
+  ],
+  "doneAt": "2025-10-20T15:51:49.103+0100",
+  "text": "Added retry automation (six retries, from 15 seconds to 1 hour) to the N200 API V2 integration, plus stakeholder alerts for repeated 500 errors and a daily failed-accounts email. Failed N200 syncs retry automatically, and stakeholders are warned of error spikes and sent daily lists of accounts that could not sync."
+ },
+ {
+  "k": "EP-42362",
+  "summary": "HYVE - N200 API V2. Sync from EP to GES",
+  "epic": "HYVE - N200 API V2",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "hyveint"
+  ],
+  "doneAt": "2025-10-20T15:52:34.359+0100",
+  "text": "Added GES webhook-based real-time updates and a configurable end-of-day push of all accounts from EP back to GES. EP fetches GES updates as they happen and, at the hour the API manager sets, pushes all exhibitors and participants back to GES."
+ },
+ {
+  "k": "EP-42360",
+  "summary": "HYVE - N200 API V2. New version on N200 using V2",
+  "epic": "HYVE - N200 API V2",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "hyveint"
+  ],
+  "doneAt": "2025-10-20T15:53:36.911+0100",
+  "text": "Moved the N200 (GES Visit) integration to the V2 API for pulling and pushing participants and exhibitors, with per-field push-back checkboxes. EP syncs visitors and partners with GES via V2, pushes back chosen field updates, and keeps existing V1 custom functions working."
+ },
+ {
+  "k": "EP-42363",
+  "summary": "HYVE - N200 API V2. New logs",
+  "epic": "HYVE - N200 API V2",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "hyveint"
+  ],
+  "doneAt": "2025-10-20T15:55:02.830+0100",
+  "text": "Added API logs in the admin panel for the native integration, recording time, method, parameters, response and HTTP status of every request. Super Admins can filter integration request logs by any field and time range and export them to XLSX, as with Open API logs."
+ },
+ {
+  "k": "EP-42361",
+  "summary": "HYVE - N200 API V2. Handles of deletes",
+  "epic": "HYVE - N200 API V2",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "hyveint"
+  ],
+  "doneAt": "2025-10-20T15:55:47.425+0100",
+  "text": "Handled GES deletions via API V2: deleted participants are deactivated, and deleted partners are detached with their sponsorship, events, team and products handled. Deletions in GES inactivate participants, cancel their meetings and sessions, and detach exhibitors while cancelling events and deactivating members and products."
+ },
+ {
+  "k": "EP-38283",
+  "summary": "Hide the Maintenance notification",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2025-10-21T09:13:27.263+0100",
+  "text": "Removed the Friday post-release maintenance warning and next-maintenance text from the RC admin and manager admin panels. Admin panels no longer show the maintenance warning, with no leftover space or broken UI."
+ },
+ {
+  "k": "EP-40677",
+  "summary": "[admin panel] Fix location select in Ticketing",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-22T08:21:41.990+0100",
+  "text": null
+ },
+ {
+  "k": "EP-43916",
+  "summary": "MP || FE Email and platform web Notifications",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2025-10-22T10:38:18.668+0100",
+  "text": "Added Meeting Program email and platform notifications for being added, role changes, confirmation rounds, final schedules, rating and removal. Users receive an email and a platform notification at each stage, with variables and a link to the relevant Meeting Program page."
+ },
+ {
+  "k": "EP-43922",
+  "summary": "MP || Display filters extension",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2025-10-22T10:38:40.582+0100",
+  "text": "Extended admin Display Filters with Meeting Program tabs (My Picks, Picked Me, Mutual Matches, Exhibitors) to order, show/hide and restrict filters by category. Organisers configure which filters appear, in what order and for which user categories on each Meeting Program matches list."
+ },
+ {
+  "k": "EP-41459",
+  "summary": "MP || Confirmation list (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:41:02.424+0100",
+  "text": "Built the Meeting Program Confirmation list tab in admin, listing generated or organiser-created meetings with origin and global status. After the first generation, organisers see meeting pairs and their confirmation status, with timeline, filters, Update Data and Create Meeting."
+ },
+ {
+  "k": "EP-41773",
+  "summary": "MP || Tables. Move meeting (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:41:19.324+0100",
+  "text": "Added a 'Move meeting' pop-up on the Meeting Program Tables tab to change a meeting's block, table and timeslot before final schedules are sent. Organisers relocate meetings without clashing with occupied tables, blocked slots or Women Circle tables, and changes flow to schedules."
+ },
+ {
+  "k": "EP-41461",
+  "summary": "MP || Confirmation list. \"Create Meeting\" button and pop-up (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:41:40.959+0100",
+  "text": "Added a 'Create Meeting' button and pop-up to the Meeting Program Confirmation list for manually pairing active participants. Organisers create confirmed meetings, with table and timeslot after placement, blocked when they break self-pairing or same-company rules."
+ },
+ {
+  "k": "EP-41682",
+  "summary": "MP || Schedule (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:41:55.677+0100",
+  "text": "Built the Meeting Program Schedule tab in the admin panel: a per-meeting-block grid of participants by timeslot, with table, badges, blocked slots and 'Create Meeting' cells. From table placement onwards, organisers see every participant's meetings and blocked slots and can fill empty cells."
+ },
+ {
+  "k": "EP-41707",
+  "summary": "MP || Schedule. Filters and Search (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:42:06.243+0100",
+  "text": "Added participant category and role filters and a debounced search by name, company and job title to the Meeting Program Schedule tab. Organisers narrow the Participants column of the selected meeting block by category, role or search term."
+ },
+ {
+  "k": "EP-41731",
+  "summary": "MP || Tables (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:42:17.060+0100",
+  "text": "Built the Tables tab of the admin Meeting Program session page, showing each table's meetings per timeslot by meeting block, with create and move meeting actions. Organisers see the MP schedule by table from the Table Placement checkpoint, with a pinned first column, pagination and create/move actions."
+ },
+ {
+  "k": "EP-41712",
+  "summary": "MP || Schedule, Table. “Create Meeting“ button and pop-up (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:42:28.533+0100",
+  "text": "Added a Create Meeting button and pop-up to the Meeting Program Schedule and Tables views for manually creating meetings, with pairing rules enforced. Organisers can create meetings manually, pre-filled from empty cells, blocked when company, table, timeslot, blocked-time or Women Circle rules are broken."
+ },
+ {
+  "k": "EP-41431",
+  "summary": "MP || Timeline and counters (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:43:06.590+0100",
+  "text": "Added a day-based timeline of Meeting Program checkpoints to admin and frontend session pages, with three admin-only counters for sponsored and confirmed meetings and a countdown. Organisers track each checkpoint, from auto-pull and voting through meeting generation, confirmation, table placement and final schedules, to session end."
+ },
+ {
+  "k": "EP-41325",
+  "summary": "MP || Meeting Program page and MM settings (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:43:35.862+0100",
+  "text": "Added a Meeting Program page and side-menu item to the admin Networking & Matchmaking section, controlled by a new module management toggle. When the module toggle is on, admins get a Meeting Program page in the admin panel; it is off by default."
+ },
+ {
+  "k": "EP-41435",
+  "summary": "MP || Pre-registered list. “Add Users“ button and pop-up (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Admin Interface",
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:43:48.473+0100",
+  "text": "Added an Add Users button and search pop-up to the Meeting Program pre-registered list in the admin panel. Organisers can search active users and add them to a session's pre-registered list, adding it to their schedule, until first meeting generation starts."
+ },
+ {
+  "k": "EP-41378",
+  "summary": "MP || Pre-registered list (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:43:56.562+0100",
+  "text": "Built the Meeting Program session page's Pre-registered list tab in the admin panel, with filters, search, an hourly-updated participant table and remove/add-back actions. Organisers see every session participant with their status and relevance and meeting counters, and can remove, restore or view each person's schedule."
+ },
+ {
+  "k": "EP-41245",
+  "summary": "MP || Roles settings (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Admin Interface",
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:44:17.898+0100",
+  "text": "Added a Role settings step to Meeting Program session configuration with custom role names, label colours, category mapping and limits. Organisers map participant categories to buyer roles, set sponsor and blocked-timeslot limits, and preview role cards; limits lock at first generation."
+ },
+ {
+  "k": "EP-41768",
+  "summary": "MP || Tables. Search (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:44:29.626+0100",
+  "text": "Added table-number search to the Meeting Program Tables tab in the admin panel, scoped to the selected meeting block. Organisers find a table by number as they type."
+ },
+ {
+  "k": "EP-41460",
+  "summary": "MP || Confirmation list. Filters and Search (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2025-10-22T10:44:39.249+0100",
+  "text": "Added filters (created by, status, role, type, Women Circle) and name/company/job title search to the Meeting Program Confirmation list in the admin panel. Organisers narrow the confirmation list to the meetings they need, searching either side of each pair."
+ },
+ {
+  "k": "EP-45904",
+  "summary": "replace IconButton + menu with MenuWithThreeDots in  ExhibitorEventsList.tsx",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-23T11:26:57.284+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45903",
+  "summary": "Replace buttons with box in ExhibitorEventsFormPreview.tsx",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-23T11:28:07.952+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45876",
+  "summary": "Change IconButton with Box in MatchmakingInfoCard",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-23T11:28:46.097+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45782",
+  "summary": "[adminv2] Replace IconButton with Box in components",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-23T11:30:10.682+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45781",
+  "summary": "[adminv2] Replace IconButton with Box in ItemStatisticsCard",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-23T11:30:33.693+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45780",
+  "summary": "[adminv2] Replace IconButton with Box in InteractionsSuppliers",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-23T11:30:53.542+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45779",
+  "summary": "[adminv2] Replace IconButton with Box in AppStatisticsCard",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-23T11:31:50.685+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45774",
+  "summary": "[adminv2] Remove IconButton from ExhibitorAnalyticLeadRating",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-23T11:32:36.755+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45877",
+  "summary": "Replace button with IconButton for mobile devices in MessengerSendInput.tsx",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-24T06:38:45.704+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45565",
+  "summary": "[admin-ui] Move PreviewComponent from GlobalSettingsColorContainer",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-24T06:40:31.411+0100",
+  "text": null
+ },
+ {
+  "k": "EP-46362",
+  "summary": "Fix sanitize html to pass test in rc",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-24T08:18:51.950+0100",
+  "text": null
+ },
+ {
+  "k": "EP-45795",
+  "summary": "Disabled category selection",
+  "epic": "Hyve Q4 (End of October Deliverables)",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [],
+  "doneAt": "2025-10-24T11:40:12.113+0100",
+  "text": "Added a 'Disable category change' registration setting that locks the participant category field in the admin panel for all admins. When enabled, no admin can change any participant's category in the admin panel; it is off by default."
+ },
+ {
+  "k": "EP-45516",
+  "summary": "[expo-react-components] Use AI to rewrite children from props into native React children",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-29T13:41:52.182+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45734",
+  "summary": "[admin-ui] Replace IconButton+Menu with MenuWithThreeDots",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-29T16:05:32.153+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45945",
+  "summary": "[portal ui] Replace ChipList with Tag from expo-components",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-30T07:23:37.868+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46179",
+  "summary": "Refactor Builder edit",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-30T07:24:29.473+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45768",
+  "summary": "Add \"remove styling\" button for TextEditor",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-30T07:24:54.647+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45804",
+  "summary": "Replace MenuWithThreeDotsIcon component with one from expo-react-components in portal and admin",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-30T07:25:43.369+0000",
+  "text": null
+ },
+ {
+  "k": "EP-43543",
+  "summary": "[adminv2] implement mui-tel-input as a phone picker",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-30T07:26:10.401+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45418",
+  "summary": "Information Request email template for participants",
+  "epic": null,
+  "components": [
+   "Marketing",
+   "Profile"
+  ],
+  "labels": [],
+  "doneAt": "2025-10-30T09:37:23.101+0000",
+  "text": "Added a Participant Information Request email template and a Send Information Request button in participant profiles and the participants list menu. Organisers can email a participant a request for missing registration information, with an optional custom message inserted into the template."
+ },
+ {
+  "k": "EP-46515",
+  "summary": "Fix Avatar static icon after children rewrite",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-10-31T10:46:22.030+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46394",
+  "summary": "Header search duplicates filters in marketplace ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-03T08:28:36.016+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45689",
+  "summary": "[Admin panel]: change UpdateListItem reducer id keys",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-03T08:39:27.104+0000",
+  "text": null
+ },
+ {
+  "k": "EP-41570",
+  "summary": "Add the tooltip for the Custom Sponsor limit field",
+  "epic": null,
+  "components": [
+   "Exhibitor Marketplace",
+   "Sponsorship"
+  ],
+  "labels": [],
+  "doneAt": "2025-11-04T12:05:27.125+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45494",
+  "summary": "[PortalUI] Use AI to rewrite children from props into native React children",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-11T13:02:13.788+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45950",
+  "summary": "Phase 1 - HINTE - Genesis World Integration",
+  "epic": "HINTE - Genesis World Integration",
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [],
+  "doneAt": "2025-11-13T10:30:46.026+0000",
+  "text": null
+ },
+ {
+  "k": "EP-34905",
+  "summary": "[InvoicePayment][BE][FE] Invoice Payment for Participants in Registration",
+  "epic": null,
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2025-11-13T10:31:32.650+0000",
+  "text": "Added an 'Allow payment with Invoice in Registration' toggle so participants in the old registration UI can pay by invoice when buying paid items. Invoice registrants get paid sessions scheduled, but the activation email is sent only after the organiser confirms payment in Invoice payments."
+ },
+ {
+  "k": "EP-45794",
+  "summary": "Round tables report",
+  "epic": "Hyve Q4 (End of October Deliverables)",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "qa_review",
+   "qa_testcases_mobile",
+   "qa_testcases_web"
+  ],
+  "doneAt": "2025-11-13T10:40:31.139+0000",
+  "text": "Added a Roundtables Assigned Tables .xlsx report, one row per assigned person, via an Export Data button on each round table session page. After final schedules are sent, organisers can download a timestamped report of attendees with topic, table number, session details and invitation response."
+ },
+ {
+  "k": "EP-45440",
+  "summary": "Integration Hub - Map Your Show",
+  "epic": "Integration HUB - Integrations EPIC",
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "API"
+  ],
+  "doneAt": "2025-11-13T13:01:17.183+0000",
+  "text": "Built a Map Your Show integration in the Integration Hub, fetching exhibitors by ID list via the MYS REST API, with custom fields and product categories mapped. Exhibitor data is imported from Map Your Show, with custom fields mapped by value and product categories mapped via an uploaded Excel file."
+ },
+ {
+  "k": "EP-45773",
+  "summary": "[adminv2] Change Button + IconButton to SplitButton in ExhibitorHeaderActions",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-14T09:33:03.790+0000",
+  "text": null
+ },
+ {
+  "k": "EP-37146",
+  "summary": "Corp site errors in log",
+  "epic": "Corp Site Updates&Improvements",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2025-11-14T09:41:13.978+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46596",
+  "summary": "Date formats depend on locale",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-14T09:58:18.641+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46837",
+  "summary": "[adminUI] Add sentry to the project",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-14T16:55:10.359+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46592",
+  "summary": "[CMPL] Auto Confirm Meetings and Meeting limits Cap function",
+  "epic": null,
+  "components": [
+   "Meeting Program",
+   "Networking",
+   "Website"
+  ],
+  "labels": [
+   "Event",
+   "ExhibitorTeam",
+   "Product",
+   "exhibitors",
+   "website"
+  ],
+  "doneAt": "2025-11-17T09:28:44.831+0000",
+  "text": "Applied exhibitor category meeting limits when auto-confirm meetings is enabled, and showed remaining meetings on the front end. Auto-confirmed meetings are capped at the category limit and the remaining meeting count is displayed."
+ },
+ {
+  "k": "EP-46872",
+  "summary": "Exhibitor Event form, focus on a field with error does not work",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-19T09:02:23.387+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46708",
+  "summary": "Investigate possible options to backup ClickHouse database to meet ISO certification requirements",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "R&D"
+  ],
+  "doneAt": "2025-11-19T10:50:41.585+0000",
+  "text": null
+ },
+ {
+  "k": "EP-43914",
+  "summary": "MP || FE Meeting Program Cards in My Schedule",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2025-11-19T13:48:52.900+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46142",
+  "summary": "Create one preview component",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-20T07:51:53.533+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46984",
+  "summary": "Fix validation error logging in abstract exhibitor integration",
+  "epic": null,
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [],
+  "doneAt": "2025-11-20T11:36:49.640+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46118",
+  "summary": "Add tests for components\\manualV2 components",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-20T13:57:09.290+0000",
+  "text": null
+ },
+ {
+  "k": "EP-44034",
+  "summary": "[portalUI] Change MUI Alert to our custom Alert from UI",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-20T14:01:46.754+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46738",
+  "summary": "Check form render (colspan/rowspan does not apply to cells)",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-24T08:43:20.209+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45853",
+  "summary": "ExpoFP - New stand format in our applications",
+  "epic": null,
+  "components": [
+   "Floor Plan",
+   "Mobile App"
+  ],
+  "labels": [
+   "ExpoFP",
+   "qa_review",
+   "qa_testcases_mobile"
+  ],
+  "doneAt": "2025-11-24T10:34:12.669+0000",
+  "text": "Made the apps honour ExpoFP's 'Map with Hall' setting, matching stands as 'Hall + space + Stand' when it is on. App floor plans link exhibitors to ExpoFP stands in either format, e.g. 'Halle 3.0 G61' or 'G61'."
+ },
+ {
+  "k": "EP-45899",
+  "summary": "Optimize response data for delegate search",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-24T12:12:37.495+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47055",
+  "summary": "Improve click behaviour",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Meeting Program"
+  ],
+  "labels": [
+   "MeetingProgram",
+   "meeting-program"
+  ],
+  "doneAt": "2025-11-24T15:30:57.764+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46886",
+  "summary": "[portalUI] add sentry to the next14",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-24T17:44:08.348+0000",
+  "text": null
+ },
+ {
+  "k": "EP-42860",
+  "summary": "[adminv2] Add a class to change chat position when we have save buttons",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-24T17:46:45.493+0000",
+  "text": null
+ },
+ {
+  "k": "EP-43260",
+  "summary": "[portalUI] add ability to click on the notification in the notification dropdown menu",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-24T17:51:38.911+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46955",
+  "summary": "[portalUI] Add missed keys and languages to the project (IS)",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-11-24T17:55:27.191+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45793",
+  "summary": "Round tables. Table numbers across all topics",
+  "epic": "Hyve Q4 (End of October Deliverables)",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "qa_review"
+  ],
+  "doneAt": "2025-11-27T10:35:22.097+0000",
+  "text": "Changed round table table numbering to one continuous sequence across all topics in a session, reusing freed numbers. Table numbers are unique per session and never shift; new tables take the smallest free number, then continue from the highest."
+ },
+ {
+  "k": "EP-45789",
+  "summary": "Meeting Program report. Relevance Actions per Exhibitor tab extension",
+  "epic": "Hyve Q4 (End of October Deliverables)",
+  "components": [
+   "Reporting"
+  ],
+  "labels": [
+   "qa_review"
+  ],
+  "doneAt": "2025-11-27T11:02:38.207+0000",
+  "text": "Added a 'Sponsored limit' column to the Relevance Actions per Exhibitor tab of the Meeting Program report. The report shows each exhibitor's sponsored meeting limit alongside their relevance actions."
+ },
+ {
+  "k": "EP-45788",
+  "summary": "Meeting Program report . Relevance per Buyer&Participant tab extension",
+  "epic": "Hyve Q4 (End of October Deliverables)",
+  "components": [
+   "Reporting"
+  ],
+  "labels": [],
+  "doneAt": "2025-11-27T11:03:04.227+0000",
+  "text": "Extended the Meeting Program report's relevance tab to include team members and meeting sponsors, and renamed it 'Relevance per User'. The report's 'Relevance per User' tab lists relevance data for all Meeting Program user types."
+ },
+ {
+  "k": "EP-47117",
+  "summary": "N200 Addition of Profile Picture for accounts",
+  "epic": null,
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [],
+  "doneAt": "2025-11-28T23:28:35.719+0000",
+  "text": "Mapped the profilePhotoUrl parameter from the N200 integration to the account profile picture. Accounts pulled from N200 carry the profile picture URL supplied by the vendor."
+ },
+ {
+  "k": "EP-44632",
+  "summary": "/api/v2/participants/{eventId}/list -> Requested Parameter Addition for IMEX",
+  "epic": null,
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "API"
+  ],
+  "doneAt": "2025-12-03T08:53:52.792+0000",
+  "text": "Added retrieval of deleted participant IDs for an event, as a deleted_users option on the participants list API and then as a new endpoint filtered by event and time. API clients can get the EP IDs of participant accounts deleted from an event, optionally within a timeframe."
+ },
+ {
+  "k": "EP-46480",
+  "summary": "Meeting program. Algo change. Free meetings on 1st generation",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [],
+  "doneAt": "2025-12-03T16:34:34.382+0000",
+  "text": "Switched Meeting Program 1st generation to the 2nd-generation algorithm, so it creates free meetings as well as sponsored ones. Both generation runs now produce sponsored and free meetings."
+ },
+ {
+  "k": "EP-45791",
+  "summary": "Meeting Program. Timeline redesign",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [],
+  "doneAt": "2025-12-04T09:45:24.422+0000",
+  "text": "Added System and Platform timeline subtabs to Meeting Program setup, where organisers build a custom, chronological timeline of labelled timepoints. Users see the custom Platform timeline when one exists, otherwise the System timeline."
+ },
+ {
+  "k": "EP-47287",
+  "summary": "Node update on the dev servers",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-12-05T08:58:38.452+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47265",
+  "summary": "Check expoFP integration (queryParpms)",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-12-08T09:35:10.637+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47309",
+  "summary": "[Corp Site]: Integrate sentry",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-12-09T11:37:04.237+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46542",
+  "summary": "Authentication Flow Discovery (All Teams)",
+  "epic": "Authentication Enablement",
+  "components": [
+   "Exhibitor Manual",
+   "Exhibitor Marketplace",
+   "Marketing",
+   "Membership Management",
+   "Networking"
+  ],
+  "labels": [
+   "NewAnalytics"
+  ],
+  "doneAt": "2025-12-09T13:37:27.166+0000",
+  "text": null
+ },
+ {
+  "k": "EP-40327",
+  "summary": "Floorplan integrations refactor",
+  "epic": null,
+  "components": [
+   "Floor Plan"
+  ],
+  "labels": [],
+  "doneAt": "2025-12-10T14:49:04.915+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46710",
+  "summary": "GET - Event List",
+  "epic": "Add new endpoints (v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [],
+  "doneAt": "2025-12-11T10:17:44.671+0000",
+  "text": "Added a GET /api/v3/events endpoint that lists the environment's events, with an optional active filter. API clients can retrieve event IDs, titles, start and end dates and active status, all events or only active ones."
+ },
+ {
+  "k": "EP-46512",
+  "summary": "GET - Exhibitor Categories",
+  "epic": "Add new endpoints (v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [],
+  "doneAt": "2025-12-11T10:19:38.373+0000",
+  "text": "Added a GET /api/v3/exhibitors/{eventId}/categories endpoint returning each exhibitor category's id, name, order number and default flag. API clients can retrieve an event's exhibitor categories in sort order."
+ },
+ {
+  "k": "EP-46511",
+  "summary": "GET - Participant Categories",
+  "epic": "Add new endpoints (v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [],
+  "doneAt": "2025-12-11T10:19:44.703+0000",
+  "text": "Added the GET /api/v3/participants/{eventId}/categories endpoint. The API returns an event's participant categories with id, name, sort order and default flag."
+ },
+ {
+  "k": "EP-39154",
+  "summary": "MP || App part",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe",
+   "qa_review",
+   "qa_testcases_mobile"
+  ],
+  "doneAt": "2025-12-11T12:15:19.311+0000",
+  "text": "Added Meeting Program support to the apps: notifications, placeholder and final meeting cards in My Schedule, a filter and meeting ratings. App users are notified of being added, removed and final schedules, see placeholder then per-meeting cards with table numbers, and rate meetings."
+ },
+ {
+  "k": "EP-47451",
+  "summary": "Android/ Pls update behaviour after tap on \"Log-in\" btn ( details in video) ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2025-12-12T10:12:32.203+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46947",
+  "summary": "[T&I]Feature flag for new Ticketing",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [],
+  "doneAt": "2025-12-17T10:03:43.342+0000",
+  "text": "Added a 'New Ticketing' module toggle to choose between old and new ticketing per event or globally. Organisers switch ticketing versions; each keeps its own tickets and settings, and users' tickets are not lost."
+ },
+ {
+  "k": "EP-45064",
+  "summary": "Accounts - New Endpoint on API V3",
+  "epic": "Add new endpoints (v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "API"
+  ],
+  "doneAt": "2025-12-18T09:44:43.290+0000",
+  "text": "Proposed a new API V3 endpoint, api/v3/account/getcustomquestions, returning all custom questions and options from the visitor registration pipeline by event ID. API clients can fetch an event's custom registration questions and their options."
+ },
+ {
+  "k": "EP-45917",
+  "summary": "Replace Table with Table from expo-components in ProfileRatingsContent",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-12-19T13:13:59.127+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46509",
+  "summary": "Find the source of where such cities might be appearing from",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-12-19T13:52:17.905+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47710",
+  "summary": "[portalUI] hack memory leak in the pipeline",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-12-26T09:12:17.772+0000",
+  "text": null
+ },
+ {
+  "k": "EP-39129",
+  "summary": "[system] move message from discord o the google chat",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-12-26T13:25:45.753+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47541",
+  "summary": "[next14] Fix language inside URL with default settings",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2025-12-29T16:27:44.595+0000",
+  "text": null
+ },
+ {
+  "k": "EP-44306",
+  "summary": " Logic for Scan Badges Page - Lead Capture Pro",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "release-notes-source"
+  ],
+  "doneAt": "2026-01-05T12:47:35.681+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46589",
+  "summary": "Expand Search to Include Descriptions - Mobile App",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "qa_review"
+  ],
+  "doneAt": "2026-01-05T12:47:54.513+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46550",
+  "summary": "[Hyve] Extend Content Settings with Exhibitor events for app",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Mobile App",
+   "Session & Speaker Management"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-05T12:48:21.770+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47201",
+  "summary": "[admin-ui] Fix children key in edit",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-06T07:54:51.235+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47100",
+  "summary": "sentry builder bugs",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-06T07:55:50.956+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46421",
+  "summary": "[next14] Change swiper logic to carousel when not enough slides",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-06T07:56:25.828+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46912",
+  "summary": "[adminUI] Add to apiCall correct response  add type void",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-06T08:45:55.914+0000",
+  "text": null
+ },
+ {
+  "k": "EP-44872",
+  "summary": "Create getIsLocalhost function and use it where it needed",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-06T08:46:31.457+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46201",
+  "summary": "New Autoapproval interface",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-06T10:35:13.450+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46203",
+  "summary": "Required limit when approval process is enabled for Exhibitor events",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-06T10:35:16.369+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46204",
+  "summary": "Autoapproval mechanism",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-06T10:35:52.111+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46207",
+  "summary": "Remove rejection notifications and indication",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-06T10:36:02.306+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46483",
+  "summary": "Attend a stand",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "qa_review"
+  ],
+  "doneAt": "2026-01-06T11:09:32.502+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46566",
+  "summary": "Meeting program. Combine Meeting Blocks into Single Schedule List",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Meeting Program",
+   "Speed Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-06T14:11:29.466+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46565",
+  "summary": "Meeting Program. Remove Image and Description",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-06T14:11:38.524+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46564",
+  "summary": "Meeting Program. Remove User Profile Block",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-06T14:11:49.361+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46487",
+  "summary": "Meeting Program. Replace Icon for Sponsored Meetings",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-06T14:11:58.687+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46486",
+  "summary": "Meeting program. Remove Download Schedule option",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-06T14:12:09.703+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46657",
+  "summary": "Aditus - Exhibitor and Team member data push",
+  "epic": "Integration HUB - Integrations EPIC",
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [
+   "API"
+  ],
+  "doneAt": "2026-01-06T17:47:55.653+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47476",
+  "summary": "iOS/ Update \"About me\" section behaviour inside DELEGATES profiles ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-07T11:13:32.089+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45766",
+  "summary": "Replace IconButton with Rating from MUI in FeedbackRating",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-07T11:22:54.953+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45156",
+  "summary": "wrong component for selected filters in marketplace",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-07T11:23:30.336+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45154",
+  "summary": "Marketplace chat bot has no chat",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-07T11:23:52.874+0000",
+  "text": null
+ },
+ {
+  "k": "EP-44234",
+  "summary": "[portal-ui] make one general component from UserInfoBlock and UserInfoRT",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-07T11:24:58.195+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45081",
+  "summary": "fix src/components/UI/actionButtons/messageButton/MessageButton.tsx",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-07T16:40:26.079+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46827",
+  "summary": "Fix translate in components/profile/common/UploadedMediaFiles.tsx",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-08T08:43:27.558+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47906",
+  "summary": "[CORP SITE]: Broken links in events during pagination",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-09T14:30:18.886+0000",
+  "text": "Fixed broken event links that appeared when paginating listings on the corporate site. Pagination links for events on the corp site now resolve correctly."
+ },
+ {
+  "k": "EP-47311",
+  "summary": "Attend a Stand. App listing using vebview.",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-12T10:29:57.036+0000",
+  "text": null
+ },
+ {
+  "k": "EP-33706",
+  "summary": "Set up push notifications for Speed Networking 2 in iOS and Android",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "qa_review"
+  ],
+  "doneAt": "2026-01-14T15:22:15.519+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47958",
+  "summary": "Add team member role matching to the mapping schema",
+  "epic": "API V3 & Integrations 2026",
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-15T18:38:40.208+0000",
+  "text": "Integrations can now assign HYVE-matched contacts as admins automatically, without downgrading existing admin roles on every resync. Role can be defined via integration settings/mapping; HYVE rule sets admin when member email matches the exhibitor contact; existing roles are preserved on resync when not explicitly mapped."
+ },
+ {
+  "k": "EP-46247",
+  "summary": "Team Member Export File - Addition of a new column \"External QR\"",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Export"
+  ],
+  "doneAt": "2026-01-16T10:15:23.069+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46485",
+  "summary": "Meeting program. Early access for Exhibitors",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-16T10:15:23.069+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47802",
+  "summary": "Fix Basket tests",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-16T10:15:23.069+0000",
+  "text": "Fixed broken automated tests for the Basket feature to restore reliable CI coverage. Basket test suite fixed so CI passes reliably."
+ },
+ {
+  "k": "EP-46473",
+  "summary": "Round tables. Allow to add users to the table after the final schedule",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-19T16:07:16.510+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46474",
+  "summary": "Round tables. Add setting to define the tables limit",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-19T16:07:47.869+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47709",
+  "summary": "[adminv2] Make our test faster",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-20T09:03:21.772+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47385",
+  "summary": "Not properly handled api error in visit integration",
+  "epic": null,
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-20T13:33:31.857+0000",
+  "text": null
+ },
+ {
+  "k": "EP-39228",
+  "summary": "MP || FE Meeting Completion via QR & Badge Scan",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2026-01-20T14:55:11.244+0000",
+  "text": null
+ },
+ {
+  "k": "EP-40448",
+  "summary": "MP || FE Meeting Timeslot Blocking",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "qa_review"
+  ],
+  "doneAt": "2026-01-20T14:55:35.320+0000",
+  "text": null
+ },
+ {
+  "k": "EP-43618",
+  "summary": "Incorrect Sorting of Exhibitors in Parent/Child Structure on Techboard and Team Schedule",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-20T15:22:16.761+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46552",
+  "summary": "Meeting program. Meeting Confirmation Changes",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-21T15:06:54.211+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46563",
+  "summary": "Meeting program. Manual meeting creation improvements",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-21T15:07:22.870+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45729",
+  "summary": "[admin-ui] Replace filter in meeting-wizard with DynamicFilters ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-21T17:11:18.803+0000",
+  "text": null
+ },
+ {
+  "k": "EP-44236",
+  "summary": "[portal-ui] change id=\"modalContent\" to class name in ModalWindow",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-22T08:12:36.676+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48241",
+  "summary": "[admin] Unsupported action types in check in list ('ssn')",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-22T08:19:20.433+0000",
+  "text": "Fixed the check-in admin list to handle the unsupported 'ssn' action type instead of erroring. Support added for the 'ssn' action type in the check-in list admin UI, per the ticket title."
+ },
+ {
+  "k": "EP-48021",
+  "summary": "[portal] Fix \"do not use Array index in keys\"",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-22T08:20:14.935+0000",
+  "text": "Fixed portal code that used array indexes as React keys, a common source of subtle UI rendering bugs. Array-index keys replaced with stable keys across the flagged portal components."
+ },
+ {
+  "k": "EP-46017",
+  "summary": "Change dompurify with sanitize-html",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-22T08:20:39.190+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45979",
+  "summary": "[next14] Move all local/session storage calls into storage and make a check for window exists",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-22T08:21:11.884+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45254",
+  "summary": "SeoModal. Move buttons to ActionButtons prop",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-22T08:23:40.764+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48314",
+  "summary": "Meeting program. Option to disable notification for Meeting program",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Meeting Program"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-22T13:16:05.906+0000",
+  "text": "A toggle now lets organizers fully disable notifications for a specific Meeting Program on Web and App, delivered as an urgent hotfix to meet a HYVE requirement to suppress unwanted meeting alerts. Added a 'Disable notifications' ON/OFF toggle (default OFF) on Meeting Program create/edit settings that suppresses all related Web and App notifications when enabled."
+ },
+ {
+  "k": "EP-48213",
+  "summary": "add to the TS noImplicitReturns",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-22T13:28:05.428+0000",
+  "text": "Enabled TypeScript's noImplicitReturns compiler check to catch functions with inconsistent return paths. noImplicitReturns enabled in the TypeScript config, catching functions with missing return statements."
+ },
+ {
+  "k": "EP-48371",
+  "summary": "Fix tests in admin rc",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-22T15:03:28.218+0000",
+  "text": "Fixed failing tests in the admin panel release-candidate branch to keep the CI pipeline reliable. Admin RC tests fixed so the pipeline passes reliably."
+ },
+ {
+  "k": "EP-48260",
+  "summary": "Reduce db_route connection usage in expoplatform-ws-ValidateUser Lambda",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-22T21:43:45.709+0000",
+  "text": "Added a per-Lambda cache for routing data in ValidateUser, cutting database connections and reducing RDS exhaustion risk under load. The Lambda now caches db_route data per warm container with a configurable TTL, falling back to the database only when the cache is empty or expired, with no functional change to routing behavior."
+ },
+ {
+  "k": "EP-48386",
+  "summary": "Meeting program. Report. All meetings tab. Add extra column about meeting generation",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Meeting Program"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-23T11:35:00.285+0000",
+  "text": "The Meeting Program report's All Meetings tab gained a column showing how each meeting was generated, giving organizers visibility into meeting source for better reporting and analysis. Added an extra column on the All Meetings tab indicating each meeting's generation source."
+ },
+ {
+  "k": "EP-44186",
+  "summary": "Bi-directional Sync Between Favorites and Floorplan Bookmarks",
+  "epic": null,
+  "components": [
+   "Floor Plan"
+  ],
+  "labels": [
+   "DoDUserStory",
+   "qa_review"
+  ],
+  "doneAt": "2026-01-26T11:36:58.541+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46881",
+  "summary": "check sonarQube in the expo-screen",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-26T12:04:50.234+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48517",
+  "summary": "otp resend activation wrong handle on frontend ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-26T16:29:17.753+0000",
+  "text": "Fixed incorrect frontend handling of the OTP resend/activation flow. Frontend OTP resend/activation handling was fixed."
+ },
+ {
+  "k": "EP-46489",
+  "summary": "GET - Check if the Account exists in the environment",
+  "epic": "Add new endpoints (v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-27T12:24:19.199+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46513",
+  "summary": "GET - Visitor Registration Pipeline Custom Questions",
+  "epic": "Add new endpoints (v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-27T12:33:25.257+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46514",
+  "summary": "GET - Exhibitor Registration Pipeline Custom Questions",
+  "epic": "Add new endpoints (v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-27T12:33:37.164+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47797",
+  "summary": "Exhibitor Events. Sorting in Exhibitor Profile",
+  "epic": "Exhibitor profile",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-28T11:01:57.299+0000",
+  "text": "Exhibitor events now appear in a sensible order within the exhibitor profile, so attendees can scan an exhibitor's sessions in a predictable sequence instead of a random list. Deterministic sorting was applied to the exhibitor-events list inside the exhibitor profile."
+ },
+ {
+  "k": "EP-44749",
+  "summary": "Add a new simplified QR Code type to the admin panel: \"Simplified Participant QR\"",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "adminpanel"
+  ],
+  "doneAt": "2026-01-28T12:43:05.367+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45962",
+  "summary": "Create foundation (smaller stories)",
+  "epic": "Foundation of the API",
+  "components": [
+   "Open API"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-28T12:58:36.149+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47919",
+  "summary": "[BE]Networking: Event Organizer can clone Product Category custom filters within an Event so that they don’t have to recreate them manually for each new Event",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-28T16:19:24.936+0000",
+  "text": "Organizers can now clone Product Category custom filters within an event, eliminating the manual rebuild of complex filter sets every time a new event is created or cloned. Backend capability to clone Product Category custom filters within an event during the pre-event phase."
+ },
+ {
+  "k": "EP-47792",
+  "summary": "Messenger. Conversation status filters",
+  "epic": "Communication Channels — Email, Chat & Notifications",
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-01-28T19:03:48.165+0000",
+  "text": "Messenger now lets users filter conversations by status, cutting the time attendees and exhibitors spend hunting through a cluttered inbox to find active or pending threads. Conversation status filters were added to Messenger so users can narrow the thread list by state."
+ },
+ {
+  "k": "EP-48585",
+  "summary": "Show error message in no permission to clipboard",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-29T08:36:38.544+0000",
+  "text": "Added a clear error message when clipboard copy fails due to browser/iframe permission restrictions, instead of failing silently. Users now see an explicit error message when clipboard access is denied, rather than a silent or unclear failure."
+ },
+ {
+  "k": "EP-48225",
+  "summary": "[admin]: Fix index in key",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-29T08:41:19.410+0000",
+  "text": "Fixed admin panel code using array indexes as React keys, a common source of rendering bugs. Array-index keys replaced with stable keys in the flagged admin panel components."
+ },
+ {
+  "k": "EP-45115",
+  "summary": "Add overrides for IconButton and Button",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-29T09:04:29.806+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48694",
+  "summary": "[portalUI] fix issue within the dev mode with memory leak and deployments",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-29T20:56:55.865+0000",
+  "text": "Fixed a memory leak in the portal's dev mode that was affecting deployments. The memory leak in portal dev mode was fixed, improving dev server/deployment stability."
+ },
+ {
+  "k": "EP-48692",
+  "summary": "Skipping invalid color value for *color*",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-30T07:06:51.429+0000",
+  "text": "Fixed handling of invalid color values so they are safely skipped instead of causing errors. Invalid color values are now safely skipped instead of causing errors, per the ticket title."
+ },
+ {
+  "k": "EP-48644",
+  "summary": "Cannot read properties of null (reading 'offsetTop')",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-01-30T07:07:13.438+0000",
+  "text": "Fixed a null-reference JavaScript error ('offsetTop') flagged in production error monitoring. The null-reference bug was fixed, per the ticket title, preventing the error."
+ },
+ {
+  "k": "EP-48732",
+  "summary": "Fix issue with portal/alpha docker build on the bitbucket side",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-02T09:39:38.818+0000",
+  "text": "Fixed a broken portal/alpha Docker build on Bitbucket's CI pipeline. The portal/alpha Docker build issue on Bitbucket was fixed, restoring the CI pipeline."
+ },
+ {
+  "k": "EP-48379",
+  "summary": "[adminUI/portalUI] make deploy with docker contained inside dev server with building on pipeline side",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-02T09:48:42.310+0000",
+  "text": "Moved adminUI/portalUI dev-server deploys to a Docker build done on the pipeline, for more consistent deployments. The deploy process was changed so building happens on the pipeline and the dev server runs the resulting Docker container."
+ },
+ {
+  "k": "EP-39635",
+  "summary": "Add ref and sx to ButtonGroup in SplitButton(expo-components)",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-03T14:06:53.819+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48840",
+  "summary": "Android/ Update search list behaviour ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-03T19:58:33.212+0000",
+  "text": "Fixed Android search results not scrolling into view at the top of the page, an unexpected UX issue raised internally. Search list scroll/positioning behavior was investigated and fixed so results display starting at the top of the page."
+ },
+ {
+  "k": "EP-48066",
+  "summary": "[legacy admin panel] use AI and analyze all views to check translation",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-04T14:49:42.456+0000",
+  "text": "Used AI to find every legacy admin panel text missing translation hooks, paving the way for full localization. An AI-assisted audit identified admin panel views/texts missing translation wiring, to be fixed and translated in follow-up work."
+ },
+ {
+  "k": "EP-39585",
+  "summary": "The discounts should be according to the event time zone",
+  "epic": null,
+  "components": [
+   "Payments"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-05T09:49:19.553+0000",
+  "text": null
+ },
+ {
+  "k": "EP-44267",
+  "summary": "Matchmaking Improvements. Precise Matchmaking",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-05T10:08:52.130+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48886",
+  "summary": "Custom Questions Page UI Improvements (Exhibitor Profile)",
+  "epic": "Exhibitor profile",
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-02-05T10:26:06.172+0000",
+  "text": "UI improvements to the exhibitor-profile Custom Questions page make it easier for exhibitors and organizers to work through custom data capture as part of Lead Intelligence. The Custom Questions page received UI refinements to improve clarity and ease of use within the exhibitor profile."
+ },
+ {
+  "k": "EP-47025",
+  "summary": "Implement EBS snapshots with AWS DLM",
+  "epic": "DS infrastructure and monitoring",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-05T11:10:01.301+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48719",
+  "summary": "Separate login buttons",
+  "epic": "Participant Registration on New UI",
+  "components": [
+   "Authentification"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-02-05T15:49:17.531+0000",
+  "text": "Login now offers two clear paths, SAML SSO for buyers and standard EP login for API-created team members, so both can authenticate. A sign-in modal now offers two options: SAML redirect to the identity provider, or the standard EP login flow."
+ },
+ {
+  "k": "EP-44893",
+  "summary": "Deeplinks for Sessions",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-06T11:19:55.661+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47877",
+  "summary": "Autosave on Lead Capture Form",
+  "epic": "Lead Capture pro settings",
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-06T11:20:56.628+0000",
+  "text": "Lead capture in the mobile booth now autosaves the moment an exhibitor leaves the form, guaranteeing no scanned lead or partial data is ever lost even on flaky venue networks. Lead data now autosaves on exit, back action, app close, or network loss (queued locally and synced), creating or updating a lead and recording engagement."
+ },
+ {
+  "k": "EP-48511",
+  "summary": "Prioritize Exhibitor Search Result Matches by Name",
+  "epic": "Improve Search & Elasticsearch",
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-02-06T11:22:48.292+0000",
+  "text": "Mobile exhibitor search now ranks name matches above description matches, so attendees typing an exhibitor name see the right result at the top instead of scrolling past unrelated hits. Search results are now ordered to prioritise exhibitor-name matches (exact name first) ahead of description matches."
+ },
+ {
+  "k": "EP-48803",
+  "summary": "Failed to execute 'appendChild' on 'Node' in main page",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-06T11:26:13.537+0000",
+  "text": "Fixed a DOM 'appendChild' error on the portal main page reported on mobile Android devices. The appendChild/DOM-injection bug on the main page was fixed, per the ticket title."
+ },
+ {
+  "k": "EP-48800",
+  "summary": "Change logic of Tour button",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-06T11:26:56.323+0000",
+  "text": "Changed the logic behind the Tour button; the ticket does not specify further detail. Tour button logic was changed, per the ticket title."
+ },
+ {
+  "k": "EP-48806",
+  "summary": "Copy filter link does not work after first time ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-06T14:30:17.556+0000",
+  "text": "Fixed the 'copy filter link' feature returning a stale URL after the search filter was changed more than once. The \"copy filter link\" feature now reflects the current filter state correctly on repeated use."
+ },
+ {
+  "k": "EP-42088",
+  "summary": "Add SonarQube to the portal",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-07T15:53:34.696+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46346",
+  "summary": "Remove outdated SN Service artifacts from AWS infra",
+  "epic": "Improve Speed Networking Service",
+  "components": [],
+  "labels": [
+   "TechDebt"
+  ],
+  "doneAt": "2026-02-09T14:10:54.017+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48701",
+  "summary": "[builder] Remove every color except colors object for global settings",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-10T07:42:50.358+0000",
+  "text": "Cleaned up the builder's global color settings to use a single colors object, removing redundant code in the portal's helpers reducer. Global settings color handling was consolidated to a single colors object, and the unneeded object check was removed from helpers.reducer.js in the portal."
+ },
+ {
+  "k": "EP-48919",
+  "summary": "Make hover color for buttons for sign in page",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-10T11:44:05.495+0000",
+  "text": "Added a hover color state to sign-in page buttons for visual consistency. A hover color was added to the sign-in page buttons."
+ },
+ {
+  "k": "EP-42263",
+  "summary": "MP || Sessions list page & details page (Frontend)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-11T10:03:01.794+0000",
+  "text": null
+ },
+ {
+  "k": "EP-43923",
+  "summary": "MP || FE Exhibitor flow",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpfe"
+  ],
+  "doneAt": "2026-02-11T10:07:39.271+0000",
+  "text": null
+ },
+ {
+  "k": "EP-43924",
+  "summary": "MP || FE User flow",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-02-11T10:10:43.675+0000",
+  "text": null
+ },
+ {
+  "k": "EP-41328",
+  "summary": "MP || Meeting Program session creation and configuration (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "mpadmin"
+  ],
+  "doneAt": "2026-02-11T10:11:17.244+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45367",
+  "summary": "Add update_timstamp trigger for speed_networking_timeline",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-11T10:11:42.420+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48851",
+  "summary": "Meeting Program Report — Meeting Ratings in All Meetings Tab",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Meeting Program"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-02-11T11:10:09.068+0000",
+  "text": "Surfacing meeting ratings inside the organizer's All Meetings tab gives event teams an at-a-glance read on meeting quality across the whole programme. The All Meetings tab of the Meeting Program report now displays the rating each meeting received, making quality measurable in one place."
+ },
+ {
+  "k": "EP-46551",
+  "summary": "Meeting program. Split Voting Phase, Hide Mutual Matches, Restructure Tabs",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-11T11:35:01.963+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45178",
+  "summary": "Compare design and implementation of embed video modal (after all modals will be changed from the lib)",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-12T07:15:25.600+0000",
+  "text": null
+ },
+ {
+  "k": "EP-42261",
+  "summary": "~Buttons Block~ - New website builder (ability to use simple components block)",
+  "epic": "Website builder. Custom grids",
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-12T10:20:16.423+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48017",
+  "summary": "Investigate current AI Search service",
+  "epic": "AI Search Service (tools)",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-12T16:00:34.962+0000",
+  "text": "Audited the AI Search service and catalogued key gaps (lost index updates, no chat memory, English-only, untested load, no schema versioning) to plan its next phase. Produced a catalogue of the service's technical debt and improvement areas (Typesense access management, Bedrock region migration, chat history, load testing, search quality, multi-lingual support, schema versioning), setting up scoped follow-on work."
+ },
+ {
+  "k": "EP-47793",
+  "summary": "Timepicker. Scroll Hint",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-02-16T15:56:56.798+0000",
+  "text": "A scroll hint was added to the time picker so users immediately realise more time slots are available below the fold, reducing missed selections when booking meetings. A visual scroll hint cue was introduced on the time picker control."
+ },
+ {
+  "k": "EP-48406",
+  "summary": "[portalUI] Check issue with sentry",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-16T17:12:51.805+0000",
+  "text": "Investigated Sentry dropping portal error data due to a quota limit, to restore reliable error monitoring. The Sentry quota issue on portalUI was investigated and addressed (e.g. via sampling/quota adjustment)."
+ },
+ {
+  "k": "EP-44039",
+  "summary": "[next 14] check and fix tests in particular CalendarWrapper.test",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-16T17:17:58.551+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46143",
+  "summary": "Log request, processing artifacts and service response to database",
+  "epic": "Improve Speed Networking Service",
+  "components": [],
+  "labels": [
+   "MVP"
+  ],
+  "doneAt": "2026-02-18T09:45:59.237+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48773",
+  "summary": "[next14] failed test to fix",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-18T10:32:21.277+0000",
+  "text": "Fixed 57 failing frontend test files (109 cases) surfaced after the Next14 migration, restoring a trustworthy CI test suite. Failing tests across auth, comments, documents, events, filters, lead capture, mixed cards, and meeting program components were fixed by adding missing context providers, correcting style assertions, and fixing async/mock handling."
+ },
+ {
+  "k": "EP-44419",
+  "summary": "Super Admins - Emails can be used when creating accounts using the API",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "API",
+   "admin"
+  ],
+  "doneAt": "2026-02-18T14:15:38.842+0000",
+  "text": null
+ },
+ {
+  "k": "EP-37770",
+  "summary": "Controls for TextEditor inherit theme from Builder",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2026-02-19T04:23:17.756+0000",
+  "text": null
+ },
+ {
+  "k": "EP-45209",
+  "summary": "CustomListingContentManager. Move buttons to ActionButtons (after modals will be changed)",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-19T04:23:44.252+0000",
+  "text": null
+ },
+ {
+  "k": "EP-40616",
+  "summary": "[admin panel] Add limitation to Zone filter in Check-in List ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-19T04:24:48.405+0000",
+  "text": null
+ },
+ {
+  "k": "EP-49326",
+  "summary": "[next14] Docker for redis",
+  "epic": "Fix issues after next update",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-19T08:21:54.171+0000",
+  "text": "Added Dockerized Redis to support the next14 environment as part of the platform upgrade infrastructure. Redis now runs via Docker for the next14 stack."
+ },
+ {
+  "k": "EP-49311",
+  "summary": "[next14] Reach5 auth integration",
+  "epic": "Fix issues after next update",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-19T08:22:23.334+0000",
+  "text": "Fixed/implemented Reach5 auth integration on the new next14 frontend so login keeps working after the Next.js upgrade. Reach5 auth integration implemented/fixed on next14."
+ },
+ {
+  "k": "EP-49351",
+  "summary": "[adminv2] rewrite NameAndDomain.jsx to the tsx",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-19T09:36:41.315+0000",
+  "text": "Rewrote the admin panel's NameAndDomain component to TypeScript as part of the ongoing JS-to-TS migration. NameAndDomain.jsx rewritten as a typed TSX component."
+ },
+ {
+  "k": "EP-47651",
+  "summary": "Website buider. Custom grids main functional",
+  "epic": "Website builder. Custom grids",
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-19T10:34:52.653+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47652",
+  "summary": "Custom grids improvements. Improve base structure and elements placement",
+  "epic": "Website builder. Custom grids",
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-19T10:34:55.169+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47653",
+  "summary": "Custom grids improvements. Change settings placement",
+  "epic": "Website builder. Custom grids",
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-19T10:34:57.718+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47658",
+  "summary": "Custom grids. Improve number of columns display",
+  "epic": "Website builder. Custom grids",
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-19T10:35:00.122+0000",
+  "text": null
+ },
+ {
+  "k": "EP-49347",
+  "summary": "[adminv2] rewrite LocationAndTime.jsx to typescript",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-19T10:35:23.065+0000",
+  "text": "Rewrote the admin panel's LocationAndTime component to TypeScript as part of the ongoing JS-to-TS migration. LocationAndTime.jsx rewritten as a typed TS/TSX component."
+ },
+ {
+  "k": "EP-49553",
+  "summary": "[next14] make alpha/rc/hotFix for next14",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-22T19:20:33.104+0000",
+  "text": "Set up separate alpha/RC/hotfix release channels for next14 to enable safer, more controlled releases. Alpha/RC/hotfix release channels were established for next14."
+ },
+ {
+  "k": "EP-45052",
+  "summary": "Full Offline Support - ExpoFP",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-23T10:25:07.578+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48297",
+  "summary": "Error Handling - Custom Badge Page",
+  "epic": "Mobile App — 2026 Enhancements",
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-02-23T10:26:41.460+0000",
+  "text": "Custom badge errors in the Aditus integration now route users to a clear, localized error page (with German) instead of silently reverting to the native badge, so attendees know what action to take. Users are redirected to appropriate error pages with refined English copy and added German variants for no-connection and no-information cases."
+ },
+ {
+  "k": "EP-49048",
+  "summary": "[Playwright tests] Add ClaudeCode integration to the repository ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-23T12:41:03.439+0000",
+  "text": "Integrated Claude Code into the Playwright test repo so it can analyze the project and suggest improvements. Claude Code was installed and initialized in the Playwright test repository, with an initial project analysis and improvement pass."
+ },
+ {
+  "k": "EP-49479",
+  "summary": "Write a documentation for DEVOPS about building of docker ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-23T13:39:53.499+0000",
+  "text": "Documented the Docker build process for the DevOps team to reduce reliance on tribal knowledge. Documentation on the Docker build process was produced."
+ },
+ {
+  "k": "EP-49623",
+  "summary": "Android/ \"Sponsors\" section title inside RT topic not apply custom translations ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-24T09:10:37.724+0000",
+  "text": "Fixed Android so an organizer's custom name for the Sponsors section also shows correctly inside Round Table topics. Custom translation for the Sponsors section now applies inside RT topics on Android."
+ },
+ {
+  "k": "EP-47930",
+  "summary": "Create Backend Anomaly Detection Service",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-24T15:00:34.071+0000",
+  "text": "Built a new backend service to detect anomalies, though the ticket does not specify what data or behavior it monitors. A new backend anomaly detection service was created, per the ticket title."
+ },
+ {
+  "k": "EP-49001",
+  "summary": "Meeting Program. Show General Buyers During Relevance Stage",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Meeting Program"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-02-25T16:27:46.028+0000",
+  "text": "Showing general buyers during the relevance stage of the Meeting Program widens the pool of potential matches exhibitors can see and engage during matchmaking. The Meeting Program now displays general buyers during the relevance stage, expanding who exhibitors can be matched with."
+ },
+ {
+  "k": "EP-49211",
+  "summary": "Global Force Resync - Shoptalk",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-02-26T13:00:39.845+0000",
+  "text": "Reworking the mobile global force-resync so it no longer logs users out lets organizers fully reset event data mid-event (delivered for Shoptalk) without disrupting attendees. The admin-panel global resync was modified to perform a full reset/resync without logging users out, matching the in-app settings resync functionality."
+ },
+ {
+  "k": "EP-33039",
+  "summary": "[Ticketing&Invoicing] Visibility of Tickets by Country",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [],
+  "doneAt": "2026-02-27T10:57:34.837+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47892",
+  "summary": "API V3 - Meetings Export Migration",
+  "epic": "Add new endpoints (v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "API",
+   "ITT",
+   "Integration"
+  ],
+  "doneAt": "2026-02-27T12:01:56.537+0000",
+  "text": "Meetings export was migrated to the V3 public API with rich filtering and incremental sync, letting integration partners pull meeting data reliably and at scale. Delivered GET /api/v3/meetings with pagination, time/created/modified filters, account filtering and timestamp-based incremental fetch returning ISO8601 data."
+ },
+ {
+  "k": "EP-48752",
+  "summary": "Meeting program. Sorting options for Relevance and opt-ins phases",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Meeting Program"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-02-27T14:40:55.689+0000",
+  "text": "Meeting Program gained sorting options for its Relevance and Opt-in phases, letting organizers order participants meaningfully during matchmaking instead of working from an unsorted list. Added sorting options for the Relevance and opt-in phases of the Meeting Program."
+ },
+ {
+  "k": "EP-49784",
+  "summary": "[next14]: data-styleid is missing from sitebuilder button",
+  "epic": "Fix issues after next update",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-02-27T17:03:58.107+0000",
+  "text": "Restored the missing data-styleid attribute on sitebuilder buttons in next14 so organizers can style them again. data-styleid attribute restored on sitebuilder buttons."
+ },
+ {
+  "k": "EP-49024",
+  "summary": "iOS/ Pls update \"Tickets\" page loading/updating behaviour ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-03-02T04:57:50.970+0000",
+  "text": "Added a loading spinner to the Tickets page update flow so users no longer think the app is frozen when updating. Loading/updating behavior on the Tickets page was improved with proper spinner feedback matching the original design, across iOS and Android."
+ },
+ {
+  "k": "EP-49069",
+  "summary": "Meeting Program. Manual Delete Meetings",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Meeting Program"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-02T13:59:06.578+0000",
+  "text": "Giving organizers a manual delete-meetings control in the Meeting Program lets them clean up incorrect or cancelled meetings directly, without engineering intervention. A manual delete-meetings capability was added to the Meeting Program, with confirmation and schedule views defined in the linked designs."
+ },
+ {
+  "k": "EP-49002",
+  "summary": "Remove Deleted Users From Meeting Program",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Meeting Program"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-02T14:01:39.211+0000",
+  "text": "Automatically removing deleted users from the Meeting Program keeps the matchmaking and scheduling data clean so meetings are not booked against accounts that no longer exist. Deleted users are now stripped from the Meeting Program, so only valid participants appear in matchmaking and meeting data."
+ },
+ {
+  "k": "EP-49073",
+  "summary": "Meeting program. No Show (Admin)",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Meeting Program"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-04T11:45:29.274+0000",
+  "text": "An admin-side No Show capability lets organizers mark meeting no-shows, improving the accuracy of meeting attendance and reporting in the Meeting Program. The Meeting Program admin gained a No Show control (with confirmation/schedule views per the linked designs) to flag missed meetings."
+ },
+ {
+  "k": "EP-45790",
+  "summary": "Meeting program. Remove Mutual matches tab",
+  "epic": "Hyve Q4 (End of October Deliverables)",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-04T12:54:49.061+0000",
+  "text": null
+ },
+ {
+  "k": "EP-49453",
+  "summary": "[next14] turn off request to /auth when token in nulll",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-05T06:41:21.509+0000",
+  "text": "Stopped the server from making an unnecessary auth request when there is no token, cutting wasted server-side calls. Server no longer issues the /auth request when the token is null."
+ },
+ {
+  "k": "EP-49614",
+  "summary": "[next14] slider shift on mount ",
+  "epic": "Fix issues after next update",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-05T06:42:18.466+0000",
+  "text": "Fixed a layout-shift bug where a slider visibly jumped on mount in the next14 frontend. Slider no longer shifts on mount."
+ },
+ {
+  "k": "EP-49075",
+  "summary": "Meeting program. No Show (User)",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Meeting Program"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-05T10:58:30.530+0000",
+  "text": "The user-facing side of No Show lets meeting participants themselves register a counterpart's no-show, feeding attendance accuracy from both sides of each meeting. A user-facing No Show capability was delivered so meeting participants can flag no-shows themselves, complementing the admin control."
+ },
+ {
+  "k": "EP-49913",
+  "summary": "[admin-ui] Rewrite files inside /plugins to TS",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-05T14:58:38.506+0000",
+  "text": "Rewrote files inside the admin panel's /plugins folder to TypeScript as part of the ongoing JS-to-TS migration. Files inside /plugins rewritten in TypeScript."
+ },
+ {
+  "k": "EP-47917",
+  "summary": "[BE] Admin Panel: Organizer can click save/apply changes to Event configuration without page redirection so that work across entities is uninterrupted",
+  "epic": "Admin Panel Restructure & Navigation",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [],
+  "doneAt": "2026-03-05T15:14:21.260+0000",
+  "text": "Saving or applying changes across key Admin Panel modules no longer kicks organizers off the page, removing constant rework and navigation loss while they configure an event. Backend support so Save/Apply preserves the current view in Exhibitor Manual-Vendors, Marketing (News, Slugs, Campaigns) and the Mobile app builder."
+ },
+ {
+  "k": "EP-49077",
+  "summary": "Round Tables. Remove Deleted Users from Sessions",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Round Tables"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-06T08:55:22.532+0000",
+  "text": "Removing deleted users from Round Tables sessions keeps networking session rosters clean so deleted accounts no longer occupy seats or distort session data. Deleted users are now removed from Round Tables sessions, so only valid participants remain on session rosters."
+ },
+ {
+  "k": "EP-50054",
+  "summary": "Integration Hub – ensure account username is updated when email changes",
+  "epic": null,
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [],
+  "doneAt": "2026-03-06T14:44:05.660+0000",
+  "text": "Fixed Integration Hub to keep account username in sync with email changes, and added tests/docs so login/matching doesn't break. Username now updates in sync with email changes (when username was email-derived), conflicts are handled safely, and the behavior is documented and covered by tests."
+ },
+ {
+  "k": "EP-49318",
+  "summary": "Adding additional login option on mobile app",
+  "epic": "Mobile App — 2026 Enhancements",
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-10T13:04:31.100+0000",
+  "text": "Adding a configurable second external login button to the mobile app lets a client offer attendees an alternate webview-based sign-in path, satisfying a specific customer requirement. A second external login button was added to the native login screen (type 'Both'), opening the existing webview login flow with configurable label/colour, plus new App Builder/API settings to control it."
+ },
+ {
+  "k": "EP-49770",
+  "summary": "[admin-ui] Rewrite ProfileCard.jsx to TS",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-10T16:31:42.047+0000",
+  "text": "Rewrote the admin panel's ProfileCard component to TypeScript as part of the ongoing JS-to-TS migration. ProfileCard.jsx rewritten in TypeScript."
+ },
+ {
+  "k": "EP-47499",
+  "summary": "Adding a column for \"is_new\" field to the exhibitor export file",
+  "epic": null,
+  "components": [
+   "Admin Interface",
+   "Data Collection Pipelines",
+   "Online Registration"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-11T11:27:47.266+0000",
+  "text": null
+ },
+ {
+  "k": "EP-49884",
+  "summary": "Fix EP-32657 and apply changes to NEXT12",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-11T12:20:24.725+0000",
+  "text": "Backported the EP-32657 fix to NEXT12 to keep that version consistent with other platform versions. The EP-32657 fix was applied to NEXT12."
+ },
+ {
+  "k": "EP-49764",
+  "summary": "[admin-ua]: rewrite /EventForm to ts",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-11T16:26:10.356+0000",
+  "text": "Rewrote the admin panel's EventForm to TypeScript as part of the ongoing JS-to-TS migration. EventForm rewritten in TypeScript."
+ },
+ {
+  "k": "EP-47038",
+  "summary": "Translation: please apply the missing system translations",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-11T17:47:03.804+0000",
+  "text": null
+ },
+ {
+  "k": "EP-49767",
+  "summary": "[admin-ui] Rewrite Tabs.jsx to ts",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-12T09:57:41.034+0000",
+  "text": "Rewrote the admin panel's Tabs component to TypeScript as part of the ongoing JS-to-TS migration. Tabs.jsx rewritten in TypeScript."
+ },
+ {
+  "k": "EP-49879",
+  "summary": "Change meeting rating trigger in app",
+  "epic": "Improve Meetings & Scheduling",
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-12T10:05:05.379+0000",
+  "text": "Meeting ratings now surface in the mobile app as soon as attendees receive their final schedule, capturing feedback earlier in the meeting-program lifecycle. Ratings become available for each meeting at the moment it appears in the app via the Final Schedule, rather than only after the program concludes."
+ },
+ {
+  "k": "EP-50053",
+  "summary": "Add Unit Test report to Sonar for adminUI",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-12T11:15:33.440+0000",
+  "text": "Wired adminUI's unit test reports into SonarQube so coverage, bugs and code issues are visible for that project. adminUI unit test coverage now tracked in SonarQube."
+ },
+ {
+  "k": "EP-49768",
+  "summary": "[admin-ui] Rewrite ShowObject.jsx to TS",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-12T11:51:10.205+0000",
+  "text": "Rewrote the admin panel's ShowObject component to TypeScript as part of the ongoing JS-to-TS migration. ShowObject.jsx rewritten in TypeScript."
+ },
+ {
+  "k": "EP-48618",
+  "summary": "CDS - Participant Integration with Pagination",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-12T14:56:15.769+0000",
+  "text": "The CDS participant integration now supports paginated pulls with full field mapping and admin-configurable parameters, enabling reliable large-volume registration sync for the client. Implemented paginated participant import mapping reg fields to participant data, email-based update matching, and admin-panel settings for OrderType and IncludeItems."
+ },
+ {
+  "k": "EP-45970",
+  "summary": "Refactor Meeting request module for React 18 ",
+  "epic": "Improve Meetings & Scheduling",
+  "components": [
+   "Online Meetings & Webinars"
+  ],
+  "labels": [],
+  "doneAt": "2026-03-13T10:50:10.406+0000",
+  "text": null
+ },
+ {
+  "k": "EP-48874",
+  "summary": "Client Manager: Show persistent banner in Admin Panel during event cloning to prevent changes",
+  "epic": "Admin Panel Restructure & Navigation",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-16T09:17:52.109+0000",
+  "text": "A persistent, non-blocking banner now warns admins not to edit an event while it is being cloned, eliminating a recurring source of data corruption. A fixed informational banner is shown across all Admin Panel module pages of the source event while cloning runs, telling users not to make changes until it completes."
+ },
+ {
+  "k": "EP-49221",
+  "summary": "Participant Profile Completion Calculation Update",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Profile"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-16T14:11:21.360+0000",
+  "text": "Updating how participant profile completion is calculated gives organizers and attendees a more accurate completeness score that drives profile-quality nudges. The participant profile-completion calculation logic was updated to produce a more accurate completion value."
+ },
+ {
+  "k": "EP-49223",
+  "summary": "Profile Completion Column in Export Reports (Participants)",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Reporting"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-16T14:12:35.295+0000",
+  "text": "Adding a profile-completion column to participant export reports lets organizers analyse and act on profile quality outside the platform, in their own reporting flows. Exported participant reports now include a Profile Completion column."
+ },
+ {
+  "k": "EP-49202",
+  "summary": "Admin panel. Profile completition in Participants list",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-16T14:13:56.043+0000",
+  "text": "Showing each participant's profile-completion status in the admin Participants list lets organizers spot incomplete profiles at a glance and chase richer attendee data. The admin-panel Participants list now displays profile completion for each participant."
+ },
+ {
+  "k": "EP-45958",
+  "summary": "API - Check-in data",
+  "epic": "Add new endpoints (v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "API",
+   "DoDUserStory",
+   "ITT",
+   "Integration"
+  ],
+  "doneAt": "2026-03-16T15:03:37.151+0000",
+  "text": null
+ },
+ {
+  "k": "EP-47931",
+  "summary": "Refactor profile team members page",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-17T09:34:56.820+0000",
+  "text": "Refactored the exhibitor profile's team members page for maintainability; no further detail specified in the ticket. The team members page in the exhibitor profile was refactored."
+ },
+ {
+  "k": "EP-49803",
+  "summary": "Prioritizing name matches over description matches",
+  "epic": "Qdrant Pilot (IMEX)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-17T11:51:01.502+0000",
+  "text": "Reworked AI exhibitor search so exact partner name matches outrank coordinators that merely mention the term in their description, ensuring buyers at IMEX land on the right company. Introduced hybrid name-priority scoring on top of semantic search so name-field matches always score above description-level hits across exhibitor entities."
+ },
+ {
+  "k": "EP-49808",
+  "summary": "No alias or multi-lingual variant handling",
+  "epic": "Qdrant Pilot (IMEX)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-17T13:56:00.935+0000",
+  "text": "Added cultural-name and diacritic tolerance to AI search so endonym/exonym variants (e.g. 'Italia' for 'Italy') return the right exhibitors. Combined semantic similarity with ascii_folding character normalisation so common language variants and diacritic differences surface relevant results instead of zero results."
+ },
+ {
+  "k": "EP-46911",
+  "summary": "Log Info/API logs refactor",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-17T15:46:34.063+0000",
+  "text": null
+ },
+ {
+  "k": "EP-38749",
+  "summary": "Need add some loader in \"Team members\" ( contacts) section on exhibitor public profile page ",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-03-17T17:37:47.789+0000",
+  "text": null
+ },
+ {
+  "k": "EP-49771",
+  "summary": "Clear cache for builder after save",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-19T07:29:41.222+0000",
+  "text": "Fixed the site builder to clear its cache after save so organizers immediately see their changes take effect. Builder cache is now cleared automatically after save."
+ },
+ {
+  "k": "EP-47929",
+  "summary": "Changing the sourse URL for the external floor plan (ExpoFP)",
+  "epic": null,
+  "components": [
+   "Floor Plan"
+  ],
+  "labels": [],
+  "doneAt": "2026-03-19T09:54:59.275+0000",
+  "text": "Tested a new ExpoFP floor-plan source URL live at Agritechnica 2025 to see if web and mobile can stay in sync on future SDK updates. An investigation into whether switching the floor-plan source URL on the live event causes display or functionality issues, informing whether web can be kept in sync going forward."
+ },
+ {
+  "k": "EP-43368",
+  "summary": "[portalUi] remove Yup from project",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-19T10:22:35.978+0000",
+  "text": null
+ },
+ {
+  "k": "EP-50317",
+  "summary": "Name matches not prioritized in autocomplete suggestion results",
+  "epic": "Qdrant Pilot (IMEX)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-19T21:23:06.848+0000",
+  "text": "Search autocomplete now prioritises name matches over description matches, so attendees see the most relevant entity at the top of suggestion results. Autocomplete ranking was changed so name matches are prioritised over description matches across and within entity types."
+ },
+ {
+  "k": "EP-49805",
+  "summary": "Overlenient substring matching pulling in noise",
+  "epic": "Qdrant Pilot (IMEX)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-20T09:18:38.737+0000",
+  "text": "Routed partial-name typeahead through a dedicated fast autocomplete endpoint so over-lenient substring matching no longer floods AI search with noise. Added a separate prefix-indexed /autocomplete endpoint (~50ms) that keeps noisy substring behaviour out of full search and surfaces clean name suggestions."
+ },
+ {
+  "k": "EP-49807",
+  "summary": "Spaces and special characters breaking name matches",
+  "epic": "Qdrant Pilot (IMEX)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-20T09:26:52.293+0000",
+  "text": "Made AI search resilient to spacing and special-character differences so a query like 'Visit Scotland' still finds 'VisitScotland'. Tokeniser handling was fixed so spaced and unspaced/concatenated brand-name variants resolve to the correct exhibitor in top results."
+ },
+ {
+  "k": "EP-49809",
+  "summary": "Coordinator/partner ranking hierarchy",
+  "epic": "Qdrant Pilot (IMEX)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-20T09:29:28.375+0000",
+  "text": "Encoded the coordinator/partner hierarchy into AI search so exhibitor results follow a consistent parent/child ranking order. Extracted the parent/child relationship from PostgreSQL into the Qdrant payload during ingestion, enabling coordinator-exact, partner-exact, coordinator-fuzzy, partner-fuzzy ordering."
+ },
+ {
+  "k": "EP-49812",
+  "summary": "Weak recovery states/dead ends",
+  "epic": "Qdrant Pilot (IMEX)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-20T10:50:41.889+0000",
+  "text": "Replaced empty AI-search dead-ends with helpful 'Did you mean...?' and category fallback prompts so buyers always have a next step. Added fallback handling so a no-results query surfaces a no-results message with 'Did you mean...?' suggestions and category prompts rather than an empty page."
+ },
+ {
+  "k": "EP-50477",
+  "summary": "IMEX demo CR",
+  "epic": "Qdrant Pilot (IMEX)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-20T10:54:45.874+0000",
+  "text": "Tuned the AI search prototype ahead of the IMEX demo so 'did you mean' suggestions, gibberish handling and result counts behaved correctly, protecting a high-visibility client showcase. Suggestion logic, no-match handling and result-count display were corrected for the demo build."
+ },
+ {
+  "k": "EP-50158",
+  "summary": "Profile Picture sync in GES/Visit integration",
+  "epic": "Native Integrations - Migrations",
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-20T14:12:22.898+0000",
+  "text": "Attendee profile pictures now sync back to the GES/Visit integration with EP as the source of truth, keeping partner systems visually consistent with the EP platform. A profile-picture push-back capability was implemented for the GES/Visit integration, with profile pictures excluded from update mappings to prevent infinite update loops."
+ },
+ {
+  "k": "EP-47163",
+  "summary": "TechDept for bug 46482 Unable to import news articles using excel - African Buyers Programme",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-20T16:21:30.294+0000",
+  "text": null
+ },
+ {
+  "k": "EP-50560",
+  "summary": "Android/ Pls create impute field for OCR scan debug-mode build ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-03-21T07:09:09.122+0000",
+  "text": "Added a manual input field for OCR scan debugging on Android, matching the existing simple-scan debug tool. Android debug builds now expose a manual input field for OCR scans, matching the simple-scan debug experience."
+ },
+ {
+  "k": "EP-50621",
+  "summary": "Android/ Burger menu closes on background sync ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-03-23T14:43:50.420+0000",
+  "text": "Fixed the Android app so background sync no longer force-closes the burger menu mid-navigation. The burger menu now stays open during background sync, with menu-related updates applied the next time it's opened."
+ },
+ {
+  "k": "EP-46045",
+  "summary": "Implement calculation of Matching Score and providing recommendations via API",
+  "epic": "Recreate category-based Recommendation Service",
+  "components": [
+   "Recommendation Service"
+  ],
+  "labels": [
+   "MVP",
+   "R&D"
+  ],
+  "doneAt": "2026-03-24T09:32:46.290+0000",
+  "text": null
+ },
+ {
+  "k": "EP-46044",
+  "summary": "Database Setup for new Recommendation Service",
+  "epic": "Recreate category-based Recommendation Service",
+  "components": [
+   "Recommendation Service"
+  ],
+  "labels": [
+   "MVP",
+   "R&D"
+  ],
+  "doneAt": "2026-03-24T09:33:48.183+0000",
+  "text": null
+ }
+]

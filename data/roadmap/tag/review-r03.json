@@ -1,0 +1,1202 @@
+[
+ {
+  "k": "EP-50105",
+  "summary": "Email Templates Management for Speed Networking, Meeting Program, and Concierge Meetings in Admin Panel",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Centralised meeting formats admin",
+  "text": "Email templates tabs for Speed Networking, Meeting Program and Concierge Meetings inside Meeting Formats; Concierge's general templates stay in sync both ways. Existing templates move with their triggers intact, and edits stay scoped to the event."
+ },
+ {
+  "k": "EP-50107",
+  "summary": "Email Templates Management for Exhibitor Events and Round Tables in Meeting Formats",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Centralised meeting formats admin",
+  "text": "Email templates tabs for Exhibitor Events and Round Tables inside Meeting Formats; shared templates warn before a save affects other places. Exhibitor Events' organiser and exhibitor notifications move to their format; shared templates show where else they're used."
+ },
+ {
+  "k": "EP-50109",
+  "summary": "Enhancements to Exhibitor Events Management in Meeting Formats for Organizers",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Centralised meeting formats admin",
+  "text": "Exhibitor Events get their own section in Meeting Formats: events list and create, speakers and moderators, config, and tags, tracks and types. Exhibitor events are managed apart from sessions; edits to shared speakers, tags or settings show a 'used in other locations' warning."
+ },
+ {
+  "k": "EP-50110",
+  "summary": "Independent Management for Round Tables in Admin Panel",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Centralised meeting formats admin",
+  "text": "Round Tables get their own section in Meeting Formats: list and create, moderators, config, and tags, tracks and types, separate from sessions. Round tables are managed on their own, with exhibitor-event-only columns hidden and warnings when shared data is edited."
+ },
+ {
+  "k": "EP-50129",
+  "summary": "Restructure Module Management for Meeting Format",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Centralised meeting formats admin",
+  "text": "Module Management gets a Meeting Formats group with a toggle each for Speed Networking, Meeting Program, Concierge Meetings, Exhibitor Events and Round Tables. Organisers switch each meeting format on or off independently; existing events keep their current state."
+ },
+ {
+  "k": "EP-50569",
+  "summary": "Meeting Program. Optionally extending Participation Conditions for Team Members ",
+  "epic": "Hyve Q1.26 delievery",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "An 'Also use for team members' option applies Meeting Program participation conditions to team members and meeting sponsors too. Organisers can limit which team members enter a meeting programme, for example by participant category."
+ },
+ {
+  "k": "EP-4670",
+  "summary": "apidoc.php || generating of documentation",
+  "epic": null,
+  "theme": "integ",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Extended the API documentation generator so responses can describe and link the object types they return. Generated API docs can reference response object types."
+ },
+ {
+  "k": "EP-10500",
+  "summary": "Create one component which will control all available integrations for project",
+  "epic": null,
+  "theme": "integ",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Created one component to control all integrations available for a project. Integrations are managed from a single component."
+ },
+ {
+  "k": "EP-11236",
+  "summary": "Meeting request swager documentation",
+  "epic": null,
+  "theme": "integ",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Wrote Swagger documentation with test data for meeting requests. Meeting request endpoints are documented in Swagger."
+ },
+ {
+  "k": "EP-14521",
+  "summary": "Add more data to  the swagger documentation",
+  "epic": null,
+  "theme": "integ",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Extended the Swagger API docs with every response and error code per endpoint, tabbed sections, and a redirect from the old docs. Developers use one Swagger reference with full responses and errors; the old docs are internal only."
+ },
+ {
+  "k": "EP-14631",
+  "summary": "Enabled Vivaticket option in general options leads to 503 error",
+  "epic": null,
+  "theme": "integ",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Stopped the general settings page returning 503 when the Vivaticket service doesn't respond. General settings open even when Vivaticket is down."
+ },
+ {
+  "k": "EP-15325",
+  "summary": "Uncaught Exception: Not authorized in /var/www/expo_backend/app/plugins/AventriV2Api.php:78",
+  "epic": null,
+  "theme": "integ",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Handled authorisation failures in the Aventri visitor sync worker. Aventri sync failures are handled instead of crashing."
+ },
+ {
+  "k": "EP-21351",
+  "summary": "/api/v2/sessions/get - Parameters \"speakers\" and \"moderators\"",
+  "epic": null,
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Public API sessions",
+  "text": "Changed the speakers and moderators parameters in the v2 sessions API to arrays of IDs. Sessions API returns speaker and moderator ID arrays."
+ },
+ {
+  "k": "EP-26245",
+  "summary": "Improve transmission of exhibitor stands to the EP via API, so remain posibility to replace them",
+  "epic": null,
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Stand sync via API",
+  "text": "Updated scheduled meeting locations automatically when exhibitor halls and stands change via the API, without replacement parameters. Meeting locations follow stand changes pushed via API and integrations."
+ },
+ {
+  "k": "EP-30037",
+  "summary": "ASP Exhibitor Integration - Send Email Functionality",
+  "epic": null,
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "ASP integration",
+  "text": "Added an option to the ASP exhibitor integration to email newly created exhibitors their password automatically. Exhibitors created via ASP get their password email."
+ },
+ {
+  "k": "EP-32423",
+  "summary": "Gather exhibitor changes and send them to the ExpoFP together once in 10 minutes",
+  "epic": null,
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "ExpoFP floor plan sync",
+  "text": "Batched exhibitor changes to ExpoFP every 10 minutes, using a new table that links platform records to external integration IDs. ExpoFP receives exhibitor changes in batches, and integrations can track external IDs."
+ },
+ {
+  "k": "EP-34460",
+  "summary": "ExpoFP/CrowdConnected settings during app creation",
+  "epic": null,
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "ExpoFP and Crowd Connected app setup",
+  "text": "Added ExpoFP and Crowd Connected flags to app config so their SDKs and permissions are included only when an event uses them. Apps include ExpoFP and Crowd Connected only when enabled."
+ },
+ {
+  "k": "EP-37085",
+  "summary": "Delete unused parameters in /api/v1/exhibitor/1985/sponsorshipInfo",
+  "epic": null,
+  "theme": "integ",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed unused parameters from the exhibitor sponsorship info endpoint. The endpoint returns only banners and the online room video."
+ },
+ {
+  "k": "EP-39249",
+  "summary": "ExpoFP | Refactor",
+  "epic": null,
+  "theme": "integ",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored the ExpoFP integration: CloudWatch logs of sent and received data and settings, plus a resynchronise button. ExpoFP syncs are traceable and can be re-run from settings."
+ },
+ {
+  "k": "EP-44419",
+  "summary": "Super Admins - Emails can be used when creating accounts using the API",
+  "epic": null,
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Public API account creation",
+  "text": "Blocked the v2 account API from creating accounts with an email already used by an admin. The API rejects emails already taken by admins."
+ },
+ {
+  "k": "EP-44694",
+  "summary": "Custom Badge Page with Aditus - Reinstate the Settings on Admin Panel",
+  "epic": null,
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Aditus participant integration",
+  "text": "Reinstated the Aditus custom badge page setting in the admin panel. Admins can enable the Aditus badge page again."
+ },
+ {
+  "k": "EP-45065",
+  "summary": "Exhibitors - New Endpoint on API V3",
+  "epic": "Add new endpoints (v3)",
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Public API v3",
+  "text": "Proposed an API endpoint to fetch exhibitor registration custom questions, to be defined with API v3. The endpoint was scoped for API v3."
+ },
+ {
+  "k": "EP-45439",
+  "summary": "Integration HUB Migration - A2Z",
+  "epic": "Integration HUB - Integrations EPIC",
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Native integration hub",
+  "text": "Migrated the A2Z (Map Your Show) integration to the integration hub, pulling exhibitors, categories, custom fields and contacts. A2Z imports run through the integration hub."
+ },
+ {
+  "k": "EP-45958",
+  "summary": "API - Check-in data",
+  "epic": "Add new endpoints (v3)",
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Public API v3",
+  "text": "Added a check-in data endpoint to the API with pagination, time filters and check-in fields. Check-in data can be pulled through the API."
+ },
+ {
+  "k": "EP-45962",
+  "summary": "Create foundation (smaller stories)",
+  "epic": "Foundation of the API",
+  "theme": "integ",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Built the Public API v3 foundation: routing, tests, documentation standards, Swagger, entry point and monitoring. New API v3 endpoints can be added on a documented, monitored base."
+ },
+ {
+  "k": "EP-46288",
+  "summary": "Integration HUB Migration - Aventri V2",
+  "epic": "Integration HUB - Integrations EPIC",
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Native integration hub",
+  "text": "Migrated the Aventri (Stova) integration to the integration hub, keeping its functions and default field mapping. Aventri imports run through the integration hub."
+ },
+ {
+  "k": "EP-46489",
+  "summary": "GET - Check if the Account exists in the environment",
+  "epic": "Add new endpoints (v3)",
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Public API v3",
+  "text": "Added a v3 participants lookup endpoint returning every event instance of an account by ID, external ID or email. Integrations can check whether an account exists."
+ },
+ {
+  "k": "EP-46513",
+  "summary": "GET - Visitor Registration Pipeline Custom Questions",
+  "epic": "Add new endpoints (v3)",
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Public API v3",
+  "text": "Added a v3 endpoint returning visitor registration custom questions and options. Integrations can read visitor registration questions."
+ },
+ {
+  "k": "EP-46514",
+  "summary": "GET - Exhibitor Registration Pipeline Custom Questions",
+  "epic": "Add new endpoints (v3)",
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Public API v3",
+  "text": "Added a v3 endpoint returning exhibitor registration custom questions and options. Integrations can read exhibitor registration questions."
+ },
+ {
+  "k": "EP-46657",
+  "summary": "Aditus - Exhibitor and Team member data push",
+  "epic": "Integration HUB - Integrations EPIC",
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Aditus integration",
+  "text": "Pushed exhibitor and team member admin data to Aditus, with SSO so admins add team members there. Exhibitors are created in Aditus and their team flows back."
+ },
+ {
+  "k": "EP-46776",
+  "summary": "CDS - Participant Integration",
+  "epic": "Integration HUB - Integrations EPIC",
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "CDS integration",
+  "text": "Built a participant integration with the CDS registration system, with a field mapping. Participants can be imported from CDS."
+ },
+ {
+  "k": "EP-46984",
+  "summary": "Fix validation error logging in abstract exhibitor integration",
+  "epic": null,
+  "theme": "integ",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Logged validation errors in the exhibitor integration base class. Failed exhibitor imports show their reason."
+ },
+ {
+  "k": "EP-47099",
+  "summary": "Integration HUB Migration - Infosalon/Aditus",
+  "epic": "Native Integrations - Migrations",
+  "theme": "integ",
+  "include": true,
+  "exclude": null,
+  "feature": "Native integration hub",
+  "text": "Migrated the InfoSalons/Aditus integration to the integration hub, keeping its functions and default mapping. Aditus imports run through the integration hub."
+ },
+ {
+  "k": "EP-47265",
+  "summary": "Check expoFP integration (queryParpms)",
+  "epic": null,
+  "theme": "integ",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Checked query parameter handling in the ExpoFP floor plan integration. The integration's query handling was reviewed."
+ },
+ {
+  "k": "EP-47385",
+  "summary": "Not properly handled api error in visit integration",
+  "epic": null,
+  "theme": "integ",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Reported expected Visit integration API errors in the integration errors report instead of general backend errors. Integration errors appear where admins look for them."
+ },
+ {
+  "k": "EP-3962",
+  "summary": "Refactoring meetings statuses",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored meeting statuses in the new and old frontends. Meeting status handling was reworked across both frontends."
+ },
+ {
+  "k": "EP-6281",
+  "summary": "Table meeting setup and meeting cards improvements in app",
+  "epic": null,
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting booking and management",
+  "text": "Adapted the app to the new meeting wizard and table meetings: confirmed admin-created meetings, a meeting-type choice, zone and table selection. In the app, admin-created meetings show as confirmed and marked as organiser-created, and table meetings are booked by zone, timeslot and table."
+ },
+ {
+  "k": "EP-10872",
+  "summary": "Refactoring api for app with appointsments.",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored the app API for cancelling and confirming appointments to use the Schedule service, removing an unused check action. App appointment actions share the Schedule service."
+ },
+ {
+  "k": "EP-10875",
+  "summary": "Optimization in ScheduleService -> checkTimes function",
+  "epic": null,
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Optimised the schedule time check so the time service is initialised once instead of twice. Meeting time checks do less repeated work."
+ },
+ {
+  "k": "EP-14413",
+  "summary": "Meetings location (stands) refactoring",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Linked meetings to stands through a stand ID instead of a free-text location, migrating existing meetings. Meeting locations come from the linked stand, with free text only for other locations."
+ },
+ {
+  "k": "EP-15039",
+  "summary": "Fix meeting request modal open on admin panel and Zone Add available time inputs clear",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed opening the meeting request modal in the admin panel and clearing zone available-time inputs. Zone time inputs clear properly and the modal opens."
+ },
+ {
+  "k": "EP-15244",
+  "summary": "Appointment redirection from Old UI",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Redirected users from old frontend meeting, schedule and meeting request pages to the new frontend when the new pages are enabled. Events on the new UI always open the new meeting and schedule pages."
+ },
+ {
+  "k": "EP-15544",
+  "summary": "Refactoring delete appointments methods.",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved meeting deletion for web and apps into the schedule service and removed meeting actions from the account model. Meeting deletion has one implementation for web and apps."
+ },
+ {
+  "k": "EP-16032",
+  "summary": "After reschedule meeting problem with changing parent_id in contacts",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed rescheduled meetings giving every contact the same parent ID. Rescheduling keeps meeting contacts linked correctly."
+ },
+ {
+  "k": "EP-16482",
+  "summary": "Cleare all deprecated meeting methods from SchduleNewController and ProfileController",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed deprecated meeting methods from the schedule and profile controllers. Old meeting code paths are gone."
+ },
+ {
+  "k": "EP-18287",
+  "summary": "Fixes to the outlook",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed display issues: iOS sponsor look, spacing on the event profile, a community banner text and group interaction buttons. The listed pages display as designed."
+ },
+ {
+  "k": "EP-18962",
+  "summary": "Refactoring: Transfer Business Logic from Controllers to Services for 'Reasign teamMembers'",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved team member reassignment logic from the schedule controller into the schedule service and a model method. Reassignment logic lives in the service; controllers only validate input."
+ },
+ {
+  "k": "EP-19253",
+  "summary": "Check matchmaking blick to unsupported data",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Validated matchmaking block data from the backend to prevent scripts and links. Unsupported content in matchmaking blocks is blocked."
+ },
+ {
+  "k": "EP-21073",
+  "summary": "Refactoring: Transfer Business Logic from Controllers to Services for 'Blocked times'",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved blocked-times logic from controllers into services. Blocked times logic lives in services."
+ },
+ {
+  "k": "EP-21669",
+  "summary": "Refactoring of meeting list",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored the meeting list to load one day at a time, moving page-level data to a separate endpoint. Meeting lists load faster, one day per request."
+ },
+ {
+  "k": "EP-21956",
+  "summary": "No company name on meeting cards (list and calendar view popups)",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Added the user's company name to meeting cards in list and calendar views. Meeting cards show the company."
+ },
+ {
+  "k": "EP-22218",
+  "summary": "Add a tooltip to the blocked time allowance management settings",
+  "epic": null,
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "Blocked time management",
+  "text": "Added a tooltip to the blocked-time management settings explaining they also affect the team schedule selector. Admins see what the blocked-time settings affect."
+ },
+ {
+  "k": "EP-23431",
+  "summary": "Remove \"0 as unlimited\" option for meeting limits of Exhibitor categories",
+  "epic": null,
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting limits",
+  "text": "Removed 'Leave 0 for unlimited' from exhibitor category meeting limits: off now means unlimited, and 0 means none, with tooltips. Exhibitor meeting limits work like participant category limits."
+ },
+ {
+  "k": "EP-23511",
+  "summary": "Need prohibit possibility choose \"other\" options on admin panel when managed custom filters for delegates page ",
+  "epic": null,
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "Delegate list filters",
+  "text": "Blocked choosing 'other' options for delegate custom filters in the admin panel. Delegate filters only offer options that work in the app."
+ },
+ {
+  "k": "EP-23843",
+  "summary": "Personalized Meeting Notes - Mobile ",
+  "epic": null,
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "AI meeting notes",
+  "text": "Added private per-meeting notes to the mobile apps: a note on the meeting request, Add/See note on meeting cards, and a 500-character editor. App users can keep private notes on their meetings."
+ },
+ {
+  "k": "EP-24411",
+  "summary": "Refactor old limits for meetings",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rebuilt the meeting limits component: minutes credit, online and offline limits and required meetings, with red error states and tooltips. Users see their meeting limits in one clear block, flagged when reached."
+ },
+ {
+  "k": "EP-31176",
+  "summary": "Refactor of Participant public profile in app",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Specified and refactored the participant public profile in the app: name, details, avatar, about me, exhibitor block and contacts. The app's participant profile follows a documented layout."
+ },
+ {
+  "k": "EP-34005",
+  "summary": "Add Exhibitor recomendations pop-up to all pages of meeting with exhibitor initiation",
+  "epic": null,
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor recommendations in meetings",
+  "text": "Made the recommended exhibitors popup appear on any meeting initiation page via a URL parameter, not only the marketplace. Users see exhibitor recommendations wherever they start a meeting."
+ },
+ {
+  "k": "EP-36465",
+  "summary": "Export to Outlook: Redirect to authorization URL is required if response code is 400",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Redirected users to Outlook authorisation when calendar endpoints return 400 with isAuth false. Outlook export prompts re-authorisation when needed."
+ },
+ {
+  "k": "EP-37543",
+  "summary": "Logging External Calendar Error in Cloud Watch",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Logged external calendar sync errors to CloudWatch. Calendar sync failures are traceable."
+ },
+ {
+  "k": "EP-38291",
+  "summary": "Change the text on the meeting page",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Changed the meeting request page text to 'Please fill in the meeting data to request a meeting'. The meeting request page has clearer wording."
+ },
+ {
+  "k": "EP-39067",
+  "summary": "Improve logic of limits display on the frontend",
+  "epic": null,
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting limits display",
+  "text": "Showed or hid pending and confirmation meeting limits based on auto-confirm and the page. Users see only the limits that apply."
+ },
+ {
+  "k": "EP-39631",
+  "summary": "Android/ \"Hide meeting btn\" / Add error message ",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Showed a message on Android when the meeting button is hidden because no team members are available. Android explains why meetings can't be booked, as iOS does."
+ },
+ {
+  "k": "EP-40530",
+  "summary": "fix mobile profile card in meeting wizard",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the mobile profile card in the meeting wizard to match the design. The card matches the design."
+ },
+ {
+  "k": "EP-44267",
+  "summary": "Matchmaking Improvements. Precise Matchmaking",
+  "epic": null,
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "Precise matchmaking",
+  "text": "Added a per-parent-category matchmaking setting (include, exclude or strict), stored for the new LLM-based matchmaking. Organisers tune which categories drive matchmaking."
+ },
+ {
+  "k": "EP-45729",
+  "summary": "[admin-ui] Replace filter in meeting-wizard with DynamicFilters ",
+  "epic": null,
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the meeting wizard's filter with the shared dynamic filters. The meeting wizard uses shared filters."
+ },
+ {
+  "k": "EP-45970",
+  "summary": "Refactor Meeting request module for React 18 ",
+  "epic": "Improve Meetings & Scheduling",
+  "theme": "meet",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored the meeting request module to React Hook Form and trimmed its context state. Meeting requests use a leaner form architecture."
+ },
+ {
+  "k": "EP-47793",
+  "summary": "Timepicker. Scroll Hint",
+  "epic": null,
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting booking usability",
+  "text": "A visual hint on the timepicker showing that the list scrolls to more times, starting with blocked time. Users can see there are more time options, with no change to how times are selected."
+ },
+ {
+  "k": "EP-49577",
+  "summary": "Personalized Meeting Notes  (Core)- Web",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "AI meeting notes",
+  "text": "Private meeting notes on web: add a note when requesting a meeting or from My Schedule, then view, edit, copy or delete it. Every user type can keep a note of up to 500 characters per meeting that other participants never see."
+ },
+ {
+  "k": "EP-51149",
+  "summary": "Personalized Meeting Notes (List) - Web",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "theme": "meet",
+  "include": true,
+  "exclude": null,
+  "feature": "AI meeting notes",
+  "text": "A My Notes side panel in My Schedule listing all of a user's meeting notes by meeting day, with edit, copy and delete. Every user type can browse their private notes with meeting details, loading more as they scroll."
+ },
+ {
+  "k": "EP-10260",
+  "summary": "Images download rework in applications ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced app image requests to the server with static image links carried in synced objects. The apps load exhibitor, session and account images from static links."
+ },
+ {
+  "k": "EP-15518",
+  "summary": "Add SwiftLint to project",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added SwiftLint to the iOS project with a warning threshold, run on changed files. iOS code is linted on each change."
+ },
+ {
+  "k": "EP-18089",
+  "summary": "Move iOS team discord bot to EP",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Moved the iOS team's Discord bot to ExpoPlatform. The iOS bot runs under ExpoPlatform."
+ },
+ {
+  "k": "EP-18158",
+  "summary": "In source code add res/xml/network_security_config.xml",
+  "epic": null,
+  "theme": "mobile",
+  "include": true,
+  "exclude": null,
+  "feature": "App security hardening",
+  "text": "Added an Android network security config so app requests can be inspected for debugging. Developers can inspect Android app traffic."
+ },
+ {
+  "k": "EP-19195",
+  "summary": "Add command \"upload_to_testflight\" and generating sql commands in EP discord bot for iOS team",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added TestFlight upload and SQL generation commands to the iOS team's Discord bot. The iOS team can upload builds and generate app SQL from the bot."
+ },
+ {
+  "k": "EP-19631",
+  "summary": "Android| \"No-results\" screen ",
+  "epic": null,
+  "theme": "mobile",
+  "include": true,
+  "exclude": null,
+  "feature": "Android list redesigns",
+  "text": "Added a no-results screen to the Android app for empty filter or search results. Android shows a no-results state."
+ },
+ {
+  "k": "EP-20186",
+  "summary": "Need change host for deep-links on mobileapp env   ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Changed the deep-link host on the mobile app test environment. Deep links point to the mobile test host."
+ },
+ {
+  "k": "EP-22441",
+  "summary": "Need investigate - badge on log-in screen iOS ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Investigated the iOS login screen showing the wrong digital badge after admin settings change. The iOS badge mismatch was investigated."
+ },
+ {
+  "k": "EP-22803",
+  "summary": "iOS| the filter request sends after user change page ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Investigated iOS sending the filter request after the user leaves the page. iOS filter requests were reviewed for excess calls."
+ },
+ {
+  "k": "EP-25965",
+  "summary": "Android/ GDPR not restrict meetings/ messages ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Applied GDPR networking opt-out to meetings, messages and favourites in the Android app, except badge scanning. Android respects networking opt-out."
+ },
+ {
+  "k": "EP-26187",
+  "summary": "Android/ Brand page issues ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the Android brand page to show related exhibitors, per the permission matrix, and products. Android brand pages match iOS."
+ },
+ {
+  "k": "EP-26219",
+  "summary": "Android/ Profile info - field titles missed ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Showed field titles alongside selected options in Android profile info. Android profile info is labelled."
+ },
+ {
+  "k": "EP-26460",
+  "summary": "Ehibitor header images download rework in applications",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced app requests for exhibitor header images with the static links already in the exhibitor object. The apps load exhibitor header images directly."
+ },
+ {
+  "k": "EP-26467",
+  "summary": "\"Get filters\" requests rework",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the apps' many per-page filter requests with one request for all filters. The apps load all filters in one call."
+ },
+ {
+  "k": "EP-27947",
+  "summary": "Android: Optimisation *Event info*",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Optimised how the Android app stores large event info. Android handles large events without crashing."
+ },
+ {
+  "k": "EP-28406",
+  "summary": "Android/ Matchmaking list/ Required  check visibility settings ( permission matrix and GDPR option) ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Applied permission matrix and GDPR checks to the Android matchmaking list. Android matchmaking respects visibility settings."
+ },
+ {
+  "k": "EP-29288",
+  "summary": "Android App: remove USE_FULL_SCREEN_INTENT",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed the full-screen intent permission from the Android app. The app no longer requests that permission."
+ },
+ {
+  "k": "EP-29667",
+  "summary": "Android/ Required hide \" Meeting check-in\" button on \"meeting profile\" page ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Hid the Meeting check-in button on past and current meetings in the Android app. Check-in only shows where it applies."
+ },
+ {
+  "k": "EP-32164",
+  "summary": "Android/ Blocked time card update ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Updated Android blocked-time cards: two-line titles and exhibitor details for exhibitor blocks. Blocked-time cards are clearer."
+ },
+ {
+  "k": "EP-32270",
+  "summary": "App builder -> Custom Documents block -> Hide \" Download all\" btn on preview ",
+  "epic": null,
+  "theme": "mobile",
+  "include": true,
+  "exclude": null,
+  "feature": "App builder",
+  "text": "Hid the 'Download all' button in the app builder's custom documents preview. The preview matches the apps."
+ },
+ {
+  "k": "EP-32392",
+  "summary": "Android / Session/Events tags update ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Truncated long session and event tags in Android lists and calendar, showing them in full on profiles. Android handles long tags cleanly."
+ },
+ {
+  "k": "EP-32395",
+  "summary": "iOS / Session/EVENTS tags update",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Truncated long session and event tags in iOS lists and calendar, showing them in full on profiles. iOS handles long tags cleanly."
+ },
+ {
+  "k": "EP-32429",
+  "summary": "Android/ Exhibitor events - Search update ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Let Android exhibitor event search match exhibitor name, country and city. Android users find exhibitor events by exhibitor details."
+ },
+ {
+  "k": "EP-32430",
+  "summary": "iOS/ Exhibitor events - Search update",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Let iOS exhibitor event search match exhibitor name, country and city. iOS users find exhibitor events by exhibitor details."
+ },
+ {
+  "k": "EP-33906",
+  "summary": "Mobile app visitors sync. Including package ID in sync.",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added a package ID to the mobile visitor sync so later pages of a sync continue the same package. Paginated visitor syncs in the app stay consistent."
+ },
+ {
+  "k": "EP-34002",
+  "summary": "Android/ Made more user friendly behaviour of section closes  ",
+  "epic": null,
+  "theme": "mobile",
+  "include": true,
+  "exclude": null,
+  "feature": "App navigation and usability",
+  "text": "Kept the Android screen position stable when a section is collapsed with 'show less'. Collapsing sections on Android behaves like iOS."
+ },
+ {
+  "k": "EP-34602",
+  "summary": "remove excessive Notices from mobile sync",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed excessive notices from the mobile sync. Mobile sync tasks no longer hang."
+ },
+ {
+  "k": "EP-35600",
+  "summary": "FBM- Update Mobile App - Profile information text with typo",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Corrected the app notification text for favourited exhibitor profiles to 'favorited'. The notification reads correctly."
+ },
+ {
+  "k": "EP-35826",
+  "summary": "Android/ Profile (public page)  opened  behaviour update ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Stopped Android opening the same public page several times. Each page opens once."
+ },
+ {
+  "k": "EP-35827",
+  "summary": "Change App builder form HTML to iframe",
+  "epic": null,
+  "theme": "mobile",
+  "include": true,
+  "exclude": null,
+  "feature": "App builder",
+  "text": "Rendered the app builder preview in an iframe to show the real app view. The app builder preview matches the app."
+ },
+ {
+  "k": "EP-36993",
+  "summary": "Android/ Force photo update issue ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Showed a new profile photo in the Android app straight after upload using the returned URL. Android users see their new photo immediately."
+ },
+ {
+  "k": "EP-40050",
+  "summary": "[admin] Trigger hover event when hovering over the dates on App data page",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Showed App data chart tooltips when hovering over date labels, not only the bars. Tooltips are reachable for every day or month."
+ },
+ {
+  "k": "EP-40593",
+  "summary": "  iOS/update behaviour of error message \"ups something went wrong\" in current case when user try add session in schedule + do something when user tap on \"favourite\" icon - if requiered separate tech deb ticket let me know ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Improved the iOS error message when adding a session or favouriting offline. iOS handles offline actions more clearly."
+ },
+ {
+  "k": "EP-41259",
+  "summary": "Android/ Check pls loader on \"Exhibitor events\" page",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Showed a loader instead of an empty placeholder while Android loads exhibitor events. Android users see loading feedback."
+ },
+ {
+  "k": "EP-41578",
+  "summary": "iOS/ Onboarding/ Investigate pls opportunity find other way to open tab  ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Investigated another way for iOS onboarding to open tabs across environments. iOS onboarding tab opening was investigated."
+ },
+ {
+  "k": "EP-42436",
+  "summary": "Removing text blocks from the app builder",
+  "epic": null,
+  "theme": "mobile",
+  "include": true,
+  "exclude": null,
+  "feature": "App builder",
+  "text": "Removed workaround text blocks from the app builder. The app builder drops the old text blocks."
+ },
+ {
+  "k": "EP-42641",
+  "summary": "Android/Regression/ Unacceptable long event  loading if a lot of participants available ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Investigated slow Android event loading with many participants and a friendlier loading screen. Android loading was reviewed for large events."
+ },
+ {
+  "k": "EP-44893",
+  "summary": "Deeplinks for Sessions",
+  "epic": null,
+  "theme": "mobile",
+  "include": true,
+  "exclude": null,
+  "feature": "App deep links",
+  "text": "Added session URLs and deep links to session forms and the sessions export, opening in the app when installed. Organisers share links that open sessions in the app or web."
+ },
+ {
+  "k": "EP-45512",
+  "summary": "Android/ Investigate opportunity update screen view ( OTP LOGIN)  ",
+  "epic": null,
+  "theme": "mobile",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Investigated the Android keyboard covering the OTP input during login. The OTP screen layout was reviewed."
+ },
+ {
+  "k": "EP-47476",
+  "summary": "iOS/ Update \"About me\" section behaviour inside DELEGATES profiles ",
+  "epic": null,
+  "theme": "mobile",
+  "include": true,
+  "exclude": null,
+  "feature": "App usability improvements",
+  "text": "Hid the empty About me section on iOS delegate profiles. Profiles don't show empty sections."
+ },
+ {
+  "k": "EP-6438",
+  "summary": "*FIME* Visitor QR redirect to 403 error",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Moved the sign-in page settings to the new frontend landing page so scanned visitor QR codes no longer hit a 403 first. QR scans land on a configurable sign-in landing page without the 403 flash."
+ },
+ {
+  "k": "EP-10207",
+  "summary": "Print badge statistics capture",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "Badge print statistics",
+  "text": "Captured badge printing statistics wherever badges are printed: admin panel, frontend, kiosk and emails. Badge prints are recorded across every printing channel."
+ },
+ {
+  "k": "EP-12201",
+  "summary": "Badge role not nullable",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Made the badge role field non-nullable, fixing the code that created null roles and removing such records. Every badge has a role; models and getters no longer handle null."
+ },
+ {
+  "k": "EP-13001",
+  "summary": "Remove dependence in BadgeService :: takeProfileFieldValuesMap from account info JSON if it is not needed",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed the badge service's dependency on account info JSON when all profile fields are system fields. Badge field mapping only reads account info JSON for custom fields."
+ },
+ {
+  "k": "EP-13664",
+  "summary": "In-app scanner refactor ",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored the in-app scanner around a documented scheme of scanned objects and edge cases. The main event app's scanner follows one documented flow."
+ },
+ {
+  "k": "EP-16666",
+  "summary": "Rework endpoint to save multiple stands with JSON data",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Reworked the save-multiple-stands endpoint to accept JSON. Stands can be saved in bulk with JSON."
+ },
+ {
+  "k": "EP-16698",
+  "summary": "External QR codes for checkin app",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Made the check-in app work with external QR codes, searching by the external QR field and syncing it with accounts. The check-in app finds attendees by their external QR codes."
+ },
+ {
+  "k": "EP-17340",
+  "summary": "external_qr attribute - always in JSON format",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Stored the external_qr attribute as JSON everywhere, converting existing strings and guarding new writes. External QR values have a consistent JSON format."
+ },
+ {
+  "k": "EP-19960",
+  "summary": "Drawer with search results overlap stand - need fix ",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the floor plan search drawer covering stands in the results. Stands stay visible alongside the search drawer."
+ },
+ {
+  "k": "EP-20148",
+  "summary": "Floor plan| Quantity of results displayed wrong applying quick filters ",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the floor plan result count not updating when quick filters change. Quick filters show the right number of results."
+ }
+]

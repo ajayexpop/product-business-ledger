@@ -1,0 +1,554 @@
+<title>ExpoPlatform Product Journey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --sky:#03A7FF; --navy:#041167; --tea:#15BDC2; --yellow:#FFDF41;
+  --bg:#F7F9FC; --card:#FFFFFF; --soft:#EEF2F8; --line:#DDE4EF; --line2:#C9D3E3;
+  --ink:#0B1030; --muted:#58637D; --head:#041167; --accent:#0288D9; --focus:#041167;
+  --deep:#030A3A; --deep2:#0A1557; --deep-ink:#EAF2FF; --deep-muted:#9FB0D8;
+  --g-exp:#03A7FF; --g-net:#15BDC2; --g-exh:#F2B705; --g-plat:#5B6CF0;
+  --next:#FFDF41; --next-soft:#FFF7CC; --next-ink:#5C4A00; --cl-tint:22%;
+  --shadow:0 1px 2px rgba(4,17,103,.06),0 8px 24px rgba(4,17,103,.06);
+  --shadow-lg:0 24px 64px rgba(3,10,58,.28);
+  --r-xl:28px; --r-lg:20px; --r-md:14px; --r-sm:10px;
+  --display:'Montserrat','Guton',system-ui,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#050A26; --card:#0B1340; --soft:#0F1A4F; --line:#1C2A66; --line2:#2A3A80;
+    --ink:#E6ECFA; --muted:#A0ADCC; --head:#FFFFFF; --accent:#4FC3FF; --focus:#FFDF41;
+    --deep:#020618; --deep2:#08103F; --g-plat:#8E9BFF; --cl-tint:7%; --next-soft:#2B2505; --next-ink:#FFE88A;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#050A26; --card:#0B1340; --soft:#0F1A4F; --line:#1C2A66; --line2:#2A3A80;
+  --ink:#E6ECFA; --muted:#A0ADCC; --head:#FFFFFF; --accent:#4FC3FF; --focus:#FFDF41;
+  --deep:#020618; --deep2:#08103F; --g-plat:#8E9BFF; --cl-tint:7%; --next-soft:#2B2505; --next-ink:#FFE88A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--body);-webkit-font-smoothing:antialiased;font-feature-settings:"cv11","ss01"}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);color:var(--head);text-wrap:balance;margin:0;letter-spacing:-.015em}
+p{margin:0}
+button,input{font:inherit;color:inherit}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:8px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+
+/* top bar */
+.top{background:var(--deep);color:var(--deep-ink)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.logo{height:42px;width:auto;display:block}
+.top .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--deep-muted);font-weight:600}
+
+/* hero */
+.hero{background:radial-gradient(1200px 500px at 85% -10%,rgba(3,167,255,.22),transparent 60%),radial-gradient(900px 400px at -10% 110%,rgba(21,189,194,.14),transparent 60%),var(--deep);color:var(--deep-ink);overflow:hidden}
+.hero .wrap{padding-block:48px 40px;display:grid;gap:28px}
+.hero .eyebrow{color:#7FD3FF}
+.hero h1{color:#FFFFFF;font-size:clamp(34px,5.6vw,68px);line-height:1.02;font-weight:800;max-width:17ch;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--sky)}
+.hero .lede{max-width:62ch;font-size:clamp(16px,1.6vw,18.5px);color:#C9D6F2}
+.intro{display:grid;gap:14px}
+
+/* journey strip */
+.strip{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);padding:22px 22px 14px;display:grid;gap:14px}
+.strip-head{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:baseline;justify-content:space-between}
+.strip-head b{font-family:var(--display);font-size:15px;color:#fff;letter-spacing:0}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--deep-muted)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.legend i.ring{background:transparent;box-shadow:inset 0 0 0 2px var(--yellow)}
+.scroller{overflow-x:auto;scrollbar-width:thin;padding-bottom:4px}
+.cols{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(52px,1fr);gap:6px;align-items:end;min-height:150px}
+.col{display:grid;gap:8px;text-decoration:none;color:inherit;border-radius:12px;padding:8px 4px 6px;transition:background .15s}
+.col:hover{background:rgba(255,255,255,.07)}
+.dots{display:flex;flex-wrap:wrap-reverse;align-content:flex-start;justify-content:center;gap:3px;min-height:20px}
+.dots i{width:8px;height:8px;border-radius:50%;background:var(--c);display:block}
+.dots i.h{box-shadow:0 0 0 2px rgba(255,255,255,.9)}
+.dots i.cl{box-shadow:0 0 0 2px var(--yellow)}
+.dots i.nx{background:transparent;box-shadow:inset 0 0 0 1.5px var(--yellow)}
+.col .ql{font-size:11.5px;font-weight:600;color:var(--deep-muted);text-align:center;font-variant-numeric:tabular-nums}
+.col.yearstart .ql{color:#fff}
+.col .yl{display:block;font-family:var(--display);font-size:12px;color:#7FD3FF;letter-spacing:.02em}
+@media (prefers-reduced-motion:no-preference){
+  .dots i{animation:pop .5s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--d) * 18ms)}
+  @keyframes pop{from{transform:scale(.4);opacity:.35}to{transform:none;opacity:1}}
+}
+.chapters{display:flex;flex-wrap:wrap;gap:10px}
+.chapters a{display:grid;gap:1px;padding:10px 16px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#fff;text-decoration:none;min-width:120px;transition:background .15s,border-color .15s}
+.chapters a:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3)}
+.chapters a b{font-family:var(--display);font-size:18px;letter-spacing:-.01em}
+.chapters a small{font-size:12.5px;color:var(--deep-muted)}
+.chapters a.for{border-color:var(--yellow);background:rgba(255,223,65,.1)}
+
+/* control bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:grid;gap:10px;padding-block:12px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.seg{display:inline-flex;background:var(--soft);border-radius:999px;padding:4px;gap:2px}
+.seg button{border:0;background:transparent;padding:8px 16px;border-radius:999px;font-weight:600;font-size:14px;cursor:pointer;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--head);box-shadow:var(--shadow)}
+.spacer{flex:1}
+.toggle{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1px solid var(--line2);background:var(--card);cursor:pointer;font-size:13.5px;font-weight:600;color:var(--ink)}
+.toggle::before{content:"";width:14px;height:14px;border-radius:4px;border:1.5px solid var(--line2);flex:none}
+.toggle[aria-pressed="true"]{border-color:var(--head);background:var(--head);color:var(--bg)}
+.toggle[aria-pressed="true"]::before{border-color:var(--bg);background:var(--bg);box-shadow:inset 0 0 0 3px var(--head)}
+.themes{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin}
+.tchip{flex:none;display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);cursor:pointer;font-size:13px;font-weight:500;white-space:nowrap;color:var(--ink)}
+.tchip:hover{border-color:var(--line2)}
+.tchip[aria-pressed="true"]{border-color:var(--c,var(--head));background:color-mix(in srgb,var(--c,var(--head)) 14%,var(--card));font-weight:650}
+.tchip.sep{margin-left:8px}
+.dot{width:9px;height:9px;border-radius:50%;flex:none;background:var(--c);display:inline-block}
+.search{flex:1 1 240px;min-width:0;max-width:360px;padding:8px 14px;border-radius:999px;border:1px solid var(--line2);background:var(--card);font-size:13.5px}
+
+/* chapters (years) */
+main{padding-block:40px 72px}
+.year{scroll-margin-top:130px;margin-bottom:72px}
+.chap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 40px;align-items:end;padding-bottom:28px;margin-bottom:8px;border-bottom:1px solid var(--line)}
+.chap .num{font-family:var(--display);font-weight:800;font-size:clamp(72px,11vw,148px);line-height:.82;letter-spacing:-.05em;background:linear-gradient(180deg,var(--sky),var(--accent) 70%,var(--tea));-webkit-background-clip:text;background-clip:text;color:transparent}
+.chap .eyebrow{color:var(--accent);margin-bottom:8px}
+.chap h2{font-size:clamp(24px,3vw,34px);line-height:1.15;margin-bottom:10px}
+.chap p{max-width:70ch;color:var(--muted);font-size:16px}
+
+.quarter{display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;position:relative;padding-top:32px;scroll-margin-top:130px}
+.quarter::before{content:"";position:absolute;left:11px;top:0;bottom:-32px;width:2px;background:linear-gradient(var(--line),var(--line))}
+.year .quarter:last-child::before{bottom:0}
+.rail{position:sticky;top:150px;align-self:start;display:grid;grid-template-columns:24px auto;gap:0 12px;align-items:center}
+.rail .node{width:24px;height:24px;border-radius:50%;background:var(--card);border:2px solid var(--line2);display:grid;place-items:center;position:relative;z-index:1}
+.rail .node::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.rail b{font-family:var(--display);font-size:24px;line-height:1;color:var(--head);letter-spacing:-.02em}
+.rail span{grid-column:2;font-size:12.5px;color:var(--muted);margin-top:4px}
+.qbody{display:grid;gap:18px;min-width:0}
+.bento{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.card{position:relative;display:grid;gap:10px;align-content:start;text-align:left;padding:20px 20px 18px;border-radius:var(--r-lg);background:var(--card);border:1px solid var(--line);cursor:pointer;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--c) 55%,var(--line));box-shadow:0 2px 4px rgba(4,17,103,.06),0 18px 40px rgba(4,17,103,.1)}
+.card h3{font-size:17.5px;line-height:1.28}
+.card p{font-size:14.5px;color:var(--muted)}
+.card .go{font-size:13px;font-weight:600;color:var(--accent);margin-top:2px}
+.card.lead{background:linear-gradient(135deg,color-mix(in srgb,var(--c) 16%,var(--card)),var(--card) 70%);border-color:color-mix(in srgb,var(--c) 35%,var(--line));padding:26px}
+.card.lead h3{font-size:clamp(20px,2.2vw,26px);line-height:1.2}
+.card.lead p{font-size:15.5px;color:var(--ink);max-width:52ch}
+@media (min-width:900px){.card.lead{grid-column:span 2}}
+.meta{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:12px;color:var(--muted)}
+.tl{display:inline-flex;align-items:center;gap:7px;font-weight:650;color:var(--ink);font-size:12.5px}
+.badge{font-size:11px;font-weight:700;letter-spacing:.03em;padding:2px 9px;border-radius:999px;background:var(--soft);color:var(--head)}
+.badge.ai{background:color-mix(in srgb,var(--tea) 20%,var(--card));color:var(--head)}
+.badge.cl{background:var(--yellow);color:#041167}
+.also{display:grid;gap:8px}
+.also h4{margin:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 24px;margin:0;padding:0;list-style:none}
+.list li{border-top:1px solid var(--line)}
+.list button{display:grid;grid-template-columns:9px minmax(0,1fr) auto;gap:12px;align-items:baseline;width:100%;border:0;background:transparent;text-align:left;padding:10px 4px;cursor:pointer;border-radius:8px}
+.list button:hover .t{color:var(--accent)}
+.list .t{font-weight:600;font-size:14.5px;overflow-wrap:anywhere;color:var(--ink)}
+.list .s{font-size:12px;color:var(--muted);white-space:nowrap}
+.list .star{color:var(--yellow)}
+.empty{padding:48px;text-align:center;color:var(--muted);border:1px dashed var(--line2);border-radius:var(--r-lg)}
+
+/* lanes */
+.lanes-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--card);box-shadow:var(--shadow)}
+table.lanes{border-collapse:separate;border-spacing:0;min-width:1560px;width:100%}
+.lanes th,.lanes td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);vertical-align:top;padding:8px}
+.lanes thead th{position:sticky;top:0;background:var(--soft);font-size:12.5px;font-weight:700;color:var(--head);text-align:left;white-space:nowrap}
+.lanes thead th.y{font-family:var(--display);font-size:16px;color:var(--accent)}
+.lanes th.tname{position:sticky;left:0;z-index:1;background:var(--card);width:190px;min-width:190px;text-align:left}
+.lanes thead th.tname{z-index:2;background:var(--soft)}
+.lanes td{min-width:120px;width:120px}
+.lanes td.next{background:var(--next-soft)}
+.pill{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--bg);border-radius:9px;padding:6px 8px;margin-bottom:6px;font-size:12px;line-height:1.3;cursor:pointer;font-weight:500;color:var(--ink)}
+.pill:hover{border-color:var(--c)}
+.pill.hl{background:color-mix(in srgb,var(--c) 14%,var(--card));border-color:color-mix(in srgb,var(--c) 45%,var(--line));font-weight:700}
+.pill.nx{background:transparent;border-style:dashed;border-color:var(--next-ink)}
+.pill.cl{box-shadow:inset 0 0 0 2px var(--yellow)}
+.lanes-note{font-size:13px;color:var(--muted);margin:12px 4px 0}
+
+/* sheet */
+.scrim{position:fixed;inset:0;background:rgba(3,10,58,.38);z-index:30;backdrop-filter:blur(2px)}
+.sheet{position:fixed;z-index:31;top:12px;right:12px;bottom:12px;width:min(460px,calc(100% - 24px));background:var(--card);border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--shadow-lg);display:grid;grid-template-rows:auto minmax(0,1fr);overflow:hidden}
+.sheet .band{height:8px;background:var(--c)}
+.sheet .inner{overflow:auto;padding:26px 28px 30px;display:grid;gap:14px;align-content:start}
+.sheet h3{font-size:clamp(22px,2.6vw,28px);line-height:1.18;padding-right:40px}
+.sheet .ben{font-size:16.5px;color:var(--ink)}
+.sheet .det{color:var(--muted)}
+.sheet .x{position:absolute;top:22px;right:18px;border:0;background:var(--soft);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:20px;line-height:1;color:var(--ink)}
+.sheet .when{font-size:13px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:no-preference){.sheet{animation:slide .28s cubic-bezier(.2,.8,.2,1)}@keyframes slide{from{transform:translateX(24px);opacity:.6}to{transform:none;opacity:1}}}
+
+/* horizon */
+.horizon{scroll-margin-top:130px;border-radius:var(--r-xl);background:var(--deep);color:var(--deep-ink);padding:40px;display:grid;gap:22px;position:relative;overflow:hidden}
+.horizon::after{content:"";position:absolute;right:-160px;top:-160px;width:420px;height:420px;border-radius:50%;border:1.5px dashed rgba(255,223,65,.35);pointer-events:none}
+.horizon .eyebrow{color:var(--yellow)}
+.horizon h2{color:#fff;font-size:clamp(26px,3.4vw,40px)}
+.horizon > header p{color:#C9D6F2;max-width:66ch;margin-top:8px}
+.ngrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;position:relative;z-index:1}
+.ncard{padding:20px;border-radius:var(--r-lg);background:rgba(255,255,255,.05);border:1px dashed rgba(255,255,255,.22);display:grid;gap:10px;align-content:start;text-align:left;cursor:pointer;color:inherit}
+.ncard:hover{background:rgba(255,255,255,.09)}
+.ncard h3{font-size:17px;color:#fff}
+.ncard p{font-size:14px;color:#B8C6E6}
+.ncard .tl{color:#fff}
+.status{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#041167;background:var(--yellow);padding:3px 10px;border-radius:999px;justify-self:start}
+
+/* client chapter */
+.clientsec{scroll-margin-top:130px;margin-bottom:72px;border-radius:var(--r-xl);background:linear-gradient(160deg,color-mix(in srgb,var(--yellow) var(--cl-tint),var(--card)),var(--card) 55%);border:1px solid color-mix(in srgb,var(--yellow) 60%,var(--line));padding:36px;display:grid;gap:26px;box-shadow:var(--shadow)}
+.clientsec > header{display:grid;gap:10px}
+.clientsec .eyebrow{color:var(--head)}
+.clientsec h2{font-size:clamp(26px,3.6vw,42px);line-height:1.08}
+.clientsec > header p{max-width:70ch;font-size:16px;color:var(--ink)}
+.cyear{display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px;border-top:1px solid var(--line);padding-top:20px}
+.cyear > b{font-family:var(--display);font-size:32px;line-height:1;color:var(--head);letter-spacing:-.03em}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.ccard{padding:16px 18px;border-radius:var(--r-md);background:var(--card);border:1px solid var(--line);display:grid;gap:8px;align-content:start}
+.ccard h3{font-size:15.5px;line-height:1.3}
+.ccard p{font-size:13.5px;color:var(--muted)}
+.cnext{display:grid;gap:14px;padding:22px;border-radius:var(--r-lg);background:var(--next-soft);border:1px dashed var(--next-ink)}
+.cnext h3{font-size:19px}
+
+/* internal */
+.src{border-top:1px solid var(--line);padding-top:12px;display:grid;gap:6px}
+.srch{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.src ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.src li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;font-size:12.5px;align-items:baseline}
+.src a,.exl a{color:var(--accent);font-weight:650;font-variant-numeric:tabular-nums;text-decoration:none;white-space:nowrap}
+.src a:hover,.exl a:hover{text-decoration:underline}
+.src .d,.exl .d{color:var(--muted);font-size:11.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tier{font-size:10px;font-weight:700;padding:1px 6px;border-radius:999px;background:var(--yellow);color:#041167;margin-left:6px}
+.tier.W{background:#FDE2E0;color:#8A1C12}
+.exsec{scroll-margin-top:130px;display:grid;gap:12px;margin-top:48px;padding:30px;border-radius:var(--r-xl);border:1px solid var(--line);background:var(--card)}
+.exsec h2{font-size:26px}
+.exsec > p{color:var(--muted);max-width:75ch}
+.exsec details{border-top:1px solid var(--line);padding-top:12px}
+.exsec summary{cursor:pointer;font-weight:700;color:var(--head)}
+.exl{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:3px 22px}
+.exl li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;font-size:12.5px;align-items:baseline;border-bottom:1px dashed var(--line);padding-block:4px}
+
+footer{background:var(--deep);color:var(--deep-muted)}
+footer .wrap{padding-block:30px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;font-size:13px}
+footer b{color:#fff;letter-spacing:.14em;font-size:12px}
+
+@media (max-width:760px){
+  .wrap{padding-inline:16px}
+  .hero .wrap{padding-block:34px 28px;gap:22px}
+  .top .tag{display:none}
+  .strip{padding:16px 12px 10px;border-radius:var(--r-lg)}
+  .cols{grid-auto-columns:46px}
+  .chap{grid-template-columns:minmax(0,1fr);gap:14px}
+  .quarter{grid-template-columns:minmax(0,1fr);gap:14px;padding-left:36px}
+  .quarter::before{left:11px}
+  .rail{position:static;margin-left:-36px}
+  .rail span{grid-column:auto;margin:0 0 0 8px}
+  .rail{grid-template-columns:24px auto auto;justify-content:start}
+  .bento,.list{grid-template-columns:minmax(0,1fr)}
+  .row .spacer{display:none}
+  .sheet{top:auto;left:8px;right:8px;bottom:8px;width:auto;max-height:82vh}
+  .horizon,.clientsec{padding:24px}
+  .cyear{grid-template-columns:minmax(0,1fr)}
+  .exl{grid-template-columns:minmax(0,1fr)}
+  .exsec{padding:20px}
+}
+</style>
+
+<header class="top"><div class="wrap">
+  <img class="logo" src="__LOGO_WHITE__" alt="ExpoPlatform">
+  <div class="tag">Smart Events · Product journey</div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="intro">
+    <div class="eyebrow" id="heroEyebrow">Product journey</div>
+    <h1 id="heroTitle"></h1>
+    <p class="lede" id="heroLede"></p>
+  </div>
+  <div class="strip" aria-label="Every feature we shipped, by quarter">
+    <div class="strip-head"><b>Every dot is a feature we shipped. Select a quarter to read it.</b><div class="legend" id="legend"></div></div>
+    <div class="scroller"><div class="cols" id="cols"></div></div>
+  </div>
+  <nav class="chapters" id="chapters" aria-label="Jump to a chapter"></nav>
+</div></section>
+
+<div class="bar"><div class="wrap">
+  <div class="row">
+    <div class="seg" role="group" aria-label="View">
+      <button type="button" id="vTimeline" aria-pressed="true">Timeline</button>
+      <button type="button" id="vLanes" aria-pressed="false">Theme lanes</button>
+    </div>
+    <span class="spacer"></span>
+    <input type="search" class="search" id="q" placeholder="Search features, Jira keys or story titles" aria-label="Search" hidden>
+    <button type="button" class="toggle" id="fClient" aria-pressed="false" hidden></button>
+    <button type="button" class="toggle" id="fHead" aria-pressed="false">Headlines only</button>
+    <button type="button" class="toggle" id="fAI" aria-pressed="false">AI</button>
+    <button type="button" class="toggle" id="fMobile" aria-pressed="false">In the app</button>
+  </div>
+  <div class="themes" id="themeChips" role="group" aria-label="Filter by theme"></div>
+</div></div>
+
+<main class="wrap">
+  <section class="clientsec" id="forclient" hidden></section>
+  <div id="timeline"></div>
+  <div id="lanes" hidden></div>
+  <section class="horizon" id="next" aria-labelledby="nextH"></section>
+  <section class="exsec" id="excluded" hidden></section>
+</main>
+
+<footer><div class="wrap">
+  <div><b>EXPOPLATFORM</b> · Smart Events</div>
+  <div id="footNote"></div>
+</div></footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="pTitle">
+  <div class="band" id="pBand"></div>
+  <div class="inner">
+    <button type="button" class="x" id="pClose" aria-label="Close">×</button>
+    <div class="meta" id="pMeta"></div>
+    <h3 id="pTitle"></h3>
+    <p class="ben" id="pBenefit"></p>
+    <p class="det" id="pDetail"></p>
+    <div id="pSrc"></div>
+  </div>
+</div>
+
+<script>
+const DATA = __DATA__;
+(function(){
+  const $ = s => document.querySelector(s);
+  const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const TH = {}; DATA.themes.forEach(t => TH[t.id] = t);
+  const GROUPS = [['--g-exp','Attendee experience'],['--g-net','Networking and content'],['--g-exh','Exhibitors, onsite and insight'],['--g-plat','AI, integrations and platform']];
+  const GI = {}; GROUPS.forEach((g, i) => GI[g[0]] = i);
+  const MONTHS = {1:'January to March',2:'April to June',3:'July to September',4:'October to December'};
+  const state = {view:'timeline', theme:null, head:false, ai:false, mobile:false, client:false, q:''};
+  const IN = DATA.internal || null, CL = DATA.client || null;
+  try { const s = JSON.parse(localStorage.getItem('ep-journey') || '{}'); if (s.view === 'lanes') state.view = 'lanes'; } catch(e) {}
+  const qName = q => 'Q' + q.slice(6);
+  const col = t => 'var(' + TH[t].color + ')';
+
+  const first = DATA.years[0].year, last = DATA.years[DATA.years.length - 1].year;
+  $('#heroEyebrow').textContent = (CL ? CL.name + ' · ' : '') + 'Product journey · ' + first + ' to today';
+  $('#heroTitle').textContent = DATA.copy.heroTitle;
+  $('#heroLede').textContent = DATA.copy.heroLede;
+  $('#footNote').textContent = DATA.copy.footNote;
+
+  // legend + journey strip
+  $('#legend').innerHTML = GROUPS.map(g => '<span><i style="--c:var(' + g[0] + ')"></i>' + g[1] + '</span>').join('') +
+    (CL ? '<span><i class="ring"></i>Requested by ' + esc(CL.name) + '</span>' : '') + (DATA.next.length ? '<span><i class="ring" style="opacity:.8"></i>Coming next</span>' : '');
+  const cols = $('#cols');
+  const byGroup = (a, b) => GI[TH[a.theme].color] - GI[TH[b.theme].color] || (a.level === 'headline' ? -1 : 1);
+  let d = 0;
+  DATA.years.forEach(y => y.quarters.forEach((q, i) => {
+    const a = el('a', 'col' + (i === 0 ? ' yearstart' : '')); a.href = '#q' + q;
+    const its = DATA.items.filter(h => h.q === q).sort(byGroup);
+    a.setAttribute('aria-label', qName(q) + ' ' + y.year);
+    const dots = el('div', 'dots');
+    dots.innerHTML = its.map(h => '<i class="' + (h.level === 'headline' ? 'h' : '') + (CL && h.client ? ' cl' : '') + '" style="--c:' + col(h.theme) + ';--d:' + (d++ % 60) + '" title="' + esc(h.title) + '"></i>').join('');
+    a.append(dots, el('div', 'ql', (i === 0 ? '<span class="yl">' + y.year + '</span>' : '') + qName(q)));
+    a.onclick = e => { if (state.view !== 'timeline') { state.view = 'timeline'; render(); save(); } };
+    cols.append(a);
+  }));
+  if (DATA.next.length) {
+    const a = el('a', 'col yearstart'); a.href = '#next';
+    const dots = el('div', 'dots'); dots.innerHTML = DATA.next.map(() => '<i class="nx" style="--d:' + (d++ % 60) + '"></i>').join('');
+    a.append(dots, el('div', 'ql', '<span class="yl">Next</span>Soon')); cols.append(a);
+  }
+
+  // chapter links
+  const ch = $('#chapters');
+  if (CL) { const a = el('a', 'for', '<b>' + esc(CL.name) + '</b><small>Built with you</small>'); a.href = '#forclient'; ch.append(a); }
+  DATA.years.forEach(y => { const a = el('a', null, '<b>' + y.year + '</b><small>' + esc(y.label) + '</small>'); a.href = '#y' + y.year; ch.append(a); });
+  if (DATA.next.length) { const a = el('a', null, '<b>Next</b><small>In development</small>'); a.href = '#next'; ch.append(a); }
+  if (IN) { const a = el('a', null, '<b>Left out</b><small>Excluded stories</small>'); a.href = '#excluded'; ch.append(a); }
+  ch.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { if (a.hash !== '#next' && state.view !== 'timeline' && a.hash.startsWith('#y')) { state.view = 'timeline'; render(); save(); } }));
+
+  // theme chips
+  const chips = $('#themeChips');
+  const allChip = el('button', 'tchip', 'All themes'); allChip.type = 'button'; allChip.setAttribute('aria-pressed', 'true');
+  allChip.onclick = () => { state.theme = null; render(); }; chips.append(allChip);
+  let prevG = null;
+  DATA.themes.forEach(t => {
+    const b = el('button', 'tchip' + (prevG && prevG !== t.color ? ' sep' : ''), '<span class="dot" style="--c:var(' + t.color + ')"></span>' + esc(t.name));
+    prevG = t.color; b.type = 'button'; b.dataset.t = t.id; b.style.setProperty('--c', 'var(' + t.color + ')'); b.setAttribute('aria-pressed', 'false');
+    b.onclick = () => { state.theme = state.theme === t.id ? null : t.id; render(); };
+    chips.append(b);
+  });
+  [['#fHead','head'],['#fAI','ai'],['#fMobile','mobile']].forEach(([id, k]) => $(id).onclick = () => { state[k] = !state[k]; render(); });
+  $('#vTimeline').onclick = () => { state.view = 'timeline'; render(); save(); };
+  $('#vLanes').onclick = () => { state.view = 'lanes'; render(); save(); };
+  function save(){ try { localStorage.setItem('ep-journey', JSON.stringify({view: state.view})); } catch(e) {} }
+
+  const qm = h => !state.q || (h.title + ' ' + h.benefit + ' ' + (h.detail || '') + ' ' + (h.src || []).map(x => x.k + ' ' + x.s).join(' ')).toLowerCase().includes(state.q);
+  const tagOk = h => (!state.ai || h.tags.includes('AI')) && (!state.mobile || h.tags.includes('Mobile'));
+  const pass = h => qm(h) && tagOk(h) && (!state.client || h.client) && (!state.theme || h.theme === state.theme) && (!state.head || h.level === 'headline');
+  const badges = h => (CL && h.client ? '<span class="badge cl">Requested by ' + esc(CL.name) + '</span>' : '') + (h.tags.includes('AI') ? '<span class="badge ai">AI</span>' : '') + (h.tags.includes('Mobile') ? '<span class="badge">In the app</span>' : '');
+  const TN = {A:'DLG: named as asking',B:'DLG: DLG case in ticket',C:'DLG: Reported-by only',S:'DLG: shared with others',W:'DLG: not a DLG request'};
+  const srcList = (h, title) => !IN || !h.src || !h.src.length ? '' : '<div class="src"><div class="srch">' + (title || 'Jira sources') + ' · ' + h.src.length + '</div><ul>' +
+    h.src.map(x => '<li><a href="' + IN.jira + x.k + '" target="_blank" rel="noopener">' + x.k + '</a><span>' + esc(x.s) + (x.dlg ? '<span class="tier ' + x.dlg + '" title="' + TN[x.dlg] + '">DLG ' + x.dlg + '</span>' : '') + '</span><span class="d">' + esc(x.d || x.st || '') + '</span></li>').join('') + '</ul></div>';
+  const themeLbl = t => '<span class="tl"><span class="dot" style="--c:' + col(t) + '"></span>' + esc(TH[t].name) + '</span>';
+
+  function timeline(){
+    const root = $('#timeline'); root.innerHTML = '';
+    let any = false;
+    DATA.years.forEach(y => {
+      const sec = el('section', 'year'); sec.id = 'y' + y.year;
+      sec.append(el('header', 'chap', '<div class="num" aria-hidden="true">' + y.year + '</div><div><div class="eyebrow">' + esc(y.label) + '</div><h2><span class="sr" hidden>' + y.year + ': </span>' + esc(y.title) + '</h2><p>' + esc(y.review) + '</p></div>'));
+      let shown = 0;
+      y.quarters.forEach(q => {
+        const hs = DATA.items.filter(h => h.q === q && pass(h));
+        if (!hs.length) return;
+        shown += hs.length;
+        const row = el('div', 'quarter'); row.id = 'q' + q;
+        row.append(el('div', 'rail', '<span class="node" aria-hidden="true"></span><b>' + qName(q) + ' ' + y.year + '</b><span>' + MONTHS[+q.slice(6)] + '</span>'));
+        const body = el('div', 'qbody');
+        const heads = hs.filter(h => h.level === 'headline'), rest = hs.filter(h => h.level !== 'headline');
+        if (heads.length) {
+          const g = el('div', 'bento');
+          heads.forEach((h, i) => {
+            const c = el('button', 'card' + (i === 0 && heads.length > 1 ? ' lead' : '')); c.type = 'button'; c.style.setProperty('--c', col(h.theme));
+            c.innerHTML = '<div class="meta">' + themeLbl(h.theme) + badges(h) + '</div><h3>' + esc(h.title) + '</h3><p>' + esc(h.benefit) + '</p><span class="go">Read more</span>';
+            c.onclick = () => openSheet(h, false, c);
+            g.append(c);
+          });
+          body.append(g);
+        }
+        if (rest.length) {
+          const box = el('div', 'also'); box.append(el('h4', null, heads.length ? 'Also shipped' : 'Shipped'));
+          const ul = el('ul', 'list');
+          rest.forEach(h => {
+            const li = el('li');
+            const b = el('button', null, '<span class="dot" style="--c:' + col(h.theme) + '"></span><span class="t">' + esc(h.title) + (CL && h.client ? ' <span class="badge cl">' + esc(CL.name) + '</span>' : '') + '</span><span class="s">' + esc(TH[h.theme].short) + '</span>');
+            b.type = 'button'; b.onclick = () => openSheet(h, false, b);
+            li.append(b); ul.append(li);
+          });
+          box.append(ul); body.append(box);
+        }
+        row.append(body); sec.append(row);
+      });
+      if (shown) { any = true; root.append(sec); }
+    });
+    if (!any) root.append(el('div', 'empty', 'Nothing matches these filters. Choose another theme or clear a filter.'));
+  }
+
+  function lanes(){
+    const root = $('#lanes'); root.innerHTML = '';
+    const qs = DATA.years.flatMap(y => y.quarters);
+    const wrap = el('div', 'lanes-wrap'), t = el('table', 'lanes');
+    let h1 = '<tr><th class="tname" rowspan="2">Theme</th>';
+    DATA.years.forEach(y => h1 += '<th class="y" colspan="' + y.quarters.length + '">' + y.year + '</th>');
+    h1 += (DATA.next.length ? '<th class="y" rowspan="2">Coming next</th>' : '') + '</tr><tr>';
+    qs.forEach(q => h1 += '<th>' + qName(q) + '</th>');
+    t.innerHTML = '<thead>' + h1 + '</tr></thead>';
+    const tb = el('tbody');
+    DATA.themes.filter(th => !state.theme || th.id === state.theme).forEach(th => {
+      const tr = el('tr');
+      tr.innerHTML = '<th class="tname" scope="row">' + themeLbl(th.id) + '</th>';
+      qs.forEach(q => {
+        const td = el('td');
+        DATA.items.filter(h => h.theme === th.id && h.q === q && pass(h))
+          .sort((a, b) => (a.level === 'headline' ? 0 : 1) - (b.level === 'headline' ? 0 : 1))
+          .forEach(h => td.append(pill(h, false)));
+        tr.append(td);
+      });
+      if (DATA.next.length) {
+        const td = el('td', 'next');
+        DATA.next.filter(n => n.theme === th.id && tagOk(n)).forEach(n => td.append(pill(n, true)));
+        tr.append(td);
+      }
+      tb.append(tr);
+    });
+    t.append(tb); wrap.append(t); root.append(wrap);
+    root.append(el('p', 'lanes-note', 'Shaded items are headline releases. Scroll sideways through the quarters and select any item to read about it.'));
+  }
+  function pill(h, nx){
+    const b = el('button', 'pill' + (h.level === 'headline' ? ' hl' : '') + (nx ? ' nx' : '') + (CL && h.client ? ' cl' : ''), esc(h.title));
+    b.type = 'button'; b.style.setProperty('--c', col(h.theme));
+    b.onclick = () => openSheet(h, nx, b); return b;
+  }
+
+  let lastBtn = null;
+  function openSheet(h, nx, btn){
+    lastBtn = btn;
+    $('#sheet').style.setProperty('--c', col(h.theme));
+    $('#pMeta').innerHTML = themeLbl(h.theme) + '<span class="when">' + (nx ? 'Coming next' : qName(h.q) + ' ' + h.q.slice(0, 4)) + '</span>' + (h.level === 'headline' && !nx ? '<span class="badge">Headline</span>' : '') + badges(h);
+    $('#pTitle').textContent = h.title; $('#pBenefit').textContent = h.benefit;
+    $('#pDetail').textContent = h.detail || ''; $('#pDetail').hidden = !h.detail;
+    $('#pSrc').innerHTML = srcList(h, nx ? 'Jira work in progress' : 'Jira sources');
+    $('#sheet').hidden = false; $('#scrim').hidden = false; $('#pClose').focus();
+  }
+  function closeSheet(){ $('#sheet').hidden = true; $('#scrim').hidden = true; if (lastBtn) lastBtn.focus(); }
+  $('#pClose').onclick = closeSheet; $('#scrim').onclick = closeSheet;
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#sheet').hidden) closeSheet(); });
+
+  function next(){
+    const s = $('#next'); s.innerHTML = '';
+    if (!DATA.next.length) { s.hidden = true; return; }
+    s.append(el('header', null, '<div class="eyebrow">On the horizon</div><h2 id="nextH">Coming next</h2><p>' + esc(DATA.copy.nextLede) + '</p>'));
+    const g = el('div', 'ngrid');
+    DATA.next.filter(n => (!state.theme || n.theme === state.theme) && tagOk(n)).forEach(n => {
+      const c = el('button', 'ncard', '<span class="status">' + (IN && !n.approved ? 'In development · awaiting your sign-off' : 'In development') + '</span><div class="meta">' + themeLbl(n.theme) + badges(n) + '</div><h3>' + esc(n.title) + '</h3><p>' + esc(n.benefit) + '</p>');
+      c.type = 'button'; c.onclick = () => openSheet(n, true, c); g.append(c);
+    });
+    s.append(g);
+  }
+
+  function client(){
+    const s = $('#forclient'); if (!CL) return;
+    s.hidden = false; s.innerHTML = '';
+    s.append(el('header', null, '<div class="eyebrow">' + esc(CL.eyebrow) + '</div><h2>' + esc(CL.title) + '</h2><p>' + esc(CL.intro) + '</p>'));
+    const years = [...new Set(CL.items.map(i => i.q.slice(0, 4)))].sort();
+    years.forEach(y => {
+      const row = el('div', 'cyear'); row.append(el('b', null, y));
+      const g = el('div', 'cgrid');
+      CL.items.filter(i => i.q.startsWith(y) && (!state.theme || i.theme === state.theme)).forEach(i => g.append(el('div', 'ccard',
+        '<div class="meta">' + themeLbl(i.theme) + '<span class="when">' + qName(i.q) + ' ' + y + '</span></div><h3>' + esc(i.title) + '</h3><p>' + esc(i.benefit) + '</p>')));
+      if (g.children.length) { row.append(g); s.append(row); }
+    });
+    if (CL.next.length) {
+      const n = el('div', 'cnext', '<span class="status">In development</span><h3>' + esc(CL.nextTitle) + '</h3>');
+      const g = el('div', 'cgrid');
+      CL.next.forEach(i => g.append(el('div', 'ccard', '<div class="meta">' + themeLbl(i.theme) + '</div><h3>' + esc(i.title) + '</h3><p>' + esc(i.benefit) + '</p>')));
+      n.append(g); s.append(n);
+    }
+  }
+
+  const RN = {bugfix:'Stories that fixed or restored behaviour (Story type, not Jira Bugs)', test:'Tests, QA and CI', internal:'Internal tooling, chores and removals', refactor:'Rewrites and migrations with no visible change', thin:'Too little detail to tell what was delivered'};
+  function excluded(){
+    const s = $('#excluded'); if (!IN) return; s.hidden = false; s.innerHTML = '';
+    const rows = DATA.excluded.filter(x => (!state.theme || x.theme === state.theme) && (!state.q || (x.k + ' ' + x.s).toLowerCase().includes(state.q)));
+    s.append(el('h2', null, 'Left off the roadmap'));
+    s.append(el('p', null, 'Story-type tickets finished in the same period that were judged not customer-facing, grouped by reason. Jira Bugs, Tasks, Sub-tasks and Epics are not part of this roadmap at all. Theme filter and search apply. Open a group to review it.'));
+    Object.keys(RN).forEach(r => {
+      const g = rows.filter(x => x.r === r); if (!g.length) return;
+      const dd = el('details'); dd.innerHTML = '<summary>' + RN[r] + ' · ' + g.length + '</summary>';
+      const ul = el('ul', 'exl');
+      ul.innerHTML = g.map(x => '<li><a href="' + IN.jira + x.k + '" target="_blank" rel="noopener">' + x.k + '</a><span>' + esc(x.s) + (x.why ? ' <em style="color:var(--muted)">(' + esc(x.why) + ')</em>' : '') + '</span><span class="d">' + x.d + '</span></li>').join('');
+      dd.append(ul); s.append(dd);
+    });
+  }
+  if (CL) { const b = $('#fClient'); b.hidden = false; b.textContent = 'Requested by ' + CL.name; b.onclick = () => { state.client = !state.client; render(); }; }
+  if (IN) { const q = $('#q'); q.hidden = false; let t; q.oninput = () => { clearTimeout(t); t = setTimeout(() => { state.q = q.value.trim().toLowerCase(); render(); }, 200); }; }
+
+  function render(){
+    if (IN) excluded();
+    $('#fClient').setAttribute('aria-pressed', state.client);
+    if (CL) client();
+    allChip.setAttribute('aria-pressed', String(!state.theme));
+    chips.querySelectorAll('[data-t]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.t === state.theme)));
+    $('#fHead').setAttribute('aria-pressed', state.head); $('#fAI').setAttribute('aria-pressed', state.ai); $('#fMobile').setAttribute('aria-pressed', state.mobile);
+    $('#vTimeline').setAttribute('aria-pressed', state.view === 'timeline'); $('#vLanes').setAttribute('aria-pressed', state.view === 'lanes');
+    $('#timeline').hidden = state.view !== 'timeline'; $('#lanes').hidden = state.view !== 'lanes';
+    $('#fHead').hidden = state.view === 'lanes';
+    if (state.view === 'timeline') timeline(); else lanes();
+    next();
+  }
+  render();
+})();
+</script>

@@ -1,0 +1,57 @@
+{
+ "k": "EP-18360",
+ "histories": 42,
+ "historiesRead": 42,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-07-11T12:24:55.079+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-07-11T12:25:18.163+0100",
+   "from": "Considering",
+   "to": "Ready for development",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2023-07-11T13:57:50.813+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-07-25T10:46:06.918+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2024-08-02T13:05:28.527+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2024-08-05T16:02:25.924+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2024-08-15T10:29:23.302+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790317942416.txt"
+}

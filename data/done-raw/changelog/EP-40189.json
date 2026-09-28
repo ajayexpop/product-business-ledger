@@ -1,0 +1,111 @@
+{
+ "k": "EP-40189",
+ "histories": 55,
+ "historiesRead": 55,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2025-03-03T18:00:49.268+0000",
+   "from": "Incoming request",
+   "to": "Awaiting details",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-03-03T18:00:51.773+0000",
+   "from": "Awaiting details",
+   "to": "Considering",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-03-03T18:00:55.369+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-03-03T18:00:58.093+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-03-14T14:47:37.067+0000",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-03-24T10:52:02.032+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-03-24T14:02:58.809+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-03-24T14:03:02.019+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-03-25T13:47:10.080+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-03-25T13:47:12.175+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-03-27T13:21:06.288+0000",
+   "from": "In progress",
+   "to": "On-hold",
+   "by": "Ievgenii Akimov"
+  },
+  {
+   "at": "2025-03-27T13:43:11.032+0000",
+   "from": "On-hold",
+   "to": "In progress",
+   "by": "Ievgenii Akimov"
+  },
+  {
+   "at": "2025-04-08T13:55:56.269+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Ievgenii Akimov"
+  },
+  {
+   "at": "2025-04-09T17:24:21.581+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2025-04-15T09:09:36.883+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2025-04-24T11:37:00.262+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-15T17:46:35.857+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790321322755.txt"
+}

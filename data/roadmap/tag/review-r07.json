@@ -1,0 +1,1202 @@
+[
+ {
+  "k": "EP-54683",
+  "summary": "Story 27. Registrations with limit",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "With a registration limit set, people who register after it's reached join a waiting list and get a waiting-list email instead of an activation link. Waiting-list registrants can't log in until approved; approved ones activate and pay reserved items in a basket. A modal offers the list if spots run out mid-registration."
+ },
+ {
+  "k": "EP-54684",
+  "summary": "Story 28. Continue unfinished Registration",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Visitors who return with an email that has an unfinished registration can get an email link to resume it, with their earlier answers kept. Unfinished registrations can be resumed across all registration types, unless the organiser turns the option off."
+ },
+ {
+  "k": "EP-54685",
+  "summary": "Story 29. Repeated Registration",
+  "epic": "New Registration - development",
+  "theme": "reg",
+  "include": true,
+  "exclude": null,
+  "feature": "New registration experience",
+  "text": "Visitors who already have an account from another event confirm by email link and get their standard profile fields pre-filled in the new registration. Repeat registrants see their name, company, position and other system fields filled in and can edit them."
+ },
+ {
+  "k": "EP-13588",
+  "summary": "[onlineRoom] ASW Chime update to v3",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Upgraded online meeting rooms to AWS Chime v3, retesting calls, audio, video, screen sharing and reconnection. Online rooms run on Chime v3."
+ },
+ {
+  "k": "EP-14618",
+  "summary": "Make a redirect to the online room after authorization in the system",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Online session rooms",
+  "text": "Sent users straight into the online room after they log in from a session's Join button. Logging in from Join opens the online room."
+ },
+ {
+  "k": "EP-17757",
+  "summary": "Add to RatingPopup clear function on window close",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Cleared the rating popup's data when it closes. Each rating popup opens empty."
+ },
+ {
+  "k": "EP-17761",
+  "summary": "add day control to the schedule list",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Added day control to My Schedule and Team Schedule, loading dates once and each day's items on demand. Schedule pages load one day at a time."
+ },
+ {
+  "k": "EP-17823",
+  "summary": "Refactoring: Remove OfflineSpeakers/ExpoOfflineSpeakers Model and Its Usages",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed the old offline speakers model, its usages and table. The offline speakers model is gone."
+ },
+ {
+  "k": "EP-17824",
+  "summary": "Refactoring: Remove OfflineModerators/ExpoOfflineModerators Model and Its Usages",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed the old offline moderators model, its usages and table. The offline moderators model is gone."
+ },
+ {
+  "k": "EP-18008",
+  "summary": "Check redirection after auth window, when user click to the JoinButton",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Sent users who log in from a session's Join button into the online room. Logging in from Join opens the session room."
+ },
+ {
+  "k": "EP-18389",
+  "summary": "Add additional indexes for Sessions",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Added search indexes for sessions: online type, dates, description and an exhibitor-event flag. Session search covers type, dates and description."
+ },
+ {
+  "k": "EP-18460",
+  "summary": "Separate speakers list from session page. Move to new menu item",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Speakers list page",
+  "text": "Moved the speakers list in the app to its own menu item, configurable in the app builder. The app has a Speakers menu item instead of a sessions tab."
+ },
+ {
+  "k": "EP-20055",
+  "summary": "Check double request on day change (session page)",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Removed the double request made when changing day on the sessions page. Changing day loads sessions once."
+ },
+ {
+  "k": "EP-21711",
+  "summary": "Refactoring: combine models ExhibitorEvents to one universal model",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Combined exhibitor events models into one universal model. Exhibitor events use a shared model."
+ },
+ {
+  "k": "EP-21963",
+  "summary": "Android|Exhibitor settings| Need made header of the event card smaller in case of empty track and image ",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor events",
+  "text": "Made Android event card headers smaller when there's no track or image. Event cards without tracks or images are compact."
+ },
+ {
+  "k": "EP-23609",
+  "summary": "(IOS) Add a moderator icon in the moderator profile, in the list, in sessions ",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Moderator badges in app",
+  "text": "Added a moderator icon on moderator profiles, lists and sessions in the iOS app, showing the speaker icon for people who are both. iOS marks moderators."
+ },
+ {
+  "k": "EP-23610",
+  "summary": "(Android) Add a moderator icon in the moderator profile, in the list, in sessions",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Moderator badges in app",
+  "text": "Added a moderator icon on moderator profiles, lists and sessions in the Android app, showing the speaker icon for people who are both. Android marks moderators."
+ },
+ {
+  "k": "EP-25111",
+  "summary": "Exhibitor events module shouldn't affect sessions",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Made the Sessions module control sessions and the Exhibitor events module control exhibitor events only. Each module controls only its own content."
+ },
+ {
+  "k": "EP-26272",
+  "summary": "After following invite on-demand session link, user should be redirected to the session card",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Sent users following an on-demand session invite link straight to that session's card. On-demand invite links open the session."
+ },
+ {
+  "k": "EP-27506",
+  "summary": "[exhibitor events] Exhibitor name should be string when customer save event",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed exhibitor events saving an object instead of the exhibitor name. Exhibitor events save the exhibitor's name."
+ },
+ {
+  "k": "EP-29282",
+  "summary": "Check session card, list view without image. ",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed session cards without images in list view. Image-less session cards display correctly."
+ },
+ {
+  "k": "EP-32019",
+  "summary": "Android/ on session cards displayed wrong quantity of speakers moderators ",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the speaker and moderator count on Android session cards to respect the permission matrix and GDPR. Session cards show the right number of visible speakers."
+ },
+ {
+  "k": "EP-32290",
+  "summary": "Design update for session/ event \"tag\" in long name case ",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Updated designs for long session and event tag names in lists, profiles and schedules. Long tags have a defined design."
+ },
+ {
+  "k": "EP-33538",
+  "summary": "Need to refactor exhibitor events custom forms",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote the save sequence for exhibitor event custom forms. Exhibitor event forms save in a cleaner sequence."
+ },
+ {
+  "k": "EP-34020",
+  "summary": "Fix info about exhibitor in session card in expo-components.",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed exhibitor info on session cards: names overlapping images and long names pushing child exhibitors. Session cards show exhibitor info cleanly."
+ },
+ {
+  "k": "EP-34656",
+  "summary": "503 - SAVING SESSION/Fix for updating speakers and moderators",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Tested the fix for a 503 error when saving sessions with speakers and moderators. Sessions save with their speakers and moderators."
+ },
+ {
+  "k": "EP-34842",
+  "summary": "check adaptive design for the session banner on the session page",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Checked the responsive session banner so the counter stays on the image. The session banner counter displays correctly."
+ },
+ {
+  "k": "EP-35552",
+  "summary": "Session card. Show more exhibitor button. Action popup broken styles or empty square",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the actions popup under a session card's 'show more exhibitors' for guests and logged-in users. The exhibitor actions popup displays properly."
+ },
+ {
+  "k": "EP-35795",
+  "summary": "Empty state in case there are no sessions",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Session list empty states",
+  "text": "Added an empty state to the sessions page when no sessions exist. Empty sessions pages say that no sessions have been added."
+ },
+ {
+  "k": "EP-36710",
+  "summary": " iOS/Sessin rating/ Remouve OWN EXHIBITOR - Exhibitor  EVENTS from session rating tab",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Session ratings",
+  "text": "Removed a team member's own exhibitor's events from the iOS session rating tab. iOS rating lists only rateable events."
+ },
+ {
+  "k": "EP-36711",
+  "summary": "Android/Sessin rating/ Remouve OWN EXHIBITOR - Exhibitor  EVENTS from session rating tab",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Session ratings",
+  "text": "Removed a team member's own exhibitor's events from the Android session rating tab. Android rating lists only rateable events."
+ },
+ {
+  "k": "EP-37170",
+  "summary": "Android/ Session rating/ Online room physical location ",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Session ratings",
+  "text": "Updated Android session rating screens for online rooms with a physical location. Android shows physical locations for online rooms."
+ },
+ {
+  "k": "EP-41291",
+  "summary": "Apply translation to custom session filter items",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Session filters",
+  "text": "Translated custom session filter items and returned them in the requested language. Session filters appear in each event language."
+ },
+ {
+  "k": "EP-44247",
+  "summary": "After saving changes for a Session/Exhibitor event, need change the redirect from the All Sessions page to the current session's edit page",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Session editing in admin",
+  "text": "Returned admins to the session's own edit page after saving a session, as already done for exhibitor events. Saving a session keeps the admin on it."
+ },
+ {
+  "k": "EP-44664",
+  "summary": "Comments from Hyve about the Approval process",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor event applications",
+  "text": "Addressed feedback on exhibitor event approvals: template variables, unrestricted approval dates, empty final time, auto-approval and card buttons. The approval process works as requested."
+ },
+ {
+  "k": "EP-45600",
+  "summary": "iOS/ Provide Exhibitors events page loading update",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor events",
+  "text": "Applied the improved loading logic to the iOS exhibitor events page. iOS exhibitor events load like other pages."
+ },
+ {
+  "k": "EP-46201",
+  "summary": "New Autoapproval interface",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor events",
+  "text": "Added an 'Initiate auto-approval algorithm' button to session config, with confirmation and empty-state errors. Organisers can run auto-approval for exhibitor events on demand."
+ },
+ {
+  "k": "EP-46203",
+  "summary": "Required limit when approval process is enabled for Exhibitor events",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor events",
+  "text": "Required a participant limit when approval is enabled for exhibitor events, and hid approval for on-demand events. Approval events can't be unlimited."
+ },
+ {
+  "k": "EP-46204",
+  "summary": "Autoapproval mechanism",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor events",
+  "text": "Built auto-approval for exhibitor event applications: maximise attendance, at least one per user, no overlaps, balanced and re-runnable. Applications to exhibitor events are approved or rejected automatically and fairly."
+ },
+ {
+  "k": "EP-46207",
+  "summary": "Remove rejection notifications and indication",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor events",
+  "text": "Removed rejection notifications and rejection markers for exhibitor event applications. Rejected applicants aren't notified."
+ },
+ {
+  "k": "EP-46550",
+  "summary": "[Hyve] Extend Content Settings with Exhibitor events for app",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor events",
+  "text": "Added Exhibitor Events labels to content settings for the app. Organisers can rename Exhibitor Events in the app."
+ },
+ {
+  "k": "EP-46872",
+  "summary": "Exhibitor Event form, focus on a field with error does not work",
+  "epic": null,
+  "theme": "sessions",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed focusing the first field with an error on the exhibitor event form. The form jumps to the first error."
+ },
+ {
+  "k": "EP-47797",
+  "summary": "Exhibitor Events. Sorting in Exhibitor Profile",
+  "epic": "Exhibitor profile",
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor events",
+  "text": "Exhibitor events in the exhibitor profile are listed in chronological order by start date and time, soonest first. Exhibitors see their events in the order they happen."
+ },
+ {
+  "k": "EP-55466",
+  "summary": "Custom colors for tracks",
+  "epic": null,
+  "theme": "sessions",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom track colours",
+  "text": "Tracks can use any custom colour through a full colour picker with hex input, alongside the existing 24 presets. Track colours match the brand on session and exhibitor event cards, web and app, with readable text colour set automatically."
+ },
+ {
+  "k": "EP-297",
+  "summary": "Formbuilder rework",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Reworked the registration form builder, checking every field type on the registration page. Registration form field types were re-checked as part of the form builder rework."
+ },
+ {
+  "k": "EP-13089",
+  "summary": "Make refactor for header menu elements for the SEO optimisation ",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored header menu items to render real links for SEO. Header menu items are crawlable links."
+ },
+ {
+  "k": "EP-13157",
+  "summary": "rewrite ArticlesBigBlock to next Link",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote the community articles block to use Next.js links. The articles block uses Next links."
+ },
+ {
+  "k": "EP-13288",
+  "summary": "Refactor TracksBlock",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved session date logic from the dates list into a session dates wrapper. The tracks block's date logic lives in a reusable wrapper."
+ },
+ {
+  "k": "EP-13371",
+  "summary": "Optimize SEO with links (Add LinkWrapper)",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Website SEO",
+  "text": "Wrapped links to other pages in a link wrapper across the frontend for SEO. Internal links render as crawlable links."
+ },
+ {
+  "k": "EP-17588",
+  "summary": "Server.js",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Made the frontend server skip host validation when the hosts list is empty and disabled its cache. The server no longer fails validation on an empty hosts list."
+ },
+ {
+  "k": "EP-18616",
+  "summary": "Update header",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Unified the website header across the new and old frontends: logos, colours, hovers, navigation, language switch, hideable dates, top-bar navigation and responsiveness. Headers look the same on both frontends with more layout options."
+ },
+ {
+  "k": "EP-18852",
+  "summary": "Check and fix all image inside a footer",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed footer images so they fit their containers. Footer images display without distortion."
+ },
+ {
+  "k": "EP-19126",
+  "summary": "Change icon to icon like in the design",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Replaced a popup's trash icon with the icon in the design. The popup uses the designed icon."
+ },
+ {
+  "k": "EP-19715",
+  "summary": "Color of header and submenu should be the same",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Made the header submenu use the lower header's colour. Header and submenu colours match."
+ },
+ {
+  "k": "EP-20205",
+  "summary": "Rewrite Header folder",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Restructured the frontend Header folder with one object of available keys. Header code is better organised."
+ },
+ {
+  "k": "EP-21071",
+  "summary": "Darker font and remove space",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Darkened meeting information text in email variables and reduced spacing to match the design. Meeting variables in emails match the design."
+ },
+ {
+  "k": "EP-22567",
+  "summary": "Fix new builder iframe height",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the new website builder iframe height using parent–iframe messaging. Builder iframes size correctly."
+ },
+ {
+  "k": "EP-22879",
+  "summary": "Test Table section for submission and compulsory fields",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Tested every form type in the exhibitor manual table section for submission and compulsory-field checks. Manuals can be submitted once all compulsory forms are done, for every form type."
+ },
+ {
+  "k": "EP-23901",
+  "summary": "Replace formik with react-hook-forms",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote all Formik components with React Hook Form. Frontend forms use React Hook Form."
+ },
+ {
+  "k": "EP-24355",
+  "summary": "[corp site] JS client error loger",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added a JavaScript error logger to the corporate website that posts client errors to a Discord channel. Corporate site errors are reported automatically."
+ },
+ {
+  "k": "EP-24408",
+  "summary": "To keep “news items per page” and “page number” fixed after approving a news item in the back-end",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "News management",
+  "text": "Kept pagination, page size and search in the admin news list after approving, rejecting or deleting news. Admins stay on the same news page and search after moderating."
+ },
+ {
+  "k": "EP-25783",
+  "summary": "Fix unit tests for portal-ui",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Fixed and rewrote the frontend unit tests in TypeScript. Frontend unit tests pass and are typed."
+ },
+ {
+  "k": "EP-26005",
+  "summary": "Find and fix an issue \"Failed to execute 'removeChild' on 'Node'\"",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed a frontend 'removeChild' error. The error no longer appears."
+ },
+ {
+  "k": "EP-26355",
+  "summary": "Check X icon color on the new front",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Checked the X icon colour on the new frontend when added in the old site builder. The X icon shows in the right colour."
+ },
+ {
+  "k": "EP-26357",
+  "summary": "Page plug rework",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Required a page name and slug in the site builder and blocked slugs that clash with reserved frontend pages. Custom pages always have a valid, unique address."
+ },
+ {
+  "k": "EP-28342",
+  "summary": "Add additional control color over click ",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Added props to control colour on click and save position or unmount. The component offers more colour control."
+ },
+ {
+  "k": "EP-28604",
+  "summary": "Disable autosave in the site builder",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Site builder autosave control",
+  "text": "Disabled autosave in the site builder by default, with an option to turn it on. Site builder changes save only when chosen, unless autosave is enabled."
+ },
+ {
+  "k": "EP-28605",
+  "summary": "Add addition settings to all video blocks, autoplay true/false",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Video block autoplay setting",
+  "text": "Added an autoplay on/off setting to all video blocks. Organisers choose whether videos autoplay."
+ },
+ {
+  "k": "EP-29275",
+  "summary": "[sitebulder] Add support special links to the links",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Website builder links",
+  "text": "Added mailto, tel and anchor link support to the site builder. Site builder links can open email, phone or page sections."
+ },
+ {
+  "k": "EP-30562",
+  "summary": "Multilingual custom forms",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Multilingual custom forms",
+  "text": "Made marketing custom forms and exhibitor event additional questions multilingual. Custom forms work in every event language."
+ },
+ {
+  "k": "EP-33265",
+  "summary": "[site builder] check two subclasses in the block",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed site builder card styling to target two child elements correctly. Card elements hide as intended."
+ },
+ {
+  "k": "EP-33266",
+  "summary": "[iframe height] Add ability to get height in the widgets mode for portal UI",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Embeddable portal widgets",
+  "text": "Let embedded frontend widgets report their content height so iframes can size to fit. Widget iframes can match their content height."
+ },
+ {
+  "k": "EP-34003",
+  "summary": "Fix types for FormBuilderV2 prepare validation for the tabs ",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Fixed TypeScript types in form builder tab validation. Tab validation is properly typed."
+ },
+ {
+  "k": "EP-34099",
+  "summary": "[site builder] Add to the custom CSS support for pseudo-class",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Website builder custom CSS",
+  "text": "Added pseudo-class support such as :hover to the site builder's custom CSS. Custom CSS can style hover states."
+ },
+ {
+  "k": "EP-34136",
+  "summary": "check link editor in the new textEditor",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Fixed the new text editor's link editor closing on every change. Links can be edited in the new text editor."
+ },
+ {
+  "k": "EP-34346",
+  "summary": "[site builder] create a block with social links which should be attached to right/left border",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Social links sidebar block",
+  "text": "Created a site builder block of social media icons fixed to the left or right edge. Websites can show floating social links."
+ },
+ {
+  "k": "EP-34455",
+  "summary": "add slug to the page list",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Website page management",
+  "text": "Showed each page's slug under its name in the site builder page list. Page addresses are visible in the list."
+ },
+ {
+  "k": "EP-34456",
+  "summary": "fix galery path list",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Showed the full path in the gallery breadcrumb when there's only one parent. Gallery paths are clear."
+ },
+ {
+  "k": "EP-34498",
+  "summary": "Add ability to edit old CSS",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom CSS editing",
+  "text": "Added a switch in the custom CSS window to edit the old site builder's global CSS. Admins can edit both old and new global CSS."
+ },
+ {
+  "k": "EP-34865",
+  "summary": "Fix blocks in tour mode",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed an error when clicking dashboard blocks in tour mode. The dashboard tour works."
+ },
+ {
+  "k": "EP-35493",
+  "summary": "Make the News and sponsor cards’ corners rounded in the new website builder.",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "New website builder",
+  "text": "Rounded the corners of news and sponsor cards in the new website builder. News and sponsor cards match the design."
+ },
+ {
+  "k": "EP-35499",
+  "summary": "Reduce the size of the shadow",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "New website builder",
+  "text": "Reduced the default shadow of testimonial blocks from 4px to 2px. Testimonial blocks have a lighter shadow."
+ },
+ {
+  "k": "EP-35581",
+  "summary": "Missing copyright in main layout ",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Showed the copyright on every main layout page, and on the floor plan when it isn't the default. Pages carry the copyright notice."
+ },
+ {
+  "k": "EP-35590",
+  "summary": "Width in footer for logo + text",
+  "epic": "Changes to the footer based on CSS tasks",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Footer builder",
+  "text": "Added a width setting for the footer's logo and text block in the website builder, between 216 and 500 px. Organisers can size the footer logo and text."
+ },
+ {
+  "k": "EP-35872",
+  "summary": "Add the ability to open platform links and external links by clicking on the icon and fix typing ",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Rich text editor links",
+  "text": "Let icons open platform and external links and renamed Robot.txt to robots.txt. Icon links work and robots.txt is correctly named."
+ },
+ {
+  "k": "EP-35919",
+  "summary": "Refactor components in articles folder",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Restructured article components and unified their types. Article code is organised and consistently typed."
+ },
+ {
+  "k": "EP-35932",
+  "summary": "Move website history to S3",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved website builder history from the database to S3, with a migration for existing versions. Website versions save and restore from S3."
+ },
+ {
+  "k": "EP-36242",
+  "summary": "Remove /page part from urls of custom pages in new website builder",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "New website builder",
+  "text": "Removed /page from custom page URLs in the new website builder and blocked slugs that clash with platform pages. Custom pages have clean URLs."
+ },
+ {
+  "k": "EP-36271",
+  "summary": "Fix bug in builder.",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed website builder bugs: backgrounds, card icon links and testimonial colours. The listed blocks display correctly."
+ },
+ {
+  "k": "EP-36330",
+  "summary": "Migrate from react-slick to swiper ",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Migrated website builder carousels and sliders from react-slick to Swiper, keeping their look. All carousel blocks run on Swiper."
+ },
+ {
+  "k": "EP-36346",
+  "summary": "Not possible to include text after all text was removed",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Kept a clickable area in counter and testimonial text boxes after all text is deleted. Admins can refill emptied text boxes."
+ },
+ {
+  "k": "EP-36463",
+  "summary": "Fix slider image",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed slider image alignment and added item outlines. Slider items align and are outlined."
+ },
+ {
+  "k": "EP-36712",
+  "summary": "[sitebuilder]: Text & video & button",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "New website builder",
+  "text": "Fixed invalid alt attributes and missing video attributes in the text, video and button block. The block produces valid HTML."
+ },
+ {
+  "k": "EP-36951",
+  "summary": "Delete page elements if page was deleted",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Stopped saving a deleted page's elements, including when restoring history. Deleted pages leave nothing behind."
+ },
+ {
+  "k": "EP-37399",
+  "summary": "Fix mobile adaptation for Image gallery views",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed an image gallery view on mobile that lost its aspect ratio and overflowed. The gallery displays correctly on phones."
+ },
+ {
+  "k": "EP-37474",
+  "summary": "[New Website Builder] Change buttons aligning logic in Сards Carousel block",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "New website builder",
+  "text": "Aligned buttons per card in the website builder's cards carousel, matching the builder preview. Carousel buttons line up across cards."
+ },
+ {
+  "k": "EP-37486",
+  "summary": "Font-size selector is broken inside inline TextEditor on Safari",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the inline text editor's font-size selector closing the editor on Safari. Font sizes can be changed on Safari."
+ },
+ {
+  "k": "EP-37518",
+  "summary": "Have a new setting “Text position”",
+  "epic": "Changes to the footer based on CSS tasks",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Footer builder",
+  "text": "Replaced the footer's Logo position with a Text position setting shown only when text is on, keeping existing layouts. Footer logo and text placement is clearer."
+ },
+ {
+  "k": "EP-37526",
+  "summary": "Add the ability to delete a column",
+  "epic": "Changes to the footer based on CSS tasks",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Footer builder",
+  "text": "Added Delete column to footer link settings, with confirmation and reflowing the remaining columns. Admins can remove whole footer columns."
+ },
+ {
+  "k": "EP-37675",
+  "summary": "Not found error for news with slug as numeric ",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed news items with numeric slugs being looked up by ID and returning an error. News with numeric slugs open correctly."
+ },
+ {
+  "k": "EP-37769",
+  "summary": "Show rest of google api key errors",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Font settings",
+  "text": "Showed all Google API key errors in the form builder font settings. Admins see why Google fonts fail."
+ },
+ {
+  "k": "EP-37770",
+  "summary": "Controls for TextEditor inherit theme from Builder",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Rich text editor improvements",
+  "text": "Styled text editor controls to the design instead of inheriting the builder theme. Editor controls match the design."
+ },
+ {
+  "k": "EP-37947",
+  "summary": "Allignment of the columns in footer",
+  "epic": "Changes to the footer based on CSS tasks",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Footer builder",
+  "text": "Added footer column alignment and column width settings to the website builder, with responsive layouts. Organisers align and size footer columns themselves."
+ },
+ {
+  "k": "EP-38758",
+  "summary": "Fix something went wrong on first page load after revalidate tags",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed a 'something went wrong' error on the first page load after cache revalidation. Pages load normally after revalidation."
+ },
+ {
+  "k": "EP-39013",
+  "summary": "Event tags doesn't show on adaptive",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed event tags disappearing in the admin events list at narrow widths, with working add and delete. Event tags work at every window size."
+ },
+ {
+  "k": "EP-39073",
+  "summary": "[site builder] Cut long text in buttons",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Truncated long button text with an ellipsis in the site builder. Long button labels no longer overflow."
+ },
+ {
+  "k": "EP-39660",
+  "summary": "Scroll settings",
+  "epic": "Header Menu Customization Options",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Website header menu customisation",
+  "text": "Added header scroll settings to the website builder: scroll, sticky and disappear-on-scroll. Organisers choose how the header behaves on scroll."
+ },
+ {
+  "k": "EP-39685",
+  "summary": "Line Layout",
+  "epic": "Header Menu Customization Options",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Website header menu customisation",
+  "text": "Added line layout options for header links: up to three rows, text size and spacing, and an option to move extra links into 'Show more'. Header links fit the space flexibly."
+ },
+ {
+  "k": "EP-39909",
+  "summary": "Heading for SEO",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "SEO-friendly event pages",
+  "text": "Converted improperly nested headings in pasted text into paragraphs for SEO. Pasted content keeps a clean heading structure."
+ },
+ {
+  "k": "EP-40148",
+  "summary": "Ondemand ULR didn't change after redirect",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Redirected disabled session tabs such as on-demand or round tables in the URL to the Sessions tab. Disabled tabs fall back to Sessions."
+ },
+ {
+  "k": "EP-40176",
+  "summary": "[admin-ui] site builder add ability to change slub and input all data before make validation",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "New website builder",
+  "text": "Let admins type a full site builder slug before validation runs. Slugs can be typed naturally."
+ },
+ {
+  "k": "EP-40229",
+  "summary": "Change logic of the sitemap generation",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "SEO-friendly event pages",
+  "text": "Generated the sitemap from website builder pages visible to users who aren't logged in, respecting hidden and restricted pages. The sitemap lists every public builder page."
+ },
+ {
+  "k": "EP-40560",
+  "summary": "[next14] add a test for the getLinkWrapperData with all cases ",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Added tests for link wrapper data in all cases, including server-side. Link building is tested."
+ },
+ {
+  "k": "EP-40561",
+  "summary": "add test for the getUrlFormLinkSetup",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Added tests for link URL setup to prevent malformed triple-slash links. Link setup is tested."
+ },
+ {
+  "k": "EP-40576",
+  "summary": "[next14] add image path validation ",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Validated image paths so relative paths don't trigger requests to wrong pages. Images with relative paths load correctly."
+ },
+ {
+  "k": "EP-40706",
+  "summary": "DLG: language issues",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Corrected German translations across the platform, based on EuroTier 2024 and applied globally, including basket and order labels. German-language events display correct terms."
+ },
+ {
+  "k": "EP-41022",
+  "summary": "EP-32657 missing header changes",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Applied header changes that were missing from the SEO custom pages work. The SEO work includes the header changes."
+ },
+ {
+  "k": "EP-41243",
+  "summary": "Translation: (website) -  Goldkrone BAG&ORDER - missing german translations",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Added missing German translations across notifications, profile menu, exhibitor dashboard and other pages, applied globally. German-language events are more fully translated."
+ },
+ {
+  "k": "EP-42261",
+  "summary": "~Buttons Block~ - New website builder (ability to use simple components block)",
+  "epic": "Website builder. Custom grids",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Website builder content blocks",
+  "text": "A Buttons block in the Website Builder: add unlimited buttons, style them, set links, hide, delete and drag to reorder, up to six per row. Organisers manage a block's buttons from one settings panel with live preview; extra buttons wrap onto new rows."
+ },
+ {
+  "k": "EP-42351",
+  "summary": "[portalUI] Add CSS class or data attribute for customer",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom styling hooks",
+  "text": "Added CSS classes or data attributes for the user's role, category and login state on the frontend. Custom CSS can target roles, categories and logged-in users."
+ }
+]

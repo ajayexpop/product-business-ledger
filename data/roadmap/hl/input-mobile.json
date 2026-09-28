@@ -1,0 +1,370 @@
+[
+ {
+  "k": "EP-19631",
+  "q": "2023-Q3",
+  "feature": "Android list redesigns",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android| \"No-results\" screen ",
+  "epic": null,
+  "text": "Added a no-results screen to the Android app for empty filter or search results. Android shows a no-results state."
+ },
+ {
+  "k": "EP-16391",
+  "q": "2023-Q3",
+  "feature": "Android list redesigns",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android - Delegate/buyer list redesign",
+  "epic": null,
+  "text": "Redesigned the delegate and buyer lists in the Android app behind a Firebase on/off toggle, matching iOS. The Android app can show the new people-list design, switchable remotely via Firebase."
+ },
+ {
+  "k": "EP-16392",
+  "q": "2023-Q3",
+  "feature": "Android list redesigns",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android - Exhibitor list redesign",
+  "epic": null,
+  "text": "Redesigned the Android exhibitor list, with a Firebase toggle to switch the new design on or off as on iOS. The Android exhibitor list can use the new design, controlled remotely via Firebase."
+ },
+ {
+  "k": "EP-16393",
+  "q": "2023-Q3",
+  "feature": "Android list redesigns",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android - Products list redesign",
+  "epic": null,
+  "text": "Redesigned the product list in the Android app behind a Firebase on/off toggle, as on iOS. The new Android product list design can be switched on or off remotely through Firebase."
+ },
+ {
+  "k": "EP-16394",
+  "q": "2023-Q3",
+  "feature": "Android list redesigns",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android - Brands list redesign",
+  "epic": null,
+  "text": "Redesigned the brands list in the Android app behind a Firebase on/off toggle, as on iOS. The new Android brands list design can be switched on or off remotely through Firebase."
+ },
+ {
+  "k": "EP-1130",
+  "q": "2023-Q3",
+  "feature": "Android sessions redesign",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android Sessions redesign",
+  "epic": null,
+  "text": "Redesigned session cards and session pages in the Android app to the updated design, with a pulsing Live tag, prices and a book button for paid sessions. Android session lists, free and paid session pages match the new design, including live indication and paid session booking."
+ },
+ {
+  "k": "EP-32270",
+  "q": "2024-Q3",
+  "feature": "App builder",
+  "tags": [],
+  "summary": "App builder -> Custom Documents block -> Hide \" Download all\" btn on preview ",
+  "epic": null,
+  "text": "Hid the 'Download all' button in the app builder's custom documents preview. The preview matches the apps."
+ },
+ {
+  "k": "EP-27462",
+  "q": "2024-Q4",
+  "feature": "App builder",
+  "tags": [],
+  "summary": "Font in the app ",
+  "epic": null,
+  "text": "Added the Gilroy font to the app builder's Heading and Text selectors. The chosen Gilroy font is applied in the Android and iOS apps."
+ },
+ {
+  "k": "EP-32359",
+  "q": "2024-Q4",
+  "feature": "App builder",
+  "tags": [],
+  "summary": "Login Link for App Sign In Page",
+  "epic": null,
+  "text": "Added mobile app handling for a /app-page/signIn link that opens the system login page from custom app blocks. The link opens the standard, OTP or web login page in the app, depending on the event's sign-in settings."
+ },
+ {
+  "k": "EP-32358",
+  "q": "2024-Q4",
+  "feature": "App builder",
+  "tags": [],
+  "summary": "Add an option in app builder to specify page for logged in / non logged user",
+  "epic": null,
+  "text": "Added a 'Visible only for users who are not logged in' toggle to custom block pages in the app builder's event info section. Custom block menu items with the toggle on show only to logged-out app users and disappear once they log in."
+ },
+ {
+  "k": "EP-35841",
+  "q": "2024-Q4",
+  "feature": "App builder",
+  "tags": [],
+  "summary": "Add app link to the app builder for the custom block",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-35827",
+  "q": "2024-Q4",
+  "feature": "App builder",
+  "tags": [],
+  "summary": "Change App builder form HTML to iframe",
+  "epic": null,
+  "text": "Rendered the app builder preview in an iframe to show the real app view. The app builder preview matches the app."
+ },
+ {
+  "k": "EP-42436",
+  "q": "2025-Q2",
+  "feature": "App builder",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Removing text blocks from the app builder",
+  "epic": null,
+  "text": "Removed workaround text blocks from the app builder. The app builder drops the old text blocks."
+ },
+ {
+  "k": "EP-41330",
+  "q": "2025-Q2",
+  "feature": "App data re-sync",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": " \"Re-sync\" button to fetch the latest SQL data file manually",
+  "epic": null,
+  "text": "Added a Re-sync button to the app Settings page to manually fetch the latest data, limited to once an hour. All users can refresh app data themselves; logged-in users also see Cancel Registration and Delete My Account Globally."
+ },
+ {
+  "k": "EP-44893",
+  "q": "2026-Q1",
+  "feature": "App deep links",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Deeplinks for Sessions",
+  "epic": null,
+  "text": "Added session URLs and deep links to session forms and the sessions export, opening in the app when installed. Organisers share links that open sessions in the app or web."
+ },
+ {
+  "k": "EP-31013",
+  "q": "2024-Q3",
+  "feature": "App event switching",
+  "tags": [],
+  "summary": "Dynamic Event Handling for User Session Management: App",
+  "epic": null,
+  "text": "Made the app check on launch that the user's logged-in event is still in the backend event list. If the event no longer exists the user is logged out and shown an event selection screen, or the single available event's login."
+ },
+ {
+  "k": "EP-7197",
+  "q": "2023-Q3",
+  "feature": "App icon refresh",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Change app icons",
+  "epic": null,
+  "text": "Unified the style and size of icons across the application. Application icons follow one consistent design style and size."
+ },
+ {
+  "k": "EP-39633",
+  "q": "2025-Q1",
+  "feature": "App icon refresh",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "iOS/ Please update the favorite icons, as their current quality appears quite low.",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-12277",
+  "q": "2023-Q2",
+  "feature": "App languages",
+  "tags": [],
+  "summary": "Mobile App - Add support for US English language",
+  "epic": null,
+  "text": "Added US English to the mobile apps, chosen by phone locale and initially a copy of UK English with 'Favorites' spelling. Users with a US English phone locale see US spelling in the app, such as 'Favorites' on My Profile."
+ },
+ {
+  "k": "EP-20409",
+  "q": "2023-Q4",
+  "feature": "App languages",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Arabic translation for mobile app",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-23090",
+  "q": "2023-Q4",
+  "feature": "App languages",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Multilanguage webview pages for mobile app",
+  "epic": null,
+  "text": "Passed the app's language code to the backend so mobile webview pages open in that language when the event supports it. Edit profile, floor plan, basket, exhibitor events and delegates webviews open in the app language if enabled, otherwise English."
+ },
+ {
+  "k": "EP-34002",
+  "q": "2024-Q3",
+  "feature": "App navigation and usability",
+  "tags": [],
+  "summary": "Android/ Made more user friendly behaviour of section closes  ",
+  "epic": null,
+  "text": "Kept the Android screen position stable when a section is collapsed with 'show less'. Collapsing sections on Android behaves like iOS."
+ },
+ {
+  "k": "EP-12279",
+  "q": "2023-Q2",
+  "feature": "App profile wording",
+  "tags": [],
+  "summary": "Mobile App - Replace Matchmaking Information Wording",
+  "epic": null,
+  "text": "Renamed 'Matchmaking information' to 'Profile Information' on public profiles in the mobile app. App public profiles label the section 'Profile Information'."
+ },
+ {
+  "k": "EP-18158",
+  "q": "2023-Q2",
+  "feature": "App security hardening",
+  "tags": [],
+  "summary": "In source code add res/xml/network_security_config.xml",
+  "epic": null,
+  "text": "Added an Android network security config so app requests can be inspected for debugging. Developers can inspect Android app traffic."
+ },
+ {
+  "k": "EP-44837",
+  "q": "2025-Q3",
+  "feature": "App usability improvements",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Rotating Location Text on Button",
+  "epic": null,
+  "text": "Made long location text on session, exhibitor event, round table and speed networking detail buttons scroll horizontally in a continuous loop in the app. Attendees can read the full location on the button as it scrolls when it overflows, and it stays static when it fits."
+ },
+ {
+  "k": "EP-47476",
+  "q": "2026-Q1",
+  "feature": "App usability improvements",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "iOS/ Update \"About me\" section behaviour inside DELEGATES profiles ",
+  "epic": null,
+  "text": "Hid the empty About me section on iOS delegate profiles. Profiles don't show empty sections."
+ },
+ {
+  "k": "EP-49024",
+  "q": "2026-Q1",
+  "feature": "App usability improvements",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "iOS/ Pls update \"Tickets\" page loading/updating behaviour ",
+  "epic": null,
+  "text": "Added a loading spinner to the Tickets page update flow so users no longer think the app is frozen when updating. Loading/updating behavior on the Tickets page was improved with proper spinner feedback matching the original design, across iOS and Android."
+ },
+ {
+  "k": "EP-56372",
+  "q": "2026-Q3",
+  "feature": "Custom app typography",
+  "tags": [],
+  "summary": "Add FBM Gabarito to remaining pages [Android]",
+  "epic": null,
+  "text": "Rolled out the FBM app's Gabarito typography to all remaining Android screens (~1010 elements across 451 layouts) for one consistent look end to end. Gabarito Semibold/Light configured platform-wide for FBM in AppBuilder; ~252 components (AppCompatTextView, TextView, MaterialButton, chips, radio buttons, text inputs) migrated onto the dynamic-font path; verified with no truncation/overflow on a smoke-tested set of high-traffic screens."
+ },
+ {
+  "k": "EP-38532",
+  "q": "2025-Q1",
+  "feature": "Event selector",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android/ Need dislay  Country/City on \"choose event\" and \"logination\" screens",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-33551",
+  "q": "2025-Q1",
+  "feature": "Event selector",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android/ Check events position ( current / past) on event selector screen based on event time  ",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-54106",
+  "q": "2026-Q3",
+  "feature": "ExpoPlatform branding in the app",
+  "tags": [],
+  "summary": "Expoplatform branding promotion in mobile app",
+  "epic": "Mobile App — 2026 Enhancements",
+  "text": "The mobile app now promotes ExpoPlatform branding, turning attendee usage into organic platform awareness. ExpoPlatform branding is surfaced within the mobile app experience."
+ },
+ {
+  "k": "EP-49211",
+  "q": "2026-Q1",
+  "feature": "Global force resync",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Global Force Resync - Shoptalk",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "text": "Reworking the mobile global force-resync so it no longer logs users out lets organizers fully reset event data mid-event (delivered for Shoptalk) without disrupting attendees. The admin-panel global resync was modified to perform a full reset/resync without logging users out, matching the in-app settings resync functionality."
+ },
+ {
+  "k": "EP-17855",
+  "q": "2024-Q1",
+  "feature": "In-app updates",
+  "tags": [],
+  "summary": "In-App Updates",
+  "epic": null,
+  "text": "Added in-app update settings to the app builder with critical (required) and desired (optional) update prompts. Organisers enable in-app updates and choose required or optional prompts, which the apps show when a newer version is available."
+ },
+ {
+  "k": "EP-52358",
+  "q": "2026-Q2",
+  "feature": "Offline behaviour in app",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android/ Update \"Favourite\" icon behaviour in case of internet connection lost ",
+  "epic": null,
+  "text": "Added a standard offline-connection toast when Android users tap Favourite while disconnected, replacing silent no-op behaviour. Tapping favourite while offline now shows the app's standard connection-lost toast across lists, profiles, and recommendations on Android."
+ },
+ {
+  "k": "EP-52359",
+  "q": "2026-Q2",
+  "feature": "Offline behaviour in app",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "iOS/ Update \"Favourite\" icon behaviour in case of internet connection lost",
+  "epic": null,
+  "text": "Added a standard offline-connection toast when iOS users tap Favourite while disconnected, replacing silent no-op behaviour. Tapping favourite while offline now shows the app's standard connection-lost toast across lists, profiles, and recommendations on iOS."
+ },
+ {
+  "k": "EP-27309",
+  "q": "2024-Q4",
+  "feature": "Tiered app menus",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Tiered Menu Navigation for App Browser",
+  "epic": "New Website Builder",
+  "text": "Changed the app browser menu to a tiered structure with expandable, indented sub-items under their parent. Main items show first and sub-items appear only when their parent is expanded, with parents staying visible."
+ }
+]

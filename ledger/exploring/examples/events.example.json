@@ -1,0 +1,320 @@
+{
+ "entry": "LE-2026-0001",
+ "events": [
+  {
+   "id": "e01",
+   "at": "2026-09-28T09:40:00Z",
+   "by": {
+    "name": "TAM (example)",
+    "email": "tam@example.invalid"
+   },
+   "role": "requester",
+   "k": "create",
+   "from": null,
+   "to": "draft"
+  },
+  {
+   "id": "e02",
+   "at": "2026-09-28T10:12:00Z",
+   "by": {
+    "name": "claude",
+    "onBehalfOf": "TAM (example)"
+   },
+   "role": "intake-agent",
+   "k": "edit",
+   "changes": [
+    {
+     "f": "intakeCheck",
+     "from": null,
+     "to": "glossary pass, problem clarity pass"
+    }
+   ]
+  },
+  {
+   "id": "e03",
+   "at": "2026-09-28T10:14:00Z",
+   "by": {
+    "name": "TAM (example)",
+    "email": "tam@example.invalid"
+   },
+   "role": "requester",
+   "k": "log",
+   "from": "draft",
+   "to": "submitted",
+   "note": "raisedBy Chris"
+  },
+  {
+   "id": "e04",
+   "at": "2026-09-29T09:02:00Z",
+   "by": {
+    "name": "Chris"
+   },
+   "role": "sales",
+   "k": "sign",
+   "from": "submitted",
+   "to": "signed",
+   "signed": {
+    "lever": "increase-revenue",
+    "figureGBP": 100000,
+    "assumptionHash": "sha1:1b4ab00f9efb"
+   },
+   "selfSigned": true,
+   "approverRule": "fs-funded-approver: raisingLayer sales → Chris only"
+  },
+  {
+   "id": "e05",
+   "at": "2026-09-29T09:03:00Z",
+   "by": {
+    "name": "Chris"
+   },
+   "role": "sales",
+   "k": "edit",
+   "changes": [
+    {
+     "f": "fundedConfirmation",
+     "from": null,
+     "to": "confirmed"
+    }
+   ],
+   "b": "b-sign-0929"
+  },
+  {
+   "id": "e05b",
+   "at": "2026-10-01T14:00:00Z",
+   "by": {
+    "name": "Ajay"
+   },
+   "role": "pe-ledger",
+   "k": "return",
+   "from": "signed",
+   "to": "returned",
+   "infoRequest": {
+    "assignedTo": "TAM (example)",
+    "dueBy": "2026-10-06",
+    "items": [
+     {
+      "field": "acceptanceCriteria"
+     },
+     {
+      "field": "successMeasure"
+     },
+     {
+      "field": "surfaces.admin"
+     }
+    ]
+   },
+   "reason": "details missing at the weekly review"
+  },
+  {
+   "id": "e05c",
+   "at": "2026-10-02T09:30:00Z",
+   "by": {
+    "name": "TAM (example)"
+   },
+   "role": "requester",
+   "k": "resubmit",
+   "from": "returned",
+   "to": "signed",
+   "note": "all 3 items answered; returned to the stage it came from; signature still valid",
+   "changes": [
+    {
+     "f": "acceptanceCriteria",
+     "from": "1 ... 2 ...",
+     "to": "5 criteria"
+    },
+    {
+     "f": "successMeasure",
+     "from": null,
+     "to": "set"
+    },
+    {
+     "f": "surfaces.admin",
+     "from": null,
+     "to": "set"
+    }
+   ]
+  },
+  {
+   "id": "e06",
+   "at": "2026-10-02T15:00:00Z",
+   "by": {
+    "name": "Ajay"
+   },
+   "role": "pe-ledger",
+   "k": "review",
+   "from": "signed",
+   "to": "reviewed"
+  },
+  {
+   "id": "e07",
+   "at": "2026-10-05T16:20:00Z",
+   "by": {
+    "name": "Bartosz"
+   },
+   "role": "pe-delivery",
+   "k": "estimate",
+   "from": "reviewed",
+   "to": "estimated",
+   "changes": [
+    {
+     "f": "estimate.effortDays",
+     "from": null,
+     "to": 24
+    },
+    {
+     "f": "buildCostGBP",
+     "from": null,
+     "to": 9600
+    },
+    {
+     "f": "netValueGBP",
+     "from": null,
+     "to": 90400
+    }
+   ]
+  },
+  {
+   "id": "e08",
+   "at": "2026-10-06T10:00:00Z",
+   "by": {
+    "name": "Ajay"
+   },
+   "role": "pe-ledger",
+   "k": "approve",
+   "from": "estimated",
+   "to": "approved",
+   "note": "tier 2, rank 3; on the ledger, not scheduled"
+  },
+  {
+   "id": "e09",
+   "at": "2026-10-12T15:30:00Z",
+   "by": {
+    "name": "Ajay"
+   },
+   "role": "meeting",
+   "k": "pickup",
+   "from": "approved",
+   "to": "picked-up",
+   "meeting": {
+    "date": "2026-10-12",
+    "minuteRef": "(minutes link)",
+    "attendees": [
+     "(attendees)"
+    ]
+   },
+   "changes": [
+    {
+     "f": "schedule",
+     "from": null,
+     "to": "2026-10-19 → 2026-11-10"
+    }
+   ],
+   "reason": "over agreed estimate noted; Sales to inform Client A"
+  },
+  {
+   "id": "e10",
+   "at": "2026-10-12T16:05:00Z",
+   "by": {
+    "name": "Bartosz"
+   },
+   "role": "pe-delivery",
+   "k": "edit",
+   "note": "schedule confirmed; baseline frozen"
+  },
+  {
+   "id": "e11",
+   "at": "2026-10-20T07:11:00Z",
+   "by": {
+    "name": "jira-sync"
+   },
+   "role": "jira-sync",
+   "k": "start",
+   "from": "picked-up",
+   "to": "in-delivery",
+   "changes": [
+    {
+     "f": "startedAt",
+     "from": null,
+     "to": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "id": "e12",
+   "at": "2026-10-27T11:00:00Z",
+   "by": {
+    "name": "Bartosz"
+   },
+   "role": "pe-delivery",
+   "k": "re-estimate",
+   "changes": [
+    {
+     "f": "estimate.effortDays",
+     "from": 24,
+     "to": 28
+    },
+    {
+     "f": "buildCostGBP",
+     "from": 9600,
+     "to": 11200
+    },
+    {
+     "f": "netValueGBP",
+     "from": 90400,
+     "to": 88800
+    },
+    {
+     "f": "schedule.expectedDue",
+     "from": "2026-11-10",
+     "to": "2026-11-12"
+    }
+   ]
+  },
+  {
+   "id": "e13",
+   "at": "2026-11-12T17:40:00Z",
+   "by": {
+    "name": "jira-sync"
+   },
+   "role": "jira-sync",
+   "k": "deliver",
+   "from": "in-delivery",
+   "to": "delivered"
+  },
+  {
+   "id": "e14",
+   "at": "2027-01-15T10:00:00Z",
+   "by": {
+    "name": "Ajay"
+   },
+   "role": "pe-ledger",
+   "k": "check",
+   "from": "delivered",
+   "to": "checked",
+   "answeredBy": "Chris",
+   "changes": [
+    {
+     "f": "check.actualGBP",
+     "from": null,
+     "to": 85000
+    },
+    {
+     "f": "check.verdict",
+     "from": null,
+     "to": "partly"
+    }
+   ]
+  },
+  {
+   "id": "e15",
+   "at": "2027-01-15T10:02:00Z",
+   "by": {
+    "name": "Ajay"
+   },
+   "role": "pe-ledger",
+   "k": "close",
+   "from": "checked",
+   "to": "closed"
+  }
+ ]
+}

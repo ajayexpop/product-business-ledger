@@ -1,0 +1,155 @@
+{
+ "_about": "Owner-side corrections applied by tools/roadmap.py merge after the tagger outputs (25 Sep 2026).",
+ "stories": {
+  "EP-20814": {
+   "include": false,
+   "exclude": "internal",
+   "feature": null,
+   "why": "Pipedrive is ExpoPlatform's own CRM, not a customer integration"
+  },
+  "EP-54783": {
+   "include": false,
+   "exclude": "internal",
+   "feature": null,
+   "why": "feature removal; not shown as a roadmap highlight"
+  },
+  "EP-56994": {
+   "include": false,
+   "exclude": "internal",
+   "feature": null,
+   "why": "feature removal; not shown as a roadmap highlight"
+  },
+  "EP-16698": {
+   "theme": "onsite",
+   "include": true,
+   "exclude": null,
+   "feature": "External barcode and QR scanning",
+   "why": "Re-tagged from its description (recipe A enrichment, 25 Sep 2026)"
+  },
+  "EP-40442": {
+   "theme": "reg",
+   "include": true,
+   "exclude": null,
+   "feature": "New orders page",
+   "why": "Re-tagged from its description (recipe A enrichment, 25 Sep 2026)"
+  },
+  "EP-18616": {
+   "theme": "web",
+   "include": true,
+   "exclude": null,
+   "feature": "Header and footer builder",
+   "why": "Re-tagged from its description (recipe A enrichment, 25 Sep 2026)"
+  }
+ },
+ "features": {
+  "GES single sign-on": "Partner single sign-on",
+  "GES meeting permissions": "Partner meeting permissions",
+  "InfoSalons and Aditus integration": "Aditus participant integration"
+ },
+ "highlights": {
+  "meet-new-meeting-request-flow": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "meet-schedule-calendar-view": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "comms-segmented-push-notifications": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "exhib-sponsor-section": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "onsite-live-location-expofp": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "mobile-android-redesign": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "analytics-custom-checkin-reports": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "platform-badge-scan-login": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "web-team-editing": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "platform-account-switcher": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "comms-multilingual-admin-notifications": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "platform-australia-hosting": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "analytics-meeting-programme-reports": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "sessions-external-session-registration": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "platform-admin-navigation-pagination": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "reg-branded-registration-pages": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "meet-ai-notes-add-on": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "exhib-search-sponsors": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "integ-api-v3-products": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "platform-admin-redesign": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "platform-selective-cloning": {
+   "level": "standard",
+   "why": "max 6 headlines per quarter (owner: 3-6 per quarter)"
+  },
+  "exhib-insights-portal": {
+   "level": "standard",
+   "why": "first part only; the portal is shown under Coming next"
+  },
+  "meet-personalised-meeting-notes": {
+   "title": "Meeting notes, private and AI",
+   "benefit": "Keep private notes on every meeting, and get AI meeting notes in the language the meeting was held in.",
+   "detail": "Attendees add a private note when requesting a meeting or from their schedule, on web and in the app, and find every note in one My Notes panel. AI meeting notes are produced in the meeting language, with one shared list of action points for all participants.",
+   "why": "Reworded from the Confluence specs behind the 2026 stories (25 Sep 2026)"
+  },
+  "web-custom-grids": {
+   "benefit": "Build multi-column page layouts without code, and they still look right on mobile.",
+   "detail": "Custom grids take one to six cells, can sit inside other grids and accept text, buttons, images and video by drag and drop. Cells resize and wrap on smaller screens, and a Buttons block adds as many styled buttons as a section needs.",
+   "why": "Reworded from the Confluence specs behind the 2026 stories (25 Sep 2026)"
+  },
+  "comms-messenger-status-filters": {
+   "benefit": "Spot unanswered conversations at a glance.",
+   "detail": "Messenger filters conversations into two-way chats, where both sides have replied, and one-way chats still waiting for an answer, alongside the existing filters.",
+   "why": "Reworded from the Confluence specs behind the 2026 stories (25 Sep 2026)"
+  }
+ }
+}

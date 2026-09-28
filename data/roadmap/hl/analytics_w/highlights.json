@@ -1,0 +1,414 @@
+[
+ {
+  "id": "analytics-report-columns-2023",
+  "theme": "analytics",
+  "q": "2023-Q1",
+  "title": "Report column additions",
+  "benefit": "Include exhibitor notes and session IDs in exports and reports.",
+  "detail": "The Exhibitors export can include the notes from each exhibitor profile, and the favourited sessions report and its export show each session’s ID.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-11592",
+   "EP-12216"
+  ]
+ },
+ {
+  "id": "analytics-export-progress",
+  "theme": "analytics",
+  "q": "2023-Q2",
+  "title": "Export progress and cancellation",
+  "benefit": "Follow the progress of exports and cancel them when needed.",
+  "detail": "Exports show a percentage progress indicator and a cancel button, and a clear status while the file is being generated. The check-in export runs faster.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-8159",
+   "EP-8160",
+   "EP-15627",
+   "EP-16615"
+  ]
+ },
+ {
+  "id": "analytics-mobile-app-stats",
+  "theme": "analytics",
+  "q": "2023-Q2",
+  "title": "Mobile app analytics",
+  "benefit": "See how attendees use the mobile app, including logins and unique users per app.",
+  "detail": "A mobile app logins report lists each login on iOS and Android with profile fields, supporting unique login counts. An App data tab in analytics shows page views, unique badge scans and unique logins per platform.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-5767",
+   "EP-13816",
+   "EP-17000"
+  ]
+ },
+ {
+  "id": "analytics-new-analytics",
+  "theme": "analytics",
+  "q": "2023-Q2",
+  "title": "New analytics",
+  "benefit": "Track registrations, content performance and activity in a new analytics dashboard.",
+  "detail": "Dashboard widgets show participants, exhibitors, content and actions, plus online participants by country and interest. Registration widgets break down sign-ups over time by category, country and interest, and content widgets cover news, sessions, on-demand, webinars and downloads. Pages open on a range a month either side of the event.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-9620",
+   "EP-9617",
+   "EP-9618",
+   "EP-16587"
+  ]
+ },
+ {
+  "id": "analytics-custom-checkin-reports",
+  "theme": "analytics",
+  "q": "2023-Q3",
+  "title": "Custom check-in reports",
+  "benefit": "Export check-in reports with the columns you choose and see first-time versus repeat scans.",
+  "detail": "Organisers pick system and custom fields for the check-in report and can export unique check-ins per event or per day, including co-located show badges and external codes, with the scanned code shown.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-14043",
+   "EP-20031",
+   "EP-20384",
+   "EP-21474"
+  ]
+ },
+ {
+  "id": "analytics-dashboard-improvements-2023",
+  "theme": "analytics",
+  "q": "2023-Q3",
+  "title": "Dashboard improvements",
+  "benefit": "Load the favourites dashboard faster and keep table headers in view.",
+  "detail": "The favourites dashboard uses pre-calculated data refreshed every 30 minutes, with an Update button and last-update time. The interactions table header in visitor and exhibitor dashboards stays fixed while scrolling.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-19897",
+   "EP-21795"
+  ]
+ },
+ {
+  "id": "analytics-login-source",
+  "theme": "analytics",
+  "q": "2023-Q4",
+  "title": "Login source in login reports",
+  "benefit": "See whether each login came from the web or the iOS or Android app.",
+  "detail": "The visitor and exhibitor login report export has a login source column for every login attempt.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-13872"
+  ]
+ },
+ {
+  "id": "analytics-checkin-analytics-refresh",
+  "theme": "analytics",
+  "q": "2024-Q1",
+  "title": "Check-in analytics refresh",
+  "benefit": "Follow check-ins and check-outs by day, hour and zone in redesigned check-in analytics.",
+  "detail": "A new analytics page charts registrations before and after the event starts and check-ins and check-outs by day or hour, with user and zone filters. The check-in list shows each participant’s first and last check-in and check-out per day, and the zones page manages zones synced with the floor plan.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-24652",
+   "EP-24653",
+   "EP-24654",
+   "EP-28682"
+  ]
+ },
+ {
+  "id": "analytics-mobile-analytics-page",
+  "theme": "analytics",
+  "q": "2024-Q1",
+  "title": "Mobile analytics page",
+  "benefit": "Chart mobile app logins, page views, favourites, meetings and badge scans over time.",
+  "detail": "The mobile analytics page shows daily, weekly or monthly graphs, filtered by user group, platform and page.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-20705"
+  ]
+ },
+ {
+  "id": "analytics-meetings-tab",
+  "theme": "analytics",
+  "q": "2024-Q1",
+  "title": "Meetings analytics",
+  "benefit": "Analyse meeting activity across web and app in the new analytics module.",
+  "detail": "A Meetings tab with event, segment and date filters shows requested meetings by status, online and offline counts, average meeting length and time spent in online meetings.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-1068"
+  ]
+ },
+ {
+  "id": "analytics-standard-report",
+  "theme": "analytics",
+  "q": "2024-Q1",
+  "title": "Standard report",
+  "benefit": "Generate a standard event report from the admin Data page.",
+  "detail": "Admins generate the standard report from the Data page in the same way as other reports.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-23957"
+  ]
+ },
+ {
+  "id": "analytics-export-additions-2024",
+  "theme": "analytics",
+  "q": "2024-Q2",
+  "title": "Export additions",
+  "benefit": "Export news articles and get more detail in user and meeting exports.",
+  "detail": "A News export lists articles with author, tags, visibility and exhibitor. The user export shows when each account was activated, and the meetings export shows the parent exhibitor of child-exhibitor participants.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-55",
+   "EP-26794",
+   "EP-25833"
+  ]
+ },
+ {
+  "id": "analytics-session-report-additions",
+  "theme": "analytics",
+  "q": "2024-Q3",
+  "title": "Session report additions",
+  "benefit": "See exhibitor event status, content reports and edit dates in the sessions export.",
+  "detail": "The sessions export shows each exhibitor event’s status, including rejection for security concerns, how often it was reported as offensive, and when the exhibitor created and last edited it.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16952",
+   "EP-31429"
+  ]
+ },
+ {
+  "id": "analytics-report-time-zones",
+  "theme": "analytics",
+  "q": "2024-Q3",
+  "title": "Report times in event time zone",
+  "benefit": "See when each report was generated in the event’s own time zone.",
+  "detail": "Export, import and statistics download links across the admin panel show the generation time in the event time zone, with the zone named.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-29932"
+  ]
+ },
+ {
+  "id": "analytics-marketplace-supply-demand",
+  "theme": "analytics",
+  "q": "2024-Q4",
+  "title": "Supply and demand graph improvements",
+  "benefit": "Read marketplace supply and demand by category more easily.",
+  "detail": "The supply and demand graph tooltip names the product category, and all categories are displayed on the same scale.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-29899",
+   "EP-31157"
+  ]
+ },
+ {
+  "id": "analytics-team-schedule-export",
+  "theme": "analytics",
+  "q": "2024-Q4",
+  "title": "Attendee names in team schedule export",
+  "benefit": "See who is attending your team’s events in the team schedule export.",
+  "detail": "The team schedule export lists attendee names for events the team moderates or speaks at; parent exhibitors also see their child companies’ events.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-36095"
+  ]
+ },
+ {
+  "id": "analytics-login-checkin-exports-2025",
+  "theme": "analytics",
+  "q": "2025-Q1",
+  "title": "Login and check-in export improvements",
+  "benefit": "Separate customer service logins and see session details in check-in exports.",
+  "detail": "The login data report lists customer service logins separately from web logins, and the check-in list export can show the session ID and name for session, exhibitor event and round table check-ins.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-18160",
+   "EP-38213"
+  ]
+ },
+ {
+  "id": "analytics-total-meetings-graph",
+  "theme": "analytics",
+  "q": "2025-Q2",
+  "title": "Total meetings graph update",
+  "benefit": "See meeting totals displayed with updated logic in meeting analytics.",
+  "detail": "The display logic of the Total meetings graph was updated.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-42365"
+  ]
+ },
+ {
+  "id": "analytics-meeting-programme-reports",
+  "theme": "analytics",
+  "q": "2025-Q3",
+  "title": "Meeting programme reports",
+  "benefit": "Download a full report of a meeting programme’s relevance actions, acceptances and meetings.",
+  "detail": "A Generate XLS Report button on meeting programme details produces a multi-tab, timestamped report with per-attendee counts of generated, accepted, rejected and confirmed meetings, sponsored and free.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-43263"
+  ]
+ },
+ {
+  "id": "analytics-programme-roundtable-reports",
+  "theme": "analytics",
+  "q": "2025-Q4",
+  "title": "Programme and round table reports",
+  "benefit": "Get more detail in meeting programme reports and export round table assignments.",
+  "detail": "The meeting programme report adds each exhibitor’s sponsored meeting limit and a relevance tab covering all user types. Each round table session has an export listing assigned attendees with topic and table number.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-45789",
+   "EP-45788",
+   "EP-45794"
+  ]
+ },
+ {
+  "id": "analytics-programme-report-additions-2026",
+  "theme": "analytics",
+  "q": "2026-Q1",
+  "title": "Meeting programme report additions",
+  "benefit": "See how each meeting was generated and how it was rated in the programme report.",
+  "detail": "The All meetings tab of the meeting programme report shows how each meeting was generated and the rating it received.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-48386",
+   "EP-48851"
+  ]
+ },
+ {
+  "id": "analytics-export-additions-2026",
+  "theme": "analytics",
+  "q": "2026-Q1",
+  "title": "Export additions",
+  "benefit": "Analyse profile completion and new exhibitors in your own reporting tools.",
+  "detail": "Participant exports include profile completion, the exhibitor export shows whether each exhibitor is new, and the team member export includes external QR codes.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-46247",
+   "EP-47499",
+   "EP-49223"
+  ]
+ },
+ {
+  "id": "analytics-event-reporting-dashboards",
+  "theme": "analytics",
+  "q": "2026-Q2",
+  "title": "Automated event reporting dashboards",
+  "benefit": "Track exhibitors, attendees, app adoption, meetings, sessions and products in ready-made dashboards in Analytics.",
+  "detail": "New dashboards sit in their own Analytics section: exhibitor analytics, attendee analytics, platform performance, mobile app downloads and adoption, meetings and messaging, top sessions and session types, and product categories and listings, with KPI cards, trends, filtering and drill-down.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-47443",
+   "EP-52363",
+   "EP-52364",
+   "EP-52365",
+   "EP-52366",
+   "EP-52367",
+   "EP-52368",
+   "EP-52369",
+   "EP-52392",
+   "EP-54553"
+  ]
+ },
+ {
+  "id": "analytics-colocated-checkins",
+  "theme": "analytics",
+  "q": "2026-Q2",
+  "title": "Co-located event check-in comparison",
+  "benefit": "Compare check-ins across co-located events and see attendees who cross over.",
+  "detail": "The total check-in and check-out graph compares co-located events and shows crossover check-ins, filterable by badge origin.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-49438"
+  ]
+ },
+ {
+  "id": "analytics-meeting-outcome-columns",
+  "theme": "analytics",
+  "q": "2026-Q2",
+  "title": "Meeting outcome columns in reports",
+  "benefit": "See whether meetings took place and how likely they are to lead to business.",
+  "detail": "The meetings report and custom meeting wizard report include business transaction likelihood and meeting did not take place columns.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-53966"
+  ]
+ },
+ {
+  "id": "analytics-faster-exports",
+  "theme": "analytics",
+  "q": "2026-Q2",
+  "title": "Faster report exports",
+  "benefit": "Download session and booking reports faster and more reliably on large events.",
+  "detail": "The by-session export was reworked to run in the background more reliably, and the by-booking report loads each page with a fixed set of queries.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-50643",
+   "EP-54274"
+  ]
+ },
+ {
+  "id": "analytics-ga4-support",
+  "theme": "analytics",
+  "q": "2026-Q2",
+  "title": "Google Analytics 4 support",
+  "benefit": "Track event website traffic with Google Analytics 4.",
+  "detail": "GA4 tracking works again on event websites, and the Google Analytics ID field in the admin panel validates the GA4 format, with placeholder and help text; leaving it empty turns tracking off.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-53455",
+   "EP-53548"
+  ]
+ },
+ {
+  "id": "analytics-sponsorship-engagement-reporting",
+  "theme": "analytics",
+  "q": "2026-Q3",
+  "title": "Sponsorship and engagement reporting",
+  "benefit": "Measure sponsor performance by asset and clicks on app homepage elements.",
+  "detail": "A sponsorships dashboard shows views, clicks and click-through rate per sponsor and asset, backed by a new sponsor interactions report. A click and impression report for mobile app homepage elements is available as an admin panel export, and existing dashboard graphs were refined.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-52370",
+   "EP-54784",
+   "EP-55287",
+   "EP-57186"
+  ]
+ }
+]

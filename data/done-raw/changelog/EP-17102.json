@@ -1,0 +1,99 @@
+{
+ "k": "EP-17102",
+ "histories": 53,
+ "historiesRead": 53,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-05-16T09:48:59.935+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-07-04T08:11:17.503+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-07-04T08:11:19.695+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-07-06T18:21:16.149+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-07-12T17:22:05.172+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-12T17:22:07.507+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-12T17:22:09.909+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-19T08:04:48.683+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-23T13:13:23.640+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-23T13:13:27.536+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-23T13:13:29.440+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-23T13:13:31.679+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-23T13:13:35.334+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-08-02T10:54:49.882+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790321604975.txt"
+}

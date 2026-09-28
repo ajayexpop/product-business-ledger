@@ -1,0 +1,69 @@
+{
+ "k": "EP-13907",
+ "histories": 95,
+ "historiesRead": 95,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-05-10T15:16:34.472+0100",
+   "from": "Incoming request",
+   "to": "Brief ready for review",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-05-22T08:17:27.229+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-05-22T15:24:59.140+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-05-23T08:26:25.940+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-06-12T08:43:01.169+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-06-12T08:43:04.414+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-06-23T13:11:24.209+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-06-29T14:25:23.485+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-10T17:15:20.224+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790317451532.txt"
+}

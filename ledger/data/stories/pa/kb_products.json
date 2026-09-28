@@ -1,0 +1,3035 @@
+{
+ "source": "master-extraction.md (product-intelligence-graph-architect KB)",
+ "products": {
+  "Client Manager": {
+   "domain": "Provisioning & Platform Core",
+   "lines": [
+    664,
+    1039
+   ],
+   "features": [
+    [
+     720,
+     "4.1 Employee Login (Manager Admin Panel access)"
+    ],
+    [
+     736,
+     "4.2 Client List & Search by client name"
+    ],
+    [
+     752,
+     "4.3 Access client's events & admin panel"
+    ],
+    [
+     760,
+     "4.4 Enable / Disable Frontend (per event)"
+    ],
+    [
+     769,
+     "4.5 Client Status (on/off)"
+    ],
+    [
+     776,
+     "4.6 Delete Client"
+    ],
+    [
+     783,
+     "4.7 View Mobile Apps & App Build Pipeline"
+    ],
+    [
+     793,
+     "4.8 Client Language"
+    ],
+    [
+     800,
+     "4.9 Global Module Management (Organiser Client)"
+    ]
+   ]
+  },
+  "Admin / Platform Core": {
+   "domain": "Provisioning & Platform Core",
+   "lines": [
+    1040,
+    1795
+   ],
+   "features": [
+    [
+     1121,
+     "Admin Login — Native Authentication"
+    ],
+    [
+     1137,
+     "Admin Login — Multi-Factor Authentication (MFA)"
+    ],
+    [
+     1151,
+     "Admin Password Reset — Template Configuration"
+    ],
+    [
+     1158,
+     "Event List Management"
+    ],
+    [
+     1170,
+     "Event Creation"
+    ],
+    [
+     1183,
+     "Event Approval"
+    ],
+    [
+     1190,
+     "Event Cloning"
+    ],
+    [
+     1200,
+     "Per-Event Settings"
+    ],
+    [
+     1217,
+     "Mobile App Management — App Builder Access"
+    ],
+    [
+     1224,
+     "Mobile App Creation"
+    ],
+    [
+     1236,
+     "Mobile App Deletion"
+    ],
+    [
+     1243,
+     "Admin Account Creation and Management"
+    ],
+    [
+     1258,
+     "Admin Account Tags"
+    ],
+    [
+     1268,
+     "Admin Log Info"
+    ],
+    [
+     1277,
+     "Global Database — Participants List"
+    ],
+    [
+     1285,
+     "Global Database — Exhibitors List"
+    ],
+    [
+     1291,
+     "Global Categories Management"
+    ],
+    [
+     1299,
+     "Data Import"
+    ],
+    [
+     1310,
+     "Data Export"
+    ],
+    [
+     1318,
+     "Webhooks"
+    ],
+    [
+     1329,
+     "Global vs. Local Fields Architecture"
+    ],
+    [
+     1336,
+     "Global Search (Admin Panel)"
+    ],
+    [
+     1345,
+     "Admin Panel Pagination Standardisation"
+    ],
+    [
+     1352,
+     "Best Practices Event Configuration"
+    ]
+   ]
+  },
+  "Organiser Analytics": {
+   "domain": "Insight",
+   "lines": [
+    1796,
+    3259
+   ],
+   "features": [
+    [
+     1862,
+     "4.1 General Analytics Module — Navigation & Global Behaviour"
+    ],
+    [
+     1864,
+     "Description"
+    ],
+    [
+     1867,
+     "Why it exists"
+    ],
+    [
+     1870,
+     "User value"
+    ],
+    [
+     1873,
+     "Functional logic"
+    ],
+    [
+     1878,
+     "Preconditions"
+    ],
+    [
+     1881,
+     "Trigger conditions"
+    ],
+    [
+     1884,
+     "Processing logic"
+    ],
+    [
+     1887,
+     "Outputs"
+    ],
+    [
+     1890,
+     "Dependencies"
+    ],
+    [
+     1893,
+     "Configurations"
+    ],
+    [
+     1896,
+     "Validation rules"
+    ],
+    [
+     1899,
+     "Permissions"
+    ],
+    [
+     1902,
+     "Error handling"
+    ],
+    [
+     1905,
+     "Edge cases"
+    ],
+    [
+     1910,
+     "4.2 General Dashboard"
+    ],
+    [
+     1912,
+     "Description"
+    ],
+    [
+     1915,
+     "Why it exists"
+    ],
+    [
+     1918,
+     "User value"
+    ],
+    [
+     1921,
+     "Functional logic"
+    ],
+    [
+     1946,
+     "Preconditions"
+    ],
+    [
+     1949,
+     "Trigger conditions"
+    ],
+    [
+     1952,
+     "Processing logic"
+    ],
+    [
+     1955,
+     "Outputs"
+    ],
+    [
+     1958,
+     "Dependencies"
+    ],
+    [
+     1961,
+     "Configurations"
+    ],
+    [
+     1964,
+     "Validation rules"
+    ],
+    [
+     1967,
+     "Permissions"
+    ],
+    [
+     1970,
+     "Error handling"
+    ],
+    [
+     1973,
+     "Edge cases"
+    ],
+    [
+     1978,
+     "4.3 Registration Analytics"
+    ],
+    [
+     1980,
+     "Description"
+    ],
+    [
+     1983,
+     "Why it exists"
+    ],
+    [
+     1986,
+     "User value"
+    ],
+    [
+     1989,
+     "Functional logic"
+    ],
+    [
+     1994,
+     "Preconditions"
+    ],
+    [
+     1997,
+     "Processing logic"
+    ],
+    [
+     2000,
+     "Outputs"
+    ],
+    [
+     2003,
+     "Dependencies"
+    ],
+    [
+     2006,
+     "Configurations"
+    ],
+    [
+     2009,
+     "Validation rules"
+    ],
+    [
+     2012,
+     "Permissions"
+    ],
+    [
+     2015,
+     "Edge cases"
+    ],
+    [
+     2020,
+     "4.4 Marketplace Analytics"
+    ],
+    [
+     2022,
+     "Description"
+    ],
+    [
+     2025,
+     "Why it exists"
+    ],
+    [
+     2028,
+     "User value"
+    ],
+    [
+     2031,
+     "Functional logic"
+    ],
+    [
+     2038,
+     "Preconditions"
+    ],
+    [
+     2041,
+     "Processing logic"
+    ],
+    [
+     2044,
+     "Dependencies"
+    ],
+    [
+     2047,
+     "Configurations"
+    ],
+    [
+     2050,
+     "Permissions"
+    ],
+    [
+     2053,
+     "Edge cases"
+    ],
+    [
+     2058,
+     "4.5 Supplier Overview Analytics"
+    ],
+    [
+     2060,
+     "Description"
+    ],
+    [
+     2063,
+     "Why it exists"
+    ],
+    [
+     2066,
+     "User value"
+    ],
+    [
+     2069,
+     "Functional logic"
+    ],
+    [
+     2074,
+     "Preconditions"
+    ],
+    [
+     2077,
+     "Trigger conditions"
+    ],
+    [
+     2080,
+     "Processing logic"
+    ],
+    [
+     2083,
+     "Outputs"
+    ],
+    [
+     2086,
+     "Dependencies"
+    ],
+    [
+     2089,
+     "Configurations"
+    ],
+    [
+     2092,
+     "Permissions"
+    ],
+    [
+     2095,
+     "Error handling"
+    ],
+    [
+     2098,
+     "Edge cases"
+    ],
+    [
+     2103,
+     "4.6 App Data / Mobile App Analytics"
+    ],
+    [
+     2105,
+     "Description"
+    ],
+    [
+     2108,
+     "Why it exists"
+    ],
+    [
+     2111,
+     "User value"
+    ],
+    [
+     2114,
+     "Functional logic"
+    ],
+    [
+     2129,
+     "Preconditions"
+    ],
+    [
+     2132,
+     "Processing logic"
+    ],
+    [
+     2135,
+     "Outputs"
+    ],
+    [
+     2138,
+     "Dependencies"
+    ],
+    [
+     2141,
+     "Permissions"
+    ],
+    [
+     2144,
+     "Edge cases"
+    ],
+    [
+     2149,
+     "4.7 Meetings Analytics"
+    ],
+    [
+     2151,
+     "Description"
+    ],
+    [
+     2154,
+     "Why it exists"
+    ],
+    [
+     2157,
+     "User value"
+    ],
+    [
+     2160,
+     "Functional logic"
+    ],
+    [
+     2185,
+     "Preconditions"
+    ],
+    [
+     2188,
+     "Trigger conditions"
+    ],
+    [
+     2191,
+     "Processing logic"
+    ],
+    [
+     2194,
+     "Outputs"
+    ],
+    [
+     2197,
+     "Dependencies"
+    ],
+    [
+     2200,
+     "Configurations"
+    ],
+    [
+     2203,
+     "Permissions"
+    ],
+    [
+     2206,
+     "Edge cases"
+    ],
+    [
+     2211,
+     "4.8 Email Notification Analytics"
+    ],
+    [
+     2213,
+     "Description"
+    ],
+    [
+     2216,
+     "Why it exists"
+    ],
+    [
+     2219,
+     "User value"
+    ],
+    [
+     2222,
+     "Functional logic"
+    ],
+    [
+     2226,
+     "Preconditions"
+    ],
+    [
+     2229,
+     "Processing logic"
+    ],
+    [
+     2232,
+     "Outputs"
+    ],
+    [
+     2235,
+     "Dependencies"
+    ],
+    [
+     2238,
+     "Permissions"
+    ],
+    [
+     2241,
+     "Error handling"
+    ],
+    [
+     2244,
+     "Edge cases"
+    ],
+    [
+     2249,
+     "4.9 Email Tracking Analytics"
+    ],
+    [
+     2251,
+     "Description"
+    ],
+    [
+     2254,
+     "Why it exists"
+    ],
+    [
+     2257,
+     "User value"
+    ],
+    [
+     2260,
+     "Functional logic"
+    ],
+    [
+     2263,
+     "Preconditions"
+    ],
+    [
+     2266,
+     "Processing logic"
+    ],
+    [
+     2269,
+     "Outputs"
+    ],
+    [
+     2272,
+     "Dependencies"
+    ],
+    [
+     2275,
+     "Permissions"
+    ],
+    [
+     2278,
+     "Edge cases"
+    ],
+    [
+     2283,
+     "4.10 Message Analytics"
+    ],
+    [
+     2285,
+     "Description"
+    ],
+    [
+     2288,
+     "Why it exists"
+    ],
+    [
+     2291,
+     "User value"
+    ],
+    [
+     2294,
+     "Functional logic"
+    ],
+    [
+     2297,
+     "Preconditions"
+    ],
+    [
+     2300,
+     "Outputs"
+    ],
+    [
+     2303,
+     "Dependencies"
+    ],
+    [
+     2306,
+     "Permissions"
+    ],
+    [
+     2309,
+     "Edge cases"
+    ],
+    [
+     2314,
+     "4.11 Appointment Analytics"
+    ],
+    [
+     2316,
+     "Description"
+    ],
+    [
+     2319,
+     "Why it exists"
+    ],
+    [
+     2322,
+     "User value"
+    ],
+    [
+     2325,
+     "Functional logic"
+    ],
+    [
+     2328,
+     "Preconditions"
+    ],
+    [
+     2331,
+     "Processing logic"
+    ],
+    [
+     2334,
+     "Outputs"
+    ],
+    [
+     2337,
+     "Dependencies"
+    ],
+    [
+     2340,
+     "Permissions"
+    ],
+    [
+     2343,
+     "Edge cases"
+    ],
+    [
+     2348,
+     "4.12 IP Login Analytics"
+    ],
+    [
+     2350,
+     "Description"
+    ],
+    [
+     2353,
+     "Why it exists"
+    ],
+    [
+     2356,
+     "User value"
+    ],
+    [
+     2359,
+     "Functional logic"
+    ],
+    [
+     2362,
+     "Preconditions"
+    ],
+    [
+     2365,
+     "Processing logic"
+    ],
+    [
+     2368,
+     "Outputs"
+    ],
+    [
+     2371,
+     "Dependencies"
+    ],
+    [
+     2374,
+     "Configurations"
+    ],
+    [
+     2377,
+     "Permissions"
+    ],
+    [
+     2380,
+     "Edge cases"
+    ],
+    [
+     2385,
+     "4.13 Email Blacklist Analytics"
+    ],
+    [
+     2387,
+     "Description"
+    ],
+    [
+     2390,
+     "Why it exists"
+    ],
+    [
+     2393,
+     "User value"
+    ],
+    [
+     2396,
+     "Functional logic"
+    ],
+    [
+     2399,
+     "Preconditions"
+    ],
+    [
+     2402,
+     "Processing logic"
+    ],
+    [
+     2405,
+     "Outputs"
+    ],
+    [
+     2408,
+     "Dependencies"
+    ],
+    [
+     2411,
+     "Permissions"
+    ],
+    [
+     2414,
+     "Edge cases"
+    ],
+    [
+     2419,
+     "4.14 Online Meeting Analytics"
+    ],
+    [
+     2421,
+     "Description"
+    ],
+    [
+     2424,
+     "Why it exists"
+    ],
+    [
+     2427,
+     "User value"
+    ],
+    [
+     2430,
+     "Functional logic"
+    ],
+    [
+     2463,
+     "Preconditions"
+    ],
+    [
+     2466,
+     "Outputs"
+    ],
+    [
+     2469,
+     "Dependencies"
+    ],
+    [
+     2472,
+     "Permissions"
+    ],
+    [
+     2475,
+     "Edge cases"
+    ],
+    [
+     2480,
+     "4.15 Real-Time Meetings Dashboard"
+    ],
+    [
+     2482,
+     "Description"
+    ],
+    [
+     2485,
+     "Why it exists"
+    ],
+    [
+     2488,
+     "User value"
+    ],
+    [
+     2491,
+     "Functional logic"
+    ],
+    [
+     2522,
+     "Preconditions"
+    ],
+    [
+     2525,
+     "Processing logic"
+    ],
+    [
+     2528,
+     "Outputs"
+    ],
+    [
+     2531,
+     "Dependencies"
+    ],
+    [
+     2534,
+     "Configurations"
+    ],
+    [
+     2537,
+     "Permissions"
+    ],
+    [
+     2540,
+     "Edge cases"
+    ],
+    [
+     2545,
+     "4.16 Online Sessions Analytics"
+    ],
+    [
+     2547,
+     "Description"
+    ],
+    [
+     2550,
+     "Why it exists"
+    ],
+    [
+     2553,
+     "User value"
+    ],
+    [
+     2556,
+     "Functional logic"
+    ],
+    [
+     2565,
+     "Preconditions"
+    ],
+    [
+     2568,
+     "Outputs"
+    ],
+    [
+     2571,
+     "Dependencies"
+    ],
+    [
+     2574,
+     "Permissions"
+    ],
+    [
+     2577,
+     "Edge cases"
+    ],
+    [
+     2582,
+     "4.17 On-Demand Sessions Analytics"
+    ],
+    [
+     2584,
+     "Description"
+    ],
+    [
+     2587,
+     "Why it exists"
+    ],
+    [
+     2590,
+     "User value"
+    ],
+    [
+     2593,
+     "Functional logic"
+    ],
+    [
+     2600,
+     "Preconditions"
+    ],
+    [
+     2603,
+     "Processing logic"
+    ],
+    [
+     2606,
+     "Outputs"
+    ],
+    [
+     2609,
+     "Dependencies"
+    ],
+    [
+     2612,
+     "Permissions"
+    ],
+    [
+     2615,
+     "Edge cases"
+    ],
+    [
+     2620,
+     "4.18 Exportable Reports Catalogue"
+    ],
+    [
+     2622,
+     "Description"
+    ],
+    [
+     2625,
+     "Why it exists"
+    ],
+    [
+     2628,
+     "Why SQS matters"
+    ],
+    [
+     2631,
+     "Functional logic — Report Directory"
+    ],
+    [
+     2662,
+     "Preconditions"
+    ],
+    [
+     2665,
+     "Trigger conditions"
+    ],
+    [
+     2668,
+     "Processing logic"
+    ],
+    [
+     2671,
+     "Outputs"
+    ],
+    [
+     2674,
+     "Dependencies"
+    ],
+    [
+     2677,
+     "Permissions"
+    ],
+    [
+     2680,
+     "Error handling"
+    ],
+    [
+     2683,
+     "Edge cases"
+    ],
+    [
+     2688,
+     "4.19 Favourites Dashboard"
+    ],
+    [
+     2690,
+     "Description"
+    ],
+    [
+     2693,
+     "Why it exists"
+    ],
+    [
+     2696,
+     "Functional logic"
+    ],
+    [
+     2701,
+     "Preconditions"
+    ],
+    [
+     2704,
+     "Processing logic"
+    ],
+    [
+     2707,
+     "Outputs"
+    ],
+    [
+     2710,
+     "Dependencies"
+    ],
+    [
+     2713,
+     "Permissions"
+    ],
+    [
+     2716,
+     "Edge cases"
+    ],
+    [
+     2721,
+     "4.20 Statistics API v2"
+    ],
+    [
+     2723,
+     "Description"
+    ],
+    [
+     2726,
+     "Why it exists"
+    ],
+    [
+     2729,
+     "Functional logic"
+    ],
+    [
+     2732,
+     "Preconditions"
+    ],
+    [
+     2735,
+     "Outputs"
+    ],
+    [
+     2738,
+     "Dependencies"
+    ],
+    [
+     2741,
+     "Permissions"
+    ],
+    [
+     2744,
+     "Edge cases"
+    ]
+   ]
+  },
+  "Onsite & Kiosks": {
+   "domain": "Onsite",
+   "lines": [
+    3260,
+    4196
+   ],
+   "features": [
+    [
+     3354,
+     "4.1 Print Badge Configuration (Badges Builder — Physical)"
+    ],
+    [
+     3386,
+     "4.2 Digital Badge Configuration (Badges Builder — Digital)"
+    ],
+    [
+     3408,
+     "4.3 Custom Fields for Badges"
+    ],
+    [
+     3426,
+     "4.4 Badge Variables for Emails"
+    ],
+    [
+     3446,
+     "4.5 Bulk and Individual Badge Printing (Admin Panel)"
+    ],
+    [
+     3466,
+     "4.6 Pre-print Badge via Online Profile / Download Badge to Print"
+    ],
+    [
+     3488,
+     "4.7 Default or External ID (QR Codes and Barcodes)"
+    ],
+    [
+     3510,
+     "4.8 Kiosk Builder"
+    ],
+    [
+     3547,
+     "4.9 Print Badge Without Confirmation"
+    ],
+    [
+     3563,
+     "4.10 Onsite Registration Pipeline (Walk-in via Kiosk)"
+    ],
+    [
+     3583,
+     "4.11 Attendance Tracking using Check-in App"
+    ],
+    [
+     3605,
+     "4.12 Check-in Zones"
+    ],
+    [
+     3625,
+     "4.13 Session Check-in and Easy Entrance"
+    ],
+    [
+     3643,
+     "4.14 Check-in List Data Record"
+    ],
+    [
+     3661,
+     "4.15 Check-in Analytics"
+    ],
+    [
+     3685,
+     "4.16 Check-in Report (Export)"
+    ],
+    [
+     3703,
+     "4.17 Visit G2 / GES External Badge and Scanner Integration"
+    ],
+    [
+     3727,
+     "4.18 Login via Badge Scan"
+    ]
+   ]
+  },
+  "Transactions & Purchasing": {
+   "domain": "Acquisition & Commerce",
+   "lines": [
+    4197,
+    4867
+   ],
+   "features": [
+    [
+     4270,
+     "4.1 Shopping Basket — Core Functionality"
+    ],
+    [
+     4286,
+     "4.2 Exhibitor Basket Specifics"
+    ],
+    [
+     4293,
+     "4.3 Participant Basket Specifics"
+    ],
+    [
+     4301,
+     "4.4 Unified Admin Team Member Basket"
+    ],
+    [
+     4307,
+     "4.5 Basket Payment Page"
+    ],
+    [
+     4319,
+     "4.6 Ticketing — Settings and Administration"
+    ],
+    [
+     4327,
+     "4.7 Ticket Setup (Create / Edit / Clone)"
+    ],
+    [
+     4333,
+     "4.8 Ticket Statuses and Lifecycle"
+    ],
+    [
+     4344,
+     "4.9 Ticket Purchasing (Participant Experience)"
+    ],
+    [
+     4351,
+     "4.10 Ticket Upgrades"
+    ],
+    [
+     4358,
+     "4.11 Payment Gateway Integrations"
+    ],
+    [
+     4367,
+     "4.12 General Payment Settings"
+    ],
+    [
+     4373,
+     "4.13 Taxes Configuration"
+    ],
+    [
+     4380,
+     "4.14 VAT Rules Engine"
+    ],
+    [
+     4388,
+     "4.15 Invoicing (Invoice Layout)"
+    ],
+    [
+     4394,
+     "4.16 Receipts (Invoice Email Template)"
+    ],
+    [
+     4400,
+     "4.17 Transaction Dashboard"
+    ],
+    [
+     4407,
+     "4.18 Payments by Invoice (Exhibitors)"
+    ],
+    [
+     4415,
+     "4.19 Discount Codes"
+    ],
+    [
+     4422,
+     "4.20 Multi-buy Discounts"
+    ]
+   ]
+  },
+  "Online Registration": {
+   "domain": "Acquisition & Commerce",
+   "lines": [
+    4868,
+    5756
+   ],
+   "features": [
+    [
+     4940,
+     "4.1 Registration Flow Types"
+    ],
+    [
+     4971,
+     "4.2 Form Builder"
+    ],
+    [
+     5001,
+     "4.3 Standard Form Fields"
+    ],
+    [
+     5021,
+     "4.4 Custom Form Fields"
+    ],
+    [
+     5048,
+     "4.5 Common Field Properties"
+    ],
+    [
+     5079,
+     "4.6 Global Field Settings"
+    ],
+    [
+     5093,
+     "4.7 Conditional Logic"
+    ],
+    [
+     5119,
+     "4.8 Participant Categories"
+    ],
+    [
+     5154,
+     "4.9 Terms & Conditions"
+    ],
+    [
+     5176,
+     "4.10 Registration Confirmation Page"
+    ],
+    [
+     5200,
+     "4.11 End-user Registration Page"
+    ],
+    [
+     5216,
+     "4.12 Account and Login"
+    ],
+    [
+     5238,
+     "4.13 Clone Registration Settings"
+    ],
+    [
+     5261,
+     "4.14 Organiser Registration Reports"
+    ]
+   ]
+  },
+  "Event Website": {
+   "domain": "Acquisition & Commerce",
+   "lines": [
+    5757,
+    6406
+   ],
+   "features": [
+    [
+     5844,
+     "Create and Clone Website"
+    ],
+    [
+     5848,
+     "Publish and Save Website"
+    ],
+    [
+     5852,
+     "Site History and Version Control"
+    ],
+    [
+     5856,
+     "Website Preview"
+    ],
+    [
+     5860,
+     "Multi-Page Management"
+    ],
+    [
+     5864,
+     "Header and Navbar"
+    ],
+    [
+     5868,
+     "Footer"
+    ],
+    [
+     5872,
+     "Static Content Blocks"
+    ],
+    [
+     5876,
+     "System (Dynamic) Content Blocks"
+    ],
+    [
+     5880,
+     "Block Item Filtering"
+    ],
+    [
+     5884,
+     "Custom Forms"
+    ],
+    [
+     5888,
+     "Builder Gallery"
+    ],
+    [
+     5892,
+     "Global Settings"
+    ],
+    [
+     5896,
+     "Custom Grids"
+    ],
+    [
+     5900,
+     "SEO Management"
+    ],
+    [
+     5904,
+     "Multi-Language Website"
+    ],
+    [
+     5908,
+     "Block Developer Mode and Custom CSS/JS"
+    ],
+    [
+     5912,
+     "Third-Party Cookie Consent Compliance"
+    ],
+    [
+     5916,
+     "Display Filters Management"
+    ]
+   ]
+  },
+  "Networking & Interactions": {
+   "domain": "Engagement & Matchmaking",
+   "lines": [
+    6407,
+    7391
+   ],
+   "features": [
+    [
+     6494,
+     "4.1 Matchmaking Engine — Default Matchmaking"
+    ],
+    [
+     6526,
+     "4.2 Matchmaking Engine — Multi-Space Matchmaking"
+    ],
+    [
+     6546,
+     "4.3 Product Categories"
+    ],
+    [
+     6566,
+     "4.4 Matchmaking Exclusion Filters"
+    ],
+    [
+     6586,
+     "4.5 Data Matching"
+    ],
+    [
+     6598,
+     "4.6 Unified Recommendations Page"
+    ],
+    [
+     6620,
+     "4.7 Recommend Related Exhibitors"
+    ],
+    [
+     6636,
+     "4.8 Propagate Likes for Exhibitor Teams"
+    ],
+    [
+     6648,
+     "4.9 Favourites"
+    ],
+    [
+     6668,
+     "4.10 Attend a Stand"
+    ],
+    [
+     6684,
+     "4.11 Messaging"
+    ],
+    [
+     6711,
+     "4.12 My Schedule"
+    ],
+    [
+     6727,
+     "4.13 Speed Networking"
+    ],
+    [
+     6753,
+     "4.14 Networking Notifications"
+    ],
+    [
+     6783,
+     "4.15 Organiser Matchmaking Controls"
+    ]
+   ]
+  },
+  "Meetings & Matchmaking": {
+   "domain": "Engagement & Matchmaking",
+   "lines": [
+    7392,
+    8295
+   ],
+   "features": [
+    [
+     7460,
+     "4.1 Self-managed Meetings"
+    ],
+    [
+     7462,
+     "Description"
+    ],
+    [
+     7465,
+     "Why it exists"
+    ],
+    [
+     7468,
+     "User value"
+    ],
+    [
+     7471,
+     "Functional logic"
+    ],
+    [
+     7478,
+     "Preconditions"
+    ],
+    [
+     7481,
+     "Trigger conditions"
+    ],
+    [
+     7484,
+     "Processing logic"
+    ],
+    [
+     7487,
+     "Outputs"
+    ],
+    [
+     7490,
+     "Dependencies"
+    ],
+    [
+     7493,
+     "Configurations"
+    ],
+    [
+     7496,
+     "Validation rules"
+    ],
+    [
+     7499,
+     "Permissions"
+    ],
+    [
+     7502,
+     "Error handling"
+    ],
+    [
+     7505,
+     "Edge cases"
+    ],
+    [
+     7510,
+     "4.2 Meeting Confirmation, Cancellation and Rescheduling"
+    ],
+    [
+     7512,
+     "Description"
+    ],
+    [
+     7515,
+     "Why it exists"
+    ],
+    [
+     7518,
+     "Functional logic"
+    ],
+    [
+     7525,
+     "Configurations"
+    ],
+    [
+     7528,
+     "Permissions"
+    ],
+    [
+     7531,
+     "Edge cases"
+    ],
+    [
+     7536,
+     "4.3 Concierge Meetings"
+    ],
+    [
+     7538,
+     "Description"
+    ],
+    [
+     7541,
+     "Why it exists"
+    ],
+    [
+     7544,
+     "User value"
+    ],
+    [
+     7547,
+     "Functional logic"
+    ],
+    [
+     7560,
+     "Preconditions"
+    ],
+    [
+     7563,
+     "Configurations"
+    ],
+    [
+     7566,
+     "Permissions"
+    ],
+    [
+     7569,
+     "Error handling"
+    ],
+    [
+     7572,
+     "Edge cases"
+    ],
+    [
+     7577,
+     "4.4 Speed Networking"
+    ],
+    [
+     7579,
+     "Description"
+    ],
+    [
+     7582,
+     "Why it exists"
+    ],
+    [
+     7585,
+     "Functional logic"
+    ],
+    [
+     7592,
+     "Configurations"
+    ],
+    [
+     7595,
+     "Permissions"
+    ],
+    [
+     7598,
+     "Edge cases"
+    ],
+    [
+     7603,
+     "4.5 Meeting Program"
+    ],
+    [
+     7605,
+     "Description"
+    ],
+    [
+     7608,
+     "Why it exists"
+    ],
+    [
+     7611,
+     "Functional logic"
+    ],
+    [
+     7635,
+     "Outputs"
+    ],
+    [
+     7638,
+     "Configurations"
+    ],
+    [
+     7641,
+     "Permissions"
+    ],
+    [
+     7644,
+     "Edge cases"
+    ],
+    [
+     7649,
+     "4.6 Round Tables"
+    ],
+    [
+     7651,
+     "Description"
+    ],
+    [
+     7654,
+     "Why it exists"
+    ],
+    [
+     7657,
+     "Functional logic"
+    ],
+    [
+     7664,
+     "Configurations"
+    ],
+    [
+     7667,
+     "Permissions"
+    ],
+    [
+     7672,
+     "4.7 Exhibitor Events"
+    ],
+    [
+     7674,
+     "Description"
+    ],
+    [
+     7677,
+     "Why it exists"
+    ],
+    [
+     7680,
+     "Functional logic"
+    ],
+    [
+     7685,
+     "Configurations"
+    ],
+    [
+     7688,
+     "Permissions"
+    ],
+    [
+     7693,
+     "4.8 Meeting Statuses"
+    ],
+    [
+     7695,
+     "Description"
+    ],
+    [
+     7698,
+     "Why it exists"
+    ],
+    [
+     7701,
+     "Functional logic"
+    ],
+    [
+     7714,
+     "Configurations"
+    ],
+    [
+     7719,
+     "4.9 Meeting Tags"
+    ],
+    [
+     7721,
+     "Description"
+    ],
+    [
+     7724,
+     "Why it exists"
+    ],
+    [
+     7727,
+     "Functional logic"
+    ],
+    [
+     7732,
+     "Configurations"
+    ],
+    [
+     7735,
+     "Permissions"
+    ],
+    [
+     7740,
+     "4.10 Meeting Ratings"
+    ],
+    [
+     7742,
+     "Description"
+    ],
+    [
+     7745,
+     "Why it exists"
+    ],
+    [
+     7748,
+     "Functional logic"
+    ],
+    [
+     7758,
+     "Configurations"
+    ],
+    [
+     7761,
+     "Permissions"
+    ],
+    [
+     7766,
+     "4.11 Standard Meeting Notifications and Custom Reminders"
+    ],
+    [
+     7768,
+     "Description"
+    ],
+    [
+     7771,
+     "Why it exists"
+    ],
+    [
+     7774,
+     "Functional logic"
+    ],
+    [
+     7798,
+     "Configurations"
+    ],
+    [
+     7803,
+     "4.12 Meeting Location Settings"
+    ],
+    [
+     7805,
+     "Description"
+    ],
+    [
+     7808,
+     "Functional logic"
+    ],
+    [
+     7818,
+     "4.13 Meeting Duration and Scheduling Settings"
+    ],
+    [
+     7820,
+     "Description"
+    ],
+    [
+     7823,
+     "Functional logic"
+    ],
+    [
+     7832,
+     "4.14 Meeting Auto-confirm, Auto-expire and Block Slots"
+    ],
+    [
+     7834,
+     "Description"
+    ],
+    [
+     7837,
+     "Functional logic"
+    ],
+    [
+     7852,
+     "4.15 Connection Settings and Permissions Matrix"
+    ],
+    [
+     7854,
+     "Description"
+    ],
+    [
+     7857,
+     "Functional logic"
+    ]
+   ]
+  },
+  "Sessions & Speakers": {
+   "domain": "Engagement & Matchmaking",
+   "lines": [
+    8296,
+    9164
+   ],
+   "features": [
+    [
+     8386,
+     "Basic Session Management"
+    ],
+    [
+     8418,
+     "Speaker Management"
+    ],
+    [
+     8440,
+     "Moderator Management"
+    ],
+    [
+     8458,
+     "Session Types"
+    ],
+    [
+     8472,
+     "Session Tracks"
+    ],
+    [
+     8484,
+     "Subject Tags"
+    ],
+    [
+     8496,
+     "Sessions List (Frontend)"
+    ],
+    [
+     8510,
+     "Session Page (Frontend)"
+    ],
+    [
+     8522,
+     "Personal Schedule (\"Add to Schedule\")"
+    ],
+    [
+     8538,
+     "Session Registration Page"
+    ],
+    [
+     8552,
+     "Paid Sessions"
+    ],
+    [
+     8566,
+     "Online Sessions"
+    ],
+    [
+     8589,
+     "On-Demand Sessions"
+    ],
+    [
+     8601,
+     "Exhibitor Events"
+    ],
+    [
+     8613,
+     "Session Import and Export"
+    ],
+    [
+     8632,
+     "Session Notifications and Reminders"
+    ],
+    [
+     8651,
+     "Session Restrictions"
+    ]
+   ]
+  },
+  "Community": {
+   "domain": "Identity & Community",
+   "lines": [
+    9165,
+    9666
+   ],
+   "features": [
+    [
+     9231,
+     "Community Home Page Template"
+    ],
+    [
+     9235,
+     "Community vs Event Distinction"
+    ],
+    [
+     9239,
+     "Membership Management and SSO"
+    ],
+    [
+     9243,
+     "Micro-community Groups"
+    ],
+    [
+     9247,
+     "Group Privacy Modes"
+    ],
+    [
+     9254,
+     "Feeds — Publications and Content"
+    ],
+    [
+     9258,
+     "News"
+    ],
+    [
+     9262,
+     "Online Sessions and Webinars"
+    ],
+    [
+     9276,
+     "RFP — Request for Proposal"
+    ],
+    [
+     9280,
+     "RFS — Request for Sample"
+    ],
+    [
+     9284,
+     "Micro-community Group Tags, Categories, and Sponsors"
+    ]
+   ]
+  },
+  "User Engagement": {
+   "domain": "Acquisition & Commerce",
+   "lines": [
+    9667,
+    10373
+   ],
+   "features": [
+    [
+     9738,
+     "Marketing Email Campaigns"
+    ],
+    [
+     9770,
+     "Email Sender"
+    ],
+    [
+     9800,
+     "Shared Email Builder"
+    ],
+    [
+     9824,
+     "Email Variables (Campaigns)"
+    ],
+    [
+     9846,
+     "Default Email Campaign Templates"
+    ],
+    [
+     9868,
+     "Campaign Triggers"
+    ],
+    [
+     9884,
+     "Campaign Performance"
+    ],
+    [
+     9898,
+     "Scheduled Push Notifications (Admin Notifications)"
+    ],
+    [
+     9920,
+     "Standard Platform Notifications"
+    ],
+    [
+     9940,
+     "Visitor Onboarding Tool"
+    ],
+    [
+     9954,
+     "Deeplinks for Sessions and Exhibitor Events"
+    ],
+    [
+     9966,
+     "Mailing Lists (Email Sender)"
+    ]
+   ]
+  },
+  "Mobile App": {
+   "domain": "Engagement & Matchmaking",
+   "lines": [
+    10374,
+    11075
+   ],
+   "features": [
+    [
+     10454,
+     "App Builder and App Build Pipeline"
+    ],
+    [
+     10470,
+     "Splash Screen and Loading Screen"
+    ],
+    [
+     10481,
+     "General Color and Font Settings"
+    ],
+    [
+     10490,
+     "Authentication — Standard Login"
+    ],
+    [
+     10500,
+     "Authentication — OTP Login"
+    ],
+    [
+     10509,
+     "Authentication — Badge Scan Login"
+    ],
+    [
+     10519,
+     "Digital Badge"
+    ],
+    [
+     10529,
+     "Badge Scanning and Lead Capture"
+    ],
+    [
+     10540,
+     "App Networking — Meetings"
+    ],
+    [
+     10549,
+     "App Networking — Matchmaking and Recommendations"
+    ],
+    [
+     10556,
+     "App Networking — Messenger and Notifications Centre"
+    ],
+    [
+     10561,
+     "App Networking — Favourites and Connections"
+    ],
+    [
+     10566,
+     "My Schedule"
+    ],
+    [
+     10575,
+     "Sessions in App"
+    ],
+    [
+     10585,
+     "Push Notifications"
+    ],
+    [
+     10594,
+     "Floor Plan"
+    ],
+    [
+     10605,
+     "App Settings / My Account"
+    ],
+    [
+     10611,
+     "Multilanguage Webview"
+    ],
+    [
+     10618,
+     "Onboarding Experience"
+    ],
+    [
+     10625,
+     "In-App Updates"
+    ]
+   ]
+  },
+  "Exhibitor Portal": {
+   "domain": "Exhibitor & Sponsor",
+   "lines": [
+    11076,
+    11773
+   ],
+   "features": [
+    [
+     11153,
+     "Global Settings"
+    ],
+    [
+     11156,
+     "Manual Settings and Section Setup"
+    ],
+    [
+     11159,
+     "Documents Section"
+    ],
+    [
+     11162,
+     "Service Badges Section"
+    ],
+    [
+     11165,
+     "Table Form Section"
+    ],
+    [
+     11168,
+     "Equipment Section (Shop)"
+    ],
+    [
+     11171,
+     "Lead Capture Section"
+    ],
+    [
+     11174,
+     "Manual Summary"
+    ],
+    [
+     11177,
+     "Team Members Section"
+    ],
+    [
+     11180,
+     "Edit Profile Section"
+    ],
+    [
+     11183,
+     "Vendors"
+    ],
+    [
+     11186,
+     "Exhibitor View for Organisers"
+    ],
+    [
+     11189,
+     "Email Notifications"
+    ],
+    [
+     11192,
+     "Firebird SSO"
+    ],
+    [
+     11195,
+     "Space Types"
+    ],
+    [
+     11198,
+     "Translation of Exhibitor Manual"
+    ],
+    [
+     11201,
+     "Exhibitor Account — New UI (Dashboard, Products, Events, Sponsorship)"
+    ],
+    [
+     11204,
+     "Parent-Child Exhibitor Relationships"
+    ]
+   ]
+  },
+  "Exhibitor Marketplace": {
+   "domain": "Exhibitor & Sponsor",
+   "lines": [
+    11774,
+    12521
+   ],
+   "features": [
+    [
+     11858,
+     "Exhibitor List Page"
+    ],
+    [
+     11875,
+     "Exhibitor Profile Page (Web)"
+    ],
+    [
+     11892,
+     "Product List and Product Profile Pages"
+    ],
+    [
+     11909,
+     "Brand List and Brand Profile Pages"
+    ],
+    [
+     11925,
+     "Search and Filters"
+    ],
+    [
+     11941,
+     "Exhibitor Categories and Permissions"
+    ],
+    [
+     11956,
+     "Exhibitor Registration Form"
+    ],
+    [
+     11968,
+     "Product Form"
+    ],
+    [
+     11975,
+     "Parent-Child Exhibitor Relationships"
+    ],
+    [
+     11985,
+     "Sponsorship and Sponsored Visibility"
+    ],
+    [
+     11994,
+     "Marketing Content"
+    ],
+    [
+     12003,
+     "Exhibitor Leads Dashboard"
+    ],
+    [
+     12012,
+     "Exhibitor Profile Analytics (Organiser View)"
+    ]
+   ]
+  },
+  "Lead Intelligence": {
+   "domain": "Exhibitor & Sponsor",
+   "lines": [
+    12522,
+    13162
+   ],
+   "features": [
+    [
+     12600,
+     "Basic Configuration for Organisers"
+    ],
+    [
+     12619,
+     "Lead Capture Access Management"
+    ],
+    [
+     12629,
+     "Lead Question Builder for Organiser"
+    ],
+    [
+     12639,
+     "Lead Question Builder for Exhibitors"
+    ],
+    [
+     12649,
+     "Leads Dashboard"
+    ],
+    [
+     12662,
+     "Lead Scanning (Badge Scanning via Mobile App)"
+    ],
+    [
+     12677,
+     "Co-located Scanning"
+    ],
+    [
+     12686,
+     "Allow Any Code Scan"
+    ],
+    [
+     12694,
+     "Non-Badge QR Codes (Company, Product, Content, Visitor)"
+    ],
+    [
+     12704,
+     "Lead Capture Pro"
+    ],
+    [
+     12714,
+     "Leads Export"
+    ]
+   ]
+  },
+  "Floor Plan": {
+   "domain": "Exhibitor & Sponsor",
+   "lines": [
+    13163,
+    14021
+   ],
+   "features": [
+    [
+     13240,
+     "Basic Hall Management"
+    ],
+    [
+     13272,
+     "Hall Layout Management"
+    ],
+    [
+     13302,
+     "Stand Visual Configuration"
+    ],
+    [
+     13334,
+     "DXF Stand Import"
+    ],
+    [
+     13366,
+     "Basic Floor Plan Display"
+    ],
+    [
+     13396,
+     "Search and Filtering"
+    ],
+    [
+     13426,
+     "Wayfinding"
+    ],
+    [
+     13456,
+     "ExpoFP Integration"
+    ],
+    [
+     13488,
+     "Invisual Floorplan Integration"
+    ],
+    [
+     13518,
+     "External Floorplan Linking"
+    ],
+    [
+     13548,
+     "CrowdConnected / Bluedot Indoor Navigation"
+    ],
+    [
+     13578,
+     "Bookmarking Stands on ExpoFP Floor Plan"
+    ],
+    [
+     13606,
+     "Three.js Rendering Engine (Floor Plan Rewrite)"
+    ]
+   ]
+  },
+  "Sponsorship": {
+   "domain": "Exhibitor & Sponsor",
+   "lines": [
+    14022,
+    14828
+   ],
+   "features": [
+    [
+     14112,
+     "4.1 Creating and Managing Sponsor Records"
+    ],
+    [
+     14131,
+     "4.2 Sponsor Categories"
+    ],
+    [
+     14148,
+     "4.3 Sponsored Exhibitor Designation"
+    ],
+    [
+     14167,
+     "4.4 Sponsor Limit on Marketplace"
+    ],
+    [
+     14188,
+     "4.5 Banner Ads"
+    ],
+    [
+     14216,
+     "4.6 Sponsor Pop-up"
+    ],
+    [
+     14235,
+     "4.7 Sponsored Products"
+    ],
+    [
+     14254,
+     "4.8 Website Header and Background Images"
+    ],
+    [
+     14273,
+     "4.9 Sponsor Video in Online Session Room"
+    ],
+    [
+     14293,
+     "4.10 Online Room Customisation (Background Image + Font Colour)"
+    ],
+    [
+     14311,
+     "4.11 Sponsored Session Block on Exhibitor Profile"
+    ],
+    [
+     14328,
+     "4.12 Sponsorship Statistics for Organisers"
+    ],
+    [
+     14352,
+     "4.13 Sponsorship Statistics for Exhibitors (Sponsor View)"
+    ],
+    [
+     14367,
+     "4.14 Additional Video in Exhibitor Profile"
+    ]
+   ]
+  },
+  "Hosted Buyer Management": {
+   "domain": "Exhibitor & Sponsor",
+   "lines": [
+    14829,
+    15397
+   ],
+   "features": [
+    [
+     14895,
+     "Agents"
+    ],
+    [
+     14912,
+     "Buyer Categories"
+    ],
+    [
+     14929,
+     "Benefits"
+    ],
+    [
+     14949,
+     "Document Dashboard"
+    ],
+    [
+     14966,
+     "Hosted Buyer Automated Filters"
+    ],
+    [
+     14983,
+     "Buyers Management (Admin)"
+    ],
+    [
+     15000,
+     "Buyers List (Frontend)"
+    ]
+   ]
+  },
+  "Integrations": {
+   "domain": "Provisioning & Platform Core",
+   "lines": [
+    15398,
+    16414
+   ],
+   "features": [
+    [
+     15471,
+     "4.1 Open API — REST Interface (Option 1)"
+    ],
+    [
+     15473,
+     "Description"
+    ],
+    [
+     15476,
+     "Why it exists"
+    ],
+    [
+     15479,
+     "User value"
+    ],
+    [
+     15482,
+     "Functional logic"
+    ],
+    [
+     15485,
+     "Preconditions"
+    ],
+    [
+     15488,
+     "Trigger conditions"
+    ],
+    [
+     15491,
+     "Processing logic"
+    ],
+    [
+     15499,
+     "Outputs"
+    ],
+    [
+     15502,
+     "Dependencies"
+    ],
+    [
+     15505,
+     "Configurations"
+    ],
+    [
+     15508,
+     "Validation rules"
+    ],
+    [
+     15511,
+     "Permissions"
+    ],
+    [
+     15514,
+     "Error handling"
+    ],
+    [
+     15517,
+     "Edge cases"
+    ],
+    [
+     15524,
+     "4.2 API Key Management"
+    ],
+    [
+     15526,
+     "Description"
+    ],
+    [
+     15529,
+     "Why it exists"
+    ],
+    [
+     15532,
+     "User value"
+    ],
+    [
+     15535,
+     "Functional logic"
+    ],
+    [
+     15542,
+     "Preconditions"
+    ],
+    [
+     15545,
+     "Trigger conditions"
+    ],
+    [
+     15548,
+     "Processing logic"
+    ],
+    [
+     15551,
+     "Outputs"
+    ],
+    [
+     15554,
+     "Dependencies"
+    ],
+    [
+     15557,
+     "Configurations"
+    ],
+    [
+     15560,
+     "Permissions"
+    ],
+    [
+     15563,
+     "Error handling"
+    ],
+    [
+     15566,
+     "Edge cases"
+    ],
+    [
+     15572,
+     "4.3 Participant / Account API"
+    ],
+    [
+     15574,
+     "Description"
+    ],
+    [
+     15577,
+     "Why it exists"
+    ],
+    [
+     15580,
+     "User value"
+    ],
+    [
+     15583,
+     "Functional logic"
+    ],
+    [
+     15605,
+     "Preconditions"
+    ],
+    [
+     15608,
+     "Processing logic"
+    ],
+    [
+     15611,
+     "Outputs"
+    ],
+    [
+     15614,
+     "Dependencies"
+    ],
+    [
+     15617,
+     "Validation rules"
+    ],
+    [
+     15620,
+     "Error handling"
+    ],
+    [
+     15623,
+     "Edge cases"
+    ],
+    [
+     15628,
+     "4.4 Exhibitor API"
+    ],
+    [
+     15630,
+     "Description"
+    ],
+    [
+     15633,
+     "Why it exists"
+    ],
+    [
+     15636,
+     "User value"
+    ],
+    [
+     15639,
+     "Functional logic"
+    ],
+    [
+     15653,
+     "Preconditions"
+    ],
+    [
+     15656,
+     "Processing logic"
+    ],
+    [
+     15659,
+     "Outputs"
+    ],
+    [
+     15662,
+     "Validation rules"
+    ],
+    [
+     15665,
+     "Error handling"
+    ],
+    [
+     15668,
+     "Edge cases"
+    ],
+    [
+     15673,
+     "4.5 Product API"
+    ],
+    [
+     15675,
+     "Description"
+    ],
+    [
+     15678,
+     "Why it exists"
+    ],
+    [
+     15681,
+     "Functional logic"
+    ],
+    [
+     15693,
+     "Preconditions"
+    ],
+    [
+     15696,
+     "Error handling"
+    ],
+    [
+     15699,
+     "Edge cases"
+    ],
+    [
+     15704,
+     "4.6 Session API"
+    ],
+    [
+     15706,
+     "Description"
+    ],
+    [
+     15709,
+     "Why it exists"
+    ],
+    [
+     15712,
+     "Functional logic"
+    ],
+    [
+     15726,
+     "Preconditions"
+    ],
+    [
+     15729,
+     "Edge cases"
+    ],
+    [
+     15734,
+     "4.7 Meetings API"
+    ],
+    [
+     15736,
+     "Description"
+    ],
+    [
+     15739,
+     "Why it exists"
+    ],
+    [
+     15742,
+     "Functional logic"
+    ],
+    [
+     15762,
+     "Preconditions"
+    ],
+    [
+     15765,
+     "Outputs"
+    ],
+    [
+     15768,
+     "Dependencies"
+    ],
+    [
+     15771,
+     "Edge cases"
+    ],
+    [
+     15776,
+     "4.8 Floor Plan API"
+    ],
+    [
+     15778,
+     "Description"
+    ],
+    [
+     15781,
+     "Why it exists"
+    ],
+    [
+     15784,
+     "Functional logic"
+    ],
+    [
+     15791,
+     "Preconditions"
+    ],
+    [
+     15794,
+     "Edge cases"
+    ],
+    [
+     15799,
+     "4.9 Statistics API v2"
+    ],
+    [
+     15801,
+     "Description"
+    ],
+    [
+     15804,
+     "Why it exists"
+    ],
+    [
+     15807,
+     "Functional logic"
+    ],
+    [
+     15820,
+     "Preconditions"
+    ],
+    [
+     15823,
+     "Edge cases"
+    ],
+    [
+     15828,
+     "4.10 Native SAML 2.0 SSO"
+    ],
+    [
+     15830,
+     "Description"
+    ],
+    [
+     15833,
+     "Why it exists"
+    ],
+    [
+     15836,
+     "User value"
+    ],
+    [
+     15839,
+     "Functional logic"
+    ],
+    [
+     15861,
+     "Preconditions"
+    ],
+    [
+     15864,
+     "Processing logic"
+    ],
+    [
+     15867,
+     "Outputs"
+    ],
+    [
+     15870,
+     "Dependencies"
+    ],
+    [
+     15873,
+     "Configurations"
+    ],
+    [
+     15876,
+     "Permissions"
+    ],
+    [
+     15879,
+     "Error handling"
+    ],
+    [
+     15882,
+     "Edge cases"
+    ],
+    [
+     15889,
+     "4.11 ExpoFP Floor Plan Integration"
+    ],
+    [
+     15891,
+     "Description"
+    ],
+    [
+     15894,
+     "Why it exists"
+    ],
+    [
+     15897,
+     "Functional logic"
+    ],
+    [
+     15900,
+     "Preconditions"
+    ],
+    [
+     15903,
+     "Configurations"
+    ],
+    [
+     15906,
+     "Dependencies"
+    ],
+    [
+     15911,
+     "4.12 ExpoFP — Crowdconnected Indoor Positioning"
+    ],
+    [
+     15913,
+     "Description"
+    ],
+    [
+     15916,
+     "Why it exists"
+    ],
+    [
+     15919,
+     "Functional logic"
+    ],
+    [
+     15927,
+     "Preconditions"
+    ],
+    [
+     15930,
+     "Dependencies"
+    ],
+    [
+     15933,
+     "Edge cases"
+    ],
+    [
+     15938,
+     "4.13 Aventri (Cvent) Participant Data Sync"
+    ],
+    [
+     15940,
+     "Description"
+    ],
+    [
+     15943,
+     "Why it exists"
+    ],
+    [
+     15946,
+     "Functional logic"
+    ],
+    [
+     15949,
+     "Preconditions"
+    ],
+    [
+     15952,
+     "Dependencies"
+    ],
+    [
+     15959,
+     "4.14 Integration HUB"
+    ],
+    [
+     15961,
+     "Description"
+    ],
+    [
+     15964,
+     "Why it exists"
+    ],
+    [
+     15967,
+     "Functional logic"
+    ],
+    [
+     15970,
+     "Preconditions"
+    ],
+    [
+     15973,
+     "Dependencies"
+    ],
+    [
+     15980,
+     "4.15 Public API v3 Migration"
+    ],
+    [
+     15982,
+     "Description"
+    ],
+    [
+     15985,
+     "Why it exists"
+    ],
+    [
+     15988,
+     "Functional logic"
+    ],
+    [
+     15991,
+     "Current status"
+    ]
+   ]
+  },
+  "Profile": {
+   "domain": "Identity & Community",
+   "lines": null,
+   "features": [],
+   "note": "Shared sub-domain, no standalone doc; its stories sit under Exhibitor Portal / Exhibitor Marketplace / Networking per the KB"
+  }
+ }
+}

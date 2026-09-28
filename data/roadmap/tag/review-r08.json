@@ -1,0 +1,192 @@
+[
+ {
+  "k": "EP-43030",
+  "summary": "[site build] Change mobile adaptive for FourCardView in system elements",
+  "epic": null,
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "New website builder",
+  "text": "Kept the four-card view on one line until the last breakpoint on mobile. The four-card block adapts better."
+ },
+ {
+  "k": "EP-43504",
+  "summary": "[Corp Site]: Optimize videos and images",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Optimised corporate site videos and images with sizes, posters and schema metadata. Corporate site media loads better and is described for search."
+ },
+ {
+  "k": "EP-43510",
+  "summary": "[environment variables ] Separate website builder GraphQLApi ",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Configured separate website builder GraphQL endpoints per region and environment. The builder talks to the right region's API."
+ },
+ {
+  "k": "EP-43709",
+  "summary": "Scroll disabled after click on tour button and than close ",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Restored page scrolling after closing the tour. Pages scroll after the tour."
+ },
+ {
+  "k": "EP-44145",
+  "summary": "[adminv2] change the button text in the site builder",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Combined the site builder's buttons into 'Save and Publish' and hid Publish on the published version. Publishing in the builder is simpler."
+ },
+ {
+  "k": "EP-44426",
+  "summary": "Social networks have no description tooltip in FormBuilder",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Added the description tooltip to social network fields in the form builder. Social fields show their tooltip."
+ },
+ {
+  "k": "EP-44614",
+  "summary": "[admin-ui] App crashes in website builder when change form for FormBuilder",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the website builder crashing when switching the form in a form block. Form blocks can switch forms."
+ },
+ {
+  "k": "EP-45254",
+  "summary": "SeoModal. Move buttons to ActionButtons prop",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved SEO modal buttons into the ActionButtons prop. Buttons use the shared pattern."
+ },
+ {
+  "k": "EP-46738",
+  "summary": "Check form render (colspan/rowspan does not apply to cells)",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Applied colspan and rowspan from the API when rendering form tables. Form tables display merged cells."
+ },
+ {
+  "k": "EP-47541",
+  "summary": "[next14] Fix language inside URL with default settings",
+  "epic": null,
+  "theme": "web",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed language handling in URLs: default language, stored language overriding the URL, and links losing the language. The chosen language sticks across the site."
+ },
+ {
+  "k": "EP-47651",
+  "summary": "Website buider. Custom grids main functional",
+  "epic": "Website builder. Custom grids",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom grids",
+  "text": "A Custom Grid in the Website Builder: 1–6 cells, grids inside grids, drag-and-drop elements between cells, resizable cells and minimum widths. Organisers compose multi-column layouts that fit, then wrap, on mobile."
+ },
+ {
+  "k": "EP-47652",
+  "summary": "Custom grids improvements. Improve base structure and elements placement",
+  "epic": "Website builder. Custom grids",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom grids",
+  "text": "The builder's Elements section is renamed Custom Grid and Elements (grid, text, button, image, video); banners and text blocks move to Static Blocks. Layout elements are easier to find and the builder's panels match how pages are put together."
+ },
+ {
+  "k": "EP-47653",
+  "summary": "Custom grids improvements. Change settings placement",
+  "epic": "Website builder. Custom grids",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom grids",
+  "text": "Custom Grid settings in the Website Builder are laid out horizontally, the same way as the Carousel block's settings. Grid settings are consistent with other builder blocks and quicker to scan."
+ },
+ {
+  "k": "EP-47658",
+  "summary": "Custom grids. Improve number of columns display",
+  "epic": "Website builder. Custom grids",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom grids",
+  "text": "The grid's column count uses segmented buttons instead of radio buttons, with a warning that changing it resets the layout. Organisers pick column counts more easily and are warned before they lose content."
+ },
+ {
+  "k": "EP-52647",
+  "summary": "Story 1: \"Describe CSS Changes\" UI Entry Point",
+  "epic": "AI-Assisted Website Builder Phase I",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "AI-assisted website builder",
+  "text": "A 'Describe CSS Changes' input in a Website Builder block's Dev settings, where power users describe styling in plain language for AI to apply. Behind a feature flag, power users request AI-generated CSS from a block, with a loading state and a clear error if it fails."
+ },
+ {
+  "k": "EP-52648",
+  "summary": "Story 2: Block HTML Snapshot Serialization",
+  "epic": "AI-Assisted Website Builder Phase I",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "AI-assisted website builder",
+  "text": "The Website Builder captures a block's HTML snapshot, style IDs and design tokens (colours, fonts, buttons) to send with AI CSS requests. AI styling requests carry the block's structure and brand tokens, truncated safely and with no personal data."
+ },
+ {
+  "k": "EP-52649",
+  "summary": "Story 3: Secure Backend Proxy for AI Requests",
+  "epic": "AI-Assisted Website Builder Phase I",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "AI-assisted website builder",
+  "text": "A secure backend proxy forwards AI CSS requests to the AI provider so the API key never reaches the browser. AI CSS requests are validated, routed server-side and return structured errors on timeouts or bad input."
+ },
+ {
+  "k": "EP-52650",
+  "summary": "Story 4: Block-Scoped CSS Preview & Application",
+  "epic": "AI-Assisted Website Builder Phase I",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "AI-assisted website builder",
+  "text": "AI-generated CSS is shown for review first and, once confirmed, applied only to the block being edited, not to global styles. Power users confirm or cancel AI CSS per block; oversized results are rejected."
+ },
+ {
+  "k": "EP-52651",
+  "summary": "Story 5: Plain Language Prompt Interpretation",
+  "epic": "AI-Assisted Website Builder Phase I",
+  "theme": "web",
+  "include": true,
+  "exclude": null,
+  "feature": "AI-assisted website builder",
+  "text": "The AI CSS generator understands everyday requests like 'make the title bigger' and uses the builder's design-system colours rather than fixed values. Plain-language prompts produce on-brand CSS for the right element; structural requests get a clear 'styling only' reply."
+ }
+]

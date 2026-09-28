@@ -1,0 +1,1697 @@
+{
+ "builtAt": "2026-09-25",
+ "count": 3328,
+ "byDriver": {
+  "Protect churn": 1639,
+  "Avoid cost": 1251,
+  "Increase revenue": 210,
+  "Reduce cost": 228
+ },
+ "byTierGroupAndDriver": {
+  "Named, not in ledger": {
+   "Protect churn": 62,
+   "Avoid cost": 7,
+   "Increase revenue": 3,
+   "total": 72
+  },
+  "Platform (no customer)": {
+   "Protect churn": 1080,
+   "Avoid cost": 1211,
+   "Increase revenue": 126,
+   "Reduce cost": 222,
+   "total": 2639
+  },
+  "Tier 1": {
+   "Protect churn": 431,
+   "Increase revenue": 70,
+   "Avoid cost": 30,
+   "Reduce cost": 5,
+   "total": 536
+  },
+  "Tier 2": {
+   "Protect churn": 52,
+   "Avoid cost": 3,
+   "Increase revenue": 1,
+   "Reduce cost": 1,
+   "total": 57
+  },
+  "Tier 3": {
+   "Protect churn": 11,
+   "total": 11
+  },
+  "Tier 4": {
+   "Increase revenue": 10,
+   "Protect churn": 3,
+   "total": 13
+  }
+ },
+ "byStageAndDriver": {
+  "Done": {
+   "Protect churn": 1339,
+   "Avoid cost": 846,
+   "Increase revenue": 167,
+   "Reduce cost": 142,
+   "total": 2494
+  },
+  "In progress": {
+   "Reduce cost": 9,
+   "Protect churn": 49,
+   "Avoid cost": 50,
+   "Increase revenue": 6,
+   "total": 114
+  },
+  "Not started": {
+   "Avoid cost": 355,
+   "Protect churn": 251,
+   "Increase revenue": 37,
+   "Reduce cost": 77,
+   "total": 720
+  }
+ },
+ "byDoneYearAndDriver": {
+  "2023": {
+   "Avoid cost": 212,
+   "Protect churn": 332,
+   "Reduce cost": 40,
+   "Increase revenue": 27,
+   "total": 611
+  },
+  "2024": {
+   "Protect churn": 322,
+   "Increase revenue": 60,
+   "Avoid cost": 150,
+   "Reduce cost": 20,
+   "total": 552
+  },
+  "2025": {
+   "Avoid cost": 179,
+   "Protect churn": 333,
+   "Reduce cost": 26,
+   "Increase revenue": 39,
+   "total": 577
+  },
+  "2026": {
+   "Protect churn": 352,
+   "Avoid cost": 305,
+   "Increase revenue": 41,
+   "Reduce cost": 56,
+   "total": 754
+  },
+  "None": {
+   "Avoid cost": 405,
+   "Protect churn": 300,
+   "Reduce cost": 86,
+   "Increase revenue": 43,
+   "total": 834
+  }
+ },
+ "byConfidence": {
+  "Medium": 1390,
+  "Low": 669,
+  "High": 1269
+ },
+ "withCustomer": 689,
+ "customers": [
+  {
+   "name": "Hyve Group Plc",
+   "tier": 1,
+   "inLedger": true,
+   "storyCount": 178,
+   "drivers": {
+    "Increase revenue": 56,
+    "Protect churn": 115,
+    "Avoid cost": 6,
+    "Reduce cost": 1
+   },
+   "stages": {
+    "Done": 172,
+    "In progress": 3,
+    "Not started": 3
+   },
+   "storyKeys": [
+    "EP-28986",
+    "EP-28987",
+    "EP-28988",
+    "EP-28989",
+    "EP-28990",
+    "EP-28991",
+    "EP-28992",
+    "EP-28993",
+    "EP-28994",
+    "EP-28995",
+    "EP-29074",
+    "EP-29905",
+    "EP-30282",
+    "EP-30284",
+    "EP-30285",
+    "EP-30286",
+    "EP-30292",
+    "EP-30294",
+    "EP-30295",
+    "EP-30297",
+    "EP-30300",
+    "EP-30301",
+    "EP-30302",
+    "EP-30697",
+    "EP-30699",
+    "EP-30874",
+    "EP-33706",
+    "EP-39133",
+    "EP-39148",
+    "EP-39150",
+    "EP-39154",
+    "EP-39158",
+    "EP-39228",
+    "EP-39674",
+    "EP-39818",
+    "EP-39819",
+    "EP-39836",
+    "EP-39841",
+    "EP-40074",
+    "EP-40075",
+    "EP-40076",
+    "EP-40078",
+    "EP-40080",
+    "EP-40081",
+    "EP-40448",
+    "EP-41016",
+    "EP-41245",
+    "EP-41254",
+    "EP-41325",
+    "EP-41328",
+    "EP-41378",
+    "EP-41431",
+    "EP-41432",
+    "EP-41435",
+    "EP-41459",
+    "EP-41460",
+    "EP-41461",
+    "EP-41524",
+    "EP-41663",
+    "EP-41665",
+    "EP-41666",
+    "EP-41682",
+    "EP-41707",
+    "EP-41712",
+    "EP-41731",
+    "EP-41768",
+    "EP-41773",
+    "EP-42161",
+    "EP-42263",
+    "EP-42360",
+    "EP-42361",
+    "EP-42362",
+    "EP-42363",
+    "EP-42364",
+    "EP-42383",
+    "EP-43263",
+    "EP-43483",
+    "EP-43484",
+    "EP-43487",
+    "EP-43490",
+    "EP-43492",
+    "EP-43493",
+    "EP-43494",
+    "EP-43505",
+    "EP-43510",
+    "EP-43562",
+    "EP-43564",
+    "EP-43660",
+    "EP-43662",
+    "EP-43665",
+    "EP-43717",
+    "EP-43809",
+    "EP-43871",
+    "EP-43872",
+    "EP-43904",
+    "EP-43905",
+    "EP-43907",
+    "EP-43914",
+    "EP-43916",
+    "EP-43922",
+    "EP-43923",
+    "EP-43924",
+    "EP-44044",
+    "EP-44317",
+    "EP-44664",
+    "EP-44876",
+    "EP-44892",
+    "EP-44947",
+    "EP-45158",
+    "EP-45788",
+    "EP-45789",
+    "EP-45790",
+    "EP-45791",
+    "EP-45793",
+    "EP-45794",
+    "EP-45795",
+    "EP-46201",
+    "EP-46203",
+    "EP-46204",
+    "EP-46207",
+    "EP-46276",
+    "EP-46473",
+    "EP-46474",
+    "EP-46480",
+    "EP-46483",
+    "EP-46485",
+    "EP-46486",
+    "EP-46487",
+    "EP-46511",
+    "EP-46512",
+    "EP-46513",
+    "EP-46514",
+    "EP-46550",
+    "EP-46551",
+    "EP-46552",
+    "EP-46563",
+    "EP-46564",
+    "EP-46565",
+    "EP-46566",
+    "EP-46710",
+    "EP-47055",
+    "EP-47117",
+    "EP-47311",
+    "EP-47892",
+    "EP-47958",
+    "EP-48314",
+    "EP-48386",
+    "EP-48689",
+    "EP-48752",
+    "EP-48761",
+    "EP-48851",
+    "EP-49001",
+    "EP-49002",
+    "EP-49069",
+    "EP-49073",
+    "EP-49075",
+    "EP-49077",
+    "EP-49192",
+    "EP-49202",
+    "EP-49211",
+    "EP-49221",
+    "EP-49223",
+    "EP-50158",
+    "EP-50569",
+    "EP-50642",
+    "EP-50818",
+    "EP-50840",
+    "EP-51642",
+    "EP-52147",
+    "EP-54089",
+    "EP-54452",
+    "EP-54635",
+    "EP-56106",
+    "EP-56264",
+    "EP-56843",
+    "EP-56891",
+    "EP-56995",
+    "EP-57186"
+   ]
+  },
+  {
+   "name": "IMEX",
+   "tier": 1,
+   "inLedger": true,
+   "storyCount": 153,
+   "drivers": {
+    "Protect churn": 138,
+    "Increase revenue": 7,
+    "Reduce cost": 1,
+    "Avoid cost": 7
+   },
+   "stages": {
+    "Done": 136,
+    "Not started": 15,
+    "In progress": 2
+   },
+   "storyKeys": [
+    "EP-9435",
+    "EP-10170",
+    "EP-10663",
+    "EP-11115",
+    "EP-11663",
+    "EP-11664",
+    "EP-11695",
+    "EP-11754",
+    "EP-12365",
+    "EP-12377",
+    "EP-12585",
+    "EP-12587",
+    "EP-13125",
+    "EP-13539",
+    "EP-14266",
+    "EP-14310",
+    "EP-15587",
+    "EP-15676",
+    "EP-16028",
+    "EP-16103",
+    "EP-16131",
+    "EP-16261",
+    "EP-16456",
+    "EP-16707",
+    "EP-16716",
+    "EP-16775",
+    "EP-16944",
+    "EP-17281",
+    "EP-17284",
+    "EP-17285",
+    "EP-17287",
+    "EP-17339",
+    "EP-17343",
+    "EP-17344",
+    "EP-17345",
+    "EP-17348",
+    "EP-17352",
+    "EP-17353",
+    "EP-17512",
+    "EP-17598",
+    "EP-17967",
+    "EP-17970",
+    "EP-17974",
+    "EP-18010",
+    "EP-18257",
+    "EP-18403",
+    "EP-18404",
+    "EP-18536",
+    "EP-19915",
+    "EP-20058",
+    "EP-20214",
+    "EP-20467",
+    "EP-20612",
+    "EP-20669",
+    "EP-20716",
+    "EP-21351",
+    "EP-22966",
+    "EP-23019",
+    "EP-23021",
+    "EP-23400",
+    "EP-23518",
+    "EP-23521",
+    "EP-23542",
+    "EP-23543",
+    "EP-23548",
+    "EP-23578",
+    "EP-23579",
+    "EP-23737",
+    "EP-23843",
+    "EP-24160",
+    "EP-24220",
+    "EP-24305",
+    "EP-24992",
+    "EP-25280",
+    "EP-25939",
+    "EP-27888",
+    "EP-28229",
+    "EP-28230",
+    "EP-31013",
+    "EP-32152",
+    "EP-34594",
+    "EP-34934",
+    "EP-35119",
+    "EP-35513",
+    "EP-35897",
+    "EP-35900",
+    "EP-35903",
+    "EP-36021",
+    "EP-36095",
+    "EP-37473",
+    "EP-38213",
+    "EP-40013",
+    "EP-40363",
+    "EP-40631",
+    "EP-40743",
+    "EP-44632",
+    "EP-44633",
+    "EP-45361",
+    "EP-45958",
+    "EP-46050",
+    "EP-47674",
+    "EP-47675",
+    "EP-47678",
+    "EP-47680",
+    "EP-47681",
+    "EP-47792",
+    "EP-47793",
+    "EP-47797",
+    "EP-49577",
+    "EP-49618",
+    "EP-49802",
+    "EP-49803",
+    "EP-49804",
+    "EP-49805",
+    "EP-49807",
+    "EP-49808",
+    "EP-49809",
+    "EP-49810",
+    "EP-49812",
+    "EP-49995",
+    "EP-49997",
+    "EP-50051",
+    "EP-50113",
+    "EP-50317",
+    "EP-50339",
+    "EP-50364",
+    "EP-50477",
+    "EP-51149",
+    "EP-51659",
+    "EP-51742",
+    "EP-51830",
+    "EP-52169",
+    "EP-52483",
+    "EP-52806",
+    "EP-52952",
+    "EP-53059",
+    "EP-53567",
+    "EP-53767",
+    "EP-53768",
+    "EP-53978",
+    "EP-54756",
+    "EP-54922",
+    "EP-54929",
+    "EP-55295",
+    "EP-55706",
+    "EP-55778",
+    "EP-55864",
+    "EP-56038",
+    "EP-56138",
+    "EP-56218",
+    "EP-56228",
+    "EP-56418",
+    "EP-57221"
+   ]
+  },
+  {
+   "name": "Frankfurter Buchmesse GmbH",
+   "tier": 1,
+   "inLedger": true,
+   "storyCount": 49,
+   "drivers": {
+    "Protect churn": 48,
+    "Avoid cost": 1
+   },
+   "stages": {
+    "Done": 40,
+    "Not started": 8,
+    "In progress": 1
+   },
+   "storyKeys": [
+    "EP-16736",
+    "EP-16739",
+    "EP-16777",
+    "EP-16920",
+    "EP-16921",
+    "EP-16924",
+    "EP-16928",
+    "EP-16932",
+    "EP-16934",
+    "EP-16950",
+    "EP-16951",
+    "EP-16952",
+    "EP-23529",
+    "EP-24407",
+    "EP-26093",
+    "EP-26281",
+    "EP-26794",
+    "EP-27462",
+    "EP-27619",
+    "EP-27790",
+    "EP-29190",
+    "EP-29221",
+    "EP-31429",
+    "EP-32016",
+    "EP-32197",
+    "EP-32851",
+    "EP-34905",
+    "EP-35600",
+    "EP-35987",
+    "EP-37800",
+    "EP-37805",
+    "EP-38486",
+    "EP-39625",
+    "EP-40261",
+    "EP-41169",
+    "EP-45853",
+    "EP-48239",
+    "EP-48328",
+    "EP-48332",
+    "EP-48338",
+    "EP-48344",
+    "EP-53978",
+    "EP-55128",
+    "EP-55430",
+    "EP-55599",
+    "EP-56372",
+    "EP-56401",
+    "EP-56595",
+    "EP-57544"
+   ]
+  },
+  {
+   "name": "Vinexposium",
+   "tier": 1,
+   "inLedger": true,
+   "storyCount": 43,
+   "drivers": {
+    "Increase revenue": 3,
+    "Protect churn": 36,
+    "Avoid cost": 4
+   },
+   "stages": {
+    "Not started": 4,
+    "Done": 38,
+    "In progress": 1
+   },
+   "storyKeys": [
+    "EP-8200",
+    "EP-10301",
+    "EP-10479",
+    "EP-10598",
+    "EP-11579",
+    "EP-11592",
+    "EP-11711",
+    "EP-12023",
+    "EP-14473",
+    "EP-14543",
+    "EP-14590",
+    "EP-17775",
+    "EP-18331",
+    "EP-18360",
+    "EP-21888",
+    "EP-21984",
+    "EP-23914",
+    "EP-24028",
+    "EP-24104",
+    "EP-24228",
+    "EP-24408",
+    "EP-25833",
+    "EP-25983",
+    "EP-26245",
+    "EP-27309",
+    "EP-27558",
+    "EP-31213",
+    "EP-31630",
+    "EP-31674",
+    "EP-35968",
+    "EP-36147",
+    "EP-38098",
+    "EP-38131",
+    "EP-39031",
+    "EP-40342",
+    "EP-41455",
+    "EP-41483",
+    "EP-44267",
+    "EP-47929",
+    "EP-48886",
+    "EP-56823",
+    "EP-57406",
+    "EP-57408"
+   ]
+  },
+  {
+   "name": "DLG Markets GmbH",
+   "tier": 1,
+   "inLedger": true,
+   "storyCount": 41,
+   "drivers": {
+    "Protect churn": 40,
+    "Reduce cost": 1
+   },
+   "stages": {
+    "Done": 28,
+    "Not started": 8,
+    "In progress": 5
+   },
+   "storyKeys": [
+    "EP-13663",
+    "EP-16297",
+    "EP-17102",
+    "EP-25790",
+    "EP-26093",
+    "EP-29933",
+    "EP-31011",
+    "EP-32201",
+    "EP-32358",
+    "EP-32359",
+    "EP-32750",
+    "EP-33961",
+    "EP-36019",
+    "EP-40706",
+    "EP-41169",
+    "EP-43163",
+    "EP-44186",
+    "EP-44694",
+    "EP-47929",
+    "EP-47989",
+    "EP-48297",
+    "EP-51701",
+    "EP-52820",
+    "EP-53978",
+    "EP-55477",
+    "EP-55599",
+    "EP-55642",
+    "EP-57253",
+    "EP-57347",
+    "EP-57348",
+    "EP-57360",
+    "EP-57428",
+    "EP-57430",
+    "EP-57471",
+    "EP-57478",
+    "EP-57533",
+    "EP-57544",
+    "EP-57562",
+    "EP-57577",
+    "EP-57684",
+    "EP-57824"
+   ]
+  },
+  {
+   "name": "Dubai World Trade Centre DWTC/ DXB Live",
+   "tier": 1,
+   "inLedger": true,
+   "storyCount": 37,
+   "drivers": {
+    "Protect churn": 33,
+    "Avoid cost": 4
+   },
+   "stages": {
+    "Done": 35,
+    "Not started": 2
+   },
+   "storyKeys": [
+    "EP-12571",
+    "EP-12576",
+    "EP-12725",
+    "EP-12726",
+    "EP-12814",
+    "EP-13566",
+    "EP-15159",
+    "EP-15162",
+    "EP-15213",
+    "EP-17756",
+    "EP-18110",
+    "EP-18322",
+    "EP-19419",
+    "EP-19438",
+    "EP-20177",
+    "EP-20254",
+    "EP-20781",
+    "EP-21095",
+    "EP-21568",
+    "EP-22016",
+    "EP-26859",
+    "EP-27382",
+    "EP-27396",
+    "EP-30274",
+    "EP-35350",
+    "EP-35658",
+    "EP-35926",
+    "EP-36721",
+    "EP-36732",
+    "EP-36743",
+    "EP-40070",
+    "EP-40301",
+    "EP-41199",
+    "EP-41756",
+    "EP-43589",
+    "EP-44527",
+    "EP-55082"
+   ]
+  },
+  {
+   "name": "Informa North America",
+   "tier": 1,
+   "inLedger": true,
+   "storyCount": 22,
+   "drivers": {
+    "Protect churn": 11,
+    "Avoid cost": 7,
+    "Increase revenue": 3,
+    "Reduce cost": 1
+   },
+   "stages": {
+    "Done": 21,
+    "Not started": 1
+   },
+   "storyKeys": [
+    "EP-12718",
+    "EP-13930",
+    "EP-14544",
+    "EP-14546",
+    "EP-14550",
+    "EP-14559",
+    "EP-27547",
+    "EP-31011",
+    "EP-34438",
+    "EP-37381",
+    "EP-43200",
+    "EP-45439",
+    "EP-46288",
+    "EP-46657",
+    "EP-47099",
+    "EP-47499",
+    "EP-48719",
+    "EP-48813",
+    "EP-48886",
+    "EP-49318",
+    "EP-49469",
+    "EP-54157"
+   ]
+  },
+  {
+   "name": "Northstar Travel Group",
+   "tier": 1,
+   "inLedger": true,
+   "storyCount": 9,
+   "drivers": {
+    "Protect churn": 8,
+    "Reduce cost": 1
+   },
+   "stages": {
+    "Done": 8,
+    "In progress": 1
+   },
+   "storyKeys": [
+    "EP-28688",
+    "EP-30037",
+    "EP-39524",
+    "EP-39525",
+    "EP-41108",
+    "EP-42403",
+    "EP-43006",
+    "EP-53966",
+    "EP-54991"
+   ]
+  },
+  {
+   "name": "Informa Markets (UK)",
+   "tier": 1,
+   "inLedger": true,
+   "storyCount": 8,
+   "drivers": {
+    "Protect churn": 8
+   },
+   "stages": {
+    "Done": 8
+   },
+   "storyKeys": [
+    "EP-5767",
+    "EP-18160",
+    "EP-36617",
+    "EP-40162",
+    "EP-45440",
+    "EP-46776",
+    "EP-48154",
+    "EP-48618"
+   ]
+  },
+  {
+   "name": "Kortrijk Xpo (Busworld)",
+   "tier": 1,
+   "inLedger": true,
+   "storyCount": 5,
+   "drivers": {
+    "Protect churn": 4,
+    "Avoid cost": 1
+   },
+   "stages": {
+    "Done": 3,
+    "Not started": 2
+   },
+   "storyKeys": [
+    "EP-15993",
+    "EP-24228",
+    "EP-24408",
+    "EP-50247",
+    "EP-57510"
+   ]
+  },
+  {
+   "name": "Tampereen Messut (Tampere Trade Fairs)",
+   "tier": 1,
+   "inLedger": true,
+   "storyCount": 2,
+   "drivers": {
+    "Protect churn": 1,
+    "Increase revenue": 1
+   },
+   "stages": {
+    "Done": 2
+   },
+   "storyKeys": [
+    "EP-42940",
+    "EP-44730"
+   ]
+  },
+  {
+   "name": "HINTE Expo & Conference GmbH",
+   "tier": 2,
+   "inLedger": true,
+   "storyCount": 18,
+   "drivers": {
+    "Protect churn": 16,
+    "Increase revenue": 1,
+    "Reduce cost": 1
+   },
+   "stages": {
+    "Done": 15,
+    "In progress": 2,
+    "Not started": 1
+   },
+   "storyKeys": [
+    "EP-40706",
+    "EP-40746",
+    "EP-44623",
+    "EP-45950",
+    "EP-47038",
+    "EP-47917",
+    "EP-49295",
+    "EP-49298",
+    "EP-52820",
+    "EP-52989",
+    "EP-53036",
+    "EP-53048",
+    "EP-53049",
+    "EP-53455",
+    "EP-55954",
+    "EP-56170",
+    "EP-56227",
+    "EP-57253"
+   ]
+  },
+  {
+   "name": "BeautyIstanbul (Ipekyolu International Exhibitions)",
+   "tier": 2,
+   "inLedger": true,
+   "storyCount": 13,
+   "drivers": {
+    "Protect churn": 12,
+    "Avoid cost": 1
+   },
+   "stages": {
+    "Done": 12,
+    "Not started": 1
+   },
+   "storyKeys": [
+    "EP-7323",
+    "EP-7416",
+    "EP-7417",
+    "EP-10489",
+    "EP-11106",
+    "EP-23702",
+    "EP-29011",
+    "EP-33039",
+    "EP-34940",
+    "EP-37154",
+    "EP-51601",
+    "EP-52452",
+    "EP-57257"
+   ]
+  },
+  {
+   "name": "Rapid News Group",
+   "tier": 2,
+   "inLedger": true,
+   "storyCount": 13,
+   "drivers": {
+    "Protect churn": 13
+   },
+   "stages": {
+    "Done": 13
+   },
+   "storyKeys": [
+    "EP-5445",
+    "EP-5643",
+    "EP-5714",
+    "EP-14043",
+    "EP-20384",
+    "EP-21984",
+    "EP-22505",
+    "EP-23915",
+    "EP-24028",
+    "EP-25939",
+    "EP-27309",
+    "EP-34162",
+    "EP-50897"
+   ]
+  },
+  {
+   "name": "ADS Group",
+   "tier": 2,
+   "inLedger": true,
+   "storyCount": 10,
+   "drivers": {
+    "Protect churn": 8,
+    "Avoid cost": 2
+   },
+   "stages": {
+    "Done": 9,
+    "Not started": 1
+   },
+   "storyKeys": [
+    "EP-2749",
+    "EP-14556",
+    "EP-15823",
+    "EP-15824",
+    "EP-38724",
+    "EP-40024",
+    "EP-40281",
+    "EP-44749",
+    "EP-45418",
+    "EP-57308"
+   ]
+  },
+  {
+   "name": "Mercator Media Limited",
+   "tier": 2,
+   "inLedger": true,
+   "storyCount": 7,
+   "drivers": {
+    "Protect churn": 7
+   },
+   "stages": {
+    "Done": 7
+   },
+   "storyKeys": [
+    "EP-5767",
+    "EP-14043",
+    "EP-16209",
+    "EP-23051",
+    "EP-24028",
+    "EP-52414",
+    "EP-56401"
+   ]
+  },
+  {
+   "name": "ANWR Group eG",
+   "tier": 2,
+   "inLedger": true,
+   "storyCount": 3,
+   "drivers": {
+    "Protect churn": 3
+   },
+   "stages": {
+    "Done": 3
+   },
+   "storyKeys": [
+    "EP-41243",
+    "EP-51733",
+    "EP-55642"
+   ]
+  },
+  {
+   "name": "Afreximbank",
+   "tier": 2,
+   "inLedger": true,
+   "storyCount": 3,
+   "drivers": {
+    "Protect churn": 3
+   },
+   "stages": {
+    "Done": 3
+   },
+   "storyKeys": [
+    "EP-37164",
+    "EP-42609",
+    "EP-44841"
+   ]
+  },
+  {
+   "name": "FESPA",
+   "tier": 2,
+   "inLedger": true,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Not started": 1
+   },
+   "storyKeys": [
+    "EP-56770"
+   ]
+  },
+  {
+   "name": "Fairtrade Messe GmbH & Co KG",
+   "tier": 2,
+   "inLedger": true,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-17524"
+   ]
+  },
+  {
+   "name": "Messe Frankfurt GmbH USA",
+   "tier": 3,
+   "inLedger": true,
+   "storyCount": 6,
+   "drivers": {
+    "Protect churn": 6
+   },
+   "stages": {
+    "Done": 6
+   },
+   "storyKeys": [
+    "EP-12277",
+    "EP-12279",
+    "EP-14036",
+    "EP-14043",
+    "EP-14045",
+    "EP-20384"
+   ]
+  },
+  {
+   "name": "Airports Council International - ACI Asia-Pacific",
+   "tier": 3,
+   "inLedger": true,
+   "storyCount": 5,
+   "drivers": {
+    "Protect churn": 5
+   },
+   "stages": {
+    "Done": 2,
+    "In progress": 2,
+    "Not started": 1
+   },
+   "storyKeys": [
+    "EP-38389",
+    "EP-54690",
+    "EP-55787",
+    "EP-55944",
+    "EP-56742"
+   ]
+  },
+  {
+   "name": "Farnborough International",
+   "tier": 3,
+   "inLedger": true,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-52290"
+   ]
+  },
+  {
+   "name": "Lexis Nexis",
+   "tier": 3,
+   "inLedger": true,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-19325"
+   ]
+  },
+  {
+   "name": "UFI",
+   "tier": 4,
+   "inLedger": true,
+   "storyCount": 12,
+   "drivers": {
+    "Increase revenue": 10,
+    "Protect churn": 2
+   },
+   "stages": {
+    "Done": 12
+   },
+   "storyKeys": [
+    "EP-26344",
+    "EP-26345",
+    "EP-26346",
+    "EP-26347",
+    "EP-26349",
+    "EP-26351",
+    "EP-26352",
+    "EP-26354",
+    "EP-26368",
+    "EP-26419",
+    "EP-32670",
+    "EP-33959"
+   ]
+  },
+  {
+   "name": "Association for Advancing Automation - A3",
+   "tier": 4,
+   "inLedger": true,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-47929"
+   ]
+  },
+  {
+   "name": "CloserStill Media",
+   "tier": 4,
+   "inLedger": true,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Not started": 1
+   },
+   "storyKeys": [
+    "EP-55952"
+   ]
+  },
+  {
+   "name": "Informa- Smartevents",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 20,
+   "drivers": {
+    "Protect churn": 17,
+    "Increase revenue": 1,
+    "Avoid cost": 2
+   },
+   "stages": {
+    "Done": 19,
+    "Not started": 1
+   },
+   "storyKeys": [
+    "EP-5767",
+    "EP-8788",
+    "EP-10629",
+    "EP-10639",
+    "EP-11098",
+    "EP-11114",
+    "EP-11165",
+    "EP-11932",
+    "EP-12034",
+    "EP-12036",
+    "EP-12037",
+    "EP-12216",
+    "EP-12563",
+    "EP-12564",
+    "EP-12583",
+    "EP-12584",
+    "EP-13046",
+    "EP-14378",
+    "EP-15164",
+    "EP-15325"
+   ]
+  },
+  {
+   "name": "InformaEMEA",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 10,
+   "drivers": {
+    "Protect churn": 9,
+    "Increase revenue": 1
+   },
+   "stages": {
+    "Done": 10
+   },
+   "storyKeys": [
+    "EP-7851",
+    "EP-8049",
+    "EP-11165",
+    "EP-12034",
+    "EP-12036",
+    "EP-12037",
+    "EP-12563",
+    "EP-12564",
+    "EP-12583",
+    "EP-12584"
+   ]
+  },
+  {
+   "name": "Informa- Premiere",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 9,
+   "drivers": {
+    "Protect churn": 7,
+    "Avoid cost": 2
+   },
+   "stages": {
+    "Done": 7,
+    "Not started": 2
+   },
+   "storyKeys": [
+    "EP-37381",
+    "EP-39304",
+    "EP-39352",
+    "EP-39354",
+    "EP-40057",
+    "EP-42692",
+    "EP-44893",
+    "EP-45439",
+    "EP-46288"
+   ]
+  },
+  {
+   "name": "Reset Connect",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 8,
+   "drivers": {
+    "Protect churn": 8
+   },
+   "stages": {
+    "Done": 8
+   },
+   "storyKeys": [
+    "EP-14043",
+    "EP-14498",
+    "EP-15338",
+    "EP-18010",
+    "EP-20762",
+    "EP-25344",
+    "EP-27290",
+    "EP-27950"
+   ]
+  },
+  {
+   "name": "Mash Media",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 7,
+   "drivers": {
+    "Increase revenue": 1,
+    "Protect churn": 4,
+    "Avoid cost": 2
+   },
+   "stages": {
+    "Done": 6,
+    "Not started": 1
+   },
+   "storyKeys": [
+    "EP-11456",
+    "EP-11646",
+    "EP-14558",
+    "EP-14559",
+    "EP-14583",
+    "EP-15575",
+    "EP-15585"
+   ]
+  },
+  {
+   "name": "Informa (entity not stated)",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 6,
+   "drivers": {
+    "Protect churn": 5,
+    "Increase revenue": 1
+   },
+   "stages": {
+    "Not started": 2,
+    "Done": 4
+   },
+   "storyKeys": [
+    "EP-12660",
+    "EP-45064",
+    "EP-45065",
+    "EP-47443",
+    "EP-52372",
+    "EP-55287"
+   ]
+  },
+  {
+   "name": "Informa- Healthcare",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 6,
+   "drivers": {
+    "Protect churn": 6
+   },
+   "stages": {
+    "Done": 6
+   },
+   "storyKeys": [
+    "EP-5767",
+    "EP-6438",
+    "EP-7074",
+    "EP-7172",
+    "EP-7851",
+    "EP-8049"
+   ]
+  },
+  {
+   "name": "AAE",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 5,
+   "drivers": {
+    "Protect churn": 5
+   },
+   "stages": {
+    "Done": 5
+   },
+   "storyKeys": [
+    "EP-18393",
+    "EP-23224",
+    "EP-23255",
+    "EP-23256",
+    "EP-24046"
+   ]
+  },
+  {
+   "name": "Informa- Qmed",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 5,
+   "drivers": {
+    "Protect churn": 5
+   },
+   "stages": {
+    "Done": 5
+   },
+   "storyKeys": [
+    "EP-7239",
+    "EP-13096",
+    "EP-13284",
+    "EP-13852",
+    "EP-16131"
+   ]
+  },
+  {
+   "name": "SELA",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 3,
+   "drivers": {
+    "Protect churn": 3
+   },
+   "stages": {
+    "Done": 3
+   },
+   "storyKeys": [
+    "EP-18005",
+    "EP-20409",
+    "EP-20410"
+   ]
+  },
+  {
+   "name": "Arab Health",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 2,
+   "drivers": {
+    "Protect churn": 2
+   },
+   "stages": {
+    "Done": 2
+   },
+   "storyKeys": [
+    "EP-18280",
+    "EP-18287"
+   ]
+  },
+  {
+   "name": "Architect@Work",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 2,
+   "drivers": {
+    "Avoid cost": 2
+   },
+   "stages": {
+    "Done": 2
+   },
+   "storyKeys": [
+    "EP-14545",
+    "EP-14546"
+   ]
+  },
+  {
+   "name": "Clarion",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 2,
+   "drivers": {
+    "Protect churn": 2
+   },
+   "stages": {
+    "Done": 2
+   },
+   "storyKeys": [
+    "EP-1130",
+    "EP-5767"
+   ]
+  },
+  {
+   "name": "Adventics",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-26281"
+   ]
+  },
+  {
+   "name": "African Buyers Programme",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Avoid cost": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-47163"
+   ]
+  },
+  {
+   "name": "CMPL",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-46592"
+   ]
+  },
+  {
+   "name": "CONNECT Oman",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Avoid cost": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-47099"
+   ]
+  },
+  {
+   "name": "Comexposium",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-36147"
+   ]
+  },
+  {
+   "name": "Fiera Milano",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Avoid cost": 1
+   },
+   "stages": {
+    "Not started": 1
+   },
+   "storyKeys": [
+    "EP-3695"
+   ]
+  },
+  {
+   "name": "Goldkrone BAG&ORDER",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-41243"
+   ]
+  },
+  {
+   "name": "Informa - Asia",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-5767"
+   ]
+  },
+  {
+   "name": "Informa Nashville",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-18160"
+   ]
+  },
+  {
+   "name": "K5 GmbH - Future Retail",
+   "tier": null,
+   "inLedger": true,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-54081"
+   ]
+  },
+  {
+   "name": "MCE Expocomfort",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Avoid cost": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-5156"
+   ]
+  },
+  {
+   "name": "One 15",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-38900"
+   ]
+  },
+  {
+   "name": "ROAR",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-33726"
+   ]
+  },
+  {
+   "name": "Sharjah",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-42609"
+   ]
+  },
+  {
+   "name": "dmg",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Avoid cost": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-40301"
+   ]
+  },
+  {
+   "name": "gsmX",
+   "tier": null,
+   "inLedger": false,
+   "storyCount": 1,
+   "drivers": {
+    "Protect churn": 1
+   },
+   "stages": {
+    "Done": 1
+   },
+   "storyKeys": [
+    "EP-33643"
+   ]
+  }
+ ]
+}

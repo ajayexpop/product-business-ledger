@@ -1,0 +1,129 @@
+{
+ "k": "EP-21984",
+ "histories": 63,
+ "historiesRead": 63,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-11-06T14:10:22.104+0000",
+   "from": "Incoming request",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2023-11-09T14:54:33.246+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-11-09T14:54:38.289+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-11-15T11:42:24.554+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-11-15T13:34:46.821+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2023-11-15T13:35:14.609+0000",
+   "from": "In progress",
+   "to": "Ready for development",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2023-11-15T13:36:08.373+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-11-20T10:44:57.665+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-11-20T15:01:48.498+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-11-22T14:42:58.794+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2023-11-23T09:00:57.016+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-11-23T09:00:59.067+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-11-23T12:49:24.054+0000",
+   "from": "COMPLETE",
+   "to": "Ready for development",
+   "by": "Olivier Retraint"
+  },
+  {
+   "at": "2023-11-27T07:18:23.206+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-11-27T07:18:25.388+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-11-27T07:18:27.338+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-11-27T07:18:29.133+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-11-27T07:18:31.057+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-11-27T07:18:32.906+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790321867251.txt"
+}

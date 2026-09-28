@@ -1,0 +1,106 @@
+{
+  "createdAt": "2026-09-22",
+  "flags": {
+    "drift": true,
+    "dueSoon": true,
+    "noEstimate": false,
+    "noJira": false,
+    "overEstimate": false,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "September 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-09"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "h0mig-rationale": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "migrate",
+      "note": "the old Why, word for word",
+      "to": "When organizers rename the \"Track\" taxonomy in admin (to \"Stage\", \"Theme\", \"Stream\" or \"Room\"), the calendar side drawer previously hardcoded \"By Track\", causing brand confusion and attendee disorientation."
+    },
+    "h0mig-why": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "why",
+      "from": "When organizers rename the \"Track\" taxonomy in admin (to \"Stage\", \"Theme\", \"Stream\" or \"Room\"), the calendar side drawer previously hardcoded \"By Track\", causing brand confusion and attendee disorientation.",
+      "k": "migrate",
+      "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
+      "to": ""
+    }
+  },
+  "j": {
+    "aggOrigDays": null,
+    "assignee": "Evgen Polivach",
+    "canon": "In Testing",
+    "due": "2026-09-23",
+    "origDays": null,
+    "priority": "Medium",
+    "resolved": null,
+    "spentDays": 0.09,
+    "status": "In testing",
+    "summary": "Session Calendar: Sync \"By Track\" drawer label with the Admin Display Filter name",
+    "team": "Visitor team",
+    "teamField": "customfield_10001",
+    "type": "Story"
+  },
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": 1,
+    "daysKind": "point"
+  },
+  "order": 160,
+  "raw": {
+    "area": "Sessions",
+    "month": "September 2026",
+    "status": "In Progress"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-22",
+  "v": {
+    "area": "Sessions",
+    "deps": "",
+    "driver": "",
+    "estimate": "1d",
+    "feature": "Session Calendar: Sync \"By Track\" drawer label with the Admin Display Filter name",
+    "impact": "Attendees: consistent taxonomy and terminology throughout agenda browsing. Organizers: full white-label fidelity — custom filter naming is respected everywhere.",
+    "key": "EP-57237",
+    "month": "2026-09",
+    "notes": "",
+    "owner": "Kavi",
+    "priority": "Operational",
+    "rationale": "When organizers rename the \"Track\" taxonomy in admin (to \"Stage\", \"Theme\", \"Stream\" or \"Room\"), the calendar side drawer previously hardcoded \"By Track\", causing brand confusion and attendee disorientation.",
+    "status": "In Progress",
+    "team": "",
+    "why": ""
+  }
+}

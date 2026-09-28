@@ -1,0 +1,1407 @@
+[
+ {
+  "k": "EP-52651",
+  "q": "2026-Q3",
+  "feature": "AI-assisted website builder",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Story 5: Plain Language Prompt Interpretation",
+  "epic": "AI-Assisted Website Builder Phase I",
+  "text": "The AI CSS generator understands everyday requests like 'make the title bigger' and uses the builder's design-system colours rather than fixed values. Plain-language prompts produce on-brand CSS for the right element; structural requests get a clear 'styling only' reply."
+ },
+ {
+  "k": "EP-52647",
+  "q": "2026-Q3",
+  "feature": "AI-assisted website builder",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Story 1: \"Describe CSS Changes\" UI Entry Point",
+  "epic": "AI-Assisted Website Builder Phase I",
+  "text": "A 'Describe CSS Changes' input in a Website Builder block's Dev settings, where power users describe styling in plain language for AI to apply. Behind a feature flag, power users request AI-generated CSS from a block, with a loading state and a clear error if it fails."
+ },
+ {
+  "k": "EP-52648",
+  "q": "2026-Q3",
+  "feature": "AI-assisted website builder",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Story 2: Block HTML Snapshot Serialization",
+  "epic": "AI-Assisted Website Builder Phase I",
+  "text": "The Website Builder captures a block's HTML snapshot, style IDs and design tokens (colours, fonts, buttons) to send with AI CSS requests. AI styling requests carry the block's structure and brand tokens, truncated safely and with no personal data."
+ },
+ {
+  "k": "EP-52649",
+  "q": "2026-Q3",
+  "feature": "AI-assisted website builder",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Story 3: Secure Backend Proxy for AI Requests",
+  "epic": "AI-Assisted Website Builder Phase I",
+  "text": "A secure backend proxy forwards AI CSS requests to the AI provider so the API key never reaches the browser. AI CSS requests are validated, routed server-side and return structured errors on timeouts or bad input."
+ },
+ {
+  "k": "EP-52650",
+  "q": "2026-Q3",
+  "feature": "AI-assisted website builder",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Story 4: Block-Scoped CSS Preview & Application",
+  "epic": "AI-Assisted Website Builder Phase I",
+  "text": "AI-generated CSS is shown for review first and, once confirmed, applied only to the block being edited, not to global styles. Power users confirm or cancel AI CSS per block; oversized results are rejected."
+ },
+ {
+  "k": "EP-22016",
+  "q": "2023-Q4",
+  "feature": "Attendee list widget",
+  "tags": [],
+  "summary": "Attendee List Changes | Widgetview Changes",
+  "epic": null,
+  "text": "Created a copy of the delegates page widget showing 12 random attendee cards, cached server-side for 10 minutes, without interaction buttons. The attendee widget shows a rotating set of 12 cards with pagination, counts and Meet/Message/Favourite hidden; clicking a card opens the profile in the app page."
+ },
+ {
+  "k": "EP-23702",
+  "q": "2024-Q1",
+  "feature": "Browser-language site default",
+  "tags": [],
+  "summary": "Changing Website Language Based on Browser's Language",
+  "epic": null,
+  "text": "Set the front-end language selector to default to the visitor's browser language when that language is available on the site. Pages open in the browser's language when the site supports it, and users can still switch language manually."
+ },
+ {
+  "k": "EP-25964",
+  "q": "2024-Q1",
+  "feature": "Cookie consent mode",
+  "tags": [],
+  "summary": "Consent mode for corp site",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-34498",
+  "q": "2024-Q3",
+  "feature": "Custom CSS editing",
+  "tags": [],
+  "summary": "Add ability to edit old CSS",
+  "epic": null,
+  "text": "Added a switch in the custom CSS window to edit the old site builder's global CSS. Admins can edit both old and new global CSS."
+ },
+ {
+  "k": "EP-28249",
+  "q": "2024-Q4",
+  "feature": "Custom domain setup",
+  "tags": [],
+  "summary": "Add warning text to admin portal",
+  "epic": null,
+  "text": "Added SSL certificate warning text with a help link to the external domain setup in General Info. Organisers are told they can upload their own certificate or wait up to 2 hours for an auto-generated one, during which the URL will not work."
+ },
+ {
+  "k": "EP-34225",
+  "q": "2024-Q3",
+  "feature": "Custom form builder",
+  "tags": [],
+  "summary": "Add step controls for FormBulider ",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-34293",
+  "q": "2024-Q3",
+  "feature": "Custom form builder",
+  "tags": [],
+  "summary": "Add external controls for FormBuilder tabs",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-32969",
+  "q": "2024-Q3",
+  "feature": "Custom forms and pop-ups",
+  "tags": [],
+  "summary": "Custom form 1 (simple)",
+  "epic": "New web builder - Custom Forms",
+  "text": "Built the 'Custom form 1 (simple)' Website Builder block, which embeds a form from Marketing > Forms with general, colour and typography settings. Organisers place a chosen marketing form on the site and style it, or are prompted to create one; the block is hidden on the front if no form is added."
+ },
+ {
+  "k": "EP-32970",
+  "q": "2024-Q3",
+  "feature": "Custom forms and pop-ups",
+  "tags": [],
+  "summary": "Custom form (with image/ video)",
+  "epic": "New web builder - Custom Forms",
+  "text": "Built the Website Builder Custom Form blocks with image and with video, embedding a Marketing > Forms form with general, colour and typography settings. Organisers place a chosen form beside an image or video, styled to the site, or are prompted to create a form first."
+ },
+ {
+  "k": "EP-32971",
+  "q": "2024-Q3",
+  "feature": "Custom forms and pop-ups",
+  "tags": [],
+  "summary": "Custom form (pop-up)",
+  "epic": "New web builder - Custom Forms",
+  "text": "Added a Custom Form pop-up block to the website builder with one-to-three-column layouts and one or two buttons, using Marketing forms. Organisers add a marketing form as a pop-up on site pages, over a darkened background, scrolling with pinned buttons up to 80% of screen height."
+ },
+ {
+  "k": "EP-32972",
+  "q": "2024-Q3",
+  "feature": "Custom forms and pop-ups",
+  "tags": [],
+  "summary": "Custom form (sidebar)",
+  "epic": "New web builder - Custom Forms",
+  "text": "Added a Custom Form Sidebar block to the site builder: left or right full-height sidebar forms in 1–3 columns, with colours and display triggers. Site builders can show a created marketing form in a sidebar, triggered by exit intent, delay, scroll, page count, clicks or inactivity, per device."
+ },
+ {
+  "k": "EP-34162",
+  "q": "2024-Q4",
+  "feature": "Custom forms and pop-ups",
+  "tags": [],
+  "summary": "Introduce Custom Pop up check box on New web builder just like the legacy",
+  "epic": "New Website Builder",
+  "text": "Added a Pop-Up tab to the new Website Builder's Custom HTML block, with header, colour settings, display triggers and desktop/mobile toggles. Organisers show custom HTML as a pop-up triggered by delay, scroll, clicks or inactivity, with auto-close and per-device control."
+ },
+ {
+  "k": "EP-47651",
+  "q": "2026-Q1",
+  "feature": "Custom grids",
+  "tags": [],
+  "summary": "Website buider. Custom grids main functional",
+  "epic": "Website builder. Custom grids",
+  "text": "A Custom Grid in the Website Builder: 1–6 cells, grids inside grids, drag-and-drop elements between cells, resizable cells and minimum widths. Organisers compose multi-column layouts that fit, then wrap, on mobile."
+ },
+ {
+  "k": "EP-47652",
+  "q": "2026-Q1",
+  "feature": "Custom grids",
+  "tags": [],
+  "summary": "Custom grids improvements. Improve base structure and elements placement",
+  "epic": "Website builder. Custom grids",
+  "text": "The builder's Elements section is renamed Custom Grid and Elements (grid, text, button, image, video); banners and text blocks move to Static Blocks. Layout elements are easier to find and the builder's panels match how pages are put together."
+ },
+ {
+  "k": "EP-47653",
+  "q": "2026-Q1",
+  "feature": "Custom grids",
+  "tags": [],
+  "summary": "Custom grids improvements. Change settings placement",
+  "epic": "Website builder. Custom grids",
+  "text": "Custom Grid settings in the Website Builder are laid out horizontally, the same way as the Carousel block's settings. Grid settings are consistent with other builder blocks and quicker to scan."
+ },
+ {
+  "k": "EP-47658",
+  "q": "2026-Q1",
+  "feature": "Custom grids",
+  "tags": [],
+  "summary": "Custom grids. Improve number of columns display",
+  "epic": "Website builder. Custom grids",
+  "text": "The grid's column count uses segmented buttons instead of radio buttons, with a warning that changing it resets the layout. Organisers pick column counts more easily and are warned before they lose content."
+ },
+ {
+  "k": "EP-26881",
+  "q": "2024-Q1",
+  "feature": "Custom HTML block scripts",
+  "tags": [],
+  "summary": "Add ability to run js scripts in the custom HTML block",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-34123",
+  "q": "2024-Q3",
+  "feature": "Custom HTML blocks",
+  "tags": [],
+  "summary": "[site builder] add the ability to show in full-screen custom HTML",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-42351",
+  "q": "2025-Q2",
+  "feature": "Custom styling hooks",
+  "tags": [],
+  "summary": "[portalUI] Add CSS class or data attribute for customer",
+  "epic": null,
+  "text": "Added CSS classes or data attributes for the user's role, category and login state on the frontend. Custom CSS can target roles, categories and logged-in users."
+ },
+ {
+  "k": "EP-33266",
+  "q": "2024-Q3",
+  "feature": "Embeddable portal widgets",
+  "tags": [],
+  "summary": "[iframe height] Add ability to get height in the widgets mode for portal UI",
+  "epic": null,
+  "text": "Let embedded frontend widgets report their content height so iframes can size to fit. Widget iframes can match their content height."
+ },
+ {
+  "k": "EP-33653",
+  "q": "2024-Q3",
+  "feature": "Embeddable portal widgets",
+  "tags": [],
+  "summary": "Keep iframe id in session storage to observe height",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-18740",
+  "q": "2023-Q3",
+  "feature": "Event date formats",
+  "tags": [],
+  "summary": "New dates format for the events on the front",
+  "epic": null,
+  "text": "Changed event date ranges on the front-end Events page to compact formats covering one month, two months or two years. Events show dates like '10-15 Jan 2023', '28 Jan - 03 Feb 2023' or '28 Dec 2022 - 10 Jan 2023', matching admin settings."
+ },
+ {
+  "k": "EP-32973",
+  "q": "2024-Q3",
+  "feature": "Feedback form pop-up",
+  "tags": [],
+  "summary": "Feedback Form (Popup)",
+  "epic": "New web builder - Custom Forms",
+  "text": "Added a Feedback Form pop-up block under Dynamic content in the new Website builder, with emoji or star rating, up to six categories and a comment box. Site builders can add a customisable feedback pop-up (texts, colours, categories, position) that submits only after a rating is chosen."
+ },
+ {
+  "k": "EP-20654",
+  "q": "2023-Q3",
+  "feature": "Filter reset button",
+  "tags": [],
+  "summary": "Reset button should be shown only if we have some filters applied ",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-37769",
+  "q": "2025-Q1",
+  "feature": "Font settings",
+  "tags": [],
+  "summary": "Show rest of google api key errors",
+  "epic": null,
+  "text": "Showed all Google API key errors in the form builder font settings. Admins see why Google fonts fail."
+ },
+ {
+  "k": "EP-37947",
+  "q": "2026-Q2",
+  "feature": "Footer builder",
+  "tags": [],
+  "summary": "Allignment of the columns in footer",
+  "epic": "Changes to the footer based on CSS tasks",
+  "text": "Added footer column alignment and column width settings to the website builder, with responsive layouts. Organisers align and size footer columns themselves."
+ },
+ {
+  "k": "EP-37526",
+  "q": "2026-Q2",
+  "feature": "Footer builder",
+  "tags": [],
+  "summary": "Add the ability to delete a column",
+  "epic": "Changes to the footer based on CSS tasks",
+  "text": "Added Delete column to footer link settings, with confirmation and reflowing the remaining columns. Admins can remove whole footer columns."
+ },
+ {
+  "k": "EP-37518",
+  "q": "2026-Q2",
+  "feature": "Footer builder",
+  "tags": [],
+  "summary": "Have a new setting “Text position”",
+  "epic": "Changes to the footer based on CSS tasks",
+  "text": "Replaced the footer's Logo position with a Text position setting shown only when text is on, keeping existing layouts. Footer logo and text placement is clearer."
+ },
+ {
+  "k": "EP-35590",
+  "q": "2026-Q2",
+  "feature": "Footer builder",
+  "tags": [],
+  "summary": "Width in footer for logo + text",
+  "epic": "Changes to the footer based on CSS tasks",
+  "text": "Added a width setting for the footer's logo and text block in the website builder, between 216 and 500 px. Organisers can size the footer logo and text."
+ },
+ {
+  "k": "EP-54112",
+  "q": "2026-Q2",
+  "feature": "Footer builder",
+  "tags": [],
+  "summary": "Superadmin can toggle ExpoPlatform branding in Website Footer",
+  "epic": "Mobile App — 2026 Enhancements",
+  "text": "Adds a Superadmin-only toggle in the Website Builder to show or hide the 'Powered by ExpoPlatform' footer branding per event across the event lifecycle. A Superadmin-only Website Builder setting that toggles the 'Powered by ExpoPlatform' footer logo and text per event, hidden from non-Superadmins."
+ },
+ {
+  "k": "EP-15216",
+  "q": "2023-Q1",
+  "feature": "Form tracking codes",
+  "tags": [],
+  "summary": "Codes for the form ",
+  "epic": null,
+  "text": "Made the form tracking codes fire only on successful, validated form submission. GA4 form events are recorded only when a form passes validation and submits successfully."
+ },
+ {
+  "k": "EP-18616",
+  "q": "2023-Q3",
+  "feature": "Header and footer builder",
+  "tags": [],
+  "summary": "Update header",
+  "epic": null,
+  "text": "Unified the website header across the new and old frontends: logos, colours, hovers, navigation, language switch, hideable dates, top-bar navigation and responsiveness. Headers look the same on both frontends with more layout options."
+ },
+ {
+  "k": "EP-33622",
+  "q": "2024-Q3",
+  "feature": "Header and footer builder",
+  "tags": [],
+  "summary": "Pass anchor id, custom css to header and footer from sitebuilder",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-35265",
+  "q": "2024-Q4",
+  "feature": "Header and footer builder",
+  "tags": [],
+  "summary": "Enhanced Control for Header and Footer Logos",
+  "epic": "New Website Builder",
+  "text": "Added header and footer logo controls to the website builder: clickable on/off, custom URL, same or new window, and title/subtitle colours. Admins make the logo static or link it anywhere, defaulting to the homepage in the same window."
+ },
+ {
+  "k": "EP-36256",
+  "q": "2025-Q2",
+  "feature": "Image alt text",
+  "tags": [],
+  "summary": "Alt Text for Images",
+  "epic": null,
+  "text": "Added an optional alt text field, with an SEO tips tooltip and an empty-field warning, to every image in the website builder, including header and footer. Organisers describe each image, including slides, so search engines index them and screen readers can read them."
+ },
+ {
+  "k": "EP-54929",
+  "q": "2026-Q3",
+  "feature": "Marketing tracking links",
+  "tags": [],
+  "summary": "Ability to edit the tracking links",
+  "epic": null,
+  "text": "Organizers can now edit the name and destination URL of existing Marketing Tracking Links in place, without recreating and re-distributing them. An Edit action on each Tracking Link lets organizers update the name and landing page URL with validation, while the external tracked/short URL stays unchanged so existing campaign references keep working."
+ },
+ {
+  "k": "EP-30562",
+  "q": "2024-Q3",
+  "feature": "Multilingual custom forms",
+  "tags": [],
+  "summary": "Multilingual custom forms",
+  "epic": null,
+  "text": "Made marketing custom forms and exhibitor event additional questions multilingual. Custom forms work in every event language."
+ },
+ {
+  "k": "EP-18901",
+  "q": "2024-Q2",
+  "feature": "Multilingual website builder",
+  "tags": [],
+  "summary": "Part 2 - Multilanguage",
+  "epic": "New Website Builder",
+  "text": "Added website builder multilanguage sync (blocks shared across languages with independent text), optional desync, favourite blocks and an extra blocks section. Organisers keep language versions structurally in sync by default, can desync and later restore or reset them, and reuse favourited blocks across pages."
+ },
+ {
+  "k": "EP-8495",
+  "q": "2023-Q3",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Main menu of the Website builder",
+  "epic": "New Website Builder",
+  "text": "Built the Website builder main menu: add block, page switcher, device previews, language switcher, gallery, history, global settings, save and publish. The Website builder has a main menu under the header giving access to blocks, pages, previews, global styles, version history and publishing."
+ },
+ {
+  "k": "EP-8758",
+  "q": "2023-Q3",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Main menu - Add block",
+  "epic": "New Website Builder",
+  "text": null
+ },
+ {
+  "k": "EP-9002",
+  "q": "2023-Q3",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Main menu - Global settings",
+  "epic": "New Website Builder",
+  "text": "Built the Website Builder Global Settings screen with text styles, colours, buttons, favicon and SEO settings, including custom font upload. Organisers set site-wide fonts (including CDN or uploaded TTF/OTF/WOFF fonts) and theme, text, status and other colours with live previews, then save or close."
+ },
+ {
+  "k": "EP-17908",
+  "q": "2023-Q3",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Mobile adaptation",
+  "epic": "New Website Builder",
+  "text": null
+ },
+ {
+  "k": "EP-18895",
+  "q": "2023-Q3",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Two Website builders on the Platform",
+  "epic": "New Website Builder",
+  "text": "Added a 'Use New Website builder' toggle in general settings so the new website builder runs alongside the old one. Organisers switch each event between the old and new website builders; the old builder stays the default."
+ },
+ {
+  "k": "EP-8831",
+  "q": "2023-Q4",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Main menu - Gallery button",
+  "epic": "New Website Builder",
+  "text": "Built the Website Builder Gallery: upload images, videos and files, create nested folders, sort, switch gallery/list layouts, paginate, and manage files. Organisers store and organise site media, with video conversion, file details, and rename, preview, move, copy, copy URL, download and delete actions."
+ },
+ {
+  "k": "EP-18295",
+  "q": "2023-Q4",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "API",
+  "epic": "New Website Builder",
+  "text": null
+ },
+ {
+  "k": "EP-18894",
+  "q": "2023-Q4",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Setting to enable / disable the new Website builder",
+  "epic": "New Website Builder",
+  "text": "Added a 'New Website builder (Beta)' Module Management item (on by default) and a 'Use New Website builder' event setting (off by default). Organisers switch each event between the old and new website builders."
+ },
+ {
+  "k": "EP-35499",
+  "q": "2024-Q4",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Reduce the size of the shadow",
+  "epic": null,
+  "text": "Reduced the default shadow of testimonial blocks from 4px to 2px. Testimonial blocks have a lighter shadow."
+ },
+ {
+  "k": "EP-35493",
+  "q": "2024-Q4",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Make the News and sponsor cards’ corners rounded in the new website builder.",
+  "epic": null,
+  "text": "Rounded the corners of news and sponsor cards in the new website builder. News and sponsor cards match the design."
+ },
+ {
+  "k": "EP-25939",
+  "q": "2024-Q4",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Phase 3 New Builder - Ability to add more than 8 FAQs in the New web builder",
+  "epic": "New Website Builder",
+  "text": "Raised the new website builder's FAQ block limit above the fixed maximum of 8 (up to 30 per the tech brief; 50 is also noted). Organisers add more FAQs one by one in the editor, and the front end shows all that were added."
+ },
+ {
+  "k": "EP-35443",
+  "q": "2024-Q4",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Re-arrangement of Cards within Selected Blocks in Website Builder",
+  "epic": "New Website Builder",
+  "text": "Added drag-and-drop re-ordering of cards in the website builder's Cards Row (2, 3, 4 cards) and Cards with Counters blocks. Admins can drag cards into a new order within these blocks, as already possible for carousel cards."
+ },
+ {
+  "k": "EP-36712",
+  "q": "2024-Q4",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "[sitebuilder]: Text & video & button",
+  "epic": null,
+  "text": "Fixed invalid alt attributes and missing video attributes in the text, video and button block. The block produces valid HTML."
+ },
+ {
+  "k": "EP-24028",
+  "q": "2024-Q4",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Content Blocks: Image Asset Dimensions",
+  "epic": null,
+  "text": "Added an aspect ratio selector for images in website builder content blocks. Images are cropped to the chosen aspect ratio, keeping them consistent across devices, since fixed pixel sizes cannot apply to responsive images."
+ },
+ {
+  "k": "EP-37474",
+  "q": "2024-Q4",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "[New Website Builder] Change buttons aligning logic in Сards Carousel block",
+  "epic": null,
+  "text": "Aligned buttons per card in the website builder's cards carousel, matching the builder preview. Carousel buttons line up across cards."
+ },
+ {
+  "k": "EP-38376",
+  "q": "2025-Q1",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Hide color settings from legacy admin panel when new site builder enabled",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-35968",
+  "q": "2025-Q1",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "New web builder - Ability to add links in images for 2, 3, 4 card rows & carousel ",
+  "epic": "New Website Builder",
+  "text": "Added image link settings to the new web builder's 2, 3 and 4 Cards Row and Cards Carousel blocks. Images in these card blocks can link to a URL, in both new and existing blocks."
+ },
+ {
+  "k": "EP-36242",
+  "q": "2025-Q1",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Remove /page part from urls of custom pages in new website builder",
+  "epic": null,
+  "text": "Removed /page from custom page URLs in the new website builder and blocked slugs that clash with platform pages. Custom pages have clean URLs."
+ },
+ {
+  "k": "EP-40176",
+  "q": "2025-Q1",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "[admin-ui] site builder add ability to change slub and input all data before make validation",
+  "epic": null,
+  "text": "Let admins type a full site builder slug before validation runs. Slugs can be typed naturally."
+ },
+ {
+  "k": "EP-38778",
+  "q": "2025-Q1",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "Webbuilder. Update mechanism for existing blocks",
+  "epic": null,
+  "text": "Added an update mechanism to the new website builder that flags outdated blocks and lets users update one block or all on a page. Outdated blocks show an indicator; single updates list the changes before confirming, bulk updates apply page-wide, disabled while someone edits."
+ },
+ {
+  "k": "EP-43030",
+  "q": "2025-Q3",
+  "feature": "New website builder",
+  "tags": [],
+  "summary": "[site build] Change mobile adaptive for FourCardView in system elements",
+  "epic": null,
+  "text": "Kept the four-card view on one line until the last breakpoint on mobile. The four-card block adapts better."
+ },
+ {
+  "k": "EP-23990",
+  "q": "2024-Q1",
+  "feature": "New website builder blocks",
+  "tags": [],
+  "summary": "Webbuilder stage3. Title and Subtitle block",
+  "epic": "New Website Builder",
+  "text": "Added a Title & Subtitle block to the new Website Builder's Elements, with and without background image, in six layout variants. Organisers add title and subtitle sections with toggleable title, subtitle and divider, background colour or image, text width and padding."
+ },
+ {
+  "k": "EP-21888",
+  "q": "2024-Q3",
+  "feature": "New website builder blocks",
+  "tags": [],
+  "summary": "New Website Builder: Adding Banners as OLD website",
+  "epic": "New Website Builder",
+  "text": "Added a Banner block to the new website builder with multiple image banners, hyperlinks, three sizes and timed automatic rotation. Admins add several linked banners to custom pages that rotate at a set interval without a page refresh."
+ },
+ {
+  "k": "EP-24408",
+  "q": "2025-Q1",
+  "feature": "News management",
+  "tags": [],
+  "summary": "To keep “news items per page” and “page number” fixed after approving a news item in the back-end",
+  "epic": null,
+  "text": "Kept pagination, page size and search in the admin news list after approving, rejecting or deleting news. Admins stay on the same news page and search after moderating."
+ },
+ {
+  "k": "EP-37770",
+  "q": "2026-Q1",
+  "feature": "Rich text editor improvements",
+  "tags": [],
+  "summary": "Controls for TextEditor inherit theme from Builder",
+  "epic": null,
+  "text": "Styled text editor controls to the design instead of inheriting the builder theme. Editor controls match the design."
+ },
+ {
+  "k": "EP-35872",
+  "q": "2024-Q4",
+  "feature": "Rich text editor links",
+  "tags": [],
+  "summary": "Add the ability to open platform links and external links by clicking on the icon and fix typing ",
+  "epic": null,
+  "text": "Let icons open platform and external links and renamed Robot.txt to robots.txt. Icon links work and robots.txt is correctly named."
+ },
+ {
+  "k": "EP-36224",
+  "q": "2024-Q4",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Add alt attribute to all images in builder blocks",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-36288",
+  "q": "2024-Q4",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Change div to section in root elements.",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-32698",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Intro Block",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the site builder's two Intro block types for server-rendered output, H1–H6 SEO tags, section containers, button text and links. Intro blocks are confirmed to render in the server response with correct SEO heading tags and buttons, without breaking page layout."
+ },
+ {
+  "k": "EP-32699",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "2 / 3 / 4 Cards Row",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the eight website builder 2/3/4 Cards Row blocks for server-rendered output, SEO heading tags, buttons, image ALT text and Section containers. Cards Row blocks render in the page source with configurable H1–H6 tags, ALT text and correct buttons, without layout issues."
+ },
+ {
+  "k": "EP-32702",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Cards with icon",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the website builder 'Cards with icons' block for SEO: server-rendered output, H1–H6 tags, button links, image ALT text and a Section container. Cards with icons render server-side with configurable heading tags, ALT text on images and correct buttons, without breaking layout."
+ },
+ {
+  "k": "EP-32701",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Cards with Counter",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the Website Builder Cards with Counter block's server-rendered output for H1–H6 SEO tags, image alt text and a section container. The Cards with Counter block renders with proper headings, alt text and a section parent, without layout issues."
+ },
+ {
+  "k": "EP-32705",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Download App",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the three website builder Download App blocks for server-rendered output, SEO heading tags, buttons and Section containers. Download App blocks render in the page source with configurable heading tags and working buttons, without layout issues."
+ },
+ {
+  "k": "EP-32706",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "FAQ",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the Website Builder FAQ block's server-rendered output for H1–H6 SEO tags and a section parent container. The FAQ block renders in the page source with configured heading tags inside a section, without disrupting layout."
+ },
+ {
+  "k": "EP-32707",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Heading & text & image & button",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the Website Builder Heading & text & image & button block for server-rendered SEO tags, correct button text and links, and a section container. The block renders with configured headings, working buttons not wrapped in anchors, and a section parent."
+ },
+ {
+  "k": "EP-32708",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Image Gallery",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the website builder Image Gallery block renders in the server response with ALT text on images. Image Gallery blocks appear in the page source with ALT attributes on their images."
+ },
+ {
+  "k": "EP-32710",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Text List",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the site builder Text List block for server-rendered output, H1–H6 SEO tags, section container, button text and links. Text List blocks are confirmed to render in the server response with correct SEO tags and buttons, without breaking page layout."
+ },
+ {
+  "k": "EP-32709",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Testimonials",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the three site builder Testimonials blocks for SEO markup: H1–H6 text tags, image alt text and section containers in server output. Testimonials blocks render correctly in the server response with configurable heading tags and alt text, without disrupting page layout."
+ },
+ {
+  "k": "EP-32703",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Carousel",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the four site builder Carousel blocks for SEO markup: H1–H6 text tags, button links, image alt text and section containers in server output. Carousel blocks render correctly in the server response with configurable heading tags, alt text on images and correct button links, without breaking layout."
+ },
+ {
+  "k": "EP-32700",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Cards Carousel",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the Website Builder Cards Carousel block's server-rendered output for SEO heading tags, button links, image alt text and section containers. Cards Carousel renders with H1–H6 tags, correct button text and links, alt text on images and a section parent, without breaking layout."
+ },
+ {
+  "k": "EP-32704",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Countdown",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified that the site builder Countdown component appears correctly in the server-rendered source once added. The Countdown component is confirmed present in the server response."
+ },
+ {
+  "k": "EP-32711",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Text & video & button",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the four website builder Text & video & button blocks for server-rendered output, SEO heading tags, buttons and Section containers. Text & video & button blocks render in the page source with configurable heading tags and working buttons, without layout issues."
+ },
+ {
+  "k": "EP-36507",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Text & iframe & button",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the four website builder Text & iframe & button blocks for server-rendered output, H1–H6 SEO tags, correct buttons and Section containers. Text & iframe & button blocks render in the page source with configurable heading tags and working buttons, without layout issues."
+ },
+ {
+  "k": "EP-36695",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Dev / Text editor",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the website builder Text editor block appears correctly in the server response. The Text editor block is rendered in the page source code when added."
+ },
+ {
+  "k": "EP-36694",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Dev / Custom HTML",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified that the Website Builder Custom HTML blocks appear correctly in the server response. Custom HTML block content is present in the page source."
+ },
+ {
+  "k": "EP-32712",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Title & Subtitle",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the Website Builder Title & Subtitle block's server-rendered output for H1–H6 SEO tags and a section parent container. The Title & Subtitle block renders in the page source with configured heading tags inside a section, without disrupting layout."
+ },
+ {
+  "k": "EP-36683",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Dynamic / Brands",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the four website builder Brands blocks for server-rendered output, SEO heading tags, real data, buttons and image ALT text. Brands blocks render server-side with live brand data, configurable H1–H6 tags, ALT text and correct buttons."
+ },
+ {
+  "k": "EP-36685",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Dynamic / Exhibitor",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified all five Website Builder Exhibitor blocks for server-rendered SEO tags, real database data, correct button links, image alt text and section containers. Exhibitor blocks render real exhibitor data with proper headings, links and alt text, without layout issues."
+ },
+ {
+  "k": "EP-36687",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Dynamic / News",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the five website builder News blocks for server-rendered output, SEO heading tags, real database content, buttons and image ALT text. News blocks render server-side with live news data, configurable H1–H6 tags, ALT text on images and correct buttons."
+ },
+ {
+  "k": "EP-36689",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Dynamic / Products",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the five site builder Products blocks for SEO markup: real database content, H1–H6 tags, button links, image alt text and section containers. Products blocks render real product data in the server response with correct heading tags, alt text and button links, without breaking layout."
+ },
+ {
+  "k": "EP-36691",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Dynamic / Sessions",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the four site builder Sessions blocks for server-rendered output, real database data, SEO heading tags, image alt text and button links. Sessions blocks are confirmed to render real session data in the server response with correct SEO tags and alt text, without breaking layout."
+ },
+ {
+  "k": "EP-36692",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Dynamic / Speakers",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the three website builder Speakers blocks for server-rendered output, SEO heading tags, real data, buttons and image ALT text. Speakers blocks render server-side with live speaker data, configurable H1–H6 tags, ALT text and correct buttons."
+ },
+ {
+  "k": "EP-36693",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Dynamic / Sponsors",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified all five Website Builder Sponsors blocks for server-rendered SEO tags, real database data, correct button links, image alt text and section containers. Sponsors blocks render real sponsor data with proper headings, links and alt text, without layout issues."
+ },
+ {
+  "k": "EP-32713",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Text Editor",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified that the Website Builder Text editor block renders in the server response with correct links wrapped in anchor tags. Text editor content appears in the page source with working, correctly labelled links."
+ },
+ {
+  "k": "EP-36508",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Banners block",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the three site builder Banners blocks render correctly in server output with alt text on images. Banners blocks appear correctly in the page source, and their images carry alt text for blind users."
+ },
+ {
+  "k": "EP-33022",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Header",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the website builder Header block for server-rendered output, SEO heading tags, correct links, image ALT text and a Section container. The Header block renders in the page source with configurable heading tags, correct links and ALT text, without layout issues."
+ },
+ {
+  "k": "EP-33023",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Footer",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified the Website Builder Footer block's server-rendered output: SEO tags, correct links, tel: and mailto: links, image alt text and a section container. The footer renders with proper heading tags, working phone and email links, alt text and a section parent, without layout issues."
+ },
+ {
+  "k": "EP-36684",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Dynamic / Custom Form",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Verified all five Website Builder custom form blocks: server-rendered SEO tags, form-builder forms with validation, editable submit text and section containers. Custom form blocks render correctly (pop-up variants on the client side), validate input and submit form data."
+ },
+ {
+  "k": "EP-37489",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Community page - /community",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the /community page to Next.js 14, keeping the news, groups, members, banners, products, exhibitors, sessions, events, RFP and RFS blocks. The community page renders its data in the server response, with cards linking to their pages as before."
+ },
+ {
+  "k": "EP-37490",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Events page - /events",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the /events page to Next.js 14, keeping breadcrumbs and the community events list. The events page is server-rendered with its data in the response body and links to each community event."
+ },
+ {
+  "k": "EP-37569",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "News page - /news",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the /news page to Next.js v14, keeping breadcrumbs, banners, main news block, filters and news list. The news page runs on Next.js 14 with working navigation, news cards and shareable filtered links."
+ },
+ {
+  "k": "EP-37570",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "News single page - /news/[id]",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the single news page (/news/[id]) to Next.js 14 with breadcrumbs, banner, description, news body and recommendations. The news page runs on Next.js 14 with unchanged content, server-rendered news data and working recommendation links."
+ },
+ {
+  "k": "EP-38048",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Marketing content page - /content/[id]",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the marketing content page /content/[id] to Next.js v14, keeping breadcrumbs, content details, description and other-content list. The content page runs on Next.js 14 with working Preview and Download buttons and links to other content."
+ },
+ {
+  "k": "EP-37488",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Brand page - /brand/[id]",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the brand page (/brand/[id]) to Next.js 14, keeping breadcrumbs, transition links and exhibitor cards for the brand. The brand page renders its data in the server response with navigation to and from the marketplace working as before."
+ },
+ {
+  "k": "EP-38049",
+  "q": "2025-Q1",
+  "feature": "SEO for custom pages",
+  "tags": [],
+  "summary": "Exhibitor page - /exhibitor/[id]",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the exhibitor page (/exhibitor/[id]) to Next.js 14, keeping all blocks, meeting and messaging buttons, show-all links and quick navigation. The exhibitor page runs on Next.js 14 with the same content and working actions, and may withhold content from logged-out users."
+ },
+ {
+  "k": "EP-38050",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Participant single page - /participant/[id]",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the participant page (/participant/[id]) to Next.js 14, keeping its breadcrumbs, profile, matchmaking, About, category and sessions blocks. The participant page shows the same content, with Schedule Meeting, Send Message and quick navigation working."
+ },
+ {
+  "k": "EP-38646",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Floor plan - general view",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Moved the floor plan general view page to Next.js 14, keeping the floor plan itself on the client side. The floor plan page runs on Next.js 14 with the plan rendered client-side."
+ },
+ {
+  "k": "EP-38647",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Floor plan - Hall view",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Moved the floor plan hall view page to Next.js 14, keeping the floor plan itself client-side. The hall view page runs on Next.js 14 with the floor plan rendered on the client."
+ },
+ {
+  "k": "EP-38648",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Groups page",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the Groups page to Next.js v14 with the main page header and footer, search filters, group list and linked breadcrumbs. The Groups page runs on Next.js 14; header and footer are server-rendered and filters and group list load client-side."
+ },
+ {
+  "k": "EP-38649",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Manual page - /manual/[id]",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Reworked the manual page (/manual/[id]) to render its content dynamically on the client, apart from the server-rendered header and footer. The manual page works as before, with its content rendered client-side."
+ },
+ {
+  "k": "EP-38650",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Marketplace page",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Moved the marketplace page to client-side rendering of content, apart from the header and footer. The marketplace works as before, with content rendered dynamically on the client."
+ },
+ {
+  "k": "EP-38653",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Participants page - /participants",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the /participants page so all content except header and footer renders dynamically on the client side. The participants page keeps search, filters, tabs, meeting requests, messaging and favourites working as before."
+ },
+ {
+  "k": "EP-38655",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Product single page",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the product single page so its data is rendered in the server response, with anchor-wrapped breadcrumbs and the main header and footer. The product page works as before, including favourite, meet, message, show all and navigation between the exhibitor's products."
+ },
+ {
+  "k": "EP-38052",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Session single page - /sessions/[id]",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the session single page (/sessions/[id]) to Next.js 14 with breadcrumbs, session details and the optional registration form. The session page matches the pre-migration content; 'Add Session to Calendar' adds it or prompts login; restricted pages return no content to guests."
+ },
+ {
+  "k": "EP-38051",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Group single page - /groups/[id]",
+  "epic": "SEO Optimization for Custom Pages",
+  "text": "Migrated the group single page (/groups/[id]) to Next.js 14 with breadcrumbs, group info and Members, News, Sessions, About, Sponsors and Admins blocks. The group page matches the pre-migration content, with the feed sidebar pre-rendered and posts and the people tab loaded client-side."
+ },
+ {
+  "k": "EP-39909",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Heading for SEO",
+  "epic": null,
+  "text": "Converted improperly nested headings in pasted text into paragraphs for SEO. Pasted content keeps a clean heading structure."
+ },
+ {
+  "k": "EP-40539",
+  "q": "2025-Q1",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "[next14] render custom text and HTML on the server side",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-40229",
+  "q": "2025-Q2",
+  "feature": "SEO-friendly event pages",
+  "tags": [],
+  "summary": "Change logic of the sitemap generation",
+  "epic": null,
+  "text": "Generated the sitemap from website builder pages visible to users who aren't logged in, respecting hidden and restricted pages. The sitemap lists every public builder page."
+ },
+ {
+  "k": "EP-28604",
+  "q": "2024-Q2",
+  "feature": "Site builder autosave control",
+  "tags": [],
+  "summary": "Disable autosave in the site builder",
+  "epic": null,
+  "text": "Disabled autosave in the site builder by default, with an option to turn it on. Site builder changes save only when chosen, unless autosave is enabled."
+ },
+ {
+  "k": "EP-34346",
+  "q": "2024-Q4",
+  "feature": "Social links sidebar block",
+  "tags": [],
+  "summary": "[site builder] create a block with social links which should be attached to right/left border",
+  "epic": null,
+  "text": "Created a site builder block of social media icons fixed to the left or right edge. Websites can show floating social links."
+ },
+ {
+  "k": "EP-28605",
+  "q": "2024-Q2",
+  "feature": "Video block autoplay setting",
+  "tags": [],
+  "summary": "Add addition settings to all video blocks, autoplay true/false",
+  "epic": null,
+  "text": "Added an autoplay on/off setting to all video blocks. Organisers choose whether videos autoplay."
+ },
+ {
+  "k": "EP-34874",
+  "q": "2024-Q4",
+  "feature": "Website block versioning",
+  "tags": [],
+  "summary": "Block versioning",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-50364",
+  "q": "2026-Q2",
+  "feature": "Website builder card styling",
+  "tags": [],
+  "summary": "Add border and shadow options for individual card views",
+  "epic": "Website Builder & Event Site 2026",
+  "text": "Closed a styling-consistency gap in Website Builder so every static card view can carry borders and shadows, giving organizers a uniform, professional event-site look without design hacks. Border and shadow options were added to the card views that previously lacked them, while views that already supported the styling were left unchanged."
+ },
+ {
+  "k": "EP-50339",
+  "q": "2026-Q2",
+  "feature": "Website builder card styling",
+  "tags": [],
+  "summary": "Website Builder: Organizer can hide the button on individual Cards",
+  "epic": "Website Builder & Event Site 2026",
+  "text": "Website Builder now lets organizers hide the call-to-action button on individual cards via a per-card toggle, removing the previous reliance on custom CSS. A per-card toggle was added to the Website Builder card component so organizers can show or hide the button on each card independently."
+ },
+ {
+  "k": "EP-12606",
+  "q": "2023-Q4",
+  "feature": "Website builder content blocks",
+  "tags": [],
+  "summary": "Blocks - Content",
+  "epic": "New Website Builder",
+  "text": "Defined the Website builder static content blocks, from text, media and card layouts to testimonials, countdown, lobby, app download and FAQ. The Website builder offers a library of static content blocks for building event site pages."
+ },
+ {
+  "k": "EP-21629",
+  "q": "2023-Q4",
+  "feature": "Website builder content blocks",
+  "tags": [],
+  "summary": "Exhibitors block",
+  "epic": "New Website Builder",
+  "text": "Built five website builder Exhibitors block variants, as slider or static, filtered by exhibitor category, product category, tag or specific exhibitors. Organisers add exhibitor blocks with chosen cards per row, sort order and style, card and button settings."
+ },
+ {
+  "k": "EP-21630",
+  "q": "2023-Q4",
+  "feature": "Website builder content blocks",
+  "tags": [],
+  "summary": "Products block",
+  "epic": "New Website Builder",
+  "text": "Built five Products blocks for the Website Builder with slider or static display, card counts, sorting, category or exhibitor selection and style settings. Organisers can place configurable product showcases on event websites, choosing which products and card details appear and how they look."
+ },
+ {
+  "k": "EP-21631",
+  "q": "2023-Q4",
+  "feature": "Website builder content blocks",
+  "tags": [],
+  "summary": "News block",
+  "epic": "New Website Builder",
+  "text": "Built three News blocks for the Website Builder with slider or static display, card counts and filtering by tag, category, source, date or specific news. Organisers show curated news on event websites, choosing which articles appear and whether dates and authors show on cards."
+ },
+ {
+  "k": "EP-21927",
+  "q": "2023-Q4",
+  "feature": "Website builder content blocks",
+  "tags": [],
+  "summary": "Brands block",
+  "epic": "New Website Builder",
+  "text": "Built five Brands blocks for the Website Builder with slider or static display, card counts, sorting, selection by category, tag or exhibitor, and style settings. Organisers can add configurable brand showcases to event websites, choosing which brands appear and how the cards look."
+ },
+ {
+  "k": "EP-22333",
+  "q": "2023-Q4",
+  "feature": "Website builder content blocks",
+  "tags": [],
+  "summary": "Sponsors block",
+  "epic": "New Website Builder",
+  "text": "Built the Website builder Sponsors block in several layouts, with slider or static display, card counts, sorting, sponsor category filters and style settings. Event sites can show sponsors in configurable carousel or static blocks filtered by category or chosen sponsors."
+ },
+ {
+  "k": "EP-21632",
+  "q": "2023-Q4",
+  "feature": "Website builder content blocks",
+  "tags": [],
+  "summary": "Speakers block",
+  "epic": "New Website Builder",
+  "text": "Built a website builder Speakers block in two variants, as slider or static, with style, card, sorting and speaker-tag settings. Organisers add speaker blocks to pages, choosing layout, cards per row, sort order and which tagged or specific speakers appear."
+ },
+ {
+  "k": "EP-22334",
+  "q": "2023-Q4",
+  "feature": "Website builder content blocks",
+  "tags": [],
+  "summary": "Session block",
+  "epic": "New Website Builder",
+  "text": "Built website builder Session block variants with carousel, card and button settings, filtered by category, track, type, tag, featured or start date. Organisers show selected sessions on site pages as sliders or static blocks with their chosen styling."
+ },
+ {
+  "k": "EP-20868",
+  "q": "2024-Q1",
+  "feature": "Website builder content blocks",
+  "tags": [],
+  "summary": "Custom content (by Ajay)",
+  "epic": "New Website Builder",
+  "text": "Added a Custom Content block to the new Website Builder with background, overlay, text and padding settings, plus a rich-text editor with tables, columns, images and YouTube. Organisers build free-form content sections with full text formatting, undo/redo, images, tables, columns and embedded videos."
+ },
+ {
+  "k": "EP-46421",
+  "q": "2026-Q1",
+  "feature": "Website builder content blocks",
+  "tags": [],
+  "summary": "[next14] Change swiper logic to carousel when not enough slides",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-42261",
+  "q": "2026-Q1",
+  "feature": "Website builder content blocks",
+  "tags": [],
+  "summary": "~Buttons Block~ - New website builder (ability to use simple components block)",
+  "epic": "Website builder. Custom grids",
+  "text": "A Buttons block in the Website Builder: add unlimited buttons, style them, set links, hide, delete and drag to reorder, up to six per row. Organisers manage a block's buttons from one settings panel with live preview; extra buttons wrap onto new rows."
+ },
+ {
+  "k": "EP-34099",
+  "q": "2024-Q3",
+  "feature": "Website builder custom CSS",
+  "tags": [],
+  "summary": "[site builder] Add to the custom CSS support for pseudo-class",
+  "epic": null,
+  "text": "Added pseudo-class support such as :hover to the site builder's custom CSS. Custom CSS can style hover states."
+ },
+ {
+  "k": "EP-25958",
+  "q": "2024-Q3",
+  "feature": "Website builder event cloning",
+  "tags": [],
+  "summary": "Transferring new website builder when cloning an event",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-29275",
+  "q": "2024-Q2",
+  "feature": "Website builder links",
+  "tags": [],
+  "summary": "[sitebulder] Add support special links to the links",
+  "epic": null,
+  "text": "Added mailto, tel and anchor link support to the site builder. Site builder links can open email, phone or page sections."
+ },
+ {
+  "k": "EP-22484",
+  "q": "2024-Q3",
+  "feature": "Website builder team editing",
+  "tags": [],
+  "summary": "Part 2 - Team work",
+  "epic": "New Website Builder",
+  "text": "Added real-time team working to the Website Builder: active-user avatars, live updates, block locking, shared autosave and warned version restores. Multiple admins edit one site at once, see who is working where, cannot edit a locked block, and are notified when a version is restored."
+ },
+ {
+  "k": "EP-23051",
+  "q": "2024-Q1",
+  "feature": "Website builder text editor",
+  "tags": [],
+  "summary": "Part 2 - Improve Text Editor in the New Website Builder",
+  "epic": "New Website Builder",
+  "text": "Added a WYSIWYG text editor to text modules in the new website builder, with formatting, lists, images and other options agreed in the brief. Organisers format text in new website builder blocks with a rich editor toolbar, closer to the flexibility of the old builder."
+ },
+ {
+  "k": "EP-12608",
+  "q": "2023-Q3",
+  "feature": "Website header and footer builder",
+  "tags": [],
+  "summary": "Header & Footer",
+  "epic": "New Website Builder",
+  "text": "Built customisable header and footer components for the website builder: logo, navigation, search, CTAs, announcement bar, contact, legal links and sitemap. Organisers configure header and footer content and styles from one menu, with several footer styles."
+ },
+ {
+  "k": "EP-39361",
+  "q": "2025-Q1",
+  "feature": "Website header menu customisation",
+  "tags": [],
+  "summary": "Font Size Customization for Header Menu Items",
+  "epic": "Header Menu Customization Options",
+  "text": "Added a 16–48px font size slider for website header menu items, moving overflow into a 'Show More' tab. Organisers adjust header menu font size with a live preview; items that do not fit move to Show More."
+ },
+ {
+  "k": "EP-40342",
+  "q": "2025-Q2",
+  "feature": "Website header menu customisation",
+  "tags": [],
+  "summary": "Header Title and Subtitle improvements",
+  "epic": null,
+  "text": "Improved the website header: title and subtitle shown on mobile, character limits, colour settings, and settings hidden in single-line view. Header titles and subtitles display on mobile within character limits and custom colours; the admin hides them in single-line view."
+ },
+ {
+  "k": "EP-39660",
+  "q": "2026-Q3",
+  "feature": "Website header menu customisation",
+  "tags": [],
+  "summary": "Scroll settings",
+  "epic": "Header Menu Customization Options",
+  "text": "Added header scroll settings to the website builder: scroll, sticky and disappear-on-scroll. Organisers choose how the header behaves on scroll."
+ },
+ {
+  "k": "EP-39685",
+  "q": "2026-Q3",
+  "feature": "Website header menu customisation",
+  "tags": [],
+  "summary": "Line Layout",
+  "epic": "Header Menu Customization Options",
+  "text": "Added line layout options for header links: up to three rows, text size and spacing, and an option to move extra links into 'Show more'. Header links fit the space flexibly."
+ },
+ {
+  "k": "EP-55199",
+  "q": "2026-Q3",
+  "feature": "Website header search",
+  "tags": [],
+  "summary": "CustomHeader search: show categories selector on mobile + static in-flow panel",
+  "epic": null,
+  "text": "Mobile header search gains the categories selector desktop already has, and the panel now pushes content down instead of overlaying it, per Figma. `searchPages` and `currentLanguage` are threaded through to the mobile search component so the categories selector renders per Figma; the search panel is changed from an overlay to an in-flow layout on both breakpoints."
+ },
+ {
+  "k": "EP-34455",
+  "q": "2024-Q3",
+  "feature": "Website page management",
+  "tags": [],
+  "summary": "add slug to the page list",
+  "epic": null,
+  "text": "Showed each page's slug under its name in the site builder page list. Page addresses are visible in the list."
+ },
+ {
+  "k": "EP-15215",
+  "q": "2023-Q1",
+  "feature": "Website SEO",
+  "tags": [],
+  "summary": "Write H1 for all pages on the website",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-14868",
+  "q": "2023-Q1",
+  "feature": "Website SEO",
+  "tags": [],
+  "summary": "Fixing problems with page layout",
+  "epic": null,
+  "text": "Identified and fixed page layout markup errors found by running the website's pages through the W3C validator. The reported validation problems on the site's pages were fixed."
+ },
+ {
+  "k": "EP-13371",
+  "q": "2023-Q2",
+  "feature": "Website SEO",
+  "tags": [],
+  "summary": "Optimize SEO with links (Add LinkWrapper)",
+  "epic": null,
+  "text": "Wrapped links to other pages in a link wrapper across the frontend for SEO. Internal links render as crawlable links."
+ },
+ {
+  "k": "EP-38225",
+  "q": "2025-Q1",
+  "feature": "Website visibility and page access",
+  "tags": [],
+  "summary": "Website builder. Visibility Settings for Links and Buttons and Pages access",
+  "epic": null,
+  "text": "Added 'Visible For' (All, Logged, Unlogged) settings for website builder header and footer links and block buttons, plus a 'Pages Access' tab controlling access per custom page. Organisers control who sees each link and who can open each custom page; the Role setting is simplified to a single 'Require Sign-In'."
+ },
+ {
+  "k": "EP-21984",
+  "q": "2023-Q4",
+  "feature": "X branding update",
+  "tags": [],
+  "summary": "Twitter logo and text update MVP places",
+  "epic": null,
+  "text": "Updated the Twitter logo and text to the rebrand in the email builder, registration social blocks, profiles, Online Exhibitor Services, registration pages and the Social page. The most-used places show the new X branding, and the participant profile social block now matches its design."
+ }
+]

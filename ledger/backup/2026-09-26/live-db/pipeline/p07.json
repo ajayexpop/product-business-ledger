@@ -1,0 +1,72 @@
+{
+  "createdAt": "2026-09-22",
+  "flags": {
+    "drift": false,
+    "dueSoon": false,
+    "noEstimate": true,
+    "noJira": true,
+    "overEstimate": false,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "October 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-10"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    }
+  },
+  "j": null,
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": null,
+    "daysKind": "none"
+  },
+  "order": 70,
+  "raw": {
+    "area": "Registration",
+    "month": "October 2026",
+    "status": "Planned"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-22",
+  "v": {
+    "area": "Registration",
+    "deps": "Payment refactoring needs to be completed first",
+    "driver": "",
+    "estimate": "",
+    "feature": "Replace ParamPOS with Iyzico",
+    "impact": "",
+    "key": "",
+    "month": "2026-10",
+    "notes": "",
+    "owner": "Taimoor",
+    "priority": "Customer",
+    "rationale": "",
+    "status": "Planned",
+    "team": "",
+    "why": ""
+  }
+}

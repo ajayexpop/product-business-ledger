@@ -1,0 +1,363 @@
+<title>Product Truth Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#f4f6f8;--panel:#ffffff;--ink:#1c2733;--muted:#5b6776;--line:#c6ced8;--edge:#7b8795;
+  --built:#2c7a6b;--built-bg:#e6f3ef;
+  --partial:#a1650e;--partial-bg:#fbf0dc;
+  --missing:#c23b1c;--missing-bg:#fdece7;
+  --decision:#6446b0;--decision-bg:#eee8fb;
+  --ent-bg:#ffffff;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#10151b;--panel:#18202a;--ink:#e4e9ef;--muted:#9ba7b5;--line:#34404d;--edge:#8591a0;
+    --built:#5cc2ab;--built-bg:#14302a;
+    --partial:#e3a94e;--partial-bg:#33270e;
+    --missing:#ff7d5e;--missing-bg:#3b1a12;
+    --decision:#a98cfb;--decision-bg:#261d3f;
+    --ent-bg:#1f2833;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#10151b;--panel:#18202a;--ink:#e4e9ef;--muted:#9ba7b5;--line:#34404d;--edge:#8591a0;
+  --built:#5cc2ab;--built-bg:#14302a;
+  --partial:#e3a94e;--partial-bg:#33270e;
+  --missing:#ff7d5e;--missing-bg:#3b1a12;
+  --decision:#a98cfb;--decision-bg:#261d3f;
+  --ent-bg:#1f2833;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 "Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:32px}
+h1{font-size:30px;line-height:1.15;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:19px;margin:0 0 6px;text-wrap:balance}
+p{margin:0;max-width:68ch}
+.lede{color:var(--muted);font-size:16px;margin-top:8px}
+.eyebrow{font:500 11px/1 "JetBrains Mono",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.legend{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:6px;font-size:13px;font-weight:600;border:1.5px solid}
+.chip.built{color:var(--built);background:var(--built-bg);border-color:var(--built)}
+.chip.partial{color:var(--partial);background:var(--partial-bg);border-color:var(--partial)}
+.chip.missing{color:var(--missing);background:var(--missing-bg);border-color:var(--missing);border-style:dashed}
+.chip.decision{color:var(--decision);background:var(--decision-bg);border-color:var(--decision);border-style:dotted}
+.chip small{font-weight:400;color:var(--ink);opacity:.8}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;list-style:none;margin:0;padding:0}
+.steps li{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.steps b{font-size:14px}
+.steps span{font-size:13.5px;color:var(--muted)}
+.steps .n{font:500 11px "JetBrains Mono",monospace;color:var(--muted)}
+figure{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 16px 14px}
+.scroll{overflow-x:auto}
+figure svg{display:block;width:100%;height:auto;min-width:940px;color:var(--edge)}
+figcaption{color:var(--muted);font-size:13.5px;margin-top:10px;max-width:90ch}
+/* svg styling */
+.nd{stroke-width:1.5;rx:6}
+.nd.built{fill:var(--built-bg);stroke:var(--built)}
+.nd.partial{fill:var(--partial-bg);stroke:var(--partial)}
+.nd.missing{fill:var(--missing-bg);stroke:var(--missing);stroke-dasharray:6 4}
+.nd.decision{fill:var(--decision-bg);stroke:var(--decision);stroke-dasharray:2 3}
+.nd.band{fill:none;stroke:var(--missing);stroke-dasharray:8 5;stroke-width:1.5}
+.nd.plain{fill:var(--panel);stroke:var(--line)}
+.ent{fill:var(--ent-bg);stroke:var(--missing);stroke-width:1}
+.dot.built{fill:var(--built)}.dot.partial{fill:var(--partial)}.dot.missing{fill:var(--missing)}.dot.decision{fill:var(--decision)}
+.lbl{fill:var(--ink);font:600 13px "Public Sans",system-ui,sans-serif}
+.big{fill:var(--ink);font:700 15px "Public Sans",system-ui,sans-serif}
+.sub{fill:var(--muted);font:400 11px "Public Sans",system-ui,sans-serif}
+.etx{fill:var(--ink);font:600 12px "Public Sans",system-ui,sans-serif}
+.col{fill:var(--muted);font:500 11px "JetBrains Mono",ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase}
+.elbl{fill:var(--muted);font:500 11px "Public Sans",system-ui,sans-serif}
+.mtx{fill:var(--missing);font:600 11px "Public Sans",system-ui,sans-serif}
+.e{stroke:var(--edge);stroke-width:1.4;fill:none}
+.e.miss{stroke:var(--missing);stroke-dasharray:5 4}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 11px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.num{font-variant-numeric:tabular-nums;color:var(--muted);width:32px}
+td .chip{font-size:12px;padding:3px 8px;white-space:nowrap}
+.tablewrap{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow-x:auto}
+footer{color:var(--muted);font-size:13px}
+code{font:500 12.5px "JetBrains Mono",monospace}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Plan · 27 Sep 2026 · from future-plan.md</div>
+  <h1>Product Truth Map</h1>
+  <p class="lede">How the ledger, story analysis, requests and roadmaps become one system. Anything drawn with a dashed red border doesn't exist yet. Those are the missing pieces.</p>
+</header>
+
+<section>
+  <div class="eyebrow">How to read the colours</div>
+  <div class="legend">
+    <span class="chip built">Built <small>works today</small></span>
+    <span class="chip partial">Partly built <small>running, sampled or draft</small></span>
+    <span class="chip missing">Missing <small>still to build</small></span>
+    <span class="chip decision">Your decision <small>needs the owner</small></span>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Read it left to right</div>
+  <ol class="steps">
+    <li><span class="n">1</span><b>Sources</b><span>Jira, Confluence, Planhat and the Drive workbook. All connected already.</span></li>
+    <li><span class="n">2</span><b>Pull and enrich</b><span>Our tools pull the data and add meaning: customer, tier, value, product area.</span></li>
+    <li><span class="n">3</span><b>Join</b><span>One store where every client and every product has a single ID. <em>Missing today.</em></span></li>
+    <li><span class="n">4</span><b>Signal</b><span>Two scores: which client needs help, and what to build next. <em>Missing; waits on your weights.</em></span></li>
+    <li><span class="n">5</span><b>Pages</b><span>The artifacts people open. They all read from the same store.</span></li>
+    <li><span class="n">↺</span><b>Agents</b><span>A scheduled loop keeps the whole chain fresh. <em>Missing.</em></span></li>
+  </ol>
+</section>
+
+<figure>
+  <div class="scroll">
+  <svg viewBox="0 0 1240 760" role="img" aria-label="Data flows from eight connected sources through nine pull and enrich tools into a missing shared data store, joined by a missing client ID table and product map. The store feeds two missing signals, set by owner weights, and the pages. A missing agent loop at the bottom refreshes every stage.">
+    <defs>
+      <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+    </defs>
+
+    <!-- column headers -->
+    <text class="col" x="20" y="40">1 · Sources</text>
+    <text class="col" x="250" y="40">2 · Pull and enrich</text>
+    <text class="col" x="520" y="40">3 · Join</text>
+    <text class="col" x="820" y="40">4 · Signal</text>
+    <text class="col" x="1055" y="40">5 · Pages</text>
+
+    <!-- 1 sources -->
+    <g>
+      <rect class="nd built" x="20" y="60" width="170" height="40" rx="6"/><text class="lbl" x="32" y="77">Jira EP</text><text class="sub" x="32" y="92">stories, bugs, requests</text>
+      <rect class="nd built" x="20" y="112" width="170" height="40" rx="6"/><text class="lbl" x="32" y="129">Jira IMP</text><text class="sub" x="32" y="144">incidents</text>
+      <rect class="nd built" x="20" y="164" width="170" height="40" rx="6"/><text class="lbl" x="32" y="181">Jira OP</text><text class="sub" x="32" y="196">event dates</text>
+      <rect class="nd built" x="20" y="216" width="170" height="40" rx="6"/><text class="lbl" x="32" y="233">Jira HV</text><text class="sub" x="32" y="248">Hyve dedicated team</text>
+      <rect class="nd built" x="20" y="268" width="170" height="40" rx="6"/><text class="lbl" x="32" y="285">Confluence FIS</text><text class="sub" x="32" y="300">feature intake pages</text>
+      <rect class="nd built" x="20" y="320" width="170" height="40" rx="6"/><text class="lbl" x="32" y="337">Planhat</text><text class="sub" x="32" y="352">clients, tier, health</text>
+      <rect class="nd built" x="20" y="372" width="170" height="40" rx="6"/><text class="lbl" x="32" y="389">Pipedrive ID</text><text class="sub" x="32" y="404">read through Planhat</text>
+      <rect class="nd built" x="20" y="424" width="170" height="40" rx="6"/><text class="lbl" x="32" y="441">Drive workbook</text><text class="sub" x="32" y="456">customer and event sheet</text>
+    </g>
+
+    <!-- bus 1 -> 2 -->
+    <g>
+      <path class="e" d="M190 80H220M190 132H220M190 184H220M190 236H220M190 288H220M190 340H220M190 392H220M190 444H220"/>
+      <path class="e" d="M220 80V496"/>
+      <path class="e" marker-end="url(#ar)" d="M220 80H248"/><path class="e" marker-end="url(#ar)" d="M220 132H248"/><path class="e" marker-end="url(#ar)" d="M220 184H248"/>
+      <path class="e" marker-end="url(#ar)" d="M220 236H248"/><path class="e" marker-end="url(#ar)" d="M220 288H248"/><path class="e" marker-end="url(#ar)" d="M220 340H248"/>
+      <path class="e" marker-end="url(#ar)" d="M220 392H248"/><path class="e" marker-end="url(#ar)" d="M220 444H248"/><path class="e" marker-end="url(#ar)" d="M220 496H248"/>
+      <text class="elbl" transform="translate(214 300) rotate(-90)" text-anchor="middle">pulled by connectors</text>
+    </g>
+
+    <!-- 2 pull and enrich -->
+    <g>
+      <rect class="nd built" x="250" y="60" width="205" height="40" rx="6"/><text class="lbl" x="262" y="77">Story cache + delta</text><text class="sub" x="262" y="92">1,192 stories in 2026</text><circle class="dot built" cx="445" cy="70" r="4"/>
+      <rect class="nd built" x="250" y="112" width="205" height="40" rx="6"/><text class="lbl" x="262" y="129">Done stories 2023–26</text><text class="sub" x="262" y="144">2,494 with start dates</text><circle class="dot built" cx="445" cy="122" r="4"/>
+      <rect class="nd built" x="250" y="164" width="205" height="40" rx="6"/><text class="lbl" x="262" y="181">Story value analysis</text><text class="sub" x="262" y="196">customer, tier, value driver</text><circle class="dot built" cx="445" cy="174" r="4"/>
+      <rect class="nd built" x="250" y="216" width="205" height="40" rx="6"/><text class="lbl" x="262" y="233">Product-area tagging</text><text class="sub" x="262" y="248">knowledge-base products</text><circle class="dot built" cx="445" cy="226" r="4"/>
+      <rect class="nd built" x="250" y="268" width="205" height="40" rx="6"/><text class="lbl" x="262" y="285">Requests database</text><text class="sub" x="262" y="300">1,781 open asks</text><circle class="dot built" cx="445" cy="278" r="4"/>
+      <rect class="nd partial" x="250" y="320" width="205" height="40" rx="6"/><text class="lbl" x="262" y="337">Demand intel</text><text class="sub" x="262" y="352">clusters · running, 13 of 30</text><circle class="dot partial" cx="445" cy="330" r="4"/>
+      <rect class="nd built" x="250" y="372" width="205" height="40" rx="6"/><text class="lbl" x="262" y="389">Events by Pipedrive ID</text><text class="sub" x="262" y="404">250 of 264 linked</text><circle class="dot built" cx="445" cy="382" r="4"/>
+      <rect class="nd missing" x="250" y="424" width="205" height="40" rx="6"/><text class="lbl" x="262" y="441">Incident timing</text><text class="sub" x="262" y="456">response and fix times</text><circle class="dot missing" cx="445" cy="434" r="4"/>
+      <rect class="nd partial" x="250" y="476" width="205" height="40" rx="6"/><text class="lbl" x="262" y="493">Flow batch</text><text class="sub" x="262" y="508">64 of about 1,200 read</text><circle class="dot partial" cx="445" cy="486" r="4"/>
+    </g>
+
+    <!-- bus 2 -> 3 -->
+    <g>
+      <path class="e" d="M455 80H485M455 132H485M455 184H485M455 236H485M455 288H485M455 340H485M455 392H485M455 444H485M455 496H485"/>
+      <path class="e" d="M485 80V496"/>
+      <path class="e" marker-end="url(#ar)" d="M485 333H517"/>
+      <text class="elbl" transform="translate(479 230) rotate(-90)" text-anchor="middle">merged by key</text>
+    </g>
+
+    <!-- 3 join -->
+    <g>
+      <rect class="nd missing" x="520" y="60" width="120" height="56" rx="6"/><text class="lbl" x="532" y="82">Client ID table</text><text class="sub" x="532" y="99">one key per client</text>
+      <rect class="nd missing" x="650" y="60" width="120" height="56" rx="6"/><text class="lbl" x="662" y="82">Product map</text><text class="sub" x="662" y="99">products ↔ themes</text>
+      <path class="e miss" marker-end="url(#ar)" d="M580 116V148"/><path class="e miss" marker-end="url(#ar)" d="M710 116V148"/>
+      <text class="mtx" x="645" y="137" text-anchor="middle">resolve</text>
+
+      <rect class="nd missing" x="520" y="150" width="250" height="366" rx="8"/>
+      <text class="big" x="536" y="178">Shared data store</text>
+      <text class="sub" x="536" y="195">one record per thing</text>
+      <rect class="ent" x="536" y="212" width="105" height="34" rx="5"/><text class="etx" x="588" y="234" text-anchor="middle">Client</text>
+      <rect class="ent" x="649" y="212" width="105" height="34" rx="5"/><text class="etx" x="701" y="234" text-anchor="middle">Event</text>
+      <rect class="ent" x="536" y="256" width="105" height="34" rx="5"/><text class="etx" x="588" y="278" text-anchor="middle">Story</text>
+      <rect class="ent" x="649" y="256" width="105" height="34" rx="5"/><text class="etx" x="701" y="278" text-anchor="middle">Request</text>
+      <rect class="ent" x="536" y="300" width="105" height="34" rx="5"/><text class="etx" x="588" y="322" text-anchor="middle">Demand cluster</text>
+      <rect class="ent" x="649" y="300" width="105" height="34" rx="5"/><text class="etx" x="701" y="322" text-anchor="middle">Bug · incident</text>
+      <rect class="ent" x="536" y="344" width="105" height="34" rx="5"/><text class="etx" x="588" y="366" text-anchor="middle">Promise</text>
+      <text class="sub" x="536" y="410">Every field keeps its source,</text>
+      <text class="sub" x="536" y="425">date and confidence.</text>
+      <text class="sub" x="536" y="455">Today's four story sets (684, 1,192,</text>
+      <text class="sub" x="536" y="470">2,494, 3,328) become one list,</text>
+      <text class="sub" x="536" y="485">with year and stage as fields.</text>
+    </g>
+
+    <!-- 3 -> 4 -->
+    <path class="e miss" marker-end="url(#ar)" d="M770 228H816"/><path class="e miss" marker-end="url(#ar)" d="M770 348H816"/>
+    <text class="mtx" x="793" y="220" text-anchor="middle">joins</text>
+
+    <!-- 4 signal -->
+    <g>
+      <rect class="nd decision" x="820" y="60" width="170" height="56" rx="6"/><text class="lbl" x="832" y="82">Your weights</text><text class="sub" x="832" y="99">scoring criteria, not set yet</text>
+      <path class="e miss" marker-end="url(#ar)" d="M905 116V176"/><text class="mtx" x="912" y="152">sets</text>
+
+      <rect class="nd missing" x="820" y="180" width="170" height="96" rx="6"/>
+      <text class="lbl" x="832" y="202">Client signal</text>
+      <text class="sub" x="832" y="220">who needs help before</text>
+      <text class="sub" x="832" y="234">their next show</text>
+      <text class="sub" x="832" y="260">health · promises · asks · show date</text>
+
+      <rect class="nd missing" x="820" y="300" width="170" height="96" rx="6"/>
+      <text class="lbl" x="832" y="322">Product signal</text>
+      <text class="sub" x="832" y="340">what to build next</text>
+      <text class="sub" x="832" y="354">and for whom</text>
+      <text class="sub" x="832" y="380">demand · tier · not yet built</text>
+    </g>
+
+    <!-- exports and bus 4 -> 5 -->
+    <path class="e miss" d="M770 490H1030"/><text class="mtx" x="900" y="483" text-anchor="middle">exports the facts</text>
+    <path class="e miss" d="M990 228H1030M990 348H1030"/>
+    <g>
+      <path class="e" d="M1030 83V490"/>
+      <path class="e" marker-end="url(#ar)" d="M1030 83H1053"/><path class="e" marker-end="url(#ar)" d="M1030 141H1053"/><path class="e" marker-end="url(#ar)" d="M1030 199H1053"/>
+      <path class="e" marker-end="url(#ar)" d="M1030 257H1053"/><path class="e" marker-end="url(#ar)" d="M1030 315H1053"/><path class="e" marker-end="url(#ar)" d="M1030 373H1053"/>
+      <path class="e" marker-end="url(#ar)" d="M1030 431H1053"/>
+      <text class="elbl" transform="translate(1024 150) rotate(-90)" text-anchor="middle">feeds</text>
+    </g>
+
+    <!-- 5 pages -->
+    <g>
+      <rect class="nd built" x="1055" y="60" width="170" height="46" rx="6"/><text class="lbl" x="1067" y="79">Ledger (the hub)</text><text class="sub" x="1067" y="95">health, bugs, promises</text>
+      <rect class="nd partial" x="1055" y="118" width="170" height="46" rx="6"/><text class="lbl" x="1067" y="137">Client 360</text><text class="sub" x="1067" y="153">past · now · next per client</text>
+      <rect class="nd missing" x="1055" y="176" width="170" height="46" rx="6"/><text class="lbl" x="1067" y="195">Product area view</text><text class="sub" x="1067" y="211">built vs asked vs broken</text>
+      <rect class="nd built" x="1055" y="234" width="170" height="46" rx="6"/><text class="lbl" x="1067" y="253">Story Value Roadmap</text><text class="sub" x="1067" y="269">what we delivered, and why</text>
+      <rect class="nd built" x="1055" y="292" width="170" height="46" rx="6"/><text class="lbl" x="1067" y="311">Product Demand Map</text><text class="sub" x="1067" y="327">what clients ask for</text>
+      <rect class="nd partial" x="1055" y="350" width="170" height="46" rx="6"/><text class="lbl" x="1067" y="369">Customer journeys</text><text class="sub" x="1067" y="385">drafts, need your sign-off</text>
+      <rect class="nd missing" x="1055" y="408" width="170" height="46" rx="6"/><text class="lbl" x="1067" y="427">Weekly digest</text><text class="sub" x="1067" y="443">what moved this week</text>
+    </g>
+
+    <!-- agents band -->
+    <g>
+      <rect class="nd band" x="20" y="560" width="1205" height="180" rx="10"/>
+      <text class="big" x="36" y="588">Agents keep it current</text>
+      <text class="sub" x="232" y="588">A scheduled loop. It stops and tells you if any check fails.</text>
+
+      <rect class="nd missing" x="40" y="620" width="190" height="52" rx="6"/><text class="lbl" x="54" y="642">Delta puller</text><text class="sub" x="54" y="659">daily, only what changed</text>
+      <rect class="nd missing" x="280" y="620" width="190" height="52" rx="6"/><text class="lbl" x="294" y="642">Enricher</text><text class="sub" x="294" y="659">what, why, product, value</text>
+      <rect class="nd missing" x="520" y="620" width="190" height="52" rx="6"/><text class="lbl" x="534" y="642">Clusterer</text><text class="sub" x="534" y="659">new asks into known needs</text>
+      <rect class="nd missing" x="760" y="620" width="190" height="52" rx="6"/><text class="lbl" x="774" y="642">Build and check</text><text class="sub" x="774" y="659">refuses to publish on a fail</text>
+      <rect class="nd missing" x="1000" y="620" width="190" height="52" rx="6"/><text class="lbl" x="1014" y="642">Publisher</text><text class="sub" x="1014" y="659">same link, checked after</text>
+
+      <path class="e miss" marker-end="url(#ar)" d="M230 646H276"/><path class="e miss" marker-end="url(#ar)" d="M470 646H516"/>
+      <path class="e miss" marker-end="url(#ar)" d="M710 646H756"/><path class="e miss" marker-end="url(#ar)" d="M950 646H996"/>
+
+      <path class="e miss" marker-end="url(#ar)" d="M105 620V468"/><text class="mtx" x="112" y="540">reads</text>
+      <path class="e miss" marker-end="url(#ar)" d="M350 620V520"/><text class="mtx" x="357" y="540">fills new items</text>
+      <path class="e miss" marker-end="url(#ar)" d="M615 620V520"/><text class="mtx" x="622" y="540">groups</text>
+      <path class="e miss" marker-end="url(#ar)" d="M855 620V400"/><text class="mtx" x="862" y="540">recomputes</text>
+      <path class="e miss" marker-end="url(#ar)" d="M1142 620V458"/><text class="mtx" x="1149" y="540">publishes</text>
+
+      <text class="sub" x="36" y="712">You sign off: customer-facing pages, "Coming next" items, and the signal weights. Nothing customer-facing publishes on its own.</text>
+    </g>
+  </svg>
+  </div>
+  <figcaption>The whole system in one picture. Every source and most of the tools already exist. The missing part sits in the middle: the joins, the shared store and the signals. Without them, each page matches clients and products its own way.</figcaption>
+</figure>
+
+<figure>
+  <div class="eyebrow">What changes</div>
+  <div class="scroll">
+  <svg viewBox="0 0 1020 350" role="img" aria-label="Today each tool feeds its own page through its own client and product matching, with no links between pages. In the target, every tool feeds one shared store with one client ID and one product map, and every page reads from it and links to the others.">
+    <defs>
+      <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+    </defs>
+    <text class="big" x="20" y="30">Today</text><text class="sub" x="80" y="30">each tool matches clients and products its own way</text>
+    <text class="big" x="540" y="30">Target</text><text class="sub" x="604" y="30">one match, used by every page</text>
+
+    <!-- today tools -->
+    <g>
+      <rect class="nd plain" x="20" y="60" width="160" height="30" rx="5"/><text class="etx" x="32" y="80">ledger.py</text>
+      <rect class="nd plain" x="20" y="102" width="160" height="30" rx="5"/><text class="etx" x="32" y="122">stories.py</text>
+      <rect class="nd plain" x="20" y="144" width="160" height="30" rx="5"/><text class="etx" x="32" y="164">events.py</text>
+      <rect class="nd plain" x="20" y="186" width="160" height="30" rx="5"/><text class="etx" x="32" y="206">story_analysis.py</text>
+      <rect class="nd plain" x="20" y="228" width="160" height="30" rx="5"/><text class="etx" x="32" y="248">requests.py + intel.py</text>
+      <rect class="nd plain" x="20" y="270" width="160" height="30" rx="5"/><text class="etx" x="32" y="290">roadmap.py</text>
+
+      <rect class="nd built" x="300" y="60" width="170" height="30" rx="5"/><text class="etx" x="312" y="80">Ledger</text>
+      <rect class="nd built" x="300" y="102" width="170" height="30" rx="5"/><text class="etx" x="312" y="122">Ledger Preview</text>
+      <rect class="nd built" x="300" y="144" width="170" height="30" rx="5"/><text class="etx" x="312" y="164">Story Value Roadmap</text>
+      <rect class="nd built" x="300" y="186" width="170" height="30" rx="5"/><text class="etx" x="312" y="206">Product Demand Map</text>
+      <rect class="nd built" x="300" y="228" width="170" height="30" rx="5"/><text class="etx" x="312" y="248">Product Journey</text>
+      <rect class="nd built" x="300" y="270" width="170" height="30" rx="5"/><text class="etx" x="312" y="290">DLG Journey</text>
+
+      <path class="e" marker-end="url(#ar2)" d="M180 75H296"/>
+      <path class="e" marker-end="url(#ar2)" d="M180 117L296 79"/>
+      <path class="e" marker-end="url(#ar2)" d="M180 159L296 117"/>
+      <path class="e" marker-end="url(#ar2)" d="M180 201L296 159"/>
+      <path class="e" marker-end="url(#ar2)" d="M180 243L296 201"/>
+      <path class="e" marker-end="url(#ar2)" d="M180 285L296 243"/>
+      <path class="e" marker-end="url(#ar2)" d="M180 285H296"/>
+      <text class="mtx" x="245" y="325" text-anchor="middle">each tool matches on its own · pages don't link to each other</text>
+    </g>
+
+    <!-- divider -->
+    <path d="M505 50V320" stroke="var(--line)" stroke-width="1"/>
+
+    <!-- target -->
+    <g>
+      <rect class="nd plain" x="540" y="60" width="130" height="240" rx="6"/>
+      <text class="etx" x="552" y="84">All 9 tools</text>
+      <text class="sub" x="552" y="104">pull and enrich,</text>
+      <text class="sub" x="552" y="119">as they do today</text>
+      <path class="e" marker-end="url(#ar2)" d="M670 180H706"/>
+
+      <rect class="nd missing" x="710" y="60" width="120" height="240" rx="6"/>
+      <text class="etx" x="722" y="84">Shared store</text>
+      <text class="sub" x="722" y="108">Client ID table</text>
+      <text class="sub" x="722" y="124">Product map</text>
+      <text class="sub" x="722" y="140">Signals</text>
+
+      <path class="e" d="M830 180H850"/><path class="e" d="M850 75V285"/>
+      <path class="e" marker-end="url(#ar2)" d="M850 75H866"/><path class="e" marker-end="url(#ar2)" d="M850 117H866"/><path class="e" marker-end="url(#ar2)" d="M850 159H866"/>
+      <path class="e" marker-end="url(#ar2)" d="M850 201H866"/><path class="e" marker-end="url(#ar2)" d="M850 243H866"/><path class="e" marker-end="url(#ar2)" d="M850 285H866"/>
+
+      <rect class="nd built" x="870" y="60" width="115" height="30" rx="5"/><text class="etx" x="880" y="80">Ledger hub</text>
+      <rect class="nd partial" x="870" y="102" width="115" height="30" rx="5"/><text class="etx" x="880" y="122">Client 360</text>
+      <rect class="nd missing" x="870" y="144" width="115" height="30" rx="5"/><text class="etx" x="880" y="164">Product areas</text>
+      <rect class="nd built" x="870" y="186" width="115" height="30" rx="5"/><text class="etx" x="880" y="206">Story Value</text>
+      <rect class="nd built" x="870" y="228" width="115" height="30" rx="5"/><text class="etx" x="880" y="248">Demand Map</text>
+      <rect class="nd partial" x="870" y="270" width="115" height="30" rx="5"/><text class="etx" x="880" y="290">Journeys</text>
+
+      <path class="e miss" d="M1000 75V285"/>
+      <path class="e miss" d="M985 75H1000M985 117H1000M985 159H1000M985 201H1000M985 243H1000M985 285H1000"/>
+      <text class="mtx" x="780" y="325" text-anchor="middle">1 matching · every client, product and ask links across pages</text>
+    </g>
+  </svg>
+  </div>
+  <figcaption>The tools you already have stay. What's new is the store between them and the pages, and the links between pages (dashed line on the right).</figcaption>
+</figure>
+
+<section>
+  <h2>The missing pieces, in build order</h2>
+  <p class="lede" style="margin:0 0 14px">Each row unblocks the next. The first one is yours to decide.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>#</th><th>Piece</th><th>State</th><th>Why it matters</th><th>Unblocks</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td><b>Owner decisions</b></td><td><span class="chip decision">Your decision</span></td><td>Promote the preview? Exclude Informa? Which story set does the ledger report on? How should demand be scored?</td><td>Everything below</td></tr>
+      <tr><td class="num">2</td><td><b>Client ID table</b></td><td><span class="chip missing">Missing</span></td><td>Clients are matched in about six places today. Only 34 of 150 customers named in requests match a ledger client.</td><td>Every client-level view and signal</td></tr>
+      <tr><td class="num">3</td><td><b>Product map</b></td><td><span class="chip missing">Missing</span></td><td>Three ways of naming product areas: the ledger's 8 areas, 23 knowledge-base products, 13 roadmap themes.</td><td>Product area view, product signal</td></tr>
+      <tr><td class="num">4</td><td><b>Shared data store</b></td><td><span class="chip missing">Missing</span></td><td>Four story sets (684, 1,192, 2,494, 3,328) hold the same stories with different fields.</td><td>Signals, cross-links, one refresh</td></tr>
+      <tr><td class="num">5</td><td><b>Demand intel</b></td><td><span class="chip partial">Running</span></td><td>The other agent is enriching requests: 13 of 30 chunks done, then clustering.</td><td>Product signal</td></tr>
+      <tr><td class="num">6</td><td><b>Client signal and product signal</b></td><td><span class="chip missing">Missing</span></td><td>No score exists yet. Until you set weights, the page shows each input side by side, never a made-up total.</td><td>Client 360, digest</td></tr>
+      <tr><td class="num">7</td><td><b>Client 360 (past, now, next) and Product area view</b></td><td><span class="chip partial">Partly built</span></td><td>Client 360 shows health today, but not what we delivered or what the client is asking for.</td><td>CS answers "you do nothing for us" with evidence</td></tr>
+      <tr><td class="num">8</td><td><b>Incident timing and the full flow batch</b></td><td><span class="chip missing">Missing</span></td><td>The Incidents tab quotes a hand-typed baseline. Flow rests on a 64-issue sample.</td><td>Honest health and flow numbers</td></tr>
+      <tr><td class="num">9</td><td><b>Agent loop and weekly digest</b></td><td><span class="chip missing">Missing</span></td><td>Today a refresh means nine command sequences and seven publishes, all by hand.</td><td>Keeps it true without us</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<footer>Source: <code>future-plan.md</code> in the CrossTeamDash repo. Figures as of 26 Sep 2026. Plan only; nothing on this page is built yet unless marked Built.</footer>
+</div>

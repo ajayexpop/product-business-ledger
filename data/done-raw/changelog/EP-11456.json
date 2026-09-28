@@ -1,0 +1,81 @@
+{
+ "k": "EP-11456",
+ "histories": 32,
+ "historiesRead": 32,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2022-12-21T11:22:06.637+0000",
+   "from": "Incoming request",
+   "to": "Estimated request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2022-12-21T11:24:58.738+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-01-06T11:01:29.012+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-01-06T11:01:31.046+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-01-06T11:01:33.069+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-01-06T11:01:35.207+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2023-02-06T10:20:38.083+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2023-02-06T10:21:18.537+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2023-02-06T10:21:20.789+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2023-02-06T10:21:23.626+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2023-02-06T10:21:26.168+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790313930187.txt"
+}

@@ -1,0 +1,3679 @@
+[
+ {
+  "k": "EP-49015",
+  "summary": "Investigate current implementation of ExpoAssistant AI Agent",
+  "epic": "Improve ExpoAssistant AI Agent",
+  "components": [
+   "AI Agents"
+  ],
+  "labels": [],
+  "doneAt": "2026-03-24T09:51:35.378+0000",
+  "text": "Investigated the current ExpoAssistant AI Agent implementation to lay groundwork for planned improvements. The current ExpoAssistant implementation was investigated to inform planned improvements."
+ },
+ {
+  "k": "EP-47172",
+  "summary": "Investigate BI tool selection for new analytics",
+  "epic": "Implement BI tool",
+  "components": [],
+  "labels": [
+   "NewAnalytics"
+  ],
+  "doneAt": "2026-03-24T14:47:20.472+0000",
+  "text": null
+ },
+ {
+  "k": "EP-49788",
+  "summary": "[admin-ui] Rewrite files inside /pages to TS",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-24T17:00:45.450+0000",
+  "text": "Rewrote files inside the admin panel's /pages folder to TypeScript as part of the ongoing JS-to-TS migration. Files inside /pages rewritten in TypeScript."
+ },
+ {
+  "k": "EP-50667",
+  "summary": "Native Integration Hub - Addition of new field",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Native_Integration"
+  ],
+  "doneAt": "2026-03-24T17:04:53.146+0000",
+  "text": "Added a Default Language field to the Native Integration Hub's Exhibitor Create/Update mappings. The Default Language field is now available in the Exhibitor Create and Update mappings."
+ },
+ {
+  "k": "EP-49915",
+  "summary": "[admin-ui] Rewrite files inside /hooks to TS",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-24T17:40:35.416+0000",
+  "text": "Rewrote files inside the admin panel's /hooks folder to TypeScript as part of the ongoing JS-to-TS migration. Files inside /hooks rewritten in TypeScript."
+ },
+ {
+  "k": "EP-48951",
+  "summary": "Analyze participant-to-action point mismatches and root causes in the original summarization logic",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "components": [
+   "Meeting Transcription Tool"
+  ],
+  "labels": [],
+  "doneAt": "2026-03-25T08:31:30.129+0000",
+  "text": "Quantified how often the old AI meeting-summarizer misassigned action points, validating the new logic ahead of MTT's move to production. An analysis quantifying participant/action-point mismatch patterns in the old logic, used as evidence for the improvement delivered by the new summarization approach."
+ },
+ {
+  "k": "EP-49217",
+  "summary": "Generate outputs in the meeting language",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "components": [
+   "Meeting Transcription Tool"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-25T08:33:25.546+0000",
+  "text": "Making the Meeting Transcription Tool produce outputs in the meeting's own language fixes a multilingual usability gap that undermined the AI meeting artifacts. MTT now generates its outputs in the language of the meeting, so transcripts/notes match the conversation language."
+ },
+ {
+  "k": "EP-46238",
+  "summary": "Develop BASIC version of RT Service",
+  "epic": "Recreate Round Tables Service",
+  "components": [
+   "Round Tables"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-25T16:27:32.383+0000",
+  "text": null
+ },
+ {
+  "k": "EP-50916",
+  "summary": "Change the Default Lang Field to use list available langs on platform",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-27T11:46:12.553+0000",
+  "text": "Fixed the Default Language field to pull from the platform's real list of available languages instead of a hardcoded set. The Default Language field now derives its options from the platform's actual list of available languages."
+ },
+ {
+  "k": "EP-50051",
+  "summary": "Random sorting for Sponsors and Sponsored products",
+  "epic": "Admin Panel Restructure & Navigation",
+  "components": [
+   "Sponsorship"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-27T13:17:25.700+0000",
+  "text": "Sponsors and sponsored products can now be displayed in randomized order on the web platform, giving every paying sponsor fairer visibility rotation. A random sorting mode was added for Sponsors and Sponsored Products so their display order is shuffled rather than fixed by priority."
+ },
+ {
+  "k": "EP-38624",
+  "summary": "Find a issue In messanger with node",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-03-31T07:19:25.482+0100",
+  "text": null
+ },
+ {
+  "k": "EP-50569",
+  "summary": "Meeting Program. Optionally extending Participation Conditions for Team Members ",
+  "epic": "Hyve Q1.26 delievery",
+  "components": [
+   "Meeting Program"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-31T15:08:34.363+0100",
+  "text": "Extended Meeting Program participation conditions to optionally cover exhibitor team members, giving sponsors and exhibitor teams more control over who can be met. Meeting Program now lets participation conditions optionally apply to team members (details specified in the linked spec)."
+ },
+ {
+  "k": "EP-48154",
+  "summary": "MYS Stage 2",
+  "epic": "API V3 & Integrations 2026",
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-03-31T17:28:18.786+0100",
+  "text": "The final tranche of work for the MYS native integration was delivered, closing out the remaining gaps so the MYS client's end-to-end integration needs are fully met. Completed the remaining MYS integration tasks (stage 2) covering the outstanding user needs."
+ },
+ {
+  "k": "EP-50047",
+  "summary": "Improve Sponsorship export generation",
+  "epic": null,
+  "components": [
+   "Admin Interface",
+   "Reporting",
+   "Sponsorship"
+  ],
+  "labels": [],
+  "doneAt": "2026-04-01T09:58:20.228+0100",
+  "text": "Made Sponsorship statistics export generation reliable for large datasets, fixing failures reported in EP-46119. Sponsorship export generation improved to reliably complete even with large amounts of data."
+ },
+ {
+  "k": "EP-38506",
+  "summary": "[Expo-react-component]: change multi select options key to value, or remove options with identical text",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-01T10:09:52.434+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28404",
+  "summary": "[admin panel] Fix clear info icon on the event page",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-01T10:10:46.763+0100",
+  "text": null
+ },
+ {
+  "k": "EP-39148",
+  "summary": "1st generation of meetings - DS",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-04-01T12:34:10.390+0100",
+  "text": null
+ },
+ {
+  "k": "EP-39150",
+  "summary": "2nd generation of meetings - DS",
+  "epic": "Hyve Meeting Program",
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-04-01T12:36:05.866+0100",
+  "text": null
+ },
+ {
+  "k": "EP-50818",
+  "summary": "Change validation of sponsored  limits on DS side (Speed Networking)",
+  "epic": "Improve Speed Networking Service",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-02T17:14:06.172+0100",
+  "text": "Refined how sponsored-meeting limits are validated on the Data Science side so admin/concierge-created meetings are not wrongly blocked, while genuinely new meetings are still checked. Validation now skips previously generated meetings, checks only newly generated ones, and does not re-check post-generation."
+ },
+ {
+  "k": "EP-50312",
+  "summary": "Recommendation slider on community page look different from design",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-03T11:40:52.620+0100",
+  "text": "Fixed the community page's recommendation slider so its appearance matches the approved Figma design. Recommendation slider now matches the design."
+ },
+ {
+  "k": "EP-45065",
+  "summary": "Exhibitors - New Endpoint on API V3",
+  "epic": "Add new endpoints (v3)",
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-03T12:32:55.451+0100",
+  "text": null
+ },
+ {
+  "k": "EP-48459",
+  "summary": "Provide input to / output from the SN service via S3",
+  "epic": "Improve Speed Networking Service",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-06T08:00:08.390+0100",
+  "text": "Speed Networking can now exchange large input/output JSON via S3 through dedicated API endpoints, removing payload-size limits on scaling. Added three API endpoints to request an S3 location for input, trigger the Speed Networking calculation, and poll status/retrieve the output location, including in-progress responses."
+ },
+ {
+  "k": "EP-40302",
+  "summary": "Scanned Visitor QR includs also team members",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-07T05:58:05.419+0100",
+  "text": null
+ },
+ {
+  "k": "EP-47411",
+  "summary": "Unification of the tokens creation in current implementation",
+  "epic": "Authentication Enablement",
+  "components": [
+   "Authentification"
+  ],
+  "labels": [
+   "DoDUserStory",
+   "NewAnalytics"
+  ],
+  "doneAt": "2026-04-07T05:58:56.513+0100",
+  "text": null
+ },
+ {
+  "k": "EP-51266",
+  "summary": "iOS/Highlighting/Pls made search / filtering behaviour more user friendly ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-07T06:44:09.428+0100",
+  "text": "Fixed iOS schedule search so results scroll to the top of the list instead of staying at the user's prior scroll position. Search results now scroll to the top of the list after a search is applied, while highlighted-sessions scroll behavior is preserved unchanged."
+ },
+ {
+  "k": "EP-50897",
+  "summary": "Organizer sees recommendation blocks with full-width layout and clear boundaries in email templates within an Event",
+  "epic": "Improve Search & Elasticsearch",
+  "components": [
+   "Marketing"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-07T11:12:50.876+0100",
+  "text": "Brought organizer Campaign email recommendation blocks up to the visitor-side standard with clear boundaries and full-width card layouts, so event emails look consistent and professional. Each recommendation block now has a consistent boundary and its cards use the full block width across Exhibitors, Products, News and Sponsors, on desktop and mobile, with no change to recommendation logic."
+ },
+ {
+  "k": "EP-50364",
+  "summary": "Add border and shadow options for individual card views",
+  "epic": "Website Builder & Event Site 2026",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-07T11:24:08.705+0100",
+  "text": "Closed a styling-consistency gap in Website Builder so every static card view can carry borders and shadows, giving organizers a uniform, professional event-site look without design hacks. Border and shadow options were added to the card views that previously lacked them, while views that already supported the styling were left unchanged."
+ },
+ {
+  "k": "EP-50339",
+  "summary": "Website Builder: Organizer can hide the button on individual Cards",
+  "epic": "Website Builder & Event Site 2026",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-07T11:24:24.799+0100",
+  "text": "Website Builder now lets organizers hide the call-to-action button on individual cards via a per-card toggle, removing the previous reliance on custom CSS. A per-card toggle was added to the Website Builder card component so organizers can show or hide the button on each card independently."
+ },
+ {
+  "k": "EP-49810",
+  "summary": "People, Session, Products, News entity not indexed",
+  "epic": "Qdrant Pilot (IMEX)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-08T12:07:08.026+0100",
+  "text": "Extended AI search coverage by indexing People, Sessions, Products and News so name matches across all entity types rank correctly. Indexed the People, News, Product and Session entities in Qdrant so exact name matches surface and rank above weaker description-level matches, consistent with other entity types."
+ },
+ {
+  "k": "EP-51441",
+  "summary": "fix mobile chat popup",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-09T07:37:45.056+0100",
+  "text": "Fixed a visual gap between the header and chat body in the mobile chat popup for a cleaner look. The gap between header and chat body was removed so the mobile chat popup renders cleanly."
+ },
+ {
+  "k": "EP-49783",
+  "summary": "[next14]: Inconsist button markup compares builder, next12, next14",
+  "epic": "Fix issues after next update",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-09T07:38:30.442+0100",
+  "text": "Fixed inconsistent button HTML markup between admin, next12 and next14 so buttons behave and render consistently. Button markup made consistent across the platforms as part of next14 fix-up."
+ },
+ {
+  "k": "EP-45778",
+  "summary": "OCR Badge Scanning",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "qa_testcases_mobile"
+  ],
+  "doneAt": "2026-04-09T10:36:59.013+0100",
+  "text": null
+ },
+ {
+  "k": "EP-50379",
+  "summary": "Android OCR scan - migrate to Jetpack Compose",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "android",
+   "refactor"
+  ],
+  "doneAt": "2026-04-10T06:30:26.127+0100",
+  "text": "Migrated the Android OCR scan screen to Jetpack Compose as part of modernizing the app's UI toolkit. OCR scan feature migrated to Jetpack Compose."
+ },
+ {
+  "k": "EP-48443",
+  "summary": "Fix statistics login events fails exception",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-10T11:10:05.632+0100",
+  "text": "Fixed an exception that broke login-event statistics tracking. The exception in login-event statistics was fixed, restoring correct tracking."
+ },
+ {
+  "k": "EP-49295",
+  "summary": "Exhibitor Tools: Organizer can upload Exhibitor Manual documents per Event language",
+  "epic": "Exhibitor profile",
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-10T12:14:41.503+0100",
+  "text": "Letting organizers upload one Exhibitor Manual document with a separate file per event language replaces the messy multi-entry workaround and is the admin-side half of proper multilingual manuals. Organizers can now upload language-specific files for each enabled event language within a single Exhibitor Manual entry (admin-side; the frontend half is EP-49298)."
+ },
+ {
+  "k": "EP-49298",
+  "summary": "Online Exhibitor Services-Frontend Experience / BE tbd after EP-49295",
+  "epic": "Exhibitor profile",
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-10T12:14:57.937+0100",
+  "text": "On the exhibitor-facing side, exhibitors now see only the Exhibitor Manual file matching their selected event language, completing the multilingual manual experience. Online Exhibitor Services now serves each exhibitor the Exhibitor Manual document in their selected event language only."
+ },
+ {
+  "k": "EP-51745",
+  "summary": "[Next14]: CustomHTML block calls js 2 times.",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-16T07:32:29.695+0100",
+  "text": "Fixed CustomHTML blocks running embedded JavaScript twice during the Next.js 14 migration. Not clearly specified beyond the ticket title; presumed the block now runs its JS once."
+ },
+ {
+  "k": "EP-51858",
+  "summary": "Regex for custom css working wrong with like comments",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-17T07:37:16.337+0100",
+  "text": "Fixed a regex bug that mishandled CSS comments and broke custom CSS rendering. Not clearly specified beyond the ticket title; presumed the regex now handles comments correctly."
+ },
+ {
+  "k": "EP-50636",
+  "summary": "ParticipantOnEventsResource returns events in wrong order",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-17T20:28:22.595+0100",
+  "text": "Fixed a test/resource ordering mismatch where a participant's event registrations came back in a different (but complete) order than expected. Either the resource's ordering is made deterministic and documented, or the test is fixed to not assume insertion order."
+ },
+ {
+  "k": "EP-50580",
+  "summary": "Speakers country filter missing 'country' key — 1 test failure",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-17T20:36:07.229+0100",
+  "text": "Fixed the Speakers search filter to return a missing 'country' key, completing country-based speaker filtering. Speakers search filters now return a 'country' key with correct values."
+ },
+ {
+  "k": "EP-50581",
+  "summary": "Search query filters return wrong result counts — 12 test failures",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-17T20:55:39.730+0100",
+  "text": "Fixed stale search-index data between test runs that was causing 12 search-filter tests to report wrong result counts. Search filter tests are expected to see only their own data, giving correct counts and ordering."
+ },
+ {
+  "k": "EP-51409",
+  "summary": "[BE] Functional tests general changes. ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-17T21:17:12.863+0100",
+  "text": "Fixed the functional test suite's root causes — Phalcon's digit-prefixed bind parameters and missing per-test transaction isolation — in one change. PDO emulated prepares are enabled in the bootstrap, and functional.suite.yml now runs every test in its own isolated, rolled-back transaction with savepoints, without materially slowing the full suite."
+ },
+ {
+  "k": "EP-51050",
+  "summary": "ExpoFP error message in Next.js 14 during loading",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-21T17:10:35.966+0100",
+  "text": "Investigated an ExpoFP floorplan loading error on a Next.js 14 event site (ticket had only a link and screenshot, no further detail). Not clearly specified beyond the ticket title; presumed to fix the floorplan loading error on the affected site."
+ },
+ {
+  "k": "EP-51729",
+  "summary": "change deep-diff library.",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-22T11:23:20.609+0100",
+  "text": "Swapped out the deep-diff library dependency; ticket has no further detail on the underlying issue. Not clearly specified beyond the ticket title."
+ },
+ {
+  "k": "EP-37404",
+  "summary": "Make adaptive fonts",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "ExhibitorTeam",
+   "Team_B",
+   "qa_web_regression"
+  ],
+  "doneAt": "2026-04-22T11:40:59.395+0100",
+  "text": null
+ },
+ {
+  "k": "EP-51601",
+  "summary": "*BeautyIstanbul/ Global* The Kiosk page captures data in Uppercase",
+  "epic": "Participant Registration on New UI",
+  "components": [
+   "Onsite & Kiosk  Registration"
+  ],
+  "labels": [],
+  "doneAt": "2026-04-22T13:16:53.431+0100",
+  "text": "Fixed a kiosk registration bug that force-uppercased emails and corrupted Turkish characters, removing a go-live blocker for BeautyIstanbul 2026. The kiosk email field now preserves the exact characters typed, so emails captured onsite remain valid."
+ },
+ {
+  "k": "EP-51038",
+  "summary": "Update Swagger docs",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-22T15:37:39.720+0100",
+  "text": "Documented 10 Exhibitor analytics/check-in APIs in Swagger as part of a broader initiative to cut tech debt and speed up API testing. The 10 listed Exhibitor Analytics/Check-in endpoints are documented and verified working from the Swagger page, with tracking status marked Done."
+ },
+ {
+  "k": "EP-49577",
+  "summary": "Personalized Meeting Notes  (Core)- Web",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "components": [
+   "Meeting Program",
+   "Mobile App"
+  ],
+  "labels": [
+   "DoDUserStory",
+   "qa_review"
+  ],
+  "doneAt": "2026-04-23T13:30:07.452+0100",
+  "text": "Personalized Meeting Notes (Core) on web delivers tailored AI meeting-note output to each user, deepening the platform's AI meeting-intelligence offering. The core of Personalized Meeting Notes was delivered on web, providing user-tailored meeting notes."
+ },
+ {
+  "k": "EP-50411",
+  "summary": "iOS | Create ExpoButton in SwiftUI",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-04-27T06:25:26.398+0100",
+  "text": "Built a reusable ExpoButton SwiftUI component for iOS, matching the Figma design system spec. ExpoButton component created in SwiftUI per the Figma spec."
+ },
+ {
+  "k": "EP-50672",
+  "summary": "Make adjustments to the MP stability",
+  "epic": "Shoptalk Sprint Preparation",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-27T11:20:35.633+0100",
+  "text": "Hardened DS pipeline validation and fixed several Hive matchmaking bugs (meeting limits, sponsor limits, blocked slots) ahead of Shoptalk's hard deadline. DS-pipeline validation now mirrors the DS team's rules, plus fixes for max meetings between companies, exhibitor-ID-based company identity, blocked timeslots, and buyer/team-member sponsor limits — all rechecked by QA."
+ },
+ {
+  "k": "EP-52414",
+  "summary": "Increasing Sponsor Limit to 150 for legacy view",
+  "epic": "Admin Panel Restructure & Navigation",
+  "components": [
+   "Sponsorship"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-27T16:07:16.802+0100",
+  "text": "The sponsor display limit in the legacy view was raised to 150, allowing events with many sponsors to show them all in the older interface. The legacy-view sponsor limit was increased to 150, so all sponsors at higher-volume events render correctly."
+ },
+ {
+  "k": "EP-47443",
+  "summary": "Development <first> dashboard - for demo to Informa",
+  "epic": "Implement BI tool",
+  "components": [
+   "BI"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-28T08:42:04.435+0100",
+  "text": null
+ },
+ {
+  "k": "EP-49057",
+  "summary": "Plan the CH version upgrade",
+  "epic": "API V3 & Integrations 2026",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-28T08:44:22.405+0100",
+  "text": "Planning the ClickHouse version upgrade de-risks the analytics datastore by scoping the migration before execution, protecting reporting reliability as data volumes grow. A plan for the ClickHouse version upgrade was produced by the Data Science team, defining the approach for the actual upgrade."
+ },
+ {
+  "k": "EP-47157",
+  "summary": "Design new data protocol",
+  "epic": "Implementation of the Data collection pipeline",
+  "components": [
+   "Data Collection Pipelines"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-28T09:27:11.504+0100",
+  "text": null
+ },
+ {
+  "k": "EP-49192",
+  "summary": "[Shoptalk Spring] #2c Backend logic to be changed",
+  "epic": "Shoptalk Sprint Preparation",
+  "components": [],
+  "labels": [
+   "qa_web_regression"
+  ],
+  "doneAt": "2026-04-28T10:00:32.455+0100",
+  "text": "Updated the meeting-generation backend logic and payload ahead of the Shoptalk Spring event, verifying account limits, connections, and role visibility data. Backend payload/logic was updated and confirmed against a checklist of core meeting-generation data (accounts, limits, connections, role access/visibility, timeslot blocks), with two related items spun off into follow-up tickets."
+ },
+ {
+  "k": "EP-52147",
+  "summary": "Make more uniform distribution of meetings among SN participants",
+  "epic": "Improve Speed Networking Service",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-28T13:45:39.266+0100",
+  "text": "The Speed Networking matchmaking engine was tuned to distribute meetings more evenly across participants, improving fairness so more attendees receive a viable schedule. Two internal sorting strategies were trialled against production data, results compared via CSV, and the better-performing approach was shipped to production to flatten meeting distribution."
+ },
+ {
+  "k": "EP-52353",
+  "summary": "Use correct css variables for sticked blocks ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-29T08:31:52.406+0100",
+  "text": "Standardised the CSS variable used for sticky sidebars/headers and flagged redundant layout code for removal. Not clearly specified beyond the ticket's investigative notes; the description itself is exploratory ('probably', 'I think')."
+ },
+ {
+  "k": "EP-50597",
+  "summary": "EventsReadRepositoryCest stale DB data — 8 test failures",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-29T09:30:29.301+0100",
+  "text": "Fixed disabled database cleanup that let stale records pile up across test runs and inflate counts in 3 test suites. Restoring database cleanup between test runs is expected to eliminate cross-test data leakage."
+ },
+ {
+  "k": "EP-48436",
+  "summary": "Develop and deploy AI search exposed via API (tool)",
+  "epic": "AI Search Service (tools)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-29T11:22:46.641+0100",
+  "text": "A new AI search service was built and deployed, letting participants semantically search exhibitor profiles, team members, and products. Built and deployed an AI search service (exposed via API) covering exhibitor profiles, team-member profiles, and products/sessions, after evaluating PGVector vs Typesense alternatives."
+ },
+ {
+  "k": "EP-49804",
+  "summary": "Prototype for IMEX demo",
+  "epic": "Qdrant Pilot (IMEX)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-29T11:27:16.464+0100",
+  "text": "Built a lightweight branded search front-end so the AI search pilot could be demonstrated to IMEX stakeholders without raw API calls. Delivered a polished demo UI with a search box and typeahead autocomplete that calls the search and /autocomplete endpoints and groups results by entity type."
+ },
+ {
+  "k": "EP-48113",
+  "summary": "Reformat action points to single list to send to all participants",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "components": [
+   "Meeting Transcription Tool"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-29T16:00:00.670+0100",
+  "text": "AI meeting-notes now sends one shared action-point list to all participants instead of per-person lists, eliminating a defect where misattributed speakers sent people the wrong action items. Action points are combined into a single list sent identically to every participant, with speaker-name prefixes and a 2-6 item range."
+ },
+ {
+  "k": "EP-47884",
+  "summary": "Refactor IaC for MTT",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "components": [
+   "Meeting Transcription Tool"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-29T16:03:05.575+0100",
+  "text": "MTT's infrastructure-as-code was rebuilt to match Recommendation Service standards, making the AI service safer to deploy toward production. MTT infrastructure-as-code was refactored to follow Recommendation Service best practices."
+ },
+ {
+  "k": "EP-52556",
+  "summary": "add validation to color picker",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-30T07:44:11.809+0100",
+  "text": "Added validation to the color picker so invalid color values can no longer be entered. Not clearly specified beyond the ticket title."
+ },
+ {
+  "k": "EP-49304",
+  "summary": " iOS/Regression/Check pls HTML of description section ( seems on any page but currently about RT) ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-04-30T08:27:49.020+0100",
+  "text": "Fixed a regression where HTML-formatted description text rendered incorrectly on iOS/Android compared to admin content. The HTML description rendering issue was fixed on iOS/Android to match the intended admin-panel content."
+ },
+ {
+  "k": "EP-50293",
+  "summary": "Android/ Phone and E-mail sections missed under lead capture screen ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "qa_android_regression"
+  ],
+  "doneAt": "2026-04-30T09:16:02.198+0100",
+  "text": "Fixed the Android lead capture screen where Contact details (phone/email) were missing entirely instead of following the configured show/hide setting. Contact details field restored on the lead capture screen, respecting the show/hide setting."
+ },
+ {
+  "k": "EP-6281",
+  "summary": "Table meeting setup and meeting cards improvements in app",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-30T10:28:25.198+0100",
+  "text": null
+ },
+ {
+  "k": "EP-51149",
+  "summary": "Personalized Meeting Notes (List) - Web",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-30T11:01:01.272+0100",
+  "text": "Delivered a personalized web Meeting Notes list so attendees and exhibitors can capture and revisit notes tied to their meetings, deepening engagement with the networking workflow. A personalized Meeting Notes list was delivered on web (details in the linked specification)."
+ },
+ {
+  "k": "EP-50129",
+  "summary": "Restructure Module Management for Meeting Format",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-30T11:11:43.242+0100",
+  "text": "Module management for Meeting Format was restructured in the admin panel, providing a cleaner foundation for how organizers configure meeting-format modules. The admin-panel module-management experience for Meeting Format was reorganised into a clearer structure."
+ },
+ {
+  "k": "EP-50104",
+  "summary": "Centralised Management for Speed Networking, Meeting Program, and Concierge Meetings",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-30T11:12:15.631+0100",
+  "text": "Speed Networking, Meeting Program, and Concierge Meetings are now managed from a single centralised admin location, simplifying how organizers configure meeting formats. A centralised management area in the admin panel now controls Speed Networking, Meeting Program, and Concierge Meetings together."
+ },
+ {
+  "k": "EP-50105",
+  "summary": "Email Templates Management for Speed Networking, Meeting Program, and Concierge Meetings in Admin Panel",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-30T11:12:37.431+0100",
+  "text": "Organizers gained centralised admin-panel control over email templates for Speed Networking, Meeting Program, and Concierge Meetings, removing the need for scattered template edits. Admin-panel email-template management was added for Speed Networking, Meeting Program, and Concierge Meetings."
+ },
+ {
+  "k": "EP-50107",
+  "summary": "Email Templates Management for Exhibitor Events and Round Tables in Meeting Formats",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-30T11:17:27.654+0100",
+  "text": "Email-template management was extended to Exhibitor Events and Round Tables meeting formats, letting organizers self-serve communications for these formats from the admin panel. Admin-panel email-template management now covers Exhibitor Events and Round Tables in Meeting Formats."
+ },
+ {
+  "k": "EP-50109",
+  "summary": "Enhancements to Exhibitor Events Management in Meeting Formats for Organizers",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-30T11:17:45.335+0100",
+  "text": "Organizer tooling for managing Exhibitor Events within Meeting Formats was enhanced, giving organizers richer control over how exhibitor events are configured. Enhancements were delivered to the Exhibitor Events management workflow in Meeting Formats for organizers."
+ },
+ {
+  "k": "EP-50110",
+  "summary": "Independent Management for Round Tables in Admin Panel",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-30T11:18:03.550+0100",
+  "text": "Round Tables can now be managed independently in the admin panel, decoupling them from other meeting formats for clearer organizer control. The admin panel now supports independent management of Round Tables as a distinct meeting format."
+ },
+ {
+  "k": "EP-52170",
+  "summary": "[Sprint 1] Packaging - DS (12-16)",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-04-30T11:31:25.363+0100",
+  "text": "The AI Search and Ingest services were containerised, dependency-pinned, and pushed to AWS ECR, making the new search stack deployable and reproducible. Dead dependencies were removed and versions pinned, Docker images for both Search API and Ingest service were built and pushed to AWS ECR, and both containers passed local end-to-end tests."
+ },
+ {
+  "k": "EP-50643",
+  "summary": "bySession export rework",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-30T11:52:51.568+0100",
+  "text": "Reworked the bySession report export to run via SQS, making it faster and more stable for admins downloading session data. The bySession export now runs via SQS, with the downloaded report containing all the expected session information."
+ },
+ {
+  "k": "EP-51468",
+  "summary": "Error saving session on RC",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-30T11:59:04.815+0100",
+  "text": "Fixed a session-save error found during RC testing for a specific event and session. Not clearly specified beyond the ticket title; presumed the session-save error was resolved."
+ },
+ {
+  "k": "EP-51127",
+  "summary": "API Return Time Slots Without Blocked Time",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-04-30T15:12:33.471+0100",
+  "text": "Fixed the meeting scheduling API to stop returning already-booked or blocked time slots as available. The API now filters out blocked/booked time slots, returning only availability for booking."
+ },
+ {
+  "k": "EP-23843",
+  "summary": "Personalized Meeting Notes - Mobile ",
+  "epic": null,
+  "components": [
+   "Curated Meeting ",
+   "Mobile App"
+  ],
+  "labels": [
+   "qa_maestro_select"
+  ],
+  "doneAt": "2026-05-05T10:41:56.521+0100",
+  "text": null
+ },
+ {
+  "k": "EP-50499",
+  "summary": "CLI test: Visit SyncUsername property access on non-object",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-06T09:17:26.277+0100",
+  "text": "Fixed Visit integration username-sync failures caused by the same null-account bug affecting visitor creation. Visit integration username-sync now works against a valid account, and the 4 related test methods pass."
+ },
+ {
+  "k": "EP-50594",
+  "summary": "Basket discount calculations return 0 — 7 test failures",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-06T09:18:34.073+0100",
+  "text": "Fixed a source-code bug that made every basket discount type (absolute, multi-buy, code) calculate as 0 instead of the correct amount. Basket discount calculations now return the correct non-zero amounts for absolute, multi-buy, and code-based discounts."
+ },
+ {
+  "k": "EP-50496",
+  "summary": "CLI test: Aditus account creation returns null",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-06T09:19:35.649+0100",
+  "text": "Fixed Aditus integration account creation, which was returning null and breaking team-member role preservation. Aditus account creation now succeeds, restoring correct team-member condition and role handling."
+ },
+ {
+  "k": "EP-50497",
+  "summary": "CLI test: A2Z integration processing failures",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-06T09:20:16.719+0100",
+  "text": "Fixed a SQL syntax error and two data-mapping bugs (custom questions, product categories) in the A2Z integration. A2Z integration now runs valid SQL, stores custom question answers, and correctly maps product categories."
+ },
+ {
+  "k": "EP-50498",
+  "summary": "CLI test: N200 getAccountEvent() called on null",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-06T09:20:53.012+0100",
+  "text": "Fixed N200 integration visitor creation, which returned null and crashed downstream custom-question mapping. N200 visitor account creation now succeeds, allowing custom question mapping to proceed without crashing."
+ },
+ {
+  "k": "EP-50624",
+  "summary": "PDO invalid parameter number in models with 10+ columns (Phalcon 4)",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-06T09:22:58.014+0100",
+  "text": "Root-caused a Phalcon/PDO bug where 10+ column models (including Payments) generate ambiguous bind parameters and fail to save. The root cause is documented with concrete fix options, informing the emulated-prepares fix later applied in EP-51409."
+ },
+ {
+  "k": "EP-50600",
+  "summary": "RegisterPricing basket operations throw ItemUnavailableException — 8 errors",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-06T09:23:33.325+0100",
+  "text": "Investigating why RegisterPricing basket operations throw an unexpected item-unavailable error in 8 test cases. Investigation is expected to identify whether the availability check itself is broken or the test environment is missing required setup."
+ },
+ {
+  "k": "EP-50604",
+  "summary": "Ticket validation date message mismatch — 1 test failure",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-06T09:24:55.610+0100",
+  "text": "Fixed a ticket-validation test using stale hardcoded 2024 dates that no longer matched the event fixture. The test now aligns with current event fixture date boundaries and asserts the correct validation message."
+ },
+ {
+  "k": "EP-52404",
+  "summary": "Spike: Investigate data availability in ClickHouse for reporting dashboards",
+  "epic": "Automated Event Reporting Dashboards (Embeddable.com)",
+  "components": [
+   "BI"
+  ],
+  "labels": [],
+  "doneAt": "2026-05-06T09:37:44.161+0100",
+  "text": "Assessed ClickHouse data readiness for the new Embeddable.com reporting dashboards to plan the pipelines needed to build them. Produced an inventory of usable ClickHouse tables, missing datasets with their PostgreSQL sources, proposed new ClickHouse tables/pipelines, and a granularity-compatibility assessment."
+ },
+ {
+  "k": "EP-52585",
+  "summary": "Fix content width of portal-ui",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-06T10:50:45.415+0100",
+  "text": "Fixed portal-ui content width to match the 1416px design spec, correcting a visual layout inconsistency. Content width fixed to 1416px per design."
+ },
+ {
+  "k": "EP-52663",
+  "summary": "Remove fetched logger from the Next.js server fetch ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-06T10:51:36.721+0100",
+  "text": "Removed a logger call from the Next.js server fetch helper; ticket has no further detail on the motivation. Not clearly specified beyond the ticket title."
+ },
+ {
+  "k": "EP-49473",
+  "summary": "Optimization of recommendation service inference cold start time",
+  "epic": "Recreate category-based Recommendation Service",
+  "components": [
+   "Recommendation Service"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-07T09:07:43.044+0100",
+  "text": "Cutting the recommendation service's cold-start time (previously 30-50s on a tenant's first request) sharply improves responsiveness of matchmaking for the first user of each event. The recommendation inference cold-start path was optimised to significantly reduce first-request response time without affecting recommendation accuracy."
+ },
+ {
+  "k": "EP-50219",
+  "summary": "Revisit BM filtering for inference part of recommendation service",
+  "epic": "Recreate category-based Recommendation Service",
+  "components": [
+   "Recommendation Service"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-07T09:08:35.389+0100",
+  "text": "Business Matching filters in the new recommendation service were reviewed and test-covered, ensuring the matchmaking engine produces accurate recommendations. BM filter behaviour was reviewed and understood, automated tests were added for each filter, and issues were either fixed or captured as linked follow-up tasks."
+ },
+ {
+  "k": "EP-47167",
+  "summary": "Implement calculations of embeddings and distances for categories",
+  "epic": "Recreate category-based Recommendation Service",
+  "components": [
+   "Recommendation Service"
+  ],
+  "labels": [
+   "API"
+  ],
+  "doneAt": "2026-05-07T09:09:43.160+0100",
+  "text": null
+ },
+ {
+  "k": "EP-46047",
+  "summary": "Infrastructure on AWS for new Recommendation System",
+  "epic": "Recreate category-based Recommendation Service",
+  "components": [
+   "Recommendation Service"
+  ],
+  "labels": [
+   "MVP",
+   "R&D"
+  ],
+  "doneAt": "2026-05-07T09:10:32.741+0100",
+  "text": null
+ },
+ {
+  "k": "EP-49371",
+  "summary": "Align recommender entities of the new recommendation service with the current",
+  "epic": "Recreate category-based Recommendation Service",
+  "components": [
+   "Recommendation Service"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-07T09:11:30.008+0100",
+  "text": "Aligning the new recommendation service's entities and output exactly with the legacy service de-risks the cutover, ensuring matchmaking quality doesn't regress when the rebuild ships. Recommendation entities in the new service were aligned with the current service and verified so the new recommender's output matches the existing one."
+ },
+ {
+  "k": "EP-48058",
+  "summary": "Implement the API for the new Recommendation service",
+  "epic": "Recreate category-based Recommendation Service",
+  "components": [
+   "Recommendation Service"
+  ],
+  "labels": [],
+  "doneAt": "2026-05-07T09:12:46.300+0100",
+  "text": "A backend API was implemented for the new Recommendation Service, giving the platform a clean integration point to surface category-based recommendations to participants. Implemented the recommendation service API per the documented backend integration contract."
+ },
+ {
+  "k": "EP-50605",
+  "summary": "UniquenessMapCest cannot save Checkin model — 1 test error",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T09:39:51.962+0100",
+  "text": "Fixed an incomplete Checkin model test factory that was failing to save records needed for check-in export tests. The Checkin factory is expected to save successfully once its definition is corrected."
+ },
+ {
+  "k": "EP-47953",
+  "summary": "Networking & Matchmaking: Select All Child Categories When Parent is Selected",
+  "epic": "Internal Feature Development / Improvement",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-07T10:07:07.976+0100",
+  "text": "Selecting a parent category in Networking now auto-selects all its child categories, turning a tedious one-by-one click chore into a single action during event matchmaking setup. Added a Select All checkbox that recursively selects a parent and all descendant categories, with the ability to deselect individuals and auto-deselect children when the parent is unchecked."
+ },
+ {
+  "k": "EP-52874",
+  "summary": "Remove unused punycode dependency from portal-ui",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T13:38:39.460+0100",
+  "text": "Removed the vestigial punycode production dependency, unused outside of dev-only tooling. Dependency removed from production dependencies; dev-only transitive copies left unaffected; build and tests verified."
+ },
+ {
+  "k": "EP-52870",
+  "summary": "Remove unused next-absolute-url dependency",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T13:39:32.788+0100",
+  "text": "Removed the unused next-absolute-url dependency, which had no imports anywhere in the codebase. Dependency removed from package.json and lockfile; build and tests verified to pass."
+ },
+ {
+  "k": "EP-52873",
+  "summary": "Remove unused next-redux-wrapper dependency from portal-ui",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T13:41:48.645+0100",
+  "text": "Removed the unused next-redux-wrapper dependency and corrected stale docs that still referenced it. Dependency removed and CLAUDE.md corrected; build and tests verified to pass."
+ },
+ {
+  "k": "EP-52877",
+  "summary": "Remove unused react-dnd dependency",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T13:43:57.010+0100",
+  "text": "Removed the unused, ~1.5MB react-dnd dependency since drag-and-drop actually runs on @dnd-kit. Dependency removed from package.json; build and tests verified to pass."
+ },
+ {
+  "k": "EP-52879",
+  "summary": "Remove unused redux-wrapper dependency from portal-ui",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T13:44:35.624+0100",
+  "text": "Removed an abandoned, empty placeholder package (redux-wrapper) carrying a typosquat-style supply-chain risk. Dependency removed from package.json and lockfile; build and tests verified to pass."
+ },
+ {
+  "k": "EP-52880",
+  "summary": "Remove unused xml2js dependency from portal-ui",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T13:45:28.783+0100",
+  "text": "Removed the unused xml2js dependency, eliminating an associated prototype-pollution CVE from the dependency tree. Dependency removed, eliminating the CVE and audit noise, with xml-js-dependent features (formBuilderV2, edit profile) confirmed unaffected."
+ },
+ {
+  "k": "EP-52850",
+  "summary": "Remove direct clsx dependency, replace 8 trivial usages with native JS",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T13:50:27.129+0100",
+  "text": "Removed the duplicated clsx dependency and its 8 trivial usages, shrinking the bundle and lint-guarding against regressions. All 8 call sites rewritten in native JS, clsx removed from package.json, and an ESLint rule added to prevent it creeping back in."
+ },
+ {
+  "k": "EP-52867",
+  "summary": "Move ignore-loader from dependencies to devDependencies",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T13:53:08.615+0100",
+  "text": "Reclassified the build-only ignore-loader package as a devDependency instead of shipping it in production installs. Package moved to devDependencies with build and test file exclusion verified unaffected."
+ },
+ {
+  "k": "EP-52851",
+  "summary": "Remove unused `country-flag-icons` dependency from portal-ui",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T13:53:50.372+0100",
+  "text": "Removed the unused, 21MB country-flag-icons dependency, which had zero imports anywhere in the codebase. Dependency removed from package.json and lockfile with confirmed zero functional or bundle impact."
+ },
+ {
+  "k": "EP-51573",
+  "summary": "Optimize migration script",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T15:06:29.285+0100",
+  "text": "Optimized an exhibitor-related migration script; ticket has no further detail beyond the title. Not clearly specified beyond the ticket title."
+ },
+ {
+  "k": "EP-50083",
+  "summary": "Investigate getUserRole in src\\utils\\helpers\\helpers.ts (after https://bitbucket.org/expoplatform/admin-ui/pull-requests/2872 will be merged)",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-07T16:10:58.599+0100",
+  "text": "Investigated whether getUserRole's handling of multi-role arrays was correct, following a reviewer's concern on a related PR. Current getUserRole behavior investigated and clarified."
+ },
+ {
+  "k": "EP-51659",
+  "summary": "Changing badge display logic",
+  "epic": "Mobile App — 2026 Enhancements",
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-08T07:32:14.065+0100",
+  "text": "Added a badge-scan-gated email visibility setting in the mobile app so attendee emails appear only after their badge is scanned, balancing privacy with lead capture at IMEX. A new toggle 'Show Visitor email ONLY after badge scan' was added; when enabled with profile email hidden, email appears on a profile only after a successful badge scan."
+ },
+ {
+  "k": "EP-50595",
+  "summary": "Basket ticket availability date-dependent failures — 2 test failures",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-11T09:56:13.846+0100",
+  "text": "Fixed two basket-availability tests that used wrong test dates and timezone-sensitive date math rather than reflecting a real defect. The two tests are corrected to use appropriate dates and timezone-safe comparisons."
+ },
+ {
+  "k": "EP-53055",
+  "summary": "Remove UserIp from all request except login and auth, fix tagset removing time in redis cache ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-11T16:22:57.400+0100",
+  "text": "Fixed a production Redis cache leak (21MB to 12.44GB in 5 weeks) from per-IP cache fragmentation and a broken tag-cleanup mechanism. Removed automatic IP-injection from generic anonymous fetches (kept only for login/getAuth), fixed the tag-set lifecycle to drop dead members and stop resetting TTL forever, cleaned up already-accumulated Redis keys, and added monitoring alarms to catch recurrence."
+ },
+ {
+  "k": "EP-46288",
+  "summary": "Integration HUB Migration - Aventri V2",
+  "epic": "Integration HUB - Integrations EPIC",
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-11T17:36:04.361+0100",
+  "text": null
+ },
+ {
+  "k": "EP-50076",
+  "summary": "Native integrations documentation",
+  "epic": "Native Integrations - Migrations",
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-11T18:43:11.329+0100",
+  "text": "Three-tier documentation for Native Integrations on the new Abstract Integration Schema was produced, equipping developers, managers, and clients to operate post-migration integrations. Developer, manager, and client-level documentation was created covering architecture and data flows, business capabilities, and client-facing configuration and troubleshooting."
+ },
+ {
+  "k": "EP-46776",
+  "summary": "CDS - Participant Integration",
+  "epic": "Integration HUB - Integrations EPIC",
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-11T18:44:50.634+0100",
+  "text": null
+ },
+ {
+  "k": "EP-47099",
+  "summary": "Integration HUB Migration - Infosalon/Aditus",
+  "epic": "Native Integrations - Migrations",
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-11T18:46:40.751+0100",
+  "text": null
+ },
+ {
+  "k": "EP-52566",
+  "summary": "Removal of Google+ from Brand Creation Social Media Links",
+  "epic": null,
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-12T09:49:49.697+0100",
+  "text": "Google+ was removed as an option from the brand-creation social media links, cleaning up a defunct social network from exhibitor brand profiles. Google+ was removed from the social media link options in brand creation, leaving only relevant, active networks."
+ },
+ {
+  "k": "EP-52579",
+  "summary": "Wrong siteUrl on first load or refresh ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-12T15:14:37.893+0100",
+  "text": "Fixed the news page's site URL breaking on direct load or refresh in the Next.js 14 rebuild. Not clearly specified beyond the ticket title; presumed the siteUrl now resolves correctly on direct load and refresh."
+ },
+ {
+  "k": "EP-52525",
+  "summary": "Manual manager dynamic import fix ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-12T15:14:56.311+0100",
+  "text": "Fixed a dynamic-import bug in the manual manager; details were only in an external recording link, not available here. Not clearly specified beyond the ticket title."
+ },
+ {
+  "k": "EP-52658",
+  "summary": "clear all user data on 403 response",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-13T08:52:49.343+0100",
+  "text": "Unified 401/403 handling into one reliable logout flow, fixing stale sessions left behind in background browser tabs. All 401/403 responses now trigger a single clear-and-redirect flow, the 'Not paid' modal no longer wrongly triggers on 403, logout analytics ordering was fixed, and every tab now reliably redirects on its own first 403 with debouncing to prevent redirect storms."
+ },
+ {
+  "k": "EP-50249",
+  "summary": "Random sorting for sponsors in app",
+  "epic": "Admin Panel Restructure & Navigation",
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "DoDUserStory",
+   "qa_testcases_mobile"
+  ],
+  "doneAt": "2026-05-13T10:35:14.670+0100",
+  "text": "The mobile app now supports matchmaking-based and randomized sorting of sponsors and sponsored products, aligning mobile sponsor visibility with the new web admin controls. Mobile now reads the active sorting mode from the API and renders sponsors and sponsored products By matchmaking (score order) or Random (in-app shuffle, re-shuffled on each screen re-entry), while preserving existing set-priority behaviour and display limits."
+ },
+ {
+  "k": "EP-52943",
+  "summary": "add bundle analyzer script for Next.js production build",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-13T15:42:08.258+0100",
+  "text": "Added an on-demand bundle-analyzer build script, giving the team repeatable visibility into bundle composition. New build:analyze npm script added, running a production build with the Next.js bundle analyzer enabled, without affecting existing build/dev scripts."
+ },
+ {
+  "k": "EP-52815",
+  "summary": "unify apiCall and apiSendForm",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-13T16:03:32.265+0100",
+  "text": "Deduplicated header-building and response-handling logic shared between apiCall and apiSendForm to cut maintenance risk. Extracted shared buildDefaultHeaders() and processResponse() functions used by both apiCall and apiSendForm."
+ },
+ {
+  "k": "EP-50840",
+  "summary": "Add API functionality to propagate likes across exhibitor team members (API param)",
+  "epic": "Improve Speed Networking Service",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-14T07:34:51.967+0100",
+  "text": "Added an API-toggleable rule that pools likes across an exhibitor's team members so an inactive teammate no longer drags down the team's matchmaking reach. Likes are now de-duplicated and propagated across all team members of an exhibitor (grouped by Exhibitor ID), switchable via an API parameter, with docs updated."
+ },
+ {
+  "k": "EP-48239",
+  "summary": "Add more Filters to Exhibitor Events / Sessions Page on Admin Panel",
+  "epic": "Admin Panel Restructure & Navigation",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-14T10:28:33.669+0100",
+  "text": "Robust filters were added to the admin Sessions and Exhibitor Events pages, mirroring the Exhibitor Directory so organizers stop scrolling through flat lists to find specific sessions or events. Added independent filter sections (e.g. session type and more) to both the Sessions page and the Exhibitor Events page."
+ },
+ {
+  "k": "EP-51830",
+  "summary": "API V3 - [GET] /api/v3/events/{eventId}/sponsors",
+  "epic": "Migration of endpoints (Public API v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-14T10:47:44.122+0100",
+  "text": "Introduced a net-new V3 endpoint to retrieve event sponsors with full profile, category and placement data, broadening the public API's coverage for partner integrations. A new GET /api/v3/events/{eventId}/sponsors endpoint was delivered returning sponsor profile, category and placement configuration with pagination."
+ },
+ {
+  "k": "EP-51438",
+  "summary": "API V3 - [GET] /api/v3/events/{eventId}/products (New Endpoint - Not present in V2)",
+  "epic": "Migration of endpoints (Public API v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-14T10:47:48.239+0100",
+  "text": "Introduced a net-new V3 endpoint to retrieve event products programmatically, expanding what partners can pull from the platform via the public API. A new GET /api/v3/events/{eventId}/products endpoint was delivered with exhibitor, status and updated-since filters, localisation and pagination."
+ },
+ {
+  "k": "EP-52613",
+  "summary": "API V3 - [GET] /api/v3/events/{eventId}/sponsor-categories",
+  "epic": "Migration of endpoints (Public API v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-14T10:47:52.515+0100",
+  "text": "A new public API v3 endpoint was delivered that returns the sponsor categories configured for an event, letting integrators resolve sponsor category IDs. A GET /api/v3/events/{eventId}/sponsor-categories endpoint now returns paginated sponsor categories (id and title) with bearer authentication, enabling integrators to map sponsor category IDs to names."
+ },
+ {
+  "k": "EP-52952",
+  "summary": "Update Lead Contribution Logic for Exhibitors Based on Meeting Appointments",
+  "epic": "Lead Capture pro settings",
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-14T14:38:37.849+0100",
+  "text": "Updates how exhibitor lead contribution is calculated so that meeting appointments feed into the lead scoring exhibitors see. Revised lead-contribution calculation that incorporates meeting appointments into exhibitor lead metrics."
+ },
+ {
+  "k": "EP-53420",
+  "summary": "Fix work with local and session storages in case they are disabled",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-14T15:29:39.511+0100",
+  "text": "Fixed a production crash in Android WebViews where disabled DOM storage caused the app to throw on every storage write. New storage-availability checks correctly detect SSR, null storage, and SecurityError cases across all 8 affected storage methods, with 3 call sites that bypassed the shared helper migrated to use it, preserving existing null/no-op behaviour."
+ },
+ {
+  "k": "EP-50893",
+  "summary": "Refactor sponsors/banner stats tracking and ClickHouse monitoring",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-15T12:15:34.424+0100",
+  "text": "Investigated and fixed missing sponsor/banner statistics tracking and rebuilt the ClickHouse tool used to monitor it. The banners/get stats-recording gap is investigated and resolved (fixed or intentionally removed), and the ClickHouse monitoring tool is rewritten."
+ },
+ {
+  "k": "EP-53049",
+  "summary": "Add exhibitor name on the Exhibitor Event Detail View",
+  "epic": "Exhibitor profile",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-15T12:38:37.308+0100",
+  "text": "Adds the hosting Exhibitor's name to Exhibitor Event detail cards so attendees can identify the organizer without returning to the list view. Exhibitor Event detail cards now display the hosting Exhibitor name, matching the list view across Web, iOS and Android."
+ },
+ {
+  "k": "EP-52848",
+  "summary": "Restore BroadcastChannel cross-tab logout sync lost during Next.js 14 migration",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "auth",
+   "next14-migration",
+   "tech-debt"
+  ],
+  "doneAt": "2026-05-15T12:54:12.428+0100",
+  "text": "Restored cross-tab logout sync lost in the Next.js 14 migration so logging out clears session state in every open tab. setBroadcastChannel() is dispatched again on auth initialisation, so logging out in one tab now clears state in all other tabs immediately."
+ },
+ {
+  "k": "EP-46050",
+  "summary": "Standard Questions Default State Configuration",
+  "epic": null,
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-15T15:26:58.275+0100",
+  "text": null
+ },
+ {
+  "k": "EP-50635",
+  "summary": "Account model save fails in IntegerFilterWrongTypesDelegatesCest",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-17T19:23:36.786+0100",
+  "text": "Investigating why the Account model test factory fails to save, blocking 12 integer-filter test cases. Investigation is expected to identify and correct the missing field or constraint blocking Account factory saves in tests."
+ },
+ {
+  "k": "EP-50974",
+  "summary": "Extend Exhibitor Permissions to Products",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-18T12:47:09.866+0100",
+  "text": "Closed a permission gap that let restricted or guest users see/interact with an Exhibitor's Products even when the Exhibitor itself was restricted. Products now inherit their Exhibitor's resolved visibility and Message/Meeting interaction restrictions, consistently across web and mobile, including for users with multiple roles/categories."
+ },
+ {
+  "k": "EP-45868",
+  "summary": "[portalUI] add loader to the buttons with downloading files in the user profile",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-19T08:13:42.092+0100",
+  "text": null
+ },
+ {
+  "k": "EP-49438",
+  "summary": "Attendance: Organizer can compare Check-ins across co-located Events and view Crossover Check-ins in Total Check-In / Check-Out graph",
+  "epic": "Attendance & Event Analytics 2026",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-19T13:11:36.479+0100",
+  "text": "Organizers of co-located events can now compare check-ins across events and see crossover check-ins in the Check-In/Check-Out graph. The Total Check-In / Check-Out graph now supports comparing check-ins across co-located events and surfaces crossover check-ins, filterable by badge origin."
+ },
+ {
+  "k": "EP-46360",
+  "summary": "Lead capture notes field. Character limitation",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-20T08:11:43.511+0100",
+  "text": null
+ },
+ {
+  "k": "EP-50618",
+  "summary": "[Manual | con logic by table fields]: It is necessary to return default values ​​of fields with cond logic",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-20T08:51:43.550+0100",
+  "text": "Fixed the manual sections API to return admin-configured default values for conditional-logic fields even before a user has saved anything. The manual sections API now returns the admin-configured default conditional-logic values in the expected format, even without a prior save."
+ },
+ {
+  "k": "EP-51144",
+  "summary": "Create Service for parse Xml form for manual_blocks - improvement for the bug EP-45192",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-20T09:56:10.419+0100",
+  "text": "Built a dedicated XML-parsing service for manual_blocks forms as a follow-up to bug EP-45192 (ticket had no further detail). Not clearly specified beyond the ticket title; presumed to deliver a dedicated XML-parsing service for manual_blocks forms."
+ },
+ {
+  "k": "EP-47674",
+  "summary": "Global Search. Improve current search field to be global",
+  "epic": "Search Anatomy",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-20T10:21:00.186+0100",
+  "text": null
+ },
+ {
+  "k": "EP-49669",
+  "summary": "[BE] Create tests for manuals ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-20T16:58:03.680+0100",
+  "text": "Added backend test coverage for the Exhibitor Manual feature to reduce regression risk. New backend tests created for manuals."
+ },
+ {
+  "k": "EP-52878",
+  "summary": "Consolidate infinite scroll libraries: drop react-infinite-scroller in favor of react-infinite-scroll-component",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-20T18:56:20.945+0100",
+  "text": "Consolidated two competing infinite-scroll libraries into one, migrating the last 3 components and shrinking the bundle. All 3 components migrated to react-infinite-scroll-component; the legacy library and its types removed, saving about 2.8KB gzipped."
+ },
+ {
+  "k": "EP-44532",
+  "summary": "[FE] Manual refactoring | Profile Info Section",
+  "epic": "[FE Techdept] Manual refactoring",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-21T10:16:21.028+0100",
+  "text": null
+ },
+ {
+  "k": "EP-41662",
+  "summary": "[FE] Manual refactoring | Equipment Section",
+  "epic": "[FE Techdept] Manual refactoring",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-21T10:16:28.993+0100",
+  "text": null
+ },
+ {
+  "k": "EP-43190",
+  "summary": "[FE]  Manual refactoring | Team Members Section and ProfileTeamMembers",
+  "epic": "[FE Techdept] Manual refactoring",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-21T10:16:37.149+0100",
+  "text": null
+ },
+ {
+  "k": "EP-44122",
+  "summary": "[FE] Manual refactoring | Badges Section",
+  "epic": "[FE Techdept] Manual refactoring",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-21T10:16:39.495+0100",
+  "text": null
+ },
+ {
+  "k": "EP-44658",
+  "summary": "[FE] Manual refactoring | Table Section",
+  "epic": "[FE Techdept] Manual refactoring",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-21T10:16:42.031+0100",
+  "text": null
+ },
+ {
+  "k": "EP-44778",
+  "summary": "[FE] Manual refactoring | Summary Section",
+  "epic": "[FE Techdept] Manual refactoring",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-21T10:16:44.136+0100",
+  "text": null
+ },
+ {
+  "k": "EP-42095",
+  "summary": "[FE] Implementation of the overall structure for the manual: context, navigation, and display logic",
+  "epic": "[FE Techdept] Manual refactoring",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-21T10:16:45.961+0100",
+  "text": null
+ },
+ {
+  "k": "EP-42902",
+  "summary": "[FE] Manual refactoring | Lead Capture Section",
+  "epic": "[FE Techdept] Manual refactoring",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-21T10:16:47.999+0100",
+  "text": null
+ },
+ {
+  "k": "EP-42944",
+  "summary": "[FE] Manual refactoring | Documents Section",
+  "epic": "[FE Techdept] Manual refactoring",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-21T10:16:49.987+0100",
+  "text": null
+ },
+ {
+  "k": "EP-53440",
+  "summary": "Transfer admin notifications to the SQS queue",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-21T11:54:29.739+0100",
+  "text": "Gave admin notifications their own SQS queue so they no longer wait behind unrelated jobs, fixing a delay bug traced to shared-queue contention. A dedicated SQS queue with its own worker concurrency/scaling and monitoring now handles admin notification dispatch, isolating it from general workload contention."
+ },
+ {
+  "k": "EP-52457",
+  "summary": "Implementing Universal Pagination Memory in Admin Panel for User Experience Enhancement - Required List ONLY",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-21T21:35:01.590+0100",
+  "text": "Universal pagination memory was implemented for required lists in the admin panel, so the platform remembers an organiser's page position as they navigate. Required admin-panel lists now retain pagination state across navigation, giving consistent page-position memory for organisers."
+ },
+ {
+  "k": "EP-51733",
+  "summary": "Platform Text changes: error message in the basket",
+  "epic": "Internal Feature Development / Improvement",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-22T10:40:25.265+0100",
+  "text": "Corrected a misleading basket error message about order/payment deadlines so exhibitors get accurate guidance, reducing confusion on a live client environment. The message was reworded to reference an order deadline ('The order deadline for this section is [Date]. Please finalize your order by then.')."
+ },
+ {
+  "k": "EP-52989",
+  "summary": "Standardising Pagination in the Admin Panel for Consistency and User Experience",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-22T10:46:22.637+0100",
+  "text": "Standardizes pagination behavior across the Admin Panel so organizers get a consistent navigation experience between list screens. A standardized pagination pattern applied across Admin Panel listings."
+ },
+ {
+  "k": "EP-46276",
+  "summary": "Support Hyve with Speed Networking endpoint setup and troubleshooting",
+  "epic": "Improve Speed Networking Service",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [
+   "SpeedNetworking"
+  ],
+  "doneAt": "2026-05-22T11:25:37.582+0100",
+  "text": null
+ },
+ {
+  "k": "EP-42370",
+  "summary": "Changes in Manual API - part of Manual refactoring scope",
+  "epic": null,
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [],
+  "doneAt": "2026-05-22T12:57:32.932+0100",
+  "text": null
+ },
+ {
+  "k": "EP-51701",
+  "summary": "Adding sorting and multi-select to internal floorplan",
+  "epic": "Customer Feature Requests",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-22T15:49:43.516+0100",
+  "text": "Added natural-order sorting and multi-select bulk delete to the internal floorplan, sharply cutting the manual effort organizers spend managing halls and stands for large events. Halls and stands can be returned in natural alphanumeric order and selected (including select-all) for bulk deletion."
+ },
+ {
+  "k": "EP-53550",
+  "summary": "Researching access logic",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [],
+  "doneAt": "2026-05-25T13:02:30.937+0100",
+  "text": "Mapped the platform's existing category/networking-permission rules onto global search so an opted-out or restricted user never shows up in someone else's results. Documented how the layered visibility model (permission matrix, networking opt-in/GDPR, connection settings, module toggles) must be applied when filtering global search results."
+ },
+ {
+  "k": "EP-52171",
+  "summary": "[Sprint 1] ECS Deployment - DS (17–24)",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-26T09:41:50.184+0100",
+  "text": "The AI Search stack was deployed to AWS ECS behind a load balancer with health checks, auto-restart, and traffic- and queue-based auto-scaling, making search production-grade and resilient. Search API, Ingest service, and pg-listener run on ECS; the Search API sits behind an ALB with /health checks, crashed containers auto-restart, the API auto-scales on traffic, and ingest workers auto-scale on SQS queue depth."
+ },
+ {
+  "k": "EP-52174",
+  "summary": "[Sprint 2] Infrastructure as Code - DS",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-26T09:42:43.016+0100",
+  "text": "All AWS infrastructure for the Global Search system was codified in Terraform, giving the search stack reproducible, version-controlled, drift-free environments. VPC/networking, ECS services, ALB, SQS, and EventBridge for the search system are defined in Terraform with remote S3+DynamoDB state, so a clean apply provisions a working environment with zero unexpected drift."
+ },
+ {
+  "k": "EP-52175",
+  "summary": "[Sprint 2] Reliability - DS 40–42",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-26T09:50:38.893+0100",
+  "text": "The AI Search service was made highly available across two AWS zones, load-tested, and costed, de-risking it for production launch. The Search API now runs across two AWS availability zones, load testing was completed with Locust, and a monthly cost estimate covering AWS, OpenAI, and Qdrant was produced."
+ },
+ {
+  "k": "EP-52363",
+  "summary": "[Dashboard] Exhibitor Analytics — Count, Completion, Login, Engagement & Profile Performance (R2-R5, R15)",
+  "epic": "Automated Event Reporting Dashboards (Embeddable.com)",
+  "components": [
+   "Reporting"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-27T09:38:15.480+0100",
+  "text": "An Exhibitor Analytics dashboard page was delivered, giving organisers visibility into exhibitor counts, profile completion, logins, engagement, and profile performance over time. An Exhibitor Analytics page now charts exhibitor count by tier over time, profile-completion status with KPI cards and drill-down, login tracking, and engagement/profile-performance metrics (PRD R2-R5, R15)."
+ },
+ {
+  "k": "EP-53551",
+  "summary": "Researching new entities for search",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [],
+  "doneAt": "2026-05-27T09:53:06.201+0100",
+  "text": "Scoped which of the platform's 13+ content types (exhibitors, sessions, products, news, groups and more) the new search feature needs to eventually cover. Defined the target list of 13+ entity types (Exhibitors, Visitors, Hosted Buyers, Speakers, Sessions, Products, News, Brands, Pavilions, Round Tables, On-Demand, Groups, etc.) search must eventually cover."
+ },
+ {
+  "k": "EP-52820",
+  "summary": "Investigate and fix mobile app sync process for past/expired events",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "tech-debt"
+  ],
+  "doneAt": "2026-05-27T09:59:56.228+0100",
+  "text": "Investigated recurring mobile-app data loss for finished events to define a permanent fix and retention policy. Investigation to document the root cause, propose fix options (longer retention, resync rule changes, a separate archived-event sync path), and define retention/resync SLAs."
+ },
+ {
+  "k": "EP-51652",
+  "summary": "  iOS/ The exhibitor card not displayed inside lead scan ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-27T10:04:00.831+0100",
+  "text": "Fixed iOS lead scans showing only a company name instead of the full exhibitor card, restoring accurate lead info. The exhibitor company card now displays correctly inside lead scans on iOS."
+ },
+ {
+  "k": "EP-53048",
+  "summary": "Add session/exhibitor event type to the detail card view",
+  "epic": "Sessions & Agenda UX (New UI)",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-27T10:27:13.636+0100",
+  "text": "Surfaces the session/exhibitor-event Type label on detail cards so attendees see the same Type information shown in the program list view. Detail cards for Sessions and Exhibitor Events now display the Type label, consistent across Web, iOS and Android."
+ },
+ {
+  "k": "EP-53725",
+  "summary": "[admin-ui] Change docker node to 24 ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-27T11:40:40.963+0100",
+  "text": "Unified admin-ui's Docker images onto a single Node 24 version across every build stage, removing a latent source of ABI/runtime mismatches. All three admin-ui Dockerfiles now use node:24-alpine consistently across every build stage, verified to build and run correctly."
+ },
+ {
+  "k": "EP-51337",
+  "summary": "API V3 Migration - /api/v2/floorplan/getStands to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-27T12:42:24.263+0100",
+  "text": "Migrated the floorplan getStands endpoint to the modern V3 API, event-scoped with hall and last-modified filters, advancing the public API toward a consistent, partner-friendly contract. getStands is now available as GET /api/v3/events/{eventId}/floorplan/stands with hall and last-modified-range filters and pagination."
+ },
+ {
+  "k": "EP-51338",
+  "summary": "API V3 Migration - /api/v2/floorplan/getHalls to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-27T12:42:41.993+0100",
+  "text": "Migrated the floorplan getHalls endpoint to the V3 API, giving partners an event-scoped, paginated halls resource as part of the broader API modernization. Halls are now served via GET /api/v3/events/{eventId}/floorplan/halls with pagination and standard error envelopes."
+ },
+ {
+  "k": "EP-53552",
+  "summary": "Enable filtering on DS side for marketplace filters",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [],
+  "doneAt": "2026-05-27T14:43:23.872+0100",
+  "text": "Connected marketplace's existing filter system to the new AI search backend so applying a filter actually narrows the AI-powered results shown. Filters used across web listings (per the platform's Display Filters system) are implemented on the DS/search side so applying a filter narrows AI search results accordingly."
+ },
+ {
+  "k": "EP-53455",
+  "summary": "Restoring Google Analytics Support: Enhancements for GA4 Integration and Validation",
+  "epic": "Attendance & Event Analytics 2026",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-28T09:41:45.442+0100",
+  "text": "Restores Google Analytics support on event websites with GA4 integration and validation, re-enabling web analytics for organizers and exhibitors. Re-enabled and validated GA4 integration on the website, restoring analytics tracking."
+ },
+ {
+  "k": "EP-53413",
+  "summary": "Admin panel rearangement. Move Sponsorship",
+  "epic": "Admin Panel Restructure & Navigation",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-28T09:55:23.553+0100",
+  "text": "Rearranges the Admin Panel navigation by moving the Sponsorship section as part of the broader Admin Panel restructure. The Sponsorship section was relocated within the Admin Panel navigation per the restructure plan."
+ },
+ {
+  "k": "EP-45439",
+  "summary": "Integration HUB Migration - A2Z",
+  "epic": "Integration HUB - Integrations EPIC",
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-28T15:53:31.654+0100",
+  "text": null
+ },
+ {
+  "k": "EP-48378",
+  "summary": "Highlight Now & Upcoming Sessions - Mobile App",
+  "epic": "Sessions & Agenda UX (New UI)",
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "DoDUserStory",
+   "qa_android_code_review"
+  ],
+  "doneAt": "2026-05-29T07:25:02.191+0100",
+  "text": "The mobile Sessions list now auto-scrolls to and highlights what's happening now and next, sparing attendees with large agendas from endless scrolling to find current sessions. Auto-scroll to the current time with a now separator and Now/Upcoming highlighting that applies only when the selected day is today (server-confirmed)."
+ },
+ {
+  "k": "EP-53902",
+  "summary": "[DS Spike] Pre-filtering evaluation: pass allowed ID vector as Qdrant filter condition",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [],
+  "doneAt": "2026-05-29T09:46:05.634+0100",
+  "text": "Tested passing permission-allowed IDs as a Qdrant pre-filter versus post-filtering, to settle which approach AI search should use in production. Pre-filtering implemented and benchmarked across allowed-ID-vector sizes (1k-100k), producing a latency comparison table and a production recommendation vs post-filtering."
+ },
+ {
+  "k": "EP-51344",
+  "summary": "API V3 Migration - /api/v2/location/countries to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-29T11:56:36.435+0100",
+  "text": "Migrated the global countries reference endpoint to V3 with localisation and sorting, continuing the standardisation of reference data on the modern API. Countries are now served via GET /api/v3/locations/countries with localisation (x-lang), ISO codes, sorting and pagination."
+ },
+ {
+  "k": "EP-51343",
+  "summary": "API V3 Migration - /api/v2/location/regions to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-05-29T11:56:49.043+0100",
+  "text": "Migrated the global regions reference endpoint to V3 with localisation and modified-since filtering, modernising shared reference data for partner integrations. Regions are now served via GET /api/v3/locations/regions with country filter, localisation (x-lang), sorting and modified-since filters."
+ },
+ {
+  "k": "EP-52805",
+  "summary": "Add extended logging to /api/v1/resend endpoint",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-29T16:19:08.118+0100",
+  "text": "Added internal request/response logging to the resend endpoint so future abuse is caught without relying on external AWS logs. Each call to /api/v1/resend now logs timestamp, IP, submitted email, and response, with sensitive fields redacted."
+ },
+ {
+  "k": "EP-52804",
+  "summary": "Add rate limiting to /api/v1/resend endpoint",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-05-29T16:23:00.171+0100",
+  "text": "Added rate limiting to /api/v1/resend after a real attack sent 1,116 requests in 15 minutes to flood participant inboxes. The endpoint now allows 5 requests per minute per IP, blocks abusive IPs for 5 minutes with a 429 response, while legitimate single requests keep working."
+ },
+ {
+  "k": "EP-53900",
+  "summary": "[DS Spike] Post-filtering prototype: merge Qdrant results against allowed ID vector",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [],
+  "doneAt": "2026-05-31T17:36:01.215+0100",
+  "text": "Benchmarked merging AI search results against permission-allowed ID lists at scale, to prove out one candidate approach for secure AI search. A prototype measuring merge latency across allowed-ID-vector sizes (1k-100k) and result-set sizes (10-99% of records), with documented performance thresholds and a production recommendation."
+ },
+ {
+  "k": "EP-53036",
+  "summary": "Session: Always display Sponsor Name on Session cards and pages",
+  "epic": "Sessions & Agenda UX (New UI)",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-01T10:27:28.655+0100",
+  "text": "Ensures a paid Sponsor's organization name is always shown across Session cards, pages, modals, recommendations and round-table/exhibitor-event surfaces, even when no logo is uploaded. Sponsor organization name now always displays across all session-related surfaces, alongside the logo or a standardized placeholder when none exists."
+ },
+ {
+  "k": "EP-53751",
+  "summary": "Remove Unconfirmed Appointment email template",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [],
+  "doneAt": "2026-06-01T12:21:45.899+0100",
+  "text": "Removed a leftover email template from a retired Hosted Buyer meeting feature that had no remaining use, decluttering the admin templates screen. The unused email template is removed from Networking & Matchmaking > Meetings > Email Templates."
+ },
+ {
+  "k": "EP-50493",
+  "summary": "[Test fail] [address] CLI test: Visit visitor creation returns null",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-02T10:21:18.323+0100",
+  "text": "Fixed a silent null failure in the Visit integration's visitor creation pipeline that was breaking account, GDPR, and role handling. Visit integration visitor/account creation now returns a valid account object, restoring downstream role, GDPR, and deletion handling."
+ },
+ {
+  "k": "EP-50492",
+  "summary": "[Test fail] [pushback] CLI test: exhibitor_category_id property access on non-object",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-02T10:21:56.623+0100",
+  "text": "Fixed a null exhibitor-category bug that broke exhibitor creation across Genesis, MapYourShow, and Visit integrations. Exhibitor category lookups now return valid objects so exhibitor creation and category mapping succeed across all three integrations."
+ },
+ {
+  "k": "EP-52358",
+  "summary": "Android/ Update \"Favourite\" icon behaviour in case of internet connection lost ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-02T12:40:45.044+0100",
+  "text": "Added a standard offline-connection toast when Android users tap Favourite while disconnected, replacing silent no-op behaviour. Tapping favourite while offline now shows the app's standard connection-lost toast across lists, profiles, and recommendations on Android."
+ },
+ {
+  "k": "EP-52359",
+  "summary": "iOS/ Update \"Favourite\" icon behaviour in case of internet connection lost",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "qa_ios_regression"
+  ],
+  "doneAt": "2026-06-03T07:48:48.690+0100",
+  "text": "Added a standard offline-connection toast when iOS users tap Favourite while disconnected, replacing silent no-op behaviour. Tapping favourite while offline now shows the app's standard connection-lost toast across lists, profiles, and recommendations on iOS."
+ },
+ {
+  "k": "EP-53330",
+  "summary": "Expand non-mutual likes into mutual likes",
+  "epic": "Improve Speed Networking Service",
+  "components": [
+   "Meeting Program",
+   "Speed Networking"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-03T09:39:07.864+0100",
+  "text": "Adds configurable preprocessing to the matchmaking engine that expands one-sided likes into mutual likes for specified role directions, improving meeting/speed-networking schedule coverage. An API-configurable preprocessing step that transforms one-sided likes into mutual-like pairs per role direction before scheduling."
+ },
+ {
+  "k": "EP-54089",
+  "summary": "iOS | CI/CD update jira comment with actual build status",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-06-03T09:52:23.697+0100",
+  "text": "Made iOS CI/CD post real build status to Jira and addressed Apple warnings flagged on the Shoptalk Europe build; ticket gives little further detail. Not clearly specified beyond the ticket title."
+ },
+ {
+  "k": "EP-53903",
+  "summary": "[Exhibitor Spike] Design API to provide allowed entity ID vector per search category with security and filter context",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [],
+  "doneAt": "2026-06-03T10:28:20.832+0100",
+  "text": "Designed the Exhibitor-backend API that will supply AI search with the exact set of entity IDs each user is permitted to see, per category. A proposed API design (endpoint, request/response schema, expected max size per category, V1-scoped security/filter rules) documented and shared with the DS team for review."
+ },
+ {
+  "k": "EP-50495",
+  "summary": "[Test fail] [address] CLI test: CDS visitor fields not persisted",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-03T10:28:26.378+0100",
+  "text": "Fixed CDS integration so visitor fields from CDS payloads are actually saved to accounts instead of being silently dropped. CDS-sourced visitor fields are now correctly persisted on account creation and update."
+ },
+ {
+  "k": "EP-45331",
+  "summary": "[expo-react-components] Fix `showMaxLength` for defaultValue in TextField",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-03T11:21:50.019+0100",
+  "text": null
+ },
+ {
+  "k": "EP-52467",
+  "summary": "Meet API Standards for api/v1/schedule/note",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-03T14:13:01.974+0100",
+  "text": "Closed data-leakage and auth-bypass gaps in the schedule/note API, removing internal server details from error responses. Removed sensitive data leakage from error responses and an undocumented internal IP field, enforced auth-token validation and input bounds; API contract alignment work continuing."
+ },
+ {
+  "k": "EP-51360",
+  "summary": "API V3 Migration - /api/v2/sessions/getTracks to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-03T15:10:20.613+0100",
+  "text": "Migrated the event session-tracks endpoint to V3 with event scoping, localisation and modified-since filtering, completing more of the session-metadata V3 set. Session tracks are now served via GET /api/v3/events/{eventId}/sessions/tracks with localisation, modified-since filters and pagination."
+ },
+ {
+  "k": "EP-51359",
+  "summary": "API V3 Migration - /api/v2/sessions/getTypes to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-03T15:12:09.077+0100",
+  "text": "Migrated the event session-types endpoint to V3 with event scoping, localisation and modified-since filtering, part of the session-metadata API modernization. Session types are now served via GET /api/v3/events/{eventId}/sessions/types with localisation, modified-since filters and pagination."
+ },
+ {
+  "k": "EP-51355",
+  "summary": "API V3 Migration - /api/v2/sessions/getTags to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-03T15:16:54.076+0100",
+  "text": "Migrated the event session-tags endpoint to V3 with event scoping, localisation and modified-since filtering, extending the modern API to session metadata. Session tags are now served via GET /api/v3/events/{eventId}/sessions/tags with localisation (x-lang), modified-since filters and pagination."
+ },
+ {
+  "k": "EP-51354",
+  "summary": "API V3 Migration - /api/v2/sessions/getLanguages to V3",
+  "epic": "Migration of endpoints (Public API v3)",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-03T15:21:20.335+0100",
+  "text": "Migrated the global session-languages reference endpoint to V3, keeping it un-scoped as before while adopting standard sorting and pagination for partners. Session languages are now served via GET /api/v3/sessions/languages (global) with sorting and pagination."
+ },
+ {
+  "k": "EP-53630",
+  "summary": "Fix notistack colors.",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-03T19:57:37.827+0100",
+  "text": "Fixed toast notification colors to use the design system's static CSS variables instead of ad hoc theme values, per the official Figma spec. Notistack styling is updated to use static, CSS-variable-based colors matching the design system (e.g. Functional/Focus tokens)."
+ },
+ {
+  "k": "EP-52869",
+  "summary": "Replace linkify-react/linkifyjs with internal regex-based solution",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-03T19:59:31.182+0100",
+  "text": "Replaced linkify-react/linkifyjs with an internal regex helper, shrinking the messenger bundle by about 14KB. New linkifyText() helper using existing regex constants replaces the Linkify component in chat messages, with unit tests for edge cases; both packages removed."
+ },
+ {
+  "k": "EP-37947",
+  "summary": "Allignment of the columns in footer",
+  "epic": "Changes to the footer based on CSS tasks",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-03T20:01:12.847+0100",
+  "text": null
+ },
+ {
+  "k": "EP-47751",
+  "summary": "New ci/cd for ios",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-06-04T10:22:33.281+0100",
+  "text": "Upgraded iOS CI/CD to a new macOS/Xcode-compatible build machine, keeping app releases unblocked. New CI/CD machine set up and macOS/Xcode compatibility issues resolved, restoring the iOS build/release pipeline."
+ },
+ {
+  "k": "EP-37526",
+  "summary": "Add the ability to delete a column",
+  "epic": "Changes to the footer based on CSS tasks",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-04T11:16:02.581+0100",
+  "text": null
+ },
+ {
+  "k": "EP-37518",
+  "summary": "Have a new setting “Text position”",
+  "epic": "Changes to the footer based on CSS tasks",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-04T11:17:13.990+0100",
+  "text": null
+ },
+ {
+  "k": "EP-35590",
+  "summary": "Width in footer for logo + text",
+  "epic": "Changes to the footer based on CSS tasks",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-04T11:18:15.898+0100",
+  "text": null
+ },
+ {
+  "k": "EP-52003",
+  "summary": "QA Initiative - /api/v2/exhibitor/deleteGlobally",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-04T15:04:53.576+0100",
+  "text": "QA coverage was completed for the Open API v2 exhibitor deleteGlobally endpoint, validating a destructive operation in a partner-facing interface. The deleteGlobally endpoint was tested against its expected behaviour, bugs logged as linked items, and the endpoint signed off as QA-complete."
+ },
+ {
+  "k": "EP-51286",
+  "summary": "QA Initiative - /api/v2/account/setCategory",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-04T15:17:58.422+0100",
+  "text": "Ran structured QA on the public API v2 setCategory endpoint, logging defects as individual bugs to raise the reliability of the integration surface used by partners. The endpoint was QA-tested with discrepancies captured as linked individual bug tickets."
+ },
+ {
+  "k": "EP-52290",
+  "summary": "D2i - Native Integration Build",
+  "epic": "Integration HUB - Integrations EPIC",
+  "components": [
+   "Native Integration"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-04T15:49:42.059+0100",
+  "text": "A new native integration was built to pull registration and attendee data from D2i's Engage API into ExpoPlatform using the standard hub-and-spoke pattern. A native D2i integration now searches and paginates the Engage Registrations API, supports delta sync via lastModified, and ingests attendee data into ExpoPlatform with D2i as the source of truth."
+ },
+ {
+  "k": "EP-49870",
+  "summary": "QA Initiative - /api/v2/sessions/set",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:04:45.014+0100",
+  "text": "QA validation of the V2 Open API sessions/set write endpoint, reducing the risk of corrupt session writes reaching partner integrations. The sessions/set endpoint was exercised against a defined scope and defects logged as individual linked bugs, validating the write path."
+ },
+ {
+  "k": "EP-52002",
+  "summary": "QA Initiative - /api/v2/exhibitor/getList",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:04:50.398+0100",
+  "text": "Quality-assurance coverage was completed for the public Open API v2 exhibitor getList endpoint, hardening a data interface that external integrators and partners rely on. The exhibitor getList endpoint was fully exercised against its contract, defects captured as discrete linked bugs, and the endpoint signed off as QA-complete."
+ },
+ {
+  "k": "EP-49869",
+  "summary": "QA Initiative - /api/v2/sessions/getOnlineExport",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:05:00.749+0100",
+  "text": "QA validation of the V2 Open API sessions getOnlineExport endpoint, ensuring exported session data is correct for partners relying on the public API. The getOnlineExport endpoint was tested to a defined scope with defects captured as individual linked bugs, validating the export path."
+ },
+ {
+  "k": "EP-49868",
+  "summary": "QA Initiative - /api/v2/sessions/removeSession",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:05:11.347+0100",
+  "text": "QA validation of the V2 Open API removeSession endpoint, guarding against erroneous session deletions exposed through the public API. The removeSession endpoint was exercised against a defined scope and any defects were logged as separate linked bugs, confirming safe deletion behaviour."
+ },
+ {
+  "k": "EP-49867",
+  "summary": "QA Initiative - /api/v2/sessions/get",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:05:21.655+0100",
+  "text": "QA validation of the V2 Open API sessions/get listing endpoint, protecting partners from incorrect or incomplete session listings. The sessions/get endpoint was tested to a defined scope with defects logged as individual linked bugs, validating the listing path."
+ },
+ {
+  "k": "EP-49866",
+  "summary": "QA Initiative - /api/v2/sessions/getSession",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:05:33.052+0100",
+  "text": "QA validation of the V2 Open API getSession read endpoint, ensuring external integrators receive correct session data from the public API. The getSession endpoint was tested against a defined scope and any defects were captured as separate linked bugs, confirming read-path reliability."
+ },
+ {
+  "k": "EP-49865",
+  "summary": "QA Initiative - /api/v2/sessions/setTrack",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:06:21.072+0100",
+  "text": "Quality-assurance hardening of the V2 Open API session-track endpoint, reducing the risk of integration defects reaching partners consuming the public API. The setTrack endpoint was exercised against a defined test scope with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49863",
+  "summary": "QA Initiative - /api/v2/sessions/setType",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:06:52.721+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/setType: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/setType endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49862",
+  "summary": "QA Initiative - /api/v2/sessions/getTracks",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:07:04.415+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/getTracks: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/getTracks endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49861",
+  "summary": "QA Initiative - /api/v2/sessions/getTypes",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:07:14.234+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/getTypes: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/getTypes endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49860",
+  "summary": "QA Initiative - /api/v2/sessions/setTag",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:07:23.872+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/setTag: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/setTag endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49859",
+  "summary": "QA Initiative - /api/v2/sessions/removeTag",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:07:33.791+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/removeTag: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/removeTag endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49858",
+  "summary": "QA Initiative - /api/v2/sessions/getTags",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:07:43.349+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/getTags: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/getTags endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49857",
+  "summary": "QA Initiative - /api/v2/sessions/getLanguages",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:07:53.886+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/getLanguages: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/getLanguages endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49856",
+  "summary": "QA Initiative - /api/v2/sessions/getSpeakers",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:08:03.526+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/getSpeakers: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/getSpeakers endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49855",
+  "summary": "QA Initiative - /api/v2/sessions/getLocations",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:08:14.068+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/getLocations: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/getLocations endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49854",
+  "summary": "QA Initiative - /api/v2/sessions/removeType",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:08:23.220+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/removeType: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/removeType endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49853",
+  "summary": "QA Initiative - /api/v2/sessions/addVisitor",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:08:34.048+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/addVisitor: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/addVisitor endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49852",
+  "summary": "QA Initiative - /api/v2/product/set",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:08:45.850+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/product/set: defects were fixed, giving partners a verified baseline for product catalogue data. The /api/v2/product/set endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for product catalogue data."
+ },
+ {
+  "k": "EP-49851",
+  "summary": "QA Initiative - /api/v2/categories/get",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:08:57.236+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/categories/get: defects were fixed, giving partners a verified baseline for category reference data. The /api/v2/categories/get endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for category reference data."
+ },
+ {
+  "k": "EP-49850",
+  "summary": "QA Initiative - /api/v2/news/set",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:09:10.162+0100",
+  "text": "Completed systematic QA of the public Open API v2 endpoint /api/v2/news/set, hardening news content exposed to external integration partners so the published API behaves reliably and to spec. The /api/v2/news/set endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for news content."
+ },
+ {
+  "k": "EP-49848",
+  "summary": "QA Initiative - /api/v2/location/countries",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:09:24.565+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/location/countries: defects were fixed, giving partners a verified baseline for location reference data. The /api/v2/location/countries endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for location reference data."
+ },
+ {
+  "k": "EP-49847",
+  "summary": "QA Initiative - /api/v2/location/regions",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:09:34.445+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/location/regions: defects were fixed, giving partners a verified baseline for location reference data. The /api/v2/location/regions endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for location reference data."
+ },
+ {
+  "k": "EP-49846",
+  "summary": "QA Initiative - /api/v2/location/floorplan",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:09:45.500+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/location/floorplan: defects were fixed, giving partners a verified baseline for floor-plan/stand data. The /api/v2/location/floorplan endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for floor-plan / stand data."
+ },
+ {
+  "k": "EP-49845",
+  "summary": "QA Initiative - /api/v2/floorplan/setStand",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:09:55.022+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/floorplan/setStand: defects were fixed, giving partners a verified baseline for floor-plan/stand data. The /api/v2/floorplan/setStand endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for floor-plan / stand data."
+ },
+ {
+  "k": "EP-49844",
+  "summary": "QA Initiative - /api/v2/floorplan/getHalls",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:10:09.111+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/floorplan/getHalls: defects were fixed, giving partners a verified baseline for floor-plan/stand data. The /api/v2/floorplan/getHalls endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for floor-plan / stand data."
+ },
+ {
+  "k": "EP-49843",
+  "summary": "QA Initiative - /api/v2/floorplan/getStands",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:10:19.269+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/floorplan/getStands: defects were fixed, giving partners a verified baseline for floor-plan/stand data. The /api/v2/floorplan/getStands endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for floor-plan / stand data."
+ },
+ {
+  "k": "EP-49842",
+  "summary": "QA Initiative - /api/v2/exhibitor/delete",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:10:30.493+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/exhibitor/delete: defects were fixed, giving partners a verified baseline for exhibitor data. The /api/v2/exhibitor/delete endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for exhibitor data."
+ },
+ {
+  "k": "EP-49841",
+  "summary": "QA Initiative - /api/v2/exhibitor/get",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:10:41.147+0100",
+  "text": "Completed systematic QA of the public Open API v2 endpoint /api/v2/exhibitor/get, hardening exhibitor data exposed to external integration partners so the published API behaves reliably and to spec. The /api/v2/exhibitor/get endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for exhibitor data."
+ },
+ {
+  "k": "EP-49840",
+  "summary": "QA Initiative - /api/v2/exhibitors/{eventId}/list",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:10:54.872+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/exhibitors/{eventId}/list: defects were fixed, giving partners a verified baseline for exhibitor data. The /api/v2/exhibitors/{eventId}/list endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for exhibitor data."
+ },
+ {
+  "k": "EP-49839",
+  "summary": "QA Initiative - /api/v2/exhibitor/set",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:11:08.581+0100",
+  "text": "Hardened the public Open API v2 /api/v2/exhibitor/set endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/exhibitor/set, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49838",
+  "summary": "QA Initiative - /api/v2/exhibitor/getList",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:11:21.201+0100",
+  "text": "Hardened the public Open API v2 /api/v2/exhibitor/getList endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/exhibitor/getList, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49837",
+  "summary": "QA Initiative - /api/v2/event/set",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:11:31.232+0100",
+  "text": "Hardened the public Open API v2 /api/v2/event/set endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/event/set, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49836",
+  "summary": "QA Initiative - /api/v2/event/delete",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:11:41.168+0100",
+  "text": "Hardened the public Open API v2 /api/v2/event/delete endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/event/delete, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49835",
+  "summary": "QA Initiative - /api/v2/account/get",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:11:50.744+0100",
+  "text": "Hardened the public Open API v2 /api/v2/account/get endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/account/get, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49834",
+  "summary": "QA Initiative - /api/v2/participants/{eventId}/deletedList",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:12:00.278+0100",
+  "text": "Hardened the public Open API v2 /api/v2/participants/{eventId}/deletedList endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/participants/{eventId}/deletedList, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49833",
+  "summary": "QA Initiative - /api/v2/participants/{eventId}/list",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:12:12.814+0100",
+  "text": "Hardened the public Open API v2 /api/v2/participants/{eventId}/list endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/participants/{eventId}/list, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49832",
+  "summary": "QA Initiative - /api/v2/account/buyers",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:12:22.603+0100",
+  "text": "Hardened the public Open API v2 /api/v2/account/deleteBulk endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/account/deleteBulk, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49831",
+  "summary": "QA Initiative - /api/v2/account/getCategories",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:12:34.611+0100",
+  "text": "Hardened the public Open API v2 /api/v2/account/getCategories endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/account/getCategories, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49830",
+  "summary": "QA Initiative - /api/v2/account/setCategory",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:12:44.450+0100",
+  "text": "Hardened the public Open API v2 /api/v2/account/setCategory endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/account/setCategory, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49829",
+  "summary": "QA Initiative - /api/v2/account/delete",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:12:54.246+0100",
+  "text": "Hardened the public Open API v2 /api/v2/account/delete endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/account/delete, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49828",
+  "summary": "QA Initiative - /api/v2/account/deleteBulk",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:13:04.508+0100",
+  "text": "Hardened the public Open API v2 /api/v2/account/buyers endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/account/buyers, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49827",
+  "summary": "QA Initiative - /api/v2/account/setSessions",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:13:42.528+0100",
+  "text": "Hardened the public Open API v2 /api/v2/account/setSessions endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/account/setSessions, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49826",
+  "summary": "QA Initiative - /api/v2/account/deleteSessions",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:13:52.850+0100",
+  "text": "Hardened the public Open API v2 /api/v2/account/deleteSessions endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/account/deleteSessions, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49825",
+  "summary": "QA Initiative - /api/v2/account/checkToken",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:14:03.621+0100",
+  "text": "Hardened the public Open API v2 /api/v2/account/checkToken endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/account/checkToken, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49824",
+  "summary": "QA Initiative - /api/v2/account/set",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:14:15.051+0100",
+  "text": "Hardened the public Open API v2 /api/v2/account/set endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/account/set, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49823",
+  "summary": "QA Initiative - /api/v2/account/exists",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:14:30.956+0100",
+  "text": "Hardened the public Open API v2 /api/v2/account/exists endpoint through dedicated QA so external integrators get a reliable, well-tested interface. Executed a full QA pass on /api/v2/account/exists, with any defects logged as individual linked bugs, raising confidence in the endpoint's correctness."
+ },
+ {
+  "k": "EP-49864",
+  "summary": "QA Initiative - /api/v2/sessions/removeTrack",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:14:51.949+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/sessions/removeTrack: defects were fixed, giving partners a verified baseline for agenda/session data. The /api/v2/sessions/removeTrack endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for agenda / session data."
+ },
+ {
+  "k": "EP-49849",
+  "summary": "QA Initiative - /api/v2/meetings/export",
+  "epic": "API V2 - Quality Assurance",
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T08:15:04.769+0100",
+  "text": "Completed QA of Open API v2 endpoint /api/v2/meetings/export: defects were fixed, giving partners a verified baseline for meetings export data. The /api/v2/meetings/export endpoint was exercised end-to-end, any defects found were logged as individual linked bugs and resolved, and the endpoint passed QA and shipped to production (Prod release), giving a verified, documented baseline for meetings export data."
+ },
+ {
+  "k": "EP-50773",
+  "summary": "Session and Agenda Queries",
+  "epic": "AI Event Assistant (AGENT)",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T09:36:08.546+0100",
+  "text": "Built the sessions/agenda knowledge tool for the Phase-1 AI assistant so attendees can ask about sessions by day, topic, time or format instead of scrolling the full agenda. A sessions tool was built and integrated into the AI agent, answering session questions by day, topic, time and format from structured event data."
+ },
+ {
+  "k": "EP-52364",
+  "summary": "[Dashboard] Attendee Analytics — Count, Profile Completion & Engagement (R6, R7)",
+  "epic": "Automated Event Reporting Dashboards (Embeddable.com)",
+  "components": [
+   "Reporting"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T09:42:31.676+0100",
+  "text": "An Attendee Analytics dashboard page was delivered, surfacing attendee counts, profile completion, and engagement trends for organisers. An Attendee Analytics page now shows attendee count and profile completion with KPI cards plus an engagement/login dual-line chart, correctly excluding exhibitor categories and team-member logins (PRD R6, R7)."
+ },
+ {
+  "k": "EP-52365",
+  "summary": "[Dashboard] Platform Performance — Logins, Active Users, Favourites, Page Visits & Engagement (R8-R11, R16)",
+  "epic": "Automated Event Reporting Dashboards (Embeddable.com)",
+  "components": [
+   "Reporting"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-05T09:42:52.741+0100",
+  "text": "A Platform Performance dashboard was delivered covering logins, active users, favourites, page visits, and engagement across the whole platform. A Platform Performance page now shows web/app login activity with KPI cards, active users over time, favourites analytics with drill-down, and multi-page visit trends (PRD R8-R11, R16)."
+ },
+ {
+  "k": "EP-38910",
+  "summary": "Remove category list settings from all endpoints except get/exhibitions",
+  "epic": null,
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [],
+  "doneAt": "2026-06-05T10:50:48.308+0100",
+  "text": null
+ },
+ {
+  "k": "EP-47789",
+  "summary": "Fix public api v3 logs",
+  "epic": null,
+  "components": [
+   "Open API"
+  ],
+  "labels": [
+   "API",
+   "Integration"
+  ],
+  "doneAt": "2026-06-05T11:27:52.515+0100",
+  "text": "Moved Public API v3 logs to CloudWatch and added an admin browse/filter/export UI, cutting the time to investigate incidents and support cases. Logs now stream to a dedicated CloudWatch group with event_id and error stack traces; new admin endpoints and a \"Dynamic logs\" UI tab let admins browse, filter, paginate, and export logs to a downloadable file, with duplicate-export protection."
+ },
+ {
+  "k": "EP-47753",
+  "summary": "Fix memory leak in iOS app",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-06-08T10:39:46.447+0100",
+  "text": "Fixed an iOS memory leak in user/session/exhibitor data that caused the app to slow down the longer it ran. Leak fixed so the app no longer accumulates unbounded memory during use."
+ },
+ {
+  "k": "EP-53117",
+  "summary": "Implementing Universal Pagination Memory in Admin Panel for User Experience Enhancement - Good To Have List ONLY",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-09T10:17:06.777+0100",
+  "text": "Implements universal pagination memory so the Admin Panel remembers a user's page position across listings, building on the pagination standardization effort. Pagination position is now retained (remembered) across Admin Panel lists, reducing repeated paging."
+ },
+ {
+  "k": "EP-53548",
+  "summary": "Google Analytics field front-end validation",
+  "epic": "Attendance & Event Analytics 2026",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-09T14:20:19.662+0100",
+  "text": "Adds front-end format validation, placeholder and help text to the Google Analytics (GA4) ID field in the Admin Panel, while still allowing an empty value to disable tracking. The GA ID input now validates the GA4 format (G-XXXXXXXXXX), shows placeholder and help text warning against duplicate GA injection, and permits an empty value to clear tracking."
+ },
+ {
+  "k": "EP-54242",
+  "summary": "Remove components/layouts/LoaderPlug.tsx and reuse expo-react-components LoaderPlug",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Frontend-dev"
+  ],
+  "doneAt": "2026-06-10T10:33:14.375+0100",
+  "text": "Removed a locally-duplicated LoaderPlug component in favor of the shared one from expo-react-components; ticket has no further detail. Not clearly specified beyond the ticket title."
+ },
+ {
+  "k": "EP-54244",
+  "summary": "Create plan for roll-out",
+  "epic": "Rolling out new Recommender service",
+  "components": [
+   "Recommendation Service"
+  ],
+  "labels": [],
+  "doneAt": "2026-06-10T14:02:56.792+0100",
+  "text": "Turned a successful first-event pilot of the new AI recommendation service into a plan for rolling it out to other tenants. A roll-out plan is produced based on the documented findings from the first live event, to guide improvements and expansion to other tenants."
+ },
+ {
+  "k": "EP-50125",
+  "summary": "Product QR Codes: Category-Level Access Control",
+  "epic": "Lead Capture pro settings",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-10T15:36:09.247+0100",
+  "text": "Product QR Code availability can now be gated by exhibitor category, letting organizers tie QR-code lead tooling to category-based packages. Admin controls were added to enable or restrict Product QR Codes per exhibitor category."
+ },
+ {
+  "k": "EP-50127",
+  "summary": "Lead Capture Pro — Settings Consolidation",
+  "epic": "Lead Capture pro settings",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-10T15:36:39.329+0100",
+  "text": "Lead Capture Pro settings were consolidated into a single coherent configuration area, simplifying how organizers manage the premium lead-capture product. Lead Capture Pro settings were unified into a consolidated settings experience in the admin interface."
+ },
+ {
+  "k": "EP-31418",
+  "summary": "[Ticketing&Invoicing](Part 3) [FE] Ticketing tab to be displayed via iframe - blocked by Registration",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "components": [
+   "Onsite & Kiosk  Registration"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-11T09:19:25.335+0100",
+  "text": null
+ },
+ {
+  "k": "EP-52375",
+  "summary": "Session: External registration URL for “Register” button",
+  "epic": "Participant Registration on New UI",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-11T10:33:43.073+0100",
+  "text": "Organisers can now point a Session's Register button to an external registration or payment URL, letting third-party systems handle session signup and payment. Organisers can configure a per-session external registration URL with a custom button label and an external-link icon, redirecting attendees to a third-party registration/payment page during pre-event and live event."
+ },
+ {
+  "k": "EP-53653",
+  "summary": "Migrate i18next to the ICU format",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Frontend-dev"
+  ],
+  "doneAt": "2026-06-11T11:18:34.105+0100",
+  "text": "Migrated the front-end i18n stack to a unified ICU MessageFormat with stable dotted keys, laying the foundation for reliable translation tooling across all repos. Migrated to i18next-icu with single-brace ICU placeholders, ICU plural/select blocks, named Trans tags, and stable dotted-ID keys, with lint tooling and a CI gate."
+ },
+ {
+  "k": "EP-51999",
+  "summary": "Review and refactor  the CRUD of Exhibitors Settings and Exhibitor Category Settings",
+  "epic": "Lead Capture pro settings",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-11T14:08:13.360+0100",
+  "text": "Refactored Exhibitor Settings CRUD into one source of truth, unblocking the upcoming Lead Capture Pro settings feature. Consolidated CRUD logic for exhibitor settings into one source of truth, per the ticket's stated goal."
+ },
+ {
+  "k": "EP-50126",
+  "summary": "Product QR Codes: Exhibitor-Level Access Control",
+  "epic": "Lead Capture pro settings",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-11T14:37:47.689+0100",
+  "text": "Product QR Codes can now be controlled at the individual exhibitor level, giving organizers precise entitlement control over QR-code lead tooling. Granular per-exhibitor controls for Product QR Codes were added to the admin interface."
+ },
+ {
+  "k": "EP-54178",
+  "summary": "AI Search: implement post-filtering by allowed ID list",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-12T08:04:58.271+0100",
+  "text": "AI semantic search can now be constrained to an allowed list of entity IDs, so applied filters and search relevance work together instead of conflicting. The AI search API accepts an optional allowed_ids parameter and applies it as a pre-search constraint in Qdrant, so results satisfy both semantic relevance and the active filters, with no regression when the list is absent."
+ },
+ {
+  "k": "EP-54179",
+  "summary": "AI Search: add pagination support (offset + frame size)",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-12T08:06:15.634+0100",
+  "text": "AI search results are now paginated, letting users browse beyond the first page of semantic results without re-running the whole search. The AI search API accepts offset and frame_size parameters and returns the correct Qdrant ranking window, combining correctly with allowed_ids filtering."
+ },
+ {
+  "k": "EP-52366",
+  "summary": "[Dashboard] Mobile App — Downloads, Logins, Adoption & App Page Visits (R12)",
+  "epic": "Automated Event Reporting Dashboards (Embeddable.com)",
+  "components": [
+   "Mobile App",
+   "Reporting"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-12T09:37:35.331+0100",
+  "text": "A Mobile App analytics dashboard was delivered, tracking downloads, logins, adoption, and in-app page visits across iOS and Android. A Mobile App page now shows iOS vs Android downloads over time, login/adoption KPI cards with defined exhibitor and attendee app-login metrics, and an app page-visits table (PRD R12)."
+ },
+ {
+  "k": "EP-52169",
+  "summary": "[Sprint 1] Data Ingestion API - DS (1,2,3,4,5,6,7,8,9,10)",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-12T09:56:22.461+0100",
+  "text": "The data-ingestion logic powering the new AI Search system was wrapped into a callable API with per-entity indexing pipelines and authenticated re-index/update/delete operations. A FastAPI ingestion API now exposes full-event re-index, single-record upsert, and delete across all five entity types (exhibitors, products, sessions, people, news), with authentication and downtime-free indexing via Qdrant upserts."
+ },
+ {
+  "k": "EP-52173",
+  "summary": "[Sprint 2] Real-Time Data Sync - DS (29–35)",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-12T09:56:58.123+0100",
+  "text": "Real-time data synchronisation was built for AI Search so that changes in the platform database propagate into the search index continuously via a queue-and-worker pipeline. DB triggers on all five entity tables push changes to an SQS queue with DLQ retry; a worker processes sync jobs and auto-scales on queue size, a scheduled full re-index runs via EventBridge, and a pre-event completeness check guards data readiness."
+ },
+ {
+  "k": "EP-52116",
+  "summary": "Fix swagger docs for all Exhibitor APIs",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-12T10:11:37.638+0100",
+  "text": "Corrected Swagger documentation across all Exhibitor APIs so consumers can rely on accurate specs. Swagger docs corrected and the tracking spreadsheet's status column updated."
+ },
+ {
+  "k": "EP-41578",
+  "summary": "iOS/ Onboarding/ Investigate pls opportunity find other way to open tab  ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2026-06-12T10:26:39.434+0100",
+  "text": null
+ },
+ {
+  "k": "EP-53904",
+  "summary": "[Spike] Define AI Search ↔ Exhibitor backend communication protocol for allowed ID vector request",
+  "epic": "Search Anatomy",
+  "components": [
+   "AI Search"
+  ],
+  "labels": [],
+  "doneAt": "2026-06-12T11:59:14.323+0100",
+  "text": "Nailed down the exact request/response contract between AI Search and the Exhibitor backend for fetching a user's allowed entity IDs, unblocking both teams. Agreed and documented request/response schema, edge-case behaviour (no filters, full access, unauthenticated), published in Confluence with sign-off from both teams."
+ },
+ {
+  "k": "EP-54261",
+  "summary": "Removal of Global Settings related to Lead Capture Pro and Adjustments to QR Codes Export in Admin Panel",
+  "epic": "Lead Capture pro settings",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-12T12:12:16.552+0100",
+  "text": "Obsolete Lead Capture Pro global settings were removed from the Admin Panel and the QR codes export was adjusted, simplifying organiser configuration as the LCP settings model is reworked. The LCP-related global settings were removed from the Admin Panel and the QR codes export behaviour was adjusted accordingly."
+ },
+ {
+  "k": "EP-49735",
+  "summary": "AI Notetaker Access Control (by Exhibitor Category)",
+  "epic": "Lead Capture pro settings",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-12T14:37:18.098+0100",
+  "text": "Letting organizers control AI Notetaker access by exhibitor category gives them governance over who can use the AI meeting-notes feature, supporting tiered or paid access models. Admins gained controls to enable or restrict AI Notetaker access based on exhibitor category."
+ },
+ {
+  "k": "EP-49740",
+  "summary": "AI Notes — Per-Exhibitor / Per-Category Control",
+  "epic": "Lead Capture pro settings",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-12T14:38:07.446+0100",
+  "text": "Per-exhibitor and per-category control over AI Notes gives organizers fine-grained governance of the AI notes feature down to individual exhibitors, extending the category-level access control. Admins can now control AI Notes access at both per-exhibitor and per-category level."
+ },
+ {
+  "k": "EP-50123",
+  "summary": "Lead Capture Access Control by Exhibitor Category",
+  "epic": "Lead Capture pro settings",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-12T14:40:11.376+0100",
+  "text": "Organizers can now control Lead Capture access by exhibitor category, enabling tiered lead-capture entitlements tied to sponsorship or category packages. Admin controls were added to grant or restrict Lead Capture access per exhibitor category."
+ },
+ {
+  "k": "EP-50124",
+  "summary": "Lead Capture: Exhibitor-Level Granular Control",
+  "epic": "Lead Capture pro settings",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-12T14:40:35.998+0100",
+  "text": "Lead Capture access can now be controlled at the individual exhibitor level, giving organizers fine-grained entitlement management beyond category defaults. Granular per-exhibitor controls for Lead Capture access were added to the admin interface."
+ },
+ {
+  "k": "EP-49914",
+  "summary": "[admin-ui] Rewrite files inside /utils to TS",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-15T08:22:05.864+0100",
+  "text": "Rewrote files inside the admin panel's /utils folder to TypeScript as part of the ongoing JS-to-TS migration. Files inside /utils rewritten in TypeScript."
+ },
+ {
+  "k": "EP-49769",
+  "summary": "[admin-ui] Rewrite /UI folder to TS",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-15T08:24:54.806+0100",
+  "text": "Rewrote the admin panel's shared /UI folder components to TypeScript as part of the ongoing JS-to-TS migration. Files inside /UI rewritten in TypeScript."
+ },
+ {
+  "k": "EP-43504",
+  "summary": "[Corp Site]: Optimize videos and images",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2026-06-15T08:28:41.794+0100",
+  "text": null
+ },
+ {
+  "k": "EP-52367",
+  "summary": "[Dashboard] Connections Deep Dive — Meetings & Messaging Analytics (R13, R14)",
+  "epic": "Automated Event Reporting Dashboards (Embeddable.com)",
+  "components": [
+   "Networking",
+   "Reporting"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-15T09:34:38.977+0100",
+  "text": "A Connections Deep Dive dashboard was delivered, giving organisers detailed meetings and messaging analytics for their event. A Connections Deep Dive page now charts meeting status over time with KPI cards and exhibitor volume bands, plus messaging analytics (one- vs bi-directional) with drill-down (PRD R13, R14)."
+ },
+ {
+  "k": "EP-52368",
+  "summary": "[Dashboard] Sessions Deep Dive — Top Sessions & Session Types (R17)",
+  "epic": "Automated Event Reporting Dashboards (Embeddable.com)",
+  "components": [
+   "Reporting",
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-15T09:35:26.378+0100",
+  "text": "A Sessions Deep Dive dashboard was delivered, ranking top sessions and session types by engagement for organisers. A Sessions Deep Dive page now shows a Top-20 sessions ranked table and Top-5 session types by engagement, with filtering, sorting, and drill-down to session detail (PRD R17)."
+ },
+ {
+  "k": "EP-50642",
+  "summary": "For incorrect data input to SN change ignoring + warning to algo fail + error",
+  "epic": "Improve Speed Networking Service",
+  "components": [
+   "Speed Networking"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-15T09:52:11.181+0100",
+  "text": "The Speed Networking algorithm now rejects invalid input with an error instead of silently ignoring it, preventing meetings in blocked slots. The algorithm now returns a 400 and logs an error for any input failing validation, applied broadly beyond just blocked timeslots."
+ },
+ {
+  "k": "EP-54274",
+  "summary": "N+1 query loop in By Booking report (SessionOrdersRepository)",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-15T13:11:01.968+0100",
+  "text": "Fixed an N+1 query loop in the By Booking report that ran thousands of queries per page on large events, replacing it with a fixed-cost batched query. The report now runs a fixed, batched set of queries scoped to just the requested page's payment IDs, regardless of how many orders exist in the event, with identical output."
+ },
+ {
+  "k": "EP-54360",
+  "summary": "Android/ Account remain visible in list after account deletion till synch arrive ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-15T14:50:56.203+0100",
+  "text": "Fixed Android so a globally-deleted account stops showing up in participant lists promptly instead of lingering until the next background sync. The app is updated to request or reflect the sync sooner (or otherwise remove the account from view) after deletion, so deleted accounts stop appearing promptly."
+ },
+ {
+  "k": "EP-53966",
+  "summary": "Enhancing Meetings report and Custom Meeting Wizard Report: Adding Business Transaction Likelihood and Meeting Did Not Take Place Columns",
+  "epic": "Improve Meetings & Scheduling",
+  "components": [
+   "Reporting"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-15T15:24:35.313+0100",
+  "text": "Enhances the Meetings report and Custom Meeting Wizard report with Business Transaction Likelihood and Meeting Did Not Take Place columns, giving exhibitors and organizers richer meeting outcome data. Both the Meetings report and Custom Meeting Wizard report now include Business Transaction Likelihood and Meeting Did Not Take Place columns."
+ },
+ {
+  "k": "EP-50645",
+  "summary": "Android: Migrate to gradle v 9",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "android",
+   "refactor"
+  ],
+  "doneAt": "2026-06-16T10:46:49.273+0100",
+  "text": "Migrated the Android app to Gradle 9 to keep the build system current and avoid future compatibility breakage. The Gradle wrapper, build.gradle files, and any deprecated plugins/dependencies are updated to build successfully on Gradle 9."
+ },
+ {
+  "k": "EP-54359",
+  "summary": "Additional logic for LC, Custom Questions and Product QR",
+  "epic": "Lead Capture pro settings",
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2026-06-16T18:38:25.561+0100",
+  "text": "The Lead Capture Pro purchase page now marks features already granted via Category or Profile settings as 'Purchased,' preventing double charges. The purchase page now detects features granted via Category or Profile settings and marks them as Purchased, so exhibitors and their team members are not offered items they already hold."
+ },
+ {
+  "k": "EP-54340",
+  "summary": "Make shared Button component polymorphic (OverridableComponent) to support anchor props",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Frontend-dev"
+  ],
+  "doneAt": "2026-06-17T09:26:33.045+0100",
+  "text": "Fixed the shared Button component's types so rendering it as a link no longer requires `as any` workarounds, with zero breaking changes for existing callers. Button is re-typed as an OverridableComponent so anchor props are only allowed (and type-checked) when `component=\"a\"\"` is used, removing the need for type workarounds with no breaking changes to existing usage."
+ },
+ {
+  "k": "EP-54406",
+  "summary": "[Spike] Design Search API endpoint for Global search page",
+  "epic": "Search Anatomy",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-17T16:00:51.702+0100",
+  "text": "Designed the backend API that will sit between the Global Search page and the AI Search service, handling permissions, filters, and result enrichment. A documented API design covering the frontend contract, permission/filter rules, the AI Search request/response integration, result enrichment, and edge cases, published in Confluence and ready for implementation hand-off."
+ },
+ {
+  "k": "EP-47781",
+  "summary": "iOS | Remove in memory filters from Session/ExhibitorEvents",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "qa_large_regression_ios"
+  ],
+  "doneAt": "2026-06-18T09:35:34.592+0100",
+  "text": "Refactored iOS session/exhibitor event lists to remove in-memory filtering, likely a performance cleanup with no further detail available. In-memory filters removed from Session/ExhibitorEvents as an implementation-level refactor."
+ },
+ {
+  "k": "EP-53945",
+  "summary": "Update on Team Member Creation Rules for Exhibitors and Login Uniqueness Validation",
+  "epic": "Exhibitor profile",
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-18T10:21:12.743+0100",
+  "text": "Updates exhibitor team-member creation rules and adds login uniqueness validation to prevent duplicate or conflicting exhibitor accounts. Revised team-member creation rules for exhibitors plus enforced login uniqueness validation."
+ },
+ {
+  "k": "EP-50582",
+  "summary": "[Test fail] Delete basket item does not clean up records — 2 test failures",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-18T16:46:45.772+0100",
+  "text": "Fixed basket item deletion so it stops leaving orphaned equipment and manual-submission records behind. Deleting a basket item now correctly restores equipment quantity and removes associated manual submission records."
+ },
+ {
+  "k": "EP-54642",
+  "summary": "Android/ Filters unselect after synch arrive ",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "qa_android_regression"
+  ],
+  "doneAt": "2026-06-22T09:42:23.643+0100",
+  "text": "Fixed the Android app so a background data sync no longer silently clears a user's selected filters on pages like Sessions. App behaviour is updated to preserve selected filters across a background sync event."
+ },
+ {
+  "k": "EP-54759",
+  "summary": "Add lang cookie validation",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Frontend-dev"
+  ],
+  "doneAt": "2026-06-23T14:54:12.913+0100",
+  "text": "A malformed language cookie value is now validated and defaulted to English instead of crashing server-side requests, per Grafana error reports. Language values are validated against the supported list on both client and server before use, with any unknown value degrading gracefully to English instead of crashing the request."
+ },
+ {
+  "k": "EP-54733",
+  "summary": "Display  Company Name in Interaction Dashboards ",
+  "epic": null,
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-23T15:08:19.426+0100",
+  "text": "Interaction Dashboards now show each participant's Company name, truncated with a hover tooltip, so viewers can see which organisation it was. Company name is being added to every participant row in the Interaction Dashboard for both Participant and Exhibitor profiles, truncated with a full-name tooltip (in progress)."
+ },
+ {
+  "k": "EP-50386",
+  "summary": "[BE test] API test: Basket Add validation incorrectly rejects valid itemId values",
+  "epic": "Fix skipped tests",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-23T19:08:50.780+0100",
+  "text": "Fixed a basket validation bug that wrongly rejected valid equipment/event/ticket item IDs, which could have blocked legitimate purchases. Basket 'add' validation now correctly accepts valid item IDs across equipment, event, and ticket types."
+ },
+ {
+  "k": "EP-50400",
+  "summary": "[BE test] API test: Basket Update returns extra validation error for non-existent itemId",
+  "epic": "Fix skipped tests",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-23T19:10:00.397+0100",
+  "text": "Fixed the basket update endpoint so it returns only the correct validation error, not a duplicate unexpected one, for a non-existent item. Basket update now returns only the expected single validation error for a non-existent item."
+ },
+ {
+  "k": "EP-50388",
+  "summary": "[BE test] API test: IndividualPaymentCest returns 403 instead of 400 for missing paymentTo validation",
+  "epic": "Fix skipped tests",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-23T19:10:30.789+0100",
+  "text": "Fixed the payment checkout API to return a proper 400 validation error, instead of a misleading 403, when paymentTo is missing. Missing paymentTo now correctly returns a 400 validation error."
+ },
+ {
+  "k": "EP-50398",
+  "summary": "[BE test] API test: Auth endpoint does not resolve country or isCountryFixed flag",
+  "epic": "Fix skipped tests",
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-24T11:08:16.240+0100",
+  "text": "Fixed the auth endpoint to correctly return a user's resolved country and isCountryFixed flag instead of blank/false values. Auth endpoint now correctly resolves and returns country and isCountryFixed."
+ },
+ {
+  "k": "EP-50590",
+  "summary": "[Test fail] [fk_trigger] FK violation in functional tests — event not visible in transaction",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-24T11:08:20.337+0100",
+  "text": "Fixed foreign-key violations in functional tests caused by DB triggers not seeing events created inside the same test transaction. Functional tests affected by this FK violation are expected to pass once the trigger/transaction handling is adjusted."
+ },
+ {
+  "k": "EP-50593",
+  "summary": "[Test fail] [attr_key] Ticket service test failures — 4 failures + 3 errors",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2026-06-24T11:08:23.404+0100",
+  "text": "Fixed ticket-service bugs in country list ordering and country-lock validation, including a missing exception that let a fixed country be changed. Countries list order is corrected, the attr_key error is resolved, and the country-already-set validation now throws the expected exception."
+ },
+ {
+  "k": "EP-54542",
+  "summary": "Refactor expo-react-components ICU translation keys to the snake_case",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Frontend-dev"
+  ],
+  "doneAt": "2026-06-24T14:35:19.271+0100",
+  "text": "Renamed the shared component library's translation keys to snake_case, closing the last inconsistency in the platform's unified i18n key convention. ~103 keys across 16 locale files renamed to snake_case, all ~42 call sites and the docs/skill files updated, with ICU values left byte-identical."
+ },
+ {
+  "k": "EP-54167",
+  "summary": "Convert admin panel ICU keys to the snake_case",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Frontend-dev"
+  ],
+  "doneAt": "2026-06-24T15:53:58.041+0100",
+  "text": "Renamed thousands of admin-panel translation keys to snake_case across two languages and ~921 files, fixing broken vendor tooling caused by mixed key styles. ~2,631 English and ~1,158 Russian keys across 47 namespaces renamed to snake_case, with all ~921 referencing source files updated in the same change; ICU values stay byte-identical."
+ },
+ {
+  "k": "EP-54112",
+  "summary": "Superadmin can toggle ExpoPlatform branding in Website Footer",
+  "epic": "Mobile App — 2026 Enhancements",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-25T08:36:15.122+0100",
+  "text": "Adds a Superadmin-only toggle in the Website Builder to show or hide the 'Powered by ExpoPlatform' footer branding per event across the event lifecycle. A Superadmin-only Website Builder setting that toggles the 'Powered by ExpoPlatform' footer logo and text per event, hidden from non-Superadmins."
+ },
+ {
+  "k": "EP-54848",
+  "summary": "add /create-fe-tech-debt skill to scaffold FE Tech Debt tickets from Claude Code",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Frontend-dev",
+   "dev-experience",
+   "tech-debt",
+   "tooling"
+  ],
+  "doneAt": "2026-06-25T08:38:27.712+0100",
+  "text": "A new Claude Code skill scaffolds FE Tech Debt tickets with the correct fixed fields automatically, eliminating recurring manual-entry mistakes. A `create-fe-tech-debt` Claude Code skill creates Tech Debt tickets via the Atlassian MCP with the correct team/label/RGT+O fields and structured description, always showing a preview before creation."
+ },
+ {
+  "k": "EP-52392",
+  "summary": "[Dashboard] [Splited: 4 dashboards] [Attendee Analytics, Connections Deep Dive, Logins, Session Duration] UX/UI new Event Reporting dashboards are embedded as a new sub-section under the existing Analytics module",
+  "epic": "Automated Event Reporting Dashboards (Embeddable.com)",
+  "components": [
+   "BI"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-25T10:13:52.479+0100",
+  "text": "The new Event Reporting dashboards were embedded as a dedicated sub-section under the existing Analytics module in the organiser admin panel, delivering the UX/UI integration for multiple dashboards. Not Clearly Specified (story is in testing; the dashboards — including Attendee Analytics, Connections Deep Dive, Logins, and Session Duration — are being embedded as a new Analytics sub-section in the left navigation, with several dashboards still at POC/awaiting-data stage)."
+ },
+ {
+  "k": "EP-54553",
+  "summary": "[Dashboard] [/Splitted : Part 2] UX/UI new Event Reporting dashboards are embedded as a new sub-section under the existing Analytics module",
+  "epic": "Automated Event Reporting Dashboards (Embeddable.com)",
+  "components": [
+   "BI"
+  ],
+  "labels": [
+   "DoDUserStory"
+  ],
+  "doneAt": "2026-06-25T10:15:37.015+0100",
+  "text": "Six more automated Event Reporting dashboards (Exhibitor Analytics, Platform Performance, Mobile App, and more) were added as an Analytics sub-section. Six additional Embeddable.com dashboards were embedded as a new sub-section under the existing Analytics module, sitting alongside (not replacing) the current analytics pages in the organiser admin navigation."
+ },
+ {
+  "k": "EP-54157",
+  "summary": "Remove duplicated requests for banners, in case they are not added at all",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Frontend-dev"
+  ],
+  "doneAt": "2026-06-25T12:01:19.440+0100",
+  "text": "Stopped the frontend from re-firing the same empty banner request on every navigation, cutting wasted API calls for placements with no banners configured. Empty-result caching stops re-requesting banners for empty placements within a session, while still picking up newly-added banners via TTL/reload, without affecting placements that do have banners."
+ },
+ {
+  "k": "EP-54606",
+  "summary": "Android/ Pls update FllorPlan behaviour ",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "qa_android_regression"
+  ],
+  "doneAt": "2026-06-25T12:28:14.759+0100",
+  "text": "Fixed the Android app so it stops showing the ExpoFP floor plan after an organizer disables it, instead of only reacting to a separate dynamic-linking toggle. App behaviour is updated so the floor plan display correctly reflects the organizer's current ExpoFP setting."
+ }
+]

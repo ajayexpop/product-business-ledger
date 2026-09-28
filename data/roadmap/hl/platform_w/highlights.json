@@ -1,0 +1,847 @@
+[
+ {
+  "id": "platform-passwordless-login",
+  "theme": "platform",
+  "q": "2023-Q1",
+  "title": "Passwordless login",
+  "benefit": "Let attendees sign in with a one-time code sent by email instead of a password.",
+  "detail": "Organisers switch on one-time password login per event. Users receive a code valid for three minutes with a short resend cooldown, the password reset window is hidden when codes are in use, and Android users can paste the code.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-11098",
+   "EP-12623",
+   "EP-12541"
+  ]
+ },
+ {
+  "id": "platform-participant-email-warnings",
+  "theme": "platform",
+  "q": "2023-Q1",
+  "title": "Participant email warnings",
+  "benefit": "Spot participants with generated, missing or undeliverable email addresses directly in the admin panel.",
+  "detail": "The participants list and meeting wizard mark accounts that use a generated placeholder email, have no email, or have an email domain that cannot receive mail, with the error named next to the warning.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-12726",
+   "EP-14907"
+  ]
+ },
+ {
+  "id": "platform-profile-and-page-access-2023q1",
+  "theme": "platform",
+  "q": "2023-Q1",
+  "title": "Profile and page access improvements",
+  "benefit": "Find options faster in profile select fields and control public page access with the sign-in setting.",
+  "detail": "Country, city, region, nationality and custom select fields gain live search, including multi-select. Access to public file pages now follows the exhibitor sign-in access setting rather than the content preview toggle.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-12583",
+   "EP-11778"
+  ]
+ },
+ {
+  "id": "platform-admin-action-log",
+  "theme": "platform",
+  "q": "2023-Q2",
+  "title": "Admin action log",
+  "benefit": "Search, filter and export a full history of actions taken in the admin panel.",
+  "detail": "A new admin action log offers event, date, controller and action filters, search within request content and XLS export, and records newer admin panel actions.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-15209",
+   "EP-17879"
+  ]
+ },
+ {
+  "id": "platform-admin-panel-guidance",
+  "theme": "platform",
+  "q": "2023-Q2",
+  "title": "Clearer admin panel settings",
+  "benefit": "Understand admin settings more easily with clearer names, tooltips and introductory text.",
+  "detail": "Several confusing settings were renamed, tooltips were added across admin modules, selected pages show a short intro explaining their purpose, and fields with errors are highlighted in exhibitor category settings.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-15967",
+   "EP-15966",
+   "EP-17816",
+   "EP-16764"
+  ]
+ },
+ {
+  "id": "platform-assigned-admins",
+  "theme": "platform",
+  "q": "2023-Q2",
+  "title": "Assigned admins for accounts",
+  "benefit": "Assign a responsible admin to each exhibitor or participant and filter lists by them.",
+  "detail": "The admin exhibitor and participant lists gain an assigned admin column, an assignment pop-up, and filtering and sorting by assigned admin.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-12814"
+  ]
+ },
+ {
+  "id": "platform-inactive-account-activation",
+  "theme": "platform",
+  "q": "2023-Q2",
+  "title": "Easier account activation",
+  "benefit": "Help users with inactive accounts activate them straight from the login screen on web and app.",
+  "detail": "Inactive users see one clear activation message across web and the iOS and Android apps, with a resend activation link action, including for one-time password login. The activation notice takes priority over a wrong-password error.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-14583",
+   "EP-15585",
+   "EP-14942",
+   "EP-17488",
+   "EP-18121"
+  ]
+ },
+ {
+  "id": "platform-module-management",
+  "theme": "platform",
+  "q": "2023-Q2",
+  "title": "Full module management",
+  "benefit": "Switch every admin panel section and sub-section on or off to match each event.",
+  "detail": "Global and event module management were restructured so every admin menu tab and sub-tab can be toggled, including a separate networking and matchmaking section. Analytics tabs redirect correctly when a module is turned off.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-17025",
+   "EP-17456"
+  ]
+ },
+ {
+  "id": "platform-arabic-language",
+  "theme": "platform",
+  "q": "2023-Q2",
+  "title": "Arabic language option",
+  "benefit": "Offer Arabic as a platform language for your event.",
+  "detail": "Arabic is available as a platform language, shown as AR in the language list.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-18005"
+  ]
+ },
+ {
+  "id": "platform-registration-spam-protection",
+  "theme": "platform",
+  "q": "2023-Q2",
+  "title": "Spam protection for exhibitor sign-up",
+  "benefit": "Protect exhibitor registration from spam submissions.",
+  "detail": "Frontend exhibitor registration includes a mandatory reCAPTCHA step.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16297"
+  ]
+ },
+ {
+  "id": "platform-search-performance-2023",
+  "theme": "platform",
+  "q": "2023-Q2",
+  "title": "Faster search indexing and listings",
+  "benefit": "Get search results and marketplace listings up to date and loading faster.",
+  "detail": "Search indexing after event cloning and for whole events now runs in bulk, exhibitor list requests on the marketplace page were reorganised, and additional database indexes were added.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-13513",
+   "EP-17299",
+   "EP-17384",
+   "EP-18427"
+  ]
+ },
+ {
+  "id": "platform-admin-mfa",
+  "theme": "platform",
+  "q": "2023-Q3",
+  "title": "Multi-factor authentication for admins",
+  "benefit": "Require admins to sign in with a password plus an authenticator app code.",
+  "detail": "Admin accounts gain an MFA tab to enable authenticator-app login, exclude chosen admins and send MFA setup emails.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-11695"
+  ]
+ },
+ {
+  "id": "platform-sso-sign-in-2023",
+  "theme": "platform",
+  "q": "2023-Q3",
+  "title": "Smoother SSO sign-in",
+  "benefit": "Let SAML single sign-on users sign in within the same tab and see a custom error page if they are not registered.",
+  "detail": "The web login pop-up for SAML SSO is replaced by in-tab sign-in that returns users to where they started. Organisers can design a website page to show SSO users who are not found on the event.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-17970",
+   "EP-17967"
+  ]
+ },
+ {
+  "id": "platform-badge-scan-login",
+  "theme": "platform",
+  "q": "2023-Q4",
+  "title": "Login by badge scan",
+  "benefit": "Let app users sign in by scanning their event badge.",
+  "detail": "Badge-scan login in the mobile app can be switched on per event, limited to chosen categories and shown with a configurable login button. It works with one-time password login and activates the account.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-19419"
+  ]
+ },
+ {
+  "id": "platform-gdpr-account-deletion",
+  "theme": "platform",
+  "q": "2023-Q4",
+  "title": "Self-service account deletion",
+  "benefit": "Let users choose events and request deletion of their account data from one page.",
+  "detail": "A single event selection page lists the events a verified user belongs to, so they can select events and delete their account and data.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-23063"
+  ]
+ },
+ {
+  "id": "platform-otp-login-improvement",
+  "theme": "platform",
+  "q": "2023-Q4",
+  "title": "Simpler one-time password login",
+  "benefit": "Let users request a one-time login code whatever their account status.",
+  "detail": "A one-time code is emailed on request regardless of account status, and inactive users become active once they log in. On public events any user can request a code by email and sign in.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-18110"
+  ]
+ },
+ {
+  "id": "platform-loading-indicators",
+  "theme": "platform",
+  "q": "2023-Q4",
+  "title": "Loading indicators on listings",
+  "benefit": "See clear loading feedback while listing pages and session dates load.",
+  "detail": "Listing pages show loaders while content loads, and the sessions page shows a loader when switching to another date.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-17637",
+   "EP-21659"
+  ]
+ },
+ {
+  "id": "platform-floor-plan-performance",
+  "theme": "platform",
+  "q": "2023-Q4",
+  "title": "Faster floor plans and filters",
+  "benefit": "Load integrated floor plans and filters more quickly.",
+  "detail": "Integrated floor plans are cached and optimised, and the filters service was optimised.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-22678",
+   "EP-21993",
+   "EP-18599"
+  ]
+ },
+ {
+  "id": "platform-module-permission-alignment",
+  "theme": "platform",
+  "q": "2023-Q4",
+  "title": "Aligned module and permission settings",
+  "benefit": "Keep meeting and messaging permissions consistent with the modules switched on for an event.",
+  "detail": "The relationship between module management and the permission matrix for meetings and messages was improved.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16638"
+  ]
+ },
+ {
+  "id": "platform-reliable-exports",
+  "theme": "platform",
+  "q": "2024-Q1",
+  "title": "More reliable exports",
+  "benefit": "Download exports that recover automatically from temporary glitches instead of hanging.",
+  "detail": "Exports run on a status-controlled process that reruns an incompletely processed batch up to three times, and the exhibitor manual export runs as a queued job with all details included in the file.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16797",
+   "EP-1094"
+  ]
+ },
+ {
+  "id": "platform-admin-workflow-2024q1",
+  "theme": "platform",
+  "q": "2024-Q1",
+  "title": "Admin workflow improvements",
+  "benefit": "Open a user’s profile as them, keep list filters between visits and find session settings faster.",
+  "detail": "A customer service action in the exhibitor and visitor lists logs an admin in as that user in a new tab. Filters and search persist per admin on sponsor, participant, exhibitor and session lists, and the sessions configuration page is regrouped by area.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-23019",
+   "EP-23021",
+   "EP-23885"
+  ]
+ },
+ {
+  "id": "platform-local-time-setting",
+  "theme": "platform",
+  "q": "2024-Q1",
+  "title": "Event-time-only display",
+  "benefit": "Choose to show only event time, without local time, across the web and app.",
+  "detail": "When the setting is on, meetings, sessions, exhibitor events and blocked times show only event time on every frontend page.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-23518"
+  ]
+ },
+ {
+  "id": "platform-security-hardening-2024q1",
+  "theme": "platform",
+  "q": "2024-Q1",
+  "title": "Security hardening across web and apps",
+  "benefit": "Benefit from fixes to security findings across the website, admin panel, server and mobile apps.",
+  "detail": "Issues identified in a security assessment were fixed in the frontend, admin panel and server, and in the Android and iOS apps.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-10562",
+   "EP-10563"
+  ]
+ },
+ {
+  "id": "platform-admin-colours",
+  "theme": "platform",
+  "q": "2024-Q2",
+  "title": "Admin panel colour update",
+  "benefit": "Work in an admin panel with updated primary and secondary colours.",
+  "detail": "The primary and secondary colours of the admin panel were changed.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-28362"
+  ]
+ },
+ {
+  "id": "platform-saml-return-to-page",
+  "theme": "platform",
+  "q": "2024-Q2",
+  "title": "Return to page after SSO",
+  "benefit": "Send single sign-on users back to the page they originally requested after they authenticate.",
+  "detail": "A SAML setting returns users to their intended page after authentication instead of the event homepage.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-20669"
+  ]
+ },
+ {
+  "id": "platform-account-switcher",
+  "theme": "platform",
+  "q": "2024-Q3",
+  "title": "Easier account switching",
+  "benefit": "Switch between your own, team member, parent and child company accounts from the top menu.",
+  "detail": "The web account switcher is a dropdown available from the top-right menu and from the name on the profile page, with scrolling when there are more than five accounts.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-28676"
+  ]
+ },
+ {
+  "id": "platform-admin-panel-languages",
+  "theme": "platform",
+  "q": "2024-Q3",
+  "title": "Admin panel language choice",
+  "benefit": "Choose the admin panel language on the login page and keep it between visits.",
+  "detail": "The new admin panel adds a language selector on the login page, remembers the chosen language, and shows a loader instead of a loading message while event data loads.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-34512",
+   "EP-34511",
+   "EP-34004"
+  ]
+ },
+ {
+  "id": "platform-consent-gated-videos",
+  "theme": "platform",
+  "q": "2024-Q3",
+  "title": "Consent for embedded videos",
+  "benefit": "Block embedded videos on exhibitor profiles until the visitor gives consent.",
+  "detail": "An optional setting, off by default, keeps embedded videos on exhibitor profiles blocked until the user consents.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-32016"
+  ]
+ },
+ {
+  "id": "platform-otp-whatsapp-sms",
+  "theme": "platform",
+  "q": "2024-Q4",
+  "title": "Login codes by WhatsApp and SMS",
+  "benefit": "Send one-time login codes by WhatsApp and SMS as well as email.",
+  "detail": "Each channel has its own toggle and users receive codes through every enabled channel. SMS uses custom text and WhatsApp a preset template.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-26859"
+  ]
+ },
+ {
+  "id": "platform-australia-hosting",
+  "theme": "platform",
+  "q": "2024-Q4",
+  "title": "Australian hosting region",
+  "benefit": "Host event platforms on infrastructure in Australia.",
+  "detail": "Cloud infrastructure was set up in an Australian region.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-35819"
+  ]
+ },
+ {
+  "id": "platform-performance-2024q4",
+  "theme": "platform",
+  "q": "2024-Q4",
+  "title": "Faster pages and admin lists",
+  "benefit": "Load sponsor pages, search widgets and admin meeting lists more quickly.",
+  "detail": "Database connection pooling was added in production, account attributes and event configuration are retrieved and cached more efficiently, and admin table meeting lists, sponsor pages and exhibitor, product and brand search widgets were optimised.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-31026",
+   "EP-35921",
+   "EP-35926",
+   "EP-35927",
+   "EP-36782",
+   "EP-36786",
+   "EP-36019"
+  ]
+ },
+ {
+  "id": "platform-admin-panel-2024q4",
+  "theme": "platform",
+  "q": "2024-Q4",
+  "title": "Admin panel improvements",
+  "benefit": "Work in a tidier admin panel with fewer redundant settings and clear empty states.",
+  "detail": "Redundant settings were removed, admin tables show empty states, and modules such as hospitality, exhibitor manual and table taxes can be hidden.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-32439",
+   "EP-23762",
+   "EP-28153"
+  ]
+ },
+ {
+  "id": "platform-sign-in-profile-2024q4",
+  "theme": "platform",
+  "q": "2024-Q4",
+  "title": "Sign-in and profile refinements",
+  "benefit": "See clearer profile titles and error codes, and sign in through custom login services.",
+  "detail": "The profile edit page title reflects the account type, the frontend shows error codes, the sign-up prompt was removed from the login page, and the new frontend supports login by token from a custom service.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-34576",
+   "EP-36297",
+   "EP-37445",
+   "EP-37093"
+  ]
+ },
+ {
+  "id": "platform-security-hardening-2024q4",
+  "theme": "platform",
+  "q": "2024-Q4",
+  "title": "Security hardening",
+  "benefit": "Benefit from stronger protection of account activation and badge scanning.",
+  "detail": "Activation codes are generated with the account identifier included, and the badge scanning endpoint requires a secure token.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-34239",
+   "EP-35880"
+  ]
+ },
+ {
+  "id": "platform-country-city-data",
+  "theme": "platform",
+  "q": "2025-Q1",
+  "title": "Up-to-date country and city data",
+  "benefit": "Use country, city and region names and translations that refresh automatically every month.",
+  "detail": "The country manager now imports country, city and region names and translations from an external reference service, with monthly automatic updates.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-28301"
+  ]
+ },
+ {
+  "id": "platform-buttons-validation-2025q1",
+  "theme": "platform",
+  "q": "2025-Q1",
+  "title": "Clearer buttons and messages",
+  "benefit": "See consistent primary save buttons and clearer validation messages.",
+  "detail": "Save and similar buttons use the primary button style, and the error shown when an entry has too few characters was reworded.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-38372",
+   "EP-37692"
+  ]
+ },
+ {
+  "id": "platform-attendee-onboarding",
+  "theme": "platform",
+  "q": "2025-Q2",
+  "title": "Attendee onboarding",
+  "benefit": "Guide attendees to pick their interests on first login so recommendations are personalised from the start.",
+  "detail": "Organisers configure a multilingual onboarding pop-up with live preview, texts, category groups, mandatory or optional completion and reappearance timing. It runs on web and app, and users are notified when their recommendations page is updated.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-36617",
+   "EP-40162",
+   "EP-40531"
+  ]
+ },
+ {
+  "id": "platform-custom-labels",
+  "theme": "platform",
+  "q": "2025-Q2",
+  "title": "Custom labels",
+  "benefit": "Rename page and section labels in each language across web and app.",
+  "detail": "A content settings page lets organisers edit labels per language, with all and modified-only views, including labels in the cancel registration and delete account pop-ups.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-39352",
+   "EP-41750"
+  ]
+ },
+ {
+  "id": "platform-landing-page-after-login",
+  "theme": "platform",
+  "q": "2025-Q2",
+  "title": "Landing page after login",
+  "benefit": "Choose which page exhibitors, participants and team members land on after they log in.",
+  "detail": "The page opened on login can be a custom internal URL, and the redirect is handled on the server.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-38505",
+   "EP-40076"
+  ]
+ },
+ {
+  "id": "platform-admin-panel-2025q2",
+  "theme": "platform",
+  "q": "2025-Q2",
+  "title": "Admin panel improvements",
+  "benefit": "See the event time zone in the admin panel and keep settings consistent between admin panels.",
+  "detail": "The admin panel shows the selected event time zone, and settings made in the previous admin panel apply in the new one.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-42398",
+   "EP-41912"
+  ]
+ },
+ {
+  "id": "platform-performance-security-2025q2",
+  "theme": "platform",
+  "q": "2025-Q2",
+  "title": "Performance and security improvements",
+  "benefit": "Load large option lists and data faster, with less sensitive data sent in requests.",
+  "detail": "Additional database indexes were added, multi-select fields with many options load on demand, and tokens and identifiers were removed from requests.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-42371",
+   "EP-38507",
+   "EP-43090"
+  ]
+ },
+ {
+  "id": "platform-admin-safeguards-2025q3",
+  "theme": "platform",
+  "q": "2025-Q3",
+  "title": "Admin panel safeguards",
+  "benefit": "Avoid accidental changes with warnings on category changes and stronger validation.",
+  "detail": "Admins confirm participant category changes after a warning that they may affect access, visibility and matchmaking. Region values are validated, and the save and cancel bar is blurred behind for readability.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-39674",
+   "EP-40207",
+   "EP-43097"
+  ]
+ },
+ {
+  "id": "platform-performance-2025q4",
+  "theme": "platform",
+  "q": "2025-Q4",
+  "title": "Fewer requests and faster search",
+  "benefit": "Get a quicker app and delegate search with fewer calls to the server.",
+  "detail": "The app sends fewer requests to the server, delegate search responses are lighter, and location data is cached.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-44197",
+   "EP-45987",
+   "EP-45899"
+  ]
+ },
+ {
+  "id": "platform-locale-dates-translations",
+  "theme": "platform",
+  "q": "2026-Q1",
+  "title": "Locale-aware dates and translations",
+  "benefit": "Show dates in the format of each user’s language, with more complete translations.",
+  "detail": "Date formats follow the locale, and missing languages and system translations were added.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-46596",
+   "EP-46955",
+   "EP-47038"
+  ]
+ },
+ {
+  "id": "platform-editor-admin-2025q4",
+  "theme": "platform",
+  "q": "2025-Q4",
+  "title": "Editor and admin panel tidy-ups",
+  "benefit": "Clear formatting from text in one click and work without the maintenance banner.",
+  "detail": "The text editor has a remove styling button, and the maintenance warning was removed from the admin panels.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-45768",
+   "EP-38283"
+  ]
+ },
+ {
+  "id": "platform-security-hardening-2025q4",
+  "theme": "platform",
+  "q": "2025-Q4",
+  "title": "Protection against script injection",
+  "benefit": "Benefit from protection against cross-site scripting where HTML content is allowed.",
+  "detail": "Cross-site scripting issues were fixed in places where HTML content is supported.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-45748"
+  ]
+ },
+ {
+  "id": "platform-admin-save-cloning",
+  "theme": "platform",
+  "q": "2026-Q1",
+  "title": "Stay on page when saving",
+  "benefit": "Save changes in the admin panel without losing your place, and see a warning while an event is cloning.",
+  "detail": "Saving or applying changes in key admin modules keeps organisers on the same page. A persistent banner across admin pages warns not to edit an event while it is being cloned.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-47917",
+   "EP-48874"
+  ]
+ },
+ {
+  "id": "platform-sign-in-options-2026q1",
+  "theme": "platform",
+  "q": "2026-Q1",
+  "title": "More sign-in options",
+  "benefit": "Offer both single sign-on and standard login, including a second external login option in the app.",
+  "detail": "The sign-in modal offers SAML single sign-on or standard login, the mobile app can show a configurable second external login button, and sign-in buttons gain a hover colour.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-48719",
+   "EP-49318",
+   "EP-48919"
+  ]
+ },
+ {
+  "id": "platform-profile-completion",
+  "theme": "platform",
+  "q": "2026-Q1",
+  "title": "Profile completion tracking",
+  "benefit": "See each participant’s profile completion in the admin panel with a more accurate score.",
+  "detail": "The profile completion calculation was updated, and the admin participants list shows each participant’s completion status.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-49221",
+   "EP-49202"
+  ]
+ },
+ {
+  "id": "platform-admin-navigation-pagination",
+  "theme": "platform",
+  "q": "2026-Q2",
+  "title": "Admin panel navigation and pagination",
+  "benefit": "Move through admin lists consistently and return to the page you were on.",
+  "detail": "Pagination is standardised across admin listings and remembers your position as you navigate. The sponsorship section moved as part of a navigation restructure, and the colour picker rejects invalid values.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-52457",
+   "EP-52989",
+   "EP-53117",
+   "EP-53413",
+   "EP-52556"
+  ]
+ },
+ {
+  "id": "platform-performance-2026q2",
+  "theme": "platform",
+  "q": "2026-Q2",
+  "title": "Lighter requests and loading feedback",
+  "benefit": "Get faster page loads with fewer unnecessary requests.",
+  "detail": "Empty banner placements are no longer requested repeatedly, unnecessary sign-in checks and database connections were cut, and file download buttons in the user profile show a loader.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-54157",
+   "EP-48260",
+   "EP-49453",
+   "EP-45868"
+  ]
+ },
+ {
+  "id": "platform-security-hardening-2026q2",
+  "theme": "platform",
+  "q": "2026-Q2",
+  "title": "Security hardening",
+  "benefit": "Benefit from protection against email flooding and tighter API error handling.",
+  "detail": "The resend endpoint is rate limited per IP with temporary blocking, and the schedule note API no longer exposes internal server details in errors and enforces authorisation.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-52804",
+   "EP-52467"
+  ]
+ },
+ {
+  "id": "platform-admin-redesign",
+  "theme": "platform",
+  "q": "2026-Q3",
+  "title": "Redesigned admin panel pages",
+  "benefit": "Work in a cleaner, modern admin panel on the most used pages, with nothing to relearn.",
+  "detail": "Event setup, categories setup, event list, exhibitor list, participants list and sessions list pages were restyled to a new design with no change to how they work.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-54462",
+   "EP-54463",
+   "EP-54464",
+   "EP-54465",
+   "EP-54466",
+   "EP-54547"
+  ]
+ },
+ {
+  "id": "platform-selective-cloning",
+  "theme": "platform",
+  "q": "2026-Q3",
+  "title": "Selective event cloning",
+  "benefit": "Choose exactly which content carries over when you clone an event.",
+  "detail": "The clone dialog offers separate checkboxes for sponsors, news, sessions, local categories and other content categories.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-52816"
+  ]
+ },
+ {
+  "id": "platform-private-favourites",
+  "theme": "platform",
+  "q": "2026-Q3",
+  "title": "Private favourites for opted-out users",
+  "benefit": "Let attendees who opt out of networking favourite exhibitors, people and products privately.",
+  "detail": "Opted-out users can favourite and unfavourite exhibitors, visitors, speakers and products on web and in the app, with the action kept private so they are not exposed as leads.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-53978",
+   "EP-57577"
+  ]
+ },
+ {
+  "id": "platform-trusted-embed-domains",
+  "theme": "platform",
+  "q": "2026-Q3",
+  "title": "Trusted embed domains",
+  "benefit": "Embed authenticated content such as on-demand sessions on approved partner sites.",
+  "detail": "A security settings section lets organisers whitelist trusted external domains so authenticated content plays when embedded there.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-55082"
+  ]
+ },
+ {
+  "id": "platform-auth-settings-2026q3",
+  "theme": "platform",
+  "q": "2026-Q3",
+  "title": "Separate sign-in settings by profile",
+  "benefit": "Configure one-time password sign-in separately for company and individual profiles.",
+  "detail": "Organisers set one-time password authentication independently for company and individual profiles per event, and admin accounts gain a phone field.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-54790",
+   "EP-44947"
+  ]
+ },
+ {
+  "id": "platform-performance-2026q3",
+  "theme": "platform",
+  "q": "2026-Q3",
+  "title": "Faster web pages",
+  "benefit": "Load web pages and images faster with less data transferred.",
+  "detail": "The portal requests resized WebP images instead of originals, the web app manifest is cached instead of refetched on every navigation, and frontend bundles and builds were optimised.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-57489",
+   "EP-57336",
+   "EP-54861",
+   "EP-49045"
+  ]
+ }
+]

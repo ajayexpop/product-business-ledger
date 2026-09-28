@@ -1,0 +1,543 @@
+[
+ {
+  "id": "web-seo-tracking-2023",
+  "theme": "web",
+  "q": "2023-Q2",
+  "title": "Website SEO and form tracking improvements",
+  "benefit": "Event websites are easier for search engines to read, and form analytics record only genuine submissions.",
+  "detail": "Every page now has an H1 heading, page markup errors reported by the W3C validator were fixed and internal links were optimised for search. Form tracking codes fire only after a form passes validation and submits successfully.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-15215",
+   "EP-14868",
+   "EP-13371",
+   "EP-15216"
+  ]
+ },
+ {
+  "id": "web-new-builder-launch",
+  "theme": "web",
+  "q": "2023-Q3",
+  "title": "New website builder",
+  "benefit": "Build event websites in a new visual builder with site-wide styling, custom headers and footers, and mobile-ready pages.",
+  "detail": "A main menu gives access to blocks, pages, device previews, languages, history, global settings, save and publish. Global settings cover fonts (including uploaded fonts), colours, buttons, favicon and SEO; the header and footer include logo, navigation, search and calls to action. Each event can switch between the old and new builders.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-8495",
+   "EP-8758",
+   "EP-9002",
+   "EP-17908",
+   "EP-18895",
+   "EP-12608",
+   "EP-18616"
+  ]
+ },
+ {
+  "id": "web-events-listing-2023",
+  "theme": "web",
+  "q": "2023-Q3",
+  "title": "Events page improvements",
+  "benefit": "Visitors see clearer event dates and a tidier filter bar on the events listing.",
+  "detail": "Event date ranges use compact formats for events within one month, across two months or across two years. The filter reset button appears only when filters are applied.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-18740",
+   "EP-20654"
+  ]
+ },
+ {
+  "id": "web-dynamic-blocks",
+  "theme": "web",
+  "q": "2023-Q4",
+  "title": "Content and dynamic blocks",
+  "benefit": "Add ready-made blocks that show exhibitors, products, brands, sponsors, speakers, sessions and news straight from event data.",
+  "detail": "A library of static content blocks covers text, media, cards, testimonials, countdown, app download and FAQ. Dynamic blocks display as sliders or static grids, with filters such as category, tag or specific items, plus sorting, cards per row and style settings.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-12606",
+   "EP-21629",
+   "EP-21630",
+   "EP-21631",
+   "EP-21927",
+   "EP-22333",
+   "EP-21632",
+   "EP-22334"
+  ]
+ },
+ {
+  "id": "web-media-gallery",
+  "theme": "web",
+  "q": "2023-Q4",
+  "title": "Media gallery and builder switch",
+  "benefit": "Store and organise website images, videos and files in one gallery, and turn the new builder on per event.",
+  "detail": "The gallery supports uploads, nested folders, sorting, gallery and list views, video conversion, and renaming, previewing and moving files. A module setting and an event setting control when the new builder is used.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-8831",
+   "EP-18295",
+   "EP-18894"
+  ]
+ },
+ {
+  "id": "web-display-updates-2023",
+  "theme": "web",
+  "q": "2023-Q4",
+  "title": "Attendee widget and X branding",
+  "benefit": "Show a rotating set of attendees on the website, and see the updated X logo and name wherever social links appear.",
+  "detail": "An attendee widget shows a rotating set of attendee cards without interaction buttons. The Twitter logo and name were updated to X in the email builder, registration pages, profiles and exhibitor services.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-22016",
+   "EP-21984"
+  ]
+ },
+ {
+  "id": "web-rich-content-2024",
+  "theme": "web",
+  "q": "2024-Q1",
+  "title": "Rich content and text editing",
+  "benefit": "Build free-form page sections with a full text editor, title blocks and custom HTML that can run scripts.",
+  "detail": "A Custom Content block offers backgrounds, overlays and a rich-text editor with tables, columns, images and YouTube. Text modules gain a WYSIWYG editor, a Title & Subtitle block comes in six layouts, and custom HTML blocks can run JavaScript.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-23990",
+   "EP-20868",
+   "EP-23051",
+   "EP-26881"
+  ]
+ },
+ {
+  "id": "web-language-consent-2024",
+  "theme": "web",
+  "q": "2024-Q1",
+  "title": "Browser language and consent mode",
+  "benefit": "Websites open in the visitor's browser language when available, with support for cookie consent mode.",
+  "detail": "The language selector defaults to the visitor's browser language when the site supports it, and visitors can still switch manually. Consent mode support was added for cookie consent.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-23702",
+   "EP-25964"
+  ]
+ },
+ {
+  "id": "web-multilingual-sites",
+  "theme": "web",
+  "q": "2024-Q2",
+  "title": "Multilingual websites",
+  "benefit": "Run the same website in several languages, keeping page structure in sync while translating the text of each version.",
+  "detail": "Blocks are shared across language versions with independent text by default; organisers can desync a language and later restore it. Favourite blocks and an extra blocks section make frequently used content quicker to add.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-18901"
+  ]
+ },
+ {
+  "id": "web-editing-controls-2024",
+  "theme": "web",
+  "q": "2024-Q2",
+  "title": "Website builder editing controls",
+  "benefit": "Control autosave, video autoplay and special link types while building pages.",
+  "detail": "Autosave in the builder can be turned off, every video block has an autoplay setting, and links in blocks support special link types.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-28604",
+   "EP-28605",
+   "EP-29275"
+  ]
+ },
+ {
+  "id": "web-custom-forms",
+  "theme": "web",
+  "q": "2024-Q3",
+  "title": "Custom forms and pop-ups",
+  "benefit": "Place marketing forms on the website inline, beside images or videos, as pop-ups or as sidebars, in several languages.",
+  "detail": "Form blocks embed a chosen marketing form with colour and typography settings. Pop-up and sidebar forms support multi-column layouts and triggers such as exit intent, delay, scroll or page count. A feedback pop-up collects emoji or star ratings with comments, and forms can be multilingual and split into steps.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-32969",
+   "EP-32970",
+   "EP-32971",
+   "EP-32972",
+   "EP-32973",
+   "EP-30562",
+   "EP-34225",
+   "EP-34293"
+  ]
+ },
+ {
+  "id": "web-team-editing",
+  "theme": "web",
+  "q": "2024-Q3",
+  "title": "Real-time team editing",
+  "benefit": "Several admins can edit the same website at once and see who is working where.",
+  "detail": "The builder shows active users, updates live, locks a block while someone edits it, shares autosave and warns before a version is restored.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-22484"
+  ]
+ },
+ {
+  "id": "web-custom-css-html-2024",
+  "theme": "web",
+  "q": "2024-Q3",
+  "title": "Custom CSS and HTML controls",
+  "benefit": "Fine-tune the website's look with editable custom CSS and full-screen custom HTML.",
+  "detail": "Existing custom CSS can be edited, custom CSS supports pseudo-classes, custom HTML can be shown full screen, and anchor IDs and custom CSS pass through to the header and footer.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-34498",
+   "EP-34099",
+   "EP-34123",
+   "EP-33622"
+  ]
+ },
+ {
+  "id": "web-builder-improvements-2024q3",
+  "theme": "web",
+  "q": "2024-Q3",
+  "title": "Banners, page slugs and event cloning",
+  "benefit": "Add rotating banners, see page slugs at a glance and keep the website when cloning an event.",
+  "detail": "A Banner block shows several linked banners in three sizes with timed rotation. The page list shows each page's slug, and cloning an event copies its new-builder website.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-21888",
+   "EP-34455",
+   "EP-25958"
+  ]
+ },
+ {
+  "id": "web-embeddable-widgets",
+  "theme": "web",
+  "q": "2024-Q3",
+  "title": "Embeddable portal widgets",
+  "benefit": "Embed portal widgets in other websites with frames that resize to fit their content.",
+  "detail": "In widget mode the portal reports its height to the host page, and the frame is tracked across the session so the height stays correct.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-33266",
+   "EP-33653"
+  ]
+ },
+ {
+  "id": "web-block-design-2024",
+  "theme": "web",
+  "q": "2024-Q4",
+  "title": "Card and block design improvements",
+  "benefit": "Arrange and style cards more freely, with more FAQs, consistent image ratios and better link handling.",
+  "detail": "Cards in card rows and counter blocks can be reordered by drag and drop, FAQ blocks allow more than eight questions, and images use a chosen aspect ratio. Cards have rounded corners and softer shadows, carousel button alignment was improved, and links in text can be opened from their icon.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-35499",
+   "EP-35493",
+   "EP-25939",
+   "EP-35443",
+   "EP-36712",
+   "EP-24028",
+   "EP-37474",
+   "EP-35872"
+  ]
+ },
+ {
+  "id": "web-popups-logos-2024",
+  "theme": "web",
+  "q": "2024-Q4",
+  "title": "Pop-ups, social links and logo controls",
+  "benefit": "Show custom HTML as a pop-up, pin social links to the page edge and control where header and footer logos link.",
+  "detail": "Custom HTML pop-ups have display triggers, auto-close and per-device settings. A social links block attaches to the left or right edge. Header and footer logos can be static or link to any URL. Custom domain setup explains SSL certificate options.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-34162",
+   "EP-34346",
+   "EP-35265",
+   "EP-28249"
+  ]
+ },
+ {
+  "id": "web-block-updates",
+  "theme": "web",
+  "q": "2025-Q1",
+  "title": "Block versioning and updates",
+  "benefit": "Keep website blocks up to date, updating one block or a whole page after reviewing what has changed.",
+  "detail": "Blocks are versioned; outdated blocks show an indicator, single updates list the changes before confirming and bulk updates apply across a page.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-34874",
+   "EP-38778"
+  ]
+ },
+ {
+  "id": "web-seo-custom-pages",
+  "theme": "web",
+  "q": "2025-Q1",
+  "title": "SEO for custom pages",
+  "benefit": "Custom pages built in the website builder are rendered for search engines, with configurable headings and image alt text.",
+  "detail": "Every content, dynamic, header and footer block renders in the server response with configurable H1–H6 heading tags, semantic section elements, image alt text and working buttons.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-36224",
+   "EP-36288",
+   "EP-32698",
+   "EP-32699",
+   "EP-32702",
+   "EP-32701",
+   "EP-32705",
+   "EP-32706",
+   "EP-32707",
+   "EP-32708",
+   "EP-32710",
+   "EP-32709",
+   "EP-32703",
+   "EP-32700",
+   "EP-32704",
+   "EP-32711",
+   "EP-36507",
+   "EP-36695",
+   "EP-36694",
+   "EP-32712",
+   "EP-36683",
+   "EP-36685",
+   "EP-36687",
+   "EP-36689",
+   "EP-36691",
+   "EP-36692",
+   "EP-36693",
+   "EP-32713",
+   "EP-36508",
+   "EP-33022",
+   "EP-33023",
+   "EP-36684",
+   "EP-39909"
+  ]
+ },
+ {
+  "id": "web-server-rendered-pages",
+  "theme": "web",
+  "q": "2025-Q1",
+  "title": "Search-friendly event pages",
+  "benefit": "Event website pages such as exhibitors, sessions, news and participants now render their content for search engines.",
+  "detail": "Community, events, news, brand, exhibitor, participant, product, session, group, manual, marketplace and floor plan pages were moved to server-side rendering while keeping their existing blocks and actions. Custom text and HTML also render on the server.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-37489",
+   "EP-37490",
+   "EP-37569",
+   "EP-37570",
+   "EP-38048",
+   "EP-37488",
+   "EP-38049",
+   "EP-38050",
+   "EP-38646",
+   "EP-38647",
+   "EP-38648",
+   "EP-38649",
+   "EP-38650",
+   "EP-38653",
+   "EP-38655",
+   "EP-38052",
+   "EP-38051",
+   "EP-40539"
+  ]
+ },
+ {
+  "id": "web-page-access",
+  "theme": "web",
+  "q": "2025-Q1",
+  "title": "Visibility and page access",
+  "benefit": "Choose who sees each link and button and who can open each custom page.",
+  "detail": "Header and footer links and block buttons can be shown to everyone, logged-in or logged-out visitors, and a page access tab controls access to each custom page.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-38225"
+  ]
+ },
+ {
+  "id": "web-builder-improvements-2025q1",
+  "theme": "web",
+  "q": "2025-Q1",
+  "title": "Website builder improvements",
+  "benefit": "Cleaner page URLs, linkable card images, adjustable header menu font size and smoother page and news editing.",
+  "detail": "Custom page URLs drop the /page segment, slugs can be changed before validation, and images in card rows and carousels can link to a URL. Header menu items have a font size slider with overflow into Show More. Legacy colour settings are hidden when the new builder is on, font key errors are shown, and news paging is kept after approvals.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-38376",
+   "EP-35968",
+   "EP-36242",
+   "EP-40176",
+   "EP-24408",
+   "EP-37769",
+   "EP-39361"
+  ]
+ },
+ {
+  "id": "web-alt-text-sitemap",
+  "theme": "web",
+  "q": "2025-Q2",
+  "title": "Image alt text and sitemap",
+  "benefit": "Describe every website image for search engines and screen readers, with an improved sitemap.",
+  "detail": "Every image in the builder, including header and footer, has an optional alt text field with SEO tips and a warning when empty. Sitemap generation logic was updated.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-36256",
+   "EP-40229"
+  ]
+ },
+ {
+  "id": "web-header-styling-2025",
+  "theme": "web",
+  "q": "2025-Q2",
+  "title": "Header and styling improvements",
+  "benefit": "Header titles and subtitles display on mobile, and portal elements can be targeted with custom styling.",
+  "detail": "Header titles and subtitles show on mobile with character limits and colour settings, and portal pages expose CSS classes or data attributes for custom styling.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-40342",
+   "EP-42351"
+  ]
+ },
+ {
+  "id": "web-mobile-cards-2025",
+  "theme": "web",
+  "q": "2025-Q3",
+  "title": "Mobile layout for card rows",
+  "benefit": "Four-card rows display better on mobile devices.",
+  "detail": "The mobile layout of the four-card view used in system pages was adjusted.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-43030"
+  ]
+ },
+ {
+  "id": "web-custom-grids",
+  "theme": "web",
+  "q": "2026-Q1",
+  "title": "Custom grids",
+  "benefit": "Build your own page layouts with custom grids and place simple elements such as buttons where you need them.",
+  "detail": "Organisers set up grids with a chosen number of columns and place elements inside them, with settings positioned alongside the grid. A simple components block adds elements such as buttons.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-47651",
+   "EP-47652",
+   "EP-47653",
+   "EP-47658",
+   "EP-42261"
+  ]
+ },
+ {
+  "id": "web-carousel-editor-2026",
+  "theme": "web",
+  "q": "2026-Q1",
+  "title": "Carousel and text editor refinements",
+  "benefit": "Carousels behave sensibly with few items, and text editor controls match the builder's theme.",
+  "detail": "Blocks switch from a swiping slider to a static layout when there are not enough slides, and text editor controls inherit the builder's theme.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-46421",
+   "EP-37770"
+  ]
+ },
+ {
+  "id": "web-footer-2026",
+  "theme": "web",
+  "q": "2026-Q2",
+  "title": "Footer layout controls",
+  "benefit": "Lay out the website footer more precisely, with column alignment, text position and logo width settings.",
+  "detail": "Footer columns can be aligned and deleted, text position is configurable and logo plus text width can be set. The 'Powered by ExpoPlatform' footer branding can be shown or hidden per event.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-37947",
+   "EP-37526",
+   "EP-37518",
+   "EP-35590",
+   "EP-54112"
+  ]
+ },
+ {
+  "id": "web-card-styling-2026",
+  "theme": "web",
+  "q": "2026-Q2",
+  "title": "Card styling options",
+  "benefit": "Give every card view borders and shadows, and hide the button on individual cards without custom CSS.",
+  "detail": "Border and shadow options were added to card views that lacked them, and each card has a toggle to show or hide its call-to-action button.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-50364",
+   "EP-50339"
+  ]
+ },
+ {
+  "id": "web-ai-builder",
+  "theme": "web",
+  "q": "2026-Q3",
+  "title": "AI-assisted website styling",
+  "benefit": "Restyle website blocks by describing the change in plain language and let AI generate on-brand CSS.",
+  "detail": "Organisers describe a change in everyday words; the builder sends the block's structure and design tokens through a secure server-side connection, shows the generated CSS for review and applies it only to that block.",
+  "level": "headline",
+  "tags": [
+   "AI"
+  ],
+  "stories": [
+   "EP-52651",
+   "EP-52647",
+   "EP-52648",
+   "EP-52649",
+   "EP-52650"
+  ]
+ },
+ {
+  "id": "web-header-2026",
+  "theme": "web",
+  "q": "2026-Q3",
+  "title": "Header layout and mobile search",
+  "benefit": "Choose header scroll behaviour and line layout, and search by category on mobile.",
+  "detail": "Header menus gain scroll settings and a line layout. Mobile header search shows the categories selector and its panel pushes content down instead of covering it.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-39660",
+   "EP-39685",
+   "EP-55199"
+  ]
+ },
+ {
+  "id": "web-tracking-links",
+  "theme": "web",
+  "q": "2026-Q3",
+  "title": "Editable marketing tracking links",
+  "benefit": "Edit the name and destination of existing tracking links without recreating and re-sharing them.",
+  "detail": "Each tracking link has an edit action to update its name and landing page URL, with validation.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-54929"
+  ]
+ }
+]

@@ -1,0 +1,171 @@
+{
+ "k": "EP-36021",
+ "histories": 82,
+ "historiesRead": 82,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2025-02-06T14:24:26.101+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Pedro Goncalves"
+  },
+  {
+   "at": "2025-02-06T14:24:55.964+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Pedro Goncalves"
+  },
+  {
+   "at": "2025-02-06T14:25:00.137+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Pedro Goncalves"
+  },
+  {
+   "at": "2025-02-13T15:57:00.980+0000",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2025-03-25T14:55:13.757+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-03-25T14:55:16.425+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-05-13T11:38:07.944+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-05-20T11:53:45.479+0100",
+   "from": "Ready for decomposition",
+   "to": "Brief ready for review",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-05-20T11:53:49.687+0100",
+   "from": "Brief ready for review",
+   "to": "Tech Brief",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-05-20T11:53:52.018+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-05-20T11:53:54.666+0100",
+   "from": "Brief ready for review",
+   "to": "Tech Brief",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-05-20T11:54:13.858+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-05-20T11:54:17.457+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-06-04T10:52:00.841+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-06-12T22:16:22.853+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Oleksandr Zakharov"
+  },
+  {
+   "at": "2025-06-12T22:16:49.428+0100",
+   "from": "In progress",
+   "to": "Ready for development",
+   "by": "Oleksandr Zakharov"
+  },
+  {
+   "at": "2025-06-12T22:17:09.214+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2025-06-27T08:59:23.977+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-06-27T09:40:06.766+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-07-03T09:40:44.077+0100",
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-07-03T09:40:52.579+0100",
+   "from": "Ready for development",
+   "to": "On-hold",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-07-04T09:36:51.437+0100",
+   "from": "On-hold",
+   "to": "In progress",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-07-04T09:36:57.372+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-07-04T09:37:01.359+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-07-04T14:35:18.027+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-07-17T10:06:19.115+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790315929107.txt"
+}

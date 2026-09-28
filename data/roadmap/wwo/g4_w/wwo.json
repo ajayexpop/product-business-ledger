@@ -1,0 +1,919 @@
+[
+ {
+  "id": "sessions-exhibitor-events-launch",
+  "what": "Exhibitors create their own events from the frontend within limits and durations the organiser sets. Organisers approve or reject them, can create or import them by XLS, and approved events get their own Marketplace tab and schedule tab.",
+  "why": "Exhibitors need a place to list their own events next to the conference programme, and organisers need to control what gets published.",
+  "outcome": "Exhibitors publish events and see who booked them, organisers keep approval in their hands, and attendees find and book exhibitor events in the same place as sessions.",
+  "who": [
+   "Exhibitors",
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-8869: organisers set limits in Module Management, exhibitors create events, only organisers approve or reject; EP-11664: exhibitors see who booked. No problem stated."
+ },
+ {
+  "id": "sessions-session-filter-improvements-2023q1",
+  "what": "Tracks can appear as a session filter, and up to five renamable standard filters can be set per event. A toggle shows speakers who have not activated their accounts, and signing in from Join opens the online session room.",
+  "why": "Organisers of large shows were limited to Track, Type and Tags for sessions, and inactive speakers were hidden on the web, so visitors could not see the full speaker list.",
+  "outcome": "Attendees filter sessions by the fields that matter for each event, see every speaker, and land in the online room straight after signing in.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "Speakers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-12365: limited to Track, Type and Tags, needed extra fields such as Programme; EP-10629: inactive speakers hidden on the web; EP-14618: users left on session page after login."
+ },
+ {
+  "id": "analytics-report-columns-2023",
+  "what": "The Exhibitors export can include the notes kept on each exhibitor profile, and the favourited sessions report and its export show each session's ID.",
+  "why": "Organisers record call notes on exhibitor profiles but could not see them in the export, and analysts could not compare favourited sessions with session data without an ID.",
+  "outcome": "Organisers follow up on exhibitor calls from one spreadsheet and match favourited sessions against the sessions export by ID.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-11592 whoFor: notes not in the excel file, difficult to follow up; EP-12216 value: better comparison of favourited session data."
+ },
+ {
+  "id": "sessions-exhibitor-event-controls",
+  "what": "A session-type toggle stops exhibitors editing or deleting events once approved, while organisers can still change them. Ended events show a Past status, imports accept child exhibitor and contact IDs, and stand hours are checked.",
+  "why": "Once an exhibitor event is approved, organisers need it to stay as approved, and they need to see clearly which events have already ended.",
+  "outcome": "Organisers keep approved events stable, review any later edits before they go live, and import events for child exhibitors and contacts.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-15676 value: exhibitor can't do anything with events after approval; EP-13125: edits after approval shown before and after for review. No problem stated."
+ },
+ {
+  "id": "sessions-exhibitor-events-app-webview",
+  "what": "The iOS and Android apps have an all exhibitor events list with date switching and filters, and a My exhibitor events page of booked events with a Download My Schedule button that saves the schedule as a PDF.",
+  "why": "Exhibitor events could not yet be built natively in the app, so app users needed another way to browse and book them.",
+  "outcome": "App users browse exhibitor events, add them to their schedule, check what they have booked by date and keep a PDF copy on their phone.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-14310 / EP-14321: exhibitor events could not yet be implemented natively in the app, web widget used meanwhile; EP-16775: download button had been hidden."
+ },
+ {
+  "id": "sessions-session-import-schedule-download",
+  "what": "The five session filters are included in the sessions XLS import and export. The Export data button on My Schedule and Team Schedule is now Download My Schedule, and extra database indexes speed up session loading.",
+  "why": "Organisers who set session filters need to load them in bulk, and users need a button that plainly says it downloads their schedule.",
+  "outcome": "Organisers set filters for many sessions in one file, and attendees and exhibitors find the schedule download without guessing.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-15375: add 5 filters to the file import; EP-16749: change wording for Export data; EP-18389: additional indexes. No problem stated."
+ },
+ {
+  "id": "analytics-new-analytics",
+  "what": "A new analytics dashboard shows participants, exhibitors, content and actions, and online participants by country and interest, with sign-ups over time by category, country and interest and performance for each content type.",
+  "why": "Organisers need one place to follow registrations, content performance and activity for their event.",
+  "outcome": "Organisers see how registration is building and which content performs, from pages that open on a range around the event dates.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-9617 / EP-9618 / EP-9620: dashboard, registration and content widgets; EP-16587: default range a month either side of the event. No problem stated."
+ },
+ {
+  "id": "analytics-export-progress",
+  "what": "Exports show a percentage progress indicator and a cancel button, and a clear status while the Excel file is being generated. The check-in export runs on a lighter database query.",
+  "why": "Exports could sit at 'in progress 100%' for a long time with no sign that the file was still being built.",
+  "outcome": "Organisers see how far an export has got, know when the file is being written, and can stop an export they no longer need.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-15627: display 'excel generation' instead of 'in progress 100%' for a long time; EP-8159: stop each export manually for organiser."
+ },
+ {
+  "id": "analytics-mobile-app-stats",
+  "what": "A mobile app logins report lists each iOS and Android login with profile fields and supports unique login counts. An App data tab in analytics shows page views, unique badge scans and unique logins per platform.",
+  "why": "Organisers only saw app downloads and had no view of how their app was actually used.",
+  "outcome": "Organisers see who logs in to the app on each platform and how it is used, and can export the logins list.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-5767 whoFor/value: visibility on the app usage for organiser; wwo_a: organisers only saw app downloads."
+ },
+ {
+  "id": "sessions-session-speaker-management-2023q3",
+  "what": "Speakers and moderators with blocked time can no longer be assigned to clashing sessions unless organisers allow it. Organisers can hide Ask anonymously in session rooms, speakers get an app menu item, and past paid sessions show a price.",
+  "why": "Organisers needed to stop anonymous questions where they could harm a company's image, and to avoid assigning speakers to sessions at times they are busy.",
+  "outcome": "Organisers avoid double-booking speakers, decide whether questions can be anonymous, and app users find speakers from their own menu item.",
+  "who": [
+   "Organisers",
+   "Speakers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-19325 whoFor: bad experience with mean anonymous questions, can affect company image; EP-18536: busy speakers shown as unavailable."
+ },
+ {
+  "id": "analytics-custom-checkin-reports",
+  "what": "Organisers choose system and custom fields for the check-in report and export unique check-ins per event or per day, including co-located show badges and external codes, with the scanned code shown.",
+  "why": "Organisers needed unique and first-time scans per day and across the event, which the basic check-in list did not show, including for attendees not in the platform database.",
+  "outcome": "Organisers export check-in reports with the columns they need and tell first-time scans from repeat ones, by day or for the whole event.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-14043 whoFor: filter unique scans per day, new profiles scanned; EP-20384: uniqueness by day and across event; EP-21474: users not in EP database."
+ },
+ {
+  "id": "analytics-dashboard-improvements-2023",
+  "what": "The favourites dashboard reads pre-calculated data refreshed every 30 minutes, with an Update button and last-update time. The interactions table header in visitor and exhibitor dashboards stays fixed while scrolling.",
+  "why": "The favourites dashboard took too long to load, and with 50 interactions per page the table header scrolled out of view, so column titles were lost.",
+  "outcome": "Organisers open the favourites dashboard faster, can refresh it on demand, and keep column titles in view while reading long interaction lists.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-19897: cut the Favourites dashboard data load time; EP-21795: header scrolled out of view, clients lost column titles."
+ },
+ {
+  "id": "ai-global-search-launch",
+  "what": "A new search engine scores matches using admin-set multipliers and category weights, supports prefix and fuzzy matching, shows result counters, finds brands and products by exhibitor name, and finds people by activity category.",
+  "why": "The existing search was built on compromises and a solid base was needed for global search. People search only matched participant categories.",
+  "outcome": "Attendees find exhibitors, products, brands and people from one search, and organisers tune which fields count most in the results.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-13095: existing search built on compromises, solid base needed; EP-19784: search only matched participant categories."
+ },
+ {
+  "id": "sessions-native-exhibitor-events-app",
+  "what": "A native app page with Exhibitor Events and On-demand tabs replaces the web view. The apps follow the web rules for blocked slots, non-removable events, visibility, tracks and speaker, moderator and sponsor display, and mark moderators.",
+  "why": "The temporary web widget needed replacing with a native list, and the app needed to support every exhibitor event setting the web already applied.",
+  "outcome": "App users browse, search and filter exhibitor and on-demand events, then join, add them to their schedule or watch, under the same rules as on the web.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-18257: replace the temporary widget with a native public list; EP-21137: API needed to support all exhibitor event settings in the apps."
+ },
+ {
+  "id": "sessions-multilingual-exhibitor-events",
+  "what": "A language switcher lets users read exhibitor events in any supported language, starting from the language the organiser sets, with event names and descriptions shown in that language where translated.",
+  "why": "International users needed to use exhibitor events in their preferred language.",
+  "outcome": "Attendees read exhibitor event details in their own language on the web and in the app, and exhibitors reach visitors who do not share the event language.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23529 wwo_a: international users needed to use exhibitor events in their preferred language."
+ },
+ {
+  "id": "analytics-login-source",
+  "what": "The visitor and exhibitor login report export has a login source column showing, for every login attempt, whether it came from the web or the iOS or Android app.",
+  "why": "Admins needed the login report to say more about each login, including where it came from.",
+  "outcome": "Organisers see how people reach the event, on the web or in the app, straight from the login export.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-13872 whoFor: Admins; value: made a report more informative."
+ },
+ {
+  "id": "ai-search-refinements-2023q4",
+  "what": "One redesigned search bar appears on the marketplace, sessions, delegates, news, groups and floor plan pages. Products and brands are searchable by country, speaker and exhibitor names weight results, and stop-words are ignored.",
+  "why": "The existing search interface needed simplifying, and results needed to reflect who is speaking or exhibiting and respect who users are allowed to see.",
+  "outcome": "Attendees search the same way on every page, find sessions by speaker and events by exhibitor, and only see people they are permitted to see.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-19987: to simplify the existing search interface; EP-20800: permission matrix removes results that should be hidden; EP-21373 / EP-19256: speaker and exhibitor name multipliers."
+ },
+ {
+  "id": "sessions-other-locations",
+  "what": "Organisers manage a list of other locations for sessions and exhibitor events, can allow a custom location, and can add an address that shows on session and event cards on web and app, in the API and in export and import.",
+  "why": "Other location could be either a predefined list or free text, not both, and venues outside the floor plan had no address to show.",
+  "outcome": "Organisers and exhibitors place sessions and events at off-floor venues, and attendees see where to go from the card on the web or in the app.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16736: other location could be either a predefined list or free text, not both; EP-16777: address shown on cards, API and exports."
+ },
+ {
+  "id": "sessions-schedule-improvements-2024q1",
+  "what": "Direct invite links for meetings, sessions and exhibitor events add the item and open the schedule, or name the clashing item. A setting hides local time on web and app, and session speakers and moderators can be added to exhibitor events.",
+  "why": "Invite links added activities without checking availability, and showing local time was confusing for events spanning several time zones.",
+  "outcome": "Attendees add items from invite links without overwriting their schedule, see one clear event time, and exhibitors can feature session speakers in their events.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23542: direct links added activities without checking availability; EP-24305: local time confusing for multi time zone events; EP-16928: speakers engaged in many exhibitors' events."
+ },
+ {
+  "id": "analytics-checkin-analytics-refresh",
+  "what": "A new page charts registrations before and after the event opens and check-ins and check-outs by day or hour, with user and zone filters. The check-in list shows each day's first and last scans, and zones sync with the floor plan.",
+  "why": "Organisers need to see when people arrive and leave, by day, hour and zone, alongside how registrations built up.",
+  "outcome": "Organisers follow attendance through the event, check each participant's daily movements, export the list and manage check-in zones from the floor plan.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-24652 / EP-24653 / EP-24654: analytics, check-in list and zones pages; no problem stated beyond EP-28682 design follow-up."
+ },
+ {
+  "id": "analytics-mobile-analytics-page",
+  "what": "The mobile analytics page charts app logins, page views, favourites, meetings and badge scans as daily, weekly or monthly graphs, filtered by user group, platform and page, with iOS and Android totals.",
+  "why": "Organisers need to see how the event app is used over time and by which groups.",
+  "outcome": "Organisers compare app use across iOS and Android, user groups and pages, and see how it changes through the event.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-20705: admins see mobile app usage filtered by user group, platform and page. No problem stated."
+ },
+ {
+  "id": "analytics-meetings-tab",
+  "what": "A Meetings tab in analytics, with event, segment and date filters, shows requested meetings by status, online and offline counts, average meeting length, time spent in online meetings and where requests came from.",
+  "why": "Organisers need to see how meetings are being requested and held across web and app.",
+  "outcome": "Organisers check how many meetings were accepted or declined, how long they ran and how much took place online, for any segment or date range.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-1068: requested meetings by status, online/offline, average length, request sources. No problem stated."
+ },
+ {
+  "id": "analytics-standard-report",
+  "what": "Admins generate the standard event report from the Data page in the same way as other reports.",
+  "why": "Organisers need the standard event report to be available alongside their other reports.",
+  "outcome": "Organisers produce the standard report themselves, when they need it, without leaving the admin panel.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-23957: admins can generate the Standard Report from /admin/data like other reports. No problem stated."
+ },
+ {
+  "id": "ai-admin-ai-assistant",
+  "what": "A chat assistant based on a large language model opens from an icon on every admin page, answers from the platform documentation, keeps conversation history and collects feedback. Access is set per client and the icon can be dragged aside.",
+  "why": "Admins needed help using the admin panel based on the documentation, and the chat icon could cover important page elements.",
+  "outcome": "Organisers ask how to do something while they work and get an answer on the same page, then move the icon wherever it is out of the way.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23166: admins needed help using the admin panel based on the documentation; EP-26308: icon can overlap important elements."
+ },
+ {
+  "id": "ai-global-search-expansion",
+  "what": "Ranked search now covers exhibitor events, sessions, on-demand, news, groups, delegates, speakers and buyers, with section multipliers and filters, and is on by default for new events. Android keeps search results when you go back.",
+  "why": "Search by exhibitor name on exhibitor events used the database inefficiently, and on Android going back from a profile reloaded the results page.",
+  "outcome": "Attendees use the same ranked search in every main section, and app users return to their results after opening a profile.",
+  "who": [
+   "Attendees",
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23759: exhibitor name search via database not efficient; EP-35825: back reloaded page; EP-13096: stage 2 sections."
+ },
+ {
+  "id": "ai-recommendation-display",
+  "what": "A setting decides whether personalised session recommendations are expanded when the session overview loads. In the Android app, recommended sections respect networking opt-in and permission settings.",
+  "why": "Users had to open the recommendations section by hand on every visit, and recommended sections in the app needed to follow the same visibility rules as lists.",
+  "outcome": "Attendees see their session recommendations straight away when the organiser chooses, and app users are only recommended people they are allowed to see.",
+  "who": [
+   "Attendees",
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-24107: users had to open recommendations manually on every visit; EP-27485: hide participants based on networking opt-in and permission matrix."
+ },
+ {
+  "id": "sessions-exhibitor-event-reporting",
+  "what": "Users report exhibitor events with preset reasons, and organisers review the reports against a content policy for exhibitors. A final Rejected for security concern status needs a reason and has its own filter and column.",
+  "why": "Organisers needed a way to act on offensive or polarising exhibitor events raised by users, and to single those events out clearly.",
+  "outcome": "Attendees flag content they find offensive, organisers are alerted and can reject an event for good with a recorded reason, and exhibitors see why.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16951: users raised concerns about offensive content, organisers needed to act; EP-16950: single out offensive or polarising events."
+ },
+ {
+  "id": "sessions-sessions-list-improvements-2024q2",
+  "what": "An optional setting lists exhibitor events alongside sessions with a Session Format filter. Registration fields can be flagged for the XLS schedule download, and exhibitors search speakers and moderators by name or title in event forms.",
+  "why": "Exhibitors could not include fields they needed for meeting prep in the schedule download, and had to scroll long speaker lists to find someone.",
+  "outcome": "Attendees see sessions and exhibitor events in one list, exhibitors download schedules with the details they need, and find a speaker by typing a few letters.",
+  "who": [
+   "Exhibitors",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23548: exhibitors could not include fields crucial to meetings, making prep difficult; EP-27790: had to scroll whole lists; EP-26029 value: better visibility."
+ },
+ {
+  "id": "analytics-export-additions-2024",
+  "what": "A News export lists articles with author, tags, visibility and exhibitor. The user export shows when each account was activated, and the meetings export shows the parent exhibitor of child-exhibitor participants.",
+  "why": "Organisers needed news data in a structured format to share, analyse and archive, account activation times for GDPR compliance, and parent exhibitor names for meeting reporting.",
+  "outcome": "Organisers download news for archiving and analysis, keep activation records for compliance and report meetings by parent exhibitor.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-55: download news in structured format to share, analyse, archive; EP-26794 whoFor: compliance as part of GDPR; EP-25833 value: easing up the reporting process."
+ },
+ {
+  "id": "sessions-exhibitor-event-approval-workflow",
+  "what": "Organisers can require exhibitors to answer custom security questions and accept a policy on submission, auto-approve events by type, and save changes without approving or rejecting. Emails and notifications cover each status change.",
+  "why": "Organisers need key information from exhibitors before approving events, need to edit events under review without deciding, and both sides need to hear about status changes.",
+  "outcome": "Organisers assess risk before approving, postpone a decision with notes, and let trusted event types through automatically, while exhibitors are told the result and reason.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-26093: organisers need critical information upfront to assess risks; EP-32197: edit under review without approving; EP-16921: be told about status changes; EP-23521: spares exhibitors waiting."
+ },
+ {
+  "id": "sessions-clickable-custom-locations",
+  "what": "With the setting on, other locations can carry a URL that opens from session and exhibitor event cards on the web and in the apps, inside the app for internal pages or in the browser for external ones.",
+  "why": "Organisers wanted custom locations to link to places such as a map or a website.",
+  "outcome": "Attendees open directions or a venue page straight from the session or event card, on the web or in the app.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16920: organisers wanted custom locations to link to Google Maps or a website; EP-32851: web only before."
+ },
+ {
+  "id": "sessions-internal-notes-flags",
+  "what": "Sessions and exhibitor events have an internal Notes field and a Flag as critical checkbox, visible only in the back office, with a filter, export columns and import support.",
+  "why": "Organisers could add internal notes to visitor and exhibitor profiles but not to sessions, and needed to spot critical sessions among hundreds.",
+  "outcome": "Organisers keep team notes on each session, filter to the critical ones for regular follow-up and manage both in bulk, with nothing shown to attendees.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-29190: notes on profiles but not sessions; EP-29221: hundreds of sessions, needs to spot critical ones easily."
+ },
+ {
+  "id": "sessions-schedule-list-view-app",
+  "what": "The app schedule has a list view that groups meetings, sessions, events and blocked time by hour, and the organiser's default view setting now applies in the apps.",
+  "why": "Only a calendar view was available on the app schedule page.",
+  "outcome": "App users read their day as a simple chronological list, and organisers choose which view people see first on web and app.",
+  "who": [
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-21405: only a calendar view was available on the app schedule page."
+ },
+ {
+  "id": "sessions-session-import-filtering-2024q3",
+  "what": "The session import maps a name and description field per frontend language and attaches speakers and moderators by external code. A product category filter is available on the All Sessions, On-demand and Round tables tabs.",
+  "why": "Session titles and descriptions needed importing for each event language, speakers needed linking by external ID, and the product category filter existed for exhibitor events but not sessions.",
+  "outcome": "Organisers load multilingual sessions in one file using their own speaker IDs, and attendees filter sessions by product category.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16932: import for each event language in single file; EP-16934 value: not bother to map internal IDs; EP-29933: filter available for exhibitor events but not sessions."
+ },
+ {
+  "id": "analytics-report-time-zones",
+  "what": "Export, import and statistics download links across the admin panel show when the file was generated in the event time zone, with the zone named.",
+  "why": "Download links showed times in a fixed time zone instead of the event's own.",
+  "outcome": "Organisers know exactly when each report was produced in the time their event runs on.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-29932: download links showed GMT+1 instead of the event's time zone."
+ },
+ {
+  "id": "analytics-session-report-additions",
+  "what": "The sessions export shows each exhibitor event's status, including rejection for security concerns, how often it was reported as offensive, and when the exhibitor created and last edited it.",
+  "why": "Organisers needed security information in session reporting, including when exhibitors submitted their content compliance confirmation.",
+  "outcome": "Organisers review reported and rejected exhibitor events and their edit history from one export for security checks.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-31429: organisers needed to know when exhibitors submitted the Content Compliance Confirmation; whoFor: for security check."
+ },
+ {
+  "id": "ai-related-exhibitor-recommendations",
+  "what": "After requesting a meeting, attendees see a pop-up and a schedule page block listing up to 20 related exhibitors. Organisers can also switch on exhibitor events in the Recommendations section.",
+  "why": "Users should get a list of exhibitors similar to those they have viewed, favourited or met, and exhibitors need a way to promote their events.",
+  "outcome": "Attendees discover more relevant exhibitors to meet at the moment they are planning meetings, and exhibitor events reach people through recommendations.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-28230: dynamic list of exhibitors similar to those viewed, favourited or met; EP-30975 value: exhibitor event promotion."
+ },
+ {
+  "id": "sessions-session-ratings",
+  "what": "Attendees rate sessions they attended with stars and a short comment, or mark that a session did not take place, from a ratings page or a prompt afterwards. The apps prompt singly or in batches, and organisers export ratings.",
+  "why": "Attendees want to rate sessions to give feedback and improve future events, as they already could for meetings.",
+  "outcome": "Attendees give feedback while the session is fresh on web or app, and organisers export ratings with user details to review their programme.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-19438: attendees want to rate sessions to give feedback and improve future events, as for meetings; EP-33802: same in app."
+ },
+ {
+  "id": "sessions-session-scheduling-improvements-2024q4",
+  "what": "A warning appears on the frontend and in admin when a session or exhibitor event is set at the same location and an overlapping time as another. Time zones are validated, and an empty Sessions page says no sessions have been added.",
+  "why": "Organisers and exhibitors needed scheduling clashes in the same location flagged while they set up sessions and events.",
+  "outcome": "Organisers and exhibitors spot a clash before saving and can change it or save anyway, so fewer overlapping sessions and events are created.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16924: flag scheduling clashes in the same location during setup; value: less events and sessions created overlapping."
+ },
+ {
+  "id": "analytics-team-schedule-export",
+  "what": "The team schedule export lists attendee names for events the team moderates or speaks at, and parent exhibitors also see their child companies' events.",
+  "why": "Exhibitors could not see who had added their events to their schedule, which they needed for validation.",
+  "outcome": "Exhibitors check who plans to attend their events from one export, including events run by their child companies.",
+  "who": [
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-36095: exhibitors could not see who had added their events to their schedule, for validation."
+ },
+ {
+  "id": "analytics-marketplace-supply-demand",
+  "what": "The supply and demand graph tooltip names the product category above participant interest, suppliers and products, and categories that share the same values are listed clearly in one tooltip.",
+  "why": "The tooltip showed interest, supplier and product counts without naming the category.",
+  "outcome": "Organisers read at a glance which product categories have more interest than supply, and the reverse.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-29899: tooltip showed counts without naming the category; EP-31157: grouped categories view."
+ },
+ {
+  "id": "ai-ai-exhibitor-search",
+  "what": "A prompt-based AI search widget sits on the exhibitor list, switched on as its own module with open or sign-in-only access. Organisers set up to three suggested prompts, and the conversation stays open as visitors move around the site.",
+  "why": "Marketplace users need a quicker, tailored way to find the products, services or networking opportunities they are looking for.",
+  "outcome": "Visitors describe what they need in their own words, refine it with follow-up prompts and get matching exhibitors and sponsors, without losing the chat as they browse.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-27547 whoFor: value for Marketplace users seeking efficient, tailored navigation to find products, services or networking; EP-35217: chat lost after navigating."
+ },
+ {
+  "id": "sessions-session-details-app-2025q1",
+  "what": "Session and exhibitor event cards in the iOS and Android apps display the complete location, and the iOS speakers list also shows moderators.",
+  "why": "Attendees want to see where to go straight from the card without extra navigation.",
+  "outcome": "App users see exactly where a session or event takes place from the card, and find moderators alongside speakers.",
+  "who": [
+   "App users",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-38220: attendees want to see where to go straight from the card without extra navigation."
+ },
+ {
+  "id": "analytics-login-checkin-exports-2025",
+  "what": "The login data report lists customer service logins separately from web logins, and the check-in list export can show the session ID and name for session, exhibitor event and round table check-ins.",
+  "why": "Logins made through the Customer Service button were counted as attendee activity, and organisers had to filter by hand to see which sessions a participant attended.",
+  "outcome": "Organisers get login figures that reflect real attendee activity and see session attendance per participant straight from the check-in export.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-18160: admin impersonation recorded as attendee activity, distorting metrics; EP-38213: organisers had to filter manually."
+ },
+ {
+  "id": "ai-unified-recommendations",
+  "what": "Organisers choose, title, order and target each recommendation section, including matchmaking, and preview the page for web or app. The app shows role icons on recommended people, and admin warns when no sections are enabled.",
+  "why": "Users want recommendations split into distinct sections so they can find relevant content quickly.",
+  "outcome": "Attendees get one recommendations page on web and app with sections relevant to them, and organisers shape it for each audience group.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-38636: users want recommendations split into distinct sections to find relevant content quickly; EP-27246 / EP-39440: admin configuration."
+ },
+ {
+  "id": "sessions-agenda-sharing-2025q2",
+  "what": "A Send Agenda pop-up in the admin exhibitor list and profile explains the action and lets organisers pick recipients, including team members, with a success or error message. Session cards can show child exhibitors.",
+  "why": "Admins sending agendas could not see what the action did, whether it worked, or choose which team members received it.",
+  "outcome": "Organisers send each exhibitor's agenda to the right people and know it has gone.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40075: admins could not see what the action did, whether it succeeded, or choose which team members received it."
+ },
+ {
+  "id": "sessions-custom-session-filters-app",
+  "what": "Custom session filters are available in the mobile apps, working with existing filters and search, and custom filter items can be translated into each event language.",
+  "why": "Custom session filters worked only on the web, and their values were not translated into other languages.",
+  "outcome": "Attendees filter sessions in the app the same way as on the web, such as by language or location, and read the filters in their own language.",
+  "who": [
+   "Attendees",
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-39304: custom session filters worked only on the web; whoFor: filter by language and location, consistent across web and mobile; EP-41291: not translated."
+ },
+ {
+  "id": "sessions-easy-session-check-in",
+  "what": "An optional Easy Entrance setting in Sessions config lets attendees check in without errors to sessions and exhibitor events that are not in their schedule.",
+  "why": "Check-in failures for users who had not added a session to their schedule caused crowding at session entrances.",
+  "outcome": "Attendees get into sessions they did not pre-book without a hold-up at the door, and their check-ins still count in analytics and reports.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40189: clients raised crowding at session entrances caused by check-in failures for users without the session in their schedule."
+ },
+ {
+  "id": "analytics-total-meetings-graph",
+  "what": "The Total meetings graph in meeting analytics counts every part of the graph by the same date.",
+  "why": "Two parts of the Total meetings graph were filtered by different dates, so their figures did not line up.",
+  "outcome": "Organisers read meeting totals that are counted the same way across the whole graph.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-42365: one part filtered by meeting date, the other by creation date; unify the display."
+ },
+ {
+  "id": "sessions-exhibitor-event-applications",
+  "what": "Exhibitor events can use an application deadline with manual or first-come approval. Organisers review applicants on an Applications tab with status filters, search and clash details, and applicants are notified and emailed of the decision.",
+  "why": "Organisers want to control attendance by requiring users to apply for certain exhibitor events, and applicants need to know when they are approved or rejected.",
+  "outcome": "Organisers manage places at exhibitor events from one page, and attendees apply or cancel on web or app and hear the result with the event details.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-39836: organisers want to control attendance by requiring users to apply; EP-41666: users need to be told when approved or rejected."
+ },
+ {
+  "id": "sessions-session-attendee-management",
+  "what": "Attendees and Favourited move from the session and exhibitor event edit page to a separate Attendees tab, where organisers add or remove scheduled users and mark attendance. Saving keeps organisers on the edit page.",
+  "why": "Managing users on a session meant saving the whole session or exhibitor event.",
+  "outcome": "Organisers update who is scheduled or attended without touching the rest of the session, and carry on editing after saving.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-41665: managing users on a session required saving the whole session or exhibitor event."
+ },
+ {
+  "id": "sessions-speaker-profile-events-app",
+  "what": "Speaker and moderator profiles in the mobile app have an Events block listing their active, visible exhibitor events with date, time and a button to add each one to the schedule.",
+  "why": "App users want to see the exhibitor events a speaker or moderator is part of, as they already can on the web.",
+  "outcome": "App users find every event a speaker is taking part in from one profile and add it to their schedule there.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Speakers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40261: app users want to see the exhibitor events a speaker or moderator is associated with; whoFor: consistency with the web platform."
+ },
+ {
+  "id": "analytics-meeting-programme-reports",
+  "what": "A Generate XLS Report button on meeting programme details produces a multi-tab, timestamped report with per-attendee counts of generated, accepted, rejected and confirmed meetings, sponsored and free.",
+  "why": "Organisers needed a complete meeting programme dataset for auditing, analysis and transparency.",
+  "outcome": "Organisers download the full picture of a meeting programme in one file and analyse it in detail per attendee.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-43263: organisers needed a complete Meeting Program dataset for auditing, analysis and transparency."
+ },
+ {
+  "id": "analytics-programme-roundtable-reports",
+  "what": "The meeting programme report adds each exhibitor's sponsored meeting limit and a relevance tab covering all user types. Each round table session has an export listing assigned attendees with topic and table number.",
+  "why": "The report left out sponsored meeting limits and some user types, and organisers need to know who is at which round table topic and table to send reminders and direct people.",
+  "outcome": "Organisers compare relevance actions against sponsored limits for every user type, and use the round table list to remind attendees and seat them on arrival.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45789: tab did not show sponsored meeting limits; EP-45788: covered only some user types; EP-45794: need to know who is at which topic and table to send reminders and direct people."
+ },
+ {
+  "id": "sessions-exhibitor-event-auto-approval",
+  "what": "Organisers run automatic approval of exhibitor event applications from Sessions config, and a place limit is required when approval is on. Rejection notifications are removed, and events sort consistently on exhibitor profiles.",
+  "why": "Organisers need a fair, quick way to decide on many applications within a set number of places, and rejection messages were not appreciated by users.",
+  "outcome": "Organisers fill exhibitor event places in one action, applicants who miss out are not sent rejection messages, and exhibitors see their events in a clear order.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-46207: rejection notifications not appreciated by users; EP-46203: unlimited not allowed with approval; EP-46204: auto-approval mechanism. Fairness part implied."
+ },
+ {
+  "id": "analytics-export-additions-2026",
+  "what": "Participant exports include each profile's completion value, the exhibitor export shows whether each exhibitor is marked new, and the team member export includes external QR codes.",
+  "why": "Organisers wanted profile completion and new-exhibitor status in their exports for analysis and outreach, and a way to export all team member QR codes.",
+  "outcome": "Organisers see which profiles need completing and which exhibitors are new in their own spreadsheets, and prioritise follow-up from there.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-49223: review profile completeness and prioritise outreach; EP-47499: new-exhibitor status for data analysis; EP-46247 value: export all Team Member QR codes."
+ },
+ {
+  "id": "analytics-programme-report-additions-2026",
+  "what": "The All meetings tab of the meeting programme report shows how each meeting was generated, from the first or second matching run or added by the organiser, and the rating it received.",
+  "why": "Organisers need to see how each meeting in the programme was created and how attendees rated it once the programme is over.",
+  "outcome": "Organisers review where meetings came from and how well they were received in the report they already use.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-48386: so organisers can see how each meeting was created; EP-48851: organisers need to see how attendees rated meetings."
+ },
+ {
+  "id": "ai-mobile-search",
+  "what": "Search in the mobile app looks at descriptions as well as names, and orders exhibitor results so name matches, exact names first, come before description matches.",
+  "why": "Users could not find items whose keywords appeared only in descriptions, and the exhibitor they expected often did not appear at the top.",
+  "outcome": "App users find what they search for even when the word is only in a description, and reach the exhibitor they typed without scrolling.",
+  "who": [
+   "App users",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-46589: users couldn't find items whose keywords were only in descriptions; EP-48511: expected exhibitor often not at the top."
+ },
+ {
+  "id": "ai-ai-search-relevance",
+  "what": "Exact name matches outrank description mentions in results and autocomplete, language and accent variants are recognised, spaced and joined-up names match, parent and child exhibitors follow a set order, and empty searches get suggestions.",
+  "why": "Look-alike words in descriptions outranked the exhibitor people searched for, name variants and spacing caused dead ends, and zero-result searches showed a blank page.",
+  "outcome": "Attendees reach the exhibitor they mean even with a variant spelling or partial name, and get 'Did you mean' and category suggestions instead of an empty page.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-49803: look-alike description words outranked the partner; EP-49808: variants not recognised; EP-49807: spaces broke matches; EP-49812: blank dead-end pages."
+ },
+ {
+  "id": "sessions-external-session-registration",
+  "what": "Organisers set an external registration URL for each session, with a custom button label and an external-link icon, so the Register button sends attendees to that page during the pre-event and live event.",
+  "why": "Sessions could only use the platform's own registration, so organisers who needed external registration or payment for a session had no supported option.",
+  "outcome": "Organisers take session sign-ups or payments on their own page, and attendees can see the button leads to an external site before they click.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52375: sessions could only use built-in registration; organisers needing external registration or paid-session handling had no supported path."
+ },
+ {
+  "id": "sessions-now-upcoming-sessions-app",
+  "what": "On the current day, the mobile Sessions list scrolls to the current time, shows a now separator and highlights Now and Upcoming sessions.",
+  "why": "The mobile Sessions list always opened at the start of the day, so attendees with large agendas had to scroll a long way to reach what was on now.",
+  "outcome": "Attendees on site open the app and see straight away what is running now and what starts next.",
+  "who": [
+   "App users",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-48378: list always opened at the start of the day, attendees had to scroll extensively to reach sessions happening now."
+ },
+ {
+  "id": "sessions-session-cards-admin-filters-2026q2",
+  "what": "The admin Sessions and Exhibitor Events pages have filter sections such as session type. Detail cards show the session or exhibitor event type, and exhibitor event cards show the hosting exhibitor's name, on web, iOS and Android.",
+  "why": "The admin session pages had little filtering, so organisers scanned by hand, and the type and host name showed in the list but not on detail cards.",
+  "outcome": "Organisers find sessions and events quickly in admin, and attendees see what an item is and who hosts it without going back to the list.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-48239: flat lists forcing organisers to scan manually; EP-53048 / EP-53049: type and exhibitor name in list but not on detail card."
+ },
+ {
+  "id": "analytics-event-reporting-dashboards",
+  "what": "A new section in Analytics holds ready-made dashboards for exhibitors, attendees, platform performance, mobile app downloads and adoption, meetings and messaging, top sessions and session types, and product categories and listings.",
+  "why": "Organisers need a self-serve view of exhibitor and attendee adoption and engagement, meetings, sessions and products without building the figures by hand from raw exports.",
+  "outcome": "Organisers follow their event through KPI cards and trends, filter to the audience they care about and drill down to the underlying data.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52363 / EP-52364 / EP-52369 ai.problem: organisers had to assemble or derive metrics manually from raw exports; EP-52365 to EP-52368 dashboards."
+ },
+ {
+  "id": "analytics-colocated-checkins",
+  "what": "The total check-in and check-out graph compares co-located events and shows crossover check-ins, filterable by badge origin.",
+  "why": "Check-in analytics treated each event on its own, so organisers of co-located events could not compare attendance or see who crossed between events.",
+  "outcome": "Organisers of co-located events compare attendance side by side and see how many attendees visit more than one event.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-49438 ai.problem: check-in analytics treated each event in isolation; confluence: totals didn't match export for co-located events."
+ },
+ {
+  "id": "analytics-faster-exports",
+  "what": "The by-session export was reworked to run in the background more reliably, and the by-booking report loads each page with a fixed set of queries, however many orders the event has.",
+  "why": "The by-session export was slow and unstable to download, and the by-booking report ran thousands of queries per page on large events.",
+  "outcome": "Organisers download session and booking reports without long waits or failed exports, including on large events.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-50643 ai.problem: bySession export slow and unstable; EP-54274: thousands of individual queries per page view on large events."
+ },
+ {
+  "id": "analytics-ga4-support",
+  "what": "GA4 tracking works again on event websites. The Google Analytics ID field in the admin panel checks the GA4 format and has placeholder and help text, and leaving it empty turns tracking off.",
+  "why": "Google Analytics was not working on the platform, and the ID field accepted malformed IDs with no guidance on the expected format.",
+  "outcome": "Organisers measure their event website traffic in Google Analytics 4 and catch a mistyped ID before it breaks tracking.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-53455: neither Universal Analytics nor GA4 was working; EP-53548: field accepted unvalidated input with no guidance."
+ },
+ {
+  "id": "analytics-meeting-outcome-columns",
+  "what": "The meetings report and the custom meeting wizard report include business transaction likelihood and meeting did not take place columns, for every rated meeting.",
+  "why": "Organisers of meeting-focused events need all rating data to judge success, and these fields were tracked but not exported.",
+  "outcome": "Organisers and exhibitors see which meetings happened and which are likely to lead to business, straight from the export.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-53966 confluence: organisers need all rating data to judge event success; fields tracked but not exported."
+ },
+ {
+  "id": "ai-ai-event-assistant",
+  "what": "The first phase of the AI event assistant includes a sessions and agenda tool, so it answers attendee questions about the programme by day, topic, time and format.",
+  "why": "Attendees had to browse the whole agenda to find relevant sessions, and the assistant had no structured way to answer session questions.",
+  "outcome": "Attendees ask the assistant what is on and get relevant sessions back, instead of scrolling the full agenda.",
+  "who": [
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-50773 ai.problem: attendees had to manually browse the entire agenda; assistant had no structured way to answer session queries."
+ },
+ {
+  "id": "ai-ai-search-service",
+  "what": "A new AI search service indexes exhibitors, team members, products, people, sessions and news and stays up to date as data changes. Marketplace filters narrow AI results, and results can be paged beyond the first set.",
+  "why": "Only some content was indexed, so exact matches could be outranked or missing, marketplace filters had no effect on AI results, and only a first set of results was returned.",
+  "outcome": "Attendees search by meaning across the event, narrow results with the filters they already use and page through every relevant match, with current data.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-49810: only some entities indexed; EP-54178: filters not reflected in AI results; EP-54179: no way to page; EP-52173: stale data risk."
+ },
+ {
+  "id": "ai-recommendation-service",
+  "what": "A rebuilt recommendation service calculates matching scores from category similarity and provides recommendations through a new API. The delay on an event's first request was cut, and caching now updates incrementally.",
+  "why": "The first recommendation request for an event was slow while data loaded, which degraded the matchmaking experience.",
+  "outcome": "Attendees get category-based recommendations and matches that respond quickly, including the first time an event's recommendations are requested.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-49473: first request for a tenant took roughly 30-50 seconds, slow cold starts degraded matchmaking; EP-54438: cache the main bottleneck."
+ },
+ {
+  "id": "sessions-session-calendar-view",
+  "what": "The agenda can be browsed as a day, week or multi-day calendar that handles overlapping sessions, shows a live now indicator and marks scheduled sessions, with search by title or speaker and a details drawer with bookmarking.",
+  "why": "Attendees lacked a visual calendar to plan sessions across days, had to leave the view to see details, and exhibitor events sat apart from the programme.",
+  "outcome": "Attendees plan their agenda in one calendar, find and add sessions without leaving it, and logged-out visitors can explore the programme before signing in.",
+  "who": [
+   "Attendees",
+   "App users",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-51704: attendees lacked a visual calendar to plan sessions; EP-51706: had to navigate away to see details; EP-54324: exhibitor events lived apart; EP-51705: logged-out browsing."
+ },
+ {
+  "id": "sessions-session-display-settings",
+  "what": "A Default view setting in Sessions config makes List, Grid or Calendar the first layout attendees see on the Sessions and Exhibitor Events pages, and tracks can have custom colours.",
+  "why": "The Sessions page always opened in a fixed grid, hard to scan with many parallel sessions, and the fixed colour palette stopped organisers matching their event brand.",
+  "outcome": "Organisers choose the layout that suits their programme and colour tracks to match the brand, with readable text set automatically.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-55021: fixed Grid layout hard to scan for many concurrent sessions; EP-55466 confluence: fixed 24-colour palette stopped matching the brand."
+ },
+ {
+  "id": "sessions-exhibitor-event-locations-2026q3",
+  "what": "An optional setting lets exhibitor events use any live floor plan location, not only the exhibitor's stand. Predefined other locations are stored per language, and exhibitor events show even when no team member is assigned.",
+  "why": "Exhibitor events held away from the stand, such as in conference rooms, could not be mapped, and editing a predefined location in one language overwrote it in all others.",
+  "outcome": "Exhibitors place events where they actually happen, attendees see the right location in their language, and every exhibitor event is listed.",
+  "who": [
+   "Exhibitors",
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-55020: events could only be linked to the assigned booth; EP-54081: editing one language overwrote all; EP-54235: events with no team member failed to show."
+ },
+ {
+  "id": "analytics-sponsorship-engagement-reporting",
+  "what": "A sponsorships dashboard shows views, clicks and click-through rate per sponsor and asset, backed by a new sponsor interactions report. A click and impression report for app homepage elements is available as an admin export.",
+  "why": "Organisers could not easily report sponsor performance by asset, and there was no tracking of engagement with interactive elements on the app homepage.",
+  "outcome": "Organisers show each sponsor how their banners, pages and links performed, and see which app homepage elements people use.",
+  "who": [
+   "Organisers",
+   "Sponsors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52370 ai.problem: could not easily report sponsor ROI by asset; EP-57186: no tracking existed for app homepage interactive elements."
+ },
+ {
+  "id": "ai-unified-global-search",
+  "what": "The search field suggests queries as you type and opens one results page with top results, quick links, Show all views, saved queries and a way back from any detail page. Organisers control which blocks appear, their labels and order.",
+  "why": "Users had to search one listing at a time, typed with no suggestions, and had no way back to their results after opening one, so they redid the search.",
+  "outcome": "Attendees search everything from one field, see the best matches first across people, sessions and content, and return to their results or saved searches at any time.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-47675: search across everything instead of one listing at a time; EP-51742: typed blind; EP-56418: no way back, forcing redo; EP-57221: blocks and labels control."
+ },
+ {
+  "id": "ai-ai-search-categories",
+  "what": "AI search indexes pavilions with their grouped exhibitors, community groups by name or topic, and on-demand sessions by title, speaker or topic.",
+  "why": "Pavilions, community groups and on-demand sessions were not represented in AI search, so attendees could not find them there.",
+  "outcome": "Attendees find a pavilion and its exhibitors, groups on a topic and recorded talks from the same AI search.",
+  "who": [
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-54858: pavilions had no dedicated representation; EP-54859: groups not discoverable; EP-54860: on-demand sessions not indexed."
+ },
+ {
+  "id": "ai-admin-assistant-redesign",
+  "what": "The AI assistant in the admin panel has a redesigned chat front end, the first version of the interface for the platform's new AI assistant.",
+  "why": "The admin chat assistant needed a modern interface to support the new AI assistant experience.",
+  "outcome": "Organisers use a cleaner chat window when they ask the admin assistant for help.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-53589 ai.problem: existing Admin Panel chatbot needed a modern, redesigned interface for the new AI assistant."
+ }
+]

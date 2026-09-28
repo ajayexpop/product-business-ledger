@@ -1,0 +1,425 @@
+[
+ {
+  "id": "platform-passwordless-login",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-participant-email-warnings",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers see at a glance which participants have a placeholder, missing or undeliverable email before booking meetings with them."
+  },
+  "reason": "outcome added 'sending messages', which no story mentions; EP-12726/EP-14907 are about meeting booking and warnings"
+ },
+ {
+  "id": "platform-profile-and-page-access-2023q1",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Search options in profile select fields and control public file page access with the sign-in setting."
+  },
+  "reason": "benefit claimed 'faster' with no evidence; EP-12583 adds search only"
+ },
+ {
+  "id": "platform-module-management",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-admin-action-log",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-arabic-language",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-assigned-admins",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-admin-panel-guidance",
+  "verdict": "fix",
+  "fix": {
+   "why": "Some admin setting names were confusing, and clients needed clearer names, descriptions and page explanations."
+  },
+  "reason": "why attributed a complaint to clients; EP-15967 only lists confusing setting names to be understood easily"
+ },
+ {
+  "id": "platform-inactive-account-activation",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Users who missed their activation email can resend it straight from the login screen, on web or in the app."
+  },
+  "reason": "outcome 'without contacting support' not in any story (EP-17488, EP-15585)"
+ },
+ {
+  "id": "platform-search-performance-2023",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Search indexing after event cloning waits until the clone has finished, whole-event indexing runs in bulk, exhibitor list requests on the marketplace page were reorganised, and participant company, job title and news author were added to search.",
+   "outcome": "Attendees get a quicker marketplace list view and can search people by company or job title, and cloned events sync to search once cloning is complete."
+  },
+  "reason": "detail said clone indexing runs in bulk (EP-13513 delays it) and called search indexes 'database indexes' (EP-18427); outcome 'ready sooner after an event is set up' overstated"
+ },
+ {
+  "id": "platform-registration-spam-protection",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-admin-mfa",
+  "verdict": "fix",
+  "fix": {
+   "what": "Admin accounts have an MFA tab to enable authenticator-app login for admins, exclude chosen admins, and send MFA setup emails one at a time or in bulk."
+  },
+  "reason": "what said organisers enable it; EP-11695 makes the tab visible to super admins and chosen admins"
+ },
+ {
+  "id": "platform-sso-sign-in-2023",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-module-permission-alignment",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers set meeting and message permissions for each user type in one place instead of splitting them across two settings pages."
+  },
+  "reason": "outcome 'trust that settings apply everywhere' overstated; EP-16638 moves permissions into one place"
+ },
+ {
+  "id": "platform-floor-plan-performance",
+  "verdict": "fix",
+  "fix": {
+   "title": "Floor plan and filter optimisation",
+   "benefit": "Integrated floor plans are cached, and the filters used by the mobile apps put less load on the database.",
+   "outcome": "Repeated floor plan and filter requests from the apps put less load on the platform."
+  },
+  "reason": "'faster', 'respond faster' and 'busy event days' have no evidence; EP-21993 is about database load, EP-22678/EP-18599 have no text"
+ },
+ {
+  "id": "platform-loading-indicators",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-badge-scan-login",
+  "verdict": "fix",
+  "fix": {
+   "why": "Attendees at the event need a quick way into the app using the badge they already carry."
+  },
+  "reason": "implied why claimed email and password typing is slow, but the MVP is the one-time password flow (EP-19419)"
+ },
+ {
+  "id": "platform-gdpr-account-deletion",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-otp-login-improvement",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Let users on public events request a one-time login code whatever their account status.",
+   "detail": "On public events, a one-time code is emailed on request whatever the account status, and inactive users become active once they log in.",
+   "what": "On public events, a one-time code is emailed on request whatever the account status, and inactive users become active once they sign in with it.",
+   "why": "Users need to sign in with a code even before their account has been activated."
+  },
+  "reason": "EP-18110 MVP covers public events only (private events 'nice to have'); implied why claimed a past failure"
+ },
+ {
+  "id": "platform-admin-workflow-2024q1",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Open a user’s profile as them, keep list filters between visits and find session settings more easily."
+  },
+  "reason": "'faster' for session settings unsupported; EP-23885 regroups the page for clarity"
+ },
+ {
+  "id": "platform-local-time-setting",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-reliable-exports",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers get their export file even after a temporary glitch, without having to start it again."
+  },
+  "reason": "'asking for help' not in EP-16797/EP-1094"
+ },
+ {
+  "id": "platform-security-hardening-2024q1",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-admin-colours",
+  "verdict": "fix",
+  "fix": {
+   "why": "The admin panel needed new primary and secondary colours."
+  },
+  "reason": "EP-28362 has no text; 'current colour scheme' was invented"
+ },
+ {
+  "id": "platform-saml-return-to-page",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-admin-panel-languages",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-consent-gated-videos",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-account-switcher",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Users move between their own, team member, parent and child company accounts from a dropdown on desktop and mobile web."
+  },
+  "reason": "'a couple of clicks' is an unsupported count; EP-28676 says a dropdown"
+ },
+ {
+  "id": "platform-otp-whatsapp-sms",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Attendees can get their login code by message on their phone as well as by email, and organisers choose which channels to offer."
+  },
+  "reason": "'the channel they check most' unsupported; EP-26859 sends through every enabled channel, users do not choose"
+ },
+ {
+  "id": "platform-admin-panel-2024q4",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Redundant settings were removed, admin tables show empty states, and the retired hospitality module, table section tax fields and exhibitor manual payment setting are hidden."
+  },
+  "reason": "detail said these modules 'can be hidden' (an option); EP-28153 hides retired items for everyone"
+ },
+ {
+  "id": "platform-australia-hosting",
+  "verdict": "fix",
+  "fix": {
+   "title": "Australian cloud region",
+   "benefit": "Platform queues, data tables and log groups are set up in an Australian cloud region.",
+   "detail": "Cloud resources, including queues, data tables and log groups, were set up in an Australian region.",
+   "why": "Events in Australia may need platform services located in the region.",
+   "outcome": "The platform has queues, data tables and log groups ready in an Australian region."
+  },
+  "reason": "EP-35819 only creates queues, DynamoDB tables and log groups; hosting whole event platforms there is not shown"
+ },
+ {
+  "id": "platform-performance-2024q4",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-security-hardening-2024q4",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Activation codes are tied to the account they belong to, and badge scan requests must carry a valid signed token."
+  },
+  "reason": "EP-34239 says the change is a hope to fix duplicates, not confirmed unique codes; 'only trusted apps' overstated for EP-35880"
+ },
+ {
+  "id": "platform-sign-in-profile-2024q4",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "See clearer profile titles and error codes, and let admins sign in as users on the new frontend.",
+   "detail": "The profile edit page title reflects the account type, the frontend shows error codes, the sign-up prompt is hidden in the login window when registration is off, and admins can log in as a user on the new frontend by token.",
+   "what": "The profile edit page title reflects the account type, the frontend shows error codes, the sign-up prompt is hidden when registration is off, and admins can log in as a user on the new frontend by token."
+  },
+  "reason": "EP-37093 is the customer service (admin log in as user) token login, not custom login services; EP-36297 hides the sign-up line only when registration is off"
+ },
+ {
+  "id": "platform-buttons-validation-2025q1",
+  "verdict": "fix",
+  "fix": {
+   "why": "Users need the main action to look the same on every page, and an error for a too-short entry that says clearly what is wrong."
+  },
+  "reason": "implied why claimed a past inconsistency not stated in EP-38372/EP-37692"
+ },
+ {
+  "id": "platform-country-city-data",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-attendee-onboarding",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Attendees pick their interests when they first sign in and are told when their recommendations are ready, and organisers decide how strongly to prompt them."
+  },
+  "reason": "'relevant recommendations from their first visit' overstated; EP-40531 notifies after recalculation"
+ },
+ {
+  "id": "platform-custom-labels",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-admin-panel-2025q2",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-landing-page-after-login",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-performance-security-2025q2",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Long option lists load on demand, and app visitor requests carry fewer parameters for the database to check.",
+   "detail": "Additional database indexes were added, multi-select fields with many options load on demand, and token and identifier parameters were removed from app visitor requests.",
+   "outcome": "Users can open fields with long option lists without waiting for every option to load, and app people listings trigger fewer database checks."
+  },
+  "reason": "EP-43090 removed parameters from app visitor requests to cut database checks, not to protect sensitive data; 'faster' unevidenced"
+ },
+ {
+  "id": "platform-admin-safeguards-2025q3",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Admins confirm participant category changes after a warning that they may affect access, visibility and matchmaking. Region values are validated, and the save and cancel bar has a blurred background."
+  },
+  "reason": "'for readability' not in EP-43097"
+ },
+ {
+  "id": "platform-editor-admin-2025q4",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-performance-2025q4",
+  "verdict": "fix",
+  "fix": {
+   "title": "Fewer app requests, lighter search",
+   "benefit": "The app sends fewer calls to the server and delegate search returns lighter responses.",
+   "outcome": "The platform carries less load from repeated app requests, and delegate search sends back only the data it needs."
+  },
+  "reason": "'quicker app' and 'stays responsive when many attendees use it' unevidenced; EP-45987 is about server overload"
+ },
+ {
+  "id": "platform-security-hardening-2025q4",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-locale-dates-translations",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Attendees read dates in the format they are used to and meet fewer untranslated terms in their language."
+  },
+  "reason": "'fully in their language' overstated; EP-46955 still lists absent translations"
+ },
+ {
+  "id": "platform-sign-in-options-2026q1",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-profile-completion",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-admin-save-cloning",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-admin-navigation-pagination",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-performance-2026q2",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Pages send fewer unnecessary requests, and profile download buttons show when a file is on its way.",
+   "why": "The site repeated the same empty banner request on every navigation and made sign-in checks with no token, adding needless calls to the server."
+  },
+  "reason": "'faster page loads' unevidenced; EP-49453 is about calls with a null token, not page changes"
+ },
+ {
+  "id": "platform-security-hardening-2026q2",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-performance-2026q3",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Attendees get pages and images that load faster with less data used."
+  },
+  "reason": "'especially on mobile connections' not in EP-57489/EP-57336"
+ },
+ {
+  "id": "platform-private-favourites",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-admin-redesign",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-selective-cloning",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Choose whether sponsors, news, sessions, local categories and floor plan carry over when you clone an event.",
+   "detail": "The clone dialog offers separate checkboxes for sponsors, news, sessions, local categories and floor plan.",
+   "what": "The clone dialog offers separate checkboxes for sponsors, news, sessions, local categories and floor plan, with a confirmation summary, so only selected content is copied."
+  },
+  "reason": "EP-52816 covers those five categories only; 'exactly which content' and 'other content categories' overstated"
+ },
+ {
+  "id": "platform-auth-settings-2026q3",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ },
+ {
+  "id": "platform-trusted-embed-domains",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "supported by the source stories"
+ }
+]

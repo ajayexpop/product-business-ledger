@@ -1,0 +1,467 @@
+[
+ {
+  "k": "EP-40080",
+  "q": "2025-Q3",
+  "feature": "Admin notification targeting",
+  "tags": [],
+  "summary": "Advanced Filters for Admin Notifications ",
+  "epic": "Hyve Communication improvements",
+  "text": "Added advanced targeting filters to admin notifications: round table tags, types, tracks and names, and activity filters such as incomplete profiles or no meeting requests. Organisers can target notifications at participants by session participation, profile completeness and meeting or round table activity, with thresholds."
+ },
+ {
+  "k": "EP-40078",
+  "q": "2025-Q3",
+  "feature": "Advanced campaign filters",
+  "tags": [],
+  "summary": "Advanced Filters for Campaigns ",
+  "epic": "Hyve Communication improvements",
+  "text": "Added advanced campaign filters by session, round table and exhibitor event attributes, profile completeness and meeting programme activity. Organisers target emails at users with incomplete profiles, no topic selections, no meeting requests, low opt-ins or low mutual matches."
+ },
+ {
+  "k": "EP-22505",
+  "q": "2024-Q1",
+  "feature": "Campaign badge barcode variables",
+  "tags": [],
+  "summary": "Please add badge BAR & QRcode variable for Campaigns",
+  "epic": null,
+  "text": "Added Badge Bar Code and Badge QR Code variables to the Campaigns standard variables list. Campaign emails show each recipient's internal or external badge barcode and QR code, scannable by the check-in app."
+ },
+ {
+  "k": "EP-23413",
+  "q": "2024-Q3",
+  "feature": "Campaigns redesign",
+  "tags": [],
+  "summary": "Additional tasks to Campaign redesign (2nd iteration)",
+  "epic": null,
+  "text": "Delivered a second round of campaign redesign: tag-style variables, a variable settings pop-up, a sender details section and clearer stats rows. Organisers see variables as tags, edit their settings from a gear icon and return to the list with a 'Campaign successfully saved' notice."
+ },
+ {
+  "k": "EP-20555",
+  "q": "2023-Q3",
+  "feature": "Campaigns refresh",
+  "tags": [],
+  "summary": "Campaigns refresh (1st iteration)",
+  "epic": "Email nurturing ",
+  "text": "Redesigned the Campaigns list and campaign page: empty state, filters, back button, statistics buttons and clearer setting names. Organisers use a refreshed campaigns area matching the Admin Panel Fixes design."
+ },
+ {
+  "k": "EP-23410",
+  "q": "2023-Q4",
+  "feature": "Campaigns refresh",
+  "tags": [],
+  "summary": "Hide Export data if there was no send-out",
+  "epic": null,
+  "text": "Hid Export data for campaign send-outs that haven't happened yet. Export data appears only for completed send-outs."
+ },
+ {
+  "k": "EP-20661",
+  "q": "2023-Q4",
+  "feature": "Campaigns refresh",
+  "tags": [],
+  "summary": "Campaigns refresh (2nd iteration)",
+  "epic": "Email nurturing ",
+  "text": "Refreshed Campaigns: unsaved-changes and empty-template warnings, no auto-filled dates, campaign duplication, an Apply button, recommended buyer settings, save notices, sorting and statistics. Admins are warned before leaving or saving empty templates, can duplicate campaigns, sort by creation date, and see send and open stats from the list."
+ },
+ {
+  "k": "EP-12037",
+  "q": "2023-Q1",
+  "feature": "Chat and messaging",
+  "tags": [],
+  "summary": "EMEA: Header of chat is fixed on the web version",
+  "epic": null,
+  "text": "Made web chat windows minimisable to a header tab, with unread-message badges and a maximum of three windows. Clicking a chat header collapses it to a 360×63 tab at the bottom of the page; collapsed tabs show unread counts and expand on click."
+ },
+ {
+  "k": "EP-35014",
+  "q": "2024-Q4",
+  "feature": "Chat limits",
+  "tags": [],
+  "summary": "Limits on creating chats",
+  "epic": null,
+  "text": "Added a rate limit on starting new chats, sent via sockets and applied on iOS and Android for all users and events. Users who exceed the limit (300 new chats per day as of 22 October) are blocked from new chats and told when they can try again."
+ },
+ {
+  "k": "EP-43260",
+  "q": "2025-Q4",
+  "feature": "Clickable notifications",
+  "tags": [],
+  "summary": "[portalUI] add ability to click on the notification in the notification dropdown menu",
+  "epic": null,
+  "text": "Made notifications in the dropdown menu clickable to open the related profile or session. Users jump from a notification to its subject."
+ },
+ {
+  "k": "EP-7755",
+  "q": "2023-Q1",
+  "feature": "Comments and likes",
+  "tags": [],
+  "summary": "Comments and Likes functionality v.1.1 (Live comments and Replies) || Feed & Groups",
+  "epic": null,
+  "text": "Added live mode and replies to comments in Feed & Groups. Comments update live and users can reply to comments."
+ },
+ {
+  "k": "EP-39625",
+  "q": "2025-Q1",
+  "feature": "Community groups",
+  "tags": [],
+  "summary": "Increase the character limit for the short description in groups from 200 to 400",
+  "epic": null,
+  "text": "Raised the character limit for community group short descriptions from 200 to 400. Group short descriptions can be up to 400 characters, allowing clearer descriptions."
+ },
+ {
+  "k": "EP-23519",
+  "q": "2024-Q1",
+  "feature": "Company and job title on user cards",
+  "tags": [],
+  "summary": "Enhancing User Card Information with Company Name & Job Title (WEB)",
+  "epic": null,
+  "text": "Updated participant card layouts across the web platform, including community, team members, meetings, messenger, profiles and sessions, to show company name and job title. User cards across the web frontend consistently display company and job title per the updated designs."
+ },
+ {
+  "k": "EP-24992",
+  "q": "2024-Q1",
+  "feature": "Company and job title on user cards",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Enhancing User Card Information with Company Name & Job Title (APP)",
+  "epic": null,
+  "text": "Updated participant card layouts across the mobile app to show company name and job title. User cards in the app show company and job title where the profile has them, leaving empty space otherwise."
+ },
+ {
+  "k": "EP-15768",
+  "q": "2026-Q3",
+  "feature": "Custom SMTP email sending",
+  "tags": [],
+  "summary": "Create setting for using custom SMPT service",
+  "epic": null,
+  "text": "Added a setting to send platform emails through a custom SMTP service. Registration, meeting, message, campaign and reminder emails can use a custom SMTP server."
+ },
+ {
+  "k": "EP-40081",
+  "q": "2025-Q3",
+  "feature": "Email campaign variables",
+  "tags": [],
+  "summary": "Variables for Email Campaigns",
+  "epic": "Hyve Communication improvements",
+  "text": "Added email campaign variables for admin and user details, meeting program counts (relevant, pending, unaccepted, rejected, limits) and assigned round tables. Organisers can schedule campaign emails that show each recipient's meeting statistics, limits, assigned round tables and admin contact."
+ },
+ {
+  "k": "EP-35350",
+  "q": "2024-Q4",
+  "feature": "Email campaigns",
+  "tags": [],
+  "summary": "Email campaign is not sent out to multiple recipients",
+  "epic": null,
+  "text": "Enabled the Campaign tool to send mass email campaigns of over 1,000 messages to filtered recipients in one action. Campaigns reach all selected recipients without duplicates, which can be checked in the campaign stats."
+ },
+ {
+  "k": "EP-21346",
+  "q": "2023-Q4",
+  "feature": "Email nurturing templates",
+  "tags": [],
+  "summary": "Implement templates for all events",
+  "epic": "Email nurturing ",
+  "text": "Made the six email nurturing campaign templates default for every event, old and new, with default banner and footer. Every event has six ready campaign templates in its template list."
+ },
+ {
+  "k": "EP-14458",
+  "q": "2023-Q3",
+  "feature": "Email nurturing variables",
+  "tags": [],
+  "summary": "Recommended exhibitors variable redesign",
+  "epic": "Email nurturing ",
+  "text": "Redesigned the recommended exhibitors email variable as an Outlook-compatible block with profile, meeting, message and favourite actions. Emails show recommended exhibitors with clickable actions that respect meeting and messaging permissions, limits and the permission matrix."
+ },
+ {
+  "k": "EP-14844",
+  "q": "2023-Q3",
+  "feature": "Email nurturing variables",
+  "tags": [],
+  "summary": "Recommended Products variable redesign",
+  "epic": "Email nurturing ",
+  "text": "Redesigned the Recommended Products email variable with clickable product cards and Meeting, Message and Favourite buttons. Emails show the recommended products from the frontend, linking to product profiles and meeting, messenger and favourite actions, respecting permissions and module settings."
+ },
+ {
+  "k": "EP-14845",
+  "q": "2023-Q3",
+  "feature": "Email nurturing variables",
+  "tags": [],
+  "summary": "Recommended Sessions variable redesign",
+  "epic": "Email nurturing ",
+  "text": "Redesigned the Recommended sessions email builder variable as session cards with track, image, speakers, date and sponsors, respecting category visibility. Campaign emails show the configured number of recommended session cards linking to the session page, hiding sessions the recipient cannot see."
+ },
+ {
+  "k": "EP-14846",
+  "q": "2023-Q3",
+  "feature": "Email nurturing variables",
+  "tags": [],
+  "summary": "Recommended News variable redesign",
+  "epic": "Email nurturing ",
+  "text": "Redesigned the Recommended News email variable to the Email Nurturing design, including only approved news visible to the recipient's category. Campaign emails show the admin-set number of recommended news cards, linking to the news page and rendering in Outlook, Apple Mail and Gmail."
+ },
+ {
+  "k": "EP-15816",
+  "q": "2023-Q3",
+  "feature": "Email nurturing variables",
+  "tags": [],
+  "summary": "Variables with pictures and value",
+  "epic": "Email nurturing ",
+  "text": "Added picture-card email variables for event totals (exhibitors, products, meeting requests) and the receiver's views, meetings and chats. Emails can show live counts as of the send date, matching the analytics dashboard, even when related modules are off or a value is zero."
+ },
+ {
+  "k": "EP-20713",
+  "q": "2023-Q3",
+  "feature": "Email nurturing variables",
+  "tags": [],
+  "summary": "Incoming meeting variable",
+  "epic": "Email nurturing ",
+  "text": "Upgraded the Incoming meetings email variable to show linked meeting cards with attendee icons, date, location and local time. Campaign emails show the configured number of incoming meetings, linking to My Schedule, or an empty state when there are none."
+ },
+ {
+  "k": "EP-20714",
+  "q": "2023-Q3",
+  "feature": "Email nurturing variables",
+  "tags": [],
+  "summary": "Incoming messages variable",
+  "epic": "Email nurturing ",
+  "text": "Created an 'Incoming messages' email variable showing up to four latest unanswered chats with name, date and a two-line preview. Emails preview unanswered chats linking to the messenger, show a placeholder when there are none, and omit the card if messaging is off."
+ },
+ {
+  "k": "EP-20862",
+  "q": "2023-Q3",
+  "feature": "Email nurturing variables",
+  "tags": [],
+  "summary": "Variable for moving to profile",
+  "epic": "Email nurturing ",
+  "text": "Added a PROFILE_URL email template variable that links to /newfront/profile/dashboard with autologin, attachable to any template element. Email recipients can click a linked element, such as a button, to land logged in on their profile dashboard."
+ },
+ {
+  "k": "EP-21196",
+  "q": "2023-Q3",
+  "feature": "Email nurturing variables",
+  "tags": [],
+  "summary": "Decrease the size of the incoming messages variable",
+  "epic": null,
+  "text": "Made the incoming messages email variable more compact: one line of message, date closer to sender. The incoming messages block matches the email nurturing design."
+ },
+ {
+  "k": "EP-15836",
+  "q": "2023-Q3",
+  "feature": "Email nurturing variables",
+  "tags": [],
+  "summary": "View of the cards in the emails",
+  "epic": null,
+  "text": "Fixed product and exhibitor cards in emails: no underline, left-aligned names, buttons on the right, sponsor icons with a count. Email nurturing cards match the design."
+ },
+ {
+  "k": "EP-21640",
+  "q": "2023-Q4",
+  "feature": "Email nurturing variables",
+  "tags": [],
+  "summary": "Adjust the outlook of the variable",
+  "epic": null,
+  "text": "Refined meeting and message email variables: tighter spacing, truncated names, two rows on mobile, real attendee photos. Incoming meeting and message blocks look right on desktop and mobile."
+ },
+ {
+  "k": "EP-27950",
+  "q": "2024-Q2",
+  "feature": "Email sender variables",
+  "tags": [],
+  "summary": "Add Activation link variable in email sender",
+  "epic": null,
+  "text": "Added the 'Activation Link' variable to Marketing > Email sender, usable as a link or attached to buttons. Email sender recipients can click the link to open their frontend profile, which is activated immediately."
+ },
+ {
+  "k": "EP-30386",
+  "q": "2024-Q3",
+  "feature": "Email template editor safeguards",
+  "tags": [],
+  "summary": "Implement Registration Emails Template Save Confirmation Popup",
+  "epic": null,
+  "text": "Extended the unsaved-changes warning and the save confirmation notification from Campaigns to the other admin email template editors. Leaving an email template page with unsaved edits triggers a warning, and saving shows a success notification, across six template areas."
+ },
+ {
+  "k": "EP-13046",
+  "q": "2023-Q1",
+  "feature": "Group chat",
+  "tags": [],
+  "summary": "Able to add team members to group chat",
+  "epic": null,
+  "text": "Listed an exhibitor's team members first, under a 'Team members' divider, when creating or adding to a group chat. Exhibitors add team members to group chats from the top of the list; search results show everyone together."
+ },
+ {
+  "k": "EP-22911",
+  "q": "2024-Q2",
+  "feature": "Group search",
+  "tags": [],
+  "summary": "Filter for the search query in Group tab",
+  "epic": null,
+  "text": "Showed the active search term and filters as chips on the Groups tab. Groups show what the user is searching or filtering by."
+ },
+ {
+  "k": "EP-15823",
+  "q": "2023-Q3",
+  "feature": "Hosted buyer programme emails",
+  "tags": [],
+  "summary": "Possibility to insert the Badge Bar Code & Badge QR Code variable to Buyer Accept email template.",
+  "epic": null,
+  "text": "Added Badge Bar Code and Badge QR Code variables to the Buyer Accept email template. Organisers can insert the buyer's badge barcode and QR code into Buyer Accept emails and run buyer communications within Hosted Buyer."
+ },
+ {
+  "k": "EP-45418",
+  "q": "2025-Q4",
+  "feature": "Information request emails",
+  "tags": [],
+  "summary": "Information Request email template for participants",
+  "epic": null,
+  "text": "Added a Participant Information Request email template and a Send Information Request button in participant profiles and the participants list menu. Organisers can email a participant a request for missing registration information, with an optional custom message inserted into the template."
+ },
+ {
+  "k": "EP-36649",
+  "q": "2025-Q3",
+  "feature": "Leaderboard",
+  "tags": [],
+  "summary": "Leader board | Change the text of the tooltips",
+  "epic": null,
+  "text": "Rewrote the Leader dashboard tooltips for average interaction metrics. Tooltips explain each average clearly."
+ },
+ {
+  "k": "EP-21855",
+  "q": "2023-Q4",
+  "feature": "Message limits",
+  "tags": [],
+  "summary": "Setting for determining the number of messages ",
+  "epic": null,
+  "text": "Added a setting for how many messages, up to ten, appear in the incoming messages email variable. Organisers choose how many messages appear in nurturing emails."
+ },
+ {
+  "k": "EP-47792",
+  "q": "2026-Q1",
+  "feature": "Messenger conversation filters",
+  "tags": [],
+  "summary": "Messenger. Conversation status filters",
+  "epic": "Communication Channels — Email, Chat & Notifications",
+  "text": "A Conversation Status filter in Messenger: All, Two-way (both sides have written) or One-way (only one side has). Users filter their chats by reply status, combined with the existing filters."
+ },
+ {
+  "k": "EP-20716",
+  "q": "2023-Q3",
+  "feature": "Messenger filters",
+  "tags": [],
+  "summary": "New filters for Messenger",
+  "epic": null,
+  "text": "Added two Messenger filters on web: 'Who initiated a chat' and 'Personal chats by meeting' status. Users filter personal chats by initiator and by meeting status; Incoming and Pending options are hidden when meeting auto-confirm is on."
+ },
+ {
+  "k": "EP-31011",
+  "q": "2024-Q3",
+  "feature": "Multilingual admin notifications",
+  "tags": [],
+  "summary": "Multilanguage Admin Notifications",
+  "epic": null,
+  "text": "Added a language switcher to Admin Notifications so admins write the title and message per language, with a primary fallback language. Web users receive admin notifications in their profile language and app users in their device language, falling back to the primary language."
+ },
+ {
+  "k": "EP-7416",
+  "q": "2023-Q2",
+  "feature": "Multilingual email campaigns",
+  "tags": [],
+  "summary": "Multi-Language Email templates - Marketing",
+  "epic": null,
+  "text": "Added a language selector to Marketing Email Sender and Campaign template creation and editing, so templates can be set per language. Marketing emails go out in each recipient's pre-selected language, with the default language used for recipients who have none."
+ },
+ {
+  "k": "EP-32750",
+  "q": "2024-Q4",
+  "feature": "Multilingual push notifications",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Multilanguage Admin Notifications (for non-logged-in user)",
+  "epic": null,
+  "text": "Extended multilanguage admin push notifications with a Non-Logged In App Users option, with landing rules by URL and app access type. Organisers can push notifications to app users who are not logged in; taps open the given page or home, or the login screen when access is closed."
+ },
+ {
+  "k": "EP-32152",
+  "q": "2024-Q3",
+  "feature": "Networking list filters",
+  "tags": [],
+  "summary": "Networking Filters for Attendee and Exhibitor Lists (chat filter)) ",
+  "epic": null,
+  "text": "Added 'Existing Chat' filters to delegate, speaker, buyer, exhibitor, pavilion and product lists, configurable in admin display filters. Users filter lists to people or exhibitors they have messaged or who messaged them (OR logic); filters are off by default."
+ },
+ {
+  "k": "EP-27888",
+  "q": "2024-Q3",
+  "feature": "Networking list filters",
+  "tags": [],
+  "summary": "Networking Filters for Attendee and Exhibitor Lists",
+  "epic": null,
+  "text": "Added 'Existing Meetings' and 'Existing Meeting Status' filters to delegate, speaker, buyer, exhibitor, pavilion and product lists, controlled in Display filters. Users filter lists by who initiated meetings and by meeting status, with team members' meetings counted for their exhibitor."
+ },
+ {
+  "k": "EP-44892",
+  "q": "2025-Q3",
+  "feature": "Notification filters",
+  "tags": [],
+  "summary": "Admin notification filters adjustment",
+  "epic": null,
+  "text": "Showed the Meeting Program and Round Tables 'Additional filters' block in Admin > Notifications only when the Meeting Program module is on. The additional notification filters are hidden unless the Meeting Program module is enabled in Module Management."
+ },
+ {
+  "k": "EP-40074",
+  "q": "2025-Q2",
+  "feature": "Personal assistant email copies",
+  "tags": [],
+  "summary": "Personal Assistant Improvement",
+  "epic": "Hyve Communication improvements",
+  "text": "Added a 'Personal Assistant Email' field to participant registration that copies all participant emails to that address. Emails to participants, buyers and team members are CC'd to the assistant's address when the field is filled in."
+ },
+ {
+  "k": "EP-7084",
+  "q": "2023-Q3",
+  "feature": "Private chat on mobile web",
+  "tags": [],
+  "summary": "Messenger mobile view (web)",
+  "epic": null,
+  "text": "Reworked the mobile web private chat page: back-to-list button, pinned header and input, hidden footer, and send-button-only messaging on mobile. On mobile the chat has a fixed header and input with Enter adding a new line; the desktop hint now reads 'Press Enter to send'."
+ },
+ {
+  "k": "EP-50897",
+  "q": "2026-Q2",
+  "feature": "Recommendations in email campaigns",
+  "tags": [],
+  "summary": "Organizer sees recommendation blocks with full-width layout and clear boundaries in email templates within an Event",
+  "epic": "Improve Search & Elasticsearch",
+  "text": "Brought organizer Campaign email recommendation blocks up to the visitor-side standard with clear boundaries and full-width card layouts, so event emails look consistent and professional. Each recommendation block now has a consistent boundary and its cards use the full block width across Exhibitors, Products, News and Sponsors, on desktop and mobile, with no change to recommendation logic."
+ },
+ {
+  "k": "EP-37164",
+  "q": "2025-Q3",
+  "feature": "Registration email variables",
+  "tags": [],
+  "summary": "Extending the List of Available Variables for Registration Email Templates",
+  "epic": null,
+  "text": "Extended the variables for registration email templates to all system and custom registration form fields, grouped as General, System Fields and Custom Fields. Visitor, speaker, moderator and exhibitor registration emails can include any registration field value."
+ },
+ {
+  "k": "EP-13566",
+  "q": "2023-Q3",
+  "feature": "Segmented push notifications",
+  "tags": [],
+  "summary": "Segmentation of Push Notifications",
+  "epic": null,
+  "text": "Extended admin push notifications with advanced profile filters and targeting by session, exhibitor event, type, track or tag in users' schedules. Admins send notifications to users matching profile attributes or who have particular sessions or events in their schedule."
+ },
+ {
+  "k": "EP-36743",
+  "q": "2025-Q2",
+  "feature": "Session reminder notifications",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Possibility to adjust time of Session reminder push notification",
+  "epic": null,
+  "text": "Added a 'Notifications Before Session/Exhibitor Event Start (mins)' multi-select, replacing hardcoded 60/30/15/10-minute reminders. Reminders go out at the configured minutes (0–60) on web and app, none if empty, and are resent if the start time changes."
+ }
+]

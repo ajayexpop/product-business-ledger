@@ -1,0 +1,663 @@
+[
+ {
+  "k": "EP-26308",
+  "q": "2024-Q1",
+  "feature": "Admin chatbot",
+  "tags": [],
+  "summary": "Add ability to drag chatbot icon in the admin panel",
+  "epic": null,
+  "text": "Made the admin panel chatbot icon draggable. Admins can move the chatbot icon out of the way."
+ },
+ {
+  "k": "EP-23166",
+  "q": "2024-Q1",
+  "feature": "Admin panel AI assistant",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Chatbot based on Large Language Model in Admin Panel",
+  "epic": null,
+  "text": "Added the 'Expo Assistant' LLM chatbot to the admin panel, answering questions from documentation, with history and message feedback. An Expo Assistant icon on every admin page opens a chat; access is set by a client module toggle and history and feedback are saved."
+ },
+ {
+  "k": "EP-53589",
+  "q": "2026-Q3",
+  "feature": "AI admin assistant",
+  "tags": [],
+  "summary": "Front-end for chatbot",
+  "epic": "Communication Channels — Email, Chat & Notifications",
+  "text": "Builds the redesigned chatbot front end in the Admin Panel (ExpoAssistant) using the Untitled UI library, wired to Data Science endpoints, as the v1 UI for the platform's AI assistant. A redesigned chatbot front end built to the Figma prototype and connected to DS-provided endpoints (v1 excludes like/dislike feedback)."
+ },
+ {
+  "k": "EP-50773",
+  "q": "2026-Q2",
+  "feature": "AI event assistant",
+  "tags": [],
+  "summary": "Session and Agenda Queries",
+  "epic": "AI Event Assistant (AGENT)",
+  "text": "Built the sessions/agenda knowledge tool for the Phase-1 AI assistant so attendees can ask about sessions by day, topic, time or format instead of scrolling the full agenda. A sessions tool was built and integrated into the AI agent, answering session questions by day, topic, time and format from structured event data."
+ },
+ {
+  "k": "EP-33164",
+  "q": "2024-Q3",
+  "feature": "AI search",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Module AI search",
+  "epic": "Implementation of AI search ",
+  "text": "Added an 'AI search' module under Networking & Matchmaking in global and event Module Management, with Open access or Sign-in only visibility. When enabled, the AI search widget and admin tab appear; when disabled, the exhibitors page shows its usual view."
+ },
+ {
+  "k": "EP-34248",
+  "q": "2024-Q4",
+  "feature": "AI search",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Implementation of the AI prompt suggestions",
+  "epic": "Implementation of AI search ",
+  "text": "Added up to three predefined prompt suggestions (85 characters each) in the admin AI Search tab, shown centred when the AI search widget opens. Clicking a suggestion sends it to the AI and hides the block; empty fields are not shown, on web and mobile."
+ },
+ {
+  "k": "EP-35217",
+  "q": "2024-Q4",
+  "feature": "AI search",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Saving chat while moving thoughout the new front",
+  "epic": "Implementation of AI search ",
+  "text": "Kept the AI chat and its results in the widget while users move around the new frontend. The AI conversation persists until the widget is closed or the page refreshed."
+ },
+ {
+  "k": "EP-27547",
+  "q": "2024-Q4",
+  "feature": "AI search",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Prompt Based Search using AI on Exhibitor List",
+  "epic": "Implementation of AI search ",
+  "text": "Added a web 'ConnectAI' widget on the exhibitor list for prompt-based AI search, with an admin 'AI Search' tab for the input text. Visitors describe what they need in natural language, refine it with follow-up prompts, and get up to 500 matching exhibitors and sponsors."
+ },
+ {
+  "k": "EP-49803",
+  "q": "2026-Q1",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "Prioritizing name matches over description matches",
+  "epic": "Qdrant Pilot (IMEX)",
+  "text": "Reworked AI exhibitor search so exact partner name matches outrank coordinators that merely mention the term in their description, ensuring buyers at IMEX land on the right company. Introduced hybrid name-priority scoring on top of semantic search so name-field matches always score above description-level hits across exhibitor entities."
+ },
+ {
+  "k": "EP-49808",
+  "q": "2026-Q1",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "No alias or multi-lingual variant handling",
+  "epic": "Qdrant Pilot (IMEX)",
+  "text": "Added cultural-name and diacritic tolerance to AI search so endonym/exonym variants (e.g. 'Italia' for 'Italy') return the right exhibitors. Combined semantic similarity with ascii_folding character normalisation so common language variants and diacritic differences surface relevant results instead of zero results."
+ },
+ {
+  "k": "EP-50317",
+  "q": "2026-Q1",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "Name matches not prioritized in autocomplete suggestion results",
+  "epic": "Qdrant Pilot (IMEX)",
+  "text": "Search autocomplete now prioritises name matches over description matches, so attendees see the most relevant entity at the top of suggestion results. Autocomplete ranking was changed so name matches are prioritised over description matches across and within entity types."
+ },
+ {
+  "k": "EP-49805",
+  "q": "2026-Q1",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "Overlenient substring matching pulling in noise",
+  "epic": "Qdrant Pilot (IMEX)",
+  "text": "Routed partial-name typeahead through a dedicated fast autocomplete endpoint so over-lenient substring matching no longer floods AI search with noise. Added a separate prefix-indexed /autocomplete endpoint (~50ms) that keeps noisy substring behaviour out of full search and surfaces clean name suggestions."
+ },
+ {
+  "k": "EP-49807",
+  "q": "2026-Q1",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "Spaces and special characters breaking name matches",
+  "epic": "Qdrant Pilot (IMEX)",
+  "text": "Made AI search resilient to spacing and special-character differences so a query like 'Visit Scotland' still finds 'VisitScotland'. Tokeniser handling was fixed so spaced and unspaced/concatenated brand-name variants resolve to the correct exhibitor in top results."
+ },
+ {
+  "k": "EP-49809",
+  "q": "2026-Q1",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "Coordinator/partner ranking hierarchy",
+  "epic": "Qdrant Pilot (IMEX)",
+  "text": "Encoded the coordinator/partner hierarchy into AI search so exhibitor results follow a consistent parent/child ranking order. Extracted the parent/child relationship from PostgreSQL into the Qdrant payload during ingestion, enabling coordinator-exact, partner-exact, coordinator-fuzzy, partner-fuzzy ordering."
+ },
+ {
+  "k": "EP-49812",
+  "q": "2026-Q1",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "Weak recovery states/dead ends",
+  "epic": "Qdrant Pilot (IMEX)",
+  "text": "Replaced empty AI-search dead-ends with helpful 'Did you mean...?' and category fallback prompts so buyers always have a next step. Added fallback handling so a no-results query surfaces a no-results message with 'Did you mean...?' suggestions and category prompts rather than an empty page."
+ },
+ {
+  "k": "EP-50477",
+  "q": "2026-Q1",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "IMEX demo CR",
+  "epic": "Qdrant Pilot (IMEX)",
+  "text": "Tuned the AI search prototype ahead of the IMEX demo so 'did you mean' suggestions, gibberish handling and result counts behaved correctly, protecting a high-visibility client showcase. Suggestion logic, no-match handling and result-count display were corrected for the demo build."
+ },
+ {
+  "k": "EP-49810",
+  "q": "2026-Q2",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "People, Session, Products, News entity not indexed",
+  "epic": "Qdrant Pilot (IMEX)",
+  "text": "Extended AI search coverage by indexing People, Sessions, Products and News so name matches across all entity types rank correctly. Indexed the People, News, Product and Session entities in Qdrant so exact name matches surface and rank above weaker description-level matches, consistent with other entity types."
+ },
+ {
+  "k": "EP-48436",
+  "q": "2026-Q2",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "Develop and deploy AI search exposed via API (tool)",
+  "epic": "AI Search Service (tools)",
+  "text": "A new AI search service was built and deployed, letting participants semantically search exhibitor profiles, team members, and products. Built and deployed an AI search service (exposed via API) covering exhibitor profiles, team-member profiles, and products/sessions, after evaluating PGVector vs Typesense alternatives."
+ },
+ {
+  "k": "EP-53552",
+  "q": "2026-Q2",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "Enable filtering on DS side for marketplace filters",
+  "epic": "Search Anatomy",
+  "text": "Marketplace filters are applied on the data-science search side, so search results come back already filtered by the active filters. Search and filters work together on marketplace listings."
+ },
+ {
+  "k": "EP-54178",
+  "q": "2026-Q2",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "AI Search: implement post-filtering by allowed ID list",
+  "epic": "Search Anatomy",
+  "text": "AI semantic search can now be constrained to an allowed list of entity IDs, so applied filters and search relevance work together instead of conflicting. The AI search API accepts an optional allowed_ids parameter and applies it as a pre-search constraint in Qdrant, so results satisfy both semantic relevance and the active filters, with no regression when the list is absent."
+ },
+ {
+  "k": "EP-54179",
+  "q": "2026-Q2",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "AI Search: add pagination support (offset + frame size)",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "text": "AI search results are now paginated, letting users browse beyond the first page of semantic results without re-running the whole search. The AI search API accepts offset and frame_size parameters and returns the correct Qdrant ranking window, combining correctly with allowed_ids filtering."
+ },
+ {
+  "k": "EP-52169",
+  "q": "2026-Q2",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "[Sprint 1] Data Ingestion API - DS (1,2,3,4,5,6,7,8,9,10)",
+  "epic": "Search Anatomy",
+  "text": "The data-ingestion logic powering the new AI Search system was wrapped into a callable API with per-entity indexing pipelines and authenticated re-index/update/delete operations. A FastAPI ingestion API now exposes full-event re-index, single-record upsert, and delete across all five entity types (exhibitors, products, sessions, people, news), with authentication and downtime-free indexing via Qdrant upserts."
+ },
+ {
+  "k": "EP-52173",
+  "q": "2026-Q2",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "[Sprint 2] Real-Time Data Sync - DS (29–35)",
+  "epic": "Search Anatomy",
+  "text": "Real-time data synchronisation was built for AI Search so that changes in the platform database propagate into the search index continuously via a queue-and-worker pipeline. DB triggers on all five entity tables push changes to an SQS queue with DLQ retry; a worker processes sync jobs and auto-scales on queue size, a scheduled full re-index runs via EventBridge, and a pre-event completeness check guards data readiness."
+ },
+ {
+  "k": "EP-54404",
+  "q": "2026-Q2",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "AI Search: adapt API to the request contract proposed by the Exhibitors team",
+  "epic": "Search Anatomy",
+  "text": "The AI Search API was adapted to the unified multi-entity request contract proposed by the Exhibitors team, so filtered, paginated semantic search can be called consistently from the platform backend. The AI Search API now accepts the agreed contract (client, event_id, account_id, query, languages, entities[] with allowed IDs, relevance_order, pagination), returning per-entity results restricted to the supplied ID lists, building on the filtering and pagination work."
+ },
+ {
+  "k": "EP-54858",
+  "q": "2026-Q3",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "Include Pavilions as a searchable category in AI Search",
+  "epic": "Search Anatomy",
+  "text": "Attendees can now discover exhibition Pavilions through AI Search, indexed as a distinct entity showing their grouped child exhibitors. Pavilion records are indexed as a distinct entity type with parent-child awareness and relevance boosting, appearing in Top Results and a dedicated Pavilions section while leaving regular exhibitor search unchanged."
+ },
+ {
+  "k": "EP-54859",
+  "q": "2026-Q3",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "Include Community Groups as a searchable category in AI Search",
+  "epic": "Search Anatomy",
+  "text": "Attendees can now find Community Groups through AI Search using both exact names and topic-based intent, opening a search-driven path to the platform's community-building features. Community Group records (name and description) are indexed as a distinct entity with semantic/intent matching, relevance ranking, and a dedicated Groups section; topic-tag indexing and member-count ranking were descoped pending data-model changes."
+ },
+ {
+  "k": "EP-54860",
+  "q": "2026-Q3",
+  "feature": "AI search",
+  "tags": [],
+  "summary": "Include On-Demand Sessions as a searchable category in AI Search",
+  "epic": "Search Anatomy",
+  "text": "Attendees can now search the on-demand content library by title, speaker, or topic through AI Search, with speaker-aware matching. On-Demand Session records are indexed (title, description, speakers, topics) with speaker-aware matching, weighted relevance ranking, and a dedicated On-Demand section distinct from live sessions; live-session search is unaffected."
+ },
+ {
+  "k": "EP-18744",
+  "q": "2023-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "No action on the front with search query for 1 latter ",
+  "epic": null,
+  "text": "Stopped the frontend showing a search in progress for one-letter queries. Typing one letter does nothing."
+ },
+ {
+  "k": "EP-17512",
+  "q": "2023-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Global search: search request can contain only spaces",
+  "epic": null,
+  "text": "Blocked global searches made of spaces only. Empty or whitespace-only searches don't run."
+ },
+ {
+  "k": "EP-18807",
+  "q": "2023-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Include Exhibitor as multiplicator and indexes for Products and Brands",
+  "epic": null,
+  "text": "Let brand search match the exhibitor name, returning brands the exhibitor owns or sells. Searching an exhibitor's name finds its brands and products."
+ },
+ {
+  "k": "EP-13095",
+  "q": "2023-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Global search (Stage 1)",
+  "epic": "[Old] Global Search functionality",
+  "text": "Rewrote the Elasticsearch-based search as the base for global search, applying the admin multipliers and category weight to scoring. Search ranks by matches weighted by multipliers, supports prefix and fuzzy matches, ignores stop words, and drops matchmaking sorting while a search is active."
+ },
+ {
+  "k": "EP-19249",
+  "q": "2023-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Counters for the front",
+  "epic": "[Old] Global Search functionality",
+  "text": null
+ },
+ {
+  "k": "EP-19173",
+  "q": "2023-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Change the names and order of the multiplicators",
+  "epic": null,
+  "text": "Renamed and reordered search multiplicators in the admin panel, putting name, description and category first. Search weighting settings are clearer and consistently ordered."
+ },
+ {
+  "k": "EP-20611",
+  "q": "2023-Q4",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Include Country field for Products in elastic",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-21065",
+  "q": "2023-Q4",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Include Country field for Brand in elastic",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-21373",
+  "q": "2023-Q4",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Include the name of the speaker to the session as multiplicator",
+  "epic": null,
+  "text": "Added speaker name to the session search index and as a search multiplicator. Sessions can be found and weighted by speaker name."
+ },
+ {
+  "k": "EP-19256",
+  "q": "2023-Q4",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Include Exhibitor as multiplicator and indexes for Exhibitor Events",
+  "epic": null,
+  "text": "Added exhibitor name as a search multiplicator for exhibitor events. Exhibitor events can be found by exhibitor name."
+ },
+ {
+  "k": "EP-20800",
+  "q": "2023-Q4",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Permission matrix filters delegate list for the search ",
+  "epic": null,
+  "text": "Applied the permission matrix's view settings to delegate, speaker and buyer search results. Search hides people the permission matrix says users can't see."
+ },
+ {
+  "k": "EP-24013",
+  "q": "2023-Q4",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Ignore stop-words for objects",
+  "epic": null,
+  "text": "Made search ignore English stop-words for all stage-two global search objects. Words like 'the' or 'and' no longer skew search across exhibitors, people, sessions, news and groups."
+ },
+ {
+  "k": "EP-18759",
+  "q": "2024-Q1",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Elastic is on by default for all new events",
+  "epic": null,
+  "text": "Turned Elasticsearch search on by default for new events, while clones keep their source settings. New events use Elasticsearch search."
+ },
+ {
+  "k": "EP-23759",
+  "q": "2024-Q1",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Exhibitor name (Exhibitor events) should be searched via elastic",
+  "epic": null,
+  "text": "Moved exhibitor name search for exhibitor events to Elasticsearch and made it a search multiplicator. Exhibitor events are searched by exhibitor name through Elasticsearch."
+ },
+ {
+  "k": "EP-13096",
+  "q": "2024-Q1",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Global search (Stage 2)",
+  "epic": "[Old] Global Search functionality",
+  "text": "Extended the stage 1 search mechanism to exhibitor events, sessions, on-demand, news, groups, delegates, speakers and buyers, with section-specific multipliers and filters. Search across these sections uses weighted multipliers, works with system and custom filters, and respects module, visibility and permission settings."
+ },
+ {
+  "k": "EP-35825",
+  "q": "2024-Q4",
+  "feature": "Global search",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android/ Search results UPDATE behaviour ",
+  "epic": null,
+  "text": "Kept Android search results when returning from a profile. Android users return to their search results."
+ },
+ {
+  "k": "EP-46589",
+  "q": "2026-Q1",
+  "feature": "Global search",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Expand Search to Include Descriptions - Mobile App",
+  "epic": null,
+  "text": "Extended app search to match descriptions as well as titles for exhibitors, sessions, events, products and speakers. App search finds more relevant results."
+ },
+ {
+  "k": "EP-48511",
+  "q": "2026-Q1",
+  "feature": "Global search",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Prioritize Exhibitor Search Result Matches by Name",
+  "epic": "Improve Search & Elasticsearch",
+  "text": "Mobile exhibitor search now ranks name matches above description matches, so attendees typing an exhibitor name see the right result at the top instead of scrolling past unrelated hits. Search results are now ordered to prioritise exhibitor-name matches (exact name first) ahead of description matches."
+ },
+ {
+  "k": "EP-47674",
+  "q": "2026-Q2",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Global Search. Improve current search field to be global",
+  "epic": "Search Anatomy",
+  "text": "Turned the header search into a global search with a category selector, plus admin settings for search categories and icon colour. Users search everything from one field and choose a category."
+ },
+ {
+  "k": "EP-51742",
+  "q": "2026-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Global Search. Search field with suggestions",
+  "epic": "Search Anatomy",
+  "text": "Autocomplete for the global search field: from the second character it suggests up to 10 queries from the client's search history, with typo tolerance. Clicking a suggestion runs the search straight away; suggestions are ranked by how often they're searched."
+ },
+ {
+  "k": "EP-47675",
+  "q": "2026-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Global Search. Unified Global Search page",
+  "epic": "Search Anatomy",
+  "text": "A unified Global Search results page: an 'All categories' search shows blocks per content type (exhibitors, products, sessions, speakers and more). Searching all categories opens one page with a total count, a carousel per type and Show more links into each listing."
+ },
+ {
+  "k": "EP-47678",
+  "q": "2026-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Global Search. Top results",
+  "epic": "Search Anatomy",
+  "text": "A Top results row on the new Global Search page showing up to 10 of the most relevant matches across all content types. Search results open with the ten most relevant cards in one row, ordered only by relevance."
+ },
+ {
+  "k": "EP-55295",
+  "q": "2026-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Global Search. Quick links, Show all, and Back navigation",
+  "epic": "Search Anatomy",
+  "text": "Quick links and Show all buttons on the Global Search page open a category listing with the query applied, with a Back button to return. Users move between the unified results and filtered listings without losing their search."
+ },
+ {
+  "k": "EP-47681",
+  "q": "2026-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Global Search. Save query",
+  "epic": "Search Anatomy",
+  "text": "Logged-in users can save Global Search queries (up to 20), pick one to re-run it instantly, and delete them. Saved searches appear by the search field and follow the user across devices."
+ },
+ {
+  "k": "EP-55706",
+  "q": "2026-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Global search. UI improvements based on feedback from IMEX",
+  "epic": "Search Anatomy",
+  "text": "Global Search results page refinements: a fixed search field under the banner, counts on Show all buttons, a bold results title, even News cards. The results page is cleaner, counts match their sections, and sponsored blocks are renamed Sponsored Exhibitors and Sponsored Products."
+ },
+ {
+  "k": "EP-55109",
+  "q": "2026-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "support `q` search param on initial page load for news, participants, and sessions",
+  "epic": null,
+  "text": "A search term in a shared or global-search URL now correctly filters News, Participants and Sessions results, closing a known Global Search v2 gap. News, Participants and Sessions now read `q` from the URL on load and filter accordingly; the search input correctly displays the pre-applied term on all four pages; global-search \"view all\" links now carry the term through."
+ },
+ {
+  "k": "EP-56418",
+  "q": "2026-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Return Button to Global search result page",
+  "epic": "Search Anatomy",
+  "text": "Added a \"Back to search results\" path so attendees can return to their exact Global Search context instead of redoing the search after opening a result. A \"Back to search results\" path now appears on detail pages reached via Global Search (restoring the query), consistently across all result types, and is absent when the detail page was reached any other way."
+ },
+ {
+  "k": "EP-57221",
+  "q": "2026-Q3",
+  "feature": "Global search",
+  "tags": [],
+  "summary": "Global Search. Blocks, Labels, Order and Availability Control",
+  "epic": "Search Anatomy",
+  "text": "Organisers control which Global Search options, quick links, menu items and result blocks appear, and their order, in Website Builder; labels move to Translation Manager. Round Tables and On-demand join the options; Buyers and Delegates appear only to viewers allowed to see them."
+ },
+ {
+  "k": "EP-46045",
+  "q": "2026-Q1",
+  "feature": "Recommendation engine",
+  "tags": [],
+  "summary": "Implement calculation of Matching Score and providing recommendations via API",
+  "epic": "Recreate category-based Recommendation Service",
+  "text": "Implemented matching score calculation and recommendations via API for the new recommendation service. Recommendations are scored from category embeddings."
+ },
+ {
+  "k": "EP-49473",
+  "q": "2026-Q2",
+  "feature": "Recommendation engine",
+  "tags": [],
+  "summary": "Optimization of recommendation service inference cold start time",
+  "epic": "Recreate category-based Recommendation Service",
+  "text": "Cutting the recommendation service's cold-start time (previously 30-50s on a tenant's first request) sharply improves responsiveness of matchmaking for the first user of each event. The recommendation inference cold-start path was optimised to significantly reduce first-request response time without affecting recommendation accuracy."
+ },
+ {
+  "k": "EP-47167",
+  "q": "2026-Q2",
+  "feature": "Recommendation engine",
+  "tags": [],
+  "summary": "Implement calculations of embeddings and distances for categories",
+  "epic": "Recreate category-based Recommendation Service",
+  "text": null
+ },
+ {
+  "k": "EP-48058",
+  "q": "2026-Q2",
+  "feature": "Recommendation engine",
+  "tags": [],
+  "summary": "Implement the API for the new Recommendation service",
+  "epic": "Recreate category-based Recommendation Service",
+  "text": "A backend API was implemented for the new Recommendation Service, giving the platform a clean integration point to surface category-based recommendations to participants. Implemented the recommendation service API per the documented backend integration contract."
+ },
+ {
+  "k": "EP-24107",
+  "q": "2023-Q4",
+  "feature": "Recommendations",
+  "tags": [],
+  "summary": "Default State of 'Show Recommendations' as Open on Session Overview",
+  "epic": null,
+  "text": "Added a 'Show / Hide Recommendations' session config setting controlling whether recommendations are expanded on the session overview. When set to Show, personalised session recommendations are expanded on page load."
+ },
+ {
+  "k": "EP-27485",
+  "q": "2024-Q1",
+  "feature": "Recommendations",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android/ Improvement  logic of recommended sections",
+  "epic": null,
+  "text": "Applied networking opt-in and permission matrix visibility to recommended sections and lists in the Android app. Android recommendations only show people and items users may see."
+ },
+ {
+  "k": "EP-30975",
+  "q": "2024-Q3",
+  "feature": "Recommendations",
+  "tags": [],
+  "summary": "Exhibitor event in the Recommendations ",
+  "epic": null,
+  "text": "Added an 'Exhibitor Event' toggle, off by default, to Networking & Matchmaking > Recommendations. When enabled, exhibitor events appear in the Recommendations section on the frontend."
+ },
+ {
+  "k": "EP-28230",
+  "q": "2024-Q3",
+  "feature": "Recommendations",
+  "tags": [],
+  "summary": "Enhanced Networking through Intelligent Exhibitor Recommendations",
+  "epic": null,
+  "text": "Added Recommend Related Exhibitors: a pop-up and a Schedule page block listing up to 20 exhibitors similar to those a user requested meetings with. After requesting a meeting with an exhibitor, users see related exhibitor recommendations and can go to the schedule page, a new redirect option."
+ },
+ {
+  "k": "EP-39504",
+  "q": "2025-Q1",
+  "feature": "Recommendations engine",
+  "tags": [],
+  "summary": "Change default state of category select on the recommendations page in the admin panel",
+  "epic": null,
+  "text": "Set recommendation block categories to 'Available for all' by default in the admin panel. Recommendation blocks show to everyone unless restricted."
+ },
+ {
+  "k": "EP-54438",
+  "q": "2026-Q3",
+  "feature": "Recommendations engine",
+  "tags": [],
+  "summary": "Improve caching in the inference service",
+  "epic": "Platform Performance & Operational Efficiency 2026",
+  "text": "The recommendation service's cache was reworked with incremental updates, async pulls, and compression, removing the production bottleneck. Phase one caching improvements: incremental row updates instead of full collection, asynchronous data pulls, cache data compression, and SLO/SLI instrumentation for the service."
+ },
+ {
+  "k": "EP-40901",
+  "q": "2025-Q1",
+  "feature": "Recommendations page",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android/ Add pls \"roles\" icons on \"Recommended\" sections ( Recommended page/ Visitors page/ Speakers page) ",
+  "epic": null,
+  "text": "Added role icons to Android recommended sections on the Recommended, Visitors and Speakers pages. Android recommendations show role icons."
+ },
+ {
+  "k": "EP-38636",
+  "q": "2025-Q1",
+  "feature": "Recommendations page",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Recommendations Page Revamp",
+  "epic": "Recommendations Page Revamp - App",
+  "text": "Revamped the mobile app Recommendations page into admin-ordered sections: Matchmaking, Products, Exhibitors, Sessions, Exhibitor Events, Speakers and Visitors. App users see configurable, category-targeted recommendation sliders, with data cached on the device and shown offline when the server errors."
+ },
+ {
+  "k": "EP-39440",
+  "q": "2025-Q2",
+  "feature": "Recommendations page",
+  "tags": [],
+  "summary": "Make changes at Recommendations page in the admin panel",
+  "epic": null,
+  "text": "Updated the admin Recommendations page: empty-state warning, new default block names, Matchmaking subtitle and button fields with limits, header text, and a web/app preview switch. Organisers are warned when no blocks are enabled, set a greeting header and app-only matchmaking text, and preview both web and mobile layouts."
+ },
+ {
+  "k": "EP-19987",
+  "q": "2023-Q4",
+  "feature": "Redesigned search bar",
+  "tags": [],
+  "summary": "Modify the search bar",
+  "epic": null,
+  "text": "Simplified the search bar to a new design on Marketplace, Sessions, Delegates, News, Groups, group members and Floorplan. These pages use a single redesigned search bar whose query appears in the page filters."
+ },
+ {
+  "k": "EP-19784",
+  "q": "2023-Q3",
+  "feature": "Search by activity categories",
+  "tags": [],
+  "summary": "Search should be done by activity categories for delegates, buyers and speakers",
+  "epic": null,
+  "text": "Made search match activity categories for delegates, buyers and speakers. People search covers activity categories."
+ },
+ {
+  "k": "EP-27246",
+  "q": "2025-Q1",
+  "feature": "Unified recommendations",
+  "tags": [],
+  "summary": "Unified Recommendations Page",
+  "epic": null,
+  "text": "Rebuilt the Recommendations page in the admin panel and frontend as one configurable page of ordered, category-targeted sections, including Matchmaking. Organisers choose, title, order and target recommendation sections; Matchmaking is reached from the Recommendations page instead of Module Management toggles."
+ }
+]

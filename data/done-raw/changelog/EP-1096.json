@@ -1,0 +1,75 @@
+{
+ "k": "EP-1096",
+ "histories": 32,
+ "historiesRead": 32,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2022-01-11T15:06:01.799+0000",
+   "from": "Open",
+   "to": "Grooming",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-01-11T15:06:03.574+0000",
+   "from": "Grooming",
+   "to": "In design",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-01-11T15:06:04.911+0000",
+   "from": "In design",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-01-11T15:06:08.534+0000",
+   "from": "Tech Brief",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-10-27T08:34:29.081+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2023-02-20T14:57:16.016+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2023-02-22T10:05:05.728+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "oleh bosiuk"
+  },
+  {
+   "at": "2023-02-24T06:26:43.868+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "oleh bosiuk"
+  },
+  {
+   "at": "2023-04-07T14:23:10.434+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2023-04-07T14:23:13.261+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790313118343.txt"
+}

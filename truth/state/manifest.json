@@ -1,0 +1,115 @@
+{
+ "steps": {
+  "identity": {
+   "fp": "d84f9638827ac11a",
+   "at": "2026-09-27T05:22:22Z",
+   "ms": 43,
+   "result": {
+    "clients": 49,
+    "aliases": 181,
+    "outsideOrganisations": 127
+   }
+  },
+  "taxonomy": {
+   "fp": "b003a70aa282bfe8",
+   "at": "2026-09-27T05:22:22Z",
+   "ms": 16,
+   "result": {
+    "products": 22,
+    "domains": 8,
+    "themes": 13,
+    "themesMapped": 8
+   }
+  },
+  "stories": {
+   "fp": "b4d494941c88cf98",
+   "at": "2026-09-27T05:22:22Z",
+   "ms": 144,
+   "result": {
+    "stories": 3328,
+    "byStage": {
+     "Done": 2494,
+     "Not started": 720,
+     "In progress": 114
+    },
+    "byProductBasis": {
+     "component": 741,
+     "theme": 885,
+     "none": 506,
+     "classified": 1196
+    },
+    "withClient": 618
+   }
+  },
+  "demand": {
+   "fp": "ad8ca4be6bd926a8",
+   "at": "2026-09-27T05:22:22Z",
+   "ms": 109,
+   "result": {
+    "requests": 1781,
+    "clusters": 1122,
+    "clustersNotBuilt": 953
+   }
+  },
+  "health": {
+   "fp": "17703d4fbfe50884",
+   "at": "2026-09-27T05:22:22Z",
+   "ms": 12,
+   "result": {
+    "openClientBugs": 84,
+    "incidents": 39,
+    "events": 264,
+    "promises": 18,
+    "promisesWithClient": 7
+   }
+  },
+  "signals": {
+   "fp": "7adee10193a4fb15",
+   "at": "2026-09-27T05:22:22Z",
+   "ms": 65,
+   "result": {
+    "act": 14,
+    "watch": 20,
+    "bestSignal": 96
+   }
+  },
+  "quality": {
+   "fp": "6f5c2e1cf69a19d8",
+   "at": "2026-09-27T05:22:22Z",
+   "ms": 117,
+   "result": {
+    "requestCustomersResolved": "34/149",
+    "staleSources": 1
+   }
+  },
+  "page": {
+   "fp": "f50c66b5276cd321",
+   "at": "2026-09-27T05:23:15Z",
+   "ms": 234,
+   "result": {
+    "page": "truth/dist/index.html",
+    "bytes": 4496266,
+    "stories": 3328,
+    "clusters": 1122
+   }
+  },
+  "changes": {
+   "fp": "f09c6cba896068da",
+   "at": "2026-09-27T05:22:22Z",
+   "ms": 36,
+   "result": {
+    "changes": 0,
+    "baseline": "2026-09-27T05:05:52Z"
+   }
+  }
+ },
+ "lastRun": "2026-09-27T05:23:15Z",
+ "lastChecks": {
+  "pass": 15,
+  "fail": [],
+  "warn": [
+   "sources within their freshness limit: stale ledger",
+   "owner decisions taken: open D1, D2, D3, D4, D5, D6, D7"
+  ]
+ }
+}

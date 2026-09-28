@@ -1,0 +1,1202 @@
+[
+ {
+  "k": "EP-12927",
+  "summary": "Elasticsearch News index synchronization",
+  "epic": null,
+  "theme": "ai",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Synchronised the news search index when news is added, edited, deleted or its category is renamed. News search results stay in step with news changes."
+ },
+ {
+  "k": "EP-17512",
+  "summary": "Global search: search request can contain only spaces",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Blocked global searches made of spaces only. Empty or whitespace-only searches don't run."
+ },
+ {
+  "k": "EP-18744",
+  "summary": "No action on the front with search query for 1 latter ",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Stopped the frontend showing a search in progress for one-letter queries. Typing one letter does nothing."
+ },
+ {
+  "k": "EP-18759",
+  "summary": "Elastic is on by default for all new events",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Turned Elasticsearch search on by default for new events, while clones keep their source settings. New events use Elasticsearch search."
+ },
+ {
+  "k": "EP-18807",
+  "summary": "Include Exhibitor as multiplicator and indexes for Products and Brands",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Let brand search match the exhibitor name, returning brands the exhibitor owns or sells. Searching an exhibitor's name finds its brands and products."
+ },
+ {
+  "k": "EP-19173",
+  "summary": "Change the names and order of the multiplicators",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Renamed and reordered search multiplicators in the admin panel, putting name, description and category first. Search weighting settings are clearer and consistently ordered."
+ },
+ {
+  "k": "EP-19254",
+  "summary": "Check and fix a design on the Recommendations page",
+  "epic": null,
+  "theme": "ai",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Checked and fixed the responsive design of the Recommendations page. Recommendations display correctly across screen sizes."
+ },
+ {
+  "k": "EP-19256",
+  "summary": "Include Exhibitor as multiplicator and indexes for Exhibitor Events",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Added exhibitor name as a search multiplicator for exhibitor events. Exhibitor events can be found by exhibitor name."
+ },
+ {
+  "k": "EP-19784",
+  "summary": "Search should be done by activity categories for delegates, buyers and speakers",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Search by activity categories",
+  "text": "Made search match activity categories for delegates, buyers and speakers. People search covers activity categories."
+ },
+ {
+  "k": "EP-20216",
+  "summary": "Sync tasks for Elasticsearch to queue",
+  "epic": null,
+  "theme": "ai",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved all Elasticsearch sync tasks to a dedicated queue. Search sync runs through its own queue."
+ },
+ {
+  "k": "EP-20800",
+  "summary": "Permission matrix filters delegate list for the search ",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Applied the permission matrix's view settings to delegate, speaker and buyer search results. Search hides people the permission matrix says users can't see."
+ },
+ {
+  "k": "EP-21373",
+  "summary": "Include the name of the speaker to the session as multiplicator",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Added speaker name to the session search index and as a search multiplicator. Sessions can be found and weighted by speaker name."
+ },
+ {
+  "k": "EP-21529",
+  "summary": "Create additional index in process of syncing the whole event",
+  "epic": null,
+  "theme": "ai",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Built a new search index during full event syncs and swapped it in, instead of updating the live index. Search keeps working while an event re-syncs."
+ },
+ {
+  "k": "EP-23759",
+  "summary": "Exhibitor name (Exhibitor events) should be searched via elastic",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Moved exhibitor name search for exhibitor events to Elasticsearch and made it a search multiplicator. Exhibitor events are searched by exhibitor name through Elasticsearch."
+ },
+ {
+  "k": "EP-24013",
+  "summary": "Ignore stop-words for objects",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Made search ignore English stop-words for all stage-two global search objects. Words like 'the' or 'and' no longer skew search across exhibitors, people, sessions, news and groups."
+ },
+ {
+  "k": "EP-26308",
+  "summary": "Add ability to drag chatbot icon in the admin panel",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin chatbot",
+  "text": "Made the admin panel chatbot icon draggable. Admins can move the chatbot icon out of the way."
+ },
+ {
+  "k": "EP-27485",
+  "summary": "Android/ Improvement  logic of recommended sections",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Recommendations",
+  "text": "Applied networking opt-in and permission matrix visibility to recommended sections and lists in the Android app. Android recommendations only show people and items users may see."
+ },
+ {
+  "k": "EP-33042",
+  "summary": "Remove key fromRecomendation in the news page",
+  "epic": null,
+  "theme": "ai",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Removed the fromRecommendation flag from the news page URL after arriving from a recommendation. News URLs stay clean after following a recommendation."
+ },
+ {
+  "k": "EP-35217",
+  "summary": "Saving chat while moving thoughout the new front",
+  "epic": "Implementation of AI search ",
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "AI search",
+  "text": "Kept the AI chat and its results in the widget while users move around the new frontend. The AI conversation persists until the widget is closed or the page refreshed."
+ },
+ {
+  "k": "EP-35825",
+  "summary": "Android/ Search results UPDATE behaviour ",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Kept Android search results when returning from a profile. Android users return to their search results."
+ },
+ {
+  "k": "EP-37871",
+  "summary": "Recommendation 500 error",
+  "epic": null,
+  "theme": "ai",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed a 500 error on the recommendations endpoint so recommendations, including groups, load. The Recommendations page shows its lists."
+ },
+ {
+  "k": "EP-39504",
+  "summary": "Change default state of category select on the recommendations page in the admin panel",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Recommendations engine",
+  "text": "Set recommendation block categories to 'Available for all' by default in the admin panel. Recommendation blocks show to everyone unless restricted."
+ },
+ {
+  "k": "EP-40879",
+  "summary": "Save widgets link on in the recommendation news list",
+  "epic": null,
+  "theme": "ai",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Kept the /widgets path when opening news from recommendations inside widgets. Widget navigation stays in widget mode."
+ },
+ {
+  "k": "EP-40901",
+  "summary": "Android/ Add pls \"roles\" icons on \"Recommended\" sections ( Recommended page/ Visitors page/ Speakers page) ",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Recommendations page",
+  "text": "Added role icons to Android recommended sections on the Recommended, Visitors and Speakers pages. Android recommendations show role icons."
+ },
+ {
+  "k": "EP-46044",
+  "summary": "Database Setup for new Recommendation Service",
+  "epic": "Recreate category-based Recommendation Service",
+  "theme": "ai",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Designed the database for the new recommendation service's embeddings and distances, with multi-tenancy. The recommender has a defined data store."
+ },
+ {
+  "k": "EP-46045",
+  "summary": "Implement calculation of Matching Score and providing recommendations via API",
+  "epic": "Recreate category-based Recommendation Service",
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Recommendation engine",
+  "text": "Implemented matching score calculation and recommendations via API for the new recommendation service. Recommendations are scored from category embeddings."
+ },
+ {
+  "k": "EP-46047",
+  "summary": "Infrastructure on AWS for new Recommendation System",
+  "epic": "Recreate category-based Recommendation Service",
+  "theme": "ai",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Selected and provisioned AWS infrastructure for the new recommendation service as code. The recommender runs on purpose-built infrastructure."
+ },
+ {
+  "k": "EP-46589",
+  "summary": "Expand Search to Include Descriptions - Mobile App",
+  "epic": null,
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Extended app search to match descriptions as well as titles for exhibitors, sessions, events, products and speakers. App search finds more relevant results."
+ },
+ {
+  "k": "EP-47674",
+  "summary": "Global Search. Improve current search field to be global",
+  "epic": "Search Anatomy",
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Turned the header search into a global search with a category selector, plus admin settings for search categories and icon colour. Users search everything from one field and choose a category."
+ },
+ {
+  "k": "EP-47675",
+  "summary": "Global Search. Unified Global Search page",
+  "epic": "Search Anatomy",
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "A unified Global Search results page: an 'All categories' search shows blocks per content type (exhibitors, products, sessions, speakers and more). Searching all categories opens one page with a total count, a carousel per type and Show more links into each listing."
+ },
+ {
+  "k": "EP-47678",
+  "summary": "Global Search. Top results",
+  "epic": "Search Anatomy",
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "A Top results row on the new Global Search page showing up to 10 of the most relevant matches across all content types. Search results open with the ten most relevant cards in one row, ordered only by relevance."
+ },
+ {
+  "k": "EP-47681",
+  "summary": "Global Search. Save query",
+  "epic": "Search Anatomy",
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Logged-in users can save Global Search queries (up to 20), pick one to re-run it instantly, and delete them. Saved searches appear by the search field and follow the user across devices."
+ },
+ {
+  "k": "EP-51742",
+  "summary": "Global Search. Search field with suggestions",
+  "epic": "Search Anatomy",
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Autocomplete for the global search field: from the second character it suggests up to 10 queries from the client's search history, with typo tolerance. Clicking a suggestion runs the search straight away; suggestions are ranked by how often they're searched."
+ },
+ {
+  "k": "EP-53552",
+  "summary": "Enable filtering on DS side for marketplace filters",
+  "epic": "Search Anatomy",
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "AI search",
+  "text": "Marketplace filters are applied on the data-science search side, so search results come back already filtered by the active filters. Search and filters work together on marketplace listings."
+ },
+ {
+  "k": "EP-55295",
+  "summary": "Global Search. Quick links, Show all, and Back navigation",
+  "epic": "Search Anatomy",
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Quick links and Show all buttons on the Global Search page open a category listing with the query applied, with a Back button to return. Users move between the unified results and filtered listings without losing their search."
+ },
+ {
+  "k": "EP-55706",
+  "summary": "Global search. UI improvements based on feedback from IMEX",
+  "epic": "Search Anatomy",
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Global Search results page refinements: a fixed search field under the banner, counts on Show all buttons, a bold results title, even News cards. The results page is cleaner, counts match their sections, and sponsored blocks are renamed Sponsored Exhibitors and Sponsored Products."
+ },
+ {
+  "k": "EP-57221",
+  "summary": "Global Search. Blocks, Labels, Order and Availability Control",
+  "epic": "Search Anatomy",
+  "theme": "ai",
+  "include": true,
+  "exclude": null,
+  "feature": "Global search",
+  "text": "Organisers control which Global Search options, quick links, menu items and result blocks appear, and their order, in Website Builder; labels move to Translation Manager. Round Tables and On-demand join the options; Buyers and Delegates appear only to viewers allowed to see them."
+ },
+ {
+  "k": "EP-8159",
+  "summary": "Cancel button for exports",
+  "epic": null,
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Export queue controls",
+  "text": "Added a cancel button so organisers can stop any export manually. Organisers can cancel a running export."
+ },
+ {
+  "k": "EP-11020",
+  "summary": "Edit refresh logic in all checkQueueExportStatus",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Fixed the refresh flag in export status checks so polling continues until the file URL is ready. Export status endpoints report refresh correctly until the download is ready."
+ },
+ {
+  "k": "EP-12439",
+  "summary": "Refactor of messages export file. Transfere file data source from dynamo db to clickhouse",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the messages export data source from DynamoDB to ClickHouse and refactored the export. Message exports read from ClickHouse."
+ },
+ {
+  "k": "EP-12440",
+  "summary": "Interactions scores fix. Default values after enabling.",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Created default interaction scores when a client or event is created or interaction scores are switched on. Interaction scores start with defaults instead of empty values."
+ },
+ {
+  "k": "EP-13816",
+  "summary": "Unique logins for the report",
+  "epic": null,
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Mobile app analytics",
+  "text": "Changed the mobile app logins report to keep only each user's latest login and renamed it Unique Mobile App logins. The export lists each user once with their latest mobile login."
+ },
+ {
+  "k": "EP-14008",
+  "summary": "Move all total stat tables dynamo data to 1 clickhouse table",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved all total-statistics DynamoDB tables into one ClickHouse table. Total statistics live in a single ClickHouse table."
+ },
+ {
+  "k": "EP-15627",
+  "summary": "Set informer \"excel generation...\" instead of \"in progress 100%\" if uploading data to excel in progress",
+  "epic": null,
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Export queue controls",
+  "text": "Showed 'excel generation…' once export data is ready and the Excel file is being written. Users see that the Excel file is being generated."
+ },
+ {
+  "k": "EP-15932",
+  "summary": "Analytics: ui issues",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed analytics tab UI gaps against the design: avatars, device filter, tooltips, bubbles, icons, totals and colours. The admin analytics tab matches the design."
+ },
+ {
+  "k": "EP-16411",
+  "summary": "meeting export improvement",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Improved the meeting export so it no longer freezes. Meeting exports complete."
+ },
+ {
+  "k": "EP-16615",
+  "summary": "Check-in export: optimize database query",
+  "epic": null,
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Optimised the check-in export query that ran thousands of times. Check-in exports use far fewer queries."
+ },
+ {
+  "k": "EP-17952",
+  "summary": "Logs export rework (API public + admin logs)",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Queued public API log and admin log exports. Log exports run through a queue."
+ },
+ {
+  "k": "EP-20031",
+  "summary": "Including column Scanned code in the check-in report ",
+  "epic": null,
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom check-in reports",
+  "text": "Added a Scanned code column to the check-in report. The check-in report shows the code scanned at check-in."
+ },
+ {
+  "k": "EP-21474",
+  "summary": "Indentifying the uniqueness of check-in for non-EP users ",
+  "epic": null,
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom check-in reports",
+  "text": "Identified unique check-ins for people not in the platform by the scanned code, and for registered users by account ID. Check-in uniqueness is counted for everyone."
+ },
+ {
+  "k": "EP-22052",
+  "summary": "Need to fix incorrect Interactions table width CSS property for Visitors",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the width of the visitor dashboard Interactions table. The Interactions table displays at the right width."
+ },
+ {
+  "k": "EP-24201",
+  "summary": "optimize \"Custom Meeting Report\" export based on automation test data",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Optimised the Custom Meeting Report export, also improving the meetings export. Meeting reports export faster."
+ },
+ {
+  "k": "EP-24562",
+  "summary": "Hide leaderboard if we pick All for the events",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Hid the meetings leaderboards when All events is selected in analytics. The Meetings tab matches the dashboard behaviour for all events."
+ },
+ {
+  "k": "EP-24609",
+  "summary": "Add a comma for 4+-digits numbers",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Added thousand separators to numbers in the analytics Meetings tab. Large numbers read as 1,000 and 1,000,000."
+ },
+ {
+  "k": "EP-24662",
+  "summary": "Create dropdown menu for sources",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Added a Mobile app / Web platform dropdown to the analytics sources chart. Organisers can view traffic sources by app or web."
+ },
+ {
+  "k": "EP-24841",
+  "summary": "Only confirmed meetings should be counted for uniqueness of participant",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Counted unique meeting participants only from confirmed meetings, with an explanatory tooltip. The unique participants metric reflects confirmed meetings only."
+ },
+ {
+  "k": "EP-24943",
+  "summary": "Change the name of the metrics",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Renamed the Avg. time on site metric to Avg. time online. The users page shows Avg. time online."
+ },
+ {
+  "k": "EP-25137",
+  "summary": "Refactoring of \"Top performers dashboard\" with logic rework",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Reworked the exhibitor dashboard Top performers block with consistent exhibitor and team member stats for meetings, chats and scans. Top performers shows consistent stats by timeframe."
+ },
+ {
+  "k": "EP-26581",
+  "summary": "Meetings export: not completed on alpha",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed a meetings export that didn't complete on a test environment. The meetings export completes."
+ },
+ {
+  "k": "EP-30706",
+  "summary": "Correct module for Check-in analytics",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Kept a single Check-in module that controls the check-in analytics tab. Switching off Check-in hides the check-in tab."
+ },
+ {
+  "k": "EP-31157",
+  "summary": "Supply and demand graph | Display all categories by the same values",
+  "epic": null,
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Supply and demand report",
+  "text": "Changed the supply and demand graph tooltip to list all categories that share the same values. Grouped categories are listed clearly in one tooltip."
+ },
+ {
+  "k": "EP-31579",
+  "summary": "Change the name Total Meetings Appointed on App Data",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Renamed Total Meetings Appointed to Total Meetings Requested on the App data page. The metric name matches what it counts."
+ },
+ {
+  "k": "EP-32640",
+  "summary": "Move ExpoStatDB to Universal",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the stats database helper to the universal layer and removed the backend copy. Notification counters use one shared helper."
+ },
+ {
+  "k": "EP-34722",
+  "summary": "Fix analytic app data page refresh ",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the analytics App data tab refreshing randomly. Analytics tabs stay put."
+ },
+ {
+  "k": "EP-36995",
+  "summary": "Add exhibitor_role enam to account_events table",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Added an exhibitor role enum (owner, admin, team member) to account events. Exhibitor roles are stored consistently."
+ },
+ {
+  "k": "EP-37921",
+  "summary": "Data in PostgresQL and Clickhouse to be the same",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Sent badge scans, favourites and session and meeting attendees to ClickHouse, with a nightly job to fix discrepancies. Analytics data matches the main database."
+ },
+ {
+  "k": "EP-38229",
+  "summary": "Registration Incomplete export rework",
+  "epic": null,
+  "theme": "analytics",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Reworked the Registration Incomplete export to run through SQS. The incomplete registrations export runs as a queued job."
+ },
+ {
+  "k": "EP-42365",
+  "summary": "Logic of displaying of how the Total meetings graph",
+  "epic": null,
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting analytics",
+  "text": "Made the Total meetings graph count meetings by creation date. The graph uses one consistent date."
+ },
+ {
+  "k": "EP-46247",
+  "summary": "Team Member Export File - Addition of a new column \"External QR\"",
+  "epic": null,
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Exports",
+  "text": "Added an External QR column to the team member export. Team member exports include external QR codes."
+ },
+ {
+  "k": "EP-47172",
+  "summary": "Investigate BI tool selection for new analytics",
+  "epic": "Implement BI tool",
+  "theme": "analytics",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Investigated BI tools for the new analytics against ClickHouse support, security, visualisation, integration, cost and collaboration. BI tool options were compared."
+ },
+ {
+  "k": "EP-47443",
+  "summary": "Development <first> dashboard - for demo to Informa",
+  "epic": "Implement BI tool",
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "New analytics dashboards",
+  "text": "Built a first analytics dashboard for a demo: login counts, total, web and app, over time. A login analytics dashboard was ready to demo."
+ },
+ {
+  "k": "EP-47499",
+  "summary": "Adding a column for \"is_new\" field to the exhibitor export file",
+  "epic": null,
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Exports",
+  "text": "An 'Is New' column in the exhibitor export, filled yes or no from the exhibitor's 'Is New' setting. Organisers can export which exhibitors are marked new, alone or with all fields."
+ },
+ {
+  "k": "EP-48386",
+  "summary": "Meeting program. Report. All meetings tab. Add extra column about meeting generation",
+  "epic": "Hyve Q1.26 delievery",
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programme reports",
+  "text": "A Source column in the Meeting Program report's All Meetings tab: 1st generation, 2nd generation or Manual. Reports show whether each meeting came from the algorithm's first or second run or was added by the organiser."
+ },
+ {
+  "k": "EP-48851",
+  "summary": "Meeting Program Report — Meeting Ratings in All Meetings Tab",
+  "epic": "Hyve Q1.26 delievery",
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programme reports",
+  "text": "The Meeting Program report's All Meetings tab shows each side's rating score, reason and 'did not take place' flag for confirmed meetings. Organisers review ratings per meeting, with empty cells where no rating was given."
+ },
+ {
+  "k": "EP-49223",
+  "summary": "Profile Completion Column in Export Reports (Participants)",
+  "epic": "Hyve Q1.26 delievery",
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Exports",
+  "text": "The Visitor, Team member and Speaker exports gain a Profile completion column, matching what each participant sees on their dashboard. Exports show the same profile-completion value as the frontend."
+ },
+ {
+  "k": "EP-49438",
+  "summary": "Attendance: Organizer can compare Check-ins across co-located Events and view Crossover Check-ins in Total Check-In / Check-Out graph",
+  "epic": "Attendance & Event Analytics 2026",
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Check-in analytics",
+  "text": "Check-in analytics include badges from other EP events and unidentified external badges, with a new Event filter on each chart. Organisers see totals matching the export and can compare check-ins by badge origin across co-located events."
+ },
+ {
+  "k": "EP-53455",
+  "summary": "Restoring Google Analytics Support: Enhancements for GA4 Integration and Validation",
+  "epic": "Attendance & Event Analytics 2026",
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Google Analytics 4 support",
+  "text": "Google Analytics works again with GA4: the admin ID field validates the G- format, flags old UA IDs, and the site loads GA4 with the saved ID. Organisers track their event website in GA4; nothing loads when the ID is empty or invalid."
+ },
+ {
+  "k": "EP-53966",
+  "summary": "Enhancing Meetings report and Custom Meeting Wizard Report: Adding Business Transaction Likelihood and Meeting Did Not Take Place Columns",
+  "epic": "Improve Meetings & Scheduling",
+  "theme": "analytics",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting reports",
+  "text": "The Meetings report and Custom Meeting Wizard report gain Business Transaction Likelihood (0–10) and Meeting Did Not Take Place columns. Exports include both columns for every rated meeting, including ratings submitted before the release."
+ },
+ {
+  "k": "EP-14662",
+  "summary": "Remove unnecessary socket call for unauthorized user \"chatsList\"",
+  "epic": null,
+  "theme": "comms",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed an unnecessary chat list socket call for users who aren't logged in. Guests no longer trigger chat socket requests."
+ },
+ {
+  "k": "EP-15768",
+  "summary": "Create setting for using custom SMPT service",
+  "epic": null,
+  "theme": "comms",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom SMTP email sending",
+  "text": "Added a setting to send platform emails through a custom SMTP service. Registration, meeting, message, campaign and reminder emails can use a custom SMTP server."
+ },
+ {
+  "k": "EP-15836",
+  "summary": "View of the cards in the emails",
+  "epic": null,
+  "theme": "comms",
+  "include": true,
+  "exclude": null,
+  "feature": "Email nurturing variables",
+  "text": "Fixed product and exhibitor cards in emails: no underline, left-aligned names, buttons on the right, sponsor icons with a count. Email nurturing cards match the design."
+ },
+ {
+  "k": "EP-16526",
+  "summary": "Notification refactoring",
+  "epic": null,
+  "theme": "comms",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored platform notifications. Notifications were reworked; notifications for users who aren't logged in were left to a later task."
+ },
+ {
+  "k": "EP-21196",
+  "summary": "Decrease the size of the incoming messages variable",
+  "epic": null,
+  "theme": "comms",
+  "include": true,
+  "exclude": null,
+  "feature": "Email nurturing variables",
+  "text": "Made the incoming messages email variable more compact: one line of message, date closer to sender. The incoming messages block matches the email nurturing design."
+ },
+ {
+  "k": "EP-21346",
+  "summary": "Implement templates for all events",
+  "epic": "Email nurturing ",
+  "theme": "comms",
+  "include": true,
+  "exclude": null,
+  "feature": "Email nurturing templates",
+  "text": "Made the six email nurturing campaign templates default for every event, old and new, with default banner and footer. Every event has six ready campaign templates in its template list."
+ },
+ {
+  "k": "EP-21640",
+  "summary": "Adjust the outlook of the variable",
+  "epic": null,
+  "theme": "comms",
+  "include": true,
+  "exclude": null,
+  "feature": "Email nurturing variables",
+  "text": "Refined meeting and message email variables: tighter spacing, truncated names, two rows on mobile, real attendee photos. Incoming meeting and message blocks look right on desktop and mobile."
+ },
+ {
+  "k": "EP-21855",
+  "summary": "Setting for determining the number of messages ",
+  "epic": null,
+  "theme": "comms",
+  "include": true,
+  "exclude": null,
+  "feature": "Message limits",
+  "text": "Added a setting for how many messages, up to ten, appear in the incoming messages email variable. Organisers choose how many messages appear in nurturing emails."
+ },
+ {
+  "k": "EP-22911",
+  "summary": "Filter for the search query in Group tab",
+  "epic": null,
+  "theme": "comms",
+  "include": true,
+  "exclude": null,
+  "feature": "Group search",
+  "text": "Showed the active search term and filters as chips on the Groups tab. Groups show what the user is searching or filtering by."
+ },
+ {
+  "k": "EP-23410",
+  "summary": "Hide Export data if there was no send-out",
+  "epic": null,
+  "theme": "comms",
+  "include": true,
+  "exclude": null,
+  "feature": "Campaigns refresh",
+  "text": "Hid Export data for campaign send-outs that haven't happened yet. Export data appears only for completed send-outs."
+ },
+ {
+  "k": "EP-23888",
+  "summary": "[Groups] Rework participants adding to chuncks.",
+  "epic": null,
+  "theme": "comms",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Sent group invitations in chunks when inviting many people. Large group invitations complete."
+ },
+ {
+  "k": "EP-35571",
+  "summary": "Notifications. Exhibitor three dots menu. Styles looks wrong",
+  "epic": null,
+  "theme": "comms",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the styles of the exhibitor actions menu in notifications. The notifications menu displays properly."
+ },
+ {
+  "k": "EP-35804",
+  "summary": "Refactor sending admin notifications",
+  "epic": null,
+  "theme": "comms",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Sent admin notifications in batches through a queue. Admin notifications send reliably at scale."
+ },
+ {
+  "k": "EP-36589",
+  "summary": "iOS/ Add event_id param to unsetPushToken request ",
+  "epic": null,
+  "theme": "comms",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Added the event ID to the iOS unset push token request, sent on every event change in multi-event apps. Push tokens are unset for the right event."
+ },
+ {
+  "k": "EP-36649",
+  "summary": "Leader board | Change the text of the tooltips",
+  "epic": null,
+  "theme": "comms",
+  "include": true,
+  "exclude": null,
+  "feature": "Leaderboard",
+  "text": "Rewrote the Leader dashboard tooltips for average interaction metrics. Tooltips explain each average clearly."
+ },
+ {
+  "k": "EP-38737",
+  "summary": "Click on the logo of exhibitor doesn't work in the mini chat",
+  "epic": null,
+  "theme": "comms",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the exhibitor logo in a new mini chat opening a participant page. The logo opens the exhibitor."
+ },
+ {
+  "k": "EP-42342",
+  "summary": "Create logs on Cloudwatch for manual emails",
+  "epic": null,
+  "theme": "comms",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Rebuilt CloudWatch logs for exhibitor manual emails after architecture changes. Manual emails are traceable."
+ },
+ {
+  "k": "EP-43260",
+  "summary": "[portalUI] add ability to click on the notification in the notification dropdown menu",
+  "epic": null,
+  "theme": "comms",
+  "include": true,
+  "exclude": null,
+  "feature": "Clickable notifications",
+  "text": "Made notifications in the dropdown menu clickable to open the related profile or session. Users jump from a notification to its subject."
+ },
+ {
+  "k": "EP-45081",
+  "summary": "fix src/components/UI/actionButtons/messageButton/MessageButton.tsx",
+  "epic": null,
+  "theme": "comms",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed message button colours in the custom listing table to follow the builder. Table buttons match the design."
+ },
+ {
+  "k": "EP-45877",
+  "summary": "Replace button with IconButton for mobile devices in MessengerSendInput.tsx",
+  "epic": null,
+  "theme": "comms",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Used an icon button for sending messages on mobile. The mobile messenger input matches the design."
+ },
+ {
+  "k": "EP-47792",
+  "summary": "Messenger. Conversation status filters",
+  "epic": "Communication Channels — Email, Chat & Notifications",
+  "theme": "comms",
+  "include": true,
+  "exclude": null,
+  "feature": "Messenger conversation filters",
+  "text": "A Conversation Status filter in Messenger: All, Two-way (both sides have written) or One-way (only one side has). Users filter their chats by reply status, combined with the existing filters."
+ },
+ {
+  "k": "EP-11620",
+  "summary": "lead questions: remove copy-paste blocks",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed duplicated copy-paste blocks from the lead questions script. The lead questions script has no duplicated blocks."
+ },
+ {
+  "k": "EP-11958",
+  "summary": "lead questions: add logging",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added logging to the lead questions functionality. Lead questions activity is logged."
+ },
+ {
+  "k": "EP-13738",
+  "summary": "Find and fix mass product category update (elastic)",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Found and fixed mass product category updates in the search index. Bulk product category changes reach search correctly."
+ },
+ {
+  "k": "EP-14576",
+  "summary": "/admin/exhibitormanual/viewSubmission/1629 | /expo_backend/public/admin.php",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Fixed the exhibitor manual submission view calling a download method on a result set. Manual submissions with documents open in the admin panel."
+ },
+ {
+  "k": "EP-15586",
+  "summary": "The possibility to upload all exhibitors including the ones without the category ",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Added an Exhibitor header option that selects all exhibitors, including those without a category. Organisers can target all exhibitors at once."
+ },
+ {
+  "k": "EP-15796",
+  "summary": "ManualTask deadlineAction no exhibitors error",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the exhibitor manual deadline task failing when no exhibitors match. Manual deadline reminders run without errors."
+ },
+ {
+  "k": "EP-16538",
+  "summary": "Check only updated fields of Product while sync to Elasticsearch",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Synced exhibitors and products to search only when their searchable fields change. Fewer unnecessary search syncs."
+ },
+ {
+  "k": "EP-17039",
+  "summary": "Sync to Elasticsearch only in the end of importing products",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Paused search syncing during product imports and synced once at the end. Imports trigger a single search sync."
+ },
+ {
+  "k": "EP-17198",
+  "summary": "Rewrite in the manual suppliers state to the hook",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved exhibitor manual supplier state into a reusable hook with its own interface. Supplier state is handled by a shared hook."
+ },
+ {
+  "k": "EP-17329",
+  "summary": "Remove duplicated queries from Marketplace page",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Removed duplicated queries from the marketplace page. The marketplace page makes fewer queries."
+ },
+ {
+  "k": "EP-17760",
+  "summary": "Sponsors and sponsored products cards are 6 in a raw",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsor placements",
+  "text": "Showed six sponsor and sponsored product cards per row and renamed Sponsors to Sponsored Products on the products page. Sponsor rows show six cards; the products page says Sponsored Products."
+ },
+ {
+  "k": "EP-17790",
+  "summary": "Sponsor exhibitors/products optimization for apps",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsor placements",
+  "text": "Added sponsor flag and sponsor order attributes to exhibitor and product objects for the apps. The apps can show sponsored exhibitors and products in order."
+ },
+ {
+  "k": "EP-17894",
+  "summary": "Add check of the toggle \"Do not allow active products\" state change when saving exhibitor category settings",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Saved the 'Do not allow active products' permission only when that toggle actually changes. Unchanged toggles keep their permission."
+ },
+ {
+  "k": "EP-18109",
+  "summary": "Sponsors block for exhibitor and product list in app.",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsor display options",
+  "text": "Added a sponsors slider above the exhibitor and product lists in the app, matching the web, with sponsor limits, colours and ordering from the admin panel. The app shows sponsored exhibitors and products in their own slider."
+ },
+ {
+  "k": "EP-18877",
+  "summary": "Remove \"Enable required fields\" check for \"Required Marketing content\" and \"Requried video\" settings",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Made 'Enable required fields', 'Required video' and 'Required marketing content' independent, each redirecting users to fill the missing item after login, in a set priority. Organisers can require fields, a video or marketing content separately."
+ },
+ {
+  "k": "EP-18953",
+  "summary": "Filter all duplicated of scans ",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead capture",
+  "text": "Filtered duplicate scans, same barcode and time, out of the exhibitor scanned contacts report. The scanned contacts report has no duplicates."
+ },
+ {
+  "k": "EP-19117",
+  "summary": "Meet button on the exhibitor card doesn't work",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the Meet button on exhibitor cards in mobile view. Meet works on exhibitor cards on phones."
+ },
+ {
+  "k": "EP-20009",
+  "summary": "Change sponsors endpoints",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Renamed sponsor statistics endpoints and checked sponsor popup, card and banner statistics. Sponsor and banner statistics use dedicated endpoints."
+ },
+ {
+  "k": "EP-20605",
+  "summary": "Sponsors stats should count only the sponsors that we have on the screen",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsor statistics",
+  "text": "Counted sponsor and sponsored product views only when they're visible in the slider, pausing it off-screen. Sponsor statistics reflect sponsors people actually saw."
+ },
+ {
+  "k": "EP-21461",
+  "summary": "The clicks should be counted in the sponsor stats",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsor statistics",
+  "text": "Counted clicks on sponsor and sponsored product cards in search statistics. Sponsor statistics include clicks."
+ },
+ {
+  "k": "EP-23454",
+  "summary": "Refactoring: Transfer Business Logic from Controller to Service for 'Parent Child'",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved parent/child exhibitor business logic from the controller into a ParentChildService. Parent/child logic lives in a service."
+ }
+]

@@ -1,0 +1,1202 @@
+[
+ {
+  "k": "EP-21659",
+  "summary": "Add a loader to the session page when we click on a new date",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Loading states on listing pages",
+  "text": "Added a loader to the sessions page when a new date is picked. Users see loading feedback when switching dates."
+ },
+ {
+  "k": "EP-21710",
+  "summary": "Refactoring: combine models PlannerEvent to one universal model",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Combined planner event models into one universal model. Planner events use a shared model."
+ },
+ {
+  "k": "EP-21993",
+  "summary": "Optimisation of the api/filters",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Performance improvements",
+  "text": "Optimised the filters API used by the mobile apps, moving to the new filters and queued search syncing. Filter requests put much less load on the database."
+ },
+ {
+  "k": "EP-22118",
+  "summary": "Refactoring: combine models ExhibitorCategories to one universal model",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Combined exhibitor category models into one universal model. Exhibitor categories use a shared model."
+ },
+ {
+  "k": "EP-22245",
+  "summary": "Refactoring: combine models AccountCategories to one universal model",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Combined account category models into one universal model. Account categories use a shared model."
+ },
+ {
+  "k": "EP-22352",
+  "summary": "Fix duplicated requests",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Found and fixed duplicated requests. The duplicate requests stopped."
+ },
+ {
+  "k": "EP-23279",
+  "summary": "Transferring the ExhibitorsNew model to the universal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the ExhibitorsNew model to the universal models. The model is shared."
+ },
+ {
+  "k": "EP-23312",
+  "summary": "Transferring the TemplatesEmails model to the universal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the email templates model to the universal models. The model is shared."
+ },
+ {
+  "k": "EP-23347",
+  "summary": "Move model ScheduleOnlineRoomsProducts to Universal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the online room products model to the universal models. The model is shared."
+ },
+ {
+  "k": "EP-23374",
+  "summary": "Transferring the Form model to the universal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the frontend and backend form models with one universal Form model. Forms use a shared model."
+ },
+ {
+  "k": "EP-23379",
+  "summary": "Transferring the FormsData model to the universal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the frontend and backend form data models with one universal model. Form data uses a shared model."
+ },
+ {
+  "k": "EP-23407",
+  "summary": "Transferring the OfflineEventAnswers model to the universal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the session answers model to the universal models. The model is shared."
+ },
+ {
+  "k": "EP-23417",
+  "summary": "Transferring the OfflineEventLocations model to the universal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the session locations model to the universal models. The model is shared."
+ },
+ {
+  "k": "EP-23418",
+  "summary": "Transferring the OfflineEventContent model to the universal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the session content models with one universal model. The model is shared."
+ },
+ {
+  "k": "EP-23455",
+  "summary": "Refactoring: Transfer Business Logic from Controllers to Services for 'Groups'",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved groups business logic from controllers into group, group account and group post services. Group logic lives in dedicated services."
+ },
+ {
+  "k": "EP-23458",
+  "summary": "Refactoring: Consolidate Business Logic from RFP Controllers into a Service",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Consolidated RFP controller logic into one RFP service. RFP logic lives in one service."
+ },
+ {
+  "k": "EP-23582",
+  "summary": "Transferring the NotificationsList model to the universal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the notifications list model to the universal models. The model is shared."
+ },
+ {
+  "k": "EP-23600",
+  "summary": "Remove cities without timezone from the City field in the event general settings",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Removed cities without a time zone from the event City setting. Event cities always carry a time zone."
+ },
+ {
+  "k": "EP-23629",
+  "summary": "Transferring the RegisterInfoSections & RegisterInfoItems models to the universal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the registration info section and item models to the universal models. The models are shared."
+ },
+ {
+  "k": "EP-23664",
+  "summary": "Need to write correct universal type",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Wrote the correct shared type for dashboard interactions. The dashboard interactions component is properly typed."
+ },
+ {
+  "k": "EP-23667",
+  "summary": "Transferring the RegisterContactDetails model to the universal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the registration contact details model to the universal models. The model is shared."
+ },
+ {
+  "k": "EP-23762",
+  "summary": "Create empty state for the tables in admin panel",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin panel experience",
+  "text": "Added an empty-state image to empty admin panel tables. Empty admin tables clearly show they have no data."
+ },
+ {
+  "k": "EP-23810",
+  "summary": "Improve/fix layout on the platform and design fixes",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Ran an ongoing process for reporting, approving and fixing layout and design bugs. Approved layout issues were fixed and released."
+ },
+ {
+  "k": "EP-24070",
+  "summary": "Global refactoring backend models stage 2",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Ran stage two of the backend model refactoring for sessions, notifications, accounts and config. Core models moved to the universal layer."
+ },
+ {
+  "k": "EP-24140",
+  "summary": "Change buttons visibilite ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Hid meet, message and favourite buttons for logged-in users until the interactions check allows them. Logged-in users only see interaction buttons they can use."
+ },
+ {
+  "k": "EP-25208",
+  "summary": "Remove MUI4 from the admin panel ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed Material UI v4 from the admin panel, moving components to v5. The admin panel uses MUI 5 only."
+ },
+ {
+  "k": "EP-25269",
+  "summary": "Upgrade FormBuilder version on admin panel",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the admin panel form builder with the newer one from the frontend. Admins use the new form builder."
+ },
+ {
+  "k": "EP-25657",
+  "summary": "Fix condition render for additional information",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Removed an unnecessary notification when a user can't use a button. Users don't see a pointless message."
+ },
+ {
+  "k": "EP-25860",
+  "summary": "In case of PERMISSION MATRIX don't allow view profile - need hide participant/exhibitor from all lists ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Hid participants and exhibitors from all lists when the permission matrix disallows viewing their profile. Hidden profiles don't appear in lists."
+ },
+ {
+  "k": "EP-26621",
+  "summary": "Lexical update",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Updated the Lexical text editor: empty state position, style props, string output with debounce, TypeScript. The text editor behaves consistently."
+ },
+ {
+  "k": "EP-26724",
+  "summary": "Add API endpoints for the admin panel to get a dictionaries",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Added admin panel API endpoints for dictionaries: countries, cities and regions, product categories, titles, VAT countries. The new admin panel can load reference data."
+ },
+ {
+  "k": "EP-28153",
+  "summary": "Hide module Hospitality, Exhibitor info (manual), Taxes field for tables and Enable payment in Global settings",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Module management",
+  "text": "Hid the retired Hospitality module, table section tax fields and exhibitor manual payment setting. Admins no longer see retired settings."
+ },
+ {
+  "k": "EP-28666",
+  "summary": "[adminUI] Get all event data in the admin panel, in the iFrame mode",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Loaded all event data into the new admin panel in iframe mode. New admin pages have full event data."
+ },
+ {
+  "k": "EP-28880",
+  "summary": "Rework tabs conditions",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Reworked registration tab visibility for nested conditions: hide a tab when its parent or all its children are hidden. Tabs appear only when they have visible content."
+ },
+ {
+  "k": "EP-29100",
+  "summary": "Refactor `_fr_singin` keys from exhibition modules ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored sign-in module keys used by the exhibition modules hook. Sign-in module keys are handled consistently."
+ },
+ {
+  "k": "EP-29125",
+  "summary": "Check pagination possible values ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Limited card pagination sizes to numbers divisible by 2, 3 and 4. Card grids fill evenly."
+ },
+ {
+  "k": "EP-29126",
+  "summary": "Check fav icon size on admin panel",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Reduced the favourite icon size in the admin panel. The icon is smaller."
+ },
+ {
+  "k": "EP-29284",
+  "summary": "Check admin notification header in the adminv2",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the selector position in the new admin panel's notification header. The notification header selector sits correctly."
+ },
+ {
+  "k": "EP-29467",
+  "summary": "[Admin panel] Refactor SideBarMenu ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored the admin sidebar menu to use router links with active classes. The sidebar uses native router links."
+ },
+ {
+  "k": "EP-29755",
+  "summary": "[admin panel v2]  migrate from CRA to Vite",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Migrated the new admin panel build from Create React App to Vite. The admin panel builds with Vite."
+ },
+ {
+  "k": "EP-29774",
+  "summary": "[Admin panel] Hide event data from the page",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Hid raw event data from the new admin panel's general setup page in production. Event data isn't exposed on that page."
+ },
+ {
+  "k": "EP-29857",
+  "summary": "Get account attribute data  from account_attributes field",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Read account attributes from the account_attributes field to reduce replica database queries. Account attribute reads are lighter."
+ },
+ {
+  "k": "EP-31635",
+  "summary": "Create DS user in postgres db",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Created a database user with write access to the round table topic requests table. The data service can write topic requests."
+ },
+ {
+  "k": "EP-32439",
+  "summary": "Remove redundant settings from the admin panel",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin panel experience",
+  "text": "Removed settings left over from the old UI from exhibitor and general admin settings. Admin settings pages are shorter."
+ },
+ {
+  "k": "EP-32852",
+  "summary": "Change translation of user menu from the backend to the frontend side",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved user menu translations from the backend to the frontend with AI-translated keys. User menu labels are translated on the frontend."
+ },
+ {
+  "k": "EP-33871",
+  "summary": "Clean old exports code",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Deleted the old versions of twelve admin exports, from exhibitors to messages. Only the reworked exports remain."
+ },
+ {
+  "k": "EP-34004",
+  "summary": "Replace 'Loading event data' with Loader in admin panel",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin panel experience",
+  "text": "Replaced the 'Loading event data' text with a loader in the admin panel. The admin panel shows a loader while event data loads."
+ },
+ {
+  "k": "EP-34239",
+  "summary": "Add account_id to activation_code hash generation",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Security hardening",
+  "text": "Added the account ID to activation code hash generation. Activation codes are unique per account."
+ },
+ {
+  "k": "EP-34511",
+  "summary": "[adminv2] Choose language from storage on init",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Multilingual admin panel",
+  "text": "Made the new admin panel start in the language saved in local storage. The admin panel opens in the user's language."
+ },
+ {
+  "k": "EP-34953",
+  "summary": "Add a zero event to the selection in the admin request logs",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added a database-level option (event 0) to the admin request logs, logging actions on the events list. Admins can see actions taken on the events list."
+ },
+ {
+  "k": "EP-35211",
+  "summary": "Make synchronization button visible for super admins only",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Limited the manual search synchronisation button to super admins. Clients no longer trigger unnecessary syncs."
+ },
+ {
+  "k": "EP-35506",
+  "summary": "Saml integration | Correct user agent coming from the integration",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Sent the same app user agent through the SAML integration as in statistics. SAML calls identify the app consistently."
+ },
+ {
+  "k": "EP-35575",
+  "summary": "Tutorial link in header do nothing ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Made the header's Tutorial link open the tutorial video. The tutorial opens from the header."
+ },
+ {
+  "k": "EP-35641",
+  "summary": "Move export logs to cloud watch",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Moved export logs from DynamoDB to CloudWatch. Export logs live in CloudWatch, searchable by export ID."
+ },
+ {
+  "k": "EP-35819",
+  "summary": "Create aws resources on australia",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Regional data hosting",
+  "text": "Created AWS resources in the Australia region: queues, DynamoDB tables and log groups. The platform can run in an Australian region."
+ },
+ {
+  "k": "EP-35880",
+  "summary": "Add secure token to scanBadge endpoint",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Security hardening",
+  "text": "Added an HMAC security token header to the app's badge scan endpoint. Badge scan requests are signed."
+ },
+ {
+  "k": "EP-35921",
+  "summary": "Optimization of Account Attribute Retrieval",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Performance improvements",
+  "text": "Optimised account attribute retrieval to avoid per-account requests. Account data loads with far fewer requests."
+ },
+ {
+  "k": "EP-35926",
+  "summary": "Optimize requests https://api-gitexplus.expoplatform.com/admin/appointments/tableMeetingsList",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Performance improvements",
+  "text": "Optimised the admin table meetings list queries. The table meetings list loads faster."
+ },
+ {
+  "k": "EP-35927",
+  "summary": "Implement caching of expo_config when using it from backend",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Performance improvements",
+  "text": "Cached event config on the backend too, clearing it on each save. Backend reads of event config are cached."
+ },
+ {
+  "k": "EP-36019",
+  "summary": "The Sponsor page is loading slowly ",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Performance improvements",
+  "text": "Reworked the admin sponsor page to load faster. The sponsor page loads faster."
+ },
+ {
+  "k": "EP-36113",
+  "summary": "Refactor some search filters",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored and retested meeting availability, meeting initiator, meeting status and chat search filters. Those filters return correct results across lists."
+ },
+ {
+  "k": "EP-36297",
+  "summary": "Remove Not a member? Sign up. line",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Login page",
+  "text": "Hid the 'Not a member? Sign up.' line in the login window when registration is off, for password and OTP login. Closed-registration events don't invite sign-ups."
+ },
+ {
+  "k": "EP-37026",
+  "summary": "Cleanup deprecated models and related files post universal refactor",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed models and interfaces left in the backend and frontend after the universal refactor. Only universal models remain."
+ },
+ {
+  "k": "EP-37027",
+  "summary": "Remove role field and dependency between account_events and roles models",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed the unused role field from account events and its link to the roles model. Account events no longer depend on roles."
+ },
+ {
+  "k": "EP-37093",
+  "summary": "Add ability to use custom service on the newFront (login by token)",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Login and SSO options",
+  "text": "Switched customer service login to the new frontend using token login. Admins log in as users on the new frontend."
+ },
+ {
+  "k": "EP-37535",
+  "summary": "Refactoring: Delete Using ExhibitorEvents model",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed remaining uses of the ExhibitorEvents model in favour of AccountEvents. Only AccountEvents is used."
+ },
+ {
+  "k": "EP-37538",
+  "summary": "Refactoring: Remove Usage of matchmaking_message Field from Exhibitors Model",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the exhibitor matchmaking_message field with the equivalent account attribute. Matchmaking messages come from account attributes."
+ },
+ {
+  "k": "EP-37692",
+  "summary": "Change text of error if there not enough symbols ",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Clearer error messages",
+  "text": "Clarified the error message when a value has too few characters. Users see a clearer 'too short' message."
+ },
+ {
+  "k": "EP-37945",
+  "summary": "Transfer Payment Logs to CloudWatch",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Moved payment logs from the server to CloudWatch with retention and alerts. Payment logs are centralised in CloudWatch."
+ },
+ {
+  "k": "EP-37975",
+  "summary": "pages/mobile/ update",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Refactored the mobile web pages used inside the app so they share one behaviour without header or footer. In-app web pages display consistently."
+ },
+ {
+  "k": "EP-38148",
+  "summary": "[adminv2] Fix tests",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Fixed failing tests in the new admin panel. The listed admin tests pass."
+ },
+ {
+  "k": "EP-38297",
+  "summary": "[adminv2] change MediaQueryController",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Switched the new admin panel to the shared media query controller from the component library. The admin panel uses the shared component."
+ },
+ {
+  "k": "EP-38298",
+  "summary": "[portal] remove MediaQueryController and use from expo-react-components",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Switched the frontend to the shared media query controller from the component library. The frontend uses the shared component."
+ },
+ {
+  "k": "EP-38343",
+  "summary": "Fix duplicated values for custom country/region/city while search",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed duplicate options when searching custom country, region and city selects. Location selects show each option once."
+ },
+ {
+  "k": "EP-38372",
+  "summary": "Update the Save and similar buttons to the Primary type",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin panel experience",
+  "text": "Updated Save and similar buttons across the frontend to the Primary style and fixed static green buttons. Buttons follow the design system."
+ },
+ {
+  "k": "EP-38433",
+  "summary": "Missing module by role key, need to check ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Checked a missing 'makeAMeeting' module-by-role key used by schedule components. The module key used in schedule components was checked."
+ },
+ {
+  "k": "EP-38668",
+  "summary": "The design needs some adjustments",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Moved Confirm new password under New password on exhibitor and visitor profiles, responsive across devices. The password change form matches the design."
+ },
+ {
+  "k": "EP-38684",
+  "summary": "Create functional tests for EP-38469",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Wrote functional tests for a story that passed QA early. The story has functional tests."
+ },
+ {
+  "k": "EP-38729",
+  "summary": "Admin-ui wrong height and border-radius in select",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed select heights and corners in the admin UI broken by MUI defaults. Selects in the site builder look right."
+ },
+ {
+  "k": "EP-38792",
+  "summary": "Move Instance Initialization Scripts to S3",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Moved instance start-up scripts to S3. Start-up scripts are edited centrally."
+ },
+ {
+  "k": "EP-39015",
+  "summary": "Add event domain and external domain to exhibition request in admin panel ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Added event domain and external domain to the admin exhibition request. The admin panel knows the event's domains."
+ },
+ {
+  "k": "EP-39300",
+  "summary": "make plug for the deploy, to show plug instead the error",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added a placeholder server that shows a maintenance page during deploys instead of a 500 error. Users see a maintenance page during deploys."
+ },
+ {
+  "k": "EP-39397",
+  "summary": "Add the ability to use icons in the SelectWithSearch component",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added image support to the searchable select component, with Storybook and tests. Selects such as the country selector can show icons."
+ },
+ {
+  "k": "EP-39630",
+  "summary": "[admin-ui] rewrite timeFunctions.js to TS",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote the admin UI time functions in TypeScript, splitting and testing them. Time utilities are typed and tested."
+ },
+ {
+  "k": "EP-39810",
+  "summary": "Make pipeline for the testing in the portalUI ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Set up a Bitbucket pipeline to run the frontend tests. Frontend tests run automatically."
+ },
+ {
+  "k": "EP-39868",
+  "summary": "Inactive Account Warning",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Warned users with inactive accounts to activate before using an auto-login link. Inactive users know to activate their account first."
+ },
+ {
+  "k": "EP-40002",
+  "summary": "Transfer new categories block to admin panel",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Moved the new add-categories block into the admin panel, with its tests. The admin panel uses the new categories block."
+ },
+ {
+  "k": "EP-40366",
+  "summary": "fix error in base worker",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the base worker's exception handler rejecting PHP Error objects. Workers handle errors without a type error."
+ },
+ {
+  "k": "EP-40381",
+  "summary": "[next14] add data-styled to the body",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Kept the data-styled attribute on the body after the Next 14 upgrade so custom CSS still applies. Custom CSS keeps working."
+ },
+ {
+  "k": "EP-40579",
+  "summary": "[portal-ui]: Create tests for Onboarding process ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Wrote unit tests for the onboarding process. Onboarding is covered by tests."
+ },
+ {
+  "k": "EP-40580",
+  "summary": "Move RestrictionTooltip to expo-components",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the restriction tooltip to the shared component library. The tooltip is reusable."
+ },
+ {
+  "k": "EP-40583",
+  "summary": "[admin panel] replace ContextMenu.tsx with MenuWithThreeDotsIcon",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the admin context menu with the shared three-dots menu. The admin panel uses the shared menu."
+ },
+ {
+  "k": "EP-40585",
+  "summary": "[admin panel] replace grid with flex",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote the zone time blocker from grid to flex layout. The time pickers lay out correctly."
+ },
+ {
+  "k": "EP-40586",
+  "summary": "[admin panel] fix request in TablesFilter",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Stopped the tables filter firing requests when nothing changed. Fewer unnecessary requests."
+ },
+ {
+  "k": "EP-40587",
+  "summary": "[admin panel] fix dates in EditTable.tsx",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed zone and table time calendars to show seven-day week rows. The calendars display weeks correctly."
+ },
+ {
+  "k": "EP-40926",
+  "summary": "Fix undefined id as string id for Switch in expo-react-components",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Stopped the Switch component rendering 'undefined' as its ID when none is given. Switches without an ID have none."
+ },
+ {
+  "k": "EP-40953",
+  "summary": "Disable log for front authorization of user",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Disabled or masked logging of passwords during frontend login. Login logs no longer expose passwords."
+ },
+ {
+  "k": "EP-41011",
+  "summary": "Broken getCurrencySymbol test in expo-react-components",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Fixed a currency symbol test that failed on Windows. The test passes on every platform."
+ },
+ {
+  "k": "EP-41169",
+  "summary": "please translate into German",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Added German translations for recommendation, profile link and supplier labels, applied globally. German events show these labels in German."
+ },
+ {
+  "k": "EP-41199",
+  "summary": "MicrosoftGraphHelper error",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Investigated and fixed an error in automatic Outlook calendar sync. Outlook calendar sync runs without that error."
+ },
+ {
+  "k": "EP-41246",
+  "summary": "getFormattedTextWithLinks makes broken images",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed text link formatting that broke image tags. Images in formatted text display correctly."
+ },
+ {
+  "k": "EP-41538",
+  "summary": "Change output of admin request log",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Fixed how actions are recorded and shown in the admin request logs, including old logs. Request logs show readable actions."
+ },
+ {
+  "k": "EP-41750",
+  "summary": "Cancel Registration and Delete My Account Globally labels customization in the pop-ups",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom labels",
+  "text": "Applied custom Cancel registration and Delete my account labels to their confirmation popups. Popups use the customised labels."
+ },
+ {
+  "k": "EP-41870",
+  "summary": "Fix styles for native selects in the old admin panel",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Restored dropdown arrows on native selects in the old admin panel. Selects show their arrows."
+ },
+ {
+  "k": "EP-41912",
+  "summary": "Settings in old admin panel to apply in new admin pael ",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin panel redesign",
+  "text": "Made changes made in the old admin panel apply in the new admin panel. Both admin panels show the same settings."
+ },
+ {
+  "k": "EP-42088",
+  "summary": "Add SonarQube to the portal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Added SonarQube analysis to the frontend pipeline. Frontend code is scanned for quality."
+ },
+ {
+  "k": "EP-42109",
+  "summary": "Expo-react-components Table improvements ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Let the shared Table component render merged caption cells in an extra header row. Tables can show grouped column captions."
+ },
+ {
+  "k": "EP-42368",
+  "summary": "Add new library for phone",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Switched to a new phone number library. Phone fields use the new library."
+ },
+ {
+  "k": "EP-42371",
+  "summary": "Postgresql IndexPack04",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Added PostgreSQL indexes on connections, product media, schedule contacts, admin access and template modules. Common queries run faster."
+ },
+ {
+  "k": "EP-42398",
+  "summary": "Add timezone view in the admin panel to show selected TZ",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Event timezone display",
+  "text": "Showed the saved time zone next to the event City setting, with a tooltip. Admins see the event time zone."
+ },
+ {
+  "k": "EP-42589",
+  "summary": "close db_route connection after fetch in DbRouterProvider",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Closed the database router connection after fetching and dropped an unused config call. Database connections cost less."
+ },
+ {
+  "k": "EP-42709",
+  "summary": "[adminv2] Check user menu and create a page with all links in the adminv2",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added a system page in the new admin panel listing every route. All admin pages are reachable."
+ },
+ {
+  "k": "EP-42717",
+  "summary": "[adminv2] Rewrite LoginForm to TS",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote the admin login form in TypeScript. The login form is typed."
+ },
+ {
+  "k": "EP-42764",
+  "summary": "[next14] Change loader for newdemo",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Changed the demo site's loader to the platform loader. The demo uses the standard loader."
+ },
+ {
+  "k": "EP-42860",
+  "summary": "[adminv2] Add a class to change chat position when we have save buttons",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Moved the admin chatbot out of the way when save buttons appear. The chatbot doesn't cover save buttons."
+ },
+ {
+  "k": "EP-42878",
+  "summary": "Fix minor design issues",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed minor design issues: notification colours, widths, borders and paddings. The listed elements match the design."
+ },
+ {
+  "k": "EP-42975",
+  "summary": "[expo-react-components] Add ability to use sub header in the SelectWihSearch",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Added non-selectable subheaders to the searchable select. Option lists can be grouped under headers."
+ },
+ {
+  "k": "EP-43090",
+  "summary": "Remove token and id from request",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Security hardening",
+  "text": "Removed token and ID parameters from the regular app's visitors requests. Visitor requests are lighter."
+ },
+ {
+  "k": "EP-43097",
+  "summary": "Add blure for bottom save/cancel bar",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin panel redesign",
+  "text": "Gave the admin panel's bottom save and cancel bar a blurred background. The save bar matches the design."
+ },
+ {
+  "k": "EP-43220",
+  "summary": "Move FiltersWrapper to the UI folder and refactor to remove unnecessary wrappers",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the filters wrapper into the UI folder and removed unneeded wrappers. Filter components are unified."
+ }
+]

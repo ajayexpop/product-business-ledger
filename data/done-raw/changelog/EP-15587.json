@@ -1,0 +1,87 @@
+{
+ "k": "EP-15587",
+ "histories": 43,
+ "historiesRead": 43,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-03-30T14:26:31.886+0100",
+   "from": "Incoming request",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-30T14:30:00.336+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-30T15:04:33.192+0100",
+   "from": "Brief ready for review",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-30T15:04:34.744+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-30T15:04:35.672+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-31T13:23:15.352+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-31T14:02:40.037+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Mikhail Fedorenko"
+  },
+  {
+   "at": "2023-04-03T14:46:29.852+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Mikhail Fedorenko"
+  },
+  {
+   "at": "2023-04-10T09:46:33.577+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-04-11T10:46:49.155+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-04-18T08:52:18.556+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-04-21T08:57:03.817+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790321368781.txt"
+}

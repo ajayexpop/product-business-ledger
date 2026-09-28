@@ -1,0 +1,1202 @@
+[
+ {
+  "k": "EP-20149",
+  "summary": "Floor plan| \"No results\" info for quick filters ",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "Interactive floor plans",
+  "text": "Added a 'no results' message for floor plan quick filters. Empty quick filter results are explained as for normal filters."
+ },
+ {
+  "k": "EP-20222",
+  "summary": "Floorplan| Quick filters \"Visited\" - need add the drawer with names of visited stands ( same logic as for any other filter) ",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "Interactive floor plans",
+  "text": "Added a drawer listing visited stands for the floor plan 'Visited' quick filter, pinning a stand on click. Visitors can see and jump to stands they visited."
+ },
+ {
+  "k": "EP-20247",
+  "summary": "Floor plan|It possible open hidden hall from exhibitors card ",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "Interactive floor plans",
+  "text": "Stopped exhibitor cards opening stands inside a hidden floor plan hall. Stands in hidden halls stay hidden from exhibitor cards."
+ },
+ {
+  "k": "EP-21506",
+  "summary": "Check cypress tests for floorpan",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Fixed floor plan Cypress tests failing to create a WebGL context. Floor plan end-to-end tests run."
+ },
+ {
+  "k": "EP-23737",
+  "summary": "add scans",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Restored missing bulk badge scans for an event from logged request data. The missing lead scans were added."
+ },
+ {
+  "k": "EP-29235",
+  "summary": "Print badge position fix",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the print badge position for participants with more than one role. Print badge displays correctly for multi-role users."
+ },
+ {
+  "k": "EP-32538",
+  "summary": "Portal. Floorplan. HeaderMini issue on mobile resolution ",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the floor plan mini header on mobile: no horizontal scroll and a fitting sign-in button. The floor plan header fits small screens."
+ },
+ {
+  "k": "EP-36287",
+  "summary": "Order of Exhibitor filters in Display filters should be mirrored on Floorplan page",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "Floor plan filters",
+  "text": "Added a Floorplan tab to Display Filters so admins can order, rename, toggle and restrict floor plan filters. Floor plan filters are configured like list filters."
+ },
+ {
+  "k": "EP-37238",
+  "summary": "Investigate and Test Batch Print Badges Functionality with Old Report Functionality",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Investigated missing badges in batch print files since the new reports, using a branch with the old report code. The cause of missing batch badges was investigated."
+ },
+ {
+  "k": "EP-37275",
+  "summary": "Lessen the amount of code that we have on the front side in batch print file ",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed unused code and a library from the batch print badge file without changing its output. Badge printing is lighter and looks the same."
+ },
+ {
+  "k": "EP-37362",
+  "summary": "Refactor: App Query stands optimization",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Optimised the app API to fetch stands, media and images for all exhibitors in single queries instead of one per exhibitor. App exhibitor data loads with a few batched queries."
+ },
+ {
+  "k": "EP-38711",
+  "summary": "Change floor plan mini header on the standart one from the websitebuilder",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "Interactive floor plans",
+  "text": "Replaced the floor plan's custom mini header with the standard website builder header on all devices. The floor plan page uses the site's standard header."
+ },
+ {
+  "k": "EP-40024",
+  "summary": "Show placeholder on the badges",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Showed a placeholder photo on every badge where the user has no profile picture. All badges without a photo show the same placeholder."
+ },
+ {
+  "k": "EP-40327",
+  "summary": "Floorplan integrations refactor",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored ExpoFP and InVisual floor plan code into one place, removed MapsPeople, fixed types and added functional tests. Floor plan integrations are organised and tested."
+ },
+ {
+  "k": "EP-40616",
+  "summary": "[admin panel] Add limitation to Zone filter in Check-in List ",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "Check-in list filters",
+  "text": "Limited the zone filter options in check-in lists and analytics. Check-in filters stay responsive."
+ },
+ {
+  "k": "EP-41901",
+  "summary": "Badges | Redesign of templating and output",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "Badge builder",
+  "text": "Reworked all badge templates so badges look the same everywhere they're printed or previewed. Badges print consistently from admin, builder preview and profiles."
+ },
+ {
+  "k": "EP-43366",
+  "summary": "Fix \"Cannot read properties of undefined (reading 'floorplan')\"",
+  "epic": null,
+  "theme": "onsite",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed a floor plan page error reading undefined data. The floor plan page loads."
+ },
+ {
+  "k": "EP-44186",
+  "summary": "Bi-directional Sync Between Favorites and Floorplan Bookmarks",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "Stand bookmarking",
+  "text": "Synced favourite exhibitors and bookmarked stands on the ExpoFP floor plan in both directions. Favouriting an exhibitor bookmarks its stand and vice versa."
+ },
+ {
+  "k": "EP-44749",
+  "summary": "Add a new simplified QR Code type to the admin panel: \"Simplified Participant QR\"",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "Simplified participant QR codes",
+  "text": "Added a Simplified Participant QR type that encodes only the attendee ID. Admins can issue lighter QR codes."
+ },
+ {
+  "k": "EP-45052",
+  "summary": "Full Offline Support - ExpoFP",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "ExpoFP offline floor plans",
+  "text": "Added full offline support for ExpoFP floor plans in the app using ExpoFP's offline archives. Attendees can use floor plans without a connection."
+ },
+ {
+  "k": "EP-45778",
+  "summary": "OCR Badge Scanning",
+  "epic": null,
+  "theme": "onsite",
+  "include": true,
+  "exclude": null,
+  "feature": "OCR badge scanning",
+  "text": "Added OCR badge scanning in the app: reading name, company and job title from a badge format, matching locally then on the server, with an OCR-only event setting. Exhibitors capture leads by scanning printed badge text."
+ },
+ {
+  "k": "EP-3954",
+  "summary": "Full refactor of filters",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored the frontend filters so queries live in the components that use them, not in the filters component. Filter queries run directly in their components, removing duplication and conflicts."
+ },
+ {
+  "k": "EP-3956",
+  "summary": "Total design re-check",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Re-checked the design of profiles and profile editing, meetings, groups and RFP pages. Profile, meeting, group and RFP screens were reviewed against the design."
+ },
+ {
+  "k": "EP-3957",
+  "summary": "Rewrite components to TypeScript",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote platform frontend components in TypeScript as they were updated. Updated components are typed in TypeScript."
+ },
+ {
+  "k": "EP-3958",
+  "summary": "Write unit tests to all new components",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Added unit tests for all new frontend components, with the floor plan as a priority. New components, including the floor plan, are covered by unit tests."
+ },
+ {
+  "k": "EP-3960",
+  "summary": "Upgrade Material to Mui5",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the frontend from the old Material UI library to MUI 5. The frontend uses MUI 5 instead of two parallel UI libraries."
+ },
+ {
+  "k": "EP-3961",
+  "summary": "Check query type and do not change type when equal",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Added a check that only reloads page data when query parameters have actually changed. Pages skip reloading when their query parameters are unchanged."
+ },
+ {
+  "k": "EP-3964",
+  "summary": "Rename in exhibitors table deprecated fields",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Marked old hall, stand, image and video fields in the exhibitors table as deprecated and removed their code usages. Exhibitors no longer use the deprecated fields; code reads stands and exhibitor events instead."
+ },
+ {
+  "k": "EP-4272",
+  "summary": "Delete sub_id field from table exhibitor_categories and ExhibitorCategories model",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed the unused sub_id field from exhibitor categories and every place in the code that referenced it. Exhibitor categories no longer carry the sub_id field."
+ },
+ {
+  "k": "EP-4585",
+  "summary": "Сache improvements (delete, multiple get)",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Sent cache delete requests to the master host and investigated combining model and multi-key caching. Cache deletions go to the master host."
+ },
+ {
+  "k": "EP-5156",
+  "summary": "Add PDF-files validation and delete invalid PDF-files",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added validation that uploaded marketing content PDFs are not broken, and bulk-removed broken PDFs across the platform. Invalid PDFs are rejected on upload and existing broken files were cleaned up."
+ },
+ {
+  "k": "EP-5606",
+  "summary": "Refactoring buildPermissionRelationsForbiddenQueries method",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Replaced the model method that built forbidden permission-relation queries with the PermissionRelationsService. Permission relation checks go through a single service."
+ },
+ {
+  "k": "EP-10461",
+  "summary": "Refactoring of AbstractIndexQueryBuilder",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored the search index query builder towards a fluent interface for equals, contains, starts/ends-with and fuzzy matching. Index queries are built through a composable builder."
+ },
+ {
+  "k": "EP-11598",
+  "summary": "Code improvement",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote the meeting setup component to use a reducer. Meeting setup state is managed with useReducer."
+ },
+ {
+  "k": "EP-11641",
+  "summary": "Create root enums for not-root enums",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Created root-level enums for enums that lived outside the shared Enums folder. Enums are centralised, ready to be split into domain folders later."
+ },
+ {
+  "k": "EP-11972",
+  "summary": "OTO button works incorrectly in admin panel",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed one-time password handling in the admin panel: paste support, clearer wording, code display with copy, OTP buttons on exhibitor and participant pages, a Resend button. Admins can paste, copy and resend one-time passwords, with OTP buttons next to Customer service on profile pages."
+ },
+ {
+  "k": "EP-12169",
+  "summary": "redis maintenance config changes ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Reduced the production Redis cluster from xlarge to large nodes. Production Redis runs on smaller nodes."
+ },
+ {
+  "k": "EP-12541",
+  "summary": "OTP Android: allow entering password code by copypasting",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "One-time password login",
+  "text": "Allowed pasting the one-time password into the Android app's OTP field. Android users can paste the full OTP code."
+ },
+ {
+  "k": "EP-12623",
+  "summary": "Hide Password reset window when OTP is turned on",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Passwordless login",
+  "text": "Hid the password reset popup on first login when one-time password login is on. OTP events no longer prompt users to change a password."
+ },
+ {
+  "k": "EP-13334",
+  "summary": "Need to change the type for the field custom_fields if data is missing",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Made the exhibitor member info endpoints always return custom_fields as an object, even when empty. custom_fields has a consistent type in the member info API."
+ },
+ {
+  "k": "EP-13513",
+  "summary": "Optimization of sync with elastic after event clone",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Delayed search index syncing after an event clone until the clone has finished. Cloned events sync to search only once the clone is complete."
+ },
+ {
+  "k": "EP-13739",
+  "summary": "Define event is in session in all possiable entripoints to hand sync data on elasticsearch",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Detected at every entry point whether an event is in session, to handle search data syncing. Search syncing knows the event context wherever it starts."
+ },
+ {
+  "k": "EP-13903",
+  "summary": "Improvement of the information pop-up  ",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Changed the required-fields popup on profile editing to say missing fields may be on another registration tab. The popup points users to other registration tabs."
+ },
+ {
+  "k": "EP-14377",
+  "summary": "Consider using update_field for dictionaries",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Evaluated incremental updates for ClickHouse dictionaries sourced from PostgreSQL, starting with the most expensive ones. Expensive dictionaries can refresh incrementally."
+ },
+ {
+  "k": "EP-14459",
+  "summary": "Return all error messages in /api/v1/exhibitorCategories/saveSettings",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Returned all validation errors from the exhibitor category settings API and updated its documentation. The API reports every error in one response."
+ },
+ {
+  "k": "EP-14461",
+  "summary": "Refactor frontend api v1 ProfileController::getEventsForExport method",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored profile schedule export to read directly from the schedule service. Schedule export code is simpler and more efficient."
+ },
+ {
+  "k": "EP-14462",
+  "summary": "Add Translation Cache Clearing Functionality to clearInstanceCached Methods",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added translation cache clearing to the instance cache clearing methods. Clearing an object's cache also clears its translations."
+ },
+ {
+  "k": "EP-14514",
+  "summary": "rewrite ValidateTeamMemberModal to reactHookForm",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Rewrote the team member validation modal from Formik to React Hook Form. The modal uses React Hook Form."
+ },
+ {
+  "k": "EP-14534",
+  "summary": "/admin/appbuilder/content/undefined | /var/www/expo_backend/public/admin.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Handled invalid input on the app builder content page instead of throwing a database error. Bad IDs on the app builder content page no longer cause an exception."
+ },
+ {
+  "k": "EP-14543",
+  "summary": "/api/v1/exhibitors/content | universal/models/Media.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Handled unreadable image formats when exhibitors upload content. Exhibitor content uploads cope with undecodable images."
+ },
+ {
+  "k": "EP-14544",
+  "summary": "/api/v1/profile/profileSave | frontend/app/models/ExpoBackendObject.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Resolved a database deadlock when saving profiles. Profile saves no longer deadlock on account attributes."
+ },
+ {
+  "k": "EP-14545",
+  "summary": "/api/v1/search/sessions | frontend/app/models/TCachingTrait.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Fixed an ambiguous column error in session search filtered by category. Session search by category runs without SQL errors."
+ },
+ {
+  "k": "EP-14546",
+  "summary": "/api/v1/upload/file | /var/www/universal/models/Media.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Handled file upload failures when thumbnails can't be generated. File uploads cope with thumbnail generation failures."
+ },
+ {
+  "k": "EP-14548",
+  "summary": "/badge | universal/ValueObject/AbstractInt.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Fixed badge requests that passed a zero ID where a positive value is required. The badge endpoint handles missing IDs."
+ },
+ {
+  "k": "EP-14550",
+  "summary": "/exhibitors/product/* | frontend/public/index.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Fixed the product page route that was called with a missing argument. Product pages open without errors."
+ },
+ {
+  "k": "EP-14555",
+  "summary": "/index/referal/* | frontend/public/index.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Fixed referral links that failed when the referral record wasn't found. Invalid referral links no longer crash the page."
+ },
+ {
+  "k": "EP-14556",
+  "summary": "/index/resetPassword | frontend/public/index.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed password reset failing when the account couldn't be loaded. Password reset handles missing accounts."
+ },
+ {
+  "k": "EP-14558",
+  "summary": "/profile/booking | frontend/public/index.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the bookings page failing when VAT country data was missing. The bookings page loads without VAT country data."
+ },
+ {
+  "k": "EP-14559",
+  "summary": "/profile/show/* | frontend/public/index.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Fixed profile pages failing when the viewer's account couldn't be loaded. Profile pages open without errors."
+ },
+ {
+  "k": "EP-14785",
+  "summary": "Return 403 instead of 500 error In oauth controller requests",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Returned 403 or 404 instead of 500 for unknown actions on the oauth and cron controllers. Unknown actions get an access denied or not found response."
+ },
+ {
+  "k": "EP-15164",
+  "summary": "Add event_id to DI for generateProfileImage",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Passed the event ID into profile image generation so search syncing works. Generated profile images sync to search."
+ },
+ {
+  "k": "EP-15165",
+  "summary": "Add event_id to DI for the top menu in admin panel",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Passed the event ID for admin database and tag actions so their changes sync to search. Admin database changes reach search."
+ },
+ {
+  "k": "EP-15372",
+  "summary": "Change extends in model SampleEvents",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Changed the SampleEvents model to extend the Expo universal object base. SampleEvents uses the correct base model."
+ },
+ {
+  "k": "EP-15799",
+  "summary": "Remove dependencies on 'category_id' attribute in account_attr table",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed dependencies on the category_id account attribute across the code and stopped creating it. Accounts no longer carry a duplicate category attribute."
+ },
+ {
+  "k": "EP-15801",
+  "summary": "Remove ExpoModerator and ExpoSpeaker models from the frontend and backend",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed the unused moderator and speaker models, their dependencies and tables. Old speaker and moderator models are gone."
+ },
+ {
+  "k": "EP-15954",
+  "summary": "Unify AdminLogsContext and LogInfoContext",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Unified two admin log contexts to remove duplicated code. Admin log handling has one shared context."
+ },
+ {
+  "k": "EP-15977",
+  "summary": "Transfere properties video_url embed and video_type from Exhibitor model to exhbitor_events.exhibitor_attributes",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved exhibitor video URL, embed and video type fields into per-event exhibitor attributes, with a data migration. Exhibitor video settings are stored per event."
+ },
+ {
+  "k": "EP-15978",
+  "summary": "Reffactorring using exhibitors.category_id attribute to exhibitor_events.category_id",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Switched all code from the exhibitor-level category_id to the per-event exhibitor category and deprecated the old field. Exhibitor categories are read per event."
+ },
+ {
+  "k": "EP-15981",
+  "summary": "Reffactorring hall and stand fields using from exhibitors table",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Switched all hall and stand usage from exhibitor fields to the stands table and deprecated the old fields. Halls and stands come from the stands relation."
+ },
+ {
+  "k": "EP-15986",
+  "summary": "Delete account unused information from account_attr and clean up code",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Deleted unused account attributes such as age and birth date and removed their code references. Accounts no longer store the unused attributes."
+ },
+ {
+  "k": "EP-16002",
+  "summary": "Optimize checkDeactivationUserAndRunDeletingEvents method in AccountEventsTrait",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Stopped the deactivation check in account events from running repeatedly on each save. The check runs once per request."
+ },
+ {
+  "k": "EP-16159",
+  "summary": "Items to do for admin panel",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Completed a list of missed admin panel items from a review deck. The outstanding admin panel items were addressed."
+ },
+ {
+  "k": "EP-16308",
+  "summary": "Send logs to Dynamo about tasks for sync  Elastic",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Logged every search sync task to DynamoDB, including the request URL. Search sync tasks are traceable in the logs."
+ },
+ {
+  "k": "EP-16475",
+  "summary": "Delete deprecated controllers from backend/app/controllers",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Deleted deprecated backend controllers and the model methods only they used. The backend drops unused controllers."
+ },
+ {
+  "k": "EP-16539",
+  "summary": "Create PermissionService",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Created a permission service that checks meeting and message settings for exhibitors, participants, buyers, team members and products. Interaction permissions go through one service."
+ },
+ {
+  "k": "EP-16619",
+  "summary": "Refactoring of checking the \"Networking Opt-in\" setting in /api/v1/getInteractions endpoint",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored the networking opt-in check in the interactions API to use the existing GDPR method. The interactions API uses one opt-in check."
+ },
+ {
+  "k": "EP-16638",
+  "summary": "Improve relations between Module Management and Permission Matrix for meetings and messages",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Permission matrix",
+  "text": "Moved meeting and message permissions from module management into the permission matrix, with a general Messages toggle. Organisers control meetings and messages in one place, with the matrix disabled when a module is off."
+ },
+ {
+  "k": "EP-16764",
+  "summary": "Add fields with errors highlighting in exhibitors categories settings",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin form validation",
+  "text": "Highlighted fields with errors in exhibitor category settings using the errors returned by the API. Admins see which category settings fields are missing."
+ },
+ {
+  "k": "EP-16853",
+  "summary": " Remove Unused Requests and Methods in AppRouter.php",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed commented-out routes from the backend router and the controller methods behind them. The router carries only live routes."
+ },
+ {
+  "k": "EP-17299",
+  "summary": "Change sync of the whole event to bulk of Elasticsearch",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Switched whole-event search syncing to the bulk API. Full event syncs to search run in bulk."
+ },
+ {
+  "k": "EP-17384",
+  "summary": "Marketplace page requests optimization: re-organize request for Exhibitors in list-view.",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Split the exhibitor search endpoint so categories and products load only in the marketplace list view. Marketplace exhibitor views load faster; list view requests full data."
+ },
+ {
+  "k": "EP-17425",
+  "summary": "Refactoring: Move Old Frontend Redirects to ExpoFrontendController and Cleanup",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Consolidated old-frontend redirects to the new frontend into one controller. Redirects to the new frontend live in one place."
+ },
+ {
+  "k": "EP-17436",
+  "summary": "Refactoring: Clean-up commented code and unused dependencies in SpeakersController",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed commented-out code, unused dependencies and templates from the old speakers controller. The speakers controller carries only live code."
+ },
+ {
+  "k": "EP-17438",
+  "summary": "Refactoring: clean-up commented code and unused dependencies in ProfileController",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed commented-out code, unused dependencies and templates from the old profile controller. The profile controller carries only live code."
+ },
+ {
+  "k": "EP-17440",
+  "summary": "Refactoring: clean-up commented code and unused dependencies in SearchController",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed commented-out code, unused dependencies and templates from the old search controller. The search controller carries only live code."
+ },
+ {
+  "k": "EP-17441",
+  "summary": "Refactoring: clean-up commented code and unused dependencies in ProductsController",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed commented-out code, unused dependencies and templates from the old products controller. The products controller carries only live code."
+ },
+ {
+  "k": "EP-17446",
+  "summary": "Refactoring: clean-up commented code and unused dependencies in ExhibitorsController",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed commented-out code, unused dependencies and templates from the old exhibitors controller. The exhibitors controller carries only live code."
+ },
+ {
+  "k": "EP-17448",
+  "summary": "Refactoring: clean-up commented code and unused dependencies in DelegatesController",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed commented-out code, unused dependencies and templates from the old delegates controller. The delegates controller carries only live code."
+ },
+ {
+  "k": "EP-17449",
+  "summary": "Refactoring: clean-up commented code and unused dependencies in BrandsController",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed commented-out code, unused dependencies and templates from the old brands controller. The brands controller carries only live code."
+ },
+ {
+  "k": "EP-17637",
+  "summary": "Add loaders to listing pages",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Loading states on listing pages",
+  "text": "Added loaders to listing pages that had none, such as marketplace, sessions, delegates, events and exhibitor lists. Listing pages show a loader while data loads."
+ },
+ {
+  "k": "EP-17763",
+  "summary": "Remove \"Use Custom Edit Profile\" setting",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Removed the 'Use Custom Edit Profile' setting, keeping the custom edit profile always on. All events use the custom edit profile."
+ },
+ {
+  "k": "EP-17766",
+  "summary": "Refactoring: optimization User Deactivation Task - deactivationEvents action",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Stopped queuing the deactivation events task for newly created users. The cron queue skips new users."
+ },
+ {
+  "k": "EP-17769",
+  "summary": "Refactoring: delete appointment_notifications and appointments table",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Deleted the old appointments and appointment notification tables and all code using them. Legacy appointment tables are gone."
+ },
+ {
+  "k": "EP-17788",
+  "summary": "Refactoring: Delete Webinar tables and models",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Deleted the old webinar tables and models. Legacy webinar data structures are gone."
+ },
+ {
+  "k": "EP-17814",
+  "summary": "Refactoring: Clean-up commented code and unused dependencies in NewsController and EventsController",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed commented-out code, unused dependencies and templates from the old news and events controllers. The news and events controllers carry only live code."
+ },
+ {
+  "k": "EP-17879",
+  "summary": "Admin logs. Add new admin panel actions in admin logs",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Admin action log",
+  "text": "Added new admin panel actions to the admin logs. Admin logs cover the new admin panel."
+ },
+ {
+  "k": "EP-17898",
+  "summary": "Check and fix calendar with addition dates in the DateSelectCard",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the date selector calendar to mark days with meetings or sessions on schedule pages. Schedule calendars mark days that have items."
+ },
+ {
+  "k": "EP-17956",
+  "summary": "Refactoring: Delete unused BusinessMatching models and tables",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Deleted unused business matching tables and models. Legacy business matching data structures are gone."
+ },
+ {
+  "k": "EP-17961",
+  "summary": "Refactoring: Delete unused RoundTables models and tables",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Deleted the unused legacy round table tables and models. Old round table structures are gone."
+ },
+ {
+  "k": "EP-18015",
+  "summary": "Behaviour for the guest (unloginned user)",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Applied permission relations, the Appointments module and My Favourites module settings to guests who aren't logged in. Guests only see meeting and favourite buttons the organiser has enabled."
+ },
+ {
+  "k": "EP-18020",
+  "summary": "add local-ssl-proxy to the project",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Added a local SSL proxy to the frontend project. Developers can run the frontend over HTTPS locally."
+ },
+ {
+  "k": "EP-18078",
+  "summary": "Storybook build error (react-hook-form dependencies)",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Changed the react-hook-form version to fix the Storybook build. Storybook builds again."
+ },
+ {
+  "k": "EP-18121",
+  "summary": "\"Resend activation link\" for OTP",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Inactive account login messages",
+  "text": "Added 'Resend activation link' to the one-time password flow for accounts that aren't activated. Unactivated users on OTP events can resend their activation email."
+ },
+ {
+  "k": "EP-18162",
+  "summary": "Fix failing tests",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Fixed failing frontend tests. The listed component tests pass."
+ },
+ {
+  "k": "EP-18280",
+  "summary": "Changes to the events for Arab Health",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Adjusted a community event's navigation and labels, renamed exhibitors to suppliers, and trimmed the burger menu, plus Android text colour. The community event shows the requested navigation and wording."
+ },
+ {
+  "k": "EP-18427",
+  "summary": "Include additional indexes",
+  "epic": null,
+  "theme": "platform",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Added search indexes for participant company and job title and news author. Search finds participants by company and job title and news by author."
+ },
+ {
+  "k": "EP-18682",
+  "summary": "[ADMIN_UI] Add global API control for errors",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Added global API error handling in the admin UI. The admin UI handles API errors in one place."
+ },
+ {
+  "k": "EP-19557",
+  "summary": "CI/CD tasks",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Configured CI/CD pipelines for the Discord bot and fixed project scripts. The bot builds and deploys through a pipeline."
+ },
+ {
+  "k": "EP-19644",
+  "summary": "Relocate api-mobileapp.expoplatform.com TO https://api-mobileappmobileappmobileapp.expoplatform.net",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Relocated the mobile app API host to a new domain. The mobile API runs on the new host."
+ },
+ {
+  "k": "EP-20003",
+  "summary": "Fix for .some issue from error log",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed a frontend error on the profile edit page from an unsupported array call. Profile editing no longer throws that error."
+ },
+ {
+  "k": "EP-20195",
+  "summary": "Error while updating additional object",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed a search index script error when updating additional objects. Additional objects update in search without errors."
+ },
+ {
+  "k": "EP-21007",
+  "summary": "Transfer the functionality of /api/v1/index/getFilters to the FiltersService service",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved the filters endpoint's logic into a filters service reused by notifications. Filter data comes from one service."
+ },
+ {
+  "k": "EP-21191",
+  "summary": "Refactoring: combine models rfp and rfp requests to one universal models",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Combined the RFP and RFP request models into universal models. RFP data uses shared models."
+ },
+ {
+  "k": "EP-21192",
+  "summary": "Refactoring: combine models sample_events and schedule_times to one universal models",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Combined sample events and schedule times into universal models and deleted an unused scheduler model. Schedule time data uses shared models."
+ },
+ {
+  "k": "EP-21193",
+  "summary": "Refactoring: Delete model RegisterCategories and table",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Deleted the unused RegisterCategories model and table. The legacy register categories structure is gone."
+ },
+ {
+  "k": "EP-21280",
+  "summary": "[old admin panel] check item list in the menu",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Fixed a menu item disappearing when the module manager is opened in the old admin panel. The module manager menu item stays visible."
+ },
+ {
+  "k": "EP-21320",
+  "summary": "Change createPortal to Popper in the CustomTimePicker",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Switched the custom time picker dropdown from a portal to a popper. The time picker dropdown positions next to its field."
+ },
+ {
+  "k": "EP-21379",
+  "summary": "Old and new frontend, buttons with 'SignIn' role working wrong",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed header buttons with the Sign In role on both frontends so they act as login and hide for logged-in users. Sign In buttons behave correctly."
+ },
+ {
+  "k": "EP-21568",
+  "summary": "Deploy the fix of the symbols for custom filters",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Deployed the fix for special characters in custom filter values. Custom filters accept values like \"Cote d'Ivoire (Ivory Coast)\"."
+ },
+ {
+  "k": "EP-21583",
+  "summary": "duplicates at account info attribute",
+  "epic": null,
+  "theme": "platform",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Removed the causes of duplicate account attribute rows and cleaned existing duplicates. Each account attribute is stored once per event."
+ }
+]

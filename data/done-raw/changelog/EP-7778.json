@@ -1,0 +1,75 @@
+{
+ "k": "EP-7778",
+ "histories": 54,
+ "historiesRead": 54,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2022-09-23T14:23:53.967+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Romain Dejoie"
+  },
+  {
+   "at": "2022-10-17T13:54:45.015+0100",
+   "from": "Considering",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2022-10-27T09:20:16.776+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2022-10-27T09:26:53.082+0100",
+   "from": "In progress",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2022-10-27T19:56:00.658+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2022-11-14T13:25:04.684+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2022-11-14T14:49:08.847+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2022-12-06T15:12:17.885+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2022-12-06T15:12:24.651+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2022-12-09T12:41:52.969+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790313118538.txt"
+}

@@ -1,0 +1,224 @@
+[
+ {
+  "id": "mobile-language-wording-2023",
+  "theme": "mobile",
+  "q": "2023-Q2",
+  "title": "US English and wording updates",
+  "benefit": "Offer the app in US English and use clearer wording on public profiles.",
+  "detail": "The apps pick US English from the phone’s locale, with US spellings such as “Favorites”. The “Matchmaking information” section on public profiles is now called “Profile Information”, and the Android app’s network security settings were tightened.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-12277",
+   "EP-12279",
+   "EP-18158"
+  ]
+ },
+ {
+  "id": "mobile-android-redesign",
+  "theme": "mobile",
+  "q": "2023-Q3",
+  "title": "Redesigned Android lists and sessions",
+  "benefit": "Browse people, exhibitors, products, brands and sessions in a refreshed Android app design, matching iOS.",
+  "detail": "Delegate, buyer, exhibitor, product and brand lists, and session cards and pages, were redesigned, with a Live tag, prices and a book button for paid sessions, plus a new no-results screen. Icons across the app follow one consistent style and size.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-19631",
+   "EP-16391",
+   "EP-16392",
+   "EP-16393",
+   "EP-16394",
+   "EP-1130",
+   "EP-7197"
+  ]
+ },
+ {
+  "id": "mobile-arabic-multilingual",
+  "theme": "mobile",
+  "q": "2023-Q4",
+  "title": "Arabic app and multilingual pages",
+  "benefit": "Offer the mobile app in Arabic and open in-app pages in the user’s app language.",
+  "detail": "The mobile app was translated into Arabic. Edit profile, floor plan, basket, exhibitor events and delegates pages open in the app language when the event supports it, otherwise in English.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-20409",
+   "EP-23090"
+  ]
+ },
+ {
+  "id": "mobile-in-app-updates",
+  "theme": "mobile",
+  "q": "2024-Q1",
+  "title": "In-app updates",
+  "benefit": "Prompt attendees to update the app when a newer version is available.",
+  "detail": "Organisers enable in-app updates in the app builder and choose required or optional update prompts, which the apps show when a new version is released.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-17855"
+  ]
+ },
+ {
+  "id": "mobile-app-behaviour-2024",
+  "theme": "mobile",
+  "q": "2024-Q3",
+  "title": "App behaviour improvements",
+  "benefit": "Keep attendees on a valid event and make Android sections easier to use.",
+  "detail": "On launch the app checks the user’s event still exists; if not, the user is logged out and shown the event selection or login screen. Collapsing sections in the Android app behaves more naturally.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-31013",
+   "EP-34002"
+  ]
+ },
+ {
+  "id": "mobile-app-builder-options",
+  "theme": "mobile",
+  "q": "2024-Q4",
+  "title": "App builder options",
+  "benefit": "Tailor app content by login status, font and links from the app builder.",
+  "detail": "Custom block pages can be shown only to logged-out users; custom blocks can link to the app sign-in page and to other app pages; the Gilroy font can be chosen for headings and text; forms are shown in an embedded frame; and the Download all button can be hidden on custom documents blocks.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-32270",
+   "EP-27462",
+   "EP-32359",
+   "EP-32358",
+   "EP-35841",
+   "EP-35827"
+  ]
+ },
+ {
+  "id": "mobile-tiered-menus",
+  "theme": "mobile",
+  "q": "2024-Q4",
+  "title": "Tiered app menus",
+  "benefit": "Organise the app menu into expandable sections with sub-items.",
+  "detail": "Main menu items show first, and their sub-items appear indented when the parent is expanded, with the parent staying visible.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-27309"
+  ]
+ },
+ {
+  "id": "mobile-event-selector-2025",
+  "theme": "mobile",
+  "q": "2025-Q1",
+  "title": "Event selector improvements",
+  "benefit": "Help attendees pick the right event in the app.",
+  "detail": "The Android event selection and login screens show each event’s country and city and order current and past events by event time. Favourite icons on iOS were updated to sharper versions.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-38532",
+   "EP-33551",
+   "EP-39633"
+  ]
+ },
+ {
+  "id": "mobile-resync-builder-2025",
+  "theme": "mobile",
+  "q": "2025-Q2",
+  "title": "Manual data re-sync",
+  "benefit": "Let attendees refresh the app’s event data themselves from Settings.",
+  "detail": "A Re-sync button on the Settings page fetches the latest data, up to once an hour; logged-in users also find Cancel Registration and Delete My Account there. Text blocks were removed from the app builder.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-41330",
+   "EP-42436"
+  ]
+ },
+ {
+  "id": "mobile-scrolling-location-text",
+  "theme": "mobile",
+  "q": "2025-Q3",
+  "title": "Scrolling location text",
+  "benefit": "Read long location names in full on session and networking detail pages in the app.",
+  "detail": "Location buttons on session, exhibitor event, round table and speed networking pages scroll long text continuously and stay static when it fits.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-44837"
+  ]
+ },
+ {
+  "id": "mobile-global-resync-no-logout",
+  "theme": "mobile",
+  "q": "2026-Q1",
+  "title": "Event data reset without logout",
+  "benefit": "Reset event data in the app mid-event without logging attendees out.",
+  "detail": "The admin panel’s global resync performs a full reset of app data without logging users out, matching the resync in the app’s settings.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-49211"
+  ]
+ },
+ {
+  "id": "mobile-usability-2026",
+  "theme": "mobile",
+  "q": "2026-Q1",
+  "title": "App usability improvements",
+  "benefit": "Open sessions from links, and get clearer feedback on profiles and tickets.",
+  "detail": "Deep links open sessions directly in the app. The About me section on delegate profiles on iOS was updated, and the Tickets page shows a loading spinner while updating on iOS and Android.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-44893",
+   "EP-47476",
+   "EP-49024"
+  ]
+ },
+ {
+  "id": "mobile-offline-favourites",
+  "theme": "mobile",
+  "q": "2026-Q2",
+  "title": "Offline feedback for favourites",
+  "benefit": "Let users know when a favourite cannot be saved because they are offline.",
+  "detail": "Tapping Favourite without a connection shows the app’s standard connection-lost message across lists, profiles and recommendations on Android and iOS.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-52358",
+   "EP-52359"
+  ]
+ },
+ {
+  "id": "mobile-branding-typography",
+  "theme": "mobile",
+  "q": "2026-Q3",
+  "title": "App branding and typography",
+  "benefit": "Apply a custom typeface consistently across every Android screen.",
+  "detail": "A custom font set in the app builder now covers all remaining Android screens for a consistent look, and the app shows ExpoPlatform branding.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-56372",
+   "EP-54106"
+  ]
+ }
+]

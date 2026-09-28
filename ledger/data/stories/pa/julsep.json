@@ -1,0 +1,3509 @@
+[
+ {
+  "k": "EP-54991",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App (+Floor Plan); Android-only offline ExpoFP floor plan fix → Mobile-only rule; feature owner Floor Plan",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10594]",
+  "confidence": "High",
+  "components": [
+   "Floor Plan",
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-55020",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; Exhibitor Events floor plan location",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8601]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-55021",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; default view for Sessions list",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8496]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-55029",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "component Reporting; Embedded Analytics dashboards",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :1910]",
+  "confidence": "High",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-55032",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "epic 'AI Agenda Builder (tools)' → Personal Schedule (agenda); DS tooling analysis",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8522]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55040",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; AI notetaker global setting in App Builder",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10454]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-55082",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "summary: new Event Setup 'Trusted embed domains' security setting (component Authentification not in table); benefit is embedded authenticated Sessions (Sessions & Speakers equally plausible); chose the surface built (Per-Event Settings)",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1200]",
+  "confidence": "Low",
+  "components": [
+   "Authentification"
+  ]
+ },
+ {
+  "k": "EP-55105",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "design-system Radio style unification; serves no single product",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55109",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: frontend Global Search v2 `q` param (news, participants, sessions); KB documents frontend search only as Marketplace Search and Filters (admin Global Search is admin-only); multi-product search",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11925]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-55143",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "summary: [Cloning] clone removal → Event Cloning",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1190]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55151",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "epic 'AI Agenda Builder (tools)' → Personal Schedule (agenda); DS↔Visitors contract RFC",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8522]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55152",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "epic 'AI Agenda Builder (tools)' → Personal Schedule (agenda); category data completeness audit",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8522]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55186",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: exhibitor lead-questions modal (LeadCustomModal) styling → Lead Question Builder for Exhibitors",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12639]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55190",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "flaky admin-ui unit tests; test infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55199",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "summary: CustomHeader search on mobile web → Header and Navbar; header global search also plausible under Exhibitor Marketplace search",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5864]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-55240",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Open API (not in table); epic 'Migration of endpoints (Public API v3)' → Public API v3 Migration (product images)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15980]",
+  "confidence": "High",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-55241",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Open API (not in table); epic 'Migration of endpoints (Public API v3)' → Public API v3 Migration (product images)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15980]",
+  "confidence": "High",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-55242",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Open API (not in table); epic 'Migration of endpoints (Public API v3)' → Public API v3 Migration (product video)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15980]",
+  "confidence": "High",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-55243",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Open API (not in table); epic 'Migration of endpoints (Public API v3)' → Public API v3 Migration (product video)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15980]",
+  "confidence": "High",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-55244",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "epic 'AI Agenda Builder (tools)' → Personal Schedule (agenda); recommender likes/dislikes spike",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8522]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55246",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Open API (not in table); epic 'Migration of endpoints (Public API v3)' → Public API v3 Migration (media module)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15980]",
+  "confidence": "High",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-55250",
+  "product": "Online Registration",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Online Registration; New UI Registration toggle",
+  "kbRef": "[MASTER Online Registration §4 Feature Inventory :4940]",
+  "confidence": "High",
+  "components": [
+   "Online Registration"
+  ]
+ },
+ {
+  "k": "EP-55251",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "component Admin Interface; epic 'Integrations page' (Integrations HUB :15959 is the feature served)",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1200]",
+  "confidence": "High",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-55271",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: exhibitor events display fixes → Exhibitor Events (sibling stories carry Session & Speaker Management; Meetings §4.7 Exhibitor Events also documents it)",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8601]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55275",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "Data Protocol 2.0 Kinesis dual-write spike (component Data Collection Pipelines not in table); data infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": [
+   "Data Collection Pipelines"
+  ]
+ },
+ {
+  "k": "EP-55287",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "epic",
+  "evidence": "epic 'Automated Event Reporting Dashboards (Embeddable.com)'; Informa analytics display fixes",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :1910]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55295",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "component AI Search (not in table); epic 'Search Anatomy' → frontend Global Search; KB frontend search = Marketplace Search and Filters; multi-product search",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11925]",
+  "confidence": "Low",
+  "components": [
+   "AI Search"
+  ]
+ },
+ {
+  "k": "EP-55331",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "API SLO review (latency of Marketplace endpoints); performance/observability work, no documented feature",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55358",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Payments; skip payment form on £0 basket",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4307]",
+  "confidence": "High",
+  "components": [
+   "Payments"
+  ]
+ },
+ {
+  "k": "EP-55397",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "design-system Checkbox rebuild",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55425",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "unit tests on Node 22.4+; test infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55432",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; OTP login settings",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10500]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-55434",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "epic 'Improve Speed Networking Service' → Speed Networking (also Networking & Interactions §4.13); Claude skill for exclusion data",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7577]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55443",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: exhibitor-events selectors refactor → Exhibitor Events",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8601]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55463",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "Bitbucket PR review tooling",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55466",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; custom track colours → Session Tracks",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8472]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-55467",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Integration HUB - Integrations EPIC' → Integration HUB (HubSpot inbound)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-55489",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "component Round Tables (not in table); epic 'Roundtable Allocation & Admin' → Round Tables; onboarding spike",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7649]",
+  "confidence": "Medium",
+  "components": [
+   "Round Tables"
+  ]
+ },
+ {
+  "k": "EP-55533",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Open API (not in table); epic 'Migration of endpoints (Public API v3)' → Public API v3 Migration (product media)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15980]",
+  "confidence": "High",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-55534",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Open API (not in table); epic 'Migration of endpoints (Public API v3)' → Public API v3 Migration (product media)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15980]",
+  "confidence": "High",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-55551",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "Data Protocol 2.0 pipeline onboarding spike; data infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55558",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; isScheduled flag in session calendar → Personal Schedule",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8522]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-55560",
+  "product": "Hosted Buyer Management",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: hosted-buyer agent displayName lookups → Agents",
+  "kbRef": "[MASTER Hosted Buyer Management §4 Feature Inventory :14895]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55571",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; mobile Exhibitor Events calendar view (feature owner Sessions & Speakers)",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10575]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-55625",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: MultiStandLocation + sponsors on ExhibitorCard → Exhibitor List Page",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11858]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55631",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "epic 'AI Agenda Builder (tools)' → Personal Schedule (agenda); EDA for recommender",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8522]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55642",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "component Admin Interface; exhibitor import carrying brands → Data Import",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1299]",
+  "confidence": "High",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-55645",
+  "product": "Profile",
+  "domain": "Identity & Community",
+  "basis": "component",
+  "evidence": "components Admin Interface + Profile map to two products; region sub-filter under Country for exhibitor/participant listings; chose Profile (the country/region profile data), Admin / Platform Core equally plausible",
+  "kbRef": "[MASTER Product Ecosystem Map §12 Component→Product :483]",
+  "confidence": "Low",
+  "components": [
+   "Admin Interface",
+   "Profile"
+  ]
+ },
+ {
+  "k": "EP-55706",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "component AI Search (not in table); epic 'Search Anatomy' → frontend Global Search UI (IMEX feedback); KB frontend search = Marketplace Search and Filters",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11925]",
+  "confidence": "Low",
+  "components": [
+   "AI Search"
+  ]
+ },
+ {
+  "k": "EP-55732",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "summary: onboarding into Ticketing → Ticketing Settings and Administration",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4319]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55750",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "design-system IconModal fix",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55755",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: profile products add/edit form guard → Product Form",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11968]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55778",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "epic 'Switch AI Search for Marketplace' → Search and Filters",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11925]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55787",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Payments; Account ID search on Transaction Dashboard",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4400]",
+  "confidence": "High",
+  "components": [
+   "Payments"
+  ]
+ },
+ {
+  "k": "EP-55855",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Open API (not in table); epic 'Migration of endpoints (Public API v3)' → product upload endpoints",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15980]",
+  "confidence": "High",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-55859",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "Cache-Control header bug across all routes; platform infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55864",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "epic 'Search Anatomy' → Global Search backend refactor; KB frontend search = Marketplace Search and Filters",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11925]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-55897",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "design-system Switch normalisation",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55906",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "design-system Chip family rebuild",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55912",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "component Native Integration (not in table); AutoUpdate sync force/dry-run flags → Integration HUB",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-55944",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "component Reporting; registrant report paid columns → Exportable Reports (Online Registration §4.14 reports also relevant)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2620]",
+  "confidence": "High",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-55950",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "epic 'Search Anatomy' → Saved Search Queries service layer; KB frontend search = Marketplace Search and Filters",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11925]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-55954",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; schedule/profile placeholder images",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10566]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-56032",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "epic '[CLONING] New Modules Architecture conformance' → Event Cloning; module bootstrap",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1190]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56033",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "epic '[CLONING] New Modules Architecture conformance' → Event Cloning; layer boundaries",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1190]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56096",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "admin chatbot RAG endpoint environment config; no documented feature",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56106",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "epic 'Meeting program. Flexible generation settings' → Meeting Program; Speed Networking service assessment",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7603]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56131",
+  "product": "Networking & Interactions",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: opted-out privacy for favourites vs passive interactions → Favourites/interactions privacy; cross-cutting data privacy equally plausible",
+  "kbRef": "[MASTER Networking & Interactions §4 Feature Inventory :6648]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-56159",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "OpenAPI doc generator exit codes; build tooling",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56206",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "summary: [CLONING] stuck-task monitor → Event Cloning",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1190]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56240",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "fix failing frontend tests; test infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56245",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Native Integrations - Migrations' → Integration HUB (VISIT sync)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-56248",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "ESLint rule; code convention",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56249",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "file renaming; code convention",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56259",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: Timeline component for meeting-program and speed-networking timelines → Meeting Program",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7603]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56264",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "component Speed Networking (not in table); epic 'Meeting program. Flexible generation settings' → Meeting Program",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7603]",
+  "confidence": "Medium",
+  "components": [
+   "Speed Networking"
+  ]
+ },
+ {
+  "k": "EP-56282",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "flaky CI tests; test infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56284",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "Redux store barrel; code convention",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56301",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "component Open API (not in table); epic 'Migrate Integration-team tests…' → test-level re-levelling of product V3 test catalogue; test coverage (Integrations Public API v3 is the subject)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-56324",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "epic 'ExpoIntelligence — Exhibitor Insights Portal' (exhibitor-facing insights) → Leads Dashboard; siblings split Lead Intelligence/Organiser Analytics by component; data-presence audit",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-56351",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: Bulk Respond for exhibitor team pending meeting assignments → Meeting Confirmation/Cancellation",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7510]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56364",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "Media module contract refactor; architecture",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56372",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; FBM typography → General Color and Font Settings",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10481]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-56401",
+  "product": "Sponsorship",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: sponsor banner sizing → Banner Ads",
+  "kbRef": "[MASTER Sponsorship §4 Feature Inventory :14188]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56418",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "component AI Search (not in table); epic 'Search Anatomy' → back to Global Search results; KB frontend search = Marketplace Search and Filters",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11925]",
+  "confidence": "Low",
+  "components": [
+   "AI Search"
+  ]
+ },
+ {
+  "k": "EP-56575",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "summary: Ticketing step in registration → Ticket Purchasing (Online Registration also plausible)",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4344]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56628",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; badge scan of GDPR=0 team member",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10529]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-56738",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "frontend cache revalidation endpoint; infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56754",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "component Native Integration (not in table); Pull Integration Service DI refactor → Integration HUB",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "Medium",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-56823",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "epic",
+  "evidence": "epic 'Technical SEO improvements' → SEO Management; sitemap.xml/robots",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5900]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56836",
+  "product": "User Engagement",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "components Corporate website (not in table) + Marketing → User Engagement; story is SEO language switcher/hreflang under epic 'Technical SEO improvements' (Event Website SEO Management :5900) — component likely a marketing tag",
+  "kbRef": "[MASTER User Engagement §4 Feature Inventory :9738]",
+  "confidence": "Low",
+  "components": [
+   "Corporate website",
+   "Marketing"
+  ]
+ },
+ {
+  "k": "EP-56868",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "unit test relocation; test infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56869",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "listener priority; architecture",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56891",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "component Round Tables (not in table); epic 'Roundtable Allocation & Admin' → Round Tables waitlist",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7649]",
+  "confidence": "Medium",
+  "components": [
+   "Round Tables"
+  ]
+ },
+ {
+  "k": "EP-56908",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "epic 'DS infrastructure and monitoring'; ClickHouse load on Dev PG",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56917",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "portal-ui zod/react-hook-form upgrade; dependency upgrade",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56918",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "components Data Collection Pipelines (not in table) + Reporting → Organiser Analytics; ExpoIntelligence API stub (exhibitor-facing insights; Lead Intelligence siblings)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2058]",
+  "confidence": "Medium",
+  "components": [
+   "Data Collection Pipelines",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56919",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "components Lead Intelligence + Reporting; ExpoIntelligence 'Celebrate your wins' leads/meetings metrics → Leads Dashboard; chose exhibitor-facing product",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649]",
+  "confidence": "Medium",
+  "components": [
+   "Lead Intelligence",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56920",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "components Lead Intelligence + Reporting; ExpoIntelligence 'Your leads' → Leads Dashboard",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649]",
+  "confidence": "Medium",
+  "components": [
+   "Lead Intelligence",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56921",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "components Lead Intelligence + Reporting; ExpoIntelligence 'Buyer intent & products' → Leads Dashboard",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649]",
+  "confidence": "Medium",
+  "components": [
+   "Lead Intelligence",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56974",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "summary: V3 Logs page payload search → Public API v3 logs",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15980]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56994",
+  "product": "Online Registration",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Online Registration; remove Accompanying Person step",
+  "kbRef": "[MASTER Online Registration §4 Feature Inventory :4940]",
+  "confidence": "High",
+  "components": [
+   "Online Registration"
+  ]
+ },
+ {
+  "k": "EP-56995",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "component Reporting; Mobile App homepage click/impression report for Hyve → App Data / Mobile App Analytics",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2103]",
+  "confidence": "High",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-57014",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; multi-day session calendar view",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8496]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-57015",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; session cards in calendar view",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8496]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-57058",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "Storybook cleanup; tooling",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-57076",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; iOS My Schedule hidden session types (feature owner Sessions & Speakers)",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10566]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-57087",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "design-system chips migration",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-57098",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; all-day sessions in calendar view",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8496]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-57107",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: multi-day session calendar API → Sessions List",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8496]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-57138",
+  "product": "Networking & Interactions",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: networking-consent refresh so favourites appear in Interactions → Favourites",
+  "kbRef": "[MASTER Networking & Interactions §4 Feature Inventory :6648]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57186",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "component Reporting; DS part of Mobile App homepage report for Hyve → App Data / Mobile App Analytics",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2103]",
+  "confidence": "High",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-57257",
+  "product": "Online Registration",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Online Registration; lock New UI Registration toggle",
+  "kbRef": "[MASTER Online Registration §4 Feature Inventory :4940]",
+  "confidence": "High",
+  "components": [
+   "Online Registration"
+  ]
+ },
+ {
+  "k": "EP-57279",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: iOS EPUITests e2e suite assessment → native app build/verification (Mobile-only; test tooling)",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10454]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57336",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Website; web manifest caching",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5892]",
+  "confidence": "High",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-55008",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "server-side i18n helper; frontend infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55035",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Payments; bypass payment on £0 booking/category upgrade",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4307]",
+  "confidence": "High",
+  "components": [
+   "Payments"
+  ]
+ },
+ {
+  "k": "EP-55037",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management (strict rule 1); summary is Kiosk badge print export → Onsite & Kiosks Bulk and Individual Badge Printing :3446 — component likely mis-tagged",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8613]",
+  "confidence": "Low",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-55070",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "LexChat chatbot script self-hosting; no documented feature",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55098",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: [Android] exhibitor profile meeting gate GDPR bypass → App Networking Meetings (Mobile-only; feature owner Meetings & Matchmaking)",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10540]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55120",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "summary: admin permission-zone security fixes → Admin Account Creation and Management",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1243]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55128",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "component Corporate website (not in table); missing system translations across many screens",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Corporate website"
+  ]
+ },
+ {
+  "k": "EP-55145",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "portal-ui circular dependencies; architecture",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55175",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: [iOS] multi-module SPM refactor → native app build (Mobile-only)",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10454]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55238",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "component Open API (not in table); API V3 Logs admin page enhancements → Public API v3",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15980]",
+  "confidence": "Medium",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-55248",
+  "product": "Hosted Buyer Management",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: IDOR in hosted buyer document signing → Document Dashboard",
+  "kbRef": "[MASTER Hosted Buyer Management §4 Feature Inventory :14949]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55249",
+  "product": "Hosted Buyer Management",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: IDOR in hosted buyer document upload → Document Dashboard",
+  "kbRef": "[MASTER Hosted Buyer Management §4 Feature Inventory :14949]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55297",
+  "product": "Networking & Interactions",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: InteractionScoresService N+1 when interaction scores enabled → matchmaking/interaction scoring; no exact feature, Lead Intelligence scoring also plausible",
+  "kbRef": "[MASTER Networking & Interactions §4 Feature Inventory :6494]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-55304",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "component Lead Intelligence; LC-Pro settings on scan path → Lead Capture Pro",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12704]",
+  "confidence": "High",
+  "components": [
+   "Lead Intelligence"
+  ]
+ },
+ {
+  "k": "EP-55315",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; sponsor/sponsored product click tracking in app (feature owner Sponsorship statistics)",
+  "kbRef": "[MASTER Sponsorship §4 Feature Inventory :14328]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-55334",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "component Observability (not in table); exceptions handler infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": [
+   "Observability"
+  ]
+ },
+ {
+  "k": "EP-55375",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "epic 'Multi-Tenant Translation Management Platform'; Translation Manager EN edit permission; no product in table",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55400",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: frontend Products area on new Product module → Product List and Product Profile Pages",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11892]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55429",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "component Admin Interface; Participant Management columns",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1277]",
+  "confidence": "High",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-55430",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Website; semantic H1 for SEO/GA4",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5900]",
+  "confidence": "High",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-55447",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Integration HUB - Integrations EPIC' → Integration HUB (Cvent inbound)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-55448",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Integration HUB - Integrations EPIC' → Integration HUB (Eventbrite inbound)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-55457",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "component Admin Interface; mandatory field mapping → Data Import",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1299]",
+  "confidence": "High",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-55465",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "component Admin Interface; Microsoft Clarity in Admin Panel",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1200]",
+  "confidence": "High",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-55469",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Integration HUB - Integrations EPIC' → Integration HUB (Salesforce inbound)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-55470",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Integration HUB - Integrations EPIC' → Integration HUB (Cvent push-back)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-55471",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Integration HUB - Integrations EPIC' → Integration HUB (HubSpot push-back)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-55472",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Integration HUB - Integrations EPIC' → Integration HUB (Salesforce push-back)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-55476",
+  "product": "Networking & Interactions",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Networking; unified FavouriteService",
+  "kbRef": "[MASTER Networking & Interactions §4 Feature Inventory :6648]",
+  "confidence": "High",
+  "components": [
+   "Networking"
+  ]
+ },
+ {
+  "k": "EP-55477",
+  "product": "Networking & Interactions",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Networking; bulk connection delete and private favourites",
+  "kbRef": "[MASTER Networking & Interactions §4 Feature Inventory :6648]",
+  "confidence": "High",
+  "components": [
+   "Networking"
+  ]
+ },
+ {
+  "k": "EP-55482",
+  "product": "Sponsorship",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "component Sponsorship; V3 Sponsors list N+1",
+  "kbRef": "[MASTER Sponsorship §4 Feature Inventory :14112]",
+  "confidence": "High",
+  "components": [
+   "Sponsorship"
+  ]
+ },
+ {
+  "k": "EP-55496",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "component Admin Interface; deny-by-default admin permissions",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1243]",
+  "confidence": "High",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-55506",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "component Observability (not in table); exception notification rate limit",
+  "kbRef": null,
+  "confidence": "High",
+  "components": [
+   "Observability"
+  ]
+ },
+ {
+  "k": "EP-55562",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "summary: participant export N+1 → Data Export",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1310]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55584",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "portal-ui dev-mode compile times; tooling",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55587",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "component Open API (not in table); data import result logs → Data Import (Admin Log Info :1268)",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1299]",
+  "confidence": "High",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-55593",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "component Data Collection Pipelines (not in table); data import file size → Data Import",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1299]",
+  "confidence": "High",
+  "components": [
+   "Data Collection Pipelines"
+  ]
+ },
+ {
+  "k": "EP-55599",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "component Corporate website (not in table); missing notification translations",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Corporate website"
+  ]
+ },
+ {
+  "k": "EP-55639",
+  "product": "Online Registration",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Online Registration; account creation earlier in flow → Account and Login",
+  "kbRef": "[MASTER Online Registration §4 Feature Inventory :5216]",
+  "confidence": "High",
+  "components": [
+   "Online Registration"
+  ]
+ },
+ {
+  "k": "EP-55641",
+  "product": "Online Registration",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Online Registration; VAT at checkout when VAT check down (VAT Rules Engine :4380 is the Transactions feature touched)",
+  "kbRef": "[MASTER Online Registration §4 Feature Inventory :4940]",
+  "confidence": "High",
+  "components": [
+   "Online Registration"
+  ]
+ },
+ {
+  "k": "EP-55686",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "summary: PaymentInvoiceService invoice generation → Invoicing",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4388]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55687",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Website; site builder anchor option sync",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5872]",
+  "confidence": "High",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-55703",
+  "product": "Community",
+  "domain": "Identity & Community",
+  "basis": "summary",
+  "evidence": "summary: community-as-home-page redirect → Community Home Page Template",
+  "kbRef": "[MASTER Community §4 Feature Inventory :9231]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55769",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "statistic events to HTTP ingest gateway; data infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55789",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "component Admin Interface; per-event admin access scope",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1243]",
+  "confidence": "High",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-55805",
+  "product": "Online Registration",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Online Registration; post code field validation → Standard Form Fields",
+  "kbRef": "[MASTER Online Registration §4 Feature Inventory :5001]",
+  "confidence": "High",
+  "components": [
+   "Online Registration"
+  ]
+ },
+ {
+  "k": "EP-55842",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "soft-404 across all routes; frontend infrastructure (no component)",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55871",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "SQS queue retry loop; infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55872",
+  "product": "Networking & Interactions",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: interaction events for networking opted-out actors reaching ClickHouse → Favourites/interactions privacy; analytics data equally plausible",
+  "kbRef": "[MASTER Networking & Interactions §4 Feature Inventory :6648]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-55876",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "epic 'Security and Observability'; Sentry tagging (adminUI)",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55877",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "epic 'Security and Observability'; Sentry tagging (portalUI)",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55878",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "epic 'Security and Observability'; Sentry source maps (adminUI)",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55879",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "epic 'Security and Observability'; Sentry source maps (portalUI)",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55880",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "epic 'Security and Observability'; Sentry report-a-problem (portalUI)",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55881",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "epic 'Security and Observability'; Sentry report-a-problem (adminUI)",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55882",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "epic 'Security and Observability'; Sentry report-a-problem (adminUI, duplicate)",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-55889",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "component Reporting; meetings report Subject/Message → Meetings Analytics",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2149]",
+  "confidence": "High",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-55892",
+  "product": "Networking & Interactions",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: source of truth for favourite counters → Favourites",
+  "kbRef": "[MASTER Networking & Interactions §4 Feature Inventory :6648]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55900",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Payments; Iyzico gateway",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4358]",
+  "confidence": "High",
+  "components": [
+   "Payments"
+  ]
+ },
+ {
+  "k": "EP-55952",
+  "product": "User Engagement",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Marketing; external badge link variable in campaigns",
+  "kbRef": "[MASTER User Engagement §4 Feature Inventory :9824]",
+  "confidence": "High",
+  "components": [
+   "Marketing"
+  ]
+ },
+ {
+  "k": "EP-55977",
+  "product": "Online Registration",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "summary: formBuilderV2 navigation bug → Form Builder; Event Website Custom Forms :5884 equally plausible",
+  "kbRef": "[MASTER Online Registration §4 Feature Inventory :4971]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-55988",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Native Integrations - Migrations'; remove legacy Aventri v2",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15938]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-55996",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "component Exhibitor Marketplace; exhibitors list search engine",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11925]",
+  "confidence": "High",
+  "components": [
+   "Exhibitor Marketplace"
+  ]
+ },
+ {
+  "k": "EP-55998",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Native Integrations - Migrations'; remove legacy A2Z",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-56034",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "epic '[CLONING] New Modules Architecture conformance' → Event Cloning; invert legacy dependency",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1190]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56038",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "summary",
+  "evidence": "summary: recover lost meeting-create statistics events → Meetings Analytics",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2149]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56052",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Native Integrations - Migrations'; AditusVisitors hub multi event id",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-56053",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Native Integrations - Migrations'; remove legacy Aditus v2",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-56054",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Native Integrations - Migrations'; Visit Connect SSO standalone → SSO",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15828]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-56055",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Native Integrations - Migrations'; N200 flag disposition",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-56056",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Native Integrations - Migrations'; remove legacy N200",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-56057",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Native Integrations - Migrations'; conditional meeting access as hub mapping field",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-56061",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "component Admin Interface (strict rule 1); feature is meeting analytics filtered by meeting tags → Organiser Analytics Meetings Analytics :2149",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1200]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-56075",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "design-system Alert normalisation",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56085",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "component Open API (not in table); product upload pixel validation → Product API",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15673]",
+  "confidence": "Medium",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-56121",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "component Native Integration (not in table); Integration Hub per-field 'Null if empty' mapping → Integration HUB",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-56138",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; PDF ticket/badge from side menu → Digital Badge",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10519]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-56156",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; digital passport zone-visit stamps backend (relates to Onsite Check-in Zones)",
+  "kbRef": "[MASTER Onsite & Kiosks §4 Feature Inventory :3605]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-56157",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; digital passport zone-visit stamps in app (relates to Onsite Check-in Zones)",
+  "kbRef": "[MASTER Onsite & Kiosks §4 Feature Inventory :3605]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-56161",
+  "product": "Sponsorship",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: banner sizes FE/Admin/Design alignment → Banner Ads",
+  "kbRef": "[MASTER Sponsorship §4 Feature Inventory :14188]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56162",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: ExhibitorEffectiveSettings for category-less exhibitors → Exhibitor Categories and Permissions",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11941]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56164",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: admin exhibitor profile purchase history for Lead Capture Pro & add-ons → Lead Capture Pro",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12704]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56167",
+  "product": "Networking & Interactions",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Networking (strict rule 1); summary is removal of Lead Capture Pro purchase-page analytics → Lead Intelligence Lead Capture Pro :12704",
+  "kbRef": "[MASTER Networking & Interactions §4 Feature Inventory :6783]",
+  "confidence": "Low",
+  "components": [
+   "Networking"
+  ]
+ },
+ {
+  "k": "EP-56170",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "components Exhibitor Marketplace + Marketing + Session & Speaker Management; alphabetical filter items for sessions and exhibitor events → Sessions List",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8496]",
+  "confidence": "Medium",
+  "components": [
+   "Exhibitor Marketplace",
+   "Marketing",
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-56218",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "statistics pipeline failed-events backlog analysis; data infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56219",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; exhibitor events in sessions page (feature owner Sessions & Speakers)",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10575]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-56227",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "components Exhibitor Marketplace + Session & Speaker Management; epic 'New filters for Sessions and Exhibitor events'; location filter",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8496]",
+  "confidence": "Medium",
+  "components": [
+   "Exhibitor Marketplace",
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-56228",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "summary",
+  "evidence": "summary: continuous fix for broken meeting analytics events → Meetings Analytics",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2149]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56294",
+  "product": "Networking & Interactions",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: PG view reports exhibitor owners as networking opted-out → networking consent; analytics data equally plausible",
+  "kbRef": "[MASTER Networking & Interactions §4 Feature Inventory :6783]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-56312",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "sign-in redirect return URL; frontend infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56313",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: mobile apps' exhibitor favourite/view statistics to WebSocket → App Favourites (Mobile-only)",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10561]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56314",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: require-sign-in navigation for session join/registration → Session Registration Page",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8538]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56325",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "components Authentification (not in table) + Reporting → Organiser Analytics; ExpoIntelligence tokenised email access (exhibitor-facing)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2058]",
+  "confidence": "Medium",
+  "components": [
+   "Authentification",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56327",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "components Lead Intelligence + Reporting; ExpoIntelligence solo exhibitor view → Leads Dashboard",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649]",
+  "confidence": "Medium",
+  "components": [
+   "Lead Intelligence",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56328",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "components Lead Intelligence + Reporting; ExpoIntelligence stand summary (parent + children)",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649]",
+  "confidence": "Medium",
+  "components": [
+   "Lead Intelligence",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56329",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "component Reporting; ExpoIntelligence child switcher (exhibitor-facing insights)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2058]",
+  "confidence": "Medium",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56330",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "component Reporting; ExpoIntelligence white-label branding (exhibitor-facing insights)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2058]",
+  "confidence": "Medium",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56331",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "component Reporting; ExpoIntelligence guided journey + report export (exhibitor-facing insights)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2058]",
+  "confidence": "Medium",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56332",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "components Lead Intelligence + Reporting; ExpoIntelligence peer benchmarks",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649]",
+  "confidence": "Medium",
+  "components": [
+   "Lead Intelligence",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56333",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "components Lead Intelligence + Reporting; ExpoIntelligence buyer interaction insights",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649]",
+  "confidence": "Medium",
+  "components": [
+   "Lead Intelligence",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56334",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "components AI Agents (not in table) + Reporting → Organiser Analytics; ExpoIntelligence LLM coaching narrative",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2058]",
+  "confidence": "Medium",
+  "components": [
+   "AI Agents",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56335",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "components Payments + Reporting map to two products; ExpoIntelligence paywall self-purchase → chose purchase surface (Shopping Basket); Organiser Analytics equally plausible",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4270]",
+  "confidence": "Low",
+  "components": [
+   "Payments",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56373",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Native Integration (not in table); epic 'Integration HUB - Integrations EPIC'; InfoSalons exhibitor push + SSO",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-56421",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "ICU MessageFormat in translation layer; i18n infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56423",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "summary: unsaved-changes guard on iframe-embedded admin pages → admin panel generic behaviour; could be cross-cutting UI infrastructure",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1200]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-56442",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "component Admin Interface; internal admin panel search → Global Search (Admin Panel)",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1336]",
+  "confidence": "High",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-56447",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "Codeception static state leak; test infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56463",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "flaky unit test; test infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56547",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "red import test suites; test infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56579",
+  "product": "Sponsorship",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "component Sponsorship; banner sizes → Banner Ads",
+  "kbRef": "[MASTER Sponsorship §4 Feature Inventory :14188]",
+  "confidence": "High",
+  "components": [
+   "Sponsorship"
+  ]
+ },
+ {
+  "k": "EP-56595",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "components Meeting Program (not in table) + Session & Speaker Management; exhibitor event parent/child approval → Exhibitor Events",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8601]",
+  "confidence": "Medium",
+  "components": [
+   "Meeting Program",
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-56643",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "design-system Avatar type regression",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56668",
+  "product": "Exhibitor Portal",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "component Exhibitor Manual; non-destructive manual edits → Manual Settings and Section Setup",
+  "kbRef": "[MASTER Exhibitor Portal §4 Feature Inventory :11156]",
+  "confidence": "High",
+  "components": [
+   "Exhibitor Manual"
+  ]
+ },
+ {
+  "k": "EP-56682",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: products add/edit route guard → Product Form",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11968]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56693",
+  "product": "Online Registration",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "summary: deferred registration emails, payment binding, .ics → Registration Confirmation",
+  "kbRef": "[MASTER Online Registration §4 Feature Inventory :5176]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56694",
+  "product": "Online Registration",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "summary: returning registrant platform access before offline payment approval → Account and Login (Payments by Invoice :4407 also relevant)",
+  "kbRef": "[MASTER Online Registration §4 Feature Inventory :5216]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56707",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; new login flow email correction → Standard Login",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10490]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-56742",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Payments; exclude surcharge from invoice → Invoicing",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4388]",
+  "confidence": "High",
+  "components": [
+   "Payments"
+  ]
+ },
+ {
+  "k": "EP-56743",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: SessionCardVerticalView address → Sessions List",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8496]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56745",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "Untitled UI upgrade; design-system dependency",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56756",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Payments; payment analytics → Transaction Dashboard",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4400]",
+  "confidence": "High",
+  "components": [
+   "Payments"
+  ]
+ },
+ {
+  "k": "EP-56757",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Payments; checkout-start events and gateway failure codes",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4358]",
+  "confidence": "High",
+  "components": [
+   "Payments"
+  ]
+ },
+ {
+  "k": "EP-56770",
+  "product": "Exhibitor Portal",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "component Exhibitor Manual; repeatable entries and multi-file upload → Table Form Section",
+  "kbRef": "[MASTER Exhibitor Portal §4 Feature Inventory :11165]",
+  "confidence": "High",
+  "components": [
+   "Exhibitor Manual"
+  ]
+ },
+ {
+  "k": "EP-56825",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; restrict meetings for exhibitors without team members (feature owner Meetings & Matchmaking)",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10540]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-56843",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "components Mobile App + Sponsorship; engagement tracking in App Builder custom blocks (sponsor banners) → App Builder; Sponsorship statistics :14328 also relevant",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10454]",
+  "confidence": "Medium",
+  "components": [
+   "Mobile App",
+   "Sponsorship"
+  ]
+ },
+ {
+  "k": "EP-56848",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "visitor locale in middleware; i18n infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56864",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; Session Calendar View toggle",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10575]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-56915",
+  "product": "Networking & Interactions",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Networking; required custom category filters popup → Product Categories",
+  "kbRef": "[MASTER Networking & Interactions §4 Feature Inventory :6546]",
+  "confidence": "High",
+  "components": [
+   "Networking"
+  ]
+ },
+ {
+  "k": "EP-56922",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "components Lead Intelligence + Reporting; ExpoIntelligence team engagement page",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649]",
+  "confidence": "Medium",
+  "components": [
+   "Lead Intelligence",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56923",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "components Lead Intelligence + Reporting; ExpoIntelligence 'How you compare'",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649]",
+  "confidence": "Medium",
+  "components": [
+   "Lead Intelligence",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56924",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "components Mobile App + Reporting map to two products; ExpoIntelligence portal web UI build (not native app) → chose Reporting like siblings",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2058]",
+  "confidence": "Low",
+  "components": [
+   "Mobile App",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56958",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "component Recommendation Service (not in table); epic 'AI Event Assistant (AGENT)' names no product; no detail",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Recommendation Service"
+  ]
+ },
+ {
+  "k": "EP-56967",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "DI bootstrap error reporting; infrastructure",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-56969",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: saved search queries list endpoint → Global Search saved queries; KB frontend search = Marketplace Search and Filters",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11925]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-56985",
+  "product": "Profile",
+  "domain": "Identity & Community",
+  "basis": "summary",
+  "evidence": "summary: Edit Profile page sends undefined category_id on profile save → Profile",
+  "kbRef": "[MASTER Product Ecosystem Map §12 Component→Product :483]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57020",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: statistics source values the mobile apps send → mobile analytics source contract (Mobile-only; Organiser Analytics App Data consumes it)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2103]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57023",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "empty urn_source/refer_source statistics rows ownership; data-quality work across products",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57039",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "components Mobile App + Reporting; mobile screen-name source slugs in online-time statistics (Mobile-only; Organiser Analytics App Data)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2103]",
+  "confidence": "Medium",
+  "components": [
+   "Mobile App",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-57042",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "components Mobile App + Reporting; mobile pre-rename source names in online-time statistics (Mobile-only)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2103]",
+  "confidence": "Medium",
+  "components": [
+   "Mobile App",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-57044",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: mobile filter screen sources in online-time statistics contract (Mobile-only; Organiser Analytics App Data)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2103]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57045",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: mobile role profile sources in online-time statistics contract (Mobile-only)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2103]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57046",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: mobile app lifecycle events as page sources (Mobile-only)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2103]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57047",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: mobile product-page sources outside contract (Mobile-only)",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2103]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57050",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "summary: event approval button permissions → Event Approval",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1183]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-57051",
+  "product": "Client Manager",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "summary: Manager users get superadmin in customer admin panel via SSO → Access client's events & admin panel",
+  "kbRef": "[MASTER Client Manager §4 Feature Inventory :752]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57057",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "summary: HeaderMobileMenu language selector mounted twice → Header and Navbar; portal-ui generic header, cross-cutting also plausible",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5864]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-57072",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "TanStack Query adoption; frontend architecture",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-57124",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "component Native Integration (not in table); Jotform inbound native integration → Integration HUB",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959]",
+  "confidence": "High",
+  "components": [
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-57221",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "component AI Search (not in table); epic 'Search Anatomy' → Global Search blocks/labels control; KB frontend search = Marketplace Search and Filters",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11925]",
+  "confidence": "Low",
+  "components": [
+   "AI Search"
+  ]
+ },
+ {
+  "k": "EP-57237",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; calendar 'By Track' label → Session Tracks",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8472]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-57253",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; language filter for sessions/exhibitor events",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8496]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-57284",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "portal-ui adopts shared TrackTag component; design-system refactor (touches Session Tracks)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57291",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "components Exhibitor Marketplace + Mobile App + Session & Speaker Management; mobile language/location filters → Mobile-only rule (feature owner Sessions & Speakers)",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10575]",
+  "confidence": "Medium",
+  "components": [
+   "Exhibitor Marketplace",
+   "Mobile App",
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-57304",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "epic 'accountsInteractions: sync_ts cursor field…' → interactions API sync cursor (Statistics API v2)",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15799]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57308",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "components Lead Intelligence + Mobile App; badge QR generation and lead scanning unification → Lead Scanning (not mobile-only)",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12662]",
+  "confidence": "Medium",
+  "components": [
+   "Lead Intelligence",
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-57315",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "components Online Registration + Payments; epic 'Registration - Payments (OT)' → invoice payment and cumulative discounts in purchasing (Discount Codes / Payments by Invoice)",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4415]",
+  "confidence": "Medium",
+  "components": [
+   "Online Registration",
+   "Payments"
+  ]
+ },
+ {
+  "k": "EP-57330",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; Session Calendar View time slots",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10575]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-57332",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; Session Calendar View all-day sessions",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10575]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-57343",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "summary",
+  "evidence": "component BI (not in table); meeting stats tab in Embeddable Analytics → Meetings Analytics",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2149]",
+  "confidence": "High",
+  "components": [
+   "BI"
+  ]
+ },
+ {
+  "k": "EP-57347",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "component Open API (not in table); API V2 sessions/set filters → Session API",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15704]",
+  "confidence": "High",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-57348",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "component Open API (not in table); API V2 sessions/get filters → Session API",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15704]",
+  "confidence": "High",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-57350",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Website; header search term hand-off to category listings",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5864]",
+  "confidence": "High",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-57360",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; session image cropping analysis → Session Page",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8510]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-57386",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Website; SearchField page-id helper typing",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5864]",
+  "confidence": "High",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-57403",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "components Admin Interface + Open API (not in table) → Admin / Platform Core (strict rule 1); summary is a Client Manager per-event actuals API → Client Manager :752 more fitting",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1200]",
+  "confidence": "Low",
+  "components": [
+   "Admin Interface",
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-57406",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Website; epic 'Technical SEO improvements'; participant profile noindex/canonical",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5900]",
+  "confidence": "High",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-57407",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Website; SEO redirect chains",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5900]",
+  "confidence": "High",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-57408",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "summary: [SEO] exhibitor/brand/product URLs in XML sitemaps → SEO Management",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5900]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57411",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; mobile-web single-day session calendar",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8496]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-57419",
+  "product": "Profile",
+  "domain": "Identity & Community",
+  "basis": "component",
+  "evidence": "component Profile (strict rule 1); summary is Play & Win (gamification) in app without update → Mobile App/User Engagement also plausible",
+  "kbRef": "[MASTER Product Ecosystem Map §12 Component→Product :483]",
+  "confidence": "Low",
+  "components": [
+   "Profile"
+  ]
+ },
+ {
+  "k": "EP-57428",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Open API (not in table); epic 'accountsInteractions: sync_ts cursor field…' → AccountsInteractionsReport sync_ts",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15799]",
+  "confidence": "Medium",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-57430",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "component Open API (not in table); epic 'accountsInteractions: sync_ts cursor field…' → SponsorAccountsInteractionsReport sync_ts",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15799]",
+  "confidence": "Medium",
+  "components": [
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-57463",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Website; not-found pages HTTP 404",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5892]",
+  "confidence": "High",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-57471",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "summary: Cloning remaps session type visibility ids → Event Cloning (Sessions & Speakers Session Types touched)",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1190]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-57478",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Session & Speaker Management; track-based ordering in calendar",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8472]",
+  "confidence": "High",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-57489",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Website; sized WebP image variants",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5892]",
+  "confidence": "High",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-57501",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "component",
+  "evidence": "components Data Collection Pipelines (not in table) + Reporting; catalogue ClickHouse analytics consumers",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2620]",
+  "confidence": "High",
+  "components": [
+   "Data Collection Pipelines",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-57505",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "epic",
+  "evidence": "epic 'Analytics Consumer Audit…'; metric calculation discrepancies",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :1862]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57506",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "epic",
+  "evidence": "epic 'Analytics Consumer Audit…'; metric naming findings",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :1862]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57507",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "epic",
+  "evidence": "epic 'Analytics Consumer Audit…'; ClickHouse vs PostgreSQL cross-check",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :1862]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57510",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "summary: [Exhibitor Categories] product limit save deletes products → Exhibitor Categories and Permissions",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11941]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-57512",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "portal-ui Alert migration; design system",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-57513",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "admin-ui Alert migration; design system",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-57533",
+  "product": "Profile",
+  "domain": "Identity & Community",
+  "basis": "summary",
+  "evidence": "summary: academic title field for participants across registration, profiles, sessions, badges → Profile",
+  "kbRef": "[MASTER Product Ecosystem Map §12 Component→Product :483]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57544",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "summary: mobile academic title on agenda/speaker/attendee cards → Mobile-only (feature owner Profile)",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10575]",
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-57562",
+  "product": "Profile",
+  "domain": "Identity & Community",
+  "basis": "component",
+  "evidence": "components Online Registration + Profile + Session & Speaker Management; minimal academic titles release → Profile",
+  "kbRef": "[MASTER Product Ecosystem Map §12 Component→Product :483]",
+  "confidence": "Medium",
+  "components": [
+   "Online Registration",
+   "Profile",
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-57571",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "summary",
+  "evidence": "summary: meetings export endpoint latency → Exportable Reports; Meetings & Matchmaking equally plausible",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2620]",
+  "confidence": "Low",
+  "components": []
+ },
+ {
+  "k": "EP-57577",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; opted-out users favourite in app",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10561]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-57581",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "Accounts module (DDD backend); architecture",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-57634",
+  "product": "Online Registration",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Online Registration; multi-tier gating for New UI Registration (Client Manager Global Module Management :800 touched)",
+  "kbRef": "[MASTER Online Registration §4 Feature Inventory :4940]",
+  "confidence": "High",
+  "components": [
+   "Online Registration"
+  ]
+ },
+ {
+  "k": "EP-57666",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Website; root error boundary placement",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5892]",
+  "confidence": "High",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-57667",
+  "product": "Floor Plan",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "component",
+  "evidence": "component Floor Plan; empty stand/hall payload in admin floorplan → Basic Hall Management",
+  "kbRef": "[MASTER Floor Plan §4 Feature Inventory :13240]",
+  "confidence": "High",
+  "components": [
+   "Floor Plan"
+  ]
+ },
+ {
+  "k": "EP-57684",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "component Admin Interface; epic 'Integrations page'; SAML 2.0 settings page (Integrations Native SAML :15828 is the feature served)",
+  "kbRef": "[MASTER Admin / Platform Core §4 Feature Inventory :1200]",
+  "confidence": "High",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-57699",
+  "product": "Online Registration",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "summary: auth type changes mid-login error message → Account and Login",
+  "kbRef": "[MASTER Online Registration §4 Feature Inventory :5216]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-57749",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "components Online Registration + Payments; epic 'Registration - Payments (OT)' → invoice payment and cumulative discounts (split of EP-57315)",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4415]",
+  "confidence": "Medium",
+  "components": [
+   "Online Registration",
+   "Payments"
+  ]
+ },
+ {
+  "k": "EP-57786",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "component",
+  "evidence": "component Mobile App; hide Meet/Message when modules off",
+  "kbRef": "[MASTER Mobile App §4 Feature Inventory :10540]",
+  "confidence": "High",
+  "components": [
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-57795",
+  "product": "Profile",
+  "domain": "Identity & Community",
+  "basis": "component",
+  "evidence": "component Profile; edit profile values under moderation",
+  "kbRef": "[MASTER Product Ecosystem Map §12 Component→Product :483]",
+  "confidence": "High",
+  "components": [
+   "Profile"
+  ]
+ },
+ {
+  "k": "EP-57810",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "component",
+  "evidence": "component Website; portalUI observability (Sentry/CloudWatch)",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5892]",
+  "confidence": "High",
+  "components": [
+   "Website"
+  ]
+ }
+]

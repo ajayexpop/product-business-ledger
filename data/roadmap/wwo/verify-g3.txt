@@ -1,0 +1,17 @@
+You are an independent fact-checker for ExpoPlatform's customer-facing Product Journey pages. Someone else wrote the copy; assume nothing is right until the source stories support it. Customers will read it, so wrong information must not survive.
+
+Files (group g3):
+- Spec: /Users/admin/orca/workspaces/Crossteamdash/CrossTeamDash/data/roadmap/WWO_SPEC.md
+- Sources: /Users/admin/orca/workspaces/Crossteamdash/CrossTeamDash/data/roadmap/wwo/input/g3.json (each row: title, benefit, detail and the stories with all their text)
+- Copy to check: /Users/admin/orca/workspaces/Crossteamdash/CrossTeamDash/data/roadmap/wwo/g3_w/wwo.json (what, why, outcome, who, basis, evidence)
+
+For EVERY row (read all of them; use python to walk the rows in chunks), check each of: title, benefit, detail (existing card text) and what, why, outcome, who (new copy) against the stories:
+1. Every factual claim must be supported by the story text (summary, description, wwo/ai/confluence summaries, whoFor/value). Flag overstatement ("never lose", "faster" without evidence, "all pages" when only some), wrong direction (a fix described as a feature), scope creep (things no story mentions), investigations/tests/spikes described as shipped features, claimed complaints or requests the sources don't mention, numbers, results or revenue claims.
+2. "why" with basis "stated" must really be stated in a source; otherwise basis must be "implied" and the why must be a plain need the capability answers, with no invented backstory.
+3. Rules: no client/event names (DLG and its events allowed on dlg-* rows only), no people, team names, Jira keys, internal code names; partners may be named; British English; no em dashes; no marketing words; length limits what ≤240, why ≤220, outcome ≤220, benefit ≤160, detail ≤400, title 2–6 words.
+Pay extra attention to rows the writer flagged as uncertain: formats-meeting-programme-attendance, formats-smarter-meeting-generation, meet-ai-notes-add-on, meet-meeting-management-2026q3, formats-meeting-formats-admin, meet-personalised-meeting-notes, formats-meeting-programme-admin
+
+Write /Users/admin/orca/workspaces/Crossteamdash/CrossTeamDash/data/roadmap/wwo/g3_v/verdicts.json: an array with one object per row, same order:
+{"id": "...", "verdict": "ok" | "fix", "fix": {only the fields that must change, with the corrected text, e.g. "benefit": "...", "why": "...", "basis": "implied"}, "reason": "one line: what was wrong and which story shows it (keys allowed here, this file is internal)"}
+Corrected text must itself follow every rule and be supported. Prefer the smallest change that makes it true. Do not rewrite text that is already accurate just for style.
+Verify with python that every id is present once and every fix obeys the limits. Work only in g3_v/. Never paste descriptions or credentials into chat. Reply with: rows checked, rows fixed (id: one-line reason each).

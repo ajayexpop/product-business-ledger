@@ -1,0 +1,44 @@
+[
+ {
+  "k": "EP-57342",
+  "product": "Admin / Platform Core",
+  "domain": "Provisioning & Platform Core",
+  "basis": "component",
+  "evidence": "component Admin Interface (admin-ui static assets)",
+  "kbRef": "[MASTER Admin / Platform Core product section :1040]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-56316",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "epic 'Implement Exhibitor CRUD' + summary lists the endpoints used for Exhibitors CRUD → Exhibitor API",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15628]",
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-56037",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "[TechDept] documentation of SharedKernel / framework rules; serves no single product",
+  "kbRef": null,
+  "confidence": "High",
+  "components": []
+ },
+ {
+  "k": "EP-53014",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "[TechDept] Portal UI (Next.js 14) performance investigation; front-end framework work across portal surfaces, no single product",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": []
+ }
+]

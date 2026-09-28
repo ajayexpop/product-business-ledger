@@ -1,0 +1,926 @@
+[
+ {
+  "k": "EP-49059",
+  "product": "Client Manager",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'New Client Manager' → TAM customer-environment list, create and approval flow",
+  "kbRef": "[MASTER Client Manager §4 Feature Inventory :736 4.2 Client List & Search by client name]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-49060",
+  "product": "Client Manager",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'New Client Manager' → Finance view to approve/reject customer environments (no documented approval feature)",
+  "kbRef": "[MASTER Client Manager product section :664]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-49992",
+  "product": "Client Manager",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Client Manager & Onboarding' → action menu on Customers Environments rows (details, keys, edit, delete)",
+  "kbRef": "[MASTER Client Manager §4 Feature Inventory :736 4.2 Client List & Search by client name]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-51115",
+  "product": "Client Manager",
+  "domain": "Provisioning & Platform Core",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Client Manager & Onboarding' → API to create Client Manager super-admin accounts, reset passwords, 2FA",
+  "kbRef": "[MASTER Client Manager §4 Feature Inventory :720 4.1 Employee Login (Manager Admin Panel access)]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-57403",
+  "product": "Client Manager",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "overrides component Admin Interface; summary 'Client Manager: authenticated per-event actuals API' (Open API not in table) → Client Manager per-event data; Integrations also touched",
+  "kbRef": "[MASTER Client Manager §4 Feature Inventory :752 4.3 Access client's events & admin panel]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface",
+   "Open API"
+  ]
+ },
+ {
+  "k": "EP-49136",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Website; Integration team SLO definition (epic 'SLOs are established per team'), serves no product",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-49137",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Website; Visitor team SLO definition (epic 'SLOs are established per team'), serves no product",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-49139",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Website; Mobile team SLO definition (epic 'SLOs are established per team'), serves no product",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-49140",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Website; Data Science team SLO definition (epic 'SLOs are established per team'), serves no product",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-49141",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Website; Organizer team SLO definition (epic 'SLOs are established per team'), serves no product",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-49183",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; team meeting time-tracking chore, serves no product",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-54303",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; Design team meeting time-tracking chore, serves no product",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-54554",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; design-team AI tooling investigation, serves no product",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-54761",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; design-team AI tooling investigation (one designer), serves no product",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-57342",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; admin-ui static-asset caching, 404s, chunking and CDN base URL — front-end infrastructure, no product feature",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-52986",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Exhibitor Manual — Manual Settings (Exhibitor Portal)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-52987",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Exhibitor Manual — Global Settings (Exhibitor Portal)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53060",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Exhibitor Manual — Vendors (Exhibitor Portal)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53061",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Exhibitor Manual — Email Templates (Exhibitor Portal)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53062",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Exhibitor Manual — Exhibitors (Exhibitor Portal)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53063",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Event Setup — General (Admin / Platform Core)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53064",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Event Setup — Build Website (Event Website)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53065",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Event Setup — Sign In Page (Online Registration)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53066",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Event Setup — New UI settings (Admin / Platform Core)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53069",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Event Setup — Payments (Transactions & Purchasing)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53070",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Event Setup — Module Management (Admin / Platform Core)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53071",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Event Setup — Country Manager (Admin / Platform Core)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53073",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Event Setup — Chat Bot (Admin / Platform Core)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53074",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Event Setup — Display Filters (Event Website)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53075",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test-coverage work (epic 'Covering Existing Functionality with Tests': docs, test plans, CI tests) for Event Setup — Content Setting (Admin / Platform Core)",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-49436",
+  "product": "Onsite & Kiosks",
+  "domain": "Onsite",
+  "basis": "summary",
+  "evidence": "overrides component Admin Interface; summary: unique attendee check-ins compared across co-located events in the Check-In / Check-Out graph → Check-in Analytics",
+  "kbRef": "[MASTER Onsite & Kiosks §4 Feature Inventory :3661 4.15 Check-in Analytics]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-49438",
+  "product": "Onsite & Kiosks",
+  "domain": "Onsite",
+  "basis": "summary",
+  "evidence": "overrides component Admin Interface; summary: crossover check-ins across co-located events in the Check-In / Check-Out graph → Check-in Analytics",
+  "kbRef": "[MASTER Onsite & Kiosks §4 Feature Inventory :3661 4.15 Check-in Analytics]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-55037",
+  "product": "Onsite & Kiosks",
+  "domain": "Onsite",
+  "basis": "summary",
+  "evidence": "overrides component Session & Speaker Management; summary 'Kiosk Badge Export' → per-person kiosk badge print export",
+  "kbRef": "[MASTER Onsite & Kiosks §4 Feature Inventory :3446 4.5 Bulk and Individual Badge Printing (Admin Panel)]",
+  "confidence": "Medium",
+  "components": [
+   "Session & Speaker Management"
+  ]
+ },
+ {
+  "k": "EP-49577",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "overrides component Mobile App; summary says Web (not mobile-only), Meeting Program not in table; epic 'Meeting Transcription Tool (AI Meeting notes)' → meetings (no documented notes feature)",
+  "kbRef": "[MASTER Meetings & Matchmaking product section :7392]",
+  "confidence": "Medium",
+  "components": [
+   "Meeting Program",
+   "Mobile App"
+  ]
+ },
+ {
+  "k": "EP-50104",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Meeting Formats: Admin Re-arrangement' → central admin for Speed Networking, Meeting Program, Concierge Meetings",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7603 4.5 Meeting Program]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-50105",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Meeting Formats: Admin Re-arrangement' → email templates for Speed Networking, Meeting Program, Concierge",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7766 4.11 Standard Meeting Notifications and Custom Reminders]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-50107",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Meeting Formats: Admin Re-arrangement' → email templates for Exhibitor Events and Round Tables",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7766 4.11 Standard Meeting Notifications and Custom Reminders]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-50109",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Meeting Formats: Admin Re-arrangement' → Exhibitor Events management in Meeting Formats",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7672 4.7 Exhibitor Events]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-50110",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Meeting Formats: Admin Re-arrangement' → independent Round Tables management",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7649 4.6 Round Tables]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-50129",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Meeting Formats: Admin Re-arrangement' → module management for meeting formats",
+  "kbRef": "[MASTER Meetings & Matchmaking product section :7392]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-53993",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "overrides component Online Meetings & Webinars; epic 'Improve Meetings & Scheduling', summary Table Meetings list date-range crash → Round Tables",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7649 4.6 Round Tables]",
+  "confidence": "Medium",
+  "components": [
+   "Online Meetings & Webinars"
+  ]
+ },
+ {
+  "k": "EP-54268",
+  "product": "Meetings & Matchmaking",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "overrides component Online Meetings & Webinars; epic 'Improve Meetings & Scheduling', 'restrict meetings for exhibitors with no team' flag exposed to the app API (backend, not mobile-only)",
+  "kbRef": "[MASTER Meetings & Matchmaking §4 Feature Inventory :7852 4.15 Connection Settings and Permissions Matrix]",
+  "confidence": "Medium",
+  "components": [
+   "Online Meetings & Webinars"
+  ]
+ },
+ {
+  "k": "EP-50123",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Lead Capture pro settings' → Lead Capture access by exhibitor category",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12619 Lead Capture Access Management]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-50124",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Lead Capture pro settings' → per-exhibitor Lead Capture access",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12619 Lead Capture Access Management]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-50125",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Lead Capture pro settings' → Product QR Codes access by exhibitor category",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12694 Non-Badge QR Codes (Company, Product, Content, Visitor)]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-50126",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Lead Capture pro settings' → per-exhibitor Product QR Codes access",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12694 Non-Badge QR Codes (Company, Product, Content, Visitor)]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-50127",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Lead Capture pro settings' → Lead Capture Pro settings consolidation",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12704 Lead Capture Pro]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-54359",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Networking; epic 'Lead Capture pro settings' → Lead Capture Pro purchase page marks granted features Purchased",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12704 Lead Capture Pro]",
+  "confidence": "Medium",
+  "components": [
+   "Networking"
+  ]
+ },
+ {
+  "k": "EP-56167",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "overrides component Networking; summary: remove unused Lead Capture Pro purchase-page view analytics (follow-up of EP-54359)",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12704 Lead Capture Pro]",
+  "confidence": "Medium",
+  "components": [
+   "Networking"
+  ]
+ },
+ {
+  "k": "EP-56325",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Reporting (Authentification not in table); tokenised email access; epic 'ExpoIntelligence — Exhibitor Insights Portal' is the exhibitor-facing insights portal (siblings and EP-56324 → Lead Intelligence); Organiser Analytics equally plausible, exhibitor surface picked",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649 Leads Dashboard]",
+  "confidence": "Low",
+  "components": [
+   "Authentification",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56329",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Reporting; parent/child switcher; epic 'ExpoIntelligence — Exhibitor Insights Portal' is the exhibitor-facing insights portal (siblings and EP-56324 → Lead Intelligence); Organiser Analytics equally plausible, exhibitor surface picked",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649 Leads Dashboard]",
+  "confidence": "Low",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56330",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Reporting; white-label branding of the portal; epic 'ExpoIntelligence — Exhibitor Insights Portal' is the exhibitor-facing insights portal (siblings and EP-56324 → Lead Intelligence); Organiser Analytics equally plausible, exhibitor surface picked",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649 Leads Dashboard]",
+  "confidence": "Low",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56331",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Reporting; guided journey + one-page report; epic 'ExpoIntelligence — Exhibitor Insights Portal' is the exhibitor-facing insights portal (siblings and EP-56324 → Lead Intelligence); Organiser Analytics equally plausible, exhibitor surface picked",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649 Leads Dashboard]",
+  "confidence": "Low",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56334",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Reporting (AI Agents not in table); LLM coaching narrative; epic 'ExpoIntelligence — Exhibitor Insights Portal' is the exhibitor-facing insights portal (siblings and EP-56324 → Lead Intelligence); Organiser Analytics equally plausible, exhibitor surface picked",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649 Leads Dashboard]",
+  "confidence": "Low",
+  "components": [
+   "AI Agents",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56918",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Reporting (Data Collection Pipelines not in table); portal API stub; epic 'ExpoIntelligence — Exhibitor Insights Portal' is the exhibitor-facing insights portal (siblings and EP-56324 → Lead Intelligence); Organiser Analytics equally plausible, exhibitor surface picked",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649 Leads Dashboard]",
+  "confidence": "Low",
+  "components": [
+   "Data Collection Pipelines",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-56924",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides components Mobile App + Reporting; portal web UI build (not native app); epic 'ExpoIntelligence — Exhibitor Insights Portal' is the exhibitor-facing insights portal (siblings and EP-56324 → Lead Intelligence); Organiser Analytics equally plausible, exhibitor surface picked",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12649 Leads Dashboard]",
+  "confidence": "Low",
+  "components": [
+   "Mobile App",
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-48344",
+  "product": "Sessions & Speakers",
+  "domain": "Engagement & Matchmaking",
+  "basis": "epic",
+  "evidence": "overrides component Reporting; epic 'Add Custom Filters for Exhibitor Events' → exhibitor event import/export of custom filter values (as sibling EP-49250)",
+  "kbRef": "[MASTER Sessions & Speakers §4 Feature Inventory :8601 Exhibitor Events]",
+  "confidence": "Medium",
+  "components": [
+   "Reporting"
+  ]
+ },
+ {
+  "k": "EP-51151",
+  "product": "Integrations",
+  "domain": "Provisioning & Platform Core",
+  "basis": "summary",
+  "evidence": "overrides component Admin Interface (Native Integration not in table); AutoUpdates integration sync history, status icons, Genesis batch size → Integration HUB",
+  "kbRef": "[MASTER Integrations §4 Feature Inventory :15959 4.14 Integration HUB]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface",
+   "Native Integration"
+  ]
+ },
+ {
+  "k": "EP-51701",
+  "product": "Floor Plan",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "overrides component Admin Interface; natural sorting and bulk delete of halls and stands in the internal floorplan",
+  "kbRef": "[MASTER Floor Plan §4 Feature Inventory :13240 Basic Hall Management]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-51733",
+  "product": "Transactions & Purchasing",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "overrides component Admin Interface; exhibitor basket order-deadline error message",
+  "kbRef": "[MASTER Transactions & Purchasing §4 Feature Inventory :4286 4.2 Exhibitor Basket Specifics]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-54535",
+  "product": "User Engagement",
+  "domain": "Acquisition & Commerce",
+  "basis": "summary",
+  "evidence": "overrides component Admin Interface; admin push notifications (Marketing → Admin Notifications) titled with the event name",
+  "kbRef": "[MASTER User Engagement §4 Feature Inventory :9898 Scheduled Push Notifications (Admin Notifications)]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-56061",
+  "product": "Organiser Analytics",
+  "domain": "Insight",
+  "basis": "summary",
+  "evidence": "overrides component Admin Interface; meeting analytics filtered and split by meeting tags",
+  "kbRef": "[MASTER Organiser Analytics §4 Feature Inventory :2149 4.7 Meetings Analytics]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-56836",
+  "product": "Event Website",
+  "domain": "Acquisition & Commerce",
+  "basis": "epic",
+  "evidence": "overrides component Marketing (Corporate website not in table); epic 'Technical SEO improvements' (siblings → Event Website) → crawlable language switcher + hreflang",
+  "kbRef": "[MASTER Event Website §4 Feature Inventory :5900 SEO Management]",
+  "confidence": "Medium",
+  "components": [
+   "Corporate website",
+   "Marketing"
+  ]
+ },
+ {
+  "k": "EP-57419",
+  "product": "Mobile App",
+  "domain": "Engagement & Matchmaking",
+  "basis": "summary",
+  "evidence": "overrides component Profile; Play & Win for logged-in users inside the current production app without an app update; User Engagement also plausible (gamification), app surface picked",
+  "kbRef": "[MASTER Mobile App product section :10374]",
+  "confidence": "Low",
+  "components": [
+   "Profile"
+  ]
+ },
+ {
+  "k": "EP-57350",
+  "product": "Exhibitor Marketplace",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "summary",
+  "evidence": "overrides component Website; Global Search header term hand-off to category listings → v2 consistency: user-facing global search → Search and Filters",
+  "kbRef": "[MASTER Exhibitor Marketplace §4 Feature Inventory :11925 Search and Filters]",
+  "confidence": "Medium",
+  "components": [
+   "Website"
+  ]
+ },
+ {
+  "k": "EP-48017",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "v2 search consistency: search infrastructure with no user-facing surface — audit of the AI Search service's technical gaps (epic 'AI Search Service (tools)'); no product component",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-53900",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component AI Search (not in table); v2 search consistency: search infrastructure with no user-facing surface — post-filtering latency benchmark spike",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "AI Search"
+  ]
+ },
+ {
+  "k": "EP-53902",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component AI Search (not in table); v2 search consistency: search infrastructure with no user-facing surface — pre-filtering latency benchmark spike",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "AI Search"
+  ]
+ },
+ {
+  "k": "EP-53903",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component AI Search (not in table); v2 search consistency: search infrastructure with no user-facing surface — design of the service-to-service allowed-ID API",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "AI Search"
+  ]
+ },
+ {
+  "k": "EP-53904",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component AI Search (not in table); v2 search consistency: search infrastructure with no user-facing surface — AI Search ↔ Exhibitor backend protocol",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "AI Search"
+  ]
+ },
+ {
+  "k": "EP-54404",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component AI Search (not in table); v2 search consistency: search infrastructure with no user-facing surface — AI Search API adapted to the internal request contract",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "AI Search"
+  ]
+ },
+ {
+  "k": "EP-54574",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "v2 search consistency: search infrastructure with no user-facing surface — load test of allowed-ID generation; no product component",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55864",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "v2 search consistency: search infrastructure with no user-facing surface — [TechDebt] Global Search backend refactoring from code review; no product component",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-55950",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "v2 search consistency: search infrastructure with no user-facing surface — Saved Search Queries controller → service-layer refactor (tech debt); no product component",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": []
+ },
+ {
+  "k": "EP-52259",
+  "product": "Unassigned / Cross-cutting",
+  "domain": "Cross-cutting",
+  "basis": "none",
+  "evidence": "overrides component Admin Interface; test coverage of admin participant import (epic 'Covering Existing Functionality with Tests') → Cross-cutting per SPEC v2",
+  "kbRef": null,
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-49735",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Lead Capture pro settings' → AI Notetaker access by exhibitor category",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12619 Lead Capture Access Management]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ },
+ {
+  "k": "EP-49740",
+  "product": "Lead Intelligence",
+  "domain": "Exhibitor & Sponsor",
+  "basis": "epic",
+  "evidence": "overrides component Admin Interface; epic 'Lead Capture pro settings' → AI Notes per-exhibitor/per-category control",
+  "kbRef": "[MASTER Lead Intelligence §4 Feature Inventory :12619 Lead Capture Access Management]",
+  "confidence": "Medium",
+  "components": [
+   "Admin Interface"
+  ]
+ }
+]

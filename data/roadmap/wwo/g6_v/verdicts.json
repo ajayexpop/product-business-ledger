@@ -1,0 +1,436 @@
+[
+ {
+  "id": "onsite-interactive-floor-plans-launch",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-badge-builder-controls",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-qr-code-pdf-export",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-event-system-import",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-external-code-scanning",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers check in and record badges from other vendors and co-located events, and the check-in report shows each scanned code and, where recognised, its event."
+  },
+  "reason": "outcome 'record every badge presented' overstates; settings cover other vendors' and co-located badges (EP-5714, EP-5643)"
+ },
+ {
+  "id": "onsite-expofp-stand-linking",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-kiosk-improvements",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Help visitors find themselves faster and register for the right event at self-service kiosks."
+  },
+  "reason": "benefit said 'register faster'; speed is stated only for search (EP-14045 value), conditional logic is about showing the right event's fields (EP-14036)"
+ },
+ {
+  "id": "integ-visit-badge-scanner",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-api-meeting-data",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-android-scanning-no-google",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-live-location-expofp",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-expofp-floor-plan",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-reach5-buyer-registration",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-floor-plan-improvements-2023",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Navigate the floor plan more easily, with clearer filters, a list of visited stands and direct links to sessions.",
+   "detail": "The floor plan view was improved; unneeded hall arrows are hidden for single-hall events; the Visited quick filter lists visited stands; quick filters show a no-results message; and sessions or events on a stand open their public profile.",
+   "what": "The floor plan view was improved. Hall arrows are hidden for single-hall events, the Visited quick filter lists visited stands, quick filters show a no-results message, and sessions on a stand open their profile."
+  },
+  "reason": "'rebuilt' and 'smoother view' unsupported: EP-18025 is only titled 'FloorPlan improvement' with no description"
+ },
+ {
+  "id": "integ-klipso-integration",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-public-api-2023q4",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-meeting-location-floor-plan",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-invisual-integration",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-badge-printing-improvements",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-checkin-app-zones",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-expofp-app-redesign",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-aditus-app-badges",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-crm-session-import",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Import sessions and speakers from an organiser's own CRM, along with their tracks, types and tags.",
+   "detail": "An integration with an organiser's own CRM, switched on in event setup, pulls sessions and speakers into the agenda with their tracks, types and tags.",
+   "what": "An integration with an organiser's own CRM, switched on in event setup, pulls sessions and speakers into the agenda with their tracks, types and tags."
+  },
+  "reason": "generic 'a CRM' overstates scope: EP-27396 is an integration with one organiser's CRM API (value 'only for' that client), not any CRM"
+ },
+ {
+  "id": "integ-event-system-import-enhancements",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Control which sessions, speakers and exhibitor details are imported from the external event system."
+  },
+  "reason": "'exactly' overstates: filters are by stream and seminar name plus field locks (EP-25344, EP-28688, EP-33726)"
+ },
+ {
+  "id": "integ-expofp-data-sync",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-public-api-2024q2",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-crowd-connected",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-reach5-registration",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-public-api-2024q4",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Integrations set sponsor pop-ups and activate or deactivate products in bulk, and a product status change has the same effects as making it by hand."
+  },
+  "reason": "'same effects as the admin panel' wrong and too broad: EP-26427 says status behaves as when changed manually on the frontend; nothing says this for the sponsor pop-up"
+ },
+ {
+  "id": "integ-a2z-enhancements",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-reach5-sso",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-visit-sso-meetings",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-ticket-validation-checkin",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-floor-plan-display-2025",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-gps-ips-positioning",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-badge-templates-redesign",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-aditus-participants",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-klipso-enhancements",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-public-api-2025q2",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-stand-bookmarking",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-live-badge-ring",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-category-at-checkin",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-event-system-push-back",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Exhibitor content entered once on the platform reaches the organiser's event system automatically, and brochures are sent only from a chosen starting point, avoiding duplicates."
+  },
+  "reason": "'only new brochures are sent' overstates: EP-43006 sends PDFs from an ID the API manager sets onwards"
+ },
+ {
+  "id": "integ-api-v2-lists",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Fetch all participants and exhibitors through paginated API v2 endpoints, or only what changed since a given time."
+  },
+  "reason": "benefit said the endpoints 'return only what changed'; they return all records, with optional timestamp filters (EP-35897, EP-36021)"
+ },
+ {
+  "id": "onsite-expofp-hall-stands",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-public-api-v3",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Developers look up event IDs, sorted category lists and registration questions with their options through the API."
+  },
+  "reason": "'instead of asking for them' is invented backstory; no story mentions developers having to ask (EP-46710, EP-46512, EP-46511, EP-45064)"
+ },
+ {
+  "id": "integ-visit-api-v2",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-genesis-world",
+  "verdict": "fix",
+  "fix": {
+   "why": "Organisers who use the Genesis World CRM need it connected to their event platform.",
+   "outcome": "Organisers who use Genesis World get a native connection between it and their event platform."
+  },
+  "reason": "'keep their contacts' and 'more to follow in later phases' are unsupported; EP-45950 says only phase 1 of the integration, scope not described"
+ },
+ {
+  "id": "onsite-offline-expofp",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Attendees navigate booths and view exhibitor details on the floor plan in halls with weak or no connection."
+  },
+  "reason": "'including when they open it for the first time offline' unsupported: EP-45052 downloads and caches floor plan archives, which still need a download"
+ },
+ {
+  "id": "onsite-bookmark-favourites-sync",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-checkin-qr-2026",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers issue smaller QR codes for partner integrations, and the check-in list filters stay responsive."
+  },
+  "reason": "'partner scanners read easily' unsupported; EP-44749 says smaller, lighter code to streamline external integrations"
+ },
+ {
+  "id": "onsite-aditus-badge-errors",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Attendees see what to do when their badge will not load, in English or German, instead of being switched to the standard badge."
+  },
+  "reason": "'in their language' overstates (English and German only) and 'wrong badge' mislabels the native fallback (EP-48297)"
+ },
+ {
+  "id": "integ-map-your-show",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-hub-mapping",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-public-api-v3-expansion",
+  "verdict": "fix",
+  "fix": {
+   "detail": "New v3 endpoints check whether an account exists, return visitor and exhibitor registration custom questions, export meetings with filters and incremental sync, and provide check-in data. The API also no longer creates an account with an email already used by an admin."
+  },
+  "reason": "detail had the wrong direction: EP-44419 is a fix that stops the API creating accounts with an admin's email, not a feature letting emails be used"
+ },
+ {
+  "id": "onsite-ocr-badge-scanning",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "onsite-floor-plan-management-2026",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Halls and stands can be sorted in natural order and deleted in bulk with multi-select, and stands in a hidden hall no longer open from an exhibitor’s card.",
+   "outcome": "Organisers set up and tidy large floor plans in fewer steps, and stands in halls they hide no longer open from exhibitor cards."
+  },
+  "reason": "detail had the wrong direction: EP-20247 fixes hidden halls opening from exhibitor cards; outcome 'hidden from visitors' broader than the exhibitor-card fix"
+ },
+ {
+  "id": "integ-public-api-v3-content",
+  "verdict": "fix",
+  "fix": {
+   "detail": "New v3 endpoints return sponsors and sponsor categories, products filtered by exhibitor, and event-scoped floor plan halls and stands. Session tracks, types, tags and languages, countries and regions follow with localisation, sorting, paging and modified-since filters."
+  },
+  "reason": "'products and exhibitors' implies an exhibitor endpoint; EP-51438 is a products endpoint with an exhibitor filter"
+ },
+ {
+  "id": "integ-cds-participants",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-d2i",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-hub-migrations",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-integrations-page",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-public-api-v2-2026q3",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-hub-sync",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-api-v3-products",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ },
+ {
+  "id": "integ-swoogo",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "claims supported by the stories; rules and limits met"
+ }
+]

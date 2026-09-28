@@ -1,0 +1,51 @@
+{
+ "k": "EP-45440",
+ "histories": 38,
+ "historiesRead": 38,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2025-10-08T13:19:36.390+0100",
+   "from": "Incoming request",
+   "to": "Ready for development",
+   "by": "Bartosz Malec"
+  },
+  {
+   "at": "2025-10-30T10:27:36.797+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2025-11-13T13:00:16.043+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2025-11-13T13:00:38.616+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2025-11-13T13:00:45.484+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2025-11-13T13:01:17.182+0000",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Mykola Litvynchuk"
+  },
+  {
+   "at": "2026-09-15T17:47:02.931+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790317454521.txt"
+}

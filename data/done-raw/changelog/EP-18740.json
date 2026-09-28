@@ -1,0 +1,63 @@
+{
+ "k": "EP-18740",
+ "histories": 25,
+ "historiesRead": 25,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-06-29T15:09:57.095+0100",
+   "from": "Ready for development",
+   "to": "Incoming request",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-21T13:16:45.128+0100",
+   "from": "Incoming request",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2023-07-25T13:54:47.492+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-07-31T13:21:51.117+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2023-08-03T12:53:44.582+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-08-08T14:01:41.257+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2023-08-21T10:22:40.736+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2023-08-21T10:22:43.184+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790317938806.txt"
+}

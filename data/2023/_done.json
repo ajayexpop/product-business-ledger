@@ -1,0 +1,63 @@
+{
+ "year": "2023",
+ "yearBasis": "doneDate = last move from a not-done status into a done status (COMPLETE/DONE/Done), from the changelog; resolutiondate if none",
+ "jql": "project = EP AND issuetype = Story AND status = Done AND resolved >= \"2022-12-01\" AND resolved < \"2026-02-01\" ORDER BY key ASC",
+ "written": 255,
+ "withStartDate": 254,
+ "withWWO": 238,
+ "noDescription": 17,
+ "withClient": 138,
+ "changelogTruncated": [
+  "EP-7172",
+  "EP-11664",
+  "EP-8049",
+  "EP-11659",
+  "EP-13095",
+  "EP-17339",
+  "EP-17756",
+  "EP-14844",
+  "EP-1130",
+  "EP-18404",
+  "EP-7074",
+  "EP-20661"
+ ],
+ "worklogTruncated": [],
+ "startDateMayBeLate": [
+  "EP-7172",
+  "EP-11664",
+  "EP-8049",
+  "EP-11659",
+  "EP-13095",
+  "EP-17339",
+  "EP-17756",
+  "EP-14844",
+  "EP-1130",
+  "EP-18404",
+  "EP-20661"
+ ],
+ "noInProgressTransition": [
+  "EP-7074"
+ ],
+ "noDescriptionKeys": [
+  "EP-10211",
+  "EP-2338",
+  "EP-6115",
+  "EP-15215",
+  "EP-14942",
+  "EP-13587",
+  "EP-19838",
+  "EP-17287",
+  "EP-8758",
+  "EP-17908",
+  "EP-18758",
+  "EP-18025",
+  "EP-18295",
+  "EP-20409",
+  "EP-22104",
+  "EP-18599",
+  "EP-24329"
+ ],
+ "missingChangelog": [],
+ "missingWWO": [],
+ "finishedAt": "2026-09-25T07:59:29Z"
+}

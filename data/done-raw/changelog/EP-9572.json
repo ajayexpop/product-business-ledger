@@ -1,0 +1,111 @@
+{
+ "k": "EP-9572",
+ "histories": 60,
+ "historiesRead": 60,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2022-11-08T12:22:54.040+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2022-11-08T12:22:56.236+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2022-11-08T12:22:58.029+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2022-11-08T12:23:00.041+0000",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2022-11-24T14:21:21.570+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2022-11-30T09:14:11.341+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-11-30T09:14:16.703+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-11-30T09:14:18.842+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-11-30T09:14:24.744+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-12-02T18:38:13.831+0000",
+   "from": "In progress",
+   "to": "Ready for development",
+   "by": "Oleksandr Zakharov"
+  },
+  {
+   "at": "2022-12-02T18:38:33.023+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Oleksandr Zakharov"
+  },
+  {
+   "at": "2022-12-02T18:38:45.150+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Oleksandr Zakharov"
+  },
+  {
+   "at": "2022-12-07T09:21:53.338+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2022-12-19T16:56:26.786+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Kateryna Krolevetska"
+  },
+  {
+   "at": "2022-12-27T13:18:52.130+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-12-27T13:18:54.798+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790313118819.txt"
+}

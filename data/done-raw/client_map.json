@@ -1,0 +1,440 @@
+{
+ "_about": "Jira client token -> ledger client (data/ledger.json companies: name + Sales Tier). Tokens are the Reported by (customfield_10145) option values and client names found in descriptions. Built 25 Sep 2026. basis: exact = ledger name or deliveryTags; alias = registry sv-aliases or obvious spelling; none = not a current ledger client (no tier); unresolved = needs an owner decision.",
+ "INTERNAL": {
+  "client": null,
+  "basis": "internal"
+ },
+ "Hyve": {
+  "client": "Hyve Group Plc",
+  "basis": "exact"
+ },
+ "IMEX": {
+  "client": "IMEX",
+  "basis": "exact"
+ },
+ "Regent Exhibitions": {
+  "client": "IMEX",
+  "basis": "alias",
+  "note": "sv-aliases: Regent Exhibitions Limited is IMEX's legal entity"
+ },
+ "Vinexposium": {
+  "client": "Vinexposium",
+  "basis": "exact"
+ },
+ "DWTC": {
+  "client": "Dubai World Trade Centre DWTC/ DXB Live",
+  "basis": "alias"
+ },
+ "DXB Live": {
+  "client": "Dubai World Trade Centre DWTC/ DXB Live",
+  "basis": "alias"
+ },
+ "DXBLive": {
+  "client": "Dubai World Trade Centre DWTC/ DXB Live",
+  "basis": "alias"
+ },
+ "Dubai World Trade Centre": {
+  "client": "Dubai World Trade Centre DWTC/ DXB Live",
+  "basis": "alias"
+ },
+ "FBF": {
+  "client": "Frankfurter Buchmesse GmbH",
+  "basis": "exact"
+ },
+ "FBM": {
+  "client": "Frankfurter Buchmesse GmbH",
+  "basis": "alias"
+ },
+ "FrankfurterBuchmesse": {
+  "client": "Frankfurter Buchmesse GmbH",
+  "basis": "exact"
+ },
+ "Frankfurter Buchmesse": {
+  "client": "Frankfurter Buchmesse GmbH",
+  "basis": "alias"
+ },
+ "Frankfurt Book Fair": {
+  "client": "Frankfurter Buchmesse GmbH",
+  "basis": "alias"
+ },
+ "Rapid News": {
+  "client": "Rapid News Group",
+  "basis": "exact"
+ },
+ "UFI": {
+  "client": "UFI",
+  "basis": "exact"
+ },
+ "DLG": {
+  "client": "DLG Markets GmbH",
+  "basis": "exact"
+ },
+ "BeautyIstanbul": {
+  "client": "BeautyIstanbul (Ipekyolu International Exhibitions)",
+  "basis": "exact"
+ },
+ "Beauty Istanbul": {
+  "client": "BeautyIstanbul (Ipekyolu International Exhibitions)",
+  "basis": "alias"
+ },
+ "MessefranfurtUSA": {
+  "client": "Messe Frankfurt GmbH USA",
+  "basis": "alias"
+ },
+ "Messe Frankfurt": {
+  "client": "Messe Frankfurt GmbH USA",
+  "basis": "alias"
+ },
+ "Northstar": {
+  "client": "Northstar Travel Group",
+  "basis": "exact"
+ },
+ "ADS Group": {
+  "client": "ADS Group",
+  "basis": "exact"
+ },
+ "ADS": {
+  "client": "ADS Group",
+  "basis": "alias"
+ },
+ "Mercator Media Ltd": {
+  "client": "Mercator Media Limited",
+  "basis": "exact"
+ },
+ "Mercator": {
+  "client": "Mercator Media Limited",
+  "basis": "alias"
+ },
+ "Informa- MRO": {
+  "client": "Informa North America",
+  "basis": "exact"
+ },
+ "Informa- Fashion": {
+  "client": "Informa Markets (UK)",
+  "basis": "exact"
+ },
+ "Informa - Cosmoprof NA": {
+  "client": "Informa North America",
+  "basis": "alias",
+  "note": "Cosmoprof North America is run by Informa North America"
+ },
+ "Cosmoprof": {
+  "client": "Informa North America",
+  "basis": "exact",
+  "note": "ledger deliveryTags put Cosmoprof on Informa North America; the registry rule sv-aliases says BolognaFiere (Tier 2). Conflict carried, ledger used"
+ },
+ "Informa- Smartevents": {
+  "client": null,
+  "basis": "unresolved",
+  "note": "Informa subsidiary, entity not evidenced (North America vs Markets UK)"
+ },
+ "Informa- Qmed": {
+  "client": null,
+  "basis": "unresolved",
+  "note": "Informa subsidiary, entity not evidenced"
+ },
+ "Informa- Healthcare": {
+  "client": null,
+  "basis": "unresolved",
+  "note": "Informa subsidiary, entity not evidenced"
+ },
+ "Informa- Premiere": {
+  "client": null,
+  "basis": "unresolved",
+  "note": "Informa subsidiary, entity not evidenced (runbook: premiereeventsbyinforma needs a decision)"
+ },
+ "Informa - Asia": {
+  "client": null,
+  "basis": "unresolved",
+  "note": "Informa subsidiary, not in the ledger"
+ },
+ "Informa- Bahrain": {
+  "client": null,
+  "basis": "unresolved",
+  "note": "Informa subsidiary, not in the ledger"
+ },
+ "Informa- Ingredients": {
+  "client": null,
+  "basis": "unresolved",
+  "note": "Informa subsidiary, entity not evidenced"
+ },
+ "Informa- PLC": {
+  "client": "Informa",
+  "basis": "exact",
+  "note": "group parent record, not a customer (runbook)"
+ },
+ "Informa- South America": {
+  "client": null,
+  "basis": "unresolved",
+  "note": "Informa subsidiary, not in the ledger"
+ },
+ "Informa": {
+  "client": null,
+  "basis": "unresolved",
+  "note": "bare Informa: sv-informa-halt, never resolved silently"
+ },
+ "Afrixembank": {
+  "client": "Afreximbank",
+  "basis": "alias"
+ },
+ "Afreximbank": {
+  "client": "Afreximbank",
+  "basis": "exact"
+ },
+ "Kortrijk Xpo": {
+  "client": "Kortrijk Xpo (Busworld)",
+  "basis": "alias"
+ },
+ "Busworld": {
+  "client": "Kortrijk Xpo (Busworld)",
+  "basis": "alias"
+ },
+ "HINTE": {
+  "client": "HINTE Expo & Conference GmbH",
+  "basis": "exact"
+ },
+ "Tampere Fairs": {
+  "client": "Tampereen Messut (Tampere Trade Fairs)",
+  "basis": "alias"
+ },
+ "LNRSG": {
+  "client": "Lexis Nexis",
+  "basis": "alias",
+  "note": "LexisNexis Risk Solutions Group"
+ },
+ "A3": {
+  "client": "Association for Advancing Automation - A3",
+  "basis": "exact"
+ },
+ "ACI": {
+  "client": "Airports Council International - ACI Asia-Pacific",
+  "basis": "exact"
+ },
+ "ANWR": {
+  "client": "ANWR Group eG",
+  "basis": "exact"
+ },
+ "Farnborough": {
+  "client": "Farnborough International",
+  "basis": "exact"
+ },
+ "FESPA": {
+  "client": "FESPA",
+  "basis": "exact"
+ },
+ "Bologna Fiere": {
+  "client": "BolognaFiere",
+  "basis": "alias"
+ },
+ "BolognaFiere": {
+  "client": "BolognaFiere",
+  "basis": "exact"
+ },
+ "VDA": {
+  "client": "Verband der Automobilindustrie e.V. (VDA) - (German Association Of Automotive Industry)",
+  "basis": "alias"
+ },
+ "VDI": {
+  "client": "VDI Technologiezentrum GmbH",
+  "basis": "alias"
+ },
+ "Fairtrade Messe": {
+  "client": "Fairtrade Messe GmbH & Co KG",
+  "basis": "alias"
+ },
+ "HMP": {
+  "client": "HMP Global",
+  "basis": "alias"
+ },
+ "ISE": {
+  "client": "Integrated Systems Events GmbH",
+  "basis": "alias"
+ },
+ "CommerceNext": {
+  "client": "CommerceNext",
+  "basis": "exact"
+ },
+ "CloserStill": {
+  "client": "CloserStill Media",
+  "basis": "alias"
+ },
+ "SNAC": {
+  "client": "SNAC International",
+  "basis": "alias"
+ },
+ "BPL": {
+  "client": "BPL Business Media Limited",
+  "basis": "alias"
+ },
+ "Hisern": {
+  "client": "Hisern International Pty Ltd",
+  "basis": "alias"
+ },
+ "Event Developer": {
+  "client": "Event Developers",
+  "basis": "alias"
+ },
+ "OITE": {
+  "client": "Arabian Research Bureau LLC (OITE)",
+  "basis": "alias"
+ },
+ "Mex": {
+  "client": "MEX Exhibitions Pvt Ltd",
+  "basis": "alias"
+ },
+ "NGF": {
+  "client": "NGF (Next Generation Fairs)",
+  "basis": "alias"
+ },
+ "NextFairs": {
+  "client": "NGF (Next Generation Fairs)",
+  "basis": "alias"
+ },
+ "K5": {
+  "client": "K5 GmbH - Future Retail",
+  "basis": "alias"
+ },
+ "RetailX": {
+  "client": "RetailX Events",
+  "basis": "alias"
+ },
+ "Focus": {
+  "client": "FOCUS - The Meeting Place for International Production",
+  "basis": "alias"
+ },
+ "CONNECT Oman": {
+  "client": null,
+  "basis": "unresolved",
+  "note": "runbook: probably Connect but not evidenced"
+ },
+ "VinExpo": {
+  "client": "Vinexposium",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Vinexpo": {
+  "client": "Vinexposium",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Wine paris": {
+  "client": "Vinexposium",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Wine paris & vinexpo Paris": {
+  "client": "Vinexposium",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Vinexpo Meetings Korea": {
+  "client": "Vinexposium",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Vinexpo Explorer Quebec": {
+  "client": "Vinexposium",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Vinexpo India": {
+  "client": "Vinexposium",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "VinExpo Asia 2024": {
+  "client": "Vinexposium",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Messefrankfurt USA": {
+  "client": "Messe Frankfurt GmbH USA",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Texworld": {
+  "client": "Messe Frankfurt GmbH USA",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Texworld Evolution NYC Winter 2023": {
+  "client": "Messe Frankfurt GmbH USA",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "BeautyIstabul": {
+  "client": "BeautyIstanbul (Ipekyolu International Exhibitions)",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Mercator Media": {
+  "client": "Mercator Media Limited",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Seawork": {
+  "client": "Mercator Media Limited",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Fairtrade": {
+  "client": "Fairtrade Messe GmbH & Co KG",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "IMEX America": {
+  "client": "IMEX",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "IMEX Frankfurt": {
+  "client": "IMEX",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "GITEX": {
+  "client": "Dubai World Trade Centre DWTC/ DXB Live",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Gitex Global": {
+  "client": "Dubai World Trade Centre DWTC/ DXB Live",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "GITEX Global 2024": {
+  "client": "Dubai World Trade Centre DWTC/ DXB Live",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Gulfood": {
+  "client": "Dubai World Trade Centre DWTC/ DXB Live",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Interplas": {
+  "client": "Rapid News Group",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "TCT": {
+  "client": "Rapid News Group",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "TCT & MTI 2024": {
+  "client": "Rapid News Group",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "securityandpolicing": {
+  "client": "ADS Group",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ },
+ "Security & Policing": {
+  "client": "ADS Group",
+  "basis": "alias",
+  "note": "event or spelling of this client (named in the description)"
+ }
+}

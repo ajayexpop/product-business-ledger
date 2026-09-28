@@ -1,0 +1,75 @@
+{
+ "k": "EP-16749",
+ "histories": 30,
+ "historiesRead": 30,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-05-05T12:15:59.940+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-05T12:24:03.031+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-05T12:24:05.563+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-05T12:24:07.036+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-05-05T12:28:56.936+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2023-05-05T13:03:22.463+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Ivan Tymoshenko"
+  },
+  {
+   "at": "2023-05-05T13:07:28.403+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Oleksandr Korzh"
+  },
+  {
+   "at": "2023-05-05T16:12:22.042+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Oleksandr Korzh"
+  },
+  {
+   "at": "2023-05-05T16:12:25.269+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Oleksandr Korzh"
+  },
+  {
+   "at": "2023-05-11T08:03:14.370+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790314052509.txt"
+}

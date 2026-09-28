@@ -1,0 +1,135 @@
+{
+ "k": "EP-27396",
+ "histories": 60,
+ "historiesRead": 60,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-03-19T09:18:52.626+0000",
+   "from": "Incoming request",
+   "to": "Awaiting details",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2024-03-19T09:18:55.962+0000",
+   "from": "Awaiting details",
+   "to": "Considering",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2024-03-19T09:18:58.849+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2024-03-19T09:19:02.431+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2024-03-19T12:39:23.706+0000",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-04-02T10:39:35.653+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-04-02T10:39:38.269+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-04-02T11:02:21.516+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Pavel Lukianchenko"
+  },
+  {
+   "at": "2024-04-02T11:47:14.168+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-04-02T12:44:01.359+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-04-10T11:20:41.292+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-04-19T10:03:52.684+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-04-24T09:28:55.993+0100",
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2024-04-24T09:28:58.226+0100",
+   "from": "Ready for development",
+   "to": "On-hold",
+   "by": "Vladyslav Dziubenko"
+  },
+  {
+   "at": "2024-04-26T11:40:13.972+0100",
+   "from": "On-hold",
+   "to": "In progress",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2024-04-26T11:40:16.200+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2024-04-26T11:40:23.771+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2024-04-29T09:49:32.757+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2024-05-09T09:54:57.596+0100",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-05-09T09:54:59.633+0100",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790315004759.txt"
+}

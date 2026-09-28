@@ -1,0 +1,123 @@
+{
+ "k": "EP-35968",
+ "histories": 60,
+ "historiesRead": 60,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-11-29T12:43:54.269+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-11-29T12:43:55.922+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-11-29T12:43:57.890+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-11-29T12:43:59.767+0000",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-11-29T12:49:10.583+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-12-03T13:46:11.764+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-12-05T17:11:04.453+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2025-01-08T12:14:41.964+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-01-08T15:17:03.097+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Maksym Yermolenko"
+  },
+  {
+   "at": "2025-01-08T15:17:05.285+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Maksym Yermolenko"
+  },
+  {
+   "at": "2025-01-13T09:28:50.057+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2025-01-21T10:39:07.830+0000",
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2025-01-21T10:39:20.313+0000",
+   "from": "Ready for development",
+   "to": "On-hold",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2025-01-29T12:54:08.912+0000",
+   "from": "On-hold",
+   "to": "In progress",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-01-29T12:54:11.573+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-01-29T12:54:13.438+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-01-29T12:54:28.148+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-01-29T12:54:57.672+0000",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790315902749.txt"
+}

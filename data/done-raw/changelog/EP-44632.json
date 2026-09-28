@@ -1,0 +1,105 @@
+{
+ "k": "EP-44632",
+ "histories": 51,
+ "historiesRead": 51,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2025-08-20T10:08:04.860+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-08-20T10:08:19.469+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-08-20T10:08:23.840+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-10-07T11:18:46.198+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-10-10T09:45:25.754+0100",
+   "from": "Estimated request",
+   "to": "Awaiting Estimation",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-10-10T09:45:30.558+0100",
+   "from": "Awaiting Estimation",
+   "to": "Estimated request",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-10-10T09:45:34.013+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-10-10T09:46:38.152+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-10-10T09:46:47.365+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-10-10T09:47:00.648+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-10-10T09:47:08.515+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-10-10T14:22:16.478+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2025-10-20T17:00:13.433+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Pedro Goncalves"
+  },
+  {
+   "at": "2025-10-23T23:40:06.886+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Pedro Goncalves"
+  },
+  {
+   "at": "2025-12-03T08:53:52.791+0000",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Yevhen Yachmenov"
+  },
+  {
+   "at": "2026-09-15T17:46:35.857+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790317463862.txt"
+}

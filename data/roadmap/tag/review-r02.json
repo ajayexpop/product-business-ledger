@@ -1,0 +1,1202 @@
+[
+ {
+  "k": "EP-23477",
+  "summary": "Refactoring: Consolidate Business Logic from RFS Controllers into a Unified Service",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Consolidated request-for-sample controller logic into one RFS service. RFS logic lives in one service."
+ },
+ {
+  "k": "EP-23978",
+  "summary": "Small changes for table logic",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Fixed exhibitor manual table uploads: upload once, save on Save, show saving, name the doc after the file if left blank. Manual table documents upload and save smoothly."
+ },
+ {
+  "k": "EP-24094",
+  "summary": "Android|Lead scan| Need remove redirection on user profile after tapping on user name ",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead scanning in app",
+  "text": "Stopped Android lead scanning from opening the user profile when the name is tapped during a scan. Scanning stays on the scan screen; profiles open from the scanned list."
+ },
+ {
+  "k": "EP-24776",
+  "summary": "Exhibitor export: change custom fields list",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor exports",
+  "text": "Rebuilt the exhibitor export custom field list from the exhibitor parameters, resolving duplicate fields. Exhibitor exports offer a consistent field list."
+ },
+ {
+  "k": "EP-25692",
+  "summary": "Need display on Product page data from custom field ",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Custom fields on product pages",
+  "text": "Showed product custom field data on product pages. Product pages display custom fields."
+ },
+ {
+  "k": "EP-25989",
+  "summary": "Android/ The exhibitor doesn't see own account in exhibitors list ",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Let exhibitors see their own account in the Android exhibitors list, respecting the permission matrix. Exhibitors find themselves in the list."
+ },
+ {
+  "k": "EP-26256",
+  "summary": "Table section shouldn't be in the basket",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Stopped the exhibitor manual table section adding items to the basket. Table sections no longer create basket items."
+ },
+ {
+  "k": "EP-26547",
+  "summary": "Lead capture availability settings",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead capture settings",
+  "text": "Defined lead capture availability: free for everyone, per exhibitor or per team member, with basket and price effects and unavailable markers. Organisers control who gets lead capture and whether it's paid."
+ },
+ {
+  "k": "EP-27305",
+  "summary": "Add endpoint for admin panel to upload file as in front-end",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Added an admin panel endpoint to upload files to S3 like the frontend. The admin panel can upload files."
+ },
+ {
+  "k": "EP-27351",
+  "summary": "Need to select a text on the sponsor card",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Made text on sponsor and sponsored product cards in sliders selectable. Users can copy sponsor card text."
+ },
+ {
+  "k": "EP-31175",
+  "summary": "Refactor of Exhibitor public profile in app",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Specified and refactored the exhibitor public profile in the app: header images, logo, stands, website, social links and more. The app's exhibitor profile follows a documented layout."
+ },
+ {
+  "k": "EP-31595",
+  "summary": "Components design check",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "theme": "exhib",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Fixed component design gaps in the registration form: borders, tab corners, checkbox lines, spacing and horizontal scroll. Registration form components match the design."
+ },
+ {
+  "k": "EP-31674",
+  "summary": "Make password not required for new Exhibitor profile",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor profile creation",
+  "text": "Made the password optional on the new admin exhibitor profile, keeping the old password when left empty. Admins can change an exhibitor's username without touching the password."
+ },
+ {
+  "k": "EP-32169",
+  "summary": "Improve Lead Questions logic on global, category and exhibitor levels",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead capture questions",
+  "text": "Reworked lead questions across global, category and exhibitor levels: 'Additional' naming, per-category standard questions with limits, global toggles controlling lower levels. Organisers control standard and additional lead questions consistently at every level."
+ },
+ {
+  "k": "EP-32561",
+  "summary": "standard lead questions are not shown",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed standard lead questions not appearing on the frontend or in the lead questions API. Enabled standard lead questions show up."
+ },
+ {
+  "k": "EP-33766",
+  "summary": "Add a check for relevance of re-generation of the profile image of the exhibitor",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Regenerated exhibitors' 'Share Your Profile' images only when relevant details change, and for all exhibitors when event details change. Share images stay current without needless regeneration."
+ },
+ {
+  "k": "EP-33915",
+  "summary": "After adding/deleting a team member on the frontend, the translation is lost",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed team member attribute translations being lost after adding or removing a team member. Team member attributes keep their translations."
+ },
+ {
+  "k": "EP-34634",
+  "summary": "Need to refactor activity products, and references attributes",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Moved exhibitor product restriction and limit fields into exhibitor attributes. Product limits are stored with other exhibitor attributes."
+ },
+ {
+  "k": "EP-35640",
+  "summary": "Display the sponsors with the pagination",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsor listings",
+  "text": "Loaded marketplace sponsors in batches of 12, capping the expanded view at 48. Sponsor sliders load faster without changing their look."
+ },
+ {
+  "k": "EP-35922",
+  "summary": "Add account_id for exhibitors table -- All exhibitor accounts should be taken from this field",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Added an account ID to the exhibitors table as the source of exhibitor accounts. Exhibitor accounts are linked directly."
+ },
+ {
+  "k": "EP-36646",
+  "summary": "Hide the fields from the Table section in manual",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor manual",
+  "text": "Hid two payment-related fields from exhibitor manual table sections in admin and on the frontend. Tables no longer show irrelevant fields."
+ },
+ {
+  "k": "EP-37305",
+  "summary": "Sort child exhibitors in the alphabetical accending order (A-z) in the frontend and mobile app endpoints",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Parent and child exhibitors",
+  "text": "Sorted child exhibitors alphabetically in frontend and app responses. Child exhibitors appear A–Z."
+ },
+ {
+  "k": "EP-37846",
+  "summary": "Admin panel/ Sponsors/ Update field name from \"App exhibitor list\" to \"App exhibitor/pavilion  list\"",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Parent and child companies",
+  "text": "Renamed the sponsor setting 'App exhibitor list' to 'App exhibitor/pavilion list'. The setting name covers pavilions."
+ },
+ {
+  "k": "EP-38531",
+  "summary": "iOS/Parent-child/ Translations - update horizontal exhibitor card view ",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Parent and child companies",
+  "text": "Showed child companies on two rows on iOS horizontal exhibitor cards. iOS cards show more child companies."
+ },
+ {
+  "k": "EP-38724",
+  "summary": "The Contact person in the exhibitor profile ",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Kept the Team Members tab in the admin exhibitor profile regardless of the frontend Team Members module setting. Admins always see exhibitor team members."
+ },
+ {
+  "k": "EP-38749",
+  "summary": "Need add some loader in \"Team members\" ( contacts) section on exhibitor public profile page ",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor profile improvements",
+  "text": "Added a loader to the team members section of exhibitor profiles. Users see that team members are loading."
+ },
+ {
+  "k": "EP-38910",
+  "summary": "Remove category list settings from all endpoints except get/exhibitions",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed category list settings from all endpoints except the exhibition settings, adding the parent-selectable flag there. Category settings come from one place."
+ },
+ {
+  "k": "EP-39044",
+  "summary": "Refactor category modal tree to reduce recalculations amount",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Built the category tree once in the category modal to cut recalculation during search and render. The category modal responds faster."
+ },
+ {
+  "k": "EP-39124",
+  "summary": "Categories in the Custom Listing table do not update correctly",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Updated custom listing table categories without a page refresh and restored the orange dot colour. The custom listing reflects category changes straight away."
+ },
+ {
+  "k": "EP-39321",
+  "summary": "Refactor manual submit notifications",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Fixed exhibitor manual submission notifications properly, replacing an earlier workaround. Manual submission emails are sent reliably."
+ },
+ {
+  "k": "EP-39349",
+  "summary": "Fix switch in exhibitor profile(admin)",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the switch label style in the admin exhibitor profile. The switch matches the design."
+ },
+ {
+  "k": "EP-39377",
+  "summary": "Check rendering FAV button on the marketplace",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "test",
+  "feature": null,
+  "text": "Checked marketplace favourite buttons re-rendering on every slider change. Favourite buttons render efficiently."
+ },
+ {
+  "k": "EP-39511",
+  "summary": "Add validation to the Embedded code video field on Product page, in Groups, etc. AND add scroll if needed",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor profile video embeds",
+  "text": "Validated embedded video code on product, group, feed and exhibitor event pages, adding scrollbars where needed. Embedded videos are validated across these pages."
+ },
+ {
+  "k": "EP-40242",
+  "summary": "Control if Telephone and Job Title fields in the add TM form are required",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Team member form settings",
+  "text": "Added 'Use for team member creation' to the Telephone and Job Title registration fields, replacing static fields in the team member form. Team member forms use the registration form's phone and job title settings."
+ },
+ {
+  "k": "EP-40302",
+  "summary": "Scanned Visitor QR includs also team members",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead capture",
+  "text": "Included team members in the Scanned Visitor QR lead setting, listed as QR visitor with full data in the leads file. Scanned team members appear in exhibitors' leads."
+ },
+ {
+  "k": "EP-41570",
+  "summary": "Add the tooltip for the Custom Sponsor limit field",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsor limits",
+  "text": "Added a 'use 0 for unlimited' hint to the custom sponsor limit setting. Admins know how to set unlimited sponsors."
+ },
+ {
+  "k": "EP-41662",
+  "summary": "[FE] Manual refactoring | Equipment Section",
+  "epic": "[FE Techdept] Manual refactoring",
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Refactored the exhibitor manual equipment section: auto search, pagination, cards and booking popup. The equipment section is easier to use and maintain."
+ },
+ {
+  "k": "EP-41849",
+  "summary": "News header image | Change the cropper ratio to 1/5",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor news",
+  "text": "Changed the admin news header cropper to the 1:5 ratio used on the frontend, leaving existing images unchanged. News headers look the same in admin and on the site."
+ },
+ {
+  "k": "EP-42095",
+  "summary": "[FE] Implementation of the overall structure for the manual: context, navigation, and display logic",
+  "epic": "[FE Techdept] Manual refactoring",
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Restructured the exhibitor manual frontend: separate files, optimised condition logic, and entry routing to the first unsubmitted section. Exhibitors land on their first unsubmitted manual section."
+ },
+ {
+  "k": "EP-42370",
+  "summary": "Changes in Manual API - part of Manual refactoring scope",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Fixed the manual section data API returning empty basket and paid items for equipment and lead capture. Manual sections reflect paid items."
+ },
+ {
+  "k": "EP-42570",
+  "summary": "Change name of the Reason for Scannyng of any code -- make it more obvious in the report",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead scan reasons",
+  "text": "Renamed the any-code scan reason to 'Scanned Badge (any code)' in reports. Reports distinguish any-code scans."
+ },
+ {
+  "k": "EP-43244",
+  "summary": "Android/ Update  banner tap behavior for Sponsored Banners without website link",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsor banners",
+  "text": "Opened the linked exhibitor's profile on Android when a sponsored banner has no website link, respecting the permission matrix. Android banner taps lead to the exhibitor."
+ },
+ {
+  "k": "EP-43245",
+  "summary": "iOS/ Update  banner tap behavior for Sponsored Banners without website link",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsor banners",
+  "text": "Opened the linked exhibitor's profile on iOS when a sponsored banner has no website link, respecting the permission matrix. iOS banner taps lead to the exhibitor."
+ },
+ {
+  "k": "EP-43294",
+  "summary": "[portalUI] close ability to buylead-capture-pro for unauthorized user",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "Limited buying Lead Capture Pro to exhibitors and team members, asking others to log in. Only exhibitor users can buy Lead Capture Pro."
+ },
+ {
+  "k": "EP-43618",
+  "summary": "Incorrect Sorting of Exhibitors in Parent/Child Structure on Techboard and Team Schedule",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed parent/child sorting so the parent stays first and only child exhibitors sort alphabetically. Menus and team schedule list the parent first."
+ },
+ {
+  "k": "EP-44306",
+  "summary": " Logic for Scan Badges Page - Lead Capture Pro",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead capture",
+  "text": "Redirected exhibitors without Lead Capture Pro from the app's scan badge page to the Lead Capture Pro purchase page. Exhibitors are led to buy Lead Capture Pro instead of hitting an error."
+ },
+ {
+  "k": "EP-44314",
+  "summary": "Lead Capture Pro logination improvement",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "Kept users on the Lead Capture Pro page after logging in so they can finish buying. The purchase journey continues after login."
+ },
+ {
+  "k": "EP-44730",
+  "summary": "Logo option as an exhibitor settings",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor logo settings",
+  "text": "An 'Allow logo' setting per exhibitor category with an exhibitor-level override; when off, exhibitors can't upload a logo and the default shows publicly. Disallowed logos are hidden on web and app per event, and come back automatically if the setting is turned on again."
+ },
+ {
+  "k": "EP-45154",
+  "summary": "Marketplace chat bot has no chat",
+  "epic": null,
+  "theme": "exhib",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the marketplace chatbot losing its chat after switching from mobile to desktop view. The chatbot keeps its conversation."
+ },
+ {
+  "k": "EP-46050",
+  "summary": "Standard Questions Default State Configuration",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "An organiser setting to turn on all standard lead questions by default for every exhibitor, including new ones, in the app's lead retrieval. Exhibitors start with all standard questions on and can switch individual ones off; limits apply when they edit."
+ },
+ {
+  "k": "EP-46360",
+  "summary": "Lead capture notes field. Character limitation",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead capture",
+  "text": "Limited lead capture notes to 500 characters, including spaces and emoji. Lead notes have a set length."
+ },
+ {
+  "k": "EP-46483",
+  "summary": "Attend a stand",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Attend a stand",
+  "text": "Added 'Attend a stand': after favouriting an exhibitor, users can say when they plan to visit, and exhibitors see who is coming. Exhibitors know which visitors intend to come to their stand."
+ },
+ {
+  "k": "EP-47311",
+  "summary": "Attend a Stand. App listing using vebview.",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Attend a stand",
+  "text": "Added Attend a Stand list views to the app through webviews, configurable in the app builder for participants and exhibitors. App users can see their planned stand visits, and exhibitors their expected visitors."
+ },
+ {
+  "k": "EP-47680",
+  "summary": "Global Search. Sponsorship banner",
+  "epic": "Search Anatomy",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsored placements in search",
+  "text": "Sponsored banners on the new Global Search page (one or two), managed in sponsor and exhibitor settings, with an option to disable the link. Organisers can sell Global Search banners, with impressions and clicks in banner statistics and the XLSX export."
+ },
+ {
+  "k": "EP-48886",
+  "summary": "Custom Questions Page UI Improvements (Exhibitor Profile)",
+  "epic": "Exhibitor profile",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead capture custom questions",
+  "text": "A tidier Custom Questions page in the exhibitor profile: the summary block shows only its title and the button now reads '+ Add New Question'. Exhibitors see a cleaner page with a shorter, clearer add-question button in English and French."
+ },
+ {
+  "k": "EP-49735",
+  "summary": "AI Notetaker Access Control (by Exhibitor Category)",
+  "epic": "Lead Capture pro settings",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "An AI notes toggle per exhibitor category (off by default) controls who can use the app's AI notetaker; participants never get it. Exhibitors and their teams get AI meeting notes in the app only when their category allows it."
+ },
+ {
+  "k": "EP-49740",
+  "summary": "AI Notes — Per-Exhibitor / Per-Category Control",
+  "epic": "Lead Capture pro settings",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "An AI notes toggle per exhibitor, synced to the exhibitor category with a custom override and reset, controlling access to the app's AI notetaker. Exhibitors and their team get the AI notetaker only where enabled; participants never get it."
+ },
+ {
+  "k": "EP-50051",
+  "summary": "Random sorting for Sponsors and Sponsored products",
+  "epic": "Admin Panel Restructure & Navigation",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsor visibility controls",
+  "text": "Sponsors and sponsored products on the marketplace can be sorted by matchmaking, set priority, or a new random order on each refresh. Organisers can rotate sponsor exposure fairly, on web and app."
+ },
+ {
+  "k": "EP-50123",
+  "summary": "Lead Capture Access Control by Exhibitor Category",
+  "epic": "Lead Capture pro settings",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "Lead Capture access moves from a global Exhibitor Manual setting to a per exhibitor-category toggle; buying Lead Capture Pro always grants access. Exhibitors and their teams get lead capture in the app only if their category allows it or they bought it."
+ },
+ {
+  "k": "EP-50124",
+  "summary": "Lead Capture: Exhibitor-Level Granular Control",
+  "epic": "Lead Capture pro settings",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "A per-exhibitor Lead capture toggle that follows the exhibitor's category, with a custom override and reset; Lead Capture Pro buyers always get access. Organisers switch lead capture on or off for one exhibitor and their team without affecting others in the category."
+ },
+ {
+  "k": "EP-50125",
+  "summary": "Product QR Codes: Category-Level Access Control",
+  "epic": "Lead Capture pro settings",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "Product QR codes move from a global setting to a per exhibitor-category toggle, off by default; buying Lead Capture Pro always grants access. Exhibitors see product QR codes in product editing on web only when their category allows it or they bought it."
+ },
+ {
+  "k": "EP-50126",
+  "summary": "Product QR Codes: Exhibitor-Level Access Control",
+  "epic": "Lead Capture pro settings",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "A per-exhibitor Product QR codes toggle that follows the exhibitor's category, with a custom override and reset; Lead Capture Pro still takes priority. Organisers can switch product QR codes on or off for one exhibitor without affecting the rest of its category."
+ },
+ {
+  "k": "EP-50127",
+  "summary": "Lead Capture Pro — Settings Consolidation",
+  "epic": "Lead Capture pro settings",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "Exhibitor category and profile settings gain Lead Capture, Product QR Codes and AI Meeting Notes, grouped with lead questions in one Lead Capture Pro block. Organisers manage every Lead Capture Pro feature for categories and exhibitors from one consistent block."
+ },
+ {
+  "k": "EP-52414",
+  "summary": "Increasing Sponsor Limit to 150 for legacy view",
+  "epic": "Admin Panel Restructure & Navigation",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsor visibility controls",
+  "text": "The legacy marketplace sponsors view shows up to 150 sponsors (6 per row, up to 25 rows) in expanded view, instead of 48. Events with many sponsors can show all of them on the marketplace, with an updated admin tooltip."
+ },
+ {
+  "k": "EP-52566",
+  "summary": "Removal of Google+ from Brand Creation Social Media Links",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor brand profiles",
+  "text": "Google+ is removed from the brand social links on the add and edit brand pages, and no longer shows on brand profiles. Brand forms show only live networks, and event websites and apps no longer render Google+ links."
+ },
+ {
+  "k": "EP-52952",
+  "summary": "Update Lead Contribution Logic for Exhibitors Based on Meeting Appointments",
+  "epic": "Lead Capture pro settings",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "Leads from meetings booked with an exhibitor now go to the team members in the meeting, not the exhibitor; exhibitor-only meetings still count for the exhibitor. Exhibitor and team-member lead files stay consistent with no duplicates, including when files are regenerated."
+ },
+ {
+  "k": "EP-53767",
+  "summary": "Global Search. Sponsored Exhibitors",
+  "epic": "Search Anatomy",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsored placements in search",
+  "text": "A rotating Sponsored Exhibitors card on the Global Search page, with the organiser's label, sponsor bar colour, arrows and sponsor sorting rules. Sponsors rotate every five seconds regardless of the query, and views and clicks count in the same statistics as the marketplace."
+ },
+ {
+  "k": "EP-53768",
+  "summary": "Global Search. Sponsored Products",
+  "epic": "Search Anatomy",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Sponsored placements in search",
+  "text": "A rotating Sponsored Products block on the Global Search page, with a configurable label, sponsor colour, arrows and product sorting rules. Sponsored products rotate on the search page, respect visibility restrictions, and feed the same product statistics as the marketplace."
+ },
+ {
+  "k": "EP-53945",
+  "summary": "Update on Team Member Creation Rules for Exhibitors and Login Uniqueness Validation",
+  "epic": "Exhibitor profile",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor team management",
+  "text": "Creating team members and other users now checks for duplicate logins, not duplicate emails, with a clear 'already used as a login' error. Legitimate team members can be created, duplicate logins are still prevented, and the rule is the same in admin, portal and API."
+ },
+ {
+  "k": "EP-54261",
+  "summary": "Removal of Global Settings related to Lead Capture Pro and Adjustments to QR Codes Export in Admin Panel",
+  "epic": "Lead Capture pro settings",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Lead Capture Pro",
+  "text": "Redundant global Lead Capture Pro settings are removed, and QR code exports for exhibitors and products are always available. Organisers can always export exhibitor and product QR codes, with no conflicting global toggles."
+ },
+ {
+  "k": "EP-54733",
+  "summary": "Display  Company Name in Interaction Dashboards ",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Exhibitor insights",
+  "text": "The Interaction Dashboard in participant and exhibitor profiles shows each listed participant's company name, truncated with a tooltip. Users can see which company each person they interacted with belongs to."
+ },
+ {
+  "k": "EP-55642",
+  "summary": "Enhancing Exhibitor Import to Attach Brands Across Events",
+  "epic": "Exhibitor profile",
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Products and brands",
+  "text": "Exhibitor import and adding exhibitors from the global database now attach their existing brands, and brand–product links, to the new event. Recurring events carry exhibitors' brands over automatically, with no new import column and no duplicate brands."
+ },
+ {
+  "k": "EP-55645",
+  "summary": "Region filters",
+  "epic": null,
+  "theme": "exhib",
+  "include": true,
+  "exclude": null,
+  "feature": "Region filters",
+  "text": "An optional Regions subfilter under Country for exhibitor, product, brand, pavilion, delegate, speaker and buyer listings on web. Visitors expand a country to pick regions, like category subfilters; it's off by default and web only."
+ },
+ {
+  "k": "EP-17758",
+  "summary": "Create a method is Networking Opt-In operations allowed for specific account",
+  "epic": null,
+  "theme": "formats",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Created one method that decides whether an account may network, based on the opt-in block, default setting, GDPR answer and exhibitor ownership. Networking permission is decided by a single method."
+ },
+ {
+  "k": "EP-26686",
+  "summary": "Add tooltip to \"Meeting availability\" filters in the admin panel ",
+  "epic": null,
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting availability filter",
+  "text": "Added a 'web only' tooltip to Meeting availability filters in the admin panel. Admins know the filter only works on web."
+ },
+ {
+  "k": "EP-29233",
+  "summary": "Fix timeline size in the speed networking",
+  "epic": "Speed Networking",
+  "theme": "formats",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Fixed the speed networking timeline size on resize. The timeline keeps its size."
+ },
+ {
+  "k": "EP-30182",
+  "summary": "Add sorting and search to the Speed Networking main page",
+  "epic": null,
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Speed networking",
+  "text": "Added search by name and newest-first sorting to the speed networking admin page. Admins can find speed networking sessions quickly."
+ },
+ {
+  "k": "EP-31628",
+  "summary": "Increase min number of field \"max number of people per table (number field)\"",
+  "epic": null,
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Round tables",
+  "text": "Set the minimum 'max people per table' for round tables to three. Round tables can't be set up for fewer than three people."
+ },
+ {
+  "k": "EP-32534",
+  "summary": "Speed Networking - add pls designs for cases in ticket ",
+  "epic": null,
+  "theme": "formats",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Designed speed networking cases: sessions at a stand, missing images, long names and profile header. Speed networking screens have designs for edge cases."
+ },
+ {
+  "k": "EP-33706",
+  "summary": "Set up push notifications for Speed Networking 2 in iOS and Android",
+  "epic": "Opt-In Speed Networking Session",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Opt-in speed networking",
+  "text": "Set up iOS and Android push notifications for opt-in speed networking: added, removed, schedules and changes by role. App users get push notifications for their speed networking sessions."
+ },
+ {
+  "k": "EP-33948",
+  "summary": "SN2 || Rework bulk email notifications to chunks ",
+  "epic": null,
+  "theme": "formats",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Sent opt-in speed networking bulk emails in chunks of 500. Large speed networking email sends complete reliably."
+ },
+ {
+  "k": "EP-39148",
+  "summary": "1st generation of meetings - DS",
+  "epic": "Hyve Meeting Program",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Built the first meeting generation for meeting programmes: sponsored meetings only, in four relevance tiers with company representation rules. After voting, sponsored meetings are generated from mutual relevance markings."
+ },
+ {
+  "k": "EP-39150",
+  "summary": "2nd generation of meetings - DS",
+  "epic": "Hyve Meeting Program",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Built the second meeting generation: keeps confirmed meetings, then generates sponsored and then free meetings by relevance tier. After first confirmation, remaining meetings are generated in priority order."
+ },
+ {
+  "k": "EP-39228",
+  "summary": "MP || FE Meeting Completion via QR & Badge Scan",
+  "epic": "Hyve Meeting Program",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Marked meeting programme meetings as completed when the table QR code or the other person's badge is scanned, with a table QR export. Meetings are recorded as completed from onsite scans."
+ },
+ {
+  "k": "EP-39390",
+  "summary": "Android/ Long location names/ Pls update same behaviour for Speed networking session cards ",
+  "epic": null,
+  "theme": "formats",
+  "include": false,
+  "exclude": "bugfix",
+  "feature": null,
+  "text": "Applied the long location name handling to Android speed networking session cards. Long locations display cleanly on those cards."
+ },
+ {
+  "k": "EP-40448",
+  "summary": "MP || FE Meeting Timeslot Blocking",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Let meeting programme users block timeslots up to a per-role limit set by the organiser. Participants can block limited timeslots."
+ },
+ {
+  "k": "EP-41328",
+  "summary": "MP || Meeting Program session creation and configuration (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Built meeting programme session creation and configuration in the admin panel: cards, general, meetings, timeline and participation conditions. Organisers create and configure meeting programmes in the admin panel."
+ },
+ {
+  "k": "EP-41693",
+  "summary": "[Portal-UI]: Unify components for Speed Networking and Meeting Program",
+  "epic": null,
+  "theme": "formats",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Created shared frontend components for speed networking and meeting programmes. Both formats reuse the same components."
+ },
+ {
+  "k": "EP-42263",
+  "summary": "MP || Sessions list page & details page (Frontend)",
+  "epic": "Hyve Meeting Program",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Built the meeting programme pages for participants: session list, details, role and status, meeting blocks, timeline and sponsored limits. Participants find their meeting programme sessions in their profile."
+ },
+ {
+  "k": "EP-42796",
+  "summary": "SN & MP -- Connect services to the new DB",
+  "epic": null,
+  "theme": "formats",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Connected speed networking and meeting programme services to their new container infrastructure. Both formats run on the new infrastructure."
+ },
+ {
+  "k": "EP-43553",
+  "summary": "[adminv2] add virtualization for the sponsor list to the in the round tables",
+  "epic": null,
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Virtualised the sponsor list in round table setup. Long sponsor lists stay responsive."
+ },
+ {
+  "k": "EP-43554",
+  "summary": "[adminv2] browser history, back, in the round tables",
+  "epic": null,
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Round tables",
+  "text": "Made the browser Back button work across round table tabs in the new admin panel. Admins can navigate round tables with Back."
+ },
+ {
+  "k": "EP-43914",
+  "summary": "MP || FE Meeting Program Cards in My Schedule",
+  "epic": "Hyve Meeting Program",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Added meeting programme cards to My Schedule: placeholder cards per block, then individual confirmed meetings once schedules are final. Participants see meeting programme blocks and meetings in their schedule."
+ },
+ {
+  "k": "EP-43923",
+  "summary": "MP || FE Exhibitor flow",
+  "epic": "Hyve Meeting Program",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Built the exhibitor flow for meeting programmes: enrolment and notifications, menu entry, details page, sponsored limits and team member roles. Exhibitors manage their meeting programme participation and team."
+ },
+ {
+  "k": "EP-43924",
+  "summary": "MP || FE User flow",
+  "epic": "Hyve Meeting Program",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Built the user flow for meeting programmes: enrolment by role, cancellation rules, notifications and main page. Buyers, participants and team members follow a defined programme flow."
+ },
+ {
+  "k": "EP-44052",
+  "summary": "Round tables. Frontend impovements",
+  "epic": null,
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Round tables",
+  "text": "Showed moderators only their assigned topics on round table cards in the schedule and popup. Moderators see only their topics."
+ },
+ {
+  "k": "EP-44786",
+  "summary": "12-hour based time for Meeting program",
+  "epic": null,
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Added 12-hour am/pm time to meeting programmes. Meeting programmes can show 12-hour times."
+ },
+ {
+  "k": "EP-44876",
+  "summary": "Make optimization for long api fetches",
+  "epic": "Hyve Meeting Program",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Platform performance",
+  "text": "Optimised the frontend for slow meeting programme API calls. Meeting programme pages handle slow responses better."
+ },
+ {
+  "k": "EP-45678",
+  "summary": "Rename variable in the MeetingProgramConditions to participantConditions",
+  "epic": null,
+  "theme": "formats",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Renamed a meeting programme conditions variable to participantConditions. The code is clearer."
+ },
+ {
+  "k": "EP-45790",
+  "summary": "Meeting program. Remove Mutual matches tab",
+  "epic": "Hyve Q4 (End of October Deliverables)",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Removed the Mutual relevance tab from meeting programmes and kept users in all tabs after they're marked relevant. Users stay active in meeting programme matching."
+ },
+ {
+  "k": "EP-46143",
+  "summary": "Log request, processing artifacts and service response to database",
+  "epic": "Improve Speed Networking Service",
+  "theme": "formats",
+  "include": false,
+  "exclude": "internal",
+  "feature": null,
+  "text": "Built logging of requests, processing artefacts and responses for data science services to a database. Data science services are traceable."
+ },
+ {
+  "k": "EP-46346",
+  "summary": "Remove outdated SN Service artifacts from AWS infra",
+  "epic": "Improve Speed Networking Service",
+  "theme": "formats",
+  "include": false,
+  "exclude": "refactor",
+  "feature": null,
+  "text": "Removed old speed networking Lambda functions and unneeded resources from AWS. The old service artefacts are gone."
+ },
+ {
+  "k": "EP-46473",
+  "summary": "Round tables. Allow to add users to the table after the final schedule",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Round tables",
+  "text": "Let organisers add, remove and move users between round tables after the session starts and until it ends. Organisers can adjust tables during a round table session."
+ },
+ {
+  "k": "EP-46474",
+  "summary": "Round tables. Add setting to define the tables limit",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Round tables",
+  "text": "Added a tables limit per round table session, with unplaced participants marked Unassigned. Organisers cap tables to match the room."
+ },
+ {
+  "k": "EP-46485",
+  "summary": "Meeting program. Early access for Exhibitors",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Enrolled exhibitors in meeting programmes at creation so they can assign sponsor roles before users are notified. Exhibitors prepare their team before the programme starts."
+ },
+ {
+  "k": "EP-46486",
+  "summary": "Meeting program. Remove Download Schedule option",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Removed the Download Schedule option from meeting programmes. The schedule section is simpler."
+ },
+ {
+  "k": "EP-46487",
+  "summary": "Meeting Program. Replace Icon for Sponsored Meetings",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Replaced the dollar icon for sponsored meetings with a clearer marker. Sponsored meetings are marked more meaningfully."
+ },
+ {
+  "k": "EP-46551",
+  "summary": "Meeting program. Split Voting Phase, Hide Mutual Matches, Restructure Tabs",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Split meeting programme voting into marking and responding phases, removing mutual matches and restructuring tabs. Users first pick who they want to meet, then respond to incoming interest."
+ },
+ {
+  "k": "EP-46552",
+  "summary": "Meeting program. Meeting Confirmation Changes",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Changed meeting programme confirmation: private responses, switchable until the stage ends, and a single confirmation list. Users confirm or decline freely until each stage closes."
+ },
+ {
+  "k": "EP-46563",
+  "summary": "Meeting program. Manual meeting creation improvements",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Improved manual meeting creation: a side panel showing mutual matches first, with notifications and a marker for organiser-created meetings. Organisers create meetings faster from mutual matches."
+ },
+ {
+  "k": "EP-46564",
+  "summary": "Meeting Program. Remove User Profile Block",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Removed the user profile block from the meeting programme page so the user list shows three columns. More matches fit on screen."
+ },
+ {
+  "k": "EP-46565",
+  "summary": "Meeting Program. Remove Image and Description",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Removed the meeting programme image and description from the details page. The page is more compact."
+ },
+ {
+  "k": "EP-46566",
+  "summary": "Meeting program. Combine Meeting Blocks into Single Schedule List",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Combined meeting programme blocks into one chronological schedule with block dividers. Users see their whole programme schedule in one list."
+ },
+ {
+  "k": "EP-47055",
+  "summary": "Improve click behaviour",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "theme": "formats",
+  "include": false,
+  "exclude": "thin",
+  "feature": null,
+  "text": "Improved click behaviour for buttons inside menu items. Buttons in menus respond as expected."
+ },
+ {
+  "k": "EP-48752",
+  "summary": "Meeting program. Sorting options for Relevance and opt-ins phases",
+  "epic": "Hyve Q1.26 delievery",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "A sorting selector in the Meeting Program's matches list and incoming relevance list: first name, last name, company (default) or relevance. Users sort matches within their filtered results to decide who to meet."
+ },
+ {
+  "k": "EP-49001",
+  "summary": "Meeting Program. Show General Buyers During Relevance Stage",
+  "epic": "Hyve Q1.26 delievery",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "During the Meeting Program's relevance stage, general buyers are visible to team members and participants even if the buyer didn't reach out first. Participants and team members can find and signal relevance to general buyers directly."
+ },
+ {
+  "k": "EP-49002",
+  "summary": "Remove Deleted Users From Meeting Program",
+  "epic": "Hyve Q1.26 delievery",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "When a user is removed from the platform, all their Meeting Program meetings are removed from lists, admin views, reports, agendas and counters. Meeting lists, reports, generated agendas and analytics only show meetings with current users."
+ },
+ {
+  "k": "EP-49075",
+  "summary": "Meeting program. No Show (User)",
+  "epic": "Hyve Q1.26 delievery",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Meeting programmes",
+  "text": "Scanning a table's QR code during a meeting now marks it No Show (User), and ratings open in the app once the final schedule is out. The Meeting Program report gets a No Show (User) column in place of the old completion timestamp."
+ },
+ {
+  "k": "EP-49077",
+  "summary": "Round Tables. Remove Deleted Users from Sessions",
+  "epic": "Hyve Q1.26 delievery",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Round tables",
+  "text": "Users removed from the platform, by integration or in the Admin Panel, are removed from every Round Table session. Removed users no longer appear in round table seating, participant lists or admin details on web or app."
+ },
+ {
+  "k": "EP-50104",
+  "summary": "Centralised Management for Speed Networking, Meeting Program, and Concierge Meetings",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "theme": "formats",
+  "include": true,
+  "exclude": null,
+  "feature": "Centralised meeting formats admin",
+  "text": "A new Meeting Formats menu in the Admin Panel holding Speed Networking, Meeting Program and Concierge Meetings settings, with Concierge zones in their own tab. Existing settings move unchanged into Meeting Formats, stay scoped to the event and follow existing permissions."
+ }
+]

@@ -1,0 +1,209 @@
+{
+ "id": "LE-2026-0001",
+ "status": "closed",
+ "loggedBy": {
+  "name": "TAM (example)",
+  "email": "tam@example.invalid"
+ },
+ "loggedAt": "2026-09-28T10:14:00Z",
+ "raisedBy": {
+  "name": "Chris"
+ },
+ "raisingLayer": "sales",
+ "source": {
+  "kind": "intake-form"
+ },
+ "v": {
+  "title": "Offline badge scanning for exhibitor lead retrieval (mobile app)",
+  "client": "Client A",
+  "productArea": "Lead retrieval",
+  "problem": "Exhibitors lose leads when the hall has no signal; scans fail instead of queueing.",
+  "evidence": "22 Sep call notes; 3 support tickets (example).",
+  "neededBy": "2026-12",
+  "lever": "increase-revenue",
+  "figureGBP": 100000,
+  "figureBasis": {
+   "kind": "revenue"
+  },
+  "figureText": "+£100k expansion",
+  "assumption": "Client A 2027 renewal adds the lead-retrieval module, per the 22 Sep call",
+  "funded": {
+   "yes": true,
+   "contributionGBP": 15000,
+   "agreedEstimateDays": 20,
+   "dealRef": "(example deal)",
+   "termsNote": "50% at pickup, 50% at deploy (example)"
+  },
+  "existingGrowing": {
+   "yes": false
+  },
+  "customers": [
+   {
+    "client": "Client A",
+    "tier": "(ledger tier)",
+    "contact": "(customer contact)",
+    "how": "call, 22 Sep 2026"
+   }
+  ],
+  "whoFor": [
+   "exhibitor",
+   "organiser admin"
+  ],
+  "userStory": "As an exhibitor, I want badge scans to queue when there is no signal, so that I do not lose leads on the show floor.",
+  "currentWorkaround": "Exhibitors write names down on paper; the organiser's team keys them in after the show (example).",
+  "surfaces": {
+   "app": "offline queue and sync status",
+   "admin": "setting to enable offline scanning per event",
+   "api": "none"
+  },
+  "acceptanceCriteria": [
+   "Scans made offline are stored on the device",
+   "They sync when the device is back online",
+   "No scan is lost or duplicated",
+   "The exhibitor sees how many scans are waiting",
+   "The organiser can switch it on per event"
+  ],
+  "successMeasure": "Client A signs the expansion; zero lost scans at their March show.",
+  "figureDetail": {
+   "dealRef": "(Pipedrive deal)",
+   "dealStage": "Proposal",
+   "expectedClose": "2027-01",
+   "kind": "expansion"
+  }
+ },
+ "intakeCheck": {
+  "glossary": "pass",
+  "problemClarity": "pass",
+  "at": "2026-09-28T10:12:00Z",
+  "by": "intake-agent"
+ },
+ "signer": {
+  "name": "Chris",
+  "role": "sales"
+ },
+ "signature": {
+  "by": "Chris",
+  "role": "sales",
+  "at": "2026-09-29T09:02:00Z",
+  "lever": "increase-revenue",
+  "figureGBP": 100000,
+  "assumptionHash": "sha1:1b4ab00f9efb",
+  "selfSigned": true
+ },
+ "fundedConfirmation": {
+  "by": "Chris",
+  "role": "sales",
+  "at": "2026-09-29T09:03:00Z",
+  "approverRule": "fs-funded-approver: raisingLayer sales → Chris only"
+ },
+ "review": {
+  "quality": "pass",
+  "value": "pass",
+  "notes": "self-signed accepted: Chris is the only Sales signer",
+  "at": "2026-10-02T15:00:00Z",
+  "by": "Ajay",
+  "weekOf": "2026-09-28"
+ },
+ "estimate": {
+  "effortDays": 28,
+  "team": "Mobile team",
+  "confidence": "medium",
+  "method": "t-shirt then breakdown",
+  "at": "2026-10-27T11:00:00Z",
+  "by": "Bartosz"
+ },
+ "buildCostGBP": 11200,
+ "netValueGBP": 88800,
+ "flags": {
+  "overAgreedEstimate": true,
+  "selfSigned": true,
+  "drift": true
+ },
+ "tier": 2,
+ "rank": 3,
+ "approval": {
+  "by": "Ajay",
+  "at": "2026-10-06T10:00:00Z",
+  "tier": 2,
+  "netValueGBP": 90400
+ },
+ "pickup": {
+  "decidedAt": "2026-10-12T15:30:00Z",
+  "meetingDate": "2026-10-12",
+  "decidedBy": [
+   "(meeting attendees)"
+  ],
+  "recordedBy": "Ajay",
+  "team": "Mobile team",
+  "allocationFTE": 2,
+  "jiraKey": "EP-60001",
+  "dependsOn": []
+ },
+ "schedule": {
+  "expectedStart": "2026-10-19",
+  "expectedDue": "2026-11-12",
+  "basis": "ceil(28/2)+3+2 = 19 business days (illustrative allowances)",
+  "derivedAt": "2026-10-27T11:00:00Z"
+ },
+ "baseline": {
+  "expectedStart": "2026-10-19",
+  "expectedDue": "2026-11-10",
+  "basis": "ceil(24/2)+3+2 = 17 business days",
+  "frozenAt": "2026-10-12T15:30:00Z"
+ },
+ "startedAt": "2026-10-20",
+ "deliveredAt": "2026-11-12",
+ "check": {
+  "dueAt": "2027-01-15",
+  "actualGBP": 85000,
+  "verdict": "partly",
+  "evidence": "Expansion booked (example)",
+  "answeredBy": "Chris",
+  "at": "2027-01-15T10:00:00Z"
+ },
+ "_note": "Illustrative example: Client A is not a real customer; day rate £400, allowances and thresholds are placeholders, not agreed values.",
+ "infoRequest": {
+  "requestedBy": "Ajay",
+  "at": "2026-10-01T14:00:00Z",
+  "assignedTo": "TAM (example)",
+  "dueBy": "2026-10-06",
+  "items": [
+   {
+    "field": "acceptanceCriteria",
+    "question": "The criteria are template placeholders. What must be true for this to be done?",
+    "answer": "Five criteria added",
+    "answeredAt": "2026-10-02T09:30:00Z"
+   },
+   {
+    "field": "successMeasure",
+    "question": "How will we know it worked?",
+    "answer": "Client A signs the expansion; zero lost scans at their March show.",
+    "answeredAt": "2026-10-02T09:30:00Z"
+   },
+   {
+    "field": "surfaces.admin",
+    "question": "What is needed on the admin panel?",
+    "answer": "A per-event setting to enable offline scanning.",
+    "answeredAt": "2026-10-02T09:30:00Z"
+   }
+  ],
+  "note": "Returned at the weekly review"
+ },
+ "returnedFrom": null,
+ "completeness": {
+  "score": 95,
+  "missing": [
+   "eventsImpacted"
+  ]
+ },
+ "stage": {
+  "label": "Done",
+  "step": 10,
+  "of": 10,
+  "waitingOn": null,
+  "nextAction": null,
+  "since": "2027-01-15",
+  "daysInStage": 0,
+  "overdue": false
+ }
+}

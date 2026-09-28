@@ -1,0 +1,129 @@
+{
+ "k": "EP-12564",
+ "histories": 72,
+ "historiesRead": 72,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-02-03T14:25:25.531+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-02-03T14:25:30.489+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-02-03T14:25:32.035+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-02-03T14:25:33.905+0000",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2023-02-07T11:00:23.512+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-07T12:54:40.543+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-08T10:09:29.950+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-10T09:31:31.224+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-02-10T09:50:01.456+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-02-16T07:07:12.997+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2023-02-16T08:09:43.968+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-02-16T09:53:25.960+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-02-16T09:53:35.957+0000",
+   "from": "Ready for release",
+   "to": "Ready for development",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-02-16T09:53:39.051+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-02-16T09:53:41.306+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-02-16T09:53:43.717+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-02-24T16:16:32.638+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Oleh Khondych"
+  },
+  {
+   "at": "2023-02-27T11:36:41.984+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2023-03-02T08:45:48.273+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790313741677.txt"
+}

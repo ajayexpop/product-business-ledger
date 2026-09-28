@@ -1,0 +1,386 @@
+[
+ {
+  "id": "comms-chat-comments-2023q1",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-seo-tracking-2023",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-multilingual-marketing-emails",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-new-builder-launch",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-events-listing-2023",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-email-nurturing",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Campaign email variables show recommended exhibitors, products, sessions and news as cards with meeting, message and favourite actions, plus incoming meetings, unanswered chats and activity counts. A profile link variable signs recipients in, and templates were rolled out to all events.",
+   "outcome": "Organisers send personalised emails from ready templates in every event, and recipients open profiles, request meetings or open their chats straight from the email."
+  },
+  "reason": "detail said 'live' activity counts but EP-15816 counts are as of the send date; outcome said recipients 'reply to chats' from the email, but EP-20714 only links to the messenger"
+ },
+ {
+  "id": "comms-messenger-improvements-2023q3",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-segmented-push-notifications",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-dynamic-blocks",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-display-updates-2023",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Show a rotating set of attendees on the website, and see the updated X logo and name in the main places social links appear."
+  },
+  "reason": "benefit said 'wherever social links appear'; EP-21984 updated the most-used (MVP) places only, others to be done later"
+ },
+ {
+  "id": "web-media-gallery",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-campaigns-refresh",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers reuse existing campaigns by duplicating them, avoid sending empty emails or losing edits, and check send and open statistics from the list."
+  },
+  "reason": "outcome claimed 'faster' set-up with no evidence; EP-20661 only adds duplication"
+ },
+ {
+  "id": "comms-message-limits",
+  "verdict": "fix",
+  "fix": {
+   "title": "Email message count setting",
+   "benefit": "Choose how many unanswered messages appear in each recipient's nurturing email.",
+   "detail": "Organisers set how many messages, up to ten, the incoming messages variable shows in each recipient's email."
+  },
+  "reason": "card described a limit on messages participants can send; EP-21855 is a setting for how many messages (max 10) the incoming messages email variable displays"
+ },
+ {
+  "id": "web-language-consent-2024",
+  "verdict": "fix",
+  "fix": {
+   "title": "Browser language detection",
+   "benefit": "Websites open in the visitor's browser language when the site offers it.",
+   "detail": "The language selector defaults to the visitor's browser language when the site supports it, and visitors can still switch manually."
+  },
+  "reason": "consent mode claim unsupported for event websites: EP-25964 is 'Consent mode for corp site' with no description; EP-23702 supports the language part only"
+ },
+ {
+  "id": "web-rich-content-2024",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-badge-codes-in-emails",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-company-job-title-user-cards",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-multilingual-sites",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-editing-controls-2024",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Autosave in the builder is off by default and can be turned on, every video block has an autoplay setting, and links in blocks support mailto, tel and anchor links."
+  },
+  "reason": "detail said autosave 'can be turned off'; EP-28604 disables it by default with an option to switch it on"
+ },
+ {
+  "id": "comms-email-group-improvements-2024q2",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Send activation links from the email sender and see your active search and filters in Groups.",
+   "detail": "An Activation link variable in the email sender opens and activates the recipient's profile, and the Groups tab shows the active search term and filters.",
+   "outcome": "Organisers send activation links from any email-sender message, and users can see and adjust their search in Groups."
+  },
+  "reason": "EP-22911 only shows the active search/filter chips in Groups (search already existed), not 'search within groups'; outcome said organisers activate profiles, but recipients do by clicking (EP-27950)"
+ },
+ {
+  "id": "web-custom-forms",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers collect form responses and feedback on their event site where visitors are, styled to the site and in each visitor's language."
+  },
+  "reason": "outcome claimed 'capture leads'; no story mentions leads (EP-32969..EP-32973 embed marketing forms and a feedback pop-up)"
+ },
+ {
+  "id": "web-builder-improvements-2024q3",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-custom-css-html-2024",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-embeddable-widgets",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers embed portal widgets in their own websites, and the frame height follows the content shown."
+  },
+  "reason": "outcome added 'empty space or inner scroll bars' problems no story mentions; EP-33266 only says the client wants the iframe height to follow content"
+ },
+ {
+  "id": "web-team-editing",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-campaign-editor-redesign",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-networking-list-filters",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Users focus on the people and companies they already have chats or meetings with, straight from the lists they browse."
+  },
+  "reason": "outcome said 'contacts awaiting a reply'; EP-32152 filters by messaged / messaged me, not reply status"
+ },
+ {
+  "id": "web-block-design-2024",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Cards in card rows and counter blocks can be reordered by drag and drop, FAQ blocks allow more than eight questions, and images use a chosen aspect ratio. News and sponsor cards have rounded corners, testimonial shadows are lighter, carousel buttons align per card, and icons can open platform and external links.",
+   "what": "Cards in card-row and counter blocks can be reordered by drag and drop, FAQ blocks take more than eight questions and images use a chosen aspect ratio. News and sponsor cards have rounded corners."
+  },
+  "reason": "'Cards have rounded corners and softer shadows' overgeneralised: EP-35493 rounds news and sponsor cards only, EP-35499 lightens testimonial shadows only; 'links in text opened from their icon' not what EP-35872 says (icons open platform and external links)"
+ },
+ {
+  "id": "web-popups-logos-2024",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-campaign-sending-chat-limits",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Large campaign send-outs reach every selected recipient in one action, and a daily limit slows anyone starting new chats too quickly.",
+   "detail": "Campaigns reach all selected recipients without duplicates in a single send, visible in campaign statistics. A daily limit on starting new chats applies to all users and events, telling users when they can try again.",
+   "what": "Campaigns send to every selected recipient in one action, without duplicates, as shown in campaign statistics. A daily limit on starting new chats applies to all users and events and tells users when they can try again."
+  },
+  "reason": "EP-35350 is a fix (mass send-outs did not work), benefit read as a new feature; 'chat spam' not stated in EP-35014; 'across web and apps' unsupported, EP-35014 names iOS and Android and applies to everyone"
+ },
+ {
+  "id": "comms-multilingual-admin-notifications",
+  "verdict": "fix",
+  "fix": {
+   "outcome": "Organisers write once per language, and users, including app users who have not signed in, receive the message in their own language and open the chosen page."
+  },
+  "reason": "outcome said 'every user, signed in or not'; EP-32750 non-logged-in sending is for app users only"
+ },
+ {
+  "id": "web-seo-custom-pages",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Content, dynamic, header and footer blocks render in the server response, apart from pop-up forms, with configurable H1–H6 heading tags, semantic section elements, image alt text and working buttons.",
+   "what": "Content, dynamic, header and footer blocks on builder pages render in the server response, apart from pop-up forms, with configurable H1 to H6 heading tags, semantic section elements, image alt text and working buttons."
+  },
+  "reason": "'Every ... block renders in the server response' overstated: EP-36684 says the two pop-up form blocks render on the client side"
+ },
+ {
+  "id": "web-block-updates",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-server-rendered-pages",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Key event website pages, such as community, exhibitor, product, session and news article pages, now return their content for search engines.",
+   "detail": "Community, events, news, content, brand, exhibitor, participant, product, session, group, manual, marketplace and floor plan pages moved to a new framework, keeping their blocks and actions. Community, events, brand, exhibitor, product, session and news article pages return their content from the server, as do custom text and HTML.",
+   "outcome": "Organisers' exhibitor, product, session and news article pages can be read by search engines, while visitors keep meeting, message and favourite actions."
+  },
+  "reason": "detail said all listed pages moved to server-side rendering; EP-38650/38653/38649/38648/38646 keep marketplace, participants, manual, groups list and floor plan content client-side and EP-37569 news list has no data in the response; 'participants' and 'profile pages' in benefit/outcome unsupported"
+ },
+ {
+  "id": "web-page-access",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-builder-improvements-2025q1",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-longer-group-descriptions",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-header-styling-2025",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-alt-text-sitemap",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-configurable-session-reminders",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-personal-assistant-emails",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-mobile-cards-2025",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-advanced-targeting",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Campaign and notification filters cover session, round table and exhibitor event attributes, profile completeness and meeting programme activity. New campaign variables show each recipient's meeting programme status and assigned round tables; in notifications, meeting programme filters appear only when that module is on."
+  },
+  "reason": "module-dependent filter visibility applies to admin notifications only (EP-44892), detail implied campaigns too"
+ },
+ {
+  "id": "comms-registration-email-variables",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-notification-email-improvements-2025q4",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-custom-grids",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-carousel-editor-2026",
+  "verdict": "fix",
+  "fix": {
+   "benefit": "Carousels handle short sets of items better, and text editor controls follow their own design.",
+   "detail": "Carousel blocks change how they behave when there are not enough slides to swipe through, and text editor controls follow their intended design instead of inheriting the builder's theme.",
+   "what": "Carousel blocks change how they behave when there are not enough slides to swipe through. Text editor controls follow their own design instead of taking on the builder's theme.",
+   "why": "Text editor controls took on the builder's theme instead of their intended design, and a slider needs enough items to swipe through.",
+   "outcome": "Visitors see short sets of cards shown properly, and organisers get text editor controls that look as designed."
+  },
+  "reason": "detail said controls 'inherit the builder's theme', the opposite of EP-37770; EP-46421 has only a title ('change swiper logic to carousel'), so 'static layout' and the design-mismatch backstory for sliders are not supported"
+ },
+ {
+  "id": "comms-messenger-status-filters",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-card-styling-2026",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-footer-2026",
+  "verdict": "fix",
+  "fix": {
+   "detail": "Footer columns can be aligned and deleted, text position is configurable and logo plus text width can be set. ExpoPlatform can show or hide the 'Powered by ExpoPlatform' footer branding per event.",
+   "what": "Footer columns can be aligned, sized and deleted, text position has its own setting and the logo and text block width can be set. ExpoPlatform can show or hide the 'Powered by ExpoPlatform' footer branding per event."
+  },
+  "reason": "branding toggle is Superadmin-only (EP-54112), so organisers cannot set it themselves; wording now says ExpoPlatform controls it"
+ },
+ {
+  "id": "comms-campaign-recommendation-blocks",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-ai-builder",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-tracking-links",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "web-header-2026",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ },
+ {
+  "id": "comms-custom-smtp",
+  "verdict": "ok",
+  "fix": {},
+  "reason": "all claims supported by the stories"
+ }
+]

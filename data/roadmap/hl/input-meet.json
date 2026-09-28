@@ -1,0 +1,795 @@
+[
+ {
+  "k": "EP-15162",
+  "q": "2023-Q2",
+  "feature": "Admin meeting management",
+  "tags": [],
+  "summary": "*DWTC* Improvement in Manage Meeting Section",
+  "epic": null,
+  "text": "Linked meeting participants' photos and names to their admin edit pages on the participant and exhibitor Meeting Management pages. Clicking a meeting participant's photo or name opens their visitor or exhibitor edit page, with open-in-new-tab shortcuts still working."
+ },
+ {
+  "k": "EP-42801",
+  "q": "2025-Q3",
+  "feature": "AI meeting notes",
+  "tags": [
+   "AI",
+   "Mobile"
+  ],
+  "summary": "AI Meeting Note Taker - Stage 1",
+  "epic": null,
+  "text": "Built a Stage 1 AI Meeting Notes trial in the app: voice sample onboarding, recording after a badge scan and emailed summaries. With the app builder toggle on, users record meetings from the Scans tab and receive emailed AI summaries, with explicit consent."
+ },
+ {
+  "k": "EP-49217",
+  "q": "2026-Q1",
+  "feature": "AI meeting notes",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Generate outputs in the meeting language",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "text": "Making the Meeting Transcription Tool produce outputs in the meeting's own language fixes a multilingual usability gap that undermined the AI meeting artifacts. MTT now generates its outputs in the language of the meeting, so transcripts/notes match the conversation language."
+ },
+ {
+  "k": "EP-49577",
+  "q": "2026-Q2",
+  "feature": "AI meeting notes",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Personalized Meeting Notes  (Core)- Web",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "text": "Private meeting notes on web: add a note when requesting a meeting or from My Schedule, then view, edit, copy or delete it. Every user type can keep a note of up to 500 characters per meeting that other participants never see."
+ },
+ {
+  "k": "EP-48113",
+  "q": "2026-Q2",
+  "feature": "AI meeting notes",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Reformat action points to single list to send to all participants",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "text": "AI meeting-notes now sends one shared action-point list to all participants instead of per-person lists, eliminating a defect where misattributed speakers sent people the wrong action items. Action points are combined into a single list sent identically to every participant, with speaker-name prefixes and a 2-6 item range."
+ },
+ {
+  "k": "EP-51149",
+  "q": "2026-Q2",
+  "feature": "AI meeting notes",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Personalized Meeting Notes (List) - Web",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "text": "A My Notes side panel in My Schedule listing all of a user's meeting notes by meeting day, with edit, copy and delete. Every user type can browse their private notes with meeting details, loading more as they scroll."
+ },
+ {
+  "k": "EP-23843",
+  "q": "2026-Q2",
+  "feature": "AI meeting notes",
+  "tags": [
+   "AI",
+   "Mobile"
+  ],
+  "summary": "Personalized Meeting Notes - Mobile ",
+  "epic": null,
+  "text": "Added private per-meeting notes to the mobile apps: a note on the meeting request, Add/See note on meeting cards, and a 500-character editor. App users can keep private notes on their meetings."
+ },
+ {
+  "k": "EP-49988",
+  "q": "2026-Q3",
+  "feature": "AI meeting notes",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Display AI Meeting Notetaker as an Add-on under Lead Capture Pro in the Exhibitor profile on the front-end allowing them to purchase it",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "text": "Exhibitors can now buy AI Meeting Notes directly on the Lead Capture Pro page, instantly unlocking AI transcription for their whole team. The Lead Capture Pro purchasing page shows a buyable AI Meeting Notes option when enabled, flips to a Purchased state after checkout, and grants the exhibitor and all team members access on web and mobile via the aiNoteTakerEnabled flag."
+ },
+ {
+  "k": "EP-49766",
+  "q": "2026-Q3",
+  "feature": "AI meeting notes",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Move AI Meeting Notetaker configuration to Lead Capture Pro as an add-on, allowing Event Organizers to access it along other lead capture pro configurations.",
+  "epic": "Meeting Transcription Tool (MTT, a.k.a. AI Meeting notes) transforming from POC to prod & refactoring",
+  "text": "Organizers can now switch on and price AI Meeting Notes as a paid Lead Capture Pro add-on, turning the transcription tool into a new monetisable upsell to sell to exhibitors. Admin Panel Lead Capture Pro now has an AI Meeting Notes add-on card with an enable/disable toggle and a configurable price that auto-matches the event payment currency."
+ },
+ {
+  "k": "EP-12587",
+  "q": "2023-Q1",
+  "feature": "Automatic meeting cancellation",
+  "tags": [],
+  "summary": "Switching to a category which does not allow meetings will trigger a cancellation",
+  "epic": null,
+  "text": "Added a Cancel meetings when changing category toggle that auto-cancels meetings a user initiated when moved to a category without meetings. Meetings the user initiated are cancelled with a stated reason; in multi-member meetings only that user drops out unless they were their side's last participant."
+ },
+ {
+  "k": "EP-12585",
+  "q": "2023-Q1",
+  "feature": "Automatic meeting cancellation",
+  "tags": [],
+  "summary": "Inactive status cancels all scheduled Sessions and Meetings",
+  "epic": null,
+  "text": "Added visitor settings to auto-cancel meetings, session bookings and exhibitor events when a participant becomes inactive. With the toggles on, any non-active status cancels the user's confirmed, incoming and pending meetings and removes them from sessions and exhibitor events."
+ },
+ {
+  "k": "EP-34594",
+  "q": "2024-Q4",
+  "feature": "Blocked meeting times",
+  "tags": [],
+  "summary": "Blocked Time - Show Only Event Dates",
+  "epic": null,
+  "text": "Added an 'Allow blocked time outside the event days' setting; when off, blocked-time pickers allow only event dates and times. With the toggle off, users and exhibitors managing team members can block time only within event dates; existing blocks remain."
+ },
+ {
+  "k": "EP-17281",
+  "q": "2023-Q3",
+  "feature": "Blocked time management",
+  "tags": [],
+  "summary": "Manage blocked time of team member+blocked time unification",
+  "epic": null,
+  "text": "Moved blocked-time management to the Schedule and Team Schedule pages, letting exhibitor companies (and parents) set blocked time for team members. An 'Add blocked time' pop-up replaces Meeting availability; old admin blocked-time tabs are removed and new toggles govern team and child access."
+ },
+ {
+  "k": "EP-12377",
+  "q": "2023-Q3",
+  "feature": "Blocked time management",
+  "tags": [],
+  "summary": "Visual Representation | Blocked Times",
+  "epic": null,
+  "text": "Added blocked time as a schedule item type with full and calendar cards, team member indication, and Edit/Delete actions. Users see and edit their blocked times in the schedule; bulk team blocks show as one card and split when a member edits their own."
+ },
+ {
+  "k": "EP-20318",
+  "q": "2023-Q3",
+  "feature": "Blocked time management",
+  "tags": [],
+  "summary": "Blocked time for exhibition events only",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-22218",
+  "q": "2023-Q4",
+  "feature": "Blocked time management",
+  "tags": [],
+  "summary": "Add a tooltip to the blocked time allowance management settings",
+  "epic": null,
+  "text": "Added a tooltip to the blocked-time management settings explaining they also affect the team schedule selector. Admins see what the blocked-time settings affect."
+ },
+ {
+  "k": "EP-56351",
+  "q": "2026-Q3",
+  "feature": "Bulk meeting responses",
+  "tags": [],
+  "summary": "Bulk respond: remove full-team prefetch and pre-Apply sweep in favor of a post-apply grid refetch",
+  "epic": null,
+  "text": "Removed a slow full-team prefetch that delayed opening Bulk Respond for large exhibitor teams, replacing it with an instant open and a simple post-apply data refresh. Bulk Respond now opens instantly regardless of team size; after a successful bulk action, only the current grid page is refetched fresh from the backend and every other cached page is invalidated."
+ },
+ {
+  "k": "EP-16103",
+  "q": "2023-Q2",
+  "feature": "Calendar sync",
+  "tags": [],
+  "summary": "Change structure of the Title of Outlook calendar card",
+  "epic": null,
+  "text": "Added a structured meeting details block (companies, participants, title, message) to Outlook calendar entries synced from the platform. Synced Outlook meeting cards show third-party company and participants, your participants, additional participants, title and message in alphabetical order."
+ },
+ {
+  "k": "EP-18010",
+  "q": "2023-Q3",
+  "feature": "Calendar sync",
+  "tags": [],
+  "summary": "Google Calendar sync improvements : make it similar to the Outlook calendar sync as much as possible",
+  "epic": null,
+  "text": "Added a Google Calendar sync checkbox so, when unchecked, attendee emails are excluded and participant names go into the event description, as for Outlook. By default Google Calendar events list participants, speakers and moderators by name in the description rather than as emailed attendees."
+ },
+ {
+  "k": "EP-30274",
+  "q": "2025-Q1",
+  "feature": "Calendar sync",
+  "tags": [],
+  "summary": "Automated Calendar Sync for Meetings & Sessions",
+  "epic": null,
+  "text": "Added automatic background sync of meetings and sessions to users' external calendars every 6 hours, via a dedicated queue. After one-time consent, additions, changes and deletions reach the external calendar automatically while the stored token is valid."
+ },
+ {
+  "k": "EP-17817",
+  "q": "2023-Q2",
+  "feature": "Contact sharing settings",
+  "tags": [],
+  "summary": "Create groupings for contact sharing settings",
+  "epic": null,
+  "text": "Grouped the existing Contact Sharing settings in Networking & Matchmaking into three groupings, with no functional change. The Contact Sharing page presents its settings in three labelled groups."
+ },
+ {
+  "k": "EP-20058",
+  "q": "2023-Q3",
+  "feature": "Default schedule settings",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Define default items for Schedule (App + Web)",
+  "epic": null,
+  "text": "Added a 'Show items by default' setting (All, Diary or Optional) to Schedule settings. The chosen option sets the default schedule filter on web and in the app."
+ },
+ {
+  "k": "EP-20489",
+  "q": "2023-Q3",
+  "feature": "Default schedule settings",
+  "tags": [],
+  "summary": "Add ability to choose view by default for schedule page (WEB)",
+  "epic": null,
+  "text": "Added a 'Schedule view by default (WEB)' setting to choose list or calendar as the default view on My schedule and Team schedule. Organisers choose whether web schedule pages open in list view (default) or calendar view."
+ },
+ {
+  "k": "EP-23511",
+  "q": "2023-Q4",
+  "feature": "Delegate list filters",
+  "tags": [],
+  "summary": "Need prohibit possibility choose \"other\" options on admin panel when managed custom filters for delegates page ",
+  "epic": null,
+  "text": "Blocked choosing 'other' options for delegate custom filters in the admin panel. Delegate filters only offer options that work in the app."
+ },
+ {
+  "k": "EP-37473",
+  "q": "2025-Q1",
+  "feature": "Exhibitor meeting availability",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Hide Meet Button for Exhibitors Without Available Team Members (APP)",
+  "epic": null,
+  "text": "Added team member availability checks in the apps so the Meeting button is hidden for exhibitors with no team member available. App exhibitor and product cards and profiles show Meeting only if a team member passes permission, opt-in, settings and limit checks."
+ },
+ {
+  "k": "EP-35513",
+  "q": "2025-Q2",
+  "feature": "Exhibitor meeting availability",
+  "tags": [],
+  "summary": "Hide Meet Button for Exhibitors Without Available Team Members (WEB)",
+  "epic": null,
+  "text": "Added team member availability checks to the web 'Meeting' button for exhibitors, pavilions and products with team members. If no team member passes permission, opt-in, settings and limit checks, users see a message suggesting messaging; otherwise the request opens."
+ },
+ {
+  "k": "EP-34005",
+  "q": "2024-Q4",
+  "feature": "Exhibitor recommendations in meetings",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Add Exhibitor recomendations pop-up to all pages of meeting with exhibitor initiation",
+  "epic": null,
+  "text": "Made the recommended exhibitors popup appear on any meeting initiation page via a URL parameter, not only the marketplace. Users see exhibitor recommendations wherever they start a meeting."
+ },
+ {
+  "k": "EP-2749",
+  "q": "2023-Q1",
+  "feature": "Hosted buyer programme",
+  "tags": [],
+  "summary": "Change in Team Member Approval Process for Hosted Buyer Using Clients",
+  "epic": null,
+  "text": "Added a setting for private events with public registration so buyer-category team members need only a single Hosted Buyer acceptance. When on, registered team members move straight to the buyer side with the Exhibitor buyer category, and only the buyer Accept email is sent."
+ },
+ {
+  "k": "EP-15824",
+  "q": "2023-Q3",
+  "feature": "Hosted buyer programme settings",
+  "tags": [],
+  "summary": "Setting in the back-end which will provide team members with participant category automatically",
+  "epic": null,
+  "text": "Added a 'Default team members' category' setting that assigns a buyer category to team members exhibitors create on the front end. Front-end-created team members get the chosen buyer category automatically and appear in the Buyers list for approval."
+ },
+ {
+  "k": "EP-16700",
+  "q": "2023-Q2",
+  "feature": "Matchmaking cards",
+  "tags": [],
+  "summary": "ММ cards improvement",
+  "epic": null,
+  "text": "Added the participant's company name to matchmaking cards on the front end for all participant types. Matchmaking cards show the company name under the participant's name when it is filled in their profile."
+ },
+ {
+  "k": "EP-47953",
+  "q": "2026-Q2",
+  "feature": "Matchmaking setup improvements",
+  "tags": [],
+  "summary": "Networking & Matchmaking: Select All Child Categories When Parent is Selected",
+  "epic": "Internal Feature Development / Improvement",
+  "text": "Selecting a parent category in Networking now auto-selects all its child categories, turning a tedious one-by-one click chore into a single action during event matchmaking setup. Added a Select All checkbox that recursively selects a parent and all descendant categories, with the ability to deselect individuals and auto-deselect children when the parent is unchecked."
+ },
+ {
+  "k": "EP-27225",
+  "q": "2024-Q3",
+  "feature": "Matchmaking sorting",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Matchmaking Sorting on all marketplace and delegates pages",
+  "epic": null,
+  "text": "Added 'Recommended for you' matchmaking sorting to exhibitor, product, pavilion, delegate, speaker and buyer pages, with explanatory text. Users switch between AI-recommended and A-Z sorting on these pages; sponsor sections are unaffected."
+ },
+ {
+  "k": "EP-32584",
+  "q": "2024-Q3",
+  "feature": "Matchmaking sorting",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Matchmaking Sorting for custom listing",
+  "epic": null,
+  "text": "Made custom listing table sorting and 'Recommended for you' matchmaking sorting mutually exclusive on exhibitor, pavilion, delegate, buyer and speaker pages. Choosing a column sort in the custom listing turns off 'Recommended for you', which is hidden when matchmaking settings disallow it."
+ },
+ {
+  "k": "EP-32719",
+  "q": "2024-Q3",
+  "feature": "Matchmaking sorting",
+  "tags": [
+   "AI"
+  ],
+  "summary": "Removing Matchmaking sorting on Marketplace setting",
+  "epic": null,
+  "text": "Removed the separate marketplace Matchmaking sorting setting; enabling Matchmaking now makes 'Recommended for you' sorting available. With Matchmaking on, users can sort by 'Recommended for you' (optionally the default); existing clients keep A-Z sorting at release."
+ },
+ {
+  "k": "EP-20254",
+  "q": "2023-Q3",
+  "feature": "Meeting auto-complete by badge scan",
+  "tags": [],
+  "summary": "Autocomplete improvement for Exhibitors without team members",
+  "epic": null,
+  "text": "Extended meeting auto-complete so a scan by any of an exhibitor's team members completes a meeting the exhibitor joined before having team members. A badge scan between any exhibitor team member and the other side marks the meeting complete, including exhibitor-to-exhibitor meetings."
+ },
+ {
+  "k": "EP-10663",
+  "q": "2023-Q1",
+  "feature": "Meeting auto-confirmation",
+  "tags": [],
+  "summary": "Auto confirmation of meetings | Participant Category Level",
+  "epic": null,
+  "text": "Added a 'Meeting autoconfirm' toggle at participant-category level, extending the existing event-wide auto-confirmation setting. Meeting requests sent by participants in an enabled category confirm automatically and the Pending status is hidden once no pending meetings remain."
+ },
+ {
+  "k": "EP-6281",
+  "q": "2026-Q2",
+  "feature": "Meeting booking and management",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Table meeting setup and meeting cards improvements in app",
+  "epic": null,
+  "text": "Adapted the app to the new meeting wizard and table meetings: confirmed admin-created meetings, a meeting-type choice, zone and table selection. In the app, admin-created meetings show as confirmed and marked as organiser-created, and table meetings are booked by zone, timeslot and table."
+ },
+ {
+  "k": "EP-47793",
+  "q": "2026-Q1",
+  "feature": "Meeting booking usability",
+  "tags": [],
+  "summary": "Timepicker. Scroll Hint",
+  "epic": null,
+  "text": "A visual hint on the timepicker showing that the list scrolls to more times, starting with blocked time. Users can see there are more time options, with no change to how times are selected."
+ },
+ {
+  "k": "EP-16028",
+  "q": "2023-Q2",
+  "feature": "Meeting cards",
+  "tags": [],
+  "summary": "Meeting cards title",
+  "epic": null,
+  "text": "Reworked calendar meeting cards to show the other party and location first, then time and title, with session and event cards aligned to match. Meeting cards on My Schedule and All Meetings show the opposite side's names, location and time before the title; session cards show title, location and time."
+ },
+ {
+  "k": "EP-15159",
+  "q": "2023-Q2",
+  "feature": "Meeting completion by badge scan",
+  "tags": [],
+  "summary": "*DWTC* All Meetings Tracking",
+  "epic": null,
+  "text": "Extended badge-scan meeting autocompletion to regular meetings and added an 'Autocomplete outside meeting time' setting, plus a completion column in exports and API v2. Scanning a counterpart's badge marks confirmed meetings complete, during the meeting or at any time if enabled, and completion shows as Yes/No in exports and the API."
+ },
+ {
+  "k": "EP-23431",
+  "q": "2023-Q4",
+  "feature": "Meeting limits",
+  "tags": [],
+  "summary": "Remove \"0 as unlimited\" option for meeting limits of Exhibitor categories",
+  "epic": null,
+  "text": "Removed 'Leave 0 for unlimited' from exhibitor category meeting limits: off now means unlimited, and 0 means none, with tooltips. Exhibitor meeting limits work like participant category limits."
+ },
+ {
+  "k": "EP-46592",
+  "q": "2025-Q4",
+  "feature": "Meeting limits",
+  "tags": [],
+  "summary": "[CMPL] Auto Confirm Meetings and Meeting limits Cap function",
+  "epic": null,
+  "text": "Applied exhibitor category meeting limits when auto-confirm meetings is enabled, and showed remaining meetings on the front end. Auto-confirmed meetings are capped at the category limit and the remaining meeting count is displayed."
+ },
+ {
+  "k": "EP-18393",
+  "q": "2024-Q1",
+  "feature": "Meeting limits and auto-confirm rules",
+  "tags": [],
+  "summary": "Meeting auto confirm should work with Category settings of meetings",
+  "epic": null,
+  "text": "Made meeting auto-confirmation respect category-level daily and total confirmation limits, and renamed the limit settings with clearer tooltips. Auto-confirmed meetings stop at the receiver's category limit, with an error shown to the requester; table meetings follow the same rules."
+ },
+ {
+  "k": "EP-24046",
+  "q": "2024-Q2",
+  "feature": "Meeting limits and auto-confirm rules",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Error Mechanism: Meetings,Messages Limits",
+  "epic": null,
+  "text": "Enforced web meeting and message category limits in the mobile apps, with specific error messages for daily and total pending and confirmation limits. App users hitting a limit are stopped from requesting, confirming or messaging and told which limit was reached, matching the web."
+ },
+ {
+  "k": "EP-39067",
+  "q": "2025-Q1",
+  "feature": "Meeting limits display",
+  "tags": [],
+  "summary": "Improve logic of limits display on the frontend",
+  "epic": null,
+  "text": "Showed or hid pending and confirmation meeting limits based on auto-confirm and the page. Users see only the limits that apply."
+ },
+ {
+  "k": "EP-12036",
+  "q": "2023-Q1",
+  "feature": "Meeting locations",
+  "tags": [],
+  "summary": "(App+Web) EMEA: Remove the stand hall meeting option from selection after In-person event ends",
+  "epic": null,
+  "text": "Hid in-person meeting locations (Stand-Hall, Other, Exhibitor stand) on web and app once the allowed offline meeting time has passed. After the last offline slot, meeting requests offer only 'Online meeting', respecting event and user time zones."
+ },
+ {
+  "k": "EP-14891",
+  "q": "2023-Q1",
+  "feature": "Meeting locations",
+  "tags": [],
+  "summary": "User have to enter other location by himself when no other location mentioned in admin panel",
+  "epic": null,
+  "text": "Turned 'Other location' into a required free-text input when 'Allow other location' is on but no other locations are configured. Meeting requesters must type the other location, which is sent to and validated by the backend as otherLocation."
+ },
+ {
+  "k": "EP-12571",
+  "q": "2023-Q3",
+  "feature": "Meeting ratings",
+  "tags": [],
+  "summary": "*DWTC* Request For New Email Template/Custom Meeting Template",
+  "epic": null,
+  "text": "Added meeting rating options (after each meeting, daily or after the event) with new digest email templates and WhatsApp/SMS links. Organisers choose rating timing per role or category; digests list up to five meetings and link to the ratings page with auto-login or the app."
+ },
+ {
+  "k": "EP-20842",
+  "q": "2024-Q1",
+  "feature": "Meeting ratings",
+  "tags": [],
+  "summary": "Rename Appointment Rate Meeting >> Email Template",
+  "epic": null,
+  "text": "Renamed the 'Appointment Rate' meeting email template to 'Meeting Ratings'. The template at Meetings > Email Template is listed as 'Meeting Ratings'."
+ },
+ {
+  "k": "EP-40631",
+  "q": "2025-Q2",
+  "feature": "Meeting ratings",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Meeting Rating Button - Meetings Page",
+  "epic": null,
+  "text": "Added a 'Rate This Meeting' button and rating pop-up to completed meetings in the mobile apps, with translations. Users give 1–5 stars, comments, likely business outcome or 'did not take place', and can edit their rating later."
+ },
+ {
+  "k": "EP-10170",
+  "q": "2023-Q2",
+  "feature": "Meeting request attachments",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "(APP) Meeting request includes the attached file option",
+  "epic": null,
+  "text": "Added an optional file attachment to the regular meeting request flow in the app, enabled by a new toggle in meeting settings. When enabled, requesters can attach a file to a meeting request, and recipients can open or download it from the meeting card in their schedule."
+ },
+ {
+  "k": "EP-10598",
+  "q": "2023-Q2",
+  "feature": "Meeting request flow",
+  "tags": [],
+  "summary": "Filter and pagination retention after booking meetings",
+  "epic": null,
+  "text": "Added a meeting setting to return users to the page where they started a meeting request, keeping filters and pagination. Organisers choose between the meetings page and the initiating page; from marketplace and delegate lists users return with filters and page retained."
+ },
+ {
+  "k": "EP-17352",
+  "q": "2023-Q3",
+  "feature": "Meeting request flow",
+  "tags": [],
+  "summary": "Meeting creation/edit steps improvement",
+  "epic": null,
+  "text": "Added an optional new regular meeting request flow showing participants, date, time, location and duration on one page with live availability. When enabled, users see all bookable dates for both sides; each choice updates what remains available and unavailable options are disabled."
+ },
+ {
+  "k": "EP-21476",
+  "q": "2023-Q3",
+  "feature": "Meeting request flow",
+  "tags": [],
+  "summary": "Add error to the meeting wizard",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-16261",
+  "q": "2023-Q2",
+  "feature": "Meeting rescheduling",
+  "tags": [],
+  "summary": "Apply minor improvements to the meeting rescheduling process",
+  "epic": null,
+  "text": "Improved meeting rescheduling so the time grid opens on the current meeting's date with its time preselected, and added the date to the time summary line. In admin and front end, rescheduling starts from the existing slot and 'Your meeting is from… ' now includes the day and month."
+ },
+ {
+  "k": "EP-17344",
+  "q": "2023-Q2",
+  "feature": "Meeting rescheduling",
+  "tags": [],
+  "summary": "Hide Reschedule button option (Web)",
+  "epic": null,
+  "text": "Added a 'Disallow meeting reschedule for:' setting that hides the Reschedule button for selected roles and categories. Users in any selected role or category no longer see Reschedule on meeting cards on web and app, while admins keep it in Manage Meetings."
+ },
+ {
+  "k": "EP-17598",
+  "q": "2023-Q2",
+  "feature": "Meeting rescheduling",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Hide Reschedule button option (App)",
+  "epic": null,
+  "text": "Added a Disallow meeting reschedule for setting that hides the Reschedule button for selected user roles and categories. Users in any selected role or category no longer see Reschedule on meeting cards on web or app, including users who later join that category."
+ },
+ {
+  "k": "EP-29078",
+  "q": "2024-Q2",
+  "feature": "Meeting slot travel-time notice",
+  "tags": [],
+  "summary": "Make tooltip text visible without needing to hover on icon",
+  "epic": null,
+  "text": "Replaced the meeting-slot pause tooltip with visible disclaimer text in both the old and new meeting request flows, showing the admin-set pause length. The meeting request screen always states that an N-minute break is added to each slot for travel time."
+ },
+ {
+  "k": "EP-18170",
+  "q": "2023-Q2",
+  "feature": "Meeting time steps",
+  "tags": [],
+  "summary": "Add new Time step to meetings grid - 20 min",
+  "epic": null,
+  "text": "Added a 20 min option to the 'Meetings time step' setting, with matching 'Max meeting length' options of 20 min, 40 min, 1h, 2h and 3h. Organisers can run the meetings grid in 20-minute steps."
+ },
+ {
+  "k": "EP-36721",
+  "q": "2025-Q1",
+  "feature": "Meeting wizard",
+  "tags": [],
+  "summary": "Fake email label in meeting wizard",
+  "epic": null,
+  "text": "Added email issue markers (Fake email, Empty email, MX issue) to the team member dropdown in the admin meeting wizard. When organisers book regular or table meetings with an exhibitor, team members with email problems are flagged, as in the visitors list."
+ },
+ {
+  "k": "EP-44527",
+  "q": "2025-Q3",
+  "feature": "Meeting wizard improvements",
+  "tags": [],
+  "summary": "Improvements in Meeting Wizard & Exhibitor Profile (Admin Panel)",
+  "epic": null,
+  "text": "Improved the admin meeting wizard's team member dropdown (A–Z sort, job title, company, search) and the exhibitor profile Team Members table (combined columns, new phone column). Admins find team members quickly when appointing meetings and see name, email, job, company and phone on the exhibitor profile."
+ },
+ {
+  "k": "EP-10875",
+  "q": "2023-Q1",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Optimization in ScheduleService -> checkTimes function",
+  "epic": null,
+  "text": "Optimised the schedule time check so the time service is initialised once instead of twice. Meeting time checks do less repeated work."
+ },
+ {
+  "k": "EP-44267",
+  "q": "2026-Q1",
+  "feature": "Precise matchmaking",
+  "tags": [],
+  "summary": "Matchmaking Improvements. Precise Matchmaking",
+  "epic": null,
+  "text": "Added a per-parent-category matchmaking setting (include, exclude or strict), stored for the new LLM-based matchmaking. Organisers tune which categories drive matchmaking."
+ },
+ {
+  "k": "EP-17353",
+  "q": "2024-Q1",
+  "feature": "Prefilled meeting requests",
+  "tags": [],
+  "summary": "Prefilled meeting info (WEB)",
+  "epic": null,
+  "text": "Added 'Default meeting info' to the new web meeting request flow: a pop-up and a profile settings tab to save a default subject, message, duration and media file. Saved defaults pre-fill every new meeting request and can still be edited per request; the media file can be cleared and fields have tooltips."
+ },
+ {
+  "k": "EP-34934",
+  "q": "2025-Q1",
+  "feature": "Profile link sharing",
+  "tags": [],
+  "summary": "Profile Link Copy Functionality for Participants and Exhibitors",
+  "epic": null,
+  "text": "Added a Copy button to visitor and exhibitor profile pages to copy the public profile link, or export all profile links for admin team members. Users copy their public profile link in one click; admin team members can also download an .xls of company, team and child profile links."
+ },
+ {
+  "k": "EP-34318",
+  "q": "2025-Q1",
+  "feature": "Real-time matchmaking",
+  "tags": [],
+  "summary": "Re-wiring Matchmaking Page",
+  "epic": null,
+  "text": "Reworked the admin Matchmaking page to switch to the real-time recommender, with an Enable toggle and live pipeline status. Enabling matchmaking starts the recommender pipeline, shown as in progress, error or completed; turning it off shuts down resources to save cost."
+ },
+ {
+  "k": "EP-17345",
+  "q": "2023-Q3",
+  "feature": "Reassign team members to meetings",
+  "tags": [],
+  "summary": "Reasigning team members (Web)",
+  "epic": null,
+  "text": "Added a Reassign members button on exhibitor meeting cards, with a pop-up to pick available team members, including across child exhibitors. When enabled, exhibitors with several team members can swap who attends an incoming, pending or confirmed meeting without changing its status."
+ },
+ {
+  "k": "EP-54268",
+  "q": "2026-Q3",
+  "feature": "Restrict meetings for exhibitors without teams",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Backend endpoint with \"Restrict meetings\" setting ",
+  "epic": "Improve Meetings & Scheduling",
+  "text": "Exposed the 'restrict meetings for exhibitors with no team' setting to mobile via one flag on an existing API, instead of building a new endpoint. GET /app/getexhibitions now returns a `disable_meetings_without_team_members` boolean, additive-only and fail-open, which the mobile app uses to enforce the restriction client-side."
+ },
+ {
+  "k": "EP-16776",
+  "q": "2023-Q2",
+  "feature": "Schedule blocking",
+  "tags": [],
+  "summary": "Block schedule for Speakers and Moderators",
+  "epic": null,
+  "text": "Blocked speakers' and moderators' calendars during their sessions and exhibitor events for meeting requests and confirmations. Session times show as blocked when requesting meetings with, or by, speakers and moderators; clashing meetings prompt a reschedule."
+ },
+ {
+  "k": "EP-17284",
+  "q": "2023-Q2",
+  "feature": "Schedule blocking",
+  "tags": [],
+  "summary": "Blocking schedule booking improvement",
+  "epic": null,
+  "text": "Tightened schedule blocking so users cannot book a slot-blocking exhibitor event over confirmed meetings, blocked time, other blocking events or speaker duties. Booking a blocking exhibitor event into an occupied slot is refused with a warning, on web and in the app."
+ },
+ {
+  "k": "EP-21730",
+  "q": "2023-Q4",
+  "feature": "Schedule date selector",
+  "tags": [],
+  "summary": "Improve logic of date selector on the Schedule page",
+  "epic": null,
+  "text": "Reworked the Schedule page date selector to show all relevant event and allowed dates with back and forward arrows and a stable layout. Users can move through all dates without the Additional dates menu; picked additional dates are added in chronological order and focus defaults to today or the nearest date."
+ },
+ {
+  "k": "EP-17285",
+  "q": "2023-Q3",
+  "feature": "Schedule downloads",
+  "tags": [],
+  "summary": "Download My Schedule in xls format",
+  "epic": null,
+  "text": "Added a 'Download My Schedule in xls format' setting so schedules download as XLS, with team and parent/child columns for exhibitors. When enabled, participants can choose PDF or XLS, and exhibitor and admin downloads give combined team schedules in XLS."
+ },
+ {
+  "k": "EP-17287",
+  "q": "2023-Q3",
+  "feature": "Schedule downloads",
+  "tags": [],
+  "summary": "Download My Schedule in xls format including Childs",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-20214",
+  "q": "2023-Q3",
+  "feature": "Schedule downloads",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Download Schedule in app",
+  "epic": null,
+  "text": "Added Download Schedule to the app's schedule menu, emailing the schedule as PDF (plus XLSX if enabled) via a new 'Schedule download (APP)' template. App users request their schedule and receive it by email as an attachment, with an in-app confirmation that it was sent."
+ },
+ {
+  "k": "EP-20775",
+  "q": "2023-Q3",
+  "feature": "Schedule downloads",
+  "tags": [],
+  "summary": "Download My Schedule in xls format",
+  "epic": null,
+  "text": "Added personal blocked time to the generated PDF and XLS agenda files from Download My Schedule. Downloaded schedule files in PDF and XLS include the user's personal blocked time."
+ },
+ {
+  "k": "EP-22560",
+  "q": "2023-Q4",
+  "feature": "Schedule downloads",
+  "tags": [],
+  "summary": "Export My Agenda pdf file changes",
+  "epic": null,
+  "text": "Updated the Export My Agenda PDF: renamed 'Participants from 3rd party' to 'Participants from other side', and optionally added the event logo and date headings. The agenda PDF uses the same 'Participants from other side' label as the web schedule."
+ },
+ {
+  "k": "EP-18403",
+  "q": "2023-Q3",
+  "feature": "Schedule overview calendar view",
+  "tags": [],
+  "summary": "Schedule overview (New Calendar Schedule view)",
+  "epic": null,
+  "text": "Reworked exhibitor and visitor schedule pages into Diary and Optional Activities columns, with team member selection, activity filters and an activity legend. Users see time-blocking and optional items separately with colour-coded, filterable types; admins rename columns and set activity names and colours."
+ },
+ {
+  "k": "EP-18404",
+  "q": "2023-Q3",
+  "feature": "Schedule overview calendar view",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Schedule overview in app",
+  "epic": null,
+  "text": "Built a new calendar schedule view in the app for My Schedule and Team Schedule, with a filters drawer, date picker and activity type selection. Users filter their schedule by diary activities (confirmed meetings, speaking, blocked time) and optional ones (pending meetings, optional sessions)."
+ },
+ {
+  "k": "EP-27719",
+  "q": "2024-Q2",
+  "feature": "Schedule view in meeting requests",
+  "tags": [],
+  "summary": "My/Team schedule drawer in meeting request page ",
+  "epic": null,
+  "text": "Added a 'See my Schedule' button and left-side schedule drawer to the new meeting request flow, with a team member selector for exhibitors. When requesting a meeting, users can open their own or their team's schedule for the selected date in a calendar drawer."
+ },
+ {
+  "k": "EP-24925",
+  "q": "2024-Q2",
+  "feature": "Schedule view in meeting requests",
+  "tags": [],
+  "summary": "Viewing Daily Schedule on Meeting Creation Page",
+  "epic": null,
+  "text": "Added a 'View Today's Schedule' pop-up to the meeting creation page. Users open their day's schedule over the request form, scroll and view details, then close it with form data intact."
+ },
+ {
+  "k": "EP-35119",
+  "q": "2024-Q4",
+  "feature": "Team schedule management",
+  "tags": [],
+  "summary": "Search Functionality for Team Schedule Management",
+  "epic": null,
+  "text": "Added a search field to the Team Members selector on the Team Schedule page, searching by team member name and company. Exhibitors find team members by first or last name or company as they type, with a placeholder when nothing matches."
+ },
+ {
+  "k": "EP-20612",
+  "q": "2023-Q3",
+  "feature": "Time picker redesign",
+  "tags": [],
+  "summary": "Replace widget for timepicking",
+  "epic": null,
+  "text": "Replaced the clock-face time picker in Add blocked time and Exhibitor events with scrollable hour and minute lists that show unavailable slots. Users pick hours and minutes from separate lists; unavailable times are visible and cannot be clicked."
+ },
+ {
+  "k": "EP-12576",
+  "q": "2023-Q3",
+  "feature": "User favourites dashboard",
+  "tags": [],
+  "summary": "User Favorites Dashboard",
+  "epic": null,
+  "text": "Added a User Favourites Dashboard to Networking & Matchmaking, with sharer IDs added to 'Copy link to applied filters' links. Admins see every favourite with meeting status, notes and the sharing admin, and can start a meeting request from the table."
+ }
+]

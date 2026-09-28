@@ -1,0 +1,123 @@
+{
+ "k": "EP-36743",
+ "histories": 74,
+ "historiesRead": 74,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-11-10T12:15:56.036+0000",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-11-10T12:15:58.390+0000",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-11-10T12:15:59.978+0000",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-11-19T12:44:30.060+0000",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-11-30T10:08:07.849+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-12-10T16:14:31.390+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2024-12-16T14:47:02.502+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2025-02-06T10:17:07.246+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-02-06T10:35:44.351+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2025-03-13T14:58:30.835+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-03-21T08:24:39.225+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2025-03-31T14:46:04.597+0100",
+   "from": "Task in testing",
+   "to": "Ready for development",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2025-03-31T14:51:01.337+0100",
+   "from": "Ready for development",
+   "to": "On-hold",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2025-04-07T14:20:48.417+0100",
+   "from": "On-hold",
+   "to": "In progress",
+   "by": "Ievgenii Akimov"
+  },
+  {
+   "at": "2025-04-07T14:20:52.148+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Ievgenii Akimov"
+  },
+  {
+   "at": "2025-04-07T14:21:04.746+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Ievgenii Akimov"
+  },
+  {
+   "at": "2025-04-07T14:21:16.153+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Ievgenii Akimov"
+  },
+  {
+   "at": "2025-04-17T12:07:00.967+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2026-09-15T17:46:35.857+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790319665063.txt"
+}

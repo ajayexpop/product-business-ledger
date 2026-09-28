@@ -1,0 +1,123 @@
+{
+ "k": "EP-29190",
+ "histories": 63,
+ "historiesRead": 63,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2024-05-07T11:28:33.402+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-05-07T11:28:34.966+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-05-07T11:28:37.850+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-05-13T12:40:15.783+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-05-27T09:56:16.699+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-05-27T11:12:50.796+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-05-28T10:55:14.783+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Ajay Singh"
+  },
+  {
+   "at": "2024-06-18T12:36:00.928+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Evgen Polivach"
+  },
+  {
+   "at": "2024-06-20T15:25:42.334+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2024-06-20T15:51:25.979+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2024-07-01T10:40:54.895+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Iurii Drozdov"
+  },
+  {
+   "at": "2024-07-01T13:22:41.710+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Iurii Drozdov"
+  },
+  {
+   "at": "2024-07-02T09:34:58.357+0100",
+   "from": "Ready for release",
+   "to": "Ready for development",
+   "by": "Iurii Drozdov"
+  },
+  {
+   "at": "2024-07-02T09:35:04.362+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Iurii Drozdov"
+  },
+  {
+   "at": "2024-07-02T09:35:07.753+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Iurii Drozdov"
+  },
+  {
+   "at": "2024-07-02T09:35:12.517+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Iurii Drozdov"
+  },
+  {
+   "at": "2024-07-03T14:51:09.239+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Iurii Drozdov"
+  },
+  {
+   "at": "2024-07-04T11:30:39.165+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2026-09-15T17:46:07.615+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790321166870.txt"
+}

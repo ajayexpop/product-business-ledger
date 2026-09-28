@@ -1,0 +1,1317 @@
+[
+ {
+  "k": "EP-50129",
+  "q": "2026-Q2",
+  "feature": "Centralised meeting formats admin",
+  "tags": [],
+  "summary": "Restructure Module Management for Meeting Format",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "text": "Module Management gets a Meeting Formats group with a toggle each for Speed Networking, Meeting Program, Concierge Meetings, Exhibitor Events and Round Tables. Organisers switch each meeting format on or off independently; existing events keep their current state."
+ },
+ {
+  "k": "EP-50104",
+  "q": "2026-Q2",
+  "feature": "Centralised meeting formats admin",
+  "tags": [],
+  "summary": "Centralised Management for Speed Networking, Meeting Program, and Concierge Meetings",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "text": "A new Meeting Formats menu in the Admin Panel holding Speed Networking, Meeting Program and Concierge Meetings settings, with Concierge zones in their own tab. Existing settings move unchanged into Meeting Formats, stay scoped to the event and follow existing permissions."
+ },
+ {
+  "k": "EP-50105",
+  "q": "2026-Q2",
+  "feature": "Centralised meeting formats admin",
+  "tags": [],
+  "summary": "Email Templates Management for Speed Networking, Meeting Program, and Concierge Meetings in Admin Panel",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "text": "Email templates tabs for Speed Networking, Meeting Program and Concierge Meetings inside Meeting Formats; Concierge's general templates stay in sync both ways. Existing templates move with their triggers intact, and edits stay scoped to the event."
+ },
+ {
+  "k": "EP-50107",
+  "q": "2026-Q2",
+  "feature": "Centralised meeting formats admin",
+  "tags": [],
+  "summary": "Email Templates Management for Exhibitor Events and Round Tables in Meeting Formats",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "text": "Email templates tabs for Exhibitor Events and Round Tables inside Meeting Formats; shared templates warn before a save affects other places. Exhibitor Events' organiser and exhibitor notifications move to their format; shared templates show where else they're used."
+ },
+ {
+  "k": "EP-50109",
+  "q": "2026-Q2",
+  "feature": "Centralised meeting formats admin",
+  "tags": [],
+  "summary": "Enhancements to Exhibitor Events Management in Meeting Formats for Organizers",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "text": "Exhibitor Events get their own section in Meeting Formats: events list and create, speakers and moderators, config, and tags, tracks and types. Exhibitor events are managed apart from sessions; edits to shared speakers, tags or settings show a 'used in other locations' warning."
+ },
+ {
+  "k": "EP-50110",
+  "q": "2026-Q2",
+  "feature": "Centralised meeting formats admin",
+  "tags": [],
+  "summary": "Independent Management for Round Tables in Admin Panel",
+  "epic": "Meeting Formats: Admin Re-arrangement",
+  "text": "Round Tables get their own section in Meeting Formats: list and create, moderators, config, and tags, tracks and types, separate from sessions. Round tables are managed on their own, with exhibitor-event-only columns hidden and warnings when shared data is edited."
+ },
+ {
+  "k": "EP-23255",
+  "q": "2024-Q1",
+  "feature": "Meeting availability filter",
+  "tags": [],
+  "summary": "Ability for buyers to be able to see and filter exhibitors who have used up their allotment of confirmed meetings vs. exhibitors who have not",
+  "epic": null,
+  "text": "Added a 'Meeting availability' filter ('Appointments still available') to exhibitor, product, pavilion, speaker, delegate and buyer lists, set in Display filters. Users can list only people or exhibitors, and their products, whose online or offline confirmation limits are not yet reached."
+ },
+ {
+  "k": "EP-26686",
+  "q": "2024-Q1",
+  "feature": "Meeting availability filter",
+  "tags": [],
+  "summary": "Add tooltip to \"Meeting availability\" filters in the admin panel ",
+  "epic": null,
+  "text": "Added a 'web only' tooltip to Meeting availability filters in the admin panel. Admins know the filter only works on web."
+ },
+ {
+  "k": "EP-23256",
+  "q": "2024-Q1",
+  "feature": "Meeting programme minimum-meeting reminders",
+  "tags": [],
+  "summary": "Ability to setup auto email reminders when a meeting minimal requirement has not been reached",
+  "epic": null,
+  "text": "Added a per-category minimum required number of confirmed meetings, with automated reminder emails to users who have not reached it. Users see confirmed versus required meetings on their meetings page, and organisers can send reminders to those short of the requirement."
+ },
+ {
+  "k": "EP-43905",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Meeting Ratings section",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a Meeting Ratings section to the Meeting Program frontend that lists confirmed meetings per block, with star ratings and Rate/Edit rating actions, once the program ends. After the program, users rate each meeting from a chronological list showing counterpart, time, table and their own role."
+ },
+ {
+  "k": "EP-43907",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Meeting Rating Popup",
+  "epic": "Hyve Meeting Program",
+  "text": "Built a Meeting Rating pop-up for confirmed Meeting Program meetings with 0–5 stars, a 300-character comment and 'did not take place'. After the event users rate or edit ratings of meetings from the Meeting Ratings section; marking 'did not take place' resets the score to 0."
+ },
+ {
+  "k": "EP-42161",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE ICS files for emails",
+  "epic": "Hyve Meeting Program",
+  "text": "Attached .ics calendar files to Meeting Program milestone emails for voting and confirmation deadlines and final schedules. Buyers, team members and participants get calendar entries for deadlines and one entry per confirmed 1:1 meeting with time and table."
+ },
+ {
+  "k": "EP-43483",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Main Page Logic",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a 'Meeting Program' profile menu item, shown only to assigned users, that opens the single program or a list of program cards. Users in one program go straight to its details page; users in several see cards with description, first block date and extra block count."
+ },
+ {
+  "k": "EP-43484",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Meeting Program Details Page (Top Part)",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the top of the Meeting Program details page on the frontend: photo, name, description, meeting blocks, plus status badge and Cancel Attendance / Manage Timeslots menu for non-exhibitors. Participants see program details and their status, and can cancel or block timeslots until first generation; removed or cancelled users see explanatory states."
+ },
+ {
+  "k": "EP-43487",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Timeline",
+  "epic": "Hyve Meeting Program",
+  "text": "Built a horizontally scrolling Meeting Program timeline on the front end with checkpoints from start to meeting blocks and a live time pointer. All Meeting Program users see lifecycle progress with dates from session settings, auto-scrolling to keep 'now' in view."
+ },
+ {
+  "k": "EP-43490",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Sponsored limit",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a Sponsored meetings limit block to Meeting Program details in user profiles, with text tailored to exhibitors, sponsored team members and hosted and general buyers. Users with a sponsored meeting limit see it with a role-specific explanation, taken from category, exhibitor or role settings."
+ },
+ {
+  "k": "EP-43492",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Connections and Meetings Dashboard (Exhibitor)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a Meeting Program dashboard to the exhibitor profile, showing team connection actions, meeting status counts, conversion rate and unique companies targeted. Exhibitors see cumulative team relevant, super-relevant, received and mutual actions, meeting totals by status, conversion rate and unique companies."
+ },
+ {
+  "k": "EP-43493",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Team Members Block in Meeting Program (Exhibitor)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a Team Members block to the exhibitor's Meeting Program view for assigning Meeting Sponsor roles and removing team members. Exhibitors manage their team's participation until the first generation checkpoint; inactive or removed members show red and are locked."
+ },
+ {
+  "k": "EP-43494",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Schedule Block in Meeting Program (Exhibitor)",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the exhibitor Schedule block in the Meeting Program frontend, showing each team member's meetings per block after final schedules are sent. Exhibitors pick a team member and block to see meetings with time, counterpart, role, badges and table, and download the schedule PDF."
+ },
+ {
+  "k": "EP-43660",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Matches List Section structure and logic",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the Meeting Program Matches list with My Picks, Picked Me, Mutual Matches and Exhibitors tabs and role-based visibility. Participants mark others Relevant or Super Relevant, see incoming interest and mutual matches, and expand exhibitors to their team members."
+ },
+ {
+  "k": "EP-43662",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE User Cards in Matches List Section",
+  "epic": "Hyve Meeting Program",
+  "text": "Defined Meeting Program Matches list user cards with match score, role, favourite, message icon, 'Marked by Team' avatars, sponsored badge and per-tab relevance buttons. Users mark people Relevant or Super Relevant on cards until first generation; mutual picks move to Mutual Matches, and clicking a card opens the profile pop-up."
+ },
+ {
+  "k": "EP-43665",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Exhibitor Card in Matches List Section",
+  "epic": "Hyve Meeting Program",
+  "text": "Built exhibitor cards for the Meeting Program Matches list with logo, location, description, stand, an 'Interested in You' count and an expandable team member panel. Users expand exhibitors with team members to see My Picks, Picked Me and Mutual Matches and act on relevance per team member."
+ },
+ {
+  "k": "EP-43564",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Connections and Meetings Dashboard (Users)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a personal Connections and Meetings dashboard with a Unique Companies metric to the Meeting Program view of the participant profile. Users see their relevant, super relevant, received and mutual counts, meeting statuses and number of distinct companies approached."
+ },
+ {
+  "k": "EP-39158",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE User Profile Details Pop-up",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a user profile pop-up to the Meeting Program frontend, opened from user cards in Schedule, Matches, Confirmation and Meeting ratings. Clicking a card shows photo, name, job, company, role (buyers unified as 'Buyer'), favourite button, bio, interests and matchmaking fields in a scrollable modal."
+ },
+ {
+  "k": "EP-43562",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Exhibitor Profile Details Pop-up",
+  "epic": "Hyve Meeting Program",
+  "text": "Added an exhibitor profile pop-up to the Meeting Program Matches list Exhibitors tab, showing logo, location, favourite, About, stands, tags, categories and matchmaking info. Participants click an exhibitor card to see its key profile details in a scrollable modal."
+ },
+ {
+  "k": "EP-43904",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Relevance Actions and Message",
+  "epic": "Hyve Meeting Program",
+  "text": "Added an optional message pop-up of up to 200 characters when marking someone Relevant or Super Relevant in the Meeting Program, with a message icon and details view. Relevance marks can carry a note visible to both sides, and mutual messages are shown together; undoing a mark deletes its message."
+ },
+ {
+  "k": "EP-43871",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Confirmation List Section: Structure & Logic",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the Meeting Program Confirmation List for 1st and 2nd round meetings, with confirm/decline, auto-Pending at deadlines, Confirm All and a progress summary. Participants confirm or decline generated meetings per round, see deadlines, counts and their role, and unanswered meetings turn Pending."
+ },
+ {
+  "k": "EP-43809",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE User Cards in Confirmation List",
+  "epic": "Hyve Meeting Program",
+  "text": "Built Meeting Program Confirmation List user cards with match score, role, favourite, sponsored mark and one-time Confirm/Decline buttons. Participants confirm or decline proposed meetings once; cards then show Pending, Confirmed or Declined, and unanswered cards turn Pending when the period ends."
+ },
+ {
+  "k": "EP-43717",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Matches List: Search, Filters & Sorting",
+  "epic": "Hyve Meeting Program",
+  "text": "Defined search, filters and sorting for the Meeting Program Matches list tabs: My Picks, Picked Me, Mutual Matches and Exhibitors. Cards sort by Super Relevant, Relevant then unmarked, each by matchmaking score, with role, match type and delegate or marketplace filters."
+ },
+ {
+  "k": "EP-43872",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Schedule Block in Meeting Program (User)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a personal Schedule block to the participant's Meeting Program view, showing confirmed meetings by block once schedules are sent. Users see their meetings in time order with the other participant, sponsored mark, role and table number, alongside blocked timeslots."
+ },
+ {
+  "k": "EP-41254",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Sponsored Meetings limit",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a Sponsored meetings limit setting (default on, 30) to the Onsite meetings section of exhibitor category settings for Meeting Program sessions. Organisers cap sponsored meetings per exhibitor category (0 blocks them, off means unlimited); the limit shows on MP session pages, emails and exhibitor settings."
+ },
+ {
+  "k": "EP-42383",
+  "q": "2025-Q3",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || User info pop-up (Frontend)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a user info pop-up to Meeting Program cards on the front end showing profile, role, interests and matchmaking information. Clicking a user card opens a scrollable pop-up with photo, job, company, role, About, interest categories and a Favorite button."
+ },
+ {
+  "k": "EP-44786",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "12-hour based time for Meeting program",
+  "epic": null,
+  "text": "Added 12-hour am/pm time to meeting programmes. Meeting programmes can show 12-hour times."
+ },
+ {
+  "k": "EP-41432",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Pre-registered list. Counters and dashboards (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added role counters and Connections and Meetings dashboards to the Meeting Program Pre-registered list tab. Organisers see active users by role, relevant, super relevant and mutual relevant counts, and meetings by total, confirmed, pending and declined."
+ },
+ {
+  "k": "EP-43916",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Email and platform web Notifications",
+  "epic": "Hyve Meeting Program",
+  "text": "Added Meeting Program email and platform notifications for being added, role changes, confirmation rounds, final schedules, rating and removal. Users receive an email and a platform notification at each stage, with variables and a link to the relevant Meeting Program page."
+ },
+ {
+  "k": "EP-43922",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Display filters extension",
+  "epic": "Hyve Meeting Program",
+  "text": "Extended admin Display Filters with Meeting Program tabs (My Picks, Picked Me, Mutual Matches, Exhibitors) to order, show/hide and restrict filters by category. Organisers configure which filters appear, in what order and for which user categories on each Meeting Program matches list."
+ },
+ {
+  "k": "EP-41459",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Confirmation list (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the Meeting Program Confirmation list tab in admin, listing generated or organiser-created meetings with origin and global status. After the first generation, organisers see meeting pairs and their confirmation status, with timeline, filters, Update Data and Create Meeting."
+ },
+ {
+  "k": "EP-41773",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Tables. Move meeting (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a 'Move meeting' pop-up on the Meeting Program Tables tab to change a meeting's block, table and timeslot before final schedules are sent. Organisers relocate meetings without clashing with occupied tables, blocked slots or Women Circle tables, and changes flow to schedules."
+ },
+ {
+  "k": "EP-41461",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Confirmation list. \"Create Meeting\" button and pop-up (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a 'Create Meeting' button and pop-up to the Meeting Program Confirmation list for manually pairing active participants. Organisers create confirmed meetings, with table and timeslot after placement, blocked when they break self-pairing or same-company rules."
+ },
+ {
+  "k": "EP-41682",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Schedule (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the Meeting Program Schedule tab in the admin panel: a per-meeting-block grid of participants by timeslot, with table, badges, blocked slots and 'Create Meeting' cells. From table placement onwards, organisers see every participant's meetings and blocked slots and can fill empty cells."
+ },
+ {
+  "k": "EP-41707",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Schedule. Filters and Search (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added participant category and role filters and a debounced search by name, company and job title to the Meeting Program Schedule tab. Organisers narrow the Participants column of the selected meeting block by category, role or search term."
+ },
+ {
+  "k": "EP-41731",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Tables (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the Tables tab of the admin Meeting Program session page, showing each table's meetings per timeslot by meeting block, with create and move meeting actions. Organisers see the MP schedule by table from the Table Placement checkpoint, with a pinned first column, pagination and create/move actions."
+ },
+ {
+  "k": "EP-41712",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Schedule, Table. “Create Meeting“ button and pop-up (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a Create Meeting button and pop-up to the Meeting Program Schedule and Tables views for manually creating meetings, with pairing rules enforced. Organisers can create meetings manually, pre-filled from empty cells, blocked when company, table, timeslot, blocked-time or Women Circle rules are broken."
+ },
+ {
+  "k": "EP-41431",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Timeline and counters (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a day-based timeline of Meeting Program checkpoints to admin and frontend session pages, with three admin-only counters for sponsored and confirmed meetings and a countdown. Organisers track each checkpoint, from auto-pull and voting through meeting generation, confirmation, table placement and final schedules, to session end."
+ },
+ {
+  "k": "EP-41325",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Meeting Program page and MM settings (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a Meeting Program page and side-menu item to the admin Networking & Matchmaking section, controlled by a new module management toggle. When the module toggle is on, admins get a Meeting Program page in the admin panel; it is off by default."
+ },
+ {
+  "k": "EP-41435",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Pre-registered list. “Add Users“ button and pop-up (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added an Add Users button and search pop-up to the Meeting Program pre-registered list in the admin panel. Organisers can search active users and add them to a session's pre-registered list, adding it to their schedule, until first meeting generation starts."
+ },
+ {
+  "k": "EP-41378",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Pre-registered list (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the Meeting Program session page's Pre-registered list tab in the admin panel, with filters, search, an hourly-updated participant table and remove/add-back actions. Organisers see every session participant with their status and relevance and meeting counters, and can remove, restore or view each person's schedule."
+ },
+ {
+  "k": "EP-41245",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Roles settings (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added a Role settings step to Meeting Program session configuration with custom role names, label colours, category mapping and limits. Organisers map participant categories to buyer roles, set sponsor and blocked-timeslot limits, and preview role cards; limits lock at first generation."
+ },
+ {
+  "k": "EP-41768",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Tables. Search (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added table-number search to the Meeting Program Tables tab in the admin panel, scoped to the selected meeting block. Organisers find a table by number as they type."
+ },
+ {
+  "k": "EP-41460",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Confirmation list. Filters and Search (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Added filters (created by, status, role, type, Women Circle) and name/company/job title search to the Meeting Program Confirmation list in the admin panel. Organisers narrow the confirmation list to the meetings they need, searching either side of each pair."
+ },
+ {
+  "k": "EP-43914",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Meeting Program Cards in My Schedule",
+  "epic": "Hyve Meeting Program",
+  "text": "Added meeting programme cards to My Schedule: placeholder cards per block, then individual confirmed meetings once schedules are final. Participants see meeting programme blocks and meetings in their schedule."
+ },
+ {
+  "k": "EP-46480",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. Algo change. Free meetings on 1st generation",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Switched Meeting Program 1st generation to the 2nd-generation algorithm, so it creates free meetings as well as sponsored ones. Both generation runs now produce sponsored and free meetings."
+ },
+ {
+  "k": "EP-45791",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting Program. Timeline redesign",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Added System and Platform timeline subtabs to Meeting Program setup, where organisers build a custom, chronological timeline of labelled timepoints. Users see the custom Platform timeline when one exists, otherwise the System timeline."
+ },
+ {
+  "k": "EP-39154",
+  "q": "2025-Q4",
+  "feature": "Meeting programmes",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "MP || App part",
+  "epic": "Hyve Meeting Program",
+  "text": "Added Meeting Program support to the apps: notifications, placeholder and final meeting cards in My Schedule, a filter and meeting ratings. App users are notified of being added, removed and final schedules, see placeholder then per-meeting cards with table numbers, and rate meetings."
+ },
+ {
+  "k": "EP-46566",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. Combine Meeting Blocks into Single Schedule List",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Combined meeting programme blocks into one chronological schedule with block dividers. Users see their whole programme schedule in one list."
+ },
+ {
+  "k": "EP-46565",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting Program. Remove Image and Description",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Removed the meeting programme image and description from the details page. The page is more compact."
+ },
+ {
+  "k": "EP-46564",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting Program. Remove User Profile Block",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Removed the user profile block from the meeting programme page so the user list shows three columns. More matches fit on screen."
+ },
+ {
+  "k": "EP-46487",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting Program. Replace Icon for Sponsored Meetings",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Replaced the dollar icon for sponsored meetings with a clearer marker. Sponsored meetings are marked more meaningfully."
+ },
+ {
+  "k": "EP-46486",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. Remove Download Schedule option",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Removed the Download Schedule option from meeting programmes. The schedule section is simpler."
+ },
+ {
+  "k": "EP-46485",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. Early access for Exhibitors",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Enrolled exhibitors in meeting programmes at creation so they can assign sponsor roles before users are notified. Exhibitors prepare their team before the programme starts."
+ },
+ {
+  "k": "EP-39228",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Meeting Completion via QR & Badge Scan",
+  "epic": "Hyve Meeting Program",
+  "text": "Marked meeting programme meetings as completed when the table QR code or the other person's badge is scanned, with a table QR export. Meetings are recorded as completed from onsite scans."
+ },
+ {
+  "k": "EP-40448",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Meeting Timeslot Blocking",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Let meeting programme users block timeslots up to a per-role limit set by the organiser. Participants can block limited timeslots."
+ },
+ {
+  "k": "EP-46552",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. Meeting Confirmation Changes",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Changed meeting programme confirmation: private responses, switchable until the stage ends, and a single confirmation list. Users confirm or decline freely until each stage closes."
+ },
+ {
+  "k": "EP-46563",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. Manual meeting creation improvements",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Improved manual meeting creation: a side panel showing mutual matches first, with notifications and a marker for organiser-created meetings. Organisers create meetings faster from mutual matches."
+ },
+ {
+  "k": "EP-48314",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. Option to disable notification for Meeting program",
+  "epic": "Hyve Q1.26 delievery",
+  "text": "A toggle now lets organizers fully disable notifications for a specific Meeting Program on Web and App, delivered as an urgent hotfix to meet a HYVE requirement to suppress unwanted meeting alerts. Added a 'Disable notifications' ON/OFF toggle (default OFF) on Meeting Program create/edit settings that suppresses all related Web and App notifications when enabled."
+ },
+ {
+  "k": "EP-42263",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Sessions list page & details page (Frontend)",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the meeting programme pages for participants: session list, details, role and status, meeting blocks, timeline and sponsored limits. Participants find their meeting programme sessions in their profile."
+ },
+ {
+  "k": "EP-43923",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE Exhibitor flow",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the exhibitor flow for meeting programmes: enrolment and notifications, menu entry, details page, sponsored limits and team member roles. Exhibitors manage their meeting programme participation and team."
+ },
+ {
+  "k": "EP-43924",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || FE User flow",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the user flow for meeting programmes: enrolment by role, cancellation rules, notifications and main page. Buyers, participants and team members follow a defined programme flow."
+ },
+ {
+  "k": "EP-41328",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "MP || Meeting Program session creation and configuration (Admin panel)",
+  "epic": "Hyve Meeting Program",
+  "text": "Built meeting programme session creation and configuration in the admin panel: cards, general, meetings, timeline and participation conditions. Organisers create and configure meeting programmes in the admin panel."
+ },
+ {
+  "k": "EP-46551",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. Split Voting Phase, Hide Mutual Matches, Restructure Tabs",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Split meeting programme voting into marking and responding phases, removing mutual matches and restructuring tabs. Users first pick who they want to meet, then respond to incoming interest."
+ },
+ {
+  "k": "EP-49001",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting Program. Show General Buyers During Relevance Stage",
+  "epic": "Hyve Q1.26 delievery",
+  "text": "During the Meeting Program's relevance stage, general buyers are visible to team members and participants even if the buyer didn't reach out first. Participants and team members can find and signal relevance to general buyers directly."
+ },
+ {
+  "k": "EP-48752",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. Sorting options for Relevance and opt-ins phases",
+  "epic": "Hyve Q1.26 delievery",
+  "text": "A sorting selector in the Meeting Program's matches list and incoming relevance list: first name, last name, company (default) or relevance. Users sort matches within their filtered results to decide who to meet."
+ },
+ {
+  "k": "EP-49069",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting Program. Manual Delete Meetings",
+  "epic": "Hyve Q1.26 delievery",
+  "text": "Giving organizers a manual delete-meetings control in the Meeting Program lets them clean up incorrect or cancelled meetings directly, without engineering intervention. A manual delete-meetings capability was added to the Meeting Program, with confirmation and schedule views defined in the linked designs."
+ },
+ {
+  "k": "EP-49002",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Remove Deleted Users From Meeting Program",
+  "epic": "Hyve Q1.26 delievery",
+  "text": "When a user is removed from the platform, all their Meeting Program meetings are removed from lists, admin views, reports, agendas and counters. Meeting lists, reports, generated agendas and analytics only show meetings with current users."
+ },
+ {
+  "k": "EP-49073",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. No Show (Admin)",
+  "epic": "Hyve Q1.26 delievery",
+  "text": "An admin-side No Show capability lets organizers mark meeting no-shows, improving the accuracy of meeting attendance and reporting in the Meeting Program. The Meeting Program admin gained a No Show control (with confirmation/schedule views per the linked designs) to flag missed meetings."
+ },
+ {
+  "k": "EP-45790",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. Remove Mutual matches tab",
+  "epic": "Hyve Q4 (End of October Deliverables)",
+  "text": "Removed the Mutual relevance tab from meeting programmes and kept users in all tabs after they're marked relevant. Users stay active in meeting programme matching."
+ },
+ {
+  "k": "EP-49075",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting program. No Show (User)",
+  "epic": "Hyve Q1.26 delievery",
+  "text": "Scanning a table's QR code during a meeting now marks it No Show (User), and ratings open in the app once the final schedule is out. The Meeting Program report gets a No Show (User) column in place of the old completion timestamp."
+ },
+ {
+  "k": "EP-49879",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Change meeting rating trigger in app",
+  "epic": "Improve Meetings & Scheduling",
+  "text": "Meeting ratings now surface in the mobile app as soon as attendees receive their final schedule, capturing feedback earlier in the meeting-program lifecycle. Ratings become available for each meeting at the moment it appears in the app via the Final Schedule, rather than only after the program concludes."
+ },
+ {
+  "k": "EP-50569",
+  "q": "2026-Q1",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "Meeting Program. Optionally extending Participation Conditions for Team Members ",
+  "epic": "Hyve Q1.26 delievery",
+  "text": "An 'Also use for team members' option applies Meeting Program participation conditions to team members and meeting sponsors too. Organisers can limit which team members enter a meeting programme, for example by participant category."
+ },
+ {
+  "k": "EP-39148",
+  "q": "2026-Q2",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "1st generation of meetings - DS",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the first meeting generation for meeting programmes: sponsored meetings only, in four relevance tiers with company representation rules. After voting, sponsored meetings are generated from mutual relevance markings."
+ },
+ {
+  "k": "EP-39150",
+  "q": "2026-Q2",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "2nd generation of meetings - DS",
+  "epic": "Hyve Meeting Program",
+  "text": "Built the second meeting generation: keeps confirmed meetings, then generates sponsored and then free meetings by relevance tier. After first confirmation, remaining meetings are generated in priority order."
+ },
+ {
+  "k": "EP-49192",
+  "q": "2026-Q2",
+  "feature": "Meeting programmes",
+  "tags": [],
+  "summary": "[Shoptalk Spring] #2c Backend logic to be changed",
+  "epic": "Shoptalk Sprint Preparation",
+  "text": "Updated the meeting-generation backend logic and payload ahead of the Shoptalk Spring event, verifying account limits, connections, and role visibility data. Backend payload/logic was updated and confirmed against a checklist of core meeting-generation data (accounts, limits, connections, role access/visibility, timeslot blocks), with two related items spun off into follow-up tickets."
+ },
+ {
+  "k": "EP-30282",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-In Speed Networking. Event Organizer Setup",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Added an Opt-in Speed Networking session type to the admin panel, with a General setup of location, timeline and meeting settings. Organisers create opt-in sessions with dated checkpoints, meeting length, breaks and tables; maximum meetings per user is calculated automatically."
+ },
+ {
+  "k": "EP-30284",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-In Speed Networking. Pre-Registration conditions",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Added a Conditions step to Opt-in Speed Networking setup, using categories and registration fields flagged 'Use for Speed Networking' to select participants and exhibitors. Users matching the conditions with a free timeslot are auto-added to the pre-registered list, get a schedule card and are notified."
+ },
+ {
+  "k": "EP-29905",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Add the “Use for Speed Networking“ checkbox to every select-type  registration form element",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Added a 'Use for Speed Networking' checkbox to select-type fields in visitor and exhibitor registration forms. Checked fields feed the Opt-in Speed Networking session Conditions step; checkboxes are hidden when the module is off or for city/state fields."
+ },
+ {
+  "k": "EP-30285",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-In Speed Networking. Pre-registration list",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Built the Pre-registered List tab for Opt-in Speed Networking sessions, listing buyers, sponsored and free team members and participants with statuses. Organisers search, filter and page through session users with statuses such as Pre-registered, Added by Organizer or Canceled Attendance."
+ },
+ {
+  "k": "EP-30697",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-in Speed Networking. Meeting limits and set as a Buyer",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Added a 'Sponsored meetings limit' (default 10) for exhibitor categories and profiles, plus a buyer flag and buyer meetings limit for participant categories, for Opt-in Speed Networking. When Speed Networking is enabled, organisers cap sponsored meetings per exhibitor and define which participant categories act as buyers, and their limits."
+ },
+ {
+  "k": "EP-30302",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-in Speed Networking.  Card in My Schedule",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Added Opt-in Speed Networking sessions as a timeslot-blocking card in My Schedule, with a legend item and a meetings list once finalised. Participants see the session in their schedule, then their meeting list once finalised, and can cancel before the revised-lists checkpoint."
+ },
+ {
+  "k": "EP-30295",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-In Speed Networking.  Offering users matchmaking proposals",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Added a Matches list to Opt-in Speed Networking listing all active users by role, grouped by mutual and one-sided 'relevant' marks and match %. Users mark people relevant; mutual and one-sided requests drive paid and free meeting generation; voting locks at the 'Collect revised list' checkpoint."
+ },
+ {
+  "k": "EP-30297",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-in Speed Networking. Profile pages and list of meetings in user profile",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Added Speed Networking pages to user profiles: a session list and details with timeline, sponsored meetings limit, role, exhibitor team member controls and schedule. Participants view sessions and meetings and can cancel attendance before the checkpoint; exhibitors assign team member roles and participation."
+ },
+ {
+  "k": "EP-30286",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-In Speed Networking. Table view of generated meetings",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Added a Tables tab to opt-in speed networking session details, listing generated meetings by table with role tags and sponsored-meeting marks. Organisers can search meetings by table number, see roles and sponsored meetings, refresh data without reload and switch to edit mode."
+ },
+ {
+  "k": "EP-30292",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-In Speed Networking.  Shedule of generated meetings",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Built the Schedule tab for Opt-in Speed Networking sessions, showing generated meetings per user with role tags, sponsored-meeting markers, filters and search. Organisers view each participant's generated meetings, filter and search them, and jump from a table tag to that table's meetings."
+ },
+ {
+  "k": "EP-30699",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-in Speed Networking. Manual adjustment of meetings by Organizer",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Added an Edit mode to Opt-in Speed Networking tables so organisers can drag, add, delete and auto-assign participants in generated meetings. Organisers rearrange meetings by drag and drop, with rules blocking self-meetings and double-booking; buyer–sponsor pairs become sponsored."
+ },
+ {
+  "k": "EP-30294",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-In Speed Networking.  Dynamic timeline",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Reworked the timeline component for Opt-in Speed Networking with day and hour ranges, meeting checkpoints and admin counters. The timeline tracks from creation to 10 minutes after session end, switching to hours an hour before meetings, with counters in admin."
+ },
+ {
+  "k": "EP-30300",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-in Speed Networking.  Notifications",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Added Opt-in Speed Networking email templates and bell notifications for being added, removed, final schedules and post-session leads. Users get emails and bell notifications with auto-login links at each stage, and a post-session email with the leads file of people met."
+ },
+ {
+  "k": "EP-30874",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "Opt-in Speed Networking. Meeting creation logic",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Defined the Opt-in Speed Networking meeting generation logic for paid and free meetings based on relevance marks and visibility rules. Paid meetings need mutual buyer–paid team member relevance; other meetings can come from one-sided relevance, within table and slot capacity."
+ },
+ {
+  "k": "EP-30301",
+  "q": "2024-Q3",
+  "feature": "Opt-in speed networking",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Opt-in Speed Networking.  Card and details page in App Schedule",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Added opt-in speed networking sessions to personal and team schedules in the mobile app, with a details page listing the user's meetings. Added users see the session block their schedule and, once lists are ready, their meeting times, tables and partners; cancelled or removed users lose it."
+ },
+ {
+  "k": "EP-39133",
+  "q": "2025-Q2",
+  "feature": "Opt-in speed networking",
+  "tags": [],
+  "summary": "MVP Opt-in Speed Networking project adjustments (WEB & AP)",
+  "epic": null,
+  "text": "Adjusted the MVP Opt-in Speed Networking module for general use: removed sponsored meetings, made buyers a tag, added visibility presets and changed pairing rules. Only opted-in, eligible users appear in Offers, organisers set two-sided visibility or presets, and pairing uses relevancy and matchmaking score only."
+ },
+ {
+  "k": "EP-33706",
+  "q": "2026-Q1",
+  "feature": "Opt-in speed networking",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Set up push notifications for Speed Networking 2 in iOS and Android",
+  "epic": "Opt-In Speed Networking Session",
+  "text": "Set up iOS and Android push notifications for opt-in speed networking: added, removed, schedules and changes by role. App users get push notifications for their speed networking sessions."
+ },
+ {
+  "k": "EP-43553",
+  "q": "2025-Q3",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "[adminv2] add virtualization for the sponsor list to the in the round tables",
+  "epic": null,
+  "text": "Virtualised the sponsor list in round table setup. Long sponsor lists stay responsive."
+ },
+ {
+  "k": "EP-44876",
+  "q": "2025-Q3",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Make optimization for long api fetches",
+  "epic": "Hyve Meeting Program",
+  "text": "Optimised the frontend for slow meeting programme API calls. Meeting programme pages handle slow responses better."
+ },
+ {
+  "k": "EP-56891",
+  "q": "2026-Q3",
+  "feature": "Round table waitlists",
+  "tags": [],
+  "summary": "Improve waitlist replacement to auto-detect available candidates",
+  "epic": "Roundtable Allocation & Admin",
+  "text": "Moved round-table waitlist-replacement eligibility computation from an error-prone backend field into the matchmaking service itself, using data it already receives. The Data Science service now derives eligible candidates itself (applied accounts minus every account already invited to a seat, across all generations and prior replacements) from data /schedule/ already receives; the unassigned_candidates field is removed from the contract entirely."
+ },
+ {
+  "k": "EP-28986",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Admin panel. Session creation and edit",
+  "epic": "Round Tables",
+  "text": "Added Round table sessions to the admin panel: an 'Add new activity' menu, a two-step General/Topics setup, and a Round table filter in the sessions list. Organisers create round tables with application and scheduling dates, per-table capacity and topics; tables are formed automatically after applications close."
+ },
+ {
+  "k": "EP-28987",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Admin panel. Users list",
+  "epic": "Round Tables",
+  "text": "Built the Round table Attendees list in the admin panel, with a timeline, counters, filters, search, manual add/remove and assigned topic and table after registration ends. Organisers see who applied to which topics, their status and, once placed, their table, with links to the topic and table views."
+ },
+ {
+  "k": "EP-28988",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Admin panel. Topics list",
+  "epic": "Round Tables",
+  "text": "Built the Topics tab for round table sessions in the admin panel, with topic cards that can be added, edited or deleted. Organisers manage topic name, description, tags, location, moderator, visibility and sponsor; after table generation cards link to their tables."
+ },
+ {
+  "k": "EP-28989",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Admin panel. Tables list and management",
+  "epic": "Round Tables",
+  "text": "Built the admin round tables list: tables generated per topic after applications close, with manual seat editing and table leader, moderator and sponsor assignment. Organisers see all generated tables by topic and can swap or drag attendees, fill free seats and change or assign table leaders."
+ },
+ {
+  "k": "EP-28990",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Frontend part. All Sessions listing",
+  "epic": "Round Tables",
+  "text": "Listed Round table sessions in All Sessions with an Activity type filter, topic application and cancellation, registration countdown and eligibility checks. Users find and filter round tables, apply to topics within registration dates up to a limit, and are blocked on schedule clashes or ineligibility."
+ },
+ {
+  "k": "EP-28991",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Frontend part. Round tables listing",
+  "epic": "Round Tables",
+  "text": "Added a Round tables tab to the front-end sessions page with card and list views, topic requests, a registration countdown and filters. Users browse round table sessions in their own tab (also in All Sessions), view topics and submit topic requests before registration ends."
+ },
+ {
+  "k": "EP-28992",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Frontend part. Round table Session page",
+  "epic": "Round Tables",
+  "text": "Built the public Round table session page with topic cards where visitors submit or cancel requests up to their topic limit. Visitors apply to topics with limit feedback and see their table number once tables are formed; moderators see how many tables each topic has."
+ },
+ {
+  "k": "EP-28993",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Frontend part. My Schedule listing",
+  "epic": "Round Tables",
+  "text": "Added Round table cards to My Schedule for applicants and moderators, blocking the timeslot, with new legend filters for calendar and list views. Applicants see their topics and, after seating, their table companions, and can cancel applications; moderators open their topics' table details."
+ },
+ {
+  "k": "EP-29074",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Admin panel. Session timeline and header in management view",
+  "epic": "Round Tables",
+  "text": "Built the admin management view of a round table session with applicants, topics and tables tabs, stats, settings access and a dynamic timeline. Organisers manage a round table session from one page, see attendee, topic and table occupancy stats, and return quickly to All Sessions."
+ },
+ {
+  "k": "EP-31628",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Increase min number of field \"max number of people per table (number field)\"",
+  "epic": null,
+  "text": "Set the minimum 'max people per table' for round tables to three. Round tables can't be set up for fewer than three people."
+ },
+ {
+  "k": "EP-28995",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Notifications",
+  "epic": "Round Tables",
+  "text": "Added round table notifications for participants, table leaders and moderators, each linking to the session pop-up on the schedule page. Attendees are told their topic and table number once tables are set, table leaders are told of their role, and moderators are told on assignment."
+ },
+ {
+  "k": "EP-28994",
+  "q": "2024-Q3",
+  "feature": "Round tables",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Round tables. App part. My Schedule listing",
+  "epic": "Round Tables",
+  "text": "Added round table session cards, detail pages, filters and change notifications to My Schedule in the mobile apps. Visitors and moderators see round table topics, location, time, sponsors and table numbers in the app schedule, read-only."
+ },
+ {
+  "k": "EP-39818",
+  "q": "2025-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Applications list in Topic details",
+  "epic": "Hyve Round tables improvements",
+  "text": "Added a topic details view in admin listing users who applied to a round table topic and, after placement, their table and confirmation status. Organisers see each topic's applicants, whether system or organiser assigned them, their table and status, or the topic they were moved to."
+ },
+ {
+  "k": "EP-39819",
+  "q": "2025-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Confirmation Process",
+  "epic": "Hyve Round tables improvements",
+  "text": "Added an optional confirmation process to Round table sessions, where participants confirm or reject their assigned topic and table. Participants are notified and confirm or reject once; organisers see and filter Confirmed, Rejected and Pending statuses across attendees, topics and tables."
+ },
+ {
+  "k": "EP-41016",
+  "q": "2025-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Reasignment to another Topic",
+  "epic": "Hyve Round tables improvements",
+  "text": "Let organisers move Round table participants to a different topic and table in edit mode, or delete them, via drag and drop or the avatar menu. Organisers pick a topic and table with free seats; the move applies immediately and the assignment tag changes from System to Organiser."
+ },
+ {
+  "k": "EP-41524",
+  "q": "2025-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Additional Round tables improvements",
+  "epic": "Hyve Round tables improvements",
+  "text": "Made a set of round table refinements: added-to-session notification, topic request limit notice, tooltips, Optional Activities placement, Edit Tables label and Assigned Topic header. Participants are notified when added and see request limits and their assigned topic first; round tables sit under Optional Activities in schedules."
+ },
+ {
+  "k": "EP-43554",
+  "q": "2025-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "[adminv2] browser history, back, in the round tables",
+  "epic": null,
+  "text": "Made the browser Back button work across round table tabs in the new admin panel. Admins can navigate round tables with Back."
+ },
+ {
+  "k": "EP-44052",
+  "q": "2025-Q3",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Frontend impovements",
+  "epic": null,
+  "text": "Showed moderators only their assigned topics on round table cards in the schedule and popup. Moderators see only their topics."
+ },
+ {
+  "k": "EP-45793",
+  "q": "2025-Q4",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Table numbers across all topics",
+  "epic": "Hyve Q4 (End of October Deliverables)",
+  "text": "Changed round table table numbering to one continuous sequence across all topics in a session, reusing freed numbers. Table numbers are unique per session and never shift; new tables take the smallest free number, then continue from the highest."
+ },
+ {
+  "k": "EP-46473",
+  "q": "2026-Q1",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Allow to add users to the table after the final schedule",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Let organisers add, remove and move users between round tables after the session starts and until it ends. Organisers can adjust tables during a round table session."
+ },
+ {
+  "k": "EP-46474",
+  "q": "2026-Q1",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round tables. Add setting to define the tables limit",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Added a tables limit per round table session, with unplaced participants marked Unassigned. Organisers cap tables to match the room."
+ },
+ {
+  "k": "EP-49077",
+  "q": "2026-Q1",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Round Tables. Remove Deleted Users from Sessions",
+  "epic": "Hyve Q1.26 delievery",
+  "text": "Users removed from the platform, by integration or in the Admin Panel, are removed from every Round Table session. Removed users no longer appear in round table seating, participant lists or admin details on web or app."
+ },
+ {
+  "k": "EP-46238",
+  "q": "2026-Q1",
+  "feature": "Round tables",
+  "tags": [],
+  "summary": "Develop BASIC version of RT Service",
+  "epic": "Recreate Round Tables Service",
+  "text": null
+ },
+ {
+  "k": "EP-26344",
+  "q": "2024-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Speed Networking. Event Organizer Setup (MVP)",
+  "epic": "Speed Networking",
+  "text": "Added a Speed Networking module and admin tab where organisers create sessions with location, time frame, meetings per person and breaks. With the module on, organisers see a Speed networking tab under Networking & Matchmaking with session cards and a create-session flow."
+ },
+ {
+  "k": "EP-26346",
+  "q": "2024-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Speed Networking.Matchmaking and Meeting Organization (MVP)",
+  "epic": "Speed Networking",
+  "text": "Built the Speed Networking Schedule tab, where the matchmaking algorithm pairs checked-in participants into one-to-one meetings, never from the same company. Organisers see a filterable, searchable grid of each participant's meetings and tables, and can share a link for a TV display."
+ },
+ {
+  "k": "EP-26347",
+  "q": "2024-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Speed Networking. Meeting Notifications (MVP)",
+  "epic": "Speed Networking",
+  "text": "Added Speed Networking email templates for check-in success, personal schedule and post-session contacts, with a new meetings-list variable. Participants get an email on check-in, another when final schedules are ready, and one after the session with the people met and their leads."
+ },
+ {
+  "k": "EP-26368",
+  "q": "2024-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Speed Networking. Dynamic timeline with counters (MVP)",
+  "epic": "Speed Networking",
+  "text": "Added a live timeline with milestones and three counters to the Speed Networking session page. The page tracks check-in, schedule generation, each meeting and session end, with check-in and meeting counts and a countdown."
+ },
+ {
+  "k": "EP-26419",
+  "q": "2024-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Speed Networking. Table view of generated meetings (MVP)",
+  "epic": "Speed Networking",
+  "text": "Added a Tables tab to the Speed Networking session page showing generated meetings grouped by table and timeslot. After check-in and schedule generation, organisers see a grid of tables against meeting slots with participant pairs; before that an empty state shows."
+ },
+ {
+  "k": "EP-26349",
+  "q": "2024-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Speed Networking. Public Meeting Display (MVP)",
+  "epic": "Speed Networking",
+  "text": "Built a public meeting display page for speed networking sessions, an airport-style board of participants, table numbers and live countdowns. Each session has a shareable link showing a live schedule that moves through pre-start, meeting, break and session-over states."
+ },
+ {
+  "k": "EP-26354",
+  "q": "2024-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Speed Networking. Offering users Matchmaking proposal (MVP)",
+  "epic": "Speed Networking",
+  "text": "Added real-time match proposals to the Speed Networking web interface during check-in, with participants liked by default and a thumbs-down to reject. Participants mark irrelevant matches before check-in ends; the algorithm then recalculates, giving liked matches priority in the schedule."
+ },
+ {
+  "k": "EP-26351",
+  "q": "2024-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Speed Networking. Manual adjustment of generated meetings (MVP)",
+  "epic": "Speed Networking",
+  "text": "Added an edit mode for generated Speed Networking meetings, where organisers drag participants between tables via a buffer, with auto-assign and rule checks. Organisers can rearrange speed networking pairs, blocked from self or same-company meetings and double-booking, then save or reset."
+ },
+ {
+  "k": "EP-26352",
+  "q": "2024-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Speed Networking. Frontend module for user access (MVP)",
+  "epic": "Speed Networking",
+  "text": "Built the Speed Networking participant web interface, reached from an email link, showing current step, countdowns, matches, meetings and rating. Checked-in users vote on proposed matches, see their meeting list and details once arranged, and rate the session afterwards."
+ },
+ {
+  "k": "EP-30182",
+  "q": "2024-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Add sorting and search to the Speed Networking main page",
+  "epic": null,
+  "text": "Added search by name and newest-first sorting to the speed networking admin page. Admins can find speed networking sessions quickly."
+ },
+ {
+  "k": "EP-30268",
+  "q": "2024-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Admin Panel Export for Speed Networking Feedback",
+  "epic": null,
+  "text": "Added a 'Speed Networking Feedback Data' export to admin data, with user details, session, star rating, yes/no answers and submission date and time. Organisers can download all speed networking session feedback with respondent and session details from the admin panel."
+ },
+ {
+  "k": "EP-26345",
+  "q": "2024-Q3",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Speed Networking. Participant Check-in (MVP)",
+  "epic": "Speed Networking",
+  "text": "Built the Speed Networking session details page with a Registration List tab showing checked-in participants, with filter, search, sort and QR code actions. Organisers see who has checked in, when, and their potential matches, and can show a participant's QR code or jump to their schedule."
+ },
+ {
+  "k": "EP-32670",
+  "q": "2024-Q3",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": " Enhance User Intuitiveness for Speedmatchmaking Voting Buttons",
+  "epic": null,
+  "text": "Changed speed matchmaking like/dislike voting buttons to start in a neutral white state and change colour on selection. Voting buttons start neutral and show the chosen vote in colour; after voting closes, cards show a button only where a vote was cast."
+ },
+ {
+  "k": "EP-33959",
+  "q": "2024-Q3",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "[SN 1] Adjust Minimum Time Between Final Schedule and Meeting Start",
+  "epic": null,
+  "text": "Cut the mandatory gap between the 'Send Final Schedule' and 'Meeting Starts' speed networking checkpoints from 5 minutes to 1. Organisers can schedule speed networking meetings to start one minute after the final schedule is sent."
+ },
+ {
+  "k": "EP-50818",
+  "q": "2026-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Change validation of sponsored  limits on DS side (Speed Networking)",
+  "epic": "Improve Speed Networking Service",
+  "text": "Refined how sponsored-meeting limits are validated on the Data Science side so admin/concierge-created meetings are not wrongly blocked, while genuinely new meetings are still checked. Validation now skips previously generated meetings, checks only newly generated ones, and does not re-check post-generation."
+ },
+ {
+  "k": "EP-52147",
+  "q": "2026-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Make more uniform distribution of meetings among SN participants",
+  "epic": "Improve Speed Networking Service",
+  "text": "The Speed Networking matchmaking engine was tuned to distribute meetings more evenly across participants, improving fairness so more attendees receive a viable schedule. Two internal sorting strategies were trialled against production data, results compared via CSV, and the better-performing approach was shipped to production to flatten meeting distribution."
+ },
+ {
+  "k": "EP-50840",
+  "q": "2026-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Add API functionality to propagate likes across exhibitor team members (API param)",
+  "epic": "Improve Speed Networking Service",
+  "text": "Added an API-toggleable rule that pools likes across an exhibitor's team members so an inactive teammate no longer drags down the team's matchmaking reach. Likes are now de-duplicated and propagated across all team members of an exhibitor (grouped by Exhibitor ID), switchable via an API parameter, with docs updated."
+ },
+ {
+  "k": "EP-53330",
+  "q": "2026-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "Expand non-mutual likes into mutual likes",
+  "epic": "Improve Speed Networking Service",
+  "text": "Adds configurable preprocessing to the matchmaking engine that expands one-sided likes into mutual likes for specified role directions, improving meeting/speed-networking schedule coverage. An API-configurable preprocessing step that transforms one-sided likes into mutual-like pairs per role direction before scheduling."
+ },
+ {
+  "k": "EP-50642",
+  "q": "2026-Q2",
+  "feature": "Speed networking",
+  "tags": [],
+  "summary": "For incorrect data input to SN change ignoring + warning to algo fail + error",
+  "epic": "Improve Speed Networking Service",
+  "text": "The Speed Networking algorithm now rejects invalid input with an error instead of silently ignoring it, preventing meetings in blocked slots. The algorithm now returns a 400 and logs an error for any input failing validation, applied broadly beyond just blocked timeslots."
+ },
+ {
+  "k": "EP-53334",
+  "q": "2026-Q2",
+  "feature": "Speed networking scheduling",
+  "tags": [],
+  "summary": "Generate additional pairs or meetings without existing likes",
+  "epic": "Improve Speed Networking Service",
+  "text": "Adds a mechanism to generate additional mutual-like pairs between users who have no existing likes, increasing meeting schedule coverage where demand signals are sparse. A configurable pre/post-processing mechanism that generates additional mutual-like pairs (per-user caps or timeslot-based) while respecting existing restrictions."
+ }
+]

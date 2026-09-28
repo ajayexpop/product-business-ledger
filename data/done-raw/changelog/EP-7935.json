@@ -1,0 +1,105 @@
+{
+ "k": "EP-7935",
+ "histories": 86,
+ "historiesRead": 86,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2022-09-22T09:57:32.337+0100",
+   "from": "Incoming request",
+   "to": "Considering",
+   "by": "Romain Dejoie"
+  },
+  {
+   "at": "2022-09-22T09:57:34.973+0100",
+   "from": "Considering",
+   "to": "Estimated request",
+   "by": "Romain Dejoie"
+  },
+  {
+   "at": "2022-09-22T17:00:14.909+0100",
+   "from": "Estimated request",
+   "to": "Awaiting details",
+   "by": "Romain Dejoie"
+  },
+  {
+   "at": "2022-09-22T17:00:17.267+0100",
+   "from": "Awaiting details",
+   "to": "Considering",
+   "by": "Romain Dejoie"
+  },
+  {
+   "at": "2022-09-23T09:10:00.818+0100",
+   "from": "Considering",
+   "to": "Estimated request",
+   "by": "Romain Dejoie"
+  },
+  {
+   "at": "2022-10-27T09:04:23.336+0100",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2022-10-27T09:04:24.590+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2022-11-08T18:05:37.083+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2022-12-07T09:46:40.342+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-12-07T09:46:43.560+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-12-07T09:46:45.787+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-12-07T09:46:48.230+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-12-07T09:46:51.906+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2022-12-23T10:27:02.585+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2022-12-23T10:27:05.258+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790319436051.txt"
+}

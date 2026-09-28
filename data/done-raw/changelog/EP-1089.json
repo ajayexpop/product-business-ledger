@@ -1,0 +1,111 @@
+{
+ "k": "EP-1089",
+ "histories": 51,
+ "historiesRead": 51,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2022-01-11T14:50:28.383+0000",
+   "from": "Open",
+   "to": "Grooming",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-01-11T14:50:30.568+0000",
+   "from": "Grooming",
+   "to": "In design",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-01-11T14:50:32.088+0000",
+   "from": "In design",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-01-11T14:50:33.505+0000",
+   "from": "Tech Brief",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-07-14T10:54:45.572+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2022-07-15T13:48:47.058+0100",
+   "from": "In progress",
+   "to": "Ready for development",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2022-09-08T08:12:56.285+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2022-09-09T10:20:34.473+0100",
+   "from": "In progress",
+   "to": "Ready for development",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2022-09-13T09:01:35.896+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2022-09-13T09:52:13.423+0100",
+   "from": "In progress",
+   "to": "Ready for development",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2022-10-17T15:51:09.805+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2022-11-01T09:50:33.824+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2022-11-01T09:50:42.404+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Maryna Dovgal"
+  },
+  {
+   "at": "2022-12-05T08:57:14.080+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2022-12-05T08:57:39.331+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Olena Khromei"
+  },
+  {
+   "at": "2023-03-10T10:35:13.139+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Ihor Yarchuk"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790320637824.txt"
+}

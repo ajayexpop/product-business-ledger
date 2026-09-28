@@ -1,0 +1,829 @@
+[
+ {
+  "id": "exhib-parent-child-launch",
+  "theme": "exhib",
+  "q": "2023-Q1",
+  "title": "Parent and child exhibitors",
+  "benefit": "Parent exhibitors can manage their own child companies directly from the event website.",
+  "detail": "A new 'My child exhibitors' page lets parent exhibitors search for, add or create child exhibitors. Organisers switch it on and set category rules, and new children receive login details by email, or automatically generated logins where single sign-on is used.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-11754"
+  ]
+ },
+ {
+  "id": "exhib-sponsor-banners-category",
+  "theme": "exhib",
+  "q": "2023-Q1",
+  "title": "Sponsor banners and category-level sponsorship",
+  "benefit": "Place sponsor banners on profile pages and set sponsorship for a whole exhibitor category at once.",
+  "detail": "One or two rotating sponsor banners can appear on every My profile page, set per device. Exhibitor categories gain 'Is sponsor', 'Show in search list' and 'Show sponsor pop-up' toggles that apply to all their exhibitors, including through import and the API, without overwriting manual settings.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-11115",
+   "EP-12564",
+   "EP-12584"
+  ]
+ },
+ {
+  "id": "exhib-content-limits",
+  "theme": "exhib",
+  "q": "2023-Q1",
+  "title": "Exhibitor content limits",
+  "benefit": "Set how much marketing content and news text each exhibitor category or exhibitor can publish.",
+  "detail": "Organisers set marketing content limits per exhibitor, description length limits for marketing files and article length limits for news per category (0 for unlimited). Long descriptions expand with a More button, and uploads show a progress spinner.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-12718",
+   "EP-11932",
+   "EP-7239",
+   "EP-10301"
+  ]
+ },
+ {
+  "id": "exhib-sponsored-sessions-profile",
+  "theme": "exhib",
+  "q": "2023-Q1",
+  "title": "Sponsored sessions on exhibitor profiles",
+  "benefit": "Show the sessions an exhibitor sponsors on its profile and let sponsors see who booked or attended them.",
+  "detail": "Exhibitor profiles show a Sponsored sessions block automatically when the exhibitor sponsors sessions. The sponsor's dashboard adds 'Booked a session' and 'Attended session' columns covering online, onsite and on-demand attendance.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-7172",
+   "EP-11165",
+   "EP-14378"
+  ]
+ },
+ {
+  "id": "exhib-marketplace-2023q1",
+  "theme": "exhib",
+  "q": "2023-Q1",
+  "title": "Marketplace and profile improvements",
+  "benefit": "Tailor how the marketplace, cards and category pickers behave for your event.",
+  "detail": "Organisers set the default number of marketplace items per page, can show zip codes on exhibitor and product cards, and choose whether ticking a category also ticks its sub-categories. Brands with many products link to a full, paginated product list.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-11579",
+   "EP-13284",
+   "EP-13930",
+   "EP-12034"
+  ]
+ },
+ {
+  "id": "exhib-rich-text",
+  "theme": "exhib",
+  "q": "2023-Q2",
+  "title": "Rich text for profiles and news",
+  "benefit": "Format company descriptions and news articles with headings, lists, images and links.",
+  "detail": "The full text editor is available for 'About the company' in the exhibitor profile editor and for exhibitor news, with headings, bold, italic, underline, lists, alignment, quotes, photos and links.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-13852",
+   "EP-16131"
+  ]
+ },
+ {
+  "id": "exhib-leads-meetings-events",
+  "theme": "exhib",
+  "q": "2023-Q2",
+  "title": "Leads from meetings and exhibitor events",
+  "benefit": "Turn exhibitor event bookings and meetings of any status into leads.",
+  "detail": "Exhibitors holding their own events see bookings in the Interactions dashboard and, if enabled, as leads in Download leads, with private details optionally hidden. A new setting includes pending, incoming, confirmed and cancelled meetings in leads files without duplicates.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16707",
+   "EP-16456"
+  ]
+ },
+ {
+  "id": "exhib-colocated-scans",
+  "theme": "exhib",
+  "q": "2023-Q2",
+  "title": "Lead scanning across co-located events",
+  "benefit": "Scan the badges of attendees from co-located events and jump straight to their profiles.",
+  "detail": "With a new contact-sharing setting on, the app saves scans from other events in the same database with an 'other event' label, and scan reports gain an event name column. After a scan, tapping a person's name or a team member's company opens their profile.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-5445",
+   "EP-8788"
+  ]
+ },
+ {
+  "id": "exhib-setup-2023q2",
+  "theme": "exhib",
+  "q": "2023-Q2",
+  "title": "Exhibitor setup improvements",
+  "benefit": "Give uncategorised exhibitors sensible defaults and control product limits and manual navigation.",
+  "detail": "Each new event gets a Default exhibitor category whose settings and limits apply to uncategorised exhibitors. Organisers can block adding products once the active-product limit is reached and set the default products tab, and each exhibitor manual link now opens its own section.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-14937",
+   "EP-10479",
+   "EP-15338"
+  ]
+ },
+ {
+  "id": "exhib-sponsor-layout-2023q2",
+  "theme": "exhib",
+  "q": "2023-Q2",
+  "title": "Sponsor banner and card layout",
+  "benefit": "Sponsor banners and cards display cleanly on tablets and phones.",
+  "detail": "On smaller screens, marketplace sponsor banners and the product finder sit in a compact block above the filters, and sponsor and sponsored product cards are laid out six in a row.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-16209",
+   "EP-17760"
+  ]
+ },
+ {
+  "id": "exhib-performance-2023q2",
+  "theme": "exhib",
+  "q": "2023-Q2",
+  "title": "Faster marketplace and product imports",
+  "benefit": "Marketplace pages load faster and product imports update search more efficiently.",
+  "detail": "Duplicate queries were removed from the marketplace page, and product search indexing now runs once at the end of an import and only for fields that changed.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-17039",
+   "EP-16538",
+   "EP-17329"
+  ]
+ },
+ {
+  "id": "exhib-custom-lead-questions",
+  "theme": "exhib",
+  "q": "2023-Q3",
+  "title": "Custom lead capture questions",
+  "benefit": "Exhibitors add their own questions to the lead capture form so their team records what matters to them.",
+  "detail": "Exhibitor admins create custom lead questions for their team members, with text, select, multiselect, radio and checkbox types, and answers appear in the leads report. Organisers can open an exhibitor's questions from its admin profile, and duplicate scans are filtered out.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-11114",
+   "EP-7074",
+   "EP-12942",
+   "EP-18953",
+   "EP-24094"
+  ]
+ },
+ {
+  "id": "exhib-sponsor-section",
+  "theme": "exhib",
+  "q": "2023-Q3",
+  "title": "Dedicated sponsor section in the marketplace",
+  "benefit": "Sponsors get their own highlighted section above exhibitors on the web and in the app.",
+  "detail": "Sponsors appear in a separate framed section of cards above the exhibitor list, as an auto-scrolling carousel or static rows. The app gains a sponsors block on exhibitor and product lists, and clicks now count in sponsor statistics.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-13907",
+   "EP-18978",
+   "EP-18109",
+   "EP-17790",
+   "EP-21461"
+  ]
+ },
+ {
+  "id": "exhib-team-interaction",
+  "theme": "exhib",
+  "q": "2023-Q3",
+  "title": "Team member interaction controls",
+  "benefit": "Exhibitors decide which team members can take meetings and chat, on the web and in the app.",
+  "detail": "Exhibitors, and optionally parent exhibitors, switch meetings and chats on or off per team member. The app hides blocked actions and explains why, and the settings are included in the team members export and the public API.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-17339",
+   "EP-17343",
+   "EP-17974"
+  ]
+ },
+ {
+  "id": "exhib-custom-listings",
+  "theme": "exhib",
+  "q": "2023-Q3",
+  "title": "Custom table listings",
+  "benefit": "Show exhibitors and delegates as a configurable table of the fields you choose.",
+  "detail": "An optional table view for the exhibitor and delegate lists, with an admin builder for choosing and ordering fields. Tables use event branding, show full names on hover and open a pop-up with all of an exhibitor's categories.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-12725",
+   "EP-20781"
+  ]
+ },
+ {
+  "id": "exhib-overview-report",
+  "theme": "exhib",
+  "q": "2023-Q3",
+  "title": "Exhibitor overview report",
+  "benefit": "Exhibitors download one report covering their company and all child companies.",
+  "detail": "An Exhibitor Overview spreadsheet in the profile menu lists views, products, content, chats, meetings and badge scans for the exhibitor and each child exhibitor across the event.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-17348"
+  ]
+ },
+ {
+  "id": "exhib-manual-translation",
+  "theme": "exhib",
+  "q": "2023-Q4",
+  "title": "Exhibitor manual translation",
+  "benefit": "Publish the exhibitor manual in every language your event supports.",
+  "detail": "Every exhibitor manual section, including section names, can be switched between platform languages and translated in the admin panel, as already possible for registration.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-20410"
+  ]
+ },
+ {
+  "id": "exhib-sponsor-mgmt-2023q4",
+  "theme": "exhib",
+  "q": "2023-Q4",
+  "title": "Sponsor management improvements",
+  "benefit": "Find sponsors quickly in the admin panel and let visitors act on sponsor cards.",
+  "detail": "Admins search sponsors and filter them by sponsor category. Sponsor and sponsored product cards on the marketplace show location and meeting and message buttons on hover, and these interactions count in sponsor reports.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-22966",
+   "EP-20725"
+  ]
+ },
+ {
+  "id": "exhib-exports-2024q1",
+  "theme": "exhib",
+  "q": "2024-Q1",
+  "title": "Leads and sponsor export improvements",
+  "benefit": "Leads and sponsor exports carry more context about each interaction.",
+  "detail": "Leads exports add exhibitor event date and time and, if enabled, meeting rating notes. The exhibitor export's custom field list was updated, and sponsor statistics exports use a clearer layout and count only sponsors actually shown on screen.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-24160",
+   "EP-24161",
+   "EP-24776",
+   "EP-23935",
+   "EP-20605"
+  ]
+ },
+ {
+  "id": "exhib-leads-2024q2",
+  "theme": "exhib",
+  "q": "2024-Q2",
+  "title": "Lead download and badge matching",
+  "benefit": "Download leads in the background and get full details even for badges the scanner did not recognise.",
+  "detail": "Download leads moved to a button on the profile, generating the file in the background with a timestamped link. Unrecognised badge scans are matched against the event database and filled in with the attendee's details, and organisers can set when lead capture is available.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-22713",
+   "EP-21095",
+   "EP-26547"
+  ]
+ },
+ {
+  "id": "exhib-invite-stats",
+  "theme": "exhib",
+  "q": "2024-Q2",
+  "title": "Visitor invitation statistics",
+  "benefit": "See how many visitors each exhibitor's invitations bring in.",
+  "detail": "Invite registrations are attributed to exhibitors. Admins get a statistics tab with status counts, top exhibitors, filters, search and Excel export, and exhibitors see their own invitation funnel in their profile.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-27290"
+  ]
+ },
+ {
+  "id": "exhib-settings-2024q2",
+  "theme": "exhib",
+  "q": "2024-Q2",
+  "title": "Product and exhibitor setting improvements",
+  "benefit": "Require key product details, show custom fields on product pages and rename sponsor sections.",
+  "detail": "Organisers can make product images and descriptions mandatory, show custom field data on product pages and rename the sponsor sections on exhibitor and product lists. Exhibitor manual deadlines can be changed with confirmation and without exhibitors resubmitting.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-7323",
+   "EP-25692",
+   "EP-27558",
+   "EP-23915"
+  ]
+ },
+ {
+  "id": "exhib-exhibitor-account",
+  "theme": "exhib",
+  "q": "2024-Q3",
+  "title": "Redesigned exhibitor account",
+  "benefit": "Manage every part of an exhibitor from one redesigned account in the admin panel.",
+  "detail": "The admin exhibitor account has new pages for registration info, settings, team members, security, sponsorship, floor plan and analytics against the event average, plus a refreshed interaction dashboard. Profiles show registration URL, external ID and tags, and new profiles no longer need a password.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-23966",
+   "EP-23967",
+   "EP-23968",
+   "EP-23969",
+   "EP-23970",
+   "EP-23971",
+   "EP-23972",
+   "EP-23973",
+   "EP-26041",
+   "EP-31630",
+   "EP-31674"
+  ]
+ },
+ {
+  "id": "exhib-lead-download-controls",
+  "theme": "exhib",
+  "q": "2024-Q3",
+  "title": "Lead download controls",
+  "benefit": "Choose which exhibitor categories or exhibitors can download leads.",
+  "detail": "Download leads can be switched on or off per exhibitor category or individual exhibitor, including their team members on web and app. Contact-sharing settings were renamed to name exhibitor events and sponsored sessions clearly.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-13663",
+   "EP-28237",
+   "EP-28308"
+  ]
+ },
+ {
+  "id": "exhib-parent-child-auto",
+  "theme": "exhib",
+  "q": "2024-Q3",
+  "title": "Automatic parent and child assignment",
+  "benefit": "Link exhibitors that share an email address as parent and child companies automatically.",
+  "detail": "A general setting runs a script that makes the first exhibitor with a shared email the parent and later ones its children, showing the last run. Checks in the API and import stop an exhibitor being set as its own parent or child.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-27619",
+   "EP-26157"
+  ]
+ },
+ {
+  "id": "exhib-event-cloning",
+  "theme": "exhib",
+  "q": "2024-Q3",
+  "title": "Clone products and brands with events",
+  "benefit": "Carry exhibitors' active products and brands into a cloned event.",
+  "detail": "Event cloning can keep only active products, and can copy brands with their exhibitors, products, logo, categories, description, social links and translations. Interaction data such as favourites is not copied.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-29011",
+   "EP-29132"
+  ]
+ },
+ {
+  "id": "exhib-profile-2024q3",
+  "theme": "exhib",
+  "q": "2024-Q3",
+  "title": "Product category and profile improvements",
+  "benefit": "Limit product categories to an exhibitor's activities and show exhibitor social links in the app.",
+  "detail": "A setting restricts product categories to an exhibitor's own activity categories. The iOS and Android apps show exhibitor social links from the exhibitor's profile.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-33961",
+   "EP-34458",
+   "EP-34459"
+  ]
+ },
+ {
+  "id": "exhib-lead-question-levels",
+  "theme": "exhib",
+  "q": "2024-Q4",
+  "title": "Lead questions by category and exhibitor",
+  "benefit": "Set lead capture questions globally, per exhibitor category or per exhibitor.",
+  "detail": "Lead question logic was improved so questions can be managed at global, category and individual exhibitor level.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-32169"
+  ]
+ },
+ {
+  "id": "exhib-marketplace-2024q4",
+  "theme": "exhib",
+  "q": "2024-Q4",
+  "title": "Marketplace view and category order",
+  "benefit": "Choose the default marketplace view and the order of category filters.",
+  "detail": "Organisers set the default marketplace view to cards, list or short list, and drag and drop category filters into order, which applies to category pickers on web and in the app.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-34438",
+   "EP-24228"
+  ]
+ },
+ {
+  "id": "exhib-sponsor-banners-2024q4",
+  "theme": "exhib",
+  "q": "2024-Q4",
+  "title": "Sponsor banner controls",
+  "benefit": "Make sponsor banners display-only and page through long sponsor lists.",
+  "detail": "A 'Disable links' toggle for each web and app banner location makes banners unclickable, with no redirect or click statistics. Sponsors are displayed with pagination.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-35019",
+   "EP-35640"
+  ]
+ },
+ {
+  "id": "exhib-parent-child-app",
+  "theme": "exhib",
+  "q": "2025-Q1",
+  "title": "Parent and child companies in app",
+  "benefit": "Show parent and child companies in the mobile app, with your own labels in every language.",
+  "detail": "The apps mark parent and child companies, add a Pavilions tab with child counts and a head office or child filter, and sort children alphabetically. Organisers rename the parent, child, pavilion and head office labels per language, and marketplace cards show country and city for parent exhibitors.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-32830",
+   "EP-37234",
+   "EP-37278",
+   "EP-37305",
+   "EP-37846",
+   "EP-38531",
+   "EP-39031"
+  ]
+ },
+ {
+  "id": "exhib-manual-2025q1",
+  "theme": "exhib",
+  "q": "2025-Q1",
+  "title": "Exhibitor manual improvements",
+  "benefit": "Enforce badge limits and save profile details reliably in the exhibitor manual.",
+  "detail": "The Add button is disabled with an explanation once the badge limit is reached, the exhibitor profile is saved and submitted with the Submit button, and fields can be hidden in table sections.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-38608",
+   "EP-40027",
+   "EP-36646"
+  ]
+ },
+ {
+  "id": "exhib-profile-2025q1",
+  "theme": "exhib",
+  "q": "2025-Q1",
+  "title": "Exhibitor and sponsor profile improvements",
+  "benefit": "Show the sessions a company speaks at or sponsors in the app, and embed videos safely.",
+  "detail": "App exhibitor profiles add 'Sessions we speak at' and 'Sponsored sessions' blocks that respect visibility rules. Embedded video fields on profiles, products and groups are validated, and sponsor profiles gain a back button.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-39354",
+   "EP-38865",
+   "EP-39511",
+   "EP-39105"
+  ]
+ },
+ {
+  "id": "exhib-category-search",
+  "theme": "exhib",
+  "q": "2025-Q2",
+  "title": "Smarter category selection and search",
+  "benefit": "Find the right category quickly, even in long, nested category lists.",
+  "detail": "A redesigned category picker offers a two-panel view by custom filter with direct search. Category filters with many items can show a search field across marketplace, delegate and news pages, and results show matching categories with their parents and children.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-35452",
+   "EP-36732",
+   "EP-40743"
+  ]
+ },
+ {
+  "id": "exhib-parent-child-2025q2",
+  "theme": "exhib",
+  "q": "2025-Q2",
+  "title": "Parent and child display controls",
+  "benefit": "Choose whether child companies are shown and show parent locations in the app.",
+  "detail": "A 'Do not indicate child companies' setting hides child relations on web and in the apps. App cards and profiles show country and city for parent exhibitors and pavilions, and the automatic assignment can run daily with an emailed report.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-37800",
+   "EP-37805",
+   "EP-41483",
+   "EP-38486"
+  ]
+ },
+ {
+  "id": "exhib-lead-scan-2025q2",
+  "theme": "exhib",
+  "q": "2025-Q2",
+  "title": "Lead scanning improvements",
+  "benefit": "Sync offline scans on demand and see clearer scan reasons in reports.",
+  "detail": "A 'Force scans sync' button in app settings sends locally edited scans, notes and ratings to the server so they appear in the leads file. The reason for scanning is labelled more clearly in reports.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-23400",
+   "EP-42570"
+  ]
+ },
+ {
+  "id": "exhib-team-news-2025q2",
+  "theme": "exhib",
+  "q": "2025-Q2",
+  "title": "Team member and news settings",
+  "benefit": "Decide which team member fields are required and get better news header images.",
+  "detail": "Organisers control whether telephone and job title are required when adding team members, and the news header image cropper uses a new ratio.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-40242",
+   "EP-41849"
+  ]
+ },
+ {
+  "id": "exhib-lead-capture-pro",
+  "theme": "exhib",
+  "q": "2025-Q3",
+  "title": "Lead Capture Pro",
+  "benefit": "Sell lead capture to exhibitors as a paid package for their whole team.",
+  "detail": "Organisers configure paid lead capture packages and their presentation, and track payments and revenue. Exhibitors buy access for their team, and in the app the Scan Badges page is shown only to exhibitors who have purchased it.",
+  "level": "headline",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-40864",
+   "EP-43200",
+   "EP-43294",
+   "EP-44314"
+  ]
+ },
+ {
+  "id": "exhib-manual-discounts",
+  "theme": "exhib",
+  "q": "2025-Q3",
+  "title": "Discount codes in the exhibitor manual",
+  "benefit": "Offer exhibitors discount codes on equipment ordered through the exhibitor manual.",
+  "detail": "Discount codes apply to items in the Equipment section, targeted by exhibitor category and item. Exhibitors and team members apply codes in the basket, and admins see and export discount usage.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-40746"
+  ]
+ },
+ {
+  "id": "exhib-dashboard-banners-2025q3",
+  "theme": "exhib",
+  "q": "2025-Q3",
+  "title": "Exhibitor dashboard and sponsor banner improvements",
+  "benefit": "Top performers show all-time results, and banners without links behave consistently in the app.",
+  "detail": "The exhibitor dashboard's Top Performers block always shows all-time data. On iOS and Android, tapping a sponsored banner that has no website link behaves consistently.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-45361",
+   "EP-43244",
+   "EP-43245"
+  ]
+ },
+ {
+  "id": "exhib-attend-stand",
+  "theme": "exhib",
+  "q": "2026-Q1",
+  "title": "Attend a stand",
+  "benefit": "Attendees can take part in stand activity, with the listing also available in the app.",
+  "detail": "Adds an 'Attend a stand' capability, with its listing shown in the mobile app.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-46483",
+   "EP-47311"
+  ]
+ },
+ {
+  "id": "exhib-lead-app-2026q1",
+  "theme": "exhib",
+  "q": "2026-Q1",
+  "title": "Lead capture app improvements",
+  "benefit": "Never lose a scanned lead, even on unreliable venue networks.",
+  "detail": "The lead capture form autosaves when an exhibitor leaves it, closes the app or loses connection, then syncs. The Scan Badges page follows Lead Capture Pro access rules, and the custom questions page in the exhibitor profile is clearer.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-47877",
+   "EP-44306",
+   "EP-48886"
+  ]
+ },
+ {
+  "id": "exhib-profile-2026q1",
+  "theme": "exhib",
+  "q": "2026-Q1",
+  "title": "Category filter cloning and profile loading",
+  "benefit": "Reuse product category filters within an event and see team members load smoothly.",
+  "detail": "Organisers can clone product category custom filters within an event instead of rebuilding them, and the team members section of public exhibitor profiles shows a loader.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-47919",
+   "EP-38749"
+  ]
+ },
+ {
+  "id": "exhib-lcp-access",
+  "theme": "exhib",
+  "q": "2026-Q2",
+  "title": "Lead Capture Pro access control",
+  "benefit": "Grant lead capture, product QR codes and AI notes by exhibitor category or individual exhibitor.",
+  "detail": "Organisers enable lead capture, product QR codes and AI meeting notes per exhibitor category or per exhibitor from one consolidated settings area. The purchase page marks features already granted as purchased, and standard questions have a configurable default state.",
+  "level": "headline",
+  "tags": [
+   "AI"
+  ],
+  "stories": [
+   "EP-50123",
+   "EP-50124",
+   "EP-50125",
+   "EP-50126",
+   "EP-50127",
+   "EP-49735",
+   "EP-49740",
+   "EP-54359",
+   "EP-54261",
+   "EP-46050"
+  ]
+ },
+ {
+  "id": "exhib-lead-2026q2",
+  "theme": "exhib",
+  "q": "2026-Q2",
+  "title": "Lead capture improvements",
+  "benefit": "Protect attendee privacy at the stand and see richer lead details.",
+  "detail": "Attendee emails can be shown only after a badge scan. Scanned visitor QR codes include team members, lead contribution counts meeting appointments, notes have a character limit, and interaction dashboards show each participant's company.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-51659",
+   "EP-40302",
+   "EP-52952",
+   "EP-46360",
+   "EP-54733"
+  ]
+ },
+ {
+  "id": "exhib-multilingual-manual",
+  "theme": "exhib",
+  "q": "2026-Q2",
+  "title": "Multilingual exhibitor manual documents",
+  "benefit": "Give exhibitors the exhibitor manual document in their own language.",
+  "detail": "Organisers upload a separate file for each event language within one exhibitor manual entry, and exhibitors see only the file for their selected language.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-49295",
+   "EP-49298"
+  ]
+ },
+ {
+  "id": "exhib-sponsor-visibility",
+  "theme": "exhib",
+  "q": "2026-Q2",
+  "title": "Random sponsor order and visibility",
+  "benefit": "Rotate sponsors fairly and make sure sponsor names always show.",
+  "detail": "Sponsors and sponsored products can be shown in random order on web and in the app, or by matchmaking score in the app. The legacy view shows up to 150 sponsors, sponsor names always appear on session cards and pages, and the custom sponsor limit has a tooltip.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-50051",
+   "EP-50249",
+   "EP-52414",
+   "EP-53036",
+   "EP-41570"
+  ]
+ },
+ {
+  "id": "exhib-permissions-2026q2",
+  "theme": "exhib",
+  "q": "2026-Q2",
+  "title": "Exhibitor permissions and team rules",
+  "benefit": "Product visibility follows the exhibitor's restrictions, and team logins stay unique.",
+  "detail": "Products inherit their exhibitor's visibility and message and meeting restrictions on web and mobile. Team member creation rules were updated with login uniqueness checks, and Google+ was removed from brand social links.",
+  "level": "standard",
+  "tags": [
+   "Mobile"
+  ],
+  "stories": [
+   "EP-50974",
+   "EP-53945",
+   "EP-52566"
+  ]
+ },
+ {
+  "id": "exhib-search-sponsors",
+  "theme": "exhib",
+  "q": "2026-Q3",
+  "title": "Sponsored placements in global search",
+  "benefit": "Sell sponsored banners, exhibitors and products on the global search page.",
+  "detail": "Global search shows a sponsorship banner plus rotating sponsored exhibitor and sponsored product blocks with configurable labels and colours. Sponsor cards now show location, tags and products, and exhibitors with several stands display them clearly.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-47680",
+   "EP-53767",
+   "EP-53768",
+   "EP-55625"
+  ]
+ },
+ {
+  "id": "exhib-insights-portal",
+  "theme": "exhib",
+  "q": "2026-Q3",
+  "title": "Exhibitor insights portal",
+  "benefit": "Exhibitors see the results of their event participation in one place.",
+  "detail": "The first insights page shows leads captured, meetings held, profile views, message reply rate, best single day and benchmarking against peers, based on real event data.",
+  "level": "headline",
+  "tags": [],
+  "stories": [
+   "EP-56919"
+  ]
+ },
+ {
+  "id": "exhib-lcp-profile",
+  "theme": "exhib",
+  "q": "2026-Q3",
+  "title": "Lead Capture Pro per team member",
+  "benefit": "Turn lead capture and AI meeting notes on for individual team members, with unlimited questions for buyers.",
+  "detail": "The app applies lead capture and AI meeting notes access per exhibitor owner and team member. Exhibitors who buy custom questions get unlimited standard and additional lead questions.",
+  "level": "standard",
+  "tags": [
+   "Mobile",
+   "AI"
+  ],
+  "stories": [
+   "EP-50535",
+   "EP-48813"
+  ]
+ },
+ {
+  "id": "exhib-profile-2026q3",
+  "theme": "exhib",
+  "q": "2026-Q3",
+  "title": "Region filters and brand import",
+  "benefit": "Filter listings by region and keep exhibitors' brands when they join new events.",
+  "detail": "An optional Region filter nested under Country narrows exhibitor and participant listings on web. Exhibitor import and adding from the global database attach an exhibitor's existing brands, and exhibitor settings include a logo option.",
+  "level": "standard",
+  "tags": [],
+  "stories": [
+   "EP-55645",
+   "EP-55642",
+   "EP-44730"
+  ]
+ }
+]

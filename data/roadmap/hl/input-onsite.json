@@ -1,0 +1,560 @@
+[
+ {
+  "k": "EP-48297",
+  "q": "2026-Q1",
+  "feature": "Aditus custom badges",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Error Handling - Custom Badge Page",
+  "epic": "Mobile App — 2026 Enhancements",
+  "text": "Custom badge errors in the Aditus integration now route users to a clear, localized error page (with German) instead of silently reverting to the native badge, so attendees know what action to take. Users are redirected to appropriate error pages with refined English copy and added German variants for no-connection and no-information cases."
+ },
+ {
+  "k": "EP-9800",
+  "q": "2023-Q1",
+  "feature": "Badge builder",
+  "tags": [],
+  "summary": "Fields rotation for 180 degrees in Badge builder",
+  "epic": "Badges fixes and improvements",
+  "text": "Added a 180-degree rotation setting for each field, including QR codes, in the physical badge builder. Rotated fields show in the badge preview and print rotated wherever the badge is printed."
+ },
+ {
+  "k": "EP-9801",
+  "q": "2023-Q1",
+  "feature": "Badge builder",
+  "tags": [],
+  "summary": "Fields aligning in Badge builder",
+  "epic": "Badges fixes and improvements",
+  "text": "Added an alignment setting (Centred, Left, Right) for every field in the physical badge builder. Each badge field can be aligned centre, left or right, reflected in the preview and wherever the badge is printed."
+ },
+ {
+  "k": "EP-9802",
+  "q": "2023-Q1",
+  "feature": "Badge builder",
+  "tags": [],
+  "summary": "Fields duplication in Badge builder",
+  "epic": "Badges fixes and improvements",
+  "text": "Added field duplication to the physical badge builder and merged the Bar/QR/Both/Without fields into a single cloneable Code field. Badge fields, including codes, can be cloned many times with separate display settings, toggled individually and removed."
+ },
+ {
+  "k": "EP-9803",
+  "q": "2023-Q1",
+  "feature": "Badge builder",
+  "tags": [],
+  "summary": "Category field movable on Badge builder",
+  "epic": "Badges fixes and improvements",
+  "text": "Made the Category field movable in the physical badge builder, like the other badge fields. Organisers drag the Category field to any position on the badge."
+ },
+ {
+  "k": "EP-9812",
+  "q": "2023-Q1",
+  "feature": "Badge builder",
+  "tags": [],
+  "summary": "Fields Margin Left and Right in Badge builder",
+  "epic": "Badges fixes and improvements",
+  "text": "Added Left Margin and Right Margin settings to every field in the physical Badge builder, including QR codes. Badge field margins set in the builder show in the preview and apply wherever the badge is printed."
+ },
+ {
+  "k": "EP-9822",
+  "q": "2023-Q1",
+  "feature": "Badge builder",
+  "tags": [],
+  "summary": "QR code and Barcode resize in Badge builder",
+  "epic": "Badges fixes and improvements",
+  "text": "Added a percentage size setting (default 100%) for QR codes and barcodes in the physical Badge builder. Resized QR codes and barcodes show in the badge preview and print at that size everywhere."
+ },
+ {
+  "k": "EP-41901",
+  "q": "2025-Q2",
+  "feature": "Badge builder",
+  "tags": [],
+  "summary": "Badges | Redesign of templating and output",
+  "epic": null,
+  "text": "Reworked all badge templates so badges look the same everywhere they're printed or previewed. Badges print consistently from admin, builder preview and profiles."
+ },
+ {
+  "k": "EP-11106",
+  "q": "2023-Q1",
+  "feature": "Badge delivery by email",
+  "tags": [],
+  "summary": "Add Badges Variable in \"Visitor Switch Category\" Template",
+  "epic": null,
+  "text": "Added badge variables (print badge link, badge barcode, badge QR code, print badge QR code) to the 'Visitor Switch to Category' registration email template. Visitors who switch category can receive their badge print link and codes in that email."
+ },
+ {
+  "k": "EP-10207",
+  "q": "2024-Q1",
+  "feature": "Badge print statistics",
+  "tags": [],
+  "summary": "Print badge statistics capture",
+  "epic": null,
+  "text": "Captured badge printing statistics wherever badges are printed: admin panel, frontend, kiosk and emails. Badge prints are recorded across every printing channel."
+ },
+ {
+  "k": "EP-33643",
+  "q": "2024-Q3",
+  "feature": "Badge printing messages",
+  "tags": [],
+  "summary": "Edit Error Message Text on Print Badge direct link",
+  "epic": null,
+  "text": "Replaced the error on the custom badge printing page for company profiles with a 'No badges available' message pointing to Profile Info → Print Badge. Exhibitors on /profile/badge see a clear message on where to print team member badges, in the same layout as before."
+ },
+ {
+  "k": "EP-15213",
+  "q": "2023-Q3",
+  "feature": "Badge scanning on non-Google devices",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Opensource scanner | Non google play devices",
+  "epic": null,
+  "text": "Integrated an open-source barcode scanner (ZXing or Huawei Scan Kit) into the Android app for devices without Google Play services. Badge scanning works in the Android app on Huawei devices that lack Google Play services."
+ },
+ {
+  "k": "EP-17524",
+  "q": "2024-Q2",
+  "feature": "Bulk badge printing",
+  "tags": [],
+  "summary": "BULK PRINT BADGES - REFACTORING",
+  "epic": null,
+  "text": "Refactored and re-enabled the Batch Print Badges tool on the participants page, working with or without filters. Organisers confirm the filtered badge count, a batch file is generated in the background and a download button appears when ready."
+ },
+ {
+  "k": "EP-42819",
+  "q": "2025-Q2",
+  "feature": "Check-in app",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Check-in App | Logout Button",
+  "epic": null,
+  "text": "Moved the check-in app logout button to a prominent position and added a confirmation pop-up. Check-in app users log out from a visible button after confirming."
+ },
+ {
+  "k": "EP-42609",
+  "q": "2025-Q3",
+  "feature": "Check-in app",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Participant category display in Check-in app",
+  "epic": null,
+  "text": "Showed the participant category in the check-in app on the post-scan screen, the manual-add users list and the scanned list. Check-in staff see each participant's category after scanning and in the user and scanned lists on iOS and Android."
+ },
+ {
+  "k": "EP-23669",
+  "q": "2024-Q2",
+  "feature": "Check-in app improvements",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Check-in app improvement",
+  "epic": null,
+  "text": "Improved the check-in app with a zone and action settings screen (check-in, check-out, session), a 1-second scan cooldown and duplicate-scan alerts. Staff pick zone, action and session before scanning; session scans require the item in the user's schedule, and repeat same-day scans are flagged."
+ },
+ {
+  "k": "EP-40616",
+  "q": "2026-Q1",
+  "feature": "Check-in list filters",
+  "tags": [],
+  "summary": "[admin panel] Add limitation to Zone filter in Check-in List ",
+  "epic": null,
+  "text": "Limited the zone filter options in check-in lists and analytics. Check-in filters stay responsive."
+ },
+ {
+  "k": "EP-24164",
+  "q": "2024-Q2",
+  "feature": "ExpoFP floor plan in app",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Redesign of expoFP UI elements",
+  "epic": null,
+  "text": "Redesigned the app's elements on the ExpoFP floor plan: search results, stand drawer, get-directions and route drawers on Android and iOS. Users search or pick a booth, choose a start point (current location with Crowd Connected, or on the map), swap points and see the route."
+ },
+ {
+  "k": "EP-14266",
+  "q": "2023-Q1",
+  "feature": "ExpoFP floor plan linking",
+  "tags": [],
+  "summary": "Redirection ExpoFP Floorplan",
+  "epic": null,
+  "text": "Added an External floorplan setting so marketplace stand links in app and web redirect to an ExpoFP floor plan via dynamic linking, a static URL, or no link. Organisers enable external floor plan linking in event setup; stand names deep-link to the matching ExpoFP stand, open a set URL in apps, or show unlinked."
+ },
+ {
+  "k": "EP-15370",
+  "q": "2023-Q1",
+  "feature": "ExpoFP floor plan linking",
+  "tags": [],
+  "summary": "Redirection links ExpoFP Floorplan",
+  "epic": null,
+  "text": "Extended ExpoFP floorplan redirection for clickable stands from the marketplace to all other front-end places that show stands. Stand links on exhibitor, product, session, exhibitor event, schedule and recommendation pages redirect to the external floorplan."
+ },
+ {
+  "k": "EP-15109",
+  "q": "2023-Q2",
+  "feature": "ExpoFP floor plan linking",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Mobile redirection ExpoFP Floorplan",
+  "epic": null,
+  "text": "Extended ExpoFP floorplan stand linking (dynamic, external URL or off) to every clickable stand in the mobile apps. Stand links on app brand, exhibitor, product and session profiles, lists and recommendations follow the admin external floorplan setting."
+ },
+ {
+  "k": "EP-45853",
+  "q": "2025-Q4",
+  "feature": "ExpoFP floor plan linking",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "ExpoFP - New stand format in our applications",
+  "epic": null,
+  "text": "Made the apps honour ExpoFP's 'Map with Hall' setting, matching stands as 'Hall + space + Stand' when it is on. App floor plans link exhibitors to ExpoFP stands in either format, e.g. 'Halle 3.0 G61' or 'G61'."
+ },
+ {
+  "k": "EP-45052",
+  "q": "2026-Q1",
+  "feature": "ExpoFP offline floor plans",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Full Offline Support - ExpoFP",
+  "epic": null,
+  "text": "Added full offline support for ExpoFP floor plans in the app using ExpoFP's offline archives. Attendees can use floor plans without a connection."
+ },
+ {
+  "k": "EP-2338",
+  "q": "2023-Q1",
+  "feature": "External barcode and QR scanning",
+  "tags": [],
+  "summary": "External Barcode and QR code",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-5714",
+  "q": "2023-Q2",
+  "feature": "External barcode and QR scanning",
+  "tags": [],
+  "summary": "ExpoPlatform's Check-In app: Ability to scan external QR and Barcodes and capture the unique code number in reports",
+  "epic": null,
+  "text": "Let the check-in app scan external QR codes, barcodes and co-located event badges, and added scanned code and event name columns to the Check-in list report. Unknown codes are saved and listed rather than rejected, and the check-in report shows each scanned code and, if recognised, its event."
+ },
+ {
+  "k": "EP-5643",
+  "q": "2023-Q2",
+  "feature": "External barcode and QR scanning",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Need ability to scan QR & Barcodes in the App that are not related to Expoplatform data without breaking the App.",
+  "epic": null,
+  "text": "Added an 'Allow users to scan any codes' setting so the mobile app can scan and store QR/barcodes unrelated to platform accounts. With the setting on, unknown codes are saved as 'Code successfully scanned' and appear in a new 'Scanned code' column in lead and scan exports."
+ },
+ {
+  "k": "EP-16698",
+  "q": "2023-Q2",
+  "feature": "External barcode and QR scanning",
+  "tags": [],
+  "summary": "External QR codes for checkin app",
+  "epic": null,
+  "text": "Made the check-in app work with external QR codes, searching by the external QR field and syncing it with accounts. The check-in app finds attendees by their external QR codes."
+ },
+ {
+  "k": "EP-36287",
+  "q": "2024-Q4",
+  "feature": "Floor plan filters",
+  "tags": [],
+  "summary": "Order of Exhibitor filters in Display filters should be mirrored on Floorplan page",
+  "epic": null,
+  "text": "Added a Floorplan tab to Display Filters so admins can order, rename, toggle and restrict floor plan filters. Floor plan filters are configured like list filters."
+ },
+ {
+  "k": "EP-23543",
+  "q": "2024-Q1",
+  "feature": "Floor plan links from meeting locations",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Interactive location on meeting cards in app",
+  "epic": null,
+  "text": "Made meeting locations on app meeting cards clickable, opening the floor plan focused on that spot for internal, MapsPeople and ExpoFP plans. Users tap a meeting's location in any status to open the floor plan at the stand; stand IDs are now synced with meetings."
+ },
+ {
+  "k": "EP-51701",
+  "q": "2026-Q2",
+  "feature": "Floor plan management",
+  "tags": [],
+  "summary": "Adding sorting and multi-select to internal floorplan",
+  "epic": "Customer Feature Requests",
+  "text": "Added natural-order sorting and multi-select bulk delete to the internal floorplan, sharply cutting the manual effort organizers spend managing halls and stands for large events. Halls and stands can be returned in natural alphanumeric order and selected (including select-all) for bulk deletion."
+ },
+ {
+  "k": "EP-11659",
+  "q": "2023-Q1",
+  "feature": "Floor plan sponsor banners",
+  "tags": [],
+  "summary": "New Floorplan - new type of banner view ",
+  "epic": null,
+  "text": "Added new floorplan sponsor banner placements: one or two banners at the top and a banner on the left under the filters, with admin preview. Admins choose top, left or both banner placements for the floorplan and enable them per sponsor; banners show on the general plan and all halls."
+ },
+ {
+  "k": "EP-40070",
+  "q": "2025-Q2",
+  "feature": "GPS indoor wayfinding",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "GPS Android Implementation - Invisual Floorplan",
+  "epic": null,
+  "text": "Implemented GPS location in the Android WebView for the Invisual floor plan, matching iOS, with permission and GPS-enable prompts. Android app users can see their real-time GPS position on the floor plan map, as iOS users can."
+ },
+ {
+  "k": "EP-40363",
+  "q": "2025-Q2",
+  "feature": "GPS indoor wayfinding",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Toggle for IPS / GPS Config - ExpoFP",
+  "epic": null,
+  "text": "Added an IPS only / GPS only / IPS+GPS selector to the Crowd Connected settings for ExpoFP. Organisers set location tracking mode themselves in general settings, defaulting to IPS+GPS."
+ },
+ {
+  "k": "EP-11711",
+  "q": "2023-Q1",
+  "feature": "Hall and stand management",
+  "tags": [],
+  "summary": "Verify stands and halls uniqueness during import from excel the halls and stand numbers",
+  "epic": null,
+  "text": "Added uniqueness checks for halls per event and stands per hall in Excel import, admin creation, and API v1 and v2. Duplicate hall or stand names are rejected on import, and admins see 'Halls can't have identical names' or a duplicate-stand error."
+ },
+ {
+  "k": "EP-20467",
+  "q": "2023-Q3",
+  "feature": "Indoor wayfinding with Crowd Connected",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "ExpoFP - Crowdconnected Integration",
+  "epic": null,
+  "text": "Set up the CrowdConnected location provider from the ExpoFP SDK in the mobile apps, with foreground, background and reminder location permission prompts. Mobile app users who grant location permission see a blue dot for their position on ExpoFP floorplans."
+ },
+ {
+  "k": "EP-6677",
+  "q": "2023-Q1",
+  "feature": "Interactive floor plans",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Mobile app for Floor Plan (web view only)",
+  "epic": null,
+  "text": "Replaced the old floor plan webview in the Android and iOS apps with the new front-end floor plan widget link. The mobile apps open the new /newfront/widgets/floorplan webview, first visible in the test app."
+ },
+ {
+  "k": "EP-10211",
+  "q": "2023-Q1",
+  "feature": "Interactive floor plans",
+  "tags": [],
+  "summary": "Floorplan Admin Panel - Ability to Draw/Delete Stands",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-10209",
+  "q": "2023-Q1",
+  "feature": "Interactive floor plans",
+  "tags": [],
+  "summary": "Floorplan Admin Panel - add Exhibitor name & Stand label + Hide Stand mode",
+  "epic": null,
+  "text": "Showed exhibitor names and stand labels on floor plan stands, scaled by zoom, with parent-exhibitor logic and options to hide stands and stand labels. Floor plan stands show the exhibitor name above the stand number on web and app, and admins can hide individual stands or stand labels per hall."
+ },
+ {
+  "k": "EP-11652",
+  "q": "2023-Q1",
+  "feature": "Interactive floor plans",
+  "tags": [],
+  "summary": "New Floorplan - indication for hyperlinks (location)",
+  "epic": null,
+  "text": "Made the stand location on exhibitor cards show a pointer cursor and open the specific stand on the new floor plan when clicked. Across the platform, users click an exhibitor's stand location to jump to that stand on the floor plan."
+ },
+ {
+  "k": "EP-15556",
+  "q": "2023-Q3",
+  "feature": "Interactive floor plans",
+  "tags": [],
+  "summary": "[floorplan] remove unnecessary arrows to go back if we have only one hall",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-18025",
+  "q": "2023-Q3",
+  "feature": "Interactive floor plans",
+  "tags": [],
+  "summary": "[Portal-UI] FloorPlan improvement",
+  "epic": "Rewrite floorplan in threejs",
+  "text": null
+ },
+ {
+  "k": "EP-20136",
+  "q": "2023-Q3",
+  "feature": "Interactive floor plans",
+  "tags": [],
+  "summary": "Floor plan| After clicking on the session/event from the session list ( on stand) - public profile of this session/ event must be opened  ",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-20222",
+  "q": "2023-Q3",
+  "feature": "Interactive floor plans",
+  "tags": [],
+  "summary": "Floorplan| Quick filters \"Visited\" - need add the drawer with names of visited stands ( same logic as for any other filter) ",
+  "epic": null,
+  "text": "Added a drawer listing visited stands for the floor plan 'Visited' quick filter, pinning a stand on click. Visitors can see and jump to stands they visited."
+ },
+ {
+  "k": "EP-20149",
+  "q": "2023-Q4",
+  "feature": "Interactive floor plans",
+  "tags": [],
+  "summary": "Floor plan| \"No results\" info for quick filters ",
+  "epic": null,
+  "text": "Added a 'no results' message for floor plan quick filters. Empty quick filter results are explained as for normal filters."
+ },
+ {
+  "k": "EP-38711",
+  "q": "2025-Q2",
+  "feature": "Interactive floor plans",
+  "tags": [],
+  "summary": "Change floor plan mini header on the standart one from the websitebuilder",
+  "epic": null,
+  "text": "Replaced the floor plan's custom mini header with the standard website builder header on all devices. The floor plan page uses the site's standard header."
+ },
+ {
+  "k": "EP-20247",
+  "q": "2026-Q3",
+  "feature": "Interactive floor plans",
+  "tags": [],
+  "summary": "Floor plan|It possible open hidden hall from exhibitors card ",
+  "epic": null,
+  "text": "Stopped exhibitor cards opening stands inside a hidden floor plan hall. Stands in hidden halls stay hidden from exhibitor cards."
+ },
+ {
+  "k": "EP-27382",
+  "q": "2024-Q2",
+  "feature": "InVisual floor plan integration",
+  "tags": [],
+  "summary": "InVisual Floor Plan Integration",
+  "epic": null,
+  "text": "Built a native InVisual floorplan integration: admin settings, iframe/webview floorplan, stand linking from exhibitors and sessions, QR deep links and bookmark sync. Users can open the InVisual map from exhibitor, session and event locations, scan venue QR codes into the app or webview, and sync favourites."
+ },
+ {
+  "k": "EP-14045",
+  "q": "2023-Q2",
+  "feature": "Kiosk check-in",
+  "tags": [],
+  "summary": "Search Improvements for Kiosk module: Onsite Solutions",
+  "epic": null,
+  "text": "Improved kiosk check-in search by name or email to return all matching participants in batches rather than only five. Kiosk check-in search shows every relevant match, paged or loaded in batches, so attendees can find their own record."
+ },
+ {
+  "k": "EP-15575",
+  "q": "2023-Q2",
+  "feature": "Kiosk check-in",
+  "tags": [],
+  "summary": "External QR/Barcodes scan in Kiosk",
+  "epic": null,
+  "text": "Made Kiosk mode recognise external QR codes and barcodes on badges, and rechecked internal ones. Participants can check in at a Kiosk by scanning an external QR code or barcode received via integration or API."
+ },
+ {
+  "k": "EP-14036",
+  "q": "2023-Q2",
+  "feature": "Kiosk check-in",
+  "tags": [],
+  "summary": "Ability to use conditional logic in the Kiosk Builder Registration pipeline",
+  "epic": null,
+  "text": "Added conditional logic to the Kiosk Builder registration pipeline, matching the web registration form builder. Organisers configure conditional fields in the kiosk form, so onsite visitors see the fields for their selected event and category."
+ },
+ {
+  "k": "EP-44841",
+  "q": "2025-Q3",
+  "feature": "Kiosk visitor category display",
+  "tags": [],
+  "summary": "Can we please display the visitor Category in KIOSK module besides Visitor names",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-43589",
+  "q": "2025-Q3",
+  "feature": "Live digital badges",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Display a Moving Colored Ring Around Badge QR Codes",
+  "epic": null,
+  "text": "Added a moving coloured ring around QR codes on live digital badges, coloured by attendee category, behind a feature flag (off by default). Live badges show an animated ring in the category colour, so staff and scanners can spot static screenshots and check the attendee category."
+ },
+ {
+  "k": "EP-45778",
+  "q": "2026-Q2",
+  "feature": "OCR badge scanning",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "OCR Badge Scanning",
+  "epic": null,
+  "text": "Added OCR badge scanning in the app: reading name, company and job title from a badge format, matching locally then on the server, with an OCR-only event setting. Exhibitors capture leads by scanning printed badge text."
+ },
+ {
+  "k": "EP-8049",
+  "q": "2023-Q1",
+  "feature": "QR code PDF export",
+  "tags": [],
+  "summary": "EMEA: Export QR Codes in pdf format - Participants & Exhibitor Companies",
+  "epic": null,
+  "text": "Added 'Export QR codes' to Management Participants and Exhibitors, generating a PDF of QR codes filtered by category and status, one per page with identifying details. Organisers generate a background PDF with one 12 cm QR code per page and the holder's details, including external codes."
+ },
+ {
+  "k": "EP-44749",
+  "q": "2026-Q1",
+  "feature": "Simplified participant QR codes",
+  "tags": [],
+  "summary": "Add a new simplified QR Code type to the admin panel: \"Simplified Participant QR\"",
+  "epic": null,
+  "text": "Added a Simplified Participant QR type that encodes only the attendee ID. Admins can issue lighter QR codes."
+ },
+ {
+  "k": "EP-44186",
+  "q": "2026-Q1",
+  "feature": "Stand bookmarking",
+  "tags": [],
+  "summary": "Bi-directional Sync Between Favorites and Floorplan Bookmarks",
+  "epic": null,
+  "text": "Synced favourite exhibitors and bookmarked stands on the ExpoFP floor plan in both directions. Favouriting an exhibitor bookmarks its stand and vice versa."
+ },
+ {
+  "k": "EP-41743",
+  "q": "2025-Q3",
+  "feature": "Stand bookmarking on floor plans",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Bookmarking Stands on Floor Plan - Stage 1",
+  "epic": null,
+  "text": "Added stand bookmarking to the ExpoFP floor plan in the mobile apps for exhibitor stands, sessions, events and custom locations. App users bookmark stands with a confirmation toast and revisit them from a bookmarks list in the floor plan header."
+ },
+ {
+  "k": "EP-28422",
+  "q": "2025-Q2",
+  "feature": "Ticket validation at check-in",
+  "tags": [],
+  "summary": "(Part 2) Usage of check-in app in Ticketing",
+  "epic": "[Ticketing&Invoicing](New UI) Ticketing",
+  "text": "Made the check-in app validate tickets on badge scan: ticket held, valid date, not expired and correct check-in zone, with buyers exempt. The check-in app shows prioritised messages such as 'No ticket found' or 'Wrong check-in zone'; no checks run when ticketing is off."
+ }
+]

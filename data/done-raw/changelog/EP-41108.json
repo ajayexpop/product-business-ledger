@@ -1,0 +1,69 @@
+{
+ "k": "EP-41108",
+ "histories": 28,
+ "historiesRead": 28,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2025-04-01T10:49:23.345+0100",
+   "from": "Incoming request",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-04-01T10:54:29.021+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-04-01T11:11:28.479+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-04-01T11:11:33.114+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-04-03T15:06:04.816+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Automation for Jira"
+  },
+  {
+   "at": "2025-04-03T16:23:44.582+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2025-04-03T16:35:03.740+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-04-03T21:07:40.146+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-04-06T12:58:23.507+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2026-09-15T17:46:35.857+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790322293449.txt"
+}

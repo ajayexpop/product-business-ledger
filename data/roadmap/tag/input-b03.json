@@ -1,0 +1,3808 @@
+[
+ {
+  "k": "EP-18393",
+  "summary": "Meeting auto confirm should work with Category settings of meetings",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Meetings",
+   "Team_C"
+  ],
+  "doneAt": "2024-02-01T15:17:53.676+0000",
+  "text": "Made meeting auto-confirmation respect category-level daily and total confirmation limits, and renamed the limit settings with clearer tooltips. Auto-confirmed meetings stop at the receiver's category limit, with an error shown to the requester; table meetings follow the same rules."
+ },
+ {
+  "k": "EP-24220",
+  "summary": "Add Networking Opt IN/OUT parameter to the /api/v2/account/set endpoint",
+  "epic": null,
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [
+   "IMEX",
+   "Team_B"
+  ],
+  "doneAt": "2024-02-02T15:26:09.937+0000",
+  "text": "Added a boolean Networking opt-in/out parameter to the /api/v2/account/set endpoint, defaulting to false. API integrations can set whether an attendee appears in matchmaking and attendee lists, triggering the same settings as the opt-in button."
+ },
+ {
+  "k": "EP-25983",
+  "summary": "Vinexposium. Wine Paris 2024. Data fix related to model merging",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-02-04T13:10:56.157+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25964",
+  "summary": "Consent mode for corp site",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-02-06T05:57:33.388+0000",
+  "text": null
+ },
+ {
+  "k": "EP-3957",
+  "summary": "Rewrite components to TypeScript",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-02-08T07:21:31.852+0000",
+  "text": null
+ },
+ {
+  "k": "EP-23256",
+  "summary": "Ability to setup auto email reminders when a meeting minimal requirement has not been reached",
+  "epic": null,
+  "components": [
+   "Curated Meeting ",
+   "Hosted Buyer Management"
+  ],
+  "labels": [
+   "Event",
+   "Team_C"
+  ],
+  "doneAt": "2024-02-08T07:22:21.106+0000",
+  "text": "Added a per-category minimum required number of confirmed meetings, with automated reminder emails to users who have not reached it. Users see confirmed versus required meetings on their meetings page, and organisers can send reminders to those short of the requirement."
+ },
+ {
+  "k": "EP-23519",
+  "summary": "Enhancing User Card Information with Company Name & Job Title (WEB)",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-02-08T08:38:16.988+0000",
+  "text": "Updated participant card layouts across the web platform, including community, team members, meetings, messenger, profiles and sessions, to show company name and job title. User cards across the web frontend consistently display company and job title per the updated designs."
+ },
+ {
+  "k": "EP-24305",
+  "summary": "No local time option (App)",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2024-02-08T09:12:09.670+0000",
+  "text": "Added a 'Do not show Local time on the Frontend (Web and App)' setting so only event time is shown. When on, meetings, sessions, exhibitor events and blocked times show only event time on every web and app page."
+ },
+ {
+  "k": "EP-23543",
+  "summary": "Interactive location on meeting cards in app",
+  "epic": null,
+  "components": [
+   "Mobile App",
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2024-02-08T09:12:15.816+0000",
+  "text": "Made meeting locations on app meeting cards clickable, opening the floor plan focused on that spot for internal, MapsPeople and ExpoFP plans. Users tap a meeting's location in any status to open the floor plan at the stand; stand IDs are now synced with meetings."
+ },
+ {
+  "k": "EP-24992",
+  "summary": "Enhancing User Card Information with Company Name & Job Title (APP)",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2024-02-08T09:12:23.373+0000",
+  "text": "Updated participant card layouts across the mobile app to show company name and job title. User cards in the app show company and job title where the profile has them, leaving empty space otherwise."
+ },
+ {
+  "k": "EP-25142",
+  "summary": "Transfer news block for new PageBuilder to SearchService",
+  "epic": "[Old] Global Search functionality",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-02-08T10:08:37.012+0000",
+  "text": null
+ },
+ {
+  "k": "EP-23885",
+  "summary": "Regroup the structure of Config page of Sessions in Admin panel",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-02-08T10:53:38.120+0000",
+  "text": "Regrouped the Sessions Config admin page into separate Sessions, Exhibitor events and General settings columns. Each section shows only its own settings, with 'Allow other location' and 'Allow Address' for both and existing functions unchanged."
+ },
+ {
+  "k": "EP-26187",
+  "summary": "Android/ Brand page issues ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-02-11T07:24:48.012+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26219",
+  "summary": "Android/ Profile info - field titles missed ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-02-13T08:28:50.282+0000",
+  "text": null
+ },
+ {
+  "k": "EP-23542",
+  "summary": "Direct links checking",
+  "epic": null,
+  "components": [
+   "Networking",
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-02-15T07:22:57.235+0000",
+  "text": "Fixed direct invite links for meetings, sessions and exhibitor events and added a clash check that blocks adding items that overlap blocked time. Invite links add the item and open the schedule with a success message, or show an error naming the clashing item; logged-out users log in first."
+ },
+ {
+  "k": "EP-23255",
+  "summary": "Ability for buyers to be able to see and filter exhibitors who have used up their allotment of confirmed meetings vs. exhibitors who have not",
+  "epic": null,
+  "components": [
+   "Curated Meeting ",
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "Event",
+   "Team_C"
+  ],
+  "doneAt": "2024-02-15T10:10:47.744+0000",
+  "text": "Added a 'Meeting availability' filter ('Appointments still available') to exhibitor, product, pavilion, speaker, delegate and buyer lists, set in Display filters. Users can list only people or exhibitors, and their products, whose online or offline confirmation limits are not yet reached."
+ },
+ {
+  "k": "EP-23702",
+  "summary": "Changing Website Language Based on Browser's Language",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-02-15T10:17:09.844+0000",
+  "text": "Set the front-end language selector to default to the visitor's browser language when that language is available on the site. Pages open in the browser's language when the site supports it, and users can still switch language manually."
+ },
+ {
+  "k": "EP-17353",
+  "summary": "Prefilled meeting info (WEB)",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "IMEX",
+   "Team_C"
+  ],
+  "doneAt": "2024-02-15T10:17:51.079+0000",
+  "text": "Added 'Default meeting info' to the new web meeting request flow: a pop-up and a profile settings tab to save a default subject, message, duration and media file. Saved defaults pre-fill every new meeting request and can still be edited per request; the media file can be cleared and fields have tooltips."
+ },
+ {
+  "k": "EP-26272",
+  "summary": "After following invite on-demand session link, user should be redirected to the session card",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-02-15T13:23:08.937+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26332",
+  "summary": "Add link to design in element view",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-02-16T10:39:15.888+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26342",
+  "summary": "Fix 3 Cards view mobile sizes",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-02-16T10:39:29.755+0000",
+  "text": null
+ },
+ {
+  "k": "EP-1068",
+  "summary": "(New Analytics UI) Meetings",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-02-16T11:31:58.633+0000",
+  "text": "Built the Meetings tab of the new global analytics module, with event, segment and date-range filters and web and app meeting metrics. Organisers see requested meetings by status, online and offline counts, average meeting length, time in online meetings and request sources."
+ },
+ {
+  "k": "EP-24562",
+  "summary": "Hide leaderboard if we pick All for the events",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-02-16T11:32:24.708+0000",
+  "text": null
+ },
+ {
+  "k": "EP-24609",
+  "summary": "Add a comma for 4+-digits numbers",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-02-16T11:32:29.252+0000",
+  "text": null
+ },
+ {
+  "k": "EP-24662",
+  "summary": "Create dropdown menu for sources",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-02-16T11:32:37.362+0000",
+  "text": null
+ },
+ {
+  "k": "EP-24841",
+  "summary": "Only confirmed meetings should be counted for uniqueness of participant",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-02-16T11:32:43.645+0000",
+  "text": null
+ },
+ {
+  "k": "EP-10489",
+  "summary": "Adding More Variables in Visitor Confirmation Page",
+  "epic": null,
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-02-19T09:36:15.276+0000",
+  "text": "Added a 'Print Your Badge' variable for the visitor registration confirmation page. The confirmation page shows a Print Badge link that opens the user's badge in a new tab, the same as the admin and profile print option."
+ },
+ {
+  "k": "EP-26425",
+  "summary": "wrong exibitor & product list cards size",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-02-19T10:44:59.411+0000",
+  "text": null
+ },
+ {
+  "k": "EP-24201",
+  "summary": "optimize \"Custom Meeting Report\" export based on automation test data",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-02-19T13:13:25.402+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25111",
+  "summary": "Exhibitor events module shouldn't affect sessions",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-02-19T13:54:31.240+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25989",
+  "summary": "Android/ The exhibitor doesn't see own account in exhibitors list ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-02-20T07:47:25.371+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26401",
+  "summary": "Fix sending the request to Parampos ",
+  "epic": null,
+  "components": [
+   "Payments"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-02-20T10:29:15.394+0000",
+  "text": null
+ },
+ {
+  "k": "EP-10562",
+  "summary": "Web secure fixes",
+  "epic": "VAPT report / secure fixes",
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-02-21T12:04:06.822+0000",
+  "text": "Fixed security issues in the frontend, admin panel and server listed in a security report supplied by a client. The reported security issues across frontend, admin panel and server were addressed."
+ },
+ {
+  "k": "EP-10563",
+  "summary": "Applications secure fixes",
+  "epic": "VAPT report / secure fixes",
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-02-21T12:04:38.353+0000",
+  "text": "Fixed security issues in the Android and iOS apps listed in a security report supplied by a client. The reported security issues in the Android and iOS apps were addressed."
+ },
+ {
+  "k": "EP-24998",
+  "summary": "Delete Visioglobe integration from the platform",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-02-22T06:53:50.359+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25783",
+  "summary": "Fix unit tests for portal-ui",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-02-22T06:54:13.869+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25833",
+  "summary": "To add the \"parent exhibitor name\" column to the \"meeting-reports\"",
+  "epic": null,
+  "components": [
+   "Online Meetings & Webinars"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-02-22T06:54:34.531+0000",
+  "text": "Added a 'Parent exhibitor name' column to the Meetings export for initiators and receivers who are child exhibitors or their team members. The Meetings report shows the parent exhibitor of each child-exhibitor participant, or leaves the cell empty when there is none."
+ },
+ {
+  "k": "EP-23019",
+  "summary": "Adding a customer service button to “...” actions in exhibitor/ visitor list",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-02-22T09:03:02.554+0000",
+  "text": "Added a 'Customer Service' action to the three-dots menu in the admin exhibitor and visitor lists, logging the admin in as that user. Admins open a user's frontend profile in a new tab directly from the list, with the login recorded in the login logs."
+ },
+ {
+  "k": "EP-24295",
+  "summary": "Move sponsorship statistic to websockets",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-02-22T09:03:07.101+0000",
+  "text": null
+ },
+ {
+  "k": "EP-20705",
+  "summary": "Mobile analytics page",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_E",
+   "internal"
+  ],
+  "doneAt": "2024-02-22T09:11:49.294+0000",
+  "text": "Replaced the admin app-data analytics page with a mobile analytics page of daily, weekly or monthly graphs for logins, page views, favourites, meetings and badge scans. Admins can see mobile app usage on the event, filtered by user group, platform and page or object, with iOS/Android totals at the top."
+ },
+ {
+  "k": "EP-23990",
+  "summary": "Webbuilder stage3. Title and Subtitle block",
+  "epic": "New Website Builder",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "Team_B",
+   "internal"
+  ],
+  "doneAt": "2024-02-22T10:01:59.315+0000",
+  "text": "Added a Title & Subtitle block to the new Website Builder's Elements, with and without background image, in six layout variants. Organisers add title and subtitle sections with toggleable title, subtitle and divider, background colour or image, text width and padding."
+ },
+ {
+  "k": "EP-26621",
+  "summary": "Lexical update",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-02-22T13:53:52.973+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25363",
+  "summary": "Update admin panel and remove all unnecessary packages",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-02-22T15:01:23.547+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26407",
+  "summary": "Create common styles for views",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-02-23T15:22:35.334+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26357",
+  "summary": "Page plug rework",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-02-23T15:23:45.369+0000",
+  "text": null
+ },
+ {
+  "k": "EP-22505",
+  "summary": "Please add badge BAR & QRcode variable for Campaigns",
+  "epic": null,
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-02-27T08:44:14.244+0000",
+  "text": "Added Badge Bar Code and Badge QR Code variables to the Campaigns standard variables list. Campaign emails show each recipient's internal or external badge barcode and QR code, scannable by the check-in app."
+ },
+ {
+  "k": "EP-23455",
+  "summary": "Refactoring: Transfer Business Logic from Controllers to Services for 'Groups'",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-02-29T07:34:48.628+0000",
+  "text": null
+ },
+ {
+  "k": "EP-23901",
+  "summary": "Replace formik with react-hook-forms",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-02-29T07:35:01.094+0000",
+  "text": null
+ },
+ {
+  "k": "EP-23579",
+  "summary": " Pass User ID through to Crowd Connected",
+  "epic": null,
+  "components": [
+   "Floor Plan",
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-02-29T11:39:45.225+0000",
+  "text": "Made the mobile apps send the ExpoPlatform internal user ID to ExpoFP / Crowd Connected as an alias via the SDK on Android and iOS. When the ExpoFP integration is set up, apps pass 'expoplatform_internal_id' (the exhibitor owner ID for exhibitors) to Crowd Connected."
+ },
+ {
+  "k": "EP-26460",
+  "summary": "Ehibitor header images download rework in applications",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-02-29T11:40:18.149+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26467",
+  "summary": "\"Get filters\" requests rework",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-02-29T11:40:28.357+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25965",
+  "summary": "Android/ GDPR not restrict meetings/ messages ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-02-29T13:11:31.702+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25692",
+  "summary": "Need display on Product page data from custom field ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-02-29T13:34:15.671+0000",
+  "text": null
+ },
+ {
+  "k": "EP-20337",
+  "summary": "Move method to Basket Service",
+  "epic": null,
+  "components": [
+   "Payments"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-02-29T14:52:53.280+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25280",
+  "summary": " Add time filter to API request of /api/v2/statistics/accountsInteractions and /api/v2/statistics/pageVisits",
+  "epic": null,
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "IMEX",
+   "Team_E"
+  ],
+  "doneAt": "2024-03-01T11:48:29.142+0000",
+  "text": "Aligned the from/to filters of /api/v2/statistics/accountsInteractions and /pageVisits to Unix timestamps and updated the Swagger docs. Both endpoints accept timestamp from/to (either or both optional), return actions in that window, and error on invalid formats."
+ },
+ {
+  "k": "EP-1083",
+  "summary": "Product Brands export rework",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-03-04T10:25:02.692+0000",
+  "text": "Reworked the Product Brands export to run through SQS. Admins download the Product Brands report via a queued export that contains all the respective information."
+ },
+ {
+  "k": "EP-26308",
+  "summary": "Add ability to drag chatbot icon in the admin panel",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-03-04T11:51:50.775+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25208",
+  "summary": "Remove MUI4 from the admin panel ",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-03-05T09:40:03.512+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26355",
+  "summary": "Check X icon color on the new front",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "support"
+  ],
+  "doneAt": "2024-03-06T09:07:48.228+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26005",
+  "summary": "Find and fix an issue \"Failed to execute 'removeChild' on 'Node'\"",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-03-06T09:56:06.615+0000",
+  "text": null
+ },
+ {
+  "k": "EP-55",
+  "summary": "News Export",
+  "epic": null,
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-03-07T10:09:53.981+0000",
+  "text": "Added a News export to the admin Data page, producing an .xls file of articles with 15 columns including author, tags, visibility and exhibitor. Admins can export all news articles from /admin/data as an .xls file, in the language selected on the Exports page."
+ },
+ {
+  "k": "EP-26256",
+  "summary": "Table section shouldn't be in the basket",
+  "epic": null,
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-03-07T10:21:45.844+0000",
+  "text": null
+ },
+ {
+  "k": "EP-10207",
+  "summary": "Print badge statistics capture",
+  "epic": null,
+  "components": [
+   "Reporting"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-03-07T10:22:14.613+0000",
+  "text": null
+ },
+ {
+  "k": "EP-23021",
+  "summary": "Persistent Filter and Search Behavior for Visitor, Exhibitor, Sponsor, and Session lists",
+  "epic": null,
+  "components": [
+   "Admin Interface",
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-03-13T20:55:07.184+0000",
+  "text": "Made filters and search persist per admin on the admin sponsor, participant, exhibitor and session lists until 'Clear Filters' is used. Each admin's filters and search survive navigation, refresh and closing the page, without affecting other admins."
+ },
+ {
+  "k": "EP-26297",
+  "summary": "Check multi select to unnecessary info when something is picked",
+  "epic": null,
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [],
+  "doneAt": "2024-03-14T08:02:00.739+0000",
+  "text": null
+ },
+ {
+  "k": "EP-24652",
+  "summary": "Check-in Analytics refresh. Analytics page",
+  "epic": "Check-in Analytics refresh",
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-03-14T08:04:04.552+0000",
+  "text": "Built a Check-in Analytics page with registration split before and after event start, total check-ins and check-outs by day or hour, and user and zone filters. Organisers see check-in and check-out charts in event time, covering internal and external registrations, filterable by role, category and zone."
+ },
+ {
+  "k": "EP-24653",
+  "summary": "Check-in Analytics refresh. Checkin list page",
+  "epic": "Check-in Analytics refresh",
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-03-14T08:04:12.075+0000",
+  "text": "Rebuilt the admin check-in list page as a table of participants by date showing first and last check-in/out per day, with filters, search and report export. Admins see each participant's daily check-in and check-out actions, expandable per cell, filter by participant fields and check-in zone, and export a report."
+ },
+ {
+  "k": "EP-24654",
+  "summary": "Chech-in Analytics refresh. Checkin Zones page",
+  "epic": "Check-in Analytics refresh",
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-03-14T08:04:18.474+0000",
+  "text": "Redesigned the Check-in zones page in check-in analytics, with zone cards, colour tags, custom and floor-plan zones, and conference hall/room marking. Admins add, remove and retype check-in zones synced with the floor plan, and zone statistics are kept if a zone is removed and restored."
+ },
+ {
+  "k": "EP-26686",
+  "summary": "Add tooltip to \"Meeting availability\" filters in the admin panel ",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-03-14T09:11:17.828+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26724",
+  "summary": "Add API endpoints for the admin panel to get a dictionaries",
+  "epic": null,
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-03-14T09:11:25.915+0000",
+  "text": null
+ },
+ {
+  "k": "EP-16777",
+  "summary": "Address for other location - Ex Events & Sessions",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-03-14T10:07:40.257+0000",
+  "text": "Added 'Other location' settings for Exhibitor events and Sessions that add an Address field, shown on cards and included in API and export/import. When enabled, an address entered for an 'Other location' shows on exhibitor event and session cards on web and app, and in the API and exports."
+ },
+ {
+  "k": "EP-16736",
+  "summary": "Improvement of Other location - Ex Events & Sessions",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-03-14T10:07:40.739+0000",
+  "text": "Added a setting that combines the predefined Other locations list with a custom 'Specify an alternative location' input for sessions and exhibitor events. Admins and exhibitors pick a floor plan or predefined location or type a custom one, plus an address if enabled."
+ },
+ {
+  "k": "EP-16739",
+  "summary": "Predefined list of Other locations for Sessions/Events",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-03-14T10:07:41.172+0000",
+  "text": "Added a predefined, admin-managed list of Other locations for sessions and exhibitor events, as already existed for meetings. When 'Other location' is chosen in session or exhibitor event forms, admins and exhibitors pick from the organiser's list."
+ },
+ {
+  "k": "EP-26881",
+  "summary": "Add ability to run js scripts in the custom HTML block",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-03-14T10:45:59.933+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25269",
+  "summary": "Upgrade FormBuilder version on admin panel",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-03-14T10:52:49.516+0000",
+  "text": null
+ },
+ {
+  "k": "EP-14006",
+  "summary": "Move mobile app statistic to websockets ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-03-14T11:02:40.912+0000",
+  "text": null
+ },
+ {
+  "k": "EP-13001",
+  "summary": "Remove dependence in BadgeService :: takeProfileFieldValuesMap from account info JSON if it is not needed",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-03-14T13:44:00.512+0000",
+  "text": null
+ },
+ {
+  "k": "EP-27305",
+  "summary": "Add endpoint for admin panel to upload file as in front-end",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-03-19T21:18:28.203+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26581",
+  "summary": "Meetings export: not completed on alpha",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-03-21T09:23:07.649+0000",
+  "text": null
+ },
+ {
+  "k": "EP-25344",
+  "summary": "ASP Integration - Sessions/Filtering/Speakers Enhancements",
+  "epic": null,
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "API",
+   "Native_Integration",
+   "Team_B"
+  ],
+  "doneAt": "2024-03-21T10:18:17.685+0000",
+  "text": "Enhanced the ASP integration to import moderators (chairpersons), filter sessions by stream, and bring only speakers attached to imported sessions. API managers enter stream values to import only the wanted sessions, with their moderators and speakers and no unrelated speaker data."
+ },
+ {
+  "k": "EP-16928",
+  "summary": "Session speakers in Exhibitor events",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-03-21T10:18:18.291+0000",
+  "text": "Added a 'Sessions Speakers/Moderators available for Events' option for exhibitor events. When on, session speakers and moderators can be added to exhibitor events as well as team members."
+ },
+ {
+  "k": "EP-27485",
+  "summary": "Android/ Improvement  logic of recommended sections",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-03-25T08:23:20.949+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26791",
+  "summary": "[expo-react-components] Add to the session card (in the expo-react-components) address",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-03-25T11:11:56.152+0000",
+  "text": null
+ },
+ {
+  "k": "EP-27351",
+  "summary": "Need to select a text on the sponsor card",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-03-26T10:19:51.419+0000",
+  "text": null
+ },
+ {
+  "k": "EP-26245",
+  "summary": "Improve transmission of exhibitor stands to the EP via API, so remain posibility to replace them",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-03-28T06:59:32.275+0000",
+  "text": null
+ },
+ {
+  "k": "EP-17855",
+  "summary": "In-App Updates",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "app"
+  ],
+  "doneAt": "2024-03-28T07:20:06.186+0000",
+  "text": "Added in-app update settings to the app builder with critical (required) and desired (optional) update prompts. Organisers enable in-app updates and choose required or optional prompts, which the apps show when a newer version is available."
+ },
+ {
+  "k": "EP-27025",
+  "summary": "Add a test for the useToggle in the expo-react-component",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-03-28T09:33:13.187+0000",
+  "text": null
+ },
+ {
+  "k": "EP-27521",
+  "summary": "Fix types and TimePicker hover in ExhEvents",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-03-28T15:46:59.166+0000",
+  "text": null
+ },
+ {
+  "k": "EP-27719",
+  "summary": "My/Team schedule drawer in meeting request page ",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-04-04T08:40:22.374+0100",
+  "text": "Added a 'See my Schedule' button and left-side schedule drawer to the new meeting request flow, with a team member selector for exhibitors. When requesting a meeting, users can open their own or their team's schedule for the selected date in a calendar drawer."
+ },
+ {
+  "k": "EP-23548",
+  "summary": "Additional fields for Download Schedule in xls",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-04-04T08:52:41.098+0100",
+  "text": "Added an 'Include in Downloaded Schedule' attribute to predefined and custom participant registration fields. Flagged fields appear in the XLS schedule downloaded on frontend or backend or emailed from the app."
+ },
+ {
+  "k": "EP-22856",
+  "summary": "Add additional parameter for upload and download debug sqls",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-04-04T09:05:35.229+0100",
+  "text": null
+ },
+ {
+  "k": "EP-24407",
+  "summary": "Address for other location (APP)",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-04-04T10:30:57.853+0100",
+  "text": "Showed the 'Other location' address on exhibitor event and session cards in the iOS and Android apps. When 'Other location' is enabled, app session and exhibitor event cards display the entered address."
+ },
+ {
+  "k": "EP-27593",
+  "summary": "[expo-react-components] extends getFormattedNumber to get currency",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-04-09T11:02:01.455+0100",
+  "text": null
+ },
+ {
+  "k": "EP-27506",
+  "summary": "[exhibitor events] Exhibitor name should be string when customer save event",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-04-10T16:19:10.918+0100",
+  "text": null
+ },
+ {
+  "k": "EP-22931",
+  "summary": "Rewrite zIndex's to const and replace default in MUI",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-04-11T08:29:34.623+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28223",
+  "summary": "After removing the group chat, header is present",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-04-11T08:31:33.648+0100",
+  "text": null
+ },
+ {
+  "k": "EP-23915",
+  "summary": "RNG  - Changing deadlines of Exhibitor Manual or remove tasks when expired / toggle off when closed without deleting data. ( as people submit after the data and it is un usable).",
+  "epic": null,
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-04-11T09:58:28.112+0100",
+  "text": "Added a 'successfully updated the deadline' confirmation to Exhibitor Manual sections and reworded the live-form warning to say changing the deadline won't require refilling. Organisers can change section deadlines with confirmation and without exhibitors having to resubmit."
+ },
+ {
+  "k": "EP-28237",
+  "summary": "Renaming setting under Contact Sharing",
+  "epic": null,
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "Team_A",
+   "adminpanel"
+  ],
+  "doneAt": "2024-04-11T09:58:32.084+0100",
+  "text": "Renamed the 'Booked an event' option to 'Booked an exhibitor event' in Networking & Matchmaking contact sharing settings. The contact sharing setting reads 'Booked an exhibitor event'."
+ },
+ {
+  "k": "EP-25860",
+  "summary": "In case of PERMISSION MATRIX don't allow view profile - need hide participant/exhibitor from all lists ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-04-11T16:44:43.471+0100",
+  "text": null
+ },
+ {
+  "k": "EP-18901",
+  "summary": "Part 2 - Multilanguage",
+  "epic": "New Website Builder",
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-04-18T08:39:07.600+0100",
+  "text": "Added website builder multilanguage sync (blocks shared across languages with independent text), optional desync, favourite blocks and an extra blocks section. Organisers keep language versions structurally in sync by default, can desync and later restore or reset them, and reuse favourited blocks across pages."
+ },
+ {
+  "k": "EP-27558",
+  "summary": "Rename the sponsor block name in the app ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-04-18T08:59:10.535+0100",
+  "text": "Added 'Name on the Exhibitors List Page' and 'Name on the Products List Page' sponsor settings (up to 60 characters) for web and app. Organisers rename the sponsors and sponsored products sections on the marketplace exhibitor and product lists."
+ },
+ {
+  "k": "EP-27950",
+  "summary": "Add Activation link variable in email sender",
+  "epic": null,
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-04-18T08:59:23.248+0100",
+  "text": "Added the 'Activation Link' variable to Marketing > Email sender, usable as a link or attached to buttons. Email sender recipients can click the link to open their frontend profile, which is activated immediately."
+ },
+ {
+  "k": "EP-14548",
+  "summary": "/badge | universal/ValueObject/AbstractInt.php",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-04-18T16:05:09.861+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28604",
+  "summary": "Disable autosave in the site builder",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-04-18T17:42:55.422+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28568",
+  "summary": "Change error notify target users",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-04-22T09:52:59.253+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28406",
+  "summary": "Android/ Matchmaking list/ Required  check visibility settings ( permission matrix and GDPR option) ",
+  "epic": null,
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [],
+  "doneAt": "2024-04-25T06:20:38.064+0100",
+  "text": null
+ },
+ {
+  "k": "EP-27619",
+  "summary": "Parent/Child - Exhibitor Assignment",
+  "epic": null,
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "API",
+   "Team_C"
+  ],
+  "doneAt": "2024-04-25T08:29:16.170+0100",
+  "text": "Added a 'Parent/Child auto assign' script to general settings that links exhibitors sharing an email address as parent and children. API managers run the script to make the first exhibitor with a shared email the parent and later ones its children, with the last run shown."
+ },
+ {
+  "k": "EP-28605",
+  "summary": "Add addition settings to all video blocks, autoplay true/false",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-04-25T16:12:43.930+0100",
+  "text": null
+ },
+ {
+  "k": "EP-27947",
+  "summary": "Android: Optimisation *Event info*",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-04-29T08:41:09.356+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28362",
+  "summary": "Admin panel primary/secondary colors changes",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-04-29T09:20:50.210+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28342",
+  "summary": "Add additional control color over click ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-04-29T09:21:40.273+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28664",
+  "summary": "[portal] Forgot password doesn't work on signin page",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-04-30T10:17:09.796+0100",
+  "text": null
+ },
+ {
+  "k": "EP-24925",
+  "summary": "Viewing Daily Schedule on Meeting Creation Page",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-02T11:51:38.689+0100",
+  "text": "Added a 'View Today's Schedule' pop-up to the meeting creation page. Users open their day's schedule over the request form, scroll and view details, then close it with form data intact."
+ },
+ {
+  "k": "EP-26281",
+  "summary": "FBF: Add the option to record timestamp for a specific field in the registration form",
+  "epic": null,
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-05-02T11:51:44.374+0100",
+  "text": "Added a per-field option in registration forms to record the timestamp of input, exported as a TS column beside the field. For flagged fields, the latest input time before registration completes is stored in event local time and appears in the export."
+ },
+ {
+  "k": "EP-26794",
+  "summary": "Add the timestamp of account activation in the exports",
+  "epic": null,
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [
+   "Export",
+   "Team_B"
+  ],
+  "doneAt": "2024-05-02T11:51:48.910+0100",
+  "text": "Added an 'Activation Timestamp' column at the end of the user export, recording when an account was activated by link or API in the event time zone. Exports show each user's activation time in dd-mm-yy hh:mm:ss."
+ },
+ {
+  "k": "EP-1101",
+  "summary": "Seated Meetings export rework",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-05-07T14:00:11.754+0100",
+  "text": "Reworked the Seated Meetings export to run through SQS. Seated Meetings reports are generated via an SQS-backed export and download with all respective information."
+ },
+ {
+  "k": "EP-28688",
+  "summary": "ASP Integration - Enhancements",
+  "epic": null,
+  "components": [
+   "Curated Meeting ",
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "API",
+   "Team_B"
+  ],
+  "doneAt": "2024-05-09T09:54:54.355+0100",
+  "text": "Enhanced the ASP integration: exhibitor custom fields and category, '||' stream separator, field update locks, stream-name tracks and session types. ASP imports bring custom fields, categories and session types, use standard separators, and can skip updating chosen fields."
+ },
+ {
+  "k": "EP-27396",
+  "summary": "Sessions integration with DWTC CRM",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-05-09T09:54:59.593+0100",
+  "text": "Built an integration with DWTC's CRM API, switched on in event setup, to pull sessions and speakers along with tracks, types and tags. Session and speaker data, including tracks, types and tags, flow from DWTC's system into ExpoPlatform when the integration is on."
+ },
+ {
+  "k": "EP-16951",
+  "summary": "Users report offensive content in Exhibitor events",
+  "epic": null,
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-05-09T09:55:04.867+0100",
+  "text": "Built reporting of offensive content in exhibitor events: user reports with preset reasons, a content policy for exhibitors and organiser report review. Users can report exhibitor events; organisers get batched email alerts and review reports, and can require exhibitors to accept a content policy."
+ },
+ {
+  "k": "EP-16950",
+  "summary": "New status for Exhibitor events - Rejected for Security concern",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-05-09T09:55:09.533+0100",
+  "text": "Added a final 'Rejected for Security concern' status for exhibitor events, with a required reason, filters and a rejection reason column. Organisers reject events on security grounds with a reason; exhibitors see status and reason and cannot resubmit, and admins filter by it."
+ },
+ {
+  "k": "EP-16952",
+  "summary": "Improve Sessions report with security concern info",
+  "epic": null,
+  "components": [
+   "Reporting"
+  ],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-05-09T09:55:14.463+0100",
+  "text": "Added 'Exhibitor event status' (including 'Rejected for security concern') and 'Offensive content reports' columns to the Sessions export. The Sessions report shows each exhibitor event's status and how many times users reported it for offensive content."
+ },
+ {
+  "k": "EP-28866",
+  "summary": "Rewrite tests to TS in admin panel",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-09T10:43:06.446+0100",
+  "text": null
+ },
+ {
+  "k": "EP-23669",
+  "summary": "Check-in app improvement",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-05-10T11:21:54.280+0100",
+  "text": "Improved the check-in app with a zone and action settings screen (check-in, check-out, session), a 1-second scan cooldown and duplicate-scan alerts. Staff pick zone, action and session before scanning; session scans require the item in the user's schedule, and repeat same-day scans are flagged."
+ },
+ {
+  "k": "EP-20669",
+  "summary": "IMEX - SAML User is always directed to Event homepage and not intended page invoking the process",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "API",
+   "Team_D"
+  ],
+  "doneAt": "2024-05-10T14:42:43.591+0100",
+  "text": "Added a SAML settings trigger to return users to the page they originally requested after authenticating. With the trigger on, users land on their intended page after SAML authentication; other clients' behaviour is unchanged."
+ },
+ {
+  "k": "EP-21095",
+  "summary": "User Data in Scanned List & Exports | Unrecognized Badge Scans",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_D"
+  ],
+  "doneAt": "2024-05-10T14:43:28.451+0100",
+  "text": "Added server-side matching of unrecognised badge scans against the event database, syncing account details when a match is found. Unrecognised scans that match an event account are filled in with that user's data, as for recognised badges."
+ },
+ {
+  "k": "EP-29282",
+  "summary": "Check session card, list view without image. ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-12T11:01:20.079+0100",
+  "text": null
+ },
+ {
+  "k": "EP-15586",
+  "summary": "The possibility to upload all exhibitors including the ones without the category ",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-05-13T09:51:38.945+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29275",
+  "summary": "[sitebulder] Add support special links to the links",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-14T10:09:51.902+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29388",
+  "summary": "fix test for link wrapper",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-14T10:26:04.837+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29233",
+  "summary": "Fix timeline size in the speed networking",
+  "epic": "Speed Networking",
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-14T10:27:39.413+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29288",
+  "summary": "Android App: remove USE_FULL_SCREEN_INTENT",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-05-16T14:51:32.376+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29667",
+  "summary": "Android/ Required hide \" Meeting check-in\" button on \"meeting profile\" page ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-16T15:02:12.467+0100",
+  "text": null
+ },
+ {
+  "k": "EP-27382",
+  "summary": "InVisual Floor Plan Integration",
+  "epic": null,
+  "components": [
+   "Floor Plan",
+   "Mobile App",
+   "Website"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-17T09:37:02.760+0100",
+  "text": "Built a native InVisual floorplan integration: admin settings, iframe/webview floorplan, stand linking from exhibitors and sessions, QR deep links and bookmark sync. Users can open the InVisual map from exhibitor, session and event locations, scan venue QR codes into the app or webview, and sync favourites."
+ },
+ {
+  "k": "EP-26327",
+  "summary": "ExpoFP - Data Integration",
+  "epic": null,
+  "components": [
+   "Floor Plan"
+  ],
+  "labels": [
+   "API",
+   "ExpoFP",
+   "Team_C"
+  ],
+  "doneAt": "2024-05-17T09:47:46.626+0100",
+  "text": "Built an ExpoFP data integration that pushes exhibitor name, stand ID, order ID, description, logo and category whenever an exhibitor is created, edited or deleted. With 'Transmit exhibitor data to ExpoFP' ticked, exhibitor changes on ExpoPlatform sync automatically to the ExpoFP floor plan."
+ },
+ {
+  "k": "EP-26344",
+  "summary": "Speed Networking. Event Organizer Setup (MVP)",
+  "epic": "Speed Networking",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-17T11:47:17.634+0100",
+  "text": "Added a Speed Networking module and admin tab where organisers create sessions with location, time frame, meetings per person and breaks. With the module on, organisers see a Speed networking tab under Networking & Matchmaking with session cards and a create-session flow."
+ },
+ {
+  "k": "EP-26346",
+  "summary": "Speed Networking.Matchmaking and Meeting Organization (MVP)",
+  "epic": "Speed Networking",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-17T11:47:55.564+0100",
+  "text": "Built the Speed Networking Schedule tab, where the matchmaking algorithm pairs checked-in participants into one-to-one meetings, never from the same company. Organisers see a filterable, searchable grid of each participant's meetings and tables, and can share a link for a TV display."
+ },
+ {
+  "k": "EP-26347",
+  "summary": "Speed Networking. Meeting Notifications (MVP)",
+  "epic": "Speed Networking",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-17T11:51:35.843+0100",
+  "text": "Added Speed Networking email templates for check-in success, personal schedule and post-session contacts, with a new meetings-list variable. Participants get an email on check-in, another when final schedules are ready, and one after the session with the people met and their leads."
+ },
+ {
+  "k": "EP-29294",
+  "summary": "Change limit to the 12 on the teammeber page",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-20T10:03:01.855+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29284",
+  "summary": "Check admin notification header in the adminv2",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-20T10:03:22.820+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29235",
+  "summary": "Print badge position fix",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-20T10:03:42.614+0100",
+  "text": null
+ },
+ {
+  "k": "EP-26368",
+  "summary": "Speed Networking. Dynamic timeline with counters (MVP)",
+  "epic": "Speed Networking",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-21T07:10:38.783+0100",
+  "text": "Added a live timeline with milestones and three counters to the Speed Networking session page. The page tracks check-in, schedule generation, each meeting and session end, with check-in and meeting counts and a countdown."
+ },
+ {
+  "k": "EP-26419",
+  "summary": "Speed Networking. Table view of generated meetings (MVP)",
+  "epic": "Speed Networking",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-21T07:14:53.436+0100",
+  "text": "Added a Tables tab to the Speed Networking session page showing generated meetings grouped by table and timeslot. After check-in and schedule generation, organisers see a grid of tables against meeting slots with participant pairs; before that an empty state shows."
+ },
+ {
+  "k": "EP-29376",
+  "summary": "Transfer FavouriteList functionality from ExpoSearch to FavouriteListService",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-05-21T09:58:11.261+0100",
+  "text": null
+ },
+ {
+  "k": "EP-9972",
+  "summary": "Custom Meeting Wizard Report rework",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-05-22T18:57:42.538+0100",
+  "text": "Reworked the Custom Meeting Wizard Report export to run through SQS. Admins download the Custom Meeting Wizard Report via a queued job, with all respective information present in the file."
+ },
+ {
+  "k": "EP-29100",
+  "summary": "Refactor `_fr_singin` keys from exhibition modules ",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-23T06:21:43.208+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29126",
+  "summary": "Check fav icon size on admin panel",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-23T06:22:21.370+0100",
+  "text": null
+ },
+ {
+  "k": "EP-7323",
+  "summary": "Product Description and Product Image Mandatory",
+  "epic": null,
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-23T08:15:19.992+0100",
+  "text": "Added 'Required product image' and 'Required product description' toggles to product form settings. When on, exhibitors cannot save a product without a main picture or description, and the fields are marked with an asterisk."
+ },
+ {
+  "k": "EP-26349",
+  "summary": "Speed Networking. Public Meeting Display (MVP)",
+  "epic": "Speed Networking",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-23T08:16:21.785+0100",
+  "text": "Built a public meeting display page for speed networking sessions, an airport-style board of participants, table numbers and live countdowns. Each session has a shareable link showing a live schedule that moves through pre-start, meeting, break and session-over states."
+ },
+ {
+  "k": "EP-26354",
+  "summary": "Speed Networking. Offering users Matchmaking proposal (MVP)",
+  "epic": "Speed Networking",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-23T08:17:02.780+0100",
+  "text": "Added real-time match proposals to the Speed Networking web interface during check-in, with participants liked by default and a thumbs-down to reject. Participants mark irrelevant matches before check-in ends; the algorithm then recalculates, giving liked matches priority in the schedule."
+ },
+ {
+  "k": "EP-26351",
+  "summary": "Speed Networking. Manual adjustment of generated meetings (MVP)",
+  "epic": "Speed Networking",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-23T08:18:49.804+0100",
+  "text": "Added an edit mode for generated Speed Networking meetings, where organisers drag participants between tables via a buffer, with auto-assign and rule checks. Organisers can rearrange speed networking pairs, blocked from self or same-company meetings and double-booking, then save or reset."
+ },
+ {
+  "k": "EP-27290",
+  "summary": "Invite Visitors - Statistics",
+  "epic": null,
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-05-23T10:23:26.363+0100",
+  "text": "Added Invite Visitors statistics: an admin tab with status counts, top 5 exhibitors, filters, search and Excel export, plus a Statistics tab in the exhibitor profile. Invite registrations are attributed to exhibitors; admins and exhibitors see funnel counts and invitee lists and export them."
+ },
+ {
+  "k": "EP-20205",
+  "summary": "Rewrite Header folder",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-05-23T13:18:53.322+0100",
+  "text": null
+ },
+ {
+  "k": "EP-22713",
+  "summary": "Download leads improvements",
+  "epic": null,
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-05-23T15:15:38.606+0100",
+  "text": "Moved Download leads from the user menu to a button under Preview profile, with background file generation, a loader and a timestamped download link. Users generate the leads file from their profile without interruption on refresh and download it when ready; the Download leads module still applies per group."
+ },
+ {
+  "k": "EP-30037",
+  "summary": "ASP Exhibitor Integration - Send Email Functionality",
+  "epic": null,
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "API",
+   "Team_B"
+  ],
+  "doneAt": "2024-05-27T09:49:45.398+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29292",
+  "summary": "Check banner size on the video and content block",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-27T11:04:57.366+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28652",
+  "summary": "[adminUI] Check active state in the aside menu",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-27T11:05:24.475+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28572",
+  "summary": "Fix seletor width",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-27T11:05:35.986+0100",
+  "text": null
+ },
+ {
+  "k": "EP-26352",
+  "summary": "Speed Networking. Frontend module for user access (MVP)",
+  "epic": "Speed Networking",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-27T12:09:40.563+0100",
+  "text": "Built the Speed Networking participant web interface, reached from an email link, showing current step, countdowns, matches, meetings and rating. Checked-in users vote on proposed matches, see their meeting list and details once arranged, and rate the session afterwards."
+ },
+ {
+  "k": "EP-28881",
+  "summary": "description text should be parsed",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-27T12:44:18.113+0100",
+  "text": null
+ },
+ {
+  "k": "EP-24943",
+  "summary": "Change the name of the metrics",
+  "epic": null,
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-05-28T08:37:43.825+0100",
+  "text": null
+ },
+ {
+  "k": "EP-25790",
+  "summary": "Custom Badge Page Integration with Aditus",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-05-28T14:37:09.866+0100",
+  "text": "Added an Aditus external badges integration: admin settings and a mobile app badge page listing the user's Aditus tickets by email. When enabled, the app's badge menu shows the user's tickets from Aditus, each opening its badge web page, with not-found and offline screens."
+ },
+ {
+  "k": "EP-26029",
+  "summary": "Include exhibitor events in sessions",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-05-30T10:29:04.488+0100",
+  "text": "Added an 'Include Exhibitor Events in Sessions' setting and a 'Session Format' display filter to switch between Exhibitor Events and Sessions. When enabled, the Sessions page lists exhibitor events alongside sessions, and users can filter by format."
+ },
+ {
+  "k": "EP-17524",
+  "summary": "BULK PRINT BADGES - REFACTORING",
+  "epic": null,
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "Anton",
+   "Team_A",
+   "badge"
+  ],
+  "doneAt": "2024-05-30T10:32:34.263+0100",
+  "text": "Refactored and re-enabled the Batch Print Badges tool on the participants page, working with or without filters. Organisers confirm the filtered badge count, a batch file is generated in the background and a download button appears when ready."
+ },
+ {
+  "k": "EP-30030",
+  "summary": "Change disable style in the custom time picker",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-05-30T10:33:50.170+0100",
+  "text": null
+ },
+ {
+  "k": "EP-21568",
+  "summary": "Deploy the fix of the symbols for custom filters",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-05-31T09:11:56.639+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29125",
+  "summary": "Check pagination possible values ",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-31T10:45:43.185+0100",
+  "text": null
+ },
+ {
+  "k": "EP-30182",
+  "summary": "Add sorting and search to the Speed Networking main page",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-05-31T13:01:05.168+0100",
+  "text": null
+ },
+ {
+  "k": "EP-26659",
+  "summary": "Applying of the discounts",
+  "epic": null,
+  "components": [
+   "Payments"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-06-04T18:24:54.888+0100",
+  "text": null
+ },
+ {
+  "k": "EP-26652",
+  "summary": "Add to the basket link for adding the session to the basket",
+  "epic": null,
+  "components": [
+   "Payments"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-06-05T19:19:15.962+0100",
+  "text": null
+ },
+ {
+  "k": "EP-26547",
+  "summary": "Lead capture availability settings",
+  "epic": null,
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-06-05T19:29:42.296+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29467",
+  "summary": "[Admin panel] Refactor SideBarMenu ",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-06-06T07:06:22.933+0100",
+  "text": null
+ },
+ {
+  "k": "EP-27790",
+  "summary": "Search in lists ",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-06-06T08:53:04.506+0100",
+  "text": "Added separate, case-insensitive live search for Speakers and Moderators when exhibitors create exhibitor events. Exhibitors type letters to find speakers and moderators by name or title, as in the country list."
+ },
+ {
+  "k": "EP-28440",
+  "summary": "Check and fix Notification and Message window as in the design",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-06-06T09:56:14.356+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29078",
+  "summary": "Make tooltip text visible without needing to hover on icon",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-06-06T09:56:36.615+0100",
+  "text": "Replaced the meeting-slot pause tooltip with visible disclaimer text in both the old and new meeting request flows, showing the admin-set pause length. The meeting request screen always states that an N-minute break is added to each slot for travel time."
+ },
+ {
+  "k": "EP-29774",
+  "summary": "[Admin panel] Hide event data from the page",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-06-06T09:56:51.816+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29483",
+  "summary": "The selected chat should be marked",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-06-06T12:51:48.555+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29730",
+  "summary": "Interrelated settings with payments",
+  "epic": "Basket&Payment page upgrade",
+  "components": [],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-06-06T13:43:38.712+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29886",
+  "summary": "[admin panel] check and fix unit test ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-06-10T15:37:49.337+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29128",
+  "summary": "[Admin panel] Rewrite store to TS",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-06-11T11:49:40.237+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29430",
+  "summary": "Check UserAvatar in the portal, and default sizes",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-06-11T16:48:58.732+0100",
+  "text": null
+ },
+ {
+  "k": "EP-22911",
+  "summary": "Filter for the search query in Group tab",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_A",
+   "support"
+  ],
+  "doneAt": "2024-06-12T18:42:49.253+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28682",
+  "summary": "Check-in module | Design changes",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-06-13T09:03:26.394+0100",
+  "text": "Adjusted the new-UI check-in list and check-in zones pages: page sizes, row heights, pinned column, card layout, sorting, zone order and background colour. The check-in list defaults to 96 people per page with tighter layout, and zone cards sort by most check-ins in a fixed zone-type order."
+ },
+ {
+  "k": "EP-21309",
+  "summary": "iOS | Remove old scan list",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-06-14T10:27:31.923+0100",
+  "text": null
+ },
+ {
+  "k": "EP-14398",
+  "summary": "Notifications list refactor",
+  "epic": "iOS app refactor",
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-06-14T10:32:05.533+0100",
+  "text": null
+ },
+ {
+  "k": "EP-22118",
+  "summary": "Refactoring: combine models ExhibitorCategories to one universal model",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-06-17T12:20:36.257+0100",
+  "text": null
+ },
+ {
+  "k": "EP-23458",
+  "summary": "Refactoring: Consolidate Business Logic from RFP Controllers into a Service",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-06-17T12:23:24.527+0100",
+  "text": null
+ },
+ {
+  "k": "EP-30801",
+  "summary": "Change logic for invoice payment",
+  "epic": null,
+  "components": [
+   "Payments"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-06-19T15:42:17.170+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28666",
+  "summary": "[adminUI] Get all event data in the admin panel, in the iFrame mode",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-06-19T16:38:08.704+0100",
+  "text": null
+ },
+ {
+  "k": "EP-22803",
+  "summary": "iOS| the filter request sends after user change page ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-06-20T08:10:23.780+0100",
+  "text": null
+ },
+ {
+  "k": "EP-30268",
+  "summary": "Admin Panel Export for Speed Networking Feedback",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-06-21T09:07:55.123+0100",
+  "text": "Added a 'Speed Networking Feedback Data' export to admin data, with user details, session, star rating, yes/no answers and submission date and time. Organisers can download all speed networking session feedback with respondent and session details from the admin panel."
+ },
+ {
+  "k": "EP-28229",
+  "summary": "Expose Meeting Tags in Export & API",
+  "epic": null,
+  "components": [
+   "Online Meetings & Webinars"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-06-21T09:14:17.787+0100",
+  "text": "Added meeting tags to the Meetings export file and the /api/v2/meetings/export endpoint. The export has a 'Meeting tags' column (comma-separated) and the API returns tags separated by double pipes."
+ },
+ {
+  "k": "EP-29899",
+  "summary": "Include category to the Supply&Demand graph",
+  "epic": null,
+  "components": [
+   "Reporting"
+  ],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-06-21T09:17:18.033+0100",
+  "text": "Added the product category name to the top of the Supply & Demand graph tooltip in marketplace analytics. Hovering the Supply & Demand graph shows 'Category: {name}' above participant interest, suppliers and products."
+ },
+ {
+  "k": "EP-28880",
+  "summary": "Rework tabs conditions",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-06-21T12:46:09.195+0100",
+  "text": null
+ },
+ {
+  "k": "EP-31026",
+  "summary": "PG bouncer for production server",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-06-25T23:05:08.801+0100",
+  "text": null
+ },
+ {
+  "k": "EP-24046",
+  "summary": "Error Mechanism: Meetings,Messages Limits",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "internal"
+  ],
+  "doneAt": "2024-06-27T10:28:44.836+0100",
+  "text": "Enforced web meeting and message category limits in the mobile apps, with specific error messages for daily and total pending and confirmation limits. App users hitting a limit are stopped from requesting, confirming or messaging and told which limit was reached, matching the web."
+ },
+ {
+  "k": "EP-24164",
+  "summary": "Redesign of expoFP UI elements",
+  "epic": null,
+  "components": [
+   "Floor Plan"
+  ],
+  "labels": [],
+  "doneAt": "2024-06-27T10:29:39.846+0100",
+  "text": "Redesigned the app's elements on the ExpoFP floor plan: search results, stand drawer, get-directions and route drawers on Android and iOS. Users search or pick a booth, choose a start point (current location with Crowd Connected, or on the map), swap points and see the route."
+ },
+ {
+  "k": "EP-22441",
+  "summary": "Need investigate - badge on log-in screen iOS ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-06-28T09:44:32.707+0100",
+  "text": null
+ },
+ {
+  "k": "EP-30706",
+  "summary": "Correct module for Check-in analytics",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-07-01T08:41:25.779+0100",
+  "text": null
+ },
+ {
+  "k": "EP-23968",
+  "summary": "Exhibitor Account. Security page",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-07-03T18:44:05.582+0100",
+  "text": "Built the exhibitor account Security page in the admin panel: set username and password, email them to the exhibitor, and view a login information table. Admins set a validated password and email it, and see paginated logins with date, IP, device and source, including SSO and customer service logins."
+ },
+ {
+  "k": "EP-23970",
+  "summary": "Exhibitor Account. Sponsorship page",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-07-03T18:44:26.155+0100",
+  "text": "Built a Sponsorship page in the exhibitor account admin with collapsible Banners and Sponsor video sections and a shortcut to sponsorship settings. Admins upload, toggle and preview sponsored banners for web and app locations, one or two per location, and manage the online room entrance video."
+ },
+ {
+  "k": "EP-23973",
+  "summary": "Exhibitor Account. Analytics dashboard",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-07-03T18:45:25.824+0100",
+  "text": "Built an Analytics dashboard in the admin exhibitor account covering leads and other metrics, including team members, compared with the event average. Admins see an exhibitor's activity over its whole data period, such as online and offline leads, against the average per active exhibitor."
+ },
+ {
+  "k": "EP-28986",
+  "summary": "Round tables. Admin panel. Session creation and edit",
+  "epic": "Round Tables",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_D"
+  ],
+  "doneAt": "2024-07-04T10:25:43.579+0100",
+  "text": "Added Round table sessions to the admin panel: an 'Add new activity' menu, a two-step General/Topics setup, and a Round table filter in the sessions list. Organisers create round tables with application and scheduling dates, per-table capacity and topics; tables are formed automatically after applications close."
+ },
+ {
+  "k": "EP-28987",
+  "summary": "Round tables. Admin panel. Users list",
+  "epic": "Round Tables",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_D"
+  ],
+  "doneAt": "2024-07-04T10:25:53.632+0100",
+  "text": "Built the Round table Attendees list in the admin panel, with a timeline, counters, filters, search, manual add/remove and assigned topic and table after registration ends. Organisers see who applied to which topics, their status and, once placed, their table, with links to the topic and table views."
+ },
+ {
+  "k": "EP-28988",
+  "summary": "Round tables. Admin panel. Topics list",
+  "epic": "Round Tables",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_D"
+  ],
+  "doneAt": "2024-07-04T10:26:03.581+0100",
+  "text": "Built the Topics tab for round table sessions in the admin panel, with topic cards that can be added, edited or deleted. Organisers manage topic name, description, tags, location, moderator, visibility and sponsor; after table generation cards link to their tables."
+ },
+ {
+  "k": "EP-28989",
+  "summary": "Round tables. Admin panel. Tables list and management",
+  "epic": "Round Tables",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_D"
+  ],
+  "doneAt": "2024-07-04T10:26:12.346+0100",
+  "text": "Built the admin round tables list: tables generated per topic after applications close, with manual seat editing and table leader, moderator and sponsor assignment. Organisers see all generated tables by topic and can swap or drag attendees, fill free seats and change or assign table leaders."
+ },
+ {
+  "k": "EP-28990",
+  "summary": "Round tables. Frontend part. All Sessions listing",
+  "epic": "Round Tables",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_D"
+  ],
+  "doneAt": "2024-07-04T10:26:20.167+0100",
+  "text": "Listed Round table sessions in All Sessions with an Activity type filter, topic application and cancellation, registration countdown and eligibility checks. Users find and filter round tables, apply to topics within registration dates up to a limit, and are blocked on schedule clashes or ineligibility."
+ },
+ {
+  "k": "EP-28991",
+  "summary": "Round tables. Frontend part. Round tables listing",
+  "epic": "Round Tables",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_D"
+  ],
+  "doneAt": "2024-07-04T10:26:28.952+0100",
+  "text": "Added a Round tables tab to the front-end sessions page with card and list views, topic requests, a registration countdown and filters. Users browse round table sessions in their own tab (also in All Sessions), view topics and submit topic requests before registration ends."
+ },
+ {
+  "k": "EP-28992",
+  "summary": "Round tables. Frontend part. Round table Session page",
+  "epic": "Round Tables",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_D"
+  ],
+  "doneAt": "2024-07-04T10:26:37.083+0100",
+  "text": "Built the public Round table session page with topic cards where visitors submit or cancel requests up to their topic limit. Visitors apply to topics with limit feedback and see their table number once tables are formed; moderators see how many tables each topic has."
+ },
+ {
+  "k": "EP-28993",
+  "summary": "Round tables. Frontend part. My Schedule listing",
+  "epic": "Round Tables",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_D"
+  ],
+  "doneAt": "2024-07-04T10:26:54.191+0100",
+  "text": "Added Round table cards to My Schedule for applicants and moderators, blocking the timeslot, with new legend filters for calendar and list views. Applicants see their topics and, after seating, their table companions, and can cancel applications; moderators open their topics' table details."
+ },
+ {
+  "k": "EP-29074",
+  "summary": "Round tables. Admin panel. Session timeline and header in management view",
+  "epic": "Round Tables",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_D"
+  ],
+  "doneAt": "2024-07-04T10:27:01.926+0100",
+  "text": "Built the admin management view of a round table session with applicants, topics and tables tabs, stats, settings access and a dynamic timeline. Organisers manage a round table session from one page, see attendee, topic and table occupancy stats, and return quickly to All Sessions."
+ },
+ {
+  "k": "EP-29190",
+  "summary": "FBF:Add an option to add internal Notes in the sessions.",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-07-04T11:30:39.133+0100",
+  "text": "Added an internal Notes field to sessions and exhibitor events, included in session export and import. Organisers save back-end-only notes per session or exhibitor event and see or upload them in the 'Notes' column."
+ },
+ {
+  "k": "EP-23966",
+  "summary": "Exhibitor Account. Header and footer",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-07-04T12:00:32.913+0100",
+  "text": "Built the header and footer for the redesigned admin exhibitor account: logo placeholder, navigation, sticky header, Save/Cancel footer and unsaved-changes warning. Admin exhibitor pages have a sticky navigation header, a per-tab Save/Cancel footer and a warning when leaving with unsaved edits."
+ },
+ {
+  "k": "EP-23971",
+  "summary": "Exhibitor Account. Team members page",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-07-04T12:00:45.591+0100",
+  "text": "Built a new admin Team members page for exhibitor accounts: searchable, paginated table with lead capture toggles and actions, plus a Contact person form. Admins can list, search, add, edit, delete and print badges for an exhibitor's team members and toggle lead capture per member."
+ },
+ {
+  "k": "EP-23969",
+  "summary": "Exhibitor Account. Settings page",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-07-04T12:00:56.331+0100",
+  "text": "Built the exhibitor account Settings page in the admin panel, with category-synchronised settings, custom overrides and reset, and renamed several category settings to positive wording. Admins see which exhibitor settings follow the category or are customised, reset them to category, and manage Download Leads, video and product search visibility."
+ },
+ {
+  "k": "EP-13663",
+  "summary": "Download leads feature on Exhibitor Category level and Individual exhibitor level",
+  "epic": null,
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "DLG",
+   "Team_C"
+  ],
+  "doneAt": "2024-07-04T12:04:16.526+0100",
+  "text": "Added 'Download Leads' on/off settings at exhibitor category level and individual exhibitor level, applying to their team members. When off for a category or exhibitor, the 'Download leads' menu item disappears for that exhibitor and its team members on web and app."
+ },
+ {
+  "k": "EP-25137",
+  "summary": "Refactoring of \"Top performers dashboard\" with logic rework",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-07-04T12:04:46.831+0100",
+  "text": null
+ },
+ {
+  "k": "EP-24411",
+  "summary": "Refactor old limits for meetings",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-07-04T12:05:33.181+0100",
+  "text": null
+ },
+ {
+  "k": "EP-23413",
+  "summary": "Additional tasks to Campaign redesign (2nd iteration)",
+  "epic": null,
+  "components": [
+   "Marketing"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-07-04T12:28:17.061+0100",
+  "text": "Delivered a second round of campaign redesign: tag-style variables, a variable settings pop-up, a sender details section and clearer stats rows. Organisers see variables as tags, edit their settings from a gear icon and return to the list with a 'Campaign successfully saved' notice."
+ },
+ {
+  "k": "EP-26041",
+  "summary": "Leader Dashboard",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "Team_E"
+  ],
+  "doneAt": "2024-07-04T12:28:40.194+0100",
+  "text": "Built a Lead Dashboard in the admin panel as a refreshed Interaction Dashboard, with tabs for interactions, sponsor pop-ups, banners, list interactions and QR scans. Organisers see per-exhibitor or per-sponsor interaction counts with event averages, detailed tooltips and totals."
+ },
+ {
+  "k": "EP-28308",
+  "summary": "Renaming setting under Contact Sharing",
+  "epic": null,
+  "components": [
+   "Lead Intelligence"
+  ],
+  "labels": [
+   "Frontend",
+   "adminpanel"
+  ],
+  "doneAt": "2024-07-04T12:30:23.965+0100",
+  "text": "Renamed the Contact Sharing setting 'Watch On-demand/Online session' to 'Watch On-demand/Online sponsored session', including the reason in leads exports. Downloaded leads show the reason 'Watched On-demand/Online sponsored session'."
+ },
+ {
+  "k": "EP-30386",
+  "summary": "Implement Registration Emails Template Save Confirmation Popup",
+  "epic": null,
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-07-04T12:31:23.370+0100",
+  "text": "Extended the unsaved-changes warning and the save confirmation notification from Campaigns to the other admin email template editors. Leaving an email template page with unsaved edits triggers a warning, and saving shows a success notification, across six template areas."
+ },
+ {
+  "k": "EP-29221",
+  "summary": "FBF: Add a critical field on the sessions in the back-end",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-07-04T12:38:56.355+0100",
+  "text": "Added a back-office-only Flag as Critical checkbox to sessions and exhibitor events, with a filter, export column and import support. Organisers can flag critical sessions, filter by them in session management and see the flag in exports and imports; nothing shows on the frontend."
+ },
+ {
+  "k": "EP-31635",
+  "summary": "Create DS user in postgres db",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-07-04T19:58:34.681+0100",
+  "text": null
+ },
+ {
+  "k": "EP-23967",
+  "summary": "Exhibitor Account. Registration Info",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "components": [
+   "Membership Management"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-07-05T10:56:29.080+0100",
+  "text": "Added a Registration info tab to the exhibitor account in admin, mirroring the exhibitor registration pipeline tabs and fields. Admins view and edit an exhibitor's registration fields by pipeline tab, in each content language, including logo upload."
+ },
+ {
+  "k": "EP-23972",
+  "summary": "Exhibitor Account. Floorplan page",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "components": [
+   "Membership Management"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-07-05T11:00:35.477+0100",
+  "text": "Built the Floor plan tab of the redesigned admin exhibitor account, where admins pick halls, find stands and assign or remove stands on the plan. Admins assign exhibitors to stands via a searchable selector and hall images, with selected stands listed and highlighted; the tab hides without a floor plan."
+ },
+ {
+  "k": "EP-31628",
+  "summary": "Increase min number of field \"max number of people per table (number field)\"",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-07-05T15:07:38.800+0100",
+  "text": null
+ },
+ {
+  "k": "EP-23978",
+  "summary": "Small changes for table logic",
+  "epic": null,
+  "components": [
+   "Exhibitor Manual"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-07-05T19:19:14.850+0100",
+  "text": null
+ },
+ {
+  "k": "EP-21684",
+  "summary": "Events visability",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-07-10T12:42:21.584+0100",
+  "text": null
+ },
+ {
+  "k": "EP-30939",
+  "summary": "The \"Mr. / Mrs\" field in the Pending exhibitor profile(admin panel)",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-07-11T09:43:15.731+0100",
+  "text": null
+ },
+ {
+  "k": "EP-31674",
+  "summary": "Make password not required for new Exhibitor profile",
+  "epic": null,
+  "components": [
+   "Profile"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-07-12T14:57:13.263+0100",
+  "text": null
+ },
+ {
+  "k": "EP-30562",
+  "summary": "Multilingual custom forms",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-07-16T20:38:16.699+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32019",
+  "summary": "Android/ on session cards displayed wrong quantity of speakers moderators ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-07-17T09:53:16.420+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32164",
+  "summary": "Android/ Blocked time card update ",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-07-17T16:22:01.132+0100",
+  "text": null
+ },
+ {
+  "k": "EP-16934",
+  "summary": "Attach Speakers/Moderators to Events/Sessions by external code",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "FBF",
+   "Team_B",
+   "regression_release_17.07.2024"
+  ],
+  "doneAt": "2024-07-18T08:24:09.536+0100",
+  "text": "Added participant External code to the session import merge fields and example file, to attach speakers and moderators to sessions and events. Sessions link to speakers and moderators by external code via import (comma separated) or API (double pipe), and external IDs appear in exports."
+ },
+ {
+  "k": "EP-26093",
+  "summary": "Events Security concern. Ability for Organizer to set questions for Exhibitor",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "DLG",
+   "Team_B"
+  ],
+  "doneAt": "2024-07-18T08:24:32.258+0100",
+  "text": "Let organisers attach a custom form of security questions that exhibitors must answer when submitting an event. Exhibitors answer the questions and accept a policy on submission; organisers see the read-only answers in event details when reviewing."
+ },
+ {
+  "k": "EP-29932",
+  "summary": "Change the time format",
+  "epic": null,
+  "components": [
+   "Reporting"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-07-18T09:02:00.319+0100",
+  "text": "Changed report download links across the admin panel to use the event's time zone and the format 'YYYY-MM-DD HH:MM:SS TZ'. Exports, imports and statistics downloads show generation time in the event time zone, with the zone named in the link text."
+ },
+ {
+  "k": "EP-32270",
+  "summary": "App builder -> Custom Documents block -> Hide \" Download all\" btn on preview ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [
+   "Team_A"
+  ],
+  "doneAt": "2024-07-24T05:16:16.374+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32392",
+  "summary": "Android / Session/Events tags update ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-07-24T12:55:56.178+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32429",
+  "summary": "Android/ Exhibitor events - Search update ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-07-25T08:11:13.734+0100",
+  "text": null
+ },
+ {
+  "k": "EP-29755",
+  "summary": "[admin panel v2]  migrate from CRA to Vite",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-07-25T08:26:02.140+0100",
+  "text": null
+ },
+ {
+  "k": "EP-16932",
+  "summary": "Multilingual Sessions/Events Import",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-07-25T10:22:10.117+0100",
+  "text": "Added a session name and description system field per frontend language to the session import 'Merge headers' step, mapped manually by the organiser. Organisers can import multilingual session titles and descriptions that appear in the right language on frontend, backend and app."
+ },
+ {
+  "k": "EP-31579",
+  "summary": "Change the name Total Meetings Appointed on App Data",
+  "epic": null,
+  "components": [
+   "Reporting"
+  ],
+  "labels": [
+   "Team_A",
+   "support"
+  ],
+  "doneAt": "2024-07-25T20:48:05.015+0100",
+  "text": null
+ },
+ {
+  "k": "EP-30068",
+  "summary": "Fix multiple exhibitors select ",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-07-29T07:18:03.773+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32430",
+  "summary": "iOS/ Exhibitor events - Search update",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-07-29T15:36:29.333+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32561",
+  "summary": "standard lead questions are not shown",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-07-29T16:03:29.741+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32395",
+  "summary": "iOS / Session/EVENTS tags update",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-07-31T11:07:17.999+0100",
+  "text": null
+ },
+ {
+  "k": "EP-31429",
+  "summary": "Add info for Exhibitor event info",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-08-01T09:12:31.351+0100",
+  "text": "Added 'date of creation' and 'date of last edit' columns for exhibitor events to the Session export, logged only for exhibitor changes. The Session export shows when each exhibitor event was created and last edited by the exhibitor."
+ },
+ {
+  "k": "EP-32016",
+  "summary": "Block <iframe> video until consent is given - Videos in EXH profile",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-08-01T09:12:36.467+0100",
+  "text": "Added a 'Participant Consent for iframe videos on exhibitor page' setting, off by default, that blocks exhibitor profile iframe videos until the user consents. When enabled, exhibitor profile videos stay blocked until one consent click, which then unlocks videos across the service."
+ },
+ {
+  "k": "EP-32290",
+  "summary": "Design update for session/ event \"tag\" in long name case ",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [],
+  "doneAt": "2024-08-05T07:56:19.687+0100",
+  "text": null
+ },
+ {
+  "k": "EP-21405",
+  "summary": "Schedule list view",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [],
+  "doneAt": "2024-08-05T10:07:11.658+0100",
+  "text": "Added a list view to the app schedule, grouping one day's meetings, sessions, events and blocked time by hour, and extended the default-view setting to apps. App users can toggle to a chronological list view, and organisers set the default view for web and app."
+ },
+ {
+  "k": "EP-28995",
+  "summary": "Round tables. Notifications",
+  "epic": "Round Tables",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_D"
+  ],
+  "doneAt": "2024-08-06T11:45:26.551+0100",
+  "text": "Added round table notifications for participants, table leaders and moderators, each linking to the session pop-up on the schedule page. Attendees are told their topic and table number once tables are set, table leaders are told of their role, and moderators are told on assignment."
+ },
+ {
+  "k": "EP-22484",
+  "summary": "Part 2 - Team work",
+  "epic": "New Website Builder",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-08-08T10:13:22.440+0100",
+  "text": "Added real-time team working to the Website Builder: active-user avatars, live updates, block locking, shared autosave and warned version restores. Multiple admins edit one site at once, see who is working where, cannot edit a locked block, and are notified when a version is restored."
+ },
+ {
+  "k": "EP-32720",
+  "summary": "Add timeout default value and use it to limit Admin notification max poling interval time",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [],
+  "doneAt": "2024-08-09T16:26:00.198+0100",
+  "text": null
+ },
+ {
+  "k": "EP-25958",
+  "summary": "Transferring new website builder when cloning an event",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-08-12T20:57:07.975+0100",
+  "text": null
+ },
+ {
+  "k": "EP-15985",
+  "summary": "Old UI global disable",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-08-13T08:59:27.345+0100",
+  "text": null
+ },
+ {
+  "k": "EP-26345",
+  "summary": "Speed Networking. Participant Check-in (MVP)",
+  "epic": "Speed Networking",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T09:16:29.680+0100",
+  "text": "Built the Speed Networking session details page with a Registration List tab showing checked-in participants, with filter, search, sort and QR code actions. Organisers see who has checked in, when, and their potential matches, and can show a participant's QR code or jump to their schedule."
+ },
+ {
+  "k": "EP-18360",
+  "summary": "Autologged in mode + Reach 5 in EP Registration - VinExpo",
+  "epic": null,
+  "components": [
+   "Online Registration"
+  ],
+  "labels": [
+   "API",
+   "Registration",
+   "Team_B"
+  ],
+  "doneAt": "2024-08-15T10:29:23.269+0100",
+  "text": "Linked EP's internal visitor registration login with Reach5, checking an email on both systems and creating EP accounts from Reach5 data. Users existing in Reach5 or EP are logged in; Reach5-only users get an EP account created from their data; unknown users see a standard error."
+ },
+ {
+  "k": "EP-16920",
+  "summary": "Hyperlinking custom locations",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-08-15T10:29:55.689+0100",
+  "text": "Added a 'Hyperlinking custom locations' toggle so exhibitor events and sessions with an Other location can carry a URL. Clicking a custom location on exhibitor event and session cards, on web and in the app, opens the specified link in a new tab."
+ },
+ {
+  "k": "EP-23521",
+  "summary": "Autoapproval of Exhibitor Events",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-08-15T10:30:15.208+0100",
+  "text": "Added an 'Auto approved' option to exhibitor event types, alongside the existing category-level auto-approval. Events submitted or resubmitted under an auto-approved type are approved automatically; otherwise category rules or the organiser decide."
+ },
+ {
+  "k": "EP-30975",
+  "summary": "Exhibitor event in the Recommendations ",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-08-15T10:30:35.918+0100",
+  "text": "Added an 'Exhibitor Event' toggle, off by default, to Networking & Matchmaking > Recommendations. When enabled, exhibitor events appear in the Recommendations section on the frontend."
+ },
+ {
+  "k": "EP-30282",
+  "summary": "Opt-In Speed Networking. Event Organizer Setup",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T10:57:51.110+0100",
+  "text": "Added an Opt-in Speed Networking session type to the admin panel, with a General setup of location, timeline and meeting settings. Organisers create opt-in sessions with dated checkpoints, meeting length, breaks and tables; maximum meetings per user is calculated automatically."
+ },
+ {
+  "k": "EP-30284",
+  "summary": "Opt-In Speed Networking. Pre-Registration conditions",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T10:58:34.293+0100",
+  "text": "Added a Conditions step to Opt-in Speed Networking setup, using categories and registration fields flagged 'Use for Speed Networking' to select participants and exhibitors. Users matching the conditions with a free timeslot are auto-added to the pre-registered list, get a schedule card and are notified."
+ },
+ {
+  "k": "EP-29905",
+  "summary": "Add the “Use for Speed Networking“ checkbox to every select-type  registration form element",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T10:58:59.825+0100",
+  "text": "Added a 'Use for Speed Networking' checkbox to select-type fields in visitor and exhibitor registration forms. Checked fields feed the Opt-in Speed Networking session Conditions step; checkboxes are hidden when the module is off or for city/state fields."
+ },
+ {
+  "k": "EP-30285",
+  "summary": "Opt-In Speed Networking. Pre-registration list",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C",
+   "qa_review"
+  ],
+  "doneAt": "2024-08-15T14:19:19.483+0100",
+  "text": "Built the Pre-registered List tab for Opt-in Speed Networking sessions, listing buyers, sponsored and free team members and participants with statuses. Organisers search, filter and page through session users with statuses such as Pre-registered, Added by Organizer or Canceled Attendance."
+ },
+ {
+  "k": "EP-30697",
+  "summary": "Opt-in Speed Networking. Meeting limits and set as a Buyer",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T14:19:47.399+0100",
+  "text": "Added a 'Sponsored meetings limit' (default 10) for exhibitor categories and profiles, plus a buyer flag and buyer meetings limit for participant categories, for Opt-in Speed Networking. When Speed Networking is enabled, organisers cap sponsored meetings per exhibitor and define which participant categories act as buyers, and their limits."
+ },
+ {
+  "k": "EP-30302",
+  "summary": "Opt-in Speed Networking.  Card in My Schedule",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C",
+   "qa_review",
+   "qa_testcases_web"
+  ],
+  "doneAt": "2024-08-15T14:35:43.184+0100",
+  "text": "Added Opt-in Speed Networking sessions as a timeslot-blocking card in My Schedule, with a legend item and a meetings list once finalised. Participants see the session in their schedule, then their meeting list once finalised, and can cancel before the revised-lists checkpoint."
+ },
+ {
+  "k": "EP-30295",
+  "summary": "Opt-In Speed Networking.  Offering users matchmaking proposals",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T14:48:36.553+0100",
+  "text": "Added a Matches list to Opt-in Speed Networking listing all active users by role, grouped by mutual and one-sided 'relevant' marks and match %. Users mark people relevant; mutual and one-sided requests drive paid and free meeting generation; voting locks at the 'Collect revised list' checkpoint."
+ },
+ {
+  "k": "EP-30297",
+  "summary": "Opt-in Speed Networking. Profile pages and list of meetings in user profile",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T14:50:35.133+0100",
+  "text": "Added Speed Networking pages to user profiles: a session list and details with timeline, sponsored meetings limit, role, exhibitor team member controls and schedule. Participants view sessions and meetings and can cancel attendance before the checkpoint; exhibitors assign team member roles and participation."
+ },
+ {
+  "k": "EP-30286",
+  "summary": "Opt-In Speed Networking. Table view of generated meetings",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T14:51:16.628+0100",
+  "text": "Added a Tables tab to opt-in speed networking session details, listing generated meetings by table with role tags and sponsored-meeting marks. Organisers can search meetings by table number, see roles and sponsored meetings, refresh data without reload and switch to edit mode."
+ },
+ {
+  "k": "EP-30292",
+  "summary": "Opt-In Speed Networking.  Shedule of generated meetings",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T14:51:39.899+0100",
+  "text": "Built the Schedule tab for Opt-in Speed Networking sessions, showing generated meetings per user with role tags, sponsored-meeting markers, filters and search. Organisers view each participant's generated meetings, filter and search them, and jump from a table tag to that table's meetings."
+ },
+ {
+  "k": "EP-30699",
+  "summary": "Opt-in Speed Networking. Manual adjustment of meetings by Organizer",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T14:51:55.900+0100",
+  "text": "Added an Edit mode to Opt-in Speed Networking tables so organisers can drag, add, delete and auto-assign participants in generated meetings. Organisers rearrange meetings by drag and drop, with rules blocking self-meetings and double-booking; buyer–sponsor pairs become sponsored."
+ },
+ {
+  "k": "EP-30294",
+  "summary": "Opt-In Speed Networking.  Dynamic timeline",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T14:52:24.261+0100",
+  "text": "Reworked the timeline component for Opt-in Speed Networking with day and hour ranges, meeting checkpoints and admin counters. The timeline tracks from creation to 10 minutes after session end, switching to hours an hour before meetings, with counters in admin."
+ },
+ {
+  "k": "EP-30300",
+  "summary": "Opt-in Speed Networking.  Notifications",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C",
+   "qa_review",
+   "qa_testcases_web"
+  ],
+  "doneAt": "2024-08-15T14:52:48.221+0100",
+  "text": "Added Opt-in Speed Networking email templates and bell notifications for being added, removed, final schedules and post-session leads. Users get emails and bell notifications with auto-login links at each stage, and a post-session email with the leads file of people met."
+ },
+ {
+  "k": "EP-30874",
+  "summary": "Opt-in Speed Networking. Meeting creation logic",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-15T14:54:08.827+0100",
+  "text": "Defined the Opt-in Speed Networking meeting generation logic for paid and free meetings based on relevance marks and visibility rules. Paid meetings need mutual buyer–paid team member relevance; other meetings can come from one-sided relevance, within table and slot capacity."
+ },
+ {
+  "k": "EP-30301",
+  "summary": "Opt-in Speed Networking.  Card and details page in App Schedule",
+  "epic": "Opt-In Speed Networking Session",
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "qa_testcases_mobile"
+  ],
+  "doneAt": "2024-08-15T15:12:51.733+0100",
+  "text": "Added opt-in speed networking sessions to personal and team schedules in the mobile app, with a details page listing the user's meetings. Added users see the session block their schedule and, once lists are ready, their meeting times, tables and partners; cancelled or removed users lose it."
+ },
+ {
+  "k": "EP-28994",
+  "summary": "Round tables. App part. My Schedule listing",
+  "epic": "Round Tables",
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [],
+  "doneAt": "2024-08-15T15:31:06.568+0100",
+  "text": "Added round table session cards, detail pages, filters and change notifications to My Schedule in the mobile apps. Visitors and moderators see round table topics, location, time, sponsors and table numbers in the app schedule, read-only."
+ },
+ {
+  "k": "EP-31048",
+  "summary": "Move integration logs to CloudWatch",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-08-20T15:17:55.580+0100",
+  "text": null
+ },
+ {
+  "k": "EP-28230",
+  "summary": "Enhanced Networking through Intelligent Exhibitor Recommendations",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-21T16:35:13.930+0100",
+  "text": "Added Recommend Related Exhibitors: a pop-up and a Schedule page block listing up to 20 exhibitors similar to those a user requested meetings with. After requesting a meeting with an exhibitor, users see related exhibitor recommendations and can go to the schedule page, a new redirect option."
+ },
+ {
+  "k": "EP-33042",
+  "summary": "Remove key fromRecomendation in the news page",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-08-22T05:43:10.252+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32990",
+  "summary": "check linput in the logs page",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-08-22T05:43:27.884+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32538",
+  "summary": "Portal. Floorplan. HeaderMini issue on mobile resolution ",
+  "epic": null,
+  "components": [
+   "Floor Plan"
+  ],
+  "labels": [],
+  "doneAt": "2024-08-22T05:44:01.586+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32152",
+  "summary": "Networking Filters for Attendee and Exhibitor Lists (chat filter)) ",
+  "epic": null,
+  "components": [
+   "Profile"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-08-22T10:16:54.756+0100",
+  "text": "Added 'Existing Chat' filters to delegate, speaker, buyer, exhibitor, pavilion and product lists, configurable in admin display filters. Users filter lists to people or exhibitors they have messaged or who messaged them (OR logic); filters are off by default."
+ },
+ {
+  "k": "EP-21888",
+  "summary": "New Website Builder: Adding Banners as OLD website",
+  "epic": "New Website Builder",
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-08-22T10:17:12.083+0100",
+  "text": "Added a Banner block to the new website builder with multiple image banners, hyperlinks, three sizes and timed automatic rotation. Admins add several linked banners to custom pages that rotate at a set interval without a page refresh."
+ },
+ {
+  "k": "EP-31011",
+  "summary": "Multilanguage Admin Notifications",
+  "epic": null,
+  "components": [
+   "Marketing"
+  ],
+  "labels": [
+   "Talala",
+   "Team_B"
+  ],
+  "doneAt": "2024-08-22T10:17:47.121+0100",
+  "text": "Added a language switcher to Admin Notifications so admins write the title and message per language, with a primary fallback language. Web users receive admin notifications in their profile language and app users in their device language, falling back to the primary language."
+ },
+ {
+  "k": "EP-33266",
+  "summary": "[iframe height] Add ability to get height in the widgets mode for portal UI",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-08-23T09:53:23.819+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32551",
+  "summary": "Admin. Incorrect display of modals inside iframe",
+  "epic": null,
+  "components": [
+   "Admin Interface"
+  ],
+  "labels": [],
+  "doneAt": "2024-08-27T08:14:54.975+0100",
+  "text": null
+ },
+ {
+  "k": "EP-31595",
+  "summary": "Components design check",
+  "epic": "Redesign of Exhibitor account in Admin panel",
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-08-27T08:16:10.308+0100",
+  "text": null
+ },
+ {
+  "k": "EP-33653",
+  "summary": "Keep iframe id in session storage to observe height",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2024-08-28T07:36:41.885+0100",
+  "text": null
+ },
+ {
+  "k": "EP-33644",
+  "summary": "Fix news block appereance in site builder",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2024-08-28T07:37:17.781+0100",
+  "text": null
+ },
+ {
+  "k": "EP-19464",
+  "summary": "Create EPColor object in project",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-08-28T14:32:16.898+0100",
+  "text": null
+ },
+ {
+  "k": "EP-27888",
+  "summary": "Networking Filters for Attendee and Exhibitor Lists",
+  "epic": null,
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-08-29T08:30:45.389+0100",
+  "text": "Added 'Existing Meetings' and 'Existing Meeting Status' filters to delegate, speaker, buyer, exhibitor, pavilion and product lists, controlled in Display filters. Users filter lists by who initiated meetings and by meeting status, with team members' meetings counted for their exhibitor."
+ },
+ {
+  "k": "EP-28676",
+  "summary": "Enhancing Account Switcher Visibility and Accessibility",
+  "epic": null,
+  "components": [
+   "Profile"
+  ],
+  "labels": [
+   "Team_A",
+   "Yuriy"
+  ],
+  "doneAt": "2024-08-29T08:53:07.381+0100",
+  "text": "Redesigned the web account switcher as a dropdown from the top-right menu and from the name on the profile page, with scrolling past five accounts. Users can switch between their own, team member, parent or child company accounts from a dropdown on desktop and mobile web."
+ },
+ {
+  "k": "EP-27225",
+  "summary": "Matchmaking Sorting on all marketplace and delegates pages",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_A",
+   "Vlad",
+   "vova"
+  ],
+  "doneAt": "2024-08-29T08:54:46.929+0100",
+  "text": "Added 'Recommended for you' matchmaking sorting to exhibitor, product, pavilion, delegate, speaker and buyer pages, with explanatory text. Users switch between AI-recommended and A-Z sorting on these pages; sponsor sections are unaffected."
+ },
+ {
+  "k": "EP-32584",
+  "summary": "Matchmaking Sorting for custom listing",
+  "epic": null,
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "Kostya",
+   "Team_A",
+   "Vlad"
+  ],
+  "doneAt": "2024-08-29T08:55:21.992+0100",
+  "text": "Made custom listing table sorting and 'Recommended for you' matchmaking sorting mutually exclusive on exhibitor, pavilion, delegate, buyer and speaker pages. Choosing a column sort in the custom listing turns off 'Recommended for you', which is hidden when matchmaking settings disallow it."
+ },
+ {
+  "k": "EP-32719",
+  "summary": "Removing Matchmaking sorting on Marketplace setting",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_A",
+   "Vlad",
+   "vova"
+  ],
+  "doneAt": "2024-08-29T08:55:28.728+0100",
+  "text": "Removed the separate marketplace Matchmaking sorting setting; enabling Matchmaking now makes 'Recommended for you' sorting available. With Matchmaking on, users can sort by 'Recommended for you' (optionally the default); existing clients keep A-Z sorting at release."
+ },
+ {
+  "k": "EP-33643",
+  "summary": "Edit Error Message Text on Print Badge direct link",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [
+   "vova"
+  ],
+  "doneAt": "2024-08-29T08:56:43.397+0100",
+  "text": "Replaced the error on the custom badge printing page for company profiles with a 'No badges available' message pointing to Profile Info → Print Badge. Exhibitors on /profile/badge see a clear message on where to print team member badges, in the same layout as before."
+ },
+ {
+  "k": "EP-16921",
+  "summary": "Email and platform notifications for events",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "FBF",
+   "Team_B"
+  ],
+  "doneAt": "2024-08-29T09:54:43.356+0100",
+  "text": "Added email and platform notifications for exhibitor event submission, approval, rejection and change requests, with default templates and an enabling toggle. Organisers get emails on submissions and changes; exhibitors get emails and optional platform notifications on approvals and rejections, with the reason and a link."
+ },
+ {
+  "k": "EP-31213",
+  "summary": "Klipso Integration - Team member admin",
+  "epic": null,
+  "components": [
+   "Exhibitor Marketplace"
+  ],
+  "labels": [
+   "Native_Integration",
+   "Team_B"
+  ],
+  "doneAt": "2024-08-29T09:54:50.837+0100",
+  "text": "Mapped the contact person fields received from the Klipso integration (cp_email, cp_title, cp_name, cp_surname) to the team member admin on EP. Exhibitors synced from Klipso get their team member admin filled in automatically from the contact person data."
+ },
+ {
+  "k": "EP-31013",
+  "summary": "Dynamic Event Handling for User Session Management: App",
+  "epic": null,
+  "components": [
+   "Marketing"
+  ],
+  "labels": [],
+  "doneAt": "2024-08-29T10:44:18.681+0100",
+  "text": "Made the app check on launch that the user's logged-in event is still in the backend event list. If the event no longer exists the user is logged out and shown an event selection screen, or the single available event's login."
+ },
+ {
+  "k": "EP-33622",
+  "summary": "Pass anchor id, custom css to header and footer from sitebuilder",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2024-08-30T10:51:58.984+0100",
+  "text": null
+ },
+ {
+  "k": "EP-33538",
+  "summary": "Need to refactor exhibitor events custom forms",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-09-04T16:35:46.865+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32670",
+  "summary": " Enhance User Intuitiveness for Speedmatchmaking Voting Buttons",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "SpeedNetworking",
+   "Team_C"
+  ],
+  "doneAt": "2024-09-05T07:44:19.561+0100",
+  "text": "Changed speed matchmaking like/dislike voting buttons to start in a neutral white state and change colour on selection. Voting buttons start neutral and show the chosen vote in colour; after voting closes, cards show a button only where a vote was cast."
+ },
+ {
+  "k": "EP-32201",
+  "summary": "Sponsor pop-up parameter on api/v2/exhibitor/set",
+  "epic": null,
+  "components": [
+   "Exhibitor Manual",
+   "Sponsorship"
+  ],
+  "labels": [
+   "Team_A",
+   "vova"
+  ],
+  "doneAt": "2024-09-05T10:42:48.792+0100",
+  "text": "Added a boolean sponsor_popup parameter to the api/v2/exhibitor/set endpoint to control the exhibitor 'Sponsor pop-up' setting. Integrators can switch the Sponsor pop-up on or off for each exhibitor through the API when creating sponsors."
+ },
+ {
+  "k": "EP-33766",
+  "summary": "Add a check for relevance of re-generation of the profile image of the exhibitor",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B",
+   "Vlad"
+  ],
+  "doneAt": "2024-09-06T08:09:15.917+0100",
+  "text": null
+ },
+ {
+  "k": "EP-33915",
+  "summary": "After adding/deleting a team member on the frontend, the translation is lost",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B",
+   "Vlad"
+  ],
+  "doneAt": "2024-09-06T08:09:26.477+0100",
+  "text": null
+ },
+ {
+  "k": "EP-23578",
+  "summary": "Push messaging through Crowd Connected on app",
+  "epic": null,
+  "components": [
+   "Floor Plan"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-09-06T13:33:14.295+0100",
+  "text": "Built a notifications API for CrowdConnected to call directly, replacing its Firebase integration, with category targeting via the Subject field. CrowdConnected messages of up to 235 characters, with app, external or no link, are stored in the app's native notification centre for the targeted categories or users."
+ },
+ {
+  "k": "EP-33959",
+  "summary": "[SN 1] Adjust Minimum Time Between Final Schedule and Meeting Start",
+  "epic": null,
+  "components": [
+   "Networking"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-09-06T14:49:03.737+0100",
+  "text": "Cut the mandatory gap between the 'Send Final Schedule' and 'Meeting Starts' speed networking checkpoints from 5 minutes to 1. Organisers can schedule speed networking meetings to start one minute after the final schedule is sent."
+ },
+ {
+  "k": "EP-34099",
+  "summary": "[site builder] Add to the custom CSS support for pseudo-class",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-09-11T13:30:18.285+0100",
+  "text": null
+ },
+ {
+  "k": "EP-34206",
+  "summary": "Fix typescript errors relative to theme colors",
+  "epic": null,
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2024-09-11T14:52:01.628+0100",
+  "text": null
+ },
+ {
+  "k": "EP-34101",
+  "summary": "check empty anchor in the site build",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-09-11T17:03:24.031+0100",
+  "text": null
+ },
+ {
+  "k": "EP-34100",
+  "summary": "Fix regex for searching font-family.",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-09-11T17:03:35.410+0100",
+  "text": null
+ },
+ {
+  "k": "EP-34239",
+  "summary": "Add account_id to activation_code hash generation",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-09-12T09:14:12.370+0100",
+  "text": null
+ },
+ {
+  "k": "EP-33244",
+  "summary": "[Admin panel] Fix FormBuilderV2 types ",
+  "epic": null,
+  "components": [
+   "Profile"
+  ],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-09-12T09:45:40.219+0100",
+  "text": null
+ },
+ {
+  "k": "EP-33303",
+  "summary": "[Admin panel] Remove old formBuilder",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-09-12T09:45:48.691+0100",
+  "text": null
+ },
+ {
+  "k": "EP-33556",
+  "summary": "Update `mapByProperty` method types ",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-09-12T09:45:56.582+0100",
+  "text": null
+ },
+ {
+  "k": "EP-34021",
+  "summary": "Add TS checks before push ",
+  "epic": null,
+  "components": [],
+  "labels": [
+   "Team_C"
+  ],
+  "doneAt": "2024-09-12T09:46:03.595+0100",
+  "text": null
+ },
+ {
+  "k": "EP-32197",
+  "summary": "Allow Saving Exhibitor Events without approving / rejecting",
+  "epic": null,
+  "components": [
+   "Session & Speaker Management"
+  ],
+  "labels": [
+   "Team_B"
+  ],
+  "doneAt": "2024-09-12T10:10:26.099+0100",
+  "text": "Added a Save without approval button to exhibitor events in the admin panel, between Reject and Approve and save. Organisers can save changes to exhibitor events awaiting approval or edited; the status stays unchanged and the event stays hidden until approved."
+ },
+ {
+  "k": "EP-33616",
+  "summary": "rewrite tests to the vitest",
+  "epic": "SEO Optimization for Custom Pages",
+  "components": [
+   "Website"
+  ],
+  "labels": [],
+  "doneAt": "2024-09-12T15:57:03.405+0100",
+  "text": "Rewrote tests to use the Vitest library. The tests run on Vitest."
+ },
+ {
+  "k": "EP-34321",
+  "summary": " Android/ Exhibitor profile/ Remove speaker/moderator icon  on teammembers list inside exhibitor profile ",
+  "epic": null,
+  "components": [
+   "Mobile App"
+  ],
+  "labels": [],
+  "doneAt": "2024-09-13T08:05:37.880+0100",
+  "text": null
+ },
+ {
+  "k": "EP-33265",
+  "summary": "[site builder] check two subclasses in the block",
+  "epic": null,
+  "components": [],
+  "labels": [],
+  "doneAt": "2024-09-17T17:11:11.799+0100",
+  "text": null
+ }
+]

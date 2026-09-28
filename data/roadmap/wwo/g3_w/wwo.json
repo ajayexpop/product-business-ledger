@@ -1,0 +1,700 @@
+[
+ {
+  "id": "meet-auto-cancellation",
+  "what": "Organisers can switch on automatic cancellation of a participant's confirmed, incoming and pending meetings, session bookings and exhibitor events when their status stops being active, or when they move to a category without meetings.",
+  "why": "When a participant became inactive or lost meeting access, the people they had meetings with could be left waiting for someone who would not attend.",
+  "outcome": "Counterparts are told the meeting is cancelled, with the reason, so nobody plans around a meeting that will not happen.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-12585/EP-12587: user stories say so that clients and colleagues are not awaiting attendance and other parties do not anticipate attendance"
+ },
+ {
+  "id": "meet-confirmation-location-rules",
+  "what": "Meeting auto-confirmation can be switched on per participant category. After the last in-person slot, requests offer only online meetings, and requesters type an 'other' location when no preset options exist.",
+  "why": "Organisers needed auto-confirmation for chosen categories rather than the whole event, and in-person location options confused users booking after the in-person days.",
+  "outcome": "Chosen categories get confirmed meetings without waiting, and meeting locations stay accurate, with no in-person options after the event and no blank 'other' locations.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-10663: extend auto-confirmation to category level; EP-12036: user is confused by selections outside in-person days; EP-14891: location logic improvement"
+ },
+ {
+  "id": "meet-cards-improvements",
+  "what": "Calendar meeting cards show the other party and location first, then time and title. Matchmaking cards show company name. Admin meeting pages link participants to their profiles, and contact sharing settings sit in three groups.",
+  "why": "Short meetings often had uninformative titles, admin meeting lists showed profiles that looked clickable but did not open, and contact sharing choices were hard to follow.",
+  "outcome": "Attendees see who they are meeting and where at a glance, and admins open a participant's profile in one click and understand contact sharing choices more easily.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16028: titles like 'Hello' explain nothing, asked to show location and participants; EP-15162: profile not clickable; EP-17817: value says easier to understand contact sharing choices"
+ },
+ {
+  "id": "meet-request-improvements-2023q2",
+  "what": "When organisers enable it, requesters can attach a file to a meeting request in the app. Users can return to the page where they started a request with filters and pagination kept, and the meetings grid offers a 20-minute step.",
+  "why": "Buyers using many marketplace filters lost them after requesting a meeting, and exhibitors and buyers wanted to share a document, such as a request for proposal, to discuss in the meeting.",
+  "outcome": "Buyers can request several meetings in a row without setting filters again, recipients can open the attached document from the meeting card, and organisers can plan in 20-minute slots.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-10598: buyers lose filters after requesting a meeting; EP-10170 value: request for proposal document to discuss in meeting; EP-18170: 20 min option"
+ },
+ {
+  "id": "meet-rescheduling-controls",
+  "what": "The rescheduling time grid opens on the meeting's current date with its time preselected, and the summary line includes the date. A setting hides the Reschedule button for selected roles and categories on web and app.",
+  "why": "Rescheduling opened on the nearest date rather than the meeting being moved, and organisers had no way to stop certain roles, such as exhibitors, from rescheduling meetings.",
+  "outcome": "Users move a meeting from its existing slot in fewer steps, and organisers decide who can reschedule while admins keep the option in Manage Meetings.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16261: current meeting date should open, not the nearest; EP-17344/EP-17598: option to hide Reschedule for chosen categories and roles, MVP exhibitors and team members"
+ },
+ {
+  "id": "meet-speaker-schedule-blocking",
+  "what": "Speakers' and moderators' calendars are blocked during their sessions and exhibitor events for meeting requests and confirmations. Slot-blocking exhibitor events can no longer be booked over confirmed meetings or other commitments.",
+  "why": "Speakers were receiving meeting requests for times when they were speaking, and gaps in the rules let slot-blocking exhibitor events overlap with meetings.",
+  "outcome": "Speakers are not double-booked against their own sessions, and attendees are warned before booking a blocking exhibitor event into a slot that is already taken.",
+  "who": [
+   "Speakers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16776: speakers were receiving meeting appointments at the same time as speaking at sessions; EP-17284: loops left so blocking events could overlap meetings"
+ },
+ {
+  "id": "meet-blocked-time",
+  "what": "Blocked time is a schedule item with its own cards and edit and delete actions, added from the Schedule and Team Schedule pages. Exhibitor companies can block time for team members, and blocked time can apply to exhibitor events only.",
+  "why": "People need a simple way to mark times they are not free, and exhibitor companies need to do this for their team members from the front end.",
+  "outcome": "Users see and edit their blocked times alongside meetings and sessions, and exhibitors manage their team's unavailable time from the Team Schedule page.",
+  "who": [
+   "Exhibitors",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-17281: moves blocked time to Schedule/Team Schedule, exhibitor manages team members' blocked time; EP-12377: blocked time as schedule item type. No problem stated"
+ },
+ {
+  "id": "meet-calendar-sync-improvements",
+  "what": "Meetings synced to Outlook include a structured block listing companies, participants, title and message. A Google Calendar option leaves out attendee emails and lists participant names in the event description, as Outlook does.",
+  "why": "Outlook could not show participants without sending invites to everyone, and Google sync shared other users' email addresses and sent needless notifications.",
+  "outcome": "Users see who a meeting is with inside their own calendar, without other participants receiving invitations or seeing each other's email addresses.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-16103 whoFor: list of participants visible without spamming them; EP-18010: Google sync exposed users' emails, against GDPR, and sent notifications"
+ },
+ {
+  "id": "meet-hosted-buyer-teams",
+  "what": "For private events with public registration, buyer-category team members need only one hosted buyer acceptance. A default category setting gives team members that exhibitors create themselves a buyer category automatically.",
+  "why": "Team members given a buyer category needed approving twice, and organisers had to assign a buyer category to each new team member by hand or by reimport.",
+  "outcome": "Organisers approve buyer team members once, send fewer duplicate emails, and find exhibitor-created team members already in the Buyers list ready for approval.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-2749: double approval, each sending its own email; value: saves doing the same work twice. EP-15824: organisers had to reimport or manually assign buyer category"
+ },
+ {
+  "id": "meet-badge-scan-completion",
+  "what": "Scanning the other participant's badge marks a confirmed regular meeting as completed, with an option to count scans outside the meeting time. Completion shows in exports and the API, and a scan by any exhibitor team member counts.",
+  "why": "Organisers need to know which meetings actually took place, and meetings an exhibitor joined before adding team members were not completed when those team members scanned.",
+  "outcome": "Organisers get a record of completed meetings from badge scans, without participants marking meetings by hand, and can use it in exports and connected systems.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-15159: extend badge-scan completion from table to regular meetings (tracking all meetings); EP-20254: such meetings were not auto-completed when later team members scanned"
+ },
+ {
+  "id": "meet-meeting-ratings",
+  "what": "Organisers choose, per role or category, whether meeting ratings are requested after each meeting, daily or after the event. Digest emails and WhatsApp or SMS links go to the ratings page or app, and the template is named 'Meeting Ratings'.",
+  "why": "Sending a separate rating email for every meeting risked flooding users, and the old template name did not make clear what the email was for.",
+  "outcome": "Attendees rate several meetings from one message, and organisers collect meeting feedback at a pace that suits their event and find the right template easily.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-12571: to avoid spamming users with a rating email per meeting; EP-20842: 'Appointment Rate' did not make clear which template it was"
+ },
+ {
+  "id": "meet-new-meeting-request-flow",
+  "what": "An optional meeting request flow puts participants, date, time, location and duration on one page. Users see every bookable date for both sides, each choice updates the remaining options, and error messages explain what to fix.",
+  "why": "Booking a meeting means finding a time, place and length that suit both sides, which is hard when those choices sit on separate steps.",
+  "outcome": "Users pick a slot that works for both sides from one page, cannot choose unavailable options, and know what to change when something is missing.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-17352: new flow shows all meeting fields and all available date bars on one page; EP-21476: add errors to the meeting wizard. No problem stated"
+ },
+ {
+  "id": "meet-schedule-calendar-view",
+  "what": "Schedule pages split into Diary and Optional Activities, with team member selection, activity filters and a legend, and the app has a matching calendar view. Organisers set the default view, and a new time picker shows unavailable slots.",
+  "why": "Users need to tell firm commitments from optional activities in a busy schedule, and clients found the old clock-face time picker confusing.",
+  "outcome": "Attendees and exhibitors see what they must attend apart from what they might attend, filter by activity type, and pick times without selecting unavailable slots.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-20612: clients complained the clock widget was confusing; EP-18403/EP-18404: Diary vs Optional columns (need implied from capability)"
+ },
+ {
+  "id": "meet-reassign-team-members",
+  "what": "When organisers enable it, exhibitors with more than one team member get a Reassign members button on incoming, pending and confirmed meeting cards to pick other available team members, including across child companies.",
+  "why": "Exhibitors with several team members need to change who attends a meeting when plans change, without cancelling and rebooking it.",
+  "outcome": "Exhibitors swap the team member attending a meeting in a few clicks, choosing only people who are free at that time, and the meeting keeps its status.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-17345: button to change team members on meeting cards, only available members, status unchanged. No problem stated"
+ },
+ {
+  "id": "meet-schedule-downloads",
+  "what": "Organisers can let participants download their schedule as XLS as well as PDF, with team and parent or child company columns for exhibitors. App users can have it emailed as an attachment, and downloads include personal blocked time.",
+  "why": "Participants and exhibitor teams need their schedule in a form they can sort, share and keep offline, including from the app.",
+  "outcome": "Exhibitors get one combined spreadsheet of their whole team's schedule, and app users receive their schedule by email with a confirmation that it was sent.",
+  "who": [
+   "Exhibitors",
+   "Attendees",
+   "App users"
+  ],
+  "basis": "implied",
+  "evidence": "EP-17285: download agenda in xls with combined team info; EP-20214: download schedule in app by email; EP-20775: blocked time included. No problem stated"
+ },
+ {
+  "id": "meet-favourites-dashboard",
+  "what": "A User Favourites Dashboard in Networking & Matchmaking lists every case of one user favouriting another, with meeting status, notes and the admin who shared the link. Shared filter links now record who created them.",
+  "why": "Organisers who share curated lists with participants need to see which contacts people save and whether those turn into meetings.",
+  "outcome": "Organisers can follow up on favourites that have no meeting yet and start a meeting request straight from the dashboard.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-12576: dashboard of all favourites, sharer ID on 'Copy link to applied filters', meeting request from table. No problem stated"
+ },
+ {
+  "id": "meet-schedule-limits-2023q4",
+  "what": "The Schedule date selector shows all relevant dates with back and forward arrows. The agenda PDF matches web wording and can include the event logo and date headings. Exhibitor meeting limits no longer treat zero as unlimited.",
+  "why": "Moving between days on the Schedule page needed to be easier, the agenda PDF used different wording from the web, and delegate filters using 'other' did not work in the app.",
+  "outcome": "Users move through event days in one place and get agenda files that match the web, and organisers set exhibitor meeting limits the same way as participant limits.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-21730: improve UX moving between days; EP-22560: PDF wording differed from web; EP-23511: 'other' filters did not work in app; EP-23431: align with participant category limits"
+ },
+ {
+  "id": "meet-prefilled-requests",
+  "what": "In the new web meeting request flow, users can save a default subject, message, duration and file from a pop-up or their profile settings. These pre-fill each new request and can still be edited.",
+  "why": "Users sending many similar meeting requests had to type the same information every time.",
+  "outcome": "Users send repeat meeting requests faster, while still changing the details for any single request.",
+  "who": [
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17353: users creating many identical meetings had to fill in the same information each time"
+ },
+ {
+  "id": "formats-meeting-availability-filter",
+  "what": "Organisers can add a 'Meeting availability' filter to exhibitor, product, pavilion, speaker, delegate and buyer lists through display filters, showing only those whose meeting limits are not yet reached. It works on the web.",
+  "why": "When meeting caps were in place, users kept trying to book exhibitors who had no meetings left, which caused frustration.",
+  "outcome": "Buyers and attendees spend their time on exhibitors and people who can still accept a meeting.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23255: users were still trying to book capped exhibitors and this created frustration; whoFor: simplify finding an available exhibitor"
+ },
+ {
+  "id": "formats-minimum-meeting-reminders",
+  "what": "Organisers set a minimum number of confirmed meetings per category. Users see their confirmed meetings against the requirement on their meetings page and receive automated reminder emails until they reach it.",
+  "why": "Hosted buyers, and sometimes exhibitors or sponsors, must attend a set number of meetings as a condition of their place, and following this up by hand was hard.",
+  "outcome": "Organisers follow up on meeting requirements without chasing each person, and participants always know how many meetings they still need.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23256: hosted buyers are by contract mandated to attend a set number of meetings; whoFor: reminders simplify following up on requirements"
+ },
+ {
+  "id": "meet-limits-auto-confirm",
+  "what": "Auto-confirmation respects category daily and total confirmation limits, and the limit settings have clearer names and tooltips. The apps apply the same meeting and message limits as the web, with specific messages for each limit.",
+  "why": "With auto-confirmation on, confirmation limits could be bypassed, and limits set on the web were not applied consistently in the apps.",
+  "outcome": "Organisers can rely on their meeting limits in every channel, and users who reach a limit are told exactly which one it is.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-18393: with auto-confirm, total confirmation limits were bypassed; EP-24046: web limits not consistently enforced in apps"
+ },
+ {
+  "id": "meet-schedule-while-booking",
+  "what": "The new meeting request flow has a 'See my Schedule' drawer, with a team member selector for exhibitors, and a 'View Today's Schedule' pop-up that keeps form data. The break organisers add between meetings is stated on screen.",
+  "why": "Users needed to check their commitments without leaving the request, and a break explained only in a tooltip was overlooked, so people ran into the next meeting late.",
+  "outcome": "Users avoid double-booking themselves or their team, and they know when each meeting really ends so they arrive on time for the next one.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-24925: view schedule without disrupting meeting creation; EP-29078: users overlooked tooltip, used whole slot, arrived late"
+ },
+ {
+  "id": "formats-speed-networking",
+  "what": "Organisers set up speed networking sessions with location, timings, meetings per person and breaks. The platform pairs checked-in participants, lets them reject matches, emails schedules and contacts, and runs a live timeline and board.",
+  "why": "Organisers wanted to run quick one-to-one meetings to a set schedule, with participants paired automatically and a way to guide them between tables.",
+  "outcome": "Attendees know who to meet and at which table, and get their contacts afterwards. Organisers follow each step live, adjust pairs by hand and export feedback.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-26344: organisers wanted rapid one-to-one meetings to a predefined schedule; EP-26349: large-screen list to help participants find their way"
+ },
+ {
+  "id": "meet-recommended-sorting",
+  "what": "With matchmaking on, exhibitor, product, pavilion, delegate, speaker and buyer pages offer 'Recommended for you' sorting alongside A to Z, optionally as the default. Choosing a column sort in custom listings turns it off.",
+  "why": "In long lists, users need the most relevant exhibitors and people first, and organisers no longer need to switch this sorting on separately from matchmaking.",
+  "outcome": "Attendees see matches suited to them at the top of each list and can switch back to A to Z at any time.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-27225: add MM sorting to listing pages (no problem stated); EP-32719: organisers no longer need to activate matchmaking sorting separately"
+ },
+ {
+  "id": "formats-opt-in-speed-networking",
+  "what": "Organisers can run opt-in speed networking: they pick participants by category and registration fields, manage a pre-registered list, set sponsored and buyer meeting limits, and adjust the generated tables by drag and drop.",
+  "why": "Organisers wanted pre-scheduled one-to-one sessions for people who meet set conditions, where participants review proposed matches before meetings are arranged.",
+  "outcome": "Participants mark who is relevant and see their session and meetings in their profile, schedule and app. Organisers control who meets whom and send final schedules.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-30282: set conditions so users engage in one-on-one meetings to a pre-defined schedule; EP-30295: users review proposed matches before the list is collected"
+ },
+ {
+  "id": "formats-round-tables",
+  "what": "Organisers create round table sessions with topics, see who applied and manage the generated tables, editing seats and assigning leaders, moderators and sponsors. Attendees apply for topics and see their table in My Schedule on web and app.",
+  "why": "Organisers need a format for small group discussions by topic, where attendees choose what interests them and are seated at tables automatically after applications close.",
+  "outcome": "Attendees join the discussions they care about and know their table, while organisers see applicants and occupancy and adjust seating from one page.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Speakers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-28986: new session variant, Session-Topics-Tables, tables formed after applications close; no problem stated. EP-28994: app schedule to match web"
+ },
+ {
+  "id": "formats-speed-networking-checkin",
+  "what": "Speed networking session pages list checked-in participants with filter, search, sort and QR code actions. Voting buttons start neutral and show the chosen vote in colour, and meetings can start one minute after final schedules.",
+  "why": "Participants must check in to be included in matching, it was hard to tell which vote had been chosen, and a five-minute wait before meetings began caused needless delay.",
+  "outcome": "Organisers see who has checked in and when, participants can see which way they voted at a glance, and sessions move from final schedule to meetings with less waiting.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-26345: check in so system includes them in matchmaking; EP-32670: make selection clearer; EP-33959: 5-minute wait caused unnecessary delays"
+ },
+ {
+  "id": "meet-blocked-time-team-schedule",
+  "what": "An 'Allow blocked time outside the event days' setting, when off, limits blocked-time pickers to event dates and times. The Team Schedule member selector can be searched by team member name and company.",
+  "why": "Organisers wanted blocked time kept within official event dates to avoid confusion, and exhibitors with large teams had to scroll long lists to find a team member.",
+  "outcome": "Blocked time stays on event days where organisers choose, and exhibitors find the right team member by typing a name or company.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-34594: blocked time only within event dates to avoid confusion; EP-35119: scrolling long lists was slow for large teams"
+ },
+ {
+  "id": "meet-exhibitor-recommendations",
+  "what": "The recommended exhibitors pop-up appears on every page where a meeting with an exhibitor can be started, not only on the marketplace.",
+  "why": "Attendees start meetings with exhibitors from many pages, and the recommendations were only offered on one of them.",
+  "outcome": "Attendees see other relevant exhibitors wherever they start a meeting, which helps them find more people to meet.",
+  "who": [
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-34005: pop-up appeared only on Marketplace; move it to global level on all meeting initiation pages. Customer need implied"
+ },
+ {
+  "id": "meet-automatic-calendar-sync",
+  "what": "After a one-time consent, meetings and sessions sync to users' external calendars in the background every six hours, so additions, changes and deletions arrive without manual action.",
+  "why": "Users had to re-sync their calendars by hand to keep their schedule up to date.",
+  "outcome": "Attendees can rely on their own calendar showing their current event schedule without having to remember to sync it.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Speakers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-30274: so that I don't have to manually re-sync them and can ensure my schedule is always up to date"
+ },
+ {
+  "id": "meet-real-time-matchmaking",
+  "what": "The admin Matchmaking page runs on a real-time recommender, with an Enable toggle and a live status showing in progress, error or completed. Switching it off shuts the pipeline down.",
+  "why": "Event admins needed to control matchmaking and see clear status updates so they can manage it and troubleshoot issues without disrupting the event.",
+  "outcome": "Organisers switch recommendations on when they are ready and can see at any time whether matchmaking has completed or needs attention.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-34318: as an event admin I want a toggle and clear status updates so I can troubleshoot without disrupting the event flow"
+ },
+ {
+  "id": "meet-wizard-profile-2025q1",
+  "what": "The admin meeting wizard marks team members with fake, empty or undeliverable emails. Profile pages have a Copy button for the public profile link, with a bulk export of team links. Meeting limits show only where they apply.",
+  "why": "Organisers booking meetings for exhibitors needed to see which team members cannot receive emails, and users had no direct way to copy their profile link to share it.",
+  "outcome": "Organisers book meetings with team members who will actually get the notification, and users share their profile for networking in one click.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-36721 value: reduces efforts of the concierge team (fake email use); EP-34934: no direct way to copy profile link to share; EP-39067: limits display"
+ },
+ {
+  "id": "meet-meet-button-availability",
+  "what": "The Meeting button on exhibitor, pavilion and product cards and profiles checks team member permissions, opt-in, settings and limits. If no team member is available, the app hides the button and the web suggests sending a message.",
+  "why": "Users could try to request meetings with exhibitors who had no team member available, which caused confusion while browsing.",
+  "outcome": "Attendees see straight away which exhibitors they can meet, and are pointed to messaging when a meeting is not possible.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-35513/EP-37473: so that I can identify which exhibitors I can engage with, reducing confusion and improving browsing"
+ },
+ {
+  "id": "meet-ratings-in-app",
+  "what": "Completed meetings in the mobile app have a 'Rate This Meeting' button. Users give one to five stars, an optional comment and the likelihood of a business outcome, or mark that the meeting did not take place, and can edit it later.",
+  "why": "Users wanted a way to give feedback on and rate their meeting experience from the app.",
+  "outcome": "Attendees rate a meeting straight after it ends from their phone, and organisers get feedback on which meetings took place and how useful they were.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40631: as a user I want a Rate This Meeting button so that I can provide feedback and rate my meeting experience"
+ },
+ {
+  "id": "formats-opt-in-general-use",
+  "what": "Opt-in speed networking was adapted for general use. Buyer status is a tag, organisers set two-sided visibility or choose presets, only opted-in eligible users appear in offers, and pairing uses relevance and match score.",
+  "why": "The first version of opt-in speed networking was shaped around one event's needs and had to be simplified so any organiser could run it.",
+  "outcome": "Organisers can run opt-in speed networking at their own events with simpler setup, and participants are only offered people who have opted in and are eligible.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-39133: goal is to make the MVP opt-in SN module suitable for multiple clients; whoFor: SN module that can be used by other clients"
+ },
+ {
+  "id": "meet-ai-meeting-notes",
+  "what": "A first release of AI meeting notes in the app lets users give a voice sample, record a meeting from the Scans tab after a badge scan with explicit consent, and receive an AI summary by email. Organisers switch it on in the app builder.",
+  "why": "People in back-to-back meetings want to focus on the conversation and still have accurate, searchable notes without extra work.",
+  "outcome": "Attendees and exhibitors get a written summary of each recorded meeting in their inbox, so they can follow up without taking notes during the meeting.",
+  "who": [
+   "App users",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-42801: as a busy professional I want to record and receive summaries so I can focus on the conversation and have accurate, searchable notes"
+ },
+ {
+  "id": "meet-admin-wizard-2025q3",
+  "what": "In the admin meeting wizard, the team member dropdown is sorted A to Z, shows job title and company and can be searched. The exhibitor profile Team Members table combines columns and adds phone numbers.",
+  "why": "The team member dropdown was unsorted, could not be searched and lacked job titles and companies, and the exhibitor profile did not show phone or company details.",
+  "outcome": "Organisers find and pick the right team member quickly when booking meetings for exhibitors, and have contact details to hand.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-44527: no alphabetical order, missing job title and company, no search; phone and company not displayed"
+ },
+ {
+  "id": "formats-meeting-programmes",
+  "what": "Participants in hosted meeting programmes mark people Relevant or Super Relevant with an optional message, see who picked them and mutual matches, and confirm or decline meetings by round. Exhibitors manage their team's part.",
+  "why": "Programme participants needed one place to show interest, manage confirmations over two rounds, track their deadlines and meetings, and see a summary of their activity.",
+  "outcome": "Participants follow a timeline, get calendar files for deadlines and meetings, see their schedule and connections dashboard, and rate meetings once the programme ends.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "Sponsors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-43871: help participants manage confirmations across two phases; EP-42161: deadlines in external calendars; EP-43492/EP-43564: consolidated stats; EP-43905: evaluate meetings"
+ },
+ {
+  "id": "formats-round-table-confirmation",
+  "what": "Round tables can include an optional step where participants confirm or reject their topic and table, with statuses organisers can filter. Organisers see each topic's applicants and can move people to another topic or table, or remove them.",
+  "why": "Once seats were assigned, organisers could not tell who would attend or had not replied, could only check applications per attendee, and could not move people across topics.",
+  "outcome": "Organisers know who is coming to each table and can fill or rebalance seats, and participants are told when they are added and what they have been assigned.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Speakers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-39819: organisers could not tell who would attend or declined; EP-39818: only per-attendee view; EP-41016: could only move within one topic"
+ },
+ {
+  "id": "meet-remaining-meetings",
+  "what": "When meeting auto-confirmation is on, exhibitor category meeting limits still apply, and the number of meetings remaining is shown on the front end.",
+  "why": "With auto-confirmation on, exhibitors could schedule more meetings than their category limit allowed.",
+  "outcome": "Exhibitors and buyers book meetings in line with their assigned package and can see how many they have left before reaching the limit.",
+  "who": [
+   "Exhibitors",
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-46592: exhibitors could schedule more meetings than their category limit with auto-confirm; value: schedule according to assigned package"
+ },
+ {
+  "id": "formats-meeting-programme-admin",
+  "what": "Organisers configure meeting programmes in the admin panel: roles, limits and a custom timeline, a pre-registered list with dashboards, and confirmation, schedule and table views where they can create or move meetings by hand.",
+  "why": "Organisers asked for free meetings in the first generation run as well, and wanted a public timeline that encourages activity without showing every internal stage and time.",
+  "outcome": "Organisers follow each programme from sign-up to final schedules, fix gaps by hand, and participants are prompted by email and platform notifications at each step.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-46480: organiser asked for free meetings in 1st generation; EP-45791: organisers did not want to disclose all internal stages; EP-43916: prompt users at the right moments"
+ },
+ {
+  "id": "formats-meeting-programmes-app",
+  "what": "Meeting programmes are supported in the mobile app. Users are notified when added, removed or when final schedules are ready, see placeholder and then per-meeting cards with table numbers in My Schedule, filter them and rate meetings.",
+  "why": "People taking part in a meeting programme need to follow their meetings and updates on their phone during the event, not only on the web.",
+  "outcome": "App users go straight from a notification to their schedule, find their table for each meeting and rate meetings from the app.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-39154: app notifications, placeholder and final cards, filter and ratings. No problem stated"
+ },
+ {
+  "id": "formats-round-table-numbering",
+  "what": "Round table numbers run in one continuous sequence across all topics in a session, so each table has a unique number. New tables take the smallest free number.",
+  "why": "Numbering tables separately for each topic was confusing and impractical, as more than one table in a session could share the same number.",
+  "outcome": "Attendees and staff find the right table by its number alone, and numbers do not change as tables are added.",
+  "who": [
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45793: separate table numbering per topic was found confusing and impractical"
+ },
+ {
+  "id": "meet-matchmaking-booking-2026q1",
+  "what": "Organisers can set each parent category to be included in, excluded from or strictly applied in the new matchmaking. The meeting time picker shows a scroll hint so users can see more time slots below.",
+  "why": "The new matchmaking needed category-level control, and users did not realise the time picker scrolled, so they thought only a few hours were available.",
+  "outcome": "Organisers decide which categories shape recommendations, and users booking a meeting can see every available time instead of the first few.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-44267: support new matchmaking with category settings; EP-47793: users didn't realise the timepicker scrolled and thought only a few hours were available"
+ },
+ {
+  "id": "formats-meeting-programme-attendance",
+  "what": "Meeting programme meetings are marked completed when the table QR code or the other person's badge is scanned. Organisers and participants can record a no-show, and ratings open in the app once final schedules are received.",
+  "why": "Organisers needed reliable records of which programme meetings took place and a way to capture no-shows, which neither they nor participants could record before.",
+  "outcome": "Organisers get attendance data from onsite scans and no-show reports from both sides, and attendees can rate each meeting while the programme is running.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-39228: purpose is to enhance meeting reliability and reporting; EP-49075 confluence: organisers want to track no-shows; EP-49073 ai: no way to record no-shows"
+ },
+ {
+  "id": "formats-meeting-programme-improvements",
+  "what": "Meeting programmes have split voting phases, restructured tabs and one combined schedule list, and exhibitors can get early access to set team roles. Organisers gained sorting, meeting deletion, timeslot limits and a notifications switch.",
+  "why": "Organisers found the schedule fragmented and the page crowded, users could be swayed by the other side's responses, and exhibitors needed to set team roles before voting began.",
+  "outcome": "Participants see more matches on screen and their whole schedule in one list, respond without pressure, and organisers keep the programme accurate and on track.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-46566: organiser dislikes fragmented schedule; EP-46564: profile block restricts list; EP-46552: not influenced by other party; EP-46485: pre-define roles before voting"
+ },
+ {
+  "id": "formats-round-table-seating",
+  "what": "Organisers can add, remove and move people between round tables after the final schedule is sent, and set a limit on the number of tables per session. Users deleted from the platform are removed from sessions.",
+  "why": "Tables could only be edited before the session started, applications could exceed the physical tables available, and deleted users still showed at tables.",
+  "outcome": "Organisers handle last-minute changes during a session and match the number of tables to the room, and attendees only see people who are really taking part.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-46473: tables editable only before start, last-minute changes; EP-46474: applications can exceed physical capacity; EP-49077: deleted users still visible"
+ },
+ {
+  "id": "formats-speed-networking-push",
+  "what": "The iOS and Android apps send push notifications for opt-in speed networking, such as being added or removed, schedules being ready and changes, according to each person's role.",
+  "why": "Participants need to know about changes to their speed networking session as they happen, even when they are not looking at the app.",
+  "outcome": "App users hear straight away when they are added to a session or their schedule is ready, so they can act in time.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-33706: set up push notifications matching the existing SN2 notifications. No problem stated"
+ },
+ {
+  "id": "meet-personalised-meeting-notes",
+  "what": "Attendees can add a private note when requesting a meeting or from their schedule, on web and in the app, and find all notes in one My Notes panel. AI meeting notes are produced in the meeting language, with one shared action list.",
+  "why": "Attendees and exhibitors had no way to attach private preparation or follow-up reminders to a meeting, and AI notes did not always match the language of the conversation.",
+  "outcome": "Users prepare for and follow up on meetings from notes only they can see, and every participant receives the same AI action points in the language they spoke.",
+  "who": [
+   "Attendees",
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23843: currently no way to attach a personal note to a meeting; EP-49217 ai: outputs did not consistently match meeting language; EP-48113: single shared list"
+ },
+ {
+  "id": "meet-meeting-setup-2026q2",
+  "what": "Selecting a parent category in Networking & Matchmaking selects all of its child categories. In the app, meetings created by organisers show as confirmed and marked as such, and table meetings are booked with zone and table selection.",
+  "why": "Organisers setting up matchmaking with many sub-categories need to select them together, and app users need to see meetings organisers arrange for them.",
+  "outcome": "Organisers set up matchmaking categories in one action instead of one by one, and app users know which meetings the organiser created and where they take place.",
+  "who": [
+   "Organisers",
+   "App users"
+  ],
+  "basis": "implied",
+  "evidence": "EP-47953: parent selection cascades to children (no source problem); EP-6281: app adaptation for meeting wizard and table meetings"
+ },
+ {
+  "id": "formats-meeting-formats-admin",
+  "what": "A Meeting Formats area in the admin panel holds speed networking, meeting programmes and concierge meetings, each with its own email templates. Round tables and exhibitor events have their own sections, and each format has its own switch.",
+  "why": "Settings and emails for meeting formats sat in several admin areas, and shared templates meant editing one format's email could change another's.",
+  "outcome": "Organisers set up each meeting format and its emails in one place, see only the formats switched on for their event, and are warned before a change affects other emails.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-50104 confluence: manage every format from one place instead of several admin areas; EP-50107: without accidentally changing emails for other sessions; EP-50129"
+ },
+ {
+  "id": "formats-smarter-meeting-generation",
+  "what": "Meeting generation for speed networking and meeting programmes spreads meetings more evenly, can pool likes across an exhibitor's team, can count one-sided likes as mutual for chosen roles, and can add pairs where no likes exist.",
+  "why": "Some participants received too few meetings, one-sided likes were not used, and invalid input could let meetings land in blocked slots or wrongly block meetings organisers created.",
+  "outcome": "More participants get a usable schedule with fewer empty slots, blocked times are respected, and organisers can still add the meetings they arrange by hand.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52147 ai: allocation skewed, some received too few meetings; EP-53330: non-mutual likes not leveraged; EP-50642: meetings in blocked slots; EP-50818: admin-created meetings blocked"
+ },
+ {
+  "id": "meet-ai-notes-add-on",
+  "what": "Organisers can offer AI meeting notes as a Lead Capture Pro add-on and set its price in the event's payment currency. Exhibitors see and buy it on their Lead Capture Pro page, which turns on AI transcription for their whole team.",
+  "why": "AI meeting notes had no add-on option, so organisers could not offer them to exhibitors alongside Lead Capture Pro, and exhibitors had nowhere to buy them.",
+  "outcome": "Exhibitors add AI meeting notes for their team themselves, and organisers manage the offer with their other Lead Capture Pro settings.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-49766 ai: no commercial packaging, organisers had no way to sell it within Lead Capture Pro; EP-49988 ai: exhibitors had no front-end surface to purchase"
+ },
+ {
+  "id": "meet-meeting-management-2026q3",
+  "what": "Bulk Respond opens straight away whatever the team size and refreshes after changes are applied. The mobile app follows the setting that restricts meetings with exhibitors who have no team members, as the web does.",
+  "why": "Opening Bulk Respond for large exhibitor teams was delayed while all data loaded, and the restrict-meetings setting worked on the web but the app could not read it.",
+  "outcome": "Exhibitors with large teams respond to meetings without waiting, and organisers' meeting restrictions apply in the app as well as on the web.",
+  "who": [
+   "Exhibitors",
+   "Organisers",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-56351 ai: slow prefetch delayed opening Bulk Respond for large teams; EP-54268 ai: setting functional on web but mobile app had no way to read it"
+ },
+ {
+  "id": "formats-round-table-waitlist",
+  "what": "When a round table seat is freed, waitlist replacement works out eligible candidates itself: applicants who have not already been invited to a seat in any generation or earlier replacement.",
+  "why": "Freed round table seats need to go to people on the waitlist who have not yet been offered a place.",
+  "outcome": "Organisers can fill declined seats from the waitlist without re-inviting people who already had an offer.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-56891 ai: eligibility moved into matchmaking service; stated problem is internal (backend pre-computed list), customer need implied"
+ }
+]

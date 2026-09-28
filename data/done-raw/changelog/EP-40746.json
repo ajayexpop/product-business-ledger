@@ -1,0 +1,111 @@
+{
+ "k": "EP-40746",
+ "histories": 69,
+ "historiesRead": 69,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2025-03-26T10:55:47.693+0000",
+   "from": "Incoming request",
+   "to": "Awaiting details",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-04-01T11:39:40.829+0100",
+   "from": "Awaiting details",
+   "to": "Considering",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-04-01T11:39:46.293+0100",
+   "from": "Considering",
+   "to": "Awaiting for use cases",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-04-01T11:39:48.721+0100",
+   "from": "Awaiting for use cases",
+   "to": "Ready to estimate",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-04-16T14:14:44.212+0100",
+   "from": "Ready to estimate",
+   "to": "Estimated request",
+   "by": "Andrii (PM)"
+  },
+  {
+   "at": "2025-06-16T10:04:00.653+0100",
+   "from": "Estimated request",
+   "to": "PRODUCT APPROVED",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-06-16T10:04:05.308+0100",
+   "from": "PRODUCT APPROVED",
+   "to": "Parked",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-06-19T14:31:51.706+0100",
+   "from": "Parked",
+   "to": "Tech Brief",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-06-19T15:48:08.325+0100",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-06-19T15:48:11.796+0100",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Oleksandr Parashchuk"
+  },
+  {
+   "at": "2025-07-03T14:45:55.298+0100",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-07-03T14:45:57.848+0100",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-07-18T10:11:06.830+0100",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2025-07-18T10:44:58.111+0100",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-07-25T10:21:26.138+0100",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Eugene Glovatskiy"
+  },
+  {
+   "at": "2025-08-13T10:09:28.832+0100",
+   "from": "Ready for release",
+   "to": "COMPLETE",
+   "by": "Alexander Ozernyuk"
+  },
+  {
+   "at": "2026-09-15T17:46:35.857+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790317055114.txt"
+}

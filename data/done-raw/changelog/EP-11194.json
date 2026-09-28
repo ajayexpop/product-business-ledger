@@ -1,0 +1,75 @@
+{
+ "k": "EP-11194",
+ "histories": 56,
+ "historiesRead": 56,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2022-12-05T15:50:00.475+0000",
+   "from": "Incoming request",
+   "to": "Tech Brief",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-12-06T10:03:00.699+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-12-08T13:19:50.207+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-12-08T13:46:25.511+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-12-08T14:28:04.100+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Andrii Kyslov"
+  },
+  {
+   "at": "2022-12-08T15:39:44.711+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Andrii Kyslov"
+  },
+  {
+   "at": "2022-12-09T12:48:27.635+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "oleh bosiuk"
+  },
+  {
+   "at": "2022-12-12T15:09:24.025+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "oleh bosiuk"
+  },
+  {
+   "at": "2022-12-21T15:25:06.066+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Bohdan Osypenko"
+  },
+  {
+   "at": "2022-12-22T08:20:04.005+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Andrii Kyslov"
+  },
+  {
+   "at": "2026-09-15T17:45:09.202+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790319701581.txt"
+}

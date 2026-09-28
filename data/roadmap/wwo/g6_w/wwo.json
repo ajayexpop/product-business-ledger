@@ -1,0 +1,820 @@
+[
+ {
+  "id": "onsite-interactive-floor-plans-launch",
+  "what": "Admins draw and delete stands, show exhibitor names and stand labels that scale with zoom, hide stands or labels, and add sponsor banners. Stand locations across web and app open the stand on the plan.",
+  "why": "Visitors had to search the floor plan by stand name, which was confusing. They needed to find stands by exhibitor name.",
+  "outcome": "Attendees see who is on each stand and jump from an exhibitor's stand location to the plan. Duplicate hall or stand names are caught on import.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "Sponsors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-10209: visitors had to search the floor plan by stand name, which was confusing; search needed to work by exhibitor name"
+ },
+ {
+  "id": "onsite-badge-builder-controls",
+  "what": "Every badge builder field, including QR codes, can be aligned, given left and right margins, rotated 180 degrees and duplicated. QR codes and barcodes resize, the category field moves, and badge codes can go in the category-switch email.",
+  "why": "Organisers needed the same badge data shown more than once with different settings, and the category field could not be moved like the others.",
+  "outcome": "Organisers lay out printed badges as they need them, and what they set in the preview is what prints. Visitors who switch category can get their badge codes by email.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-9802: organisers needed the same badge data shown more than once with different display settings; EP-9803: Category field was static"
+ },
+ {
+  "id": "onsite-qr-code-pdf-export",
+  "what": "Organisers export QR codes for participants and exhibitors as a PDF, filtered by category and status. It is generated in the background with one large QR code per page and the holder's details, including external codes.",
+  "why": "Organisers needed a bulk export of QR codes for filtered lists of companies and individuals, in the same way as badge export.",
+  "outcome": "Organisers get a printable file of QR codes for exactly the group they select, ready for onsite use.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-8049: organisers needed a bulk export of QR codes for filtered lists, similar to badge export"
+ },
+ {
+  "id": "integ-event-system-import",
+  "what": "Exhibitors, sessions and speakers sync from an external event management system, configured per event. Exhibitors are matched by account number and kept up to date, and main contacts are added as admin team members.",
+  "why": "Events whose exhibitor, session and speaker data lives in an external event system needed that data brought into the platform without manual work.",
+  "outcome": "Organisers keep exhibitor, session and speaker content in one place and avoid re-entering it by hand.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Speakers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-11456: shows needed exhibitor, session and speaker data imported from the external system; value: automate the data flow"
+ },
+ {
+  "id": "onsite-external-code-scanning",
+  "what": "The check-in app scans external QR codes, barcodes and co-located event badges, saving unknown codes instead of rejecting them. The mobile app can scan and store any code, and kiosks check in people with external codes.",
+  "why": "At co-located events attendees walk in at any entrance with badges from different registration vendors, and scanning an unknown code showed a 'not found' error.",
+  "outcome": "Organisers check in and record every badge presented, and the check-in report shows each scanned code and, where recognised, its event.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-5714 value: co-located events where an attendee can walk in at any entrance; EP-5643: unknown code showed a 'not found' error"
+ },
+ {
+  "id": "onsite-expofp-stand-linking",
+  "what": "Organisers choose dynamic linking to an ExpoFP floor plan, a static URL or no link. Stand links on marketplace, exhibitor, product, session, schedule and recommendation pages, and in the apps, follow the setting.",
+  "why": "Organisers who use an ExpoFP floor plan needed stand links to open that plan instead of the platform's own.",
+  "outcome": "Attendees click a stand anywhere on web or app and land on the right stand on the ExpoFP plan.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-14266: clients using ExpoFP needed stand links to open the external floor plan instead of ExpoPlatform's"
+ },
+ {
+  "id": "onsite-kiosk-improvements",
+  "what": "Kiosk search by name or email returns every matching participant, loaded in batches. The kiosk registration form supports the same conditional logic as the web registration form builder.",
+  "why": "Attendees with a common name could not find themselves among the five results shown, and co-located events need kiosk forms that show only their own fields.",
+  "outcome": "Visitors find their own record at the kiosk, and onsite registrants see only the fields and categories for the event they pick, helping queues move.",
+  "who": [
+   "Attendees",
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-14045: attendees sharing a common name could not find themselves among five results; EP-14036: co-located events need their own fields"
+ },
+ {
+  "id": "integ-visit-badge-scanner",
+  "what": "Organisers can switch on the Visit digital badge and Visit lead scanner for web and app, sync leads scanned in Visit into the platform, and choose email or external ID to match accounts.",
+  "why": "Events that register attendees through Visit needed those accounts to use the Visit badge and lead scanner instead of the platform's own.",
+  "outcome": "Attendees carry the Visit badge, available offline in the apps, and Visit-scanned leads appear with other leads in the interactions dashboard and downloads.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-14602/EP-14603: let accounts pulled from the Visit integration use the vendor's badge and lead scanner instead of the internal ones"
+ },
+ {
+  "id": "integ-api-meeting-data",
+  "what": "A paginated public API endpoint returns every meeting with the same fields as the meetings export, filterable by account and time. Session responses include the exhibitor ID, and API stand changes move pre-scheduled meetings.",
+  "why": "Organisers needed to pull meeting data into external systems for analysis, fetch only recent changes, and update meeting locations by API as well as by file.",
+  "outcome": "External systems stay in step with meetings by fetching only what changed, and exhibitors' meetings follow them when their stand changes.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-9435: clients needed to pull meeting listing into an external system; EP-15587: fetch incremental updates; EP-12023: only possible via file import"
+ },
+ {
+  "id": "onsite-android-scanning-no-google",
+  "what": "The Android app uses an alternative barcode scanner on devices without Google Play services, such as Huawei phones, so badge scanning works on them too.",
+  "why": "Huawei devices without Google services could not use the in-app badge scanner.",
+  "outcome": "Exhibitors and staff scan badges from the app on more Android phones, without needing a different device.",
+  "who": [
+   "Exhibitors",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-15213: Huawei devices without Google services could not use the in-app badge scanner"
+ },
+ {
+  "id": "onsite-live-location-expofp",
+  "what": "The mobile apps use Crowd Connected as the location provider for ExpoFP floor plans, asking for foreground, background and reminder location permission.",
+  "why": "In a large venue, attendees need to know where they are on the floor plan to find their way to stands and sessions.",
+  "outcome": "App users who allow location see their own position as a blue dot on the ExpoFP plan while they move around the show.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-20467: set up CrowdConnected provider so clients can offer blue-dot navigation on ExpoFP floorplans; no problem stated"
+ },
+ {
+  "id": "integ-expofp-floor-plan",
+  "what": "Organisers switch on the ExpoFP floor plan with an account token. Attendees search exhibitors, custom locations and sessions, including in-person sessions and exhibitor events, with deep links and wayfinding.",
+  "why": "Large shows needed a floor plan with a better user experience and indoor navigation.",
+  "outcome": "Attendees find stands and sessions on the plan, open profiles from it and see travel time and distance to where they are going.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17756: to use a floor plan vendor with better UX and indoor navigation for large shows"
+ },
+ {
+  "id": "integ-reach5-buyer-registration",
+  "what": "Reach5 login is available in the buyer registration pop-up used on the repeat-registration link.",
+  "why": "Buyers with Reach5 accounts from other events could not log in through the platform's registration form.",
+  "outcome": "Returning buyers sign in with the Reach5 account they already have and register without creating new credentials.",
+  "who": [
+   "Registrants",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17775: buyers with Reach5 accounts from other events could not log in through EP's registration form"
+ },
+ {
+  "id": "onsite-floor-plan-improvements-2023",
+  "what": "The floor plan view was rebuilt. Hall arrows are hidden for single-hall events, the Visited quick filter lists visited stands, quick filters show a no-results message, and sessions on a stand open their profile.",
+  "why": "Visitors using the floor plan need clear navigation, to see where they have been and to reach session details from a stand.",
+  "outcome": "Visitors move around the plan with less clutter, return to stands they visited and open a session's page straight from its stand.",
+  "who": [
+   "Attendees",
+   "App users"
+  ],
+  "basis": "implied",
+  "evidence": "EP-15556, EP-18025, EP-20136, EP-20222, EP-20149: no problem stated; capabilities only"
+ },
+ {
+  "id": "integ-klipso-integration",
+  "what": "The platform pulls exhibitor data from Klipso every minute or on demand with a Sync button, maps categories by text, imports chosen exhibitor custom questions and passes contact email and username.",
+  "why": "The previous way of pushing Klipso data into the platform was ending, so the platform had to pull exhibitor data from Klipso itself.",
+  "outcome": "Organisers keep exhibitor records, categories and registration answers from Klipso up to date without manual imports.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-14473: previous push API from Klipso would no longer be supported, so EP had to pull the data"
+ },
+ {
+  "id": "integ-public-api-2023q4",
+  "what": "The API offers a buyers-only export, product images as URLs, speaker and moderator ID arrays on sessions, 'Other' locations for exhibitor events, the indoor maps toggle and activity category limits on profile edits.",
+  "why": "Some tasks were only possible through export files or the admin panel, and some API formats made data hard to send or extract.",
+  "outcome": "Organisers and their vendors create products, set session locations and pull buyer and session data directly through the API.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-18331: buyer-only data via API instead of export file; EP-20177: vendor could not send files in images[]; EP-21351: format stopped extraction; EP-19915: Other location unavailable via import/API"
+ },
+ {
+  "id": "onsite-meeting-location-floor-plan",
+  "what": "Meeting cards in the app make the location clickable in any meeting status, opening the internal, MapsPeople or ExpoFP floor plan focused on the meeting place.",
+  "why": "App meeting cards gave no way to find where the meeting was taking place.",
+  "outcome": "Attendees and exhibitors tap a meeting's location and see exactly where to go on the floor plan.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23543: app meeting cards gave no way to find the meeting venue"
+ },
+ {
+  "id": "onsite-invisual-integration",
+  "what": "Admins configure InVisual in settings. Users open the InVisual map from exhibitor, session and event locations, scan venue QR codes into the app or web view, and keep favourites in sync.",
+  "why": "Organisers wanted InVisual's QR wayfinding and stand linking for agenda and exhibitors inside their own web and app.",
+  "outcome": "Attendees scan a venue QR code or tap a location to open the map in the app, and their favourites follow them between map and platform.",
+  "who": [
+   "Attendees",
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-27382: InVisual offers QR wayfinding and agenda and exhibitor stand linking that organisers want, landing users in the app"
+ },
+ {
+  "id": "onsite-badge-printing-improvements",
+  "what": "Batch badge printing on the participants page works with or without filters and builds the file in the background. Badge prints are recorded, and exhibitors without badges see where to print them.",
+  "why": "Organisers relied on batch printing while it was unavailable and had to produce large numbers of badges one by one.",
+  "outcome": "Organisers print a whole group of badges in one go and track printing, and exhibitors know where to print team member badges.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-17524: many clients relied on the disabled tool and had to generate over 500 badges one by one"
+ },
+ {
+  "id": "onsite-checkin-app-zones",
+  "what": "Check-in app staff pick check-in, check-out or session scanning and the zone before they start. Session scans need the item in the attendee's schedule, a short cooldown stops double scans and repeat same-day scans are flagged.",
+  "why": "Repeated scans were a problem, and several people could get into an event on a single badge.",
+  "outcome": "Staff scan with the right zone and action set, and organisers get cleaner attendance records with repeat entries flagged.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23669: repeated scans were a problem and several people could get in on a single badge"
+ },
+ {
+  "id": "onsite-expofp-app-redesign",
+  "what": "Search results, stand details, get-directions and route panels on ExpoFP floor plans were redesigned on Android and iOS. Users pick a start point from their location with Crowd Connected or on the map, swap points and see the route.",
+  "why": "Attendees using the floor plan in the app need to find a booth and work out how to get there from where they are.",
+  "outcome": "App users search for a stand, get a route to it and change the start point without leaving the floor plan.",
+  "who": [
+   "App users",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-24164: why null; whoFor all organisers using ExpoFP, value 'Minimizes effort'; no problem stated"
+ },
+ {
+  "id": "integ-aditus-app-badges",
+  "what": "When the Aditus badge integration is on, the app's badge menu lists the user's Aditus tickets, found by email, each opening its badge page, with screens for not found and offline.",
+  "why": "Events that use Aditus for registration needed attendees to be able to show their Aditus badges in the app for scanning.",
+  "outcome": "Attendees open the right ticket from the app's badge page and present it at the entrance, without looking for it elsewhere.",
+  "who": [
+   "Attendees",
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-25790 whoFor: clients using Aditus as their registration vendor; value: ability to display custom badges for scanning"
+ },
+ {
+  "id": "integ-crm-session-import",
+  "what": "A CRM integration, switched on in event setup, pulls sessions and speakers into the agenda with their tracks, types and tags.",
+  "why": "An organiser required its event vendors to connect to its CRM through open APIs so session and speaker data flows from one source.",
+  "outcome": "Session and speaker content arrives in the agenda from the CRM with its tracks, types and tags, so organisers do not re-enter it.",
+  "who": [
+   "Organisers",
+   "Speakers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-27396: the client mandated that all vendors integrate with its CRM using its open APIs"
+ },
+ {
+  "id": "integ-event-system-import-enhancements",
+  "what": "Imports bring in moderators, only the speakers of imported sessions, exhibitor custom fields and categories, tracks and session types, and filter sessions by stream and seminar name. Fields can be locked and welcome emails sent.",
+  "why": "Imports pulled in data from all past shows, and the integration lacked features other integrations had, such as stopping updates to chosen fields.",
+  "outcome": "Organisers import only the sessions and speakers they want, keep chosen fields as they set them, and new exhibitors get their password email automatically.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Speakers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-25344: all historical shows' data was pulled in; EP-28688: integration lacked features of other integrations, client needed to stop category updates"
+ },
+ {
+  "id": "integ-expofp-data-sync",
+  "what": "Exhibitor name, stand, order ID, description, logo and category are sent to ExpoFP whenever an exhibitor is created, edited or deleted, with changes grouped and sent together every ten minutes.",
+  "why": "An ExpoFP floor plan needs to show the same exhibitor details as the platform, which is hard to keep aligned by hand.",
+  "outcome": "Organisers update an exhibitor once and the floor plan follows, so attendees see current names, stands and logos.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-26327: why null; value 'enhances the work of our TAMs and ExpoFP integration'; no customer problem stated"
+ },
+ {
+  "id": "integ-public-api-2024q2",
+  "what": "The account endpoint accepts a networking opt-in, statistics endpoints filter by Unix timestamps, meeting locations follow stand changes sent by API, and meeting tags appear in the meetings export and endpoint.",
+  "why": "Networking opt-in could not be set by API, statistics filters did not match the docs, and meeting locations drifted when stands changed.",
+  "outcome": "Integrations set opt-in, pull statistics for a chosen time window and report on meeting tags, and meetings stay at the exhibitor's current stand.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-24220: opt-in not available through API; EP-25280: mismatched filter formats; EP-26245: meeting locations mismatched; EP-28229: users wanted tags in reports"
+ },
+ {
+  "id": "integ-crowd-connected",
+  "what": "The apps pass each user's ID to Crowd Connected, which can send notifications with category targeting through a dedicated API. ExpoFP and Crowd Connected settings can be entered when an app is created.",
+  "why": "Organisers wanted insight into attendee movement on site and location-based messages, and pushed notifications vanished once swiped, so users missed information.",
+  "outcome": "Organisers send targeted location-based messages that stay in the app's notification centre, and apps include these services only when an event uses them.",
+  "who": [
+   "Organisers",
+   "App users",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-23579: organisers want enriched insights on attendee movement; EP-23578: notifications vanished once swiped, users missed information"
+ },
+ {
+  "id": "integ-reach5-registration",
+  "what": "Visitor registration checks an email against both the platform and Reach5, logs in known users and creates platform accounts from Reach5 data.",
+  "why": "Participants had to be created and updated by hand in both the platform and Reach5, which had no link between them.",
+  "outcome": "Visitors register with the Reach5 account they already have and their details carry across, and organisers stop keeping two systems in step manually.",
+  "who": [
+   "Registrants",
+   "Attendees",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-18360: participants had to be created and updated manually on both EP and Reach5, which had no integration"
+ },
+ {
+  "id": "integ-public-api-2024q4",
+  "what": "The exhibitor endpoint accepts a sponsor pop-up parameter, and the product endpoint accepts an active or inactive status.",
+  "why": "Organisers who push exhibitors through the API would otherwise have to switch the sponsor pop-up on by hand for each one, and needed to change product status in bulk.",
+  "outcome": "Integrations set sponsor pop-ups and activate or deactivate products in bulk, with the same effects as doing it in the admin panel.",
+  "who": [
+   "Organisers",
+   "Sponsors",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-32201: exhibitors pushed via API would need the sponsor pop-up enabled manually; EP-26427 value: updating product status in bulk"
+ },
+ {
+  "id": "integ-a2z-enhancements",
+  "what": "The A2Z integration imports only exhibitors with a selected booth status, and maps pavilion and hall codes to chosen custom fields.",
+  "why": "Organisers needed only exhibitors with a given booth status, such as occupied, brought in from A2Z.",
+  "outcome": "Organisers import just the exhibitors they want, with pavilion and hall details already in their custom fields.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-37381: organisers needed only exhibitors with a given booth status imported, such as 'Occupied'"
+ },
+ {
+  "id": "integ-reach5-sso",
+  "what": "The event site accepts a Reach5 authorisation code and exchanges it for an access token, logging the participant in and taking them to their dashboard.",
+  "why": "Participants signed in through Reach5 needed to arrive on the event platform already logged in.",
+  "outcome": "Attendees move from their Reach5 account to the event platform with one click, without a second login.",
+  "who": [
+   "Attendees",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-36147: participants coming from the Klipso/Reach5 sign-on need to arrive on ExpoPlatform already logged in"
+ },
+ {
+  "id": "integ-visit-sso-meetings",
+  "what": "A 'Register Your Staff' item under Team Members signs exhibitor admins into the partner registration system. A custom question and response set in the Visit integration decides which participants can have meetings.",
+  "why": "Exhibitor staff registration lived in a partner system that admins had to log in to separately, and organisers needed meetings allowed only for participants giving a set answer.",
+  "outcome": "Exhibitor admins register their staff without a second login, and organisers control meeting rights from registration answers.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-39524: team member registration lives on the partner system and admins needed to reach it logged in; EP-39525: allow meetings only for a specific custom question answer"
+ },
+ {
+  "id": "onsite-ticket-validation-checkin",
+  "what": "On each badge scan the check-in app checks that a ticket is held, valid for the date, not expired and valid for the zone, and shows messages such as 'No ticket found' or 'Wrong check-in zone'. No checks run when ticketing is off.",
+  "why": "Ticketing needed checks on site so that only attendees with a valid ticket for that day and location check in.",
+  "outcome": "Staff see at once why a badge cannot check in, and organisers admit only ticket holders to the right day and zone.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-28422: ticketing needed on-site enforcement so only attendees with a valid ticket for that day and location check in"
+ },
+ {
+  "id": "onsite-floor-plan-display-2025",
+  "what": "A Floorplan tab in display filters lets admins order, rename, switch on or off and restrict floor plan filters. The floor plan uses the standard website builder header instead of its own mini header.",
+  "why": "Organisers need the floor plan page to look and behave like the rest of their event website, with filters set up the same way.",
+  "outcome": "Organisers set up floor plan filters as they do list filters, and visitors see the same header across the site.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "implied",
+  "evidence": "EP-36287: no why; EP-38711: why is internal (three header implementations hard to support)"
+ },
+ {
+  "id": "onsite-gps-ips-positioning",
+  "what": "Android app users see their GPS position on InVisual floor plans, with permission prompts, as on iOS. For ExpoFP with Crowd Connected, organisers choose indoor positioning only, GPS only or both in general settings.",
+  "why": "Android users lacked the GPS position on the floor plan that iOS users already had, and changing positioning settings needed support requests.",
+  "outcome": "Attendees on both platforms find their way in the venue with their live position, and organisers set the positioning mode themselves.",
+  "who": [
+   "Attendees",
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40070: Android users lacked GPS location that iOS already had; EP-40363: configuring positioning required support tasks and developer intervention"
+ },
+ {
+  "id": "onsite-badge-templates-redesign",
+  "what": "All badge templates were reworked so a badge looks the same when printed from the admin panel, previewed in the badge builder or printed from a profile.",
+  "why": "Badges looked different in different parts of the platform.",
+  "outcome": "Organisers can trust that the badge they design is the badge that prints, wherever it is printed from.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-41901: in different parts of the platform, the badges have a different look"
+ },
+ {
+  "id": "integ-aditus-participants",
+  "what": "Participants and team members are pulled from Aditus for one or more events, with category mapping, badge fields and email options. The Aditus badge page settings are back in the admin panel.",
+  "why": "The Aditus feed that pushed registrations into the platform was being retired, so the platform needed to fetch registrations itself.",
+  "outcome": "Organisers keep registrations in step with Aditus, with categories mapped, external badge codes in place and invite emails sent only if they choose.",
+  "who": [
+   "Organisers",
+   "Registrants",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-40301: the Aditus API that pushed registrations was deprecated, so EP must fetch the data"
+ },
+ {
+  "id": "integ-klipso-enhancements",
+  "what": "Klipso contact person details become the exhibitor's admin team member, optionally active on arrival. Exhibitors can have several halls and stands, and product categories can be copied from an earlier event.",
+  "why": "Contact person data from Klipso did not fill the team member admin, multiple stands were not supported, and exhibitors at several shows re-entered the same categories.",
+  "outcome": "Exhibitors arrive with their admin, stands and product categories in place, so they and organisers set up less by hand for each show.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-31213: contact person data was not populating the team member admin; EP-38098: could not handle multiple stands; EP-41455: exhibitors should not re-enter categories per event"
+ },
+ {
+  "id": "integ-public-api-2025q2",
+  "what": "The meetings export filters by creation and last-modified dates, sending empty exhibitor IDs detaches a team member from an exhibitor, and the account endpoint returns the participant's badge QR code.",
+  "why": "Filtering meetings only by appointment time returned large datasets, recent changes took several calls, and the API could not remove a team member from an exhibitor.",
+  "outcome": "Integrations fetch only new or changed meetings, keep exhibitor teams correct automatically and retrieve badge QR codes for their own tools.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-35900: filtering by appointment time returned large datasets; EP-40013: needed recent changes without multiple calls; EP-35903: no way to remove the exhibitor association"
+ },
+ {
+  "id": "onsite-stand-bookmarking",
+  "what": "App users bookmark exhibitor stands, sessions, events and custom locations on the ExpoFP floor plan, with a confirmation message, and revisit them from a bookmarks list in the floor plan header.",
+  "why": "Users had no way to save stands of interest and had to search for them again, especially at large shows.",
+  "outcome": "Attendees build a list of places to visit and go back to any of them from the floor plan without searching again.",
+  "who": [
+   "App users",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-41743: users had no way to save stands of interest and had to search again, especially at large expos"
+ },
+ {
+  "id": "onsite-live-badge-ring",
+  "what": "Live digital badges can show a moving ring around the QR code in the attendee's category colour, switched on per event.",
+  "why": "Screenshots of digital badges could be reused to get in without authorisation, getting round badge protections.",
+  "outcome": "Entry staff spot a static screenshot at a glance and see the attendee's category from the ring colour.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-43589: screenshots of digital badges could be reused to gain unauthorised entry"
+ },
+ {
+  "id": "onsite-category-at-checkin",
+  "what": "The check-in app shows the participant category after a scan and in the manual-add and scanned lists, and kiosks show the visitor category next to names. The logout button is easier to find and asks for confirmation.",
+  "why": "After a scan the app showed only success or failure, so ushers could not see a participant's category or stop someone claiming to be a VIP or buyer.",
+  "outcome": "Staff identify each attendee's category on the spot without looking it up in the admin panel, and avoid logging out by accident.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-42609: app only showed success or failure after a scan; EP-44841 value: saves searching categories, prevents claims to be VIPs or Buyers"
+ },
+ {
+  "id": "integ-event-system-push-back",
+  "what": "Exhibitors in selected categories, approved news and exhibitor manual brochures, images and videos are sent from the platform to the external event system with an agreed field mapping, including product export columns.",
+  "why": "Organisers needed content entered on the platform, such as exhibitor manual data, pushed back to their event system, without duplicating files it already held.",
+  "outcome": "Exhibitor content entered once on the platform reaches the organiser's event system automatically, and only new brochures are sent.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-42403: client requires data registered in the Exhibitor Manual to be pushed back; EP-43006: system already held PDFs, pushing all would create duplicates"
+ },
+ {
+  "id": "integ-api-v2-lists",
+  "what": "New API v2 endpoints list all participants and all exhibitors with their details, including parent and child companies, with pagination and timestamp filters. Deleted participant IDs can also be retrieved.",
+  "why": "The older API v1 list endpoints did not work reliably, and API v2 had no single endpoint for all participants or all exhibitors.",
+  "outcome": "Integrations pull complete participant and exhibitor records page by page, fetch only what changed and remove deleted accounts on their side.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-35897: V1 list discontinued and V2 had no endpoint for all participants; EP-36021 value: V1 does not work properly, changes occur without notice"
+ },
+ {
+  "id": "onsite-expofp-hall-stands",
+  "what": "The apps follow ExpoFP's 'Map with Hall' setting, matching stands as hall plus stand, for example 'Halle 3.0 G61', or stand only, 'G61'.",
+  "why": "ExpoFP started accepting stand values that include the hall, which the integration and website supported but the apps did not.",
+  "outcome": "Exhibitors are linked to the right stand on the app floor plan whichever stand format the event uses.",
+  "who": [
+   "App users",
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45853: ExpoFP now accepts hall-prefixed booth values, supported in integration and front end but not in the apps"
+ },
+ {
+  "id": "integ-public-api-v3",
+  "what": "The first Public API v3 endpoints list an environment's events, the exhibitor and participant categories of an event, and the custom questions of the visitor registration pipeline.",
+  "why": "Integrations need to look up events, categories and registration questions and their IDs before they can exchange data with the platform.",
+  "outcome": "Developers find event IDs, sorted category lists and registration questions with their options through the API instead of asking for them.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-46710, EP-46512, EP-46511: why null; EP-45064 value: fetch all visitor custom questions, answers and IDs via the API"
+ },
+ {
+  "id": "integ-visit-api-v2",
+  "what": "The Visit integration moved to Visit's API v2. It receives updates as they happen, pushes chosen fields back, runs an end-of-day push, handles deletions, syncs profile pictures both ways, retries failed calls and logs every request.",
+  "why": "Both systems needed to stay in step with minimal delay, and profiles still had to be created or updated when a first API call failed.",
+  "outcome": "Participant and exhibitor records match in both systems through the day, and organisers can see and export a log of every integration request.",
+  "who": [
+   "Organisers",
+   "Exhibitors",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-42362: both systems needed to stay equalised with minimal delay; EP-42364: ensure profiles are still created or updated after initial API errors"
+ },
+ {
+  "id": "integ-genesis-world",
+  "what": "The first phase of a native integration with the Genesis World CRM was delivered, connecting it with the platform.",
+  "why": "Organisers who keep their contacts in the Genesis World CRM need it connected to their event platform.",
+  "outcome": "Organisers who use Genesis World have a native connection to build on, with more to follow in later phases.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "implied",
+  "evidence": "EP-45950: description only says 'Creating the Genesis World Integration and integrate with what we currently have'; no problem or scope stated"
+ },
+ {
+  "id": "onsite-offline-expofp",
+  "what": "The mobile apps download ExpoFP floor plan data for full offline use, so plans work without an internet connection.",
+  "why": "Floor plans only partly worked offline through caching and needed an initial online session to load.",
+  "outcome": "Attendees use the floor plan in halls with weak or no connection, including when they open it for the first time offline.",
+  "who": [
+   "App users",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45052: maps load via network with default SDK caching as a basic fallback that requires an initial online session"
+ },
+ {
+  "id": "onsite-bookmark-favourites-sync",
+  "what": "Favourite exhibitors and bookmarked stands on the ExpoFP floor plan sync in both directions, so an item saved in one place appears in the other.",
+  "why": "Users wanted to manage their interests across exhibitor lists and the floor plan without doing it twice.",
+  "outcome": "Attendees favourite an exhibitor and find its stand already bookmarked on the plan, and the other way round.",
+  "who": [
+   "Attendees",
+   "App users"
+  ],
+  "basis": "stated",
+  "evidence": "EP-44186: so that I can manage my interests across exhibitor lists and the floorplan without duplicated effort"
+ },
+ {
+  "id": "onsite-checkin-qr-2026",
+  "what": "Admins can choose a new 'Simplified Participant QR' code type that holds only the attendee ID, and the zone filter in the admin check-in list and check-in analytics has limits on the options it loads.",
+  "why": "A scanning partner needed a smaller, lighter QR code for integrations, and the zone filter loaded so many options that the page lagged.",
+  "outcome": "Organisers issue simpler QR codes that partner scanners read easily, and the check-in list filters stay responsive.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-44749: partner requested a simpler, lighter QR type to streamline external integrations; EP-40616: filter options caused lags"
+ },
+ {
+  "id": "onsite-aditus-badge-errors",
+  "what": "When an Aditus custom badge cannot be shown, users go to a clear error page for no-connection and no-information cases, in English and German, instead of falling back to the standard badge.",
+  "why": "When a custom badge could not be retrieved, the app showed an error and then switched to the standard badge, leaving users with no guidance.",
+  "outcome": "Attendees know what to do when their badge will not load, in their language, instead of being left with the wrong badge.",
+  "who": [
+   "Attendees",
+   "App users",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-48297: app showed an error then reverted to the native badge page, leaving users without guidance"
+ },
+ {
+  "id": "integ-map-your-show",
+  "what": "Built on the integration hub, the Map Your Show integration fetches exhibitors from the Map Your Show API with their custom fields, and maps product categories from an uploaded Excel file. A second stage completed the remaining scope.",
+  "why": "Organisers who manage exhibitors in Map Your Show need that data in the platform without importing it by hand.",
+  "outcome": "Exhibitor profiles, custom fields and product categories arrive from Map Your Show automatically, ready for the event.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "implied",
+  "evidence": "EP-45440: why null; value 'a direct exhibitor integration with Map Your Show'; EP-48154: completes contracted scope; no customer problem stated"
+ },
+ {
+  "id": "integ-hub-mapping",
+  "what": "Team member roles can be set in the integration hub mapping, and existing admins keep their role on resync. Exhibitor mappings include a default language field, and exhibitor and team member admin data can be pushed to Aditus.",
+  "why": "Integrations created every team member as a member and resync overwrote roles, so admins assigned to exhibitors were demoted without notice.",
+  "outcome": "Exhibitor admins keep their rights through every sync, and exhibitors set up in the platform also reach Aditus, where their admin adds the rest of the team.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-47958: integration always created team members as 'member' and resync overwrote roles, so admins were silently demoted"
+ },
+ {
+  "id": "integ-public-api-v3-expansion",
+  "what": "New v3 endpoints check whether an account exists, return visitor and exhibitor registration questions, export meetings with filters and incremental sync, and provide check-in data. The API rejects new accounts that use an admin's email.",
+  "why": "Organisers using the check-in app wanted its data through the API, and the API could create an account with an admin's email that then did not appear in the visitor list.",
+  "outcome": "Integrations look up accounts, read registration questions, pull only changed meetings and fetch check-in records, without creating hidden duplicate accounts.",
+  "who": [
+   "Organisers",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45958: a client using the check-in app wants its data via the API; EP-44419: account created via API with an admin's email did not appear in the visitor list"
+ },
+ {
+  "id": "onsite-ocr-badge-scanning",
+  "what": "The mobile app can scan a badge by reading its printed name, company and job title with OCR for a set badge format, matching records on the device first and then on the server, and showing up to five matches.",
+  "why": "Some events do not have QR code or barcode badges, so there was nothing for the app to scan.",
+  "outcome": "Exhibitors and attendees capture contacts from printed badges at events without QR codes or barcodes, in the same way as a normal badge scan.",
+  "who": [
+   "Exhibitors",
+   "App users",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45778: goal is to let attendees scan badges when QR/barcode format badges are not available at an event"
+ },
+ {
+  "id": "onsite-floor-plan-management-2026",
+  "what": "Halls and stands on the internal floor plan can be sorted in natural order and selected, including select all, for bulk deletion. Stands in a hidden hall no longer open from an exhibitor's card.",
+  "why": "With no sorting or bulk delete, organisers of large events had to scroll through halls and stands and delete them one by one, which was slow and error-prone.",
+  "outcome": "Organisers set up and tidy large floor plans in fewer steps, and halls they hide stay hidden from visitors.",
+  "who": [
+   "Organisers",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-51701: no sorting or bulk delete forced organisers of large events to delete items one by one, slow and error-prone"
+ },
+ {
+  "id": "integ-public-api-v3-content",
+  "what": "New v3 endpoints return sponsors and sponsor categories, products, and event floor plan halls and stands. Session tracks, types, tags, languages, countries and regions follow, with localisation, sorting, paging and modified-since filters.",
+  "why": "There was no API route to product data, no endpoint exposing sponsor profiles and placement, and no way to turn sponsor category IDs into names.",
+  "outcome": "Developers pull sponsors, products, floor plan and session reference data from one consistent API and fetch only what changed.",
+  "who": [
+   "Organisers",
+   "Sponsors",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-51438: no public API way to retrieve product data; EP-51830: no V3 endpoint exposing sponsor data; EP-52613: no API to resolve sponsor category IDs"
+ },
+ {
+  "id": "integ-cds-participants",
+  "what": "Participants are pulled from CDS page by page with full field mapping, matched by email for updates, with order type and included items set in the admin panel.",
+  "why": "The CDS integration needed paged retrieval and configurable mapping to import large registrant lists reliably.",
+  "outcome": "Organisers bring large registration lists from CDS into the right participant categories and keep them updated without manual imports.",
+  "who": [
+   "Organisers",
+   "Registrants"
+  ],
+  "basis": "stated",
+  "evidence": "EP-48618: integration needed paginated retrieval and configurable mapping to import large registrant datasets reliably"
+ },
+ {
+  "id": "integ-d2i",
+  "what": "A native integration searches and pages through D2i registrations and syncs only changed records into the platform, with D2i as the source of truth.",
+  "why": "Organisers using D2i for registration had no automated way to bring attendee data into the platform and had to transfer it by hand.",
+  "outcome": "Attendee records arrive and stay up to date from D2i, so organisers stop moving registration data between systems.",
+  "who": [
+   "Organisers",
+   "Registrants",
+   "Attendees"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52290: customers using D2i had no automated way to bring attendee data in, forcing manual transfer"
+ },
+ {
+  "id": "integ-hub-migrations",
+  "what": "The Aventri V2, Aditus and A2Z integrations were moved to the integration hub, keeping their current functions and default field mapping. A2Z now uses the newer REST API.",
+  "why": "Organisers need these integrations to keep working the same way on the shared hub, and the A2Z integration had to move off an outdated API.",
+  "outcome": "Organisers keep using Aventri, Aditus and A2Z as before, now on the same hub as the newer integrations.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-45439 value: migrating out of the outdated SOAP API to the new RESTful API; EP-46288/EP-47099: all current functionalities must be maintained"
+ },
+ {
+  "id": "integ-integrations-page",
+  "what": "A new Integrations page in the admin panel lists hub and existing integrations with descriptions, category tags and whether each is active for the event. SAML 2.0 settings have their own page in the catalogue.",
+  "why": "Organisers had no single view of which integrations exist and which are active for their event.",
+  "outcome": "Organisers see every integration and its status for their event in one place, and open each one's settings from there.",
+  "who": [
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-55251: organisers had no single view of which integrations exist and which are active for their event"
+ },
+ {
+  "id": "integ-public-api-v2-2026q3",
+  "what": "A new endpoint returns sponsor views, clicks, favourites, meetings and messages. Session endpoints can set and return up to five custom filters, matched in the request language.",
+  "why": "Requests for sponsor interactions through the existing endpoint returned empty data, and integrations could not set or read custom session filters.",
+  "outcome": "Organisers report on sponsor engagement from their own tools, and session data sent by API keeps its custom filters.",
+  "who": [
+   "Organisers",
+   "Sponsors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-54772: clients querying accountsInteractions for sponsors received empty data; EP-57347/EP-57348: could not set or retrieve custom session filters"
+ },
+ {
+  "id": "integ-hub-sync",
+  "what": "ExpoFP and Visit run on the integration hub's automatic update engine, with removed exhibitors recreated, sync history, logs and a set polling interval. An 'Email First' option keeps profiles together when an email changes upstream.",
+  "why": "Exhibitors deleted in ExpoFP stayed in the platform, Visit resync had no visibility, and email changes in source systems created duplicate accounts.",
+  "outcome": "Partner data stays in step with less manual fixing, organisers can see each sync, and attendees keep one profile and history.",
+  "who": [
+   "Organisers",
+   "Attendees",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-54115: exhibitors deleted in ExpoFP still held in our system; EP-56245: Visit sync had no progress visibility or history; EP-54452: email changes created duplicate accounts"
+ },
+ {
+  "id": "integ-api-v3-products",
+  "what": "New v3 endpoints create global products, update their global fields, delete a product from every event in one call, and upload or remove images, videos and media files, keeping image order and the main image.",
+  "why": "The older API tied products to events, so there was no clean way to create a reusable product or remove it from all events at once.",
+  "outcome": "Exhibitors' products are managed once through the API and used across events, with their images, videos and files kept in order.",
+  "who": [
+   "Exhibitors",
+   "Organisers"
+  ],
+  "basis": "stated",
+  "evidence": "EP-52837: legacy API coupled products to events, no clean way to create a reusable product; EP-52841: no single operation to delete across events"
+ },
+ {
+  "id": "integ-swoogo",
+  "what": "An inbound Swoogo integration on the integration hub syncs registrants, speakers and exhibitors, including cancellations, matching records by external ID, grouping exhibitors by company and keeping team members linked.",
+  "why": "Organisers using Swoogo for registration had no automated way to bring registrants and exhibitors into the platform and had to transfer data by hand.",
+  "outcome": "Registrant, speaker and exhibitor records flow in from Swoogo and stay current, so organisers can run the event platform alongside Swoogo.",
+  "who": [
+   "Organisers",
+   "Registrants",
+   "Exhibitors"
+  ],
+  "basis": "stated",
+  "evidence": "EP-54645: clients using Swoogo had no automated way to flow registrants and exhibitors in, forcing manual data transfer"
+ }
+]

@@ -1,0 +1,1057 @@
+[
+ {
+  "k": "EP-32851",
+  "q": "2024-Q4",
+  "feature": "Clickable custom locations",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Hyperlinking custom locations (in app)",
+  "epic": null,
+  "text": "Made the apps handle the new locationUrl parameter so custom session and exhibitor event locations are clickable, as on the web. Tapping an Other location opens its link, inside the app for internal pages or in the device browser for external ones."
+ },
+ {
+  "k": "EP-55466",
+  "q": "2026-Q3",
+  "feature": "Custom track colours",
+  "tags": [],
+  "summary": "Custom colors for tracks",
+  "epic": null,
+  "text": "Tracks can use any custom colour through a full colour picker with hex input, alongside the existing 24 presets. Track colours match the brand on session and exhibitor event cards, web and app, with readable text colour set automatically."
+ },
+ {
+  "k": "EP-55021",
+  "q": "2026-Q3",
+  "feature": "Default sessions page view",
+  "tags": [],
+  "summary": "Default View Setting (List / Grid / Calendar) for Sessions & Exhibitor Events",
+  "epic": null,
+  "text": "Organizers can now set List, Grid, or Calendar as the default Sessions page view, without engineering involvement, for content-dense schedules. A \"Default view\" setting (List/Grid/Calendar) in Sessions Config controls the first-visit layout for the Sessions page; once an attendee manually toggles view, their choice persists locally, and Exhibitor Events included in Sessions inherit the same setting."
+ },
+ {
+  "k": "EP-23542",
+  "q": "2024-Q1",
+  "feature": "Direct invite links with clash check",
+  "tags": [],
+  "summary": "Direct links checking",
+  "epic": null,
+  "text": "Fixed direct invite links for meetings, sessions and exhibitor events and added a clash check that blocks adding items that overlap blocked time. Invite links add the item and open the schedule with a success message, or show an error naming the clashing item; logged-out users log in first."
+ },
+ {
+  "k": "EP-23548",
+  "q": "2024-Q2",
+  "feature": "Downloadable schedule fields",
+  "tags": [],
+  "summary": "Additional fields for Download Schedule in xls",
+  "epic": null,
+  "text": "Added an 'Include in Downloaded Schedule' attribute to predefined and custom participant registration fields. Flagged fields appear in the XLS schedule downloaded on frontend or backend or emailed from the app."
+ },
+ {
+  "k": "EP-40189",
+  "q": "2025-Q2",
+  "feature": "Easy session check-in",
+  "tags": [],
+  "summary": "Easy Entrance for Sessions\n",
+  "epic": null,
+  "text": "Added an 'Easy Entrance' setting, off by default, in Sessions config for sessions and exhibitor events. When enabled, users check in without errors even if the session is not in their schedule, and check-ins still appear in analytics and reports."
+ },
+ {
+  "k": "EP-24305",
+  "q": "2024-Q1",
+  "feature": "Event-time-only display option",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "No local time option (App)",
+  "epic": null,
+  "text": "Added a 'Do not show Local time on the Frontend (Web and App)' setting so only event time is shown. When on, meetings, sessions, exhibitor events and blocked times show only event time on every web and app page."
+ },
+ {
+  "k": "EP-39836",
+  "q": "2025-Q3",
+  "feature": "Exhibitor event applications",
+  "tags": [],
+  "summary": "Approval Process",
+  "epic": "Hyve Exhibitor Events improvements",
+  "text": "Added an optional approval process to Exhibitor Events: application deadline, manual or first-come auto-approval, 'Submit Request' buttons and approved-participant counts. Users request places, tentatively blocking the slot; organisers approve or auto-approve after the deadline, with rejections removed from schedules."
+ },
+ {
+  "k": "EP-41663",
+  "q": "2025-Q3",
+  "feature": "Exhibitor event applications",
+  "tags": [],
+  "summary": "Application page",
+  "epic": "Hyve Exhibitor Events improvements",
+  "text": "Added an Applications tab to the admin exhibitor event edit page listing applicants with status filters, search, conflict details and one-time approve/reject. Organisers review exhibitor event applications, see clashes and remaining spots, and approve or reject pending applicants from one page."
+ },
+ {
+  "k": "EP-41666",
+  "q": "2025-Q3",
+  "feature": "Exhibitor event applications",
+  "tags": [],
+  "summary": "Notifications for Approved/Rejected applications",
+  "epic": "Hyve Exhibitor Events improvements",
+  "text": "Added 'approved' and 'rejected' notifications on web and app, plus two email templates, for Exhibitor Event applications. Applicants get a notification linking to the event and an email with event details and, if rejected, the reason."
+ },
+ {
+  "k": "EP-44664",
+  "q": "2025-Q3",
+  "feature": "Exhibitor event applications",
+  "tags": [],
+  "summary": "Comments from Hyve about the Approval process",
+  "epic": null,
+  "text": "Addressed feedback on exhibitor event approvals: template variables, unrestricted approval dates, empty final time, auto-approval and card buttons. The approval process works as requested."
+ },
+ {
+  "k": "EP-23521",
+  "q": "2024-Q3",
+  "feature": "Exhibitor event auto-approval",
+  "tags": [],
+  "summary": "Autoapproval of Exhibitor Events",
+  "epic": null,
+  "text": "Added an 'Auto approved' option to exhibitor event types, alongside the existing category-level auto-approval. Events submitted or resubmitted under an auto-approved type are approved automatically; otherwise category rules or the organiser decide."
+ },
+ {
+  "k": "EP-16951",
+  "q": "2024-Q2",
+  "feature": "Exhibitor event moderation",
+  "tags": [],
+  "summary": "Users report offensive content in Exhibitor events",
+  "epic": null,
+  "text": "Built reporting of offensive content in exhibitor events: user reports with preset reasons, a content policy for exhibitors and organiser report review. Users can report exhibitor events; organisers get batched email alerts and review reports, and can require exhibitors to accept a content policy."
+ },
+ {
+  "k": "EP-16950",
+  "q": "2024-Q2",
+  "feature": "Exhibitor event moderation",
+  "tags": [],
+  "summary": "New status for Exhibitor events - Rejected for Security concern",
+  "epic": null,
+  "text": "Added a final 'Rejected for Security concern' status for exhibitor events, with a required reason, filters and a rejection reason column. Organisers reject events on security grounds with a reason; exhibitors see status and reason and cannot resubmit, and admins filter by it."
+ },
+ {
+  "k": "EP-26093",
+  "q": "2024-Q3",
+  "feature": "Exhibitor event moderation",
+  "tags": [],
+  "summary": "Events Security concern. Ability for Organizer to set questions for Exhibitor",
+  "epic": null,
+  "text": "Let organisers attach a custom form of security questions that exhibitors must answer when submitting an event. Exhibitors answer the questions and accept a policy on submission; organisers see the read-only answers in event details when reviewing."
+ },
+ {
+  "k": "EP-32197",
+  "q": "2024-Q3",
+  "feature": "Exhibitor event moderation",
+  "tags": [],
+  "summary": "Allow Saving Exhibitor Events without approving / rejecting",
+  "epic": null,
+  "text": "Added a Save without approval button to exhibitor events in the admin panel, between Reject and Approve and save. Organisers can save changes to exhibitor events awaiting approval or edited; the status stays unchanged and the event stays hidden until approved."
+ },
+ {
+  "k": "EP-16921",
+  "q": "2024-Q3",
+  "feature": "Exhibitor event notifications",
+  "tags": [],
+  "summary": "Email and platform notifications for events",
+  "epic": null,
+  "text": "Added email and platform notifications for exhibitor event submission, approval, rejection and change requests, with default templates and an enabling toggle. Organisers get emails on submissions and changes; exhibitors get emails and optional platform notifications on approvals and rejections, with the reason and a link."
+ },
+ {
+  "k": "EP-27790",
+  "q": "2024-Q2",
+  "feature": "Exhibitor event speaker search",
+  "tags": [],
+  "summary": "Search in lists ",
+  "epic": null,
+  "text": "Added separate, case-insensitive live search for Speakers and Moderators when exhibitors create exhibitor events. Exhibitors type letters to find speakers and moderators by name or title, as in the country list."
+ },
+ {
+  "k": "EP-8869",
+  "q": "2023-Q1",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Main parts 1-3",
+  "epic": "(New UI) Exhibitor Events",
+  "text": "Introduced Exhibitor Events: exhibitors create events from the frontend, organisers approve or reject them, with limits set in Module Management. Approved exhibitor events appear alongside regular sessions, share their tracks, types and settings, and can be filtered on the Sessions page."
+ },
+ {
+  "k": "EP-11663",
+  "q": "2023-Q1",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Changes and additions from IMEX part 1",
+  "epic": "(New UI) Exhibitor Events",
+  "text": "Moved exhibitor events to a Marketplace tab and added track disabling, public-API scheduling, non-removable types, XLS import and approval-status filters. Exhibitor events have their own Marketplace tab, booking counts, API scheduling, XLS import, auto-booking for speakers and a 'Waiting for approval' status."
+ },
+ {
+  "k": "EP-8870",
+  "q": "2023-Q1",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Additional part - 4",
+  "epic": "(New UI) Exhibitor Events",
+  "text": "Added exhibitor event settings: track and type visibility by category or role, child-exhibitor sharing, contact persons, invite links and a maximum event duration. Exhibitors can create events at any time, attach team members as contacts and share invite links, within admin-set visibility and duration limits."
+ },
+ {
+  "k": "EP-11664",
+  "q": "2023-Q1",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Changes and additions from IMEX part 2.1",
+  "epic": "(New UI) Exhibitor Events",
+  "text": "Delivered exhibitor event changes: booked-attendee lists, stand-restricted locations, track and date marketplace filters and organiser-side creation. Exhibitors see and contact who booked each event; locations are limited to their assigned stands, or Other location if none."
+ },
+ {
+  "k": "EP-13539",
+  "q": "2023-Q1",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Changes and additions from IMEX part 2.2",
+  "epic": "(New UI) Exhibitor Events",
+  "text": "Copied exhibitor event limits into session type settings, let organisers create exhibitor events in admin and added an Events tab to My schedule. Type-level settings override global ones, organisers can create exhibitor events for an exhibitor, and participants see events in a separate schedule tab."
+ },
+ {
+  "k": "EP-14321",
+  "q": "2023-Q2",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Exhibitor Events, new page for Mobile team ( My exhibitor events) ",
+  "epic": null,
+  "text": "Created a mobile-only /mobile/exhibitorevents page, embedded as a webview in the iOS and Android apps, listing a participant's booked exhibitor events. Logged-in app users see their booked exhibitor events by date in a read-only list; only the date picker is interactive."
+ },
+ {
+  "k": "EP-14310",
+  "q": "2023-Q2",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Exhibitor Events. Public list in apps using widget. ( All exhibitor events) ",
+  "epic": null,
+  "text": "Added a web-view page listing all exhibitor events in the apps, where users can only switch dates, filter and add to schedule. Logged-in participants browse exhibitor events in the iOS and Android apps and add them to their schedule."
+ },
+ {
+  "k": "EP-13125",
+  "q": "2023-Q2",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Changes and additions from IMEX part 3",
+  "epic": "(New UI) Exhibitor Events",
+  "text": "Delivered a set of exhibitor event changes: Past status on ended cards, child and contact IDs in import, session-type hours, stand-hour checks and a review of post-approval edits. Organisers see exhibitor edits made after approval side by side (before and after) and can reject, edit or approve them; stand bookings outside available hours show a warning."
+ },
+ {
+  "k": "EP-15676",
+  "q": "2023-Q2",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Exhibitor events. Not editable after approval",
+  "epic": null,
+  "text": "Added a 'Not editable after approval' toggle to session types for exhibitor events. When on, exhibitors cannot edit or delete approved events on the front end (buttons hidden), while organisers can still change them."
+ },
+ {
+  "k": "EP-18257",
+  "q": "2023-Q3",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Native public list of exhibitor events for app",
+  "epic": "(New UI) Exhibitor Events",
+  "text": "Replaced the app's webview exhibitor events list with a native page with Exhibitor Events and On-demand tabs, moved to the general menu section. App users browse, search and filter exhibitor events and on-demand events with owner and contacts, and join, add to schedule or watch."
+ },
+ {
+  "k": "EP-21137",
+  "q": "2023-Q4",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Exhibitor events mobile API improvement",
+  "epic": null,
+  "text": "Improved the mobile API for exhibitor events so the apps honour slot blocking, non-removable events, visibility, speaker/moderator/sponsor display, tracks and on-demand tab settings. The apps apply the same exhibitor event rules as the web, such as refusing bookings into blocked slots and hiding events from categories not allowed to see them."
+ },
+ {
+  "k": "EP-21963",
+  "q": "2023-Q4",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android|Exhibitor settings| Need made header of the event card smaller in case of empty track and image ",
+  "epic": null,
+  "text": "Made Android event card headers smaller when there's no track or image. Event cards without tracks or images are compact."
+ },
+ {
+  "k": "EP-21681",
+  "q": "2023-Q4",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Basic configuration of exh events settings",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-21682",
+  "q": "2023-Q4",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Blocked time slots for Events ",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-21683",
+  "q": "2023-Q4",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Ability to remove Event from schedule (calendar block) ",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-21685",
+  "q": "2023-Q4",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Display option for Exhibitor and Moderator in Event",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-21686",
+  "q": "2023-Q4",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Display Tracks on the  Exhibitor Event card",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-21687",
+  "q": "2023-Q4",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "On-demand Events tab",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-23529",
+  "q": "2023-Q4",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Exhibitor Events : Multilanguage",
+  "epic": null,
+  "text": "Added multilanguage support to exhibitor events on web and app, with a language switcher and translated event name and description. Users can pick a supported language, defaulting to the admin-set language, and see exhibitor event names and descriptions in it where translated."
+ },
+ {
+  "k": "EP-39841",
+  "q": "2025-Q3",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "App Improvements for Exhibitor Events",
+  "epic": "Hyve Exhibitor Events improvements",
+  "text": "Added exhibitor event approval flow to the mobile app: Submit and Cancel request buttons, conflict checks and schedule handling. App users request to join approval-based events, which appear in their schedule at once and are removed if rejected; approved ones show as Scheduled."
+ },
+ {
+  "k": "EP-45600",
+  "q": "2025-Q3",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "iOS/ Provide Exhibitors events page loading update",
+  "epic": null,
+  "text": "Applied the improved loading logic to the iOS exhibitor events page. iOS exhibitor events load like other pages."
+ },
+ {
+  "k": "EP-46550",
+  "q": "2026-Q1",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "[Hyve] Extend Content Settings with Exhibitor events for app",
+  "epic": "Hyve Q4. November+December Delievery.",
+  "text": "Added Exhibitor Events labels to content settings for the app. Organisers can rename Exhibitor Events in the app."
+ },
+ {
+  "k": "EP-46201",
+  "q": "2026-Q1",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "New Autoapproval interface",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "text": "Added an 'Initiate auto-approval algorithm' button to session config, with confirmation and empty-state errors. Organisers can run auto-approval for exhibitor events on demand."
+ },
+ {
+  "k": "EP-46203",
+  "q": "2026-Q1",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Required limit when approval process is enabled for Exhibitor events",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "text": "Required a participant limit when approval is enabled for exhibitor events, and hid approval for on-demand events. Approval events can't be unlimited."
+ },
+ {
+  "k": "EP-46204",
+  "q": "2026-Q1",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Autoapproval mechanism",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "text": "Built auto-approval for exhibitor event applications: maximise attendance, at least one per user, no overlaps, balanced and re-runnable. Applications to exhibitor events are approved or rejected automatically and fairly."
+ },
+ {
+  "k": "EP-46207",
+  "q": "2026-Q1",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Remove rejection notifications and indication",
+  "epic": "New autoapproval mechanism for Exhibitor events",
+  "text": "Removed rejection notifications and rejection markers for exhibitor event applications. Rejected applicants aren't notified."
+ },
+ {
+  "k": "EP-47797",
+  "q": "2026-Q1",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Exhibitor Events. Sorting in Exhibitor Profile",
+  "epic": "Exhibitor profile",
+  "text": "Exhibitor events in the exhibitor profile are listed in chronological order by start date and time, soonest first. Exhibitors see their events in the order they happen."
+ },
+ {
+  "k": "EP-53049",
+  "q": "2026-Q2",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Add exhibitor name on the Exhibitor Event Detail View",
+  "epic": "Exhibitor profile",
+  "text": "Adds the hosting Exhibitor's name to Exhibitor Event detail cards so attendees can identify the organizer without returning to the list view. Exhibitor Event detail cards now display the hosting Exhibitor name, matching the list view across Web, iOS and Android."
+ },
+ {
+  "k": "EP-54235",
+  "q": "2026-Q3",
+  "feature": "Exhibitor events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Show exhibitor events with no associated team member",
+  "epic": "Exhibitor profile",
+  "text": "Exhibitor events now display even when no team member is assigned, so exhibitor presence is never hidden from attendees. Exhibitor events render regardless of team-member association."
+ },
+ {
+  "k": "EP-55020",
+  "q": "2026-Q3",
+  "feature": "Exhibitor events",
+  "tags": [],
+  "summary": "Enable all conference flagged Floor Plan Location Selection for Exhibitor Events Beyond Assigned Booth",
+  "epic": null,
+  "text": "An opt-in setting lets Exhibitor Events map to any live Floor Plan location, not just the exhibitor's booth, closing a gap flagged in a feature-intake request. A new admin checkbox lets Exhibitor Events select any live Floor Plan location (grouped as Your Stands / Floor Plan Locations / Predefined / free-text), with deduplication, while defaulting to today's booth-only behaviour when disabled."
+ },
+ {
+  "k": "EP-26029",
+  "q": "2024-Q2",
+  "feature": "Exhibitor events in sessions list",
+  "tags": [],
+  "summary": "Include exhibitor events in sessions",
+  "epic": null,
+  "text": "Added an 'Include Exhibitor Events in Sessions' setting and a 'Session Format' display filter to switch between Exhibitor Events and Sessions. When enabled, the Sessions page lists exhibitor events alongside sessions, and users can filter by format."
+ },
+ {
+  "k": "EP-30370",
+  "q": "2025-Q2",
+  "feature": "Exhibitors on session cards",
+  "tags": [],
+  "summary": "Add exhibitor childs to session card in expo-components",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-52375",
+  "q": "2026-Q2",
+  "feature": "External session registration links",
+  "tags": [],
+  "summary": "Session: External registration URL for “Register” button",
+  "epic": "Participant Registration on New UI",
+  "text": "Organisers can now point a Session's Register button to an external registration or payment URL, letting third-party systems handle session signup and payment. Organisers can configure a per-session external registration URL with a custom button label and an external-link icon, redirecting attendees to a third-party registration/payment page during pre-event and live event."
+ },
+ {
+  "k": "EP-38220",
+  "q": "2025-Q1",
+  "feature": "Full location on session cards",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Display Full Location - Session & Exhibitor Events",
+  "epic": null,
+  "text": "Showed the full location on session and exhibitor event cards in the iOS and Android apps. App session and exhibitor event cards display the complete location."
+ },
+ {
+  "k": "EP-29190",
+  "q": "2024-Q3",
+  "feature": "Internal session notes and flags",
+  "tags": [],
+  "summary": "FBF:Add an option to add internal Notes in the sessions.",
+  "epic": null,
+  "text": "Added an internal Notes field to sessions and exhibitor events, included in session export and import. Organisers save back-end-only notes per session or exhibitor event and see or upload them in the 'Notes' column."
+ },
+ {
+  "k": "EP-29221",
+  "q": "2024-Q3",
+  "feature": "Internal session notes and flags",
+  "tags": [],
+  "summary": "FBF: Add a critical field on the sessions in the back-end",
+  "epic": null,
+  "text": "Added a back-office-only Flag as Critical checkbox to sessions and exhibitor events, with a filter, export column and import support. Organisers can flag critical sessions, filter by them in session management and see the flag in exports and imports; nothing shows on the frontend."
+ },
+ {
+  "k": "EP-23610",
+  "q": "2023-Q4",
+  "feature": "Moderator badges in app",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "(Android) Add a moderator icon in the moderator profile, in the list, in sessions",
+  "epic": null,
+  "text": "Added a moderator icon on moderator profiles, lists and sessions in the Android app, showing the speaker icon for people who are both. Android marks moderators."
+ },
+ {
+  "k": "EP-23609",
+  "q": "2023-Q4",
+  "feature": "Moderator badges in app",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "(IOS) Add a moderator icon in the moderator profile, in the list, in sessions ",
+  "epic": null,
+  "text": "Added a moderator icon on moderator profiles, lists and sessions in the iOS app, showing the speaker icon for people who are both. iOS marks moderators."
+ },
+ {
+  "k": "EP-16932",
+  "q": "2024-Q3",
+  "feature": "Multilingual session import",
+  "tags": [],
+  "summary": "Multilingual Sessions/Events Import",
+  "epic": null,
+  "text": "Added a session name and description system field per frontend language to the session import 'Merge headers' step, mapped manually by the organiser. Organisers can import multilingual session titles and descriptions that appear in the right language on frontend, backend and app."
+ },
+ {
+  "k": "EP-54081",
+  "q": "2026-Q3",
+  "feature": "Multilingual session locations",
+  "tags": [],
+  "summary": "Add translation (multi-language) support for predefined \"Other locations\" in Sessions/Events",
+  "epic": "Sessions & Agenda UX (New UI)",
+  "text": "Adds per-language storage for the predefined 'Other locations' list in Sessions/Events so each locale keeps its own value, fixing a multi-tenant translation defect raised by client K5. Per-locale storage for 'Other locations' so each language holds independent values, with existing values migrated as the fallback and locale-aware display in admin and front end."
+ },
+ {
+  "k": "EP-48378",
+  "q": "2026-Q2",
+  "feature": "Now and upcoming sessions",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Highlight Now & Upcoming Sessions - Mobile App",
+  "epic": "Sessions & Agenda UX (New UI)",
+  "text": "The mobile Sessions list now auto-scrolls to and highlights what's happening now and next, sparing attendees with large agendas from endless scrolling to find current sessions. Auto-scroll to the current time with a now separator and Now/Upcoming highlighting that applies only when the selected day is today (server-confirmed)."
+ },
+ {
+  "k": "EP-14618",
+  "q": "2023-Q1",
+  "feature": "Online session rooms",
+  "tags": [],
+  "summary": "Make a redirect to the online room after authorization in the system",
+  "epic": null,
+  "text": "Sent users straight into the online room after they log in from a session's Join button. Logging in from Join opens the online room."
+ },
+ {
+  "k": "EP-16777",
+  "q": "2024-Q1",
+  "feature": "Other locations for sessions and events",
+  "tags": [],
+  "summary": "Address for other location - Ex Events & Sessions",
+  "epic": null,
+  "text": "Added 'Other location' settings for Exhibitor events and Sessions that add an Address field, shown on cards and included in API and export/import. When enabled, an address entered for an 'Other location' shows on exhibitor event and session cards on web and app, and in the API and exports."
+ },
+ {
+  "k": "EP-16736",
+  "q": "2024-Q1",
+  "feature": "Other locations for sessions and events",
+  "tags": [],
+  "summary": "Improvement of Other location - Ex Events & Sessions",
+  "epic": null,
+  "text": "Added a setting that combines the predefined Other locations list with a custom 'Specify an alternative location' input for sessions and exhibitor events. Admins and exhibitors pick a floor plan or predefined location or type a custom one, plus an address if enabled."
+ },
+ {
+  "k": "EP-16739",
+  "q": "2024-Q1",
+  "feature": "Other locations for sessions and events",
+  "tags": [],
+  "summary": "Predefined list of Other locations for Sessions/Events",
+  "epic": null,
+  "text": "Added a predefined, admin-managed list of Other locations for sessions and exhibitor events, as already existed for meetings. When 'Other location' is chosen in session or exhibitor event forms, admins and exhibitors pick from the organiser's list."
+ },
+ {
+  "k": "EP-26791",
+  "q": "2024-Q1",
+  "feature": "Other locations for sessions and events",
+  "tags": [],
+  "summary": "[expo-react-components] Add to the session card (in the expo-react-components) address",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-24407",
+  "q": "2024-Q2",
+  "feature": "Other locations for sessions and events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Address for other location (APP)",
+  "epic": null,
+  "text": "Showed the 'Other location' address on exhibitor event and session cards in the iOS and Android apps. When 'Other location' is enabled, app session and exhibitor event cards display the entered address."
+ },
+ {
+  "k": "EP-16920",
+  "q": "2024-Q3",
+  "feature": "Other locations for sessions and events",
+  "tags": [],
+  "summary": "Hyperlinking custom locations",
+  "epic": null,
+  "text": "Added a 'Hyperlinking custom locations' toggle so exhibitor events and sessions with an Other location can carry a URL. Clicking a custom location on exhibitor event and session cards, on web and in the app, opens the specified link in a new tab."
+ },
+ {
+  "k": "EP-21415",
+  "q": "2023-Q3",
+  "feature": "Paid session pricing display",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "iOS|Sessions|For past paid session need display PRICE on session PROFILE page",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-21399",
+  "q": "2023-Q3",
+  "feature": "Paid session pricing display",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android|Sessions|For past paid session need display PRICE on session PROFILE page",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-16749",
+  "q": "2023-Q2",
+  "feature": "Personal schedule download",
+  "tags": [],
+  "summary": "Change wording for Export data",
+  "epic": null,
+  "text": "Renamed the Export data button on My Schedule and Team Schedule to Download My Schedule. Participants and exhibitors see a Download My Schedule button on their schedule pages."
+ },
+ {
+  "k": "EP-16775",
+  "q": "2023-Q2",
+  "feature": "Personal schedule download",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "My Exhibitor events widget improvement",
+  "epic": null,
+  "text": "Restored the Download My Schedule button on the in-app My Exhibitor Events widget. iOS and Android users can download their schedule as a PDF to the phone from the exhibitor events widget."
+ },
+ {
+  "k": "EP-18389",
+  "q": "2023-Q2",
+  "feature": "Platform performance",
+  "tags": [],
+  "summary": "Add additional indexes for Sessions",
+  "epic": null,
+  "text": "Added search indexes for sessions: online type, dates, description and an exhibitor-event flag. Session search covers type, dates and description."
+ },
+ {
+  "k": "EP-16924",
+  "q": "2024-Q4",
+  "feature": "Schedule clash warnings",
+  "tags": [],
+  "summary": "Warning for same time and location for event creation/edit",
+  "epic": null,
+  "text": "Added a warning popup when an exhibitor event or session is created or edited at the same location and an overlapping time as another. On front end and admin, users are warned of location and time overlaps and can save anyway or go back and change them."
+ },
+ {
+  "k": "EP-21405",
+  "q": "2024-Q3",
+  "feature": "Schedule list view",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Schedule list view",
+  "epic": null,
+  "text": "Added a list view to the app schedule, grouping one day's meetings, sessions, events and blocked time by hour, and extended the default-view setting to apps. App users can toggle to a chronological list view, and organisers set the default view for web and app."
+ },
+ {
+  "k": "EP-40075",
+  "q": "2025-Q2",
+  "feature": "Send agenda to exhibitors",
+  "tags": [],
+  "summary": "Send Agenda Improvement",
+  "epic": "Hyve Communication improvements",
+  "text": "Added a 'Send Agenda' pop-up in the admin exhibitor list and profile explaining the action and letting admins choose recipients, including team members. Admins pick recipients (exhibitor by default, TM-Admins marked) before sending and get a success or error message."
+ },
+ {
+  "k": "EP-48239",
+  "q": "2026-Q2",
+  "feature": "Session admin filters",
+  "tags": [],
+  "summary": "Add more Filters to Exhibitor Events / Sessions Page on Admin Panel",
+  "epic": "Admin Panel Restructure & Navigation",
+  "text": "Robust filters were added to the admin Sessions and Exhibitor Events pages, mirroring the Exhibitor Directory so organizers stop scrolling through flat lists to find specific sessions or events. Added independent filter sections (e.g. session type and more) to both the Sessions page and the Exhibitor Events page."
+ },
+ {
+  "k": "EP-41665",
+  "q": "2025-Q3",
+  "feature": "Session attendee management",
+  "tags": [],
+  "summary": "Moving Attendees and Favourited to separate tab",
+  "epic": "Hyve Exhibitor Events improvements",
+  "text": "Moved Attendees and Favourited from the session and exhibitor event edit page into a separate Attendees tab built on the new UI. Admins add or remove scheduled users and mark attendance independently, with attendance also set by check-in or exhibitor scans."
+ },
+ {
+  "k": "EP-54343",
+  "q": "2026-Q3",
+  "feature": "Session calendar view",
+  "tags": [],
+  "summary": "Add sessions calendar-view endpoint (day / week)",
+  "epic": "Session Calendar View",
+  "text": "A new dedicated endpoint returns an entire calendar window in one lightweight, timezone-correct call, powering the session calendar view. Shipped POST /api/v1/search/sessionsCalendarView returning a single non-paginated day/week envelope with server-owned window and timezone and the same optional filters; the legacy sessions search endpoint is left untouched."
+ },
+ {
+  "k": "EP-54324",
+  "q": "2026-Q3",
+  "feature": "Session calendar view",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Story 4 - Include Exhibitor Events in Calendar View",
+  "epic": "Session Calendar View",
+  "text": "The mobile session calendar now shows exhibitor-run events alongside organiser sessions in one unified day/week view, when enabled. When 'Include Exhibitor Events in Sessions' is enabled, exhibitor events render in both Week Glance and Day Detail views, visually badged, honouring the same overlap/overflow and tap-to-detail behaviour as regular sessions."
+ },
+ {
+  "k": "EP-55558",
+  "q": "2026-Q3",
+  "feature": "Session calendar view",
+  "tags": [],
+  "summary": "Add isScheduled:boolean to session items in sessionsCalendarView response",
+  "epic": "Session Calendar View",
+  "text": "Adds an isScheduled flag to the session calendar API so the calendar UI can highlight sessions already in a user's personal agenda. Every session item in the day/week sessionsCalendarView response now carries an isScheduled boolean (always false for guests), with no other change to the response contract."
+ },
+ {
+  "k": "EP-51704",
+  "q": "2026-Q3",
+  "feature": "Session calendar view",
+  "tags": [],
+  "summary": "Story 1 - Calendar Component",
+  "epic": "Session Calendar View",
+  "text": "In progress: a visual Session Calendar with weekly/daily views, overlap handling, a live 'now' indicator, and mobile responsiveness. In progress: a Calendar Component giving weekly/daily session views, cascade layout for overlaps, '+N more' chips, a live now-indicator and mobile-optimised browsing (currently In Progress, not yet released)."
+ },
+ {
+  "k": "EP-51705",
+  "q": "2026-Q3",
+  "feature": "Session calendar view",
+  "tags": [],
+  "summary": "Story 2 – API Connection & Search",
+  "epic": "Session Calendar View",
+  "text": "Attendees can now search the Session Calendar by title or speaker with real-time filtering and browse the agenda even while logged out. Real-time session search by title or speaker, relevance-based prioritisation in the grid (bookmarked, then popular, then featured), and logged-out browsing with intent-preserving sign-in prompts."
+ },
+ {
+  "k": "EP-51706",
+  "q": "2026-Q3",
+  "feature": "Session calendar view",
+  "tags": [],
+  "summary": "Story 3 – Slide-out Component",
+  "epic": "Session Calendar View",
+  "text": "Clicking a session now opens a slide-out drawer with full details, letting attendees bookmark it to their schedule without leaving the calendar. A 440px session Side Drawer showing image, title, track, type, speakers and a live badge, with in-place add-to-schedule and bookmarking plus visual indicators in the calendar grid."
+ },
+ {
+  "k": "EP-57107",
+  "q": "2026-Q3",
+  "feature": "Session calendar view",
+  "tags": [],
+  "summary": "[API] Multi-day Session Calendar View Enhancements",
+  "epic": null,
+  "text": "Extended the sessions calendar API with a multi-day endpoint and a dedicated days-with-sessions lookup, backing the frontend's multi-day calendar redesign. A new dedicated endpoint for the list of days with sessions; sessionsCalendarView now accepts an array of days instead of a single day; a conditional compact sessions-by-IDs endpoint depending on whether speakers stay in the main response."
+ },
+ {
+  "k": "EP-53048",
+  "q": "2026-Q2",
+  "feature": "Session detail cards",
+  "tags": [],
+  "summary": "Add session/exhibitor event type to the detail card view",
+  "epic": "Sessions & Agenda UX (New UI)",
+  "text": "Surfaces the session/exhibitor-event Type label on detail cards so attendees see the same Type information shown in the program list view. Detail cards for Sessions and Exhibitor Events now display the Type label, consistent across Web, iOS and Android."
+ },
+ {
+  "k": "EP-44247",
+  "q": "2025-Q3",
+  "feature": "Session editing in admin",
+  "tags": [],
+  "summary": "After saving changes for a Session/Exhibitor event, need change the redirect from the All Sessions page to the current session's edit page",
+  "epic": null,
+  "text": "Returned admins to the session's own edit page after saving a session, as already done for exhibitor events. Saving a session keeps the admin on it."
+ },
+ {
+  "k": "EP-12563",
+  "q": "2023-Q1",
+  "feature": "Session filters",
+  "tags": [],
+  "summary": "Make tracks part of content session filters",
+  "epic": null,
+  "text": "Added a session config checkbox to show tracks as a content session filter on All sessions and On-demand tabs. When enabled, tracks appear in the session filter list instead of at the top of the screen."
+ },
+ {
+  "k": "EP-12365",
+  "q": "2023-Q1",
+  "feature": "Session filters",
+  "tags": [],
+  "summary": "Additional Standard Fields for Sessions",
+  "epic": null,
+  "text": "Added a Sessions 'Filters' tab with five configurable standard filters, managed in Display filters and selectable in the session edit form. Up to five renamed session filters can be set per session and shown on the frontend under the main filter, working like Types."
+ },
+ {
+  "k": "EP-15375",
+  "q": "2023-Q2",
+  "feature": "Session filters",
+  "tags": [],
+  "summary": "Add 5 filters for Sessions to the file import",
+  "epic": null,
+  "text": "Added the five session filters to the sessions XLS import and to the sessions export. Session filters in an import file are loaded into the admin panel; if the file has none, the filters stay empty."
+ },
+ {
+  "k": "EP-29933",
+  "q": "2024-Q3",
+  "feature": "Session filters",
+  "tags": [],
+  "summary": "Product categories as a filter for sessions",
+  "epic": null,
+  "text": "Added a 'product category' display filter for Sessions, matching the Exhibitor Events one, on the All Sessions, On-demand and Round tables tabs. Users filter sessions by one or more product categories when the organiser enables the filter."
+ },
+ {
+  "k": "EP-41291",
+  "q": "2025-Q2",
+  "feature": "Session filters",
+  "tags": [],
+  "summary": "Apply translation to custom session filter items",
+  "epic": null,
+  "text": "Translated custom session filter items and returned them in the requested language. Session filters appear in each event language."
+ },
+ {
+  "k": "EP-39304",
+  "q": "2025-Q2",
+  "feature": "Session filters",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Session Custom Filters in the Mobile App",
+  "epic": null,
+  "text": "Added custom session filters to the mobile apps, with API support and integration with existing filters and search. Attendees filter sessions in the app using the same custom filters as on the web."
+ },
+ {
+  "k": "EP-16934",
+  "q": "2024-Q3",
+  "feature": "Session import by external code",
+  "tags": [],
+  "summary": "Attach Speakers/Moderators to Events/Sessions by external code",
+  "epic": null,
+  "text": "Added participant External code to the session import merge fields and example file, to attach speakers and moderators to sessions and events. Sessions link to speakers and moderators by external code via import (comma separated) or API (double pipe), and external IDs appear in exports."
+ },
+ {
+  "k": "EP-35795",
+  "q": "2024-Q4",
+  "feature": "Session list empty states",
+  "tags": [],
+  "summary": "Empty state in case there are no sessions",
+  "epic": null,
+  "text": "Added an empty state to the sessions page when no sessions exist. Empty sessions pages say that no sessions have been added."
+ },
+ {
+  "k": "EP-21759",
+  "q": "2024-Q1",
+  "feature": "Session pages in app",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Skeleton for SessionProfileViewController",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-21758",
+  "q": "2024-Q1",
+  "feature": "Session pages in app",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Not Found for SessionProfileViewController",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-19325",
+  "q": "2023-Q3",
+  "feature": "Session Q&A settings",
+  "tags": [],
+  "summary": "HIDE \"ASK ANONYMOUSLY\" ON SESSION",
+  "epic": null,
+  "text": "Added a 'Disable Anonymous Question' toggle to session settings that hides the Ask anonymously option in session rooms. When on, users cannot submit anonymous questions in session rooms; anonymous questions stay allowed by default."
+ },
+ {
+  "k": "EP-19438",
+  "q": "2024-Q4",
+  "feature": "Session ratings",
+  "tags": [],
+  "summary": "Session Ratings",
+  "epic": null,
+  "text": "Added web Session Ratings: a menu page listing attended sessions, a rating pop-up with stars, 200-character feedback and 'did not take place', and a Session Ratings export. Users rate and edit ratings for attended sessions, including right after they end; organisers export ratings with user details."
+ },
+ {
+  "k": "EP-36711",
+  "q": "2024-Q4",
+  "feature": "Session ratings",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android/Sessin rating/ Remouve OWN EXHIBITOR - Exhibitor  EVENTS from session rating tab",
+  "epic": null,
+  "text": "Removed a team member's own exhibitor's events from the Android session rating tab. Android rating lists only rateable events."
+ },
+ {
+  "k": "EP-37170",
+  "q": "2024-Q4",
+  "feature": "Session ratings",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Android/ Session rating/ Online room physical location ",
+  "epic": null,
+  "text": "Updated Android session rating screens for online rooms with a physical location. Android shows physical locations for online rooms."
+ },
+ {
+  "k": "EP-36710",
+  "q": "2024-Q4",
+  "feature": "Session ratings",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": " iOS/Sessin rating/ Remouve OWN EXHIBITOR - Exhibitor  EVENTS from session rating tab",
+  "epic": null,
+  "text": "Removed a team member's own exhibitor's events from the iOS session rating tab. iOS rating lists only rateable events."
+ },
+ {
+  "k": "EP-33802",
+  "q": "2024-Q4",
+  "feature": "Session ratings",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Session Ratings in Mobile App",
+  "epic": null,
+  "text": "Brought session ratings to the iOS and Android apps: a drawer or dialog after sessions to rate with stars and a comment or mark the session as not held. App users are prompted to rate attended sessions, singly or in batches, and can also rate from the session page, with a confirmation on submit."
+ },
+ {
+  "k": "EP-44911",
+  "q": "2026-Q3",
+  "feature": "Session schedule navigation",
+  "tags": [],
+  "summary": "Navigate to sessions page specific date without prefetch data",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-25578",
+  "q": "2025-Q1",
+  "feature": "Speaker and moderator lists",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": " iOS|Refactor app|On speakers list need display moderators also ",
+  "epic": null,
+  "text": null
+ },
+ {
+  "k": "EP-18536",
+  "q": "2023-Q3",
+  "feature": "Speaker availability and blocked time",
+  "tags": [],
+  "summary": "Speakers and moderators asignment corelation with blocked time",
+  "epic": null,
+  "text": "Added an Ignore blocked time for adding Speakers/Moderators setting; when off, speakers and moderators with blocked time cannot be assigned. Busy speakers show as unavailable, time changes warn before removing clashing ones, and XLS/API imports skip them, unless the setting is on."
+ },
+ {
+  "k": "EP-10629",
+  "q": "2023-Q1",
+  "feature": "Speaker listings",
+  "tags": [],
+  "summary": "Allow displayment of Speakers with INACTIVE status on the frontend",
+  "epic": null,
+  "text": "Added a Show inactive speakers on the frontend toggle to registration settings, covering inactive, invited, uploaded and approved speaker statuses. When the toggle is on, speakers without an active account appear in frontend speaker lists; blocked, banned and waitlisted speakers stay hidden."
+ },
+ {
+  "k": "EP-40261",
+  "q": "2025-Q3",
+  "feature": "Speaker profile events",
+  "tags": [
+   "Mobile"
+  ],
+  "summary": "Speaker / Moderator Profile - Events Block",
+  "epic": null,
+  "text": "Added an Events block to speaker and moderator profiles in the mobile app, listing their exhibitor events with visibility, date, time and schedule button rules. Profiles show active, visible events by date, with local and event time, live and join states, and add-to-calendar."
+ },
+ {
+  "k": "EP-16928",
+  "q": "2024-Q1",
+  "feature": "Speakers in exhibitor events",
+  "tags": [],
+  "summary": "Session speakers in Exhibitor events",
+  "epic": null,
+  "text": "Added a 'Sessions Speakers/Moderators available for Events' option for exhibitor events. When on, session speakers and moderators can be added to exhibitor events as well as team members."
+ },
+ {
+  "k": "EP-18460",
+  "q": "2023-Q3",
+  "feature": "Speakers list page",
+  "tags": [],
+  "summary": "Separate speakers list from session page. Move to new menu item",
+  "epic": null,
+  "text": "Moved the speakers list in the app to its own menu item, configurable in the app builder. The app has a Speakers menu item instead of a sessions tab."
+ },
+ {
+  "k": "EP-32196",
+  "q": "2024-Q4",
+  "feature": "Timezone validation",
+  "tags": [],
+  "summary": "Add validation of timezone",
+  "epic": null,
+  "text": null
+ }
+]

@@ -1,0 +1,75 @@
+{
+ "k": "EP-15215",
+ "histories": 20,
+ "historiesRead": 20,
+ "truncated": false,
+ "statusTransitions": [
+  {
+   "at": "2023-03-21T13:33:44.285+0000",
+   "from": "Estimated request",
+   "to": "Tech Brief",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2023-03-21T13:33:50.737+0000",
+   "from": "Tech Brief",
+   "to": "Brief ready for review",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2023-03-21T13:33:54.546+0000",
+   "from": "Brief ready for review",
+   "to": "Ready for decomposition",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2023-03-21T13:33:56.574+0000",
+   "from": "Ready for decomposition",
+   "to": "Ready for development",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2023-03-21T14:38:55.935+0000",
+   "from": "Ready for development",
+   "to": "In progress",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2023-03-21T16:22:15.821+0000",
+   "from": "In progress",
+   "to": "Ready for testing",
+   "by": "Konstantin Shyrokov"
+  },
+  {
+   "at": "2023-03-21T16:55:19.386+0000",
+   "from": "Ready for testing",
+   "to": "Task in testing",
+   "by": "Yana Radetska"
+  },
+  {
+   "at": "2023-03-21T16:55:27.671+0000",
+   "from": "Task in testing",
+   "to": "Ready for release",
+   "by": "Yana Radetska"
+  },
+  {
+   "at": "2023-03-21T16:55:31.072+0000",
+   "from": "Ready for release",
+   "to": "Ready for deploy",
+   "by": "Yana Radetska"
+  },
+  {
+   "at": "2023-03-21T16:55:33.175+0000",
+   "from": "Ready for deploy",
+   "to": "COMPLETE",
+   "by": "Yana Radetska"
+  },
+  {
+   "at": "2026-09-15T17:45:40.346+0100",
+   "from": "COMPLETE",
+   "to": "DONE",
+   "by": "Alexander Ozernyuk"
+  }
+ ],
+ "source": "mcp-claude_ai_Atlassian-getJiraIssue-1790317616369.txt"
+}
