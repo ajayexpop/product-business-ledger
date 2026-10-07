@@ -1,0 +1,3942 @@
+{
+"features": [
+{
+"id": "reg-language-preference",
+"theme": "reg",
+"q": "2023-Q1",
+"title": "Registration language preference",
+"benefit": "Let registrants choose their preferred language at sign-up so their emails and notifications arrive in that language.",
+"what": "Exhibitor and visitor registration forms can include a Language Preference field. It defaults to the event language and is supported in import and export, and all emails and system notifications use the chosen language.",
+"detail": "A Language Preference system field was added to exhibitor and visitor registration forms, defaulting to the event language and supported in import and export. All emails and system notifications then use the chosen language.",
+"stories": [
+"New system field of \"Language Preference\" in the Registration Form."
+]
+},
+{
+"id": "reg-form-field-options",
+"theme": "reg",
+"q": "2023-Q1",
+"title": "Registration form field options",
+"benefit": "Build richer registration forms with website, state/region and city fields, and show the registrant’s category on the confirmation page.",
+"what": "Custom text fields can be set as website fields, shown as clickable links. Custom select fields can list states/regions or cities. Confirmation page scripts can show the registrant's category, or \"No category\" when none was chosen.",
+"detail": "Custom text fields can be set as website fields that render as clickable links. Custom select fields can list states/regions or cities. Confirmation page scripts gain a category variable, showing “No category” when none was chosen.",
+"stories": [
+"EMEA: Add the option to make custom text field as a website field",
+"EMEA: Add option for state/region and city field in the custom select field",
+"Need Participant Category type as a variable script in registration Form confirmation page"
+]
+},
+{
+"id": "reg-default-category",
+"theme": "reg",
+"q": "2023-Q2",
+"title": "Default participant category",
+"benefit": "Every event now has a default participant category, so uncategorised participants always get sensible limits and settings.",
+"what": "Each event is created with a default participant category that cannot be deleted and has its own limits and settings. Participants with no category, or whose category is deleted, are assigned to it.",
+"detail": "The default category is created with each event, cannot be deleted and has its own limits and settings. Participants without a category, or whose category is deleted, fall back to it.",
+"stories": [
+"Participant default category"
+]
+},
+{
+"id": "mobile-language-wording-2023",
+"theme": "mobile",
+"q": "2023-Q2",
+"title": "US English and wording updates",
+"benefit": "Offer the app in US English and use clearer wording on public profiles.",
+"what": "The mobile apps offer US English, picked from the phone's locale, with US spellings such as \"Favorites\". The \"Matchmaking information\" section on public profiles in the app is now called \"Profile Information\".",
+"detail": "The apps pick US English from the phone’s locale, with US spellings such as “Favorites”. The “Matchmaking information” section on public profiles is now called “Profile Information”.",
+"stories": [
+"Mobile App - Add support for US English language",
+"Mobile App - Replace Matchmaking Information Wording",
+"In source code add res/xml/network_security_config.xml"
+]
+},
+{
+"id": "reg-category-setup",
+"theme": "reg",
+"q": "2023-Q3",
+"title": "Category and form setup improvements",
+"benefit": "Control the order participant categories appear in, and avoid duplicate answer options in custom questions.",
+"what": "Participant categories can be reordered by drag and drop or sorted A to Z and Z to A, and that order is used in frontend filters, registration, booking, admin profiles and the app. Custom questions reject duplicate answer names.",
+"detail": "Participant categories can be reordered by drag and drop or sorted A–Z/Z–A, and that order is used in frontend filters, registration, booking, admin profiles and the app. Custom questions no longer accept answer options with the same name.",
+"stories": [
+"Ticketing order ",
+"Prohibit same \"names\" responses for answers options\""
+]
+},
+{
+"id": "mobile-android-redesign",
+"theme": "mobile",
+"q": "2023-Q3",
+"title": "Redesigned Android lists and sessions",
+"benefit": "Browse people, exhibitors, products, brands and sessions in a refreshed Android app design, matching iOS.",
+"what": "The Android app has redesigned delegate, buyer, exhibitor, product and brand lists, and new session cards and pages with a Live tag, prices and a book button for paid sessions. It adds a no-results screen and icons share one style and size.",
+"detail": "Delegate, buyer, exhibitor, product and brand lists, and session cards and pages, were redesigned, with a Live tag, prices and a book button for paid sessions, plus a new no-results screen. Icons across the app follow one consistent style and size.",
+"stories": [
+"Android| \"No-results\" screen ",
+"Android - Delegate/buyer list redesign",
+"Android - Exhibitor list redesign",
+"Android - Products list redesign",
+"Android - Brands list redesign",
+"Android Sessions redesign",
+"Change app icons"
+]
+},
+{
+"id": "reg-utm-tracking",
+"theme": "reg",
+"q": "2023-Q4",
+"title": "UTM tracking on confirmation pages",
+"benefit": "Attribute registrations to campaigns in Google Analytics, as UTM codes now carry through to the confirmation page.",
+"what": "UTM parameters from the registration link are carried through to the registration confirmation page, where Google Analytics can read them.",
+"detail": "UTM parameters from the registration URL are passed through to the registration confirmation page, so registrations can be attributed in Google Analytics.",
+"stories": [
+"UTM codes on the Confirmation Pages"
+]
+},
+{
+"id": "mobile-arabic-multilingual",
+"theme": "mobile",
+"q": "2023-Q4",
+"title": "Arabic app and multilingual pages",
+"benefit": "Offer the mobile app in Arabic and open in-app pages in the user’s app language.",
+"what": "The mobile app is available in Arabic. Edit profile, floor plan, basket, exhibitor events and delegates pages inside the app open in the app's language when the event supports it, otherwise in English.",
+"detail": "The mobile app was translated into Arabic. Edit profile, floor plan, basket, exhibitor events and delegates pages open in the app language when the event supports it, otherwise in English.",
+"stories": [
+"Arabic translation for mobile app",
+"Multilanguage webview pages for mobile app"
+]
+},
+{
+"id": "reg-category-cloning",
+"theme": "reg",
+"q": "2024-Q1",
+"title": "Category cloning",
+"benefit": "Duplicate participant and exhibitor categories with all their settings, then change only what differs.",
+"what": "A Duplicate button copies a participant or exhibitor category with all its settings as a named copy. The categories table adapts to the screen and can be reordered by drag and drop.",
+"detail": "A Duplicate button copies a category with all its settings as a named copy. The categories table is also adaptive and supports drag-and-drop ordering.",
+"stories": [
+"Ability to clone participant and exhibitor categories"
+]
+},
+{
+"id": "reg-print-badge-link",
+"theme": "reg",
+"q": "2024-Q1",
+"title": "Print badge link on confirmation page",
+"benefit": "Let visitors print their badge straight from the registration confirmation page.",
+"what": "A Print Your Badge variable can be added to the visitor registration confirmation page. The link opens the visitor's badge in a new tab, the same as the print option in the profile and admin panel.",
+"detail": "A Print Your Badge variable can be added to the visitor confirmation page; the link opens the visitor’s badge in a new tab, matching the print option in the profile and admin panel.",
+"stories": [
+"Adding More Variables in Visitor Confirmation Page"
+]
+},
+{
+"id": "mobile-in-app-updates",
+"theme": "mobile",
+"q": "2024-Q1",
+"title": "In-app updates",
+"benefit": "Prompt attendees to update the app when a newer version is available.",
+"what": "Organisers can enable in-app updates in the app builder and choose between required and optional update prompts, which the apps show when a newer version is released.",
+"detail": "Organisers enable in-app updates in the app builder and choose required or optional update prompts, which the apps show when a new version is released.",
+"stories": [
+"In-App Updates"
+]
+},
+{
+"id": "reg-basket-discounts-invoices",
+"theme": "reg",
+"q": "2024-Q2",
+"title": "Discount, invoice and basket improvements",
+"benefit": "Discounts work in the new basket, invoice payment has its own step, and a direct link adds a session to the basket.",
+"what": "The new basket applies discounts per section, with multibuy discounts before discount codes, one code at a time. Invoice payment has its own submit step, and a session's Add to basket link adds it to the basket when opened.",
+"detail": "Discounts were implemented in the new basket, the invoice payment logic was updated, and the session “add to basket” link adds a session to the basket directly when opened.",
+"stories": [
+"Applying of the discounts",
+"Change logic for invoice payment",
+"Add to the basket link for adding the session to the basket"
+]
+},
+{
+"id": "reg-field-timestamps",
+"theme": "reg",
+"q": "2024-Q2",
+"title": "Registration field timestamps",
+"benefit": "Record when a registrant filled in a specific form field and see it in the export.",
+"what": "Any registration field can be set to record the time of input. The latest input time before registration is completed is stored in event local time and exported as a column next to the field.",
+"detail": "Any registration field can be flagged to record the time of input. The latest input time before registration completes is stored in event local time and exported as a column next to the field.",
+"stories": [
+"FBF: Add the option to record timestamp for a specific field in the registration form"
+]
+},
+{
+"id": "mobile-app-behaviour-2024",
+"theme": "mobile",
+"q": "2024-Q3",
+"title": "App behaviour improvements",
+"benefit": "Keep attendees on a valid event and make Android sections easier to use.",
+"what": "On launch, the app checks that the user's event still exists. If not, the user is logged out and shown the event selection screen, or the login for the only available event. Collapsing a section on Android keeps the screen in place.",
+"detail": "On launch the app checks the user’s event still exists; if not, the user is logged out and shown the event selection or login screen. Collapsing sections in the Android app behaves more naturally.",
+"stories": [
+"Dynamic Event Handling for User Session Management: App",
+"Android/ Made more user friendly behaviour of section closes  "
+]
+},
+{
+"id": "reg-new-basket-payment",
+"theme": "reg",
+"q": "2024-Q4",
+"title": "New basket and payment page",
+"benefit": "Participants and exhibitors can collect items in a redesigned basket and pay by card, PayPal or Parampos on a new payment page.",
+"what": "A new participant basket holds tickets, sessions and on-demand sessions, and the exhibitor basket holds manual equipment and lead capture items, with discounts, taxes, totals and payment per section or in full on a new payment page.",
+"detail": "The participant basket holds tickets, sessions and on-demand sessions; the exhibitor basket holds manual equipment and lead capture items. Both show discounts, taxes and totals and allow payment per section or in full. Items are reserved for 15 minutes on the payment page, and the Basket and Discounts modules control what users see.",
+"stories": [
+"(New UI) My Basket for the participant",
+"(New UI) My Basket for the exhibitor",
+"Payment page upgrade for participant",
+"Include module \"Basket\" for all participants and exhibitors",
+"Connect module Discounts to a new UI basket",
+"Spiner while recalculating the text",
+"Changing the text for confirmation window after the payment is done",
+"Include all currencies in the database",
+"The tax name should be displayed on the front and admin panel",
+"The tax name should be displayed on the front and admin panel (except Participant's basket) ",
+"Interrelated settings with payments",
+"Reservation of the items on payment page",
+"Setting up payment integrations for the new front"
+]
+},
+{
+"id": "reg-new-ticketing",
+"theme": "reg",
+"q": "2024-Q4",
+"title": "New ticketing",
+"benefit": "Create, edit and clone tickets in a new admin ticketing area, targeted by participant category and check-in location.",
+"what": "Organisers create, edit and clone tickets from a new Tickets list in the admin panel, setting name, description, which participant categories can buy each ticket and its check-in zones. Ticket content can be translated.",
+"detail": "Organisers manage tickets from a new Tickets list, setting name, description, category availability and check-in zones on community and regular events. Ticket content can be translated and shows in the visitor’s chosen language.",
+"stories": [
+"(Part 1) Tickets list in Admin panel",
+"(Part 1) Tickets creation/edit in Admin panel",
+"(Part 1) Multilanguage for ticketing"
+]
+},
+{
+"id": "reg-app-basket-payment",
+"theme": "reg",
+"q": "2024-Q4",
+"title": "Basket and payment in the app",
+"benefit": "Participants can use the new basket and pay for items inside the iOS and Android apps.",
+"what": "The basket tab in the iOS and Android apps opens the new basket with items, prices, discounts and availability checks. The payment page is adapted for the app with PayPal and Parampos, and session pages in the app add to the same basket.",
+"detail": "The app basket tab opens the new basket with items, prices, discounts and availability checks. The payment page is adapted to the app with PayPal and Parampos support, and session pages in the app connect to the new basket.",
+"stories": [
+"Basket for the mobile app (for participants)",
+"Payment page for the mobile app",
+"Connect the session page in the app with new UI Basket"
+]
+},
+{
+"id": "reg-ticket-pricing-tiers",
+"theme": "reg",
+"q": "2024-Q4",
+"title": "Ticket pricing tiers",
+"benefit": "Sell tickets at different prices across named sales periods, such as early bird.",
+"what": "Tickets can have a fixed price or a dynamic price made of several consecutive date ranges up to the event's last day. Each range has its own name, colour and price, such as Early bird.",
+"detail": "Tickets can have a fixed price or a dynamic price with several consecutive, named and coloured date ranges up to the event’s last day, each shown with its own price tag.",
+"stories": [
+"(Part 1) Setting few timeranges with different pricing"
+]
+},
+{
+"id": "reg-ticket-visibility-country",
+"theme": "reg",
+"q": "2024-Q4",
+"title": "Ticket visibility by country",
+"benefit": "Show registrants only the tickets that apply to their category and country.",
+"what": "Tickets can be shown per participant category and country, with a country selector in the registration tickets step that syncs with the Country field. An optional setting lets other combinations continue at no charge.",
+"detail": "Tickets can be made visible per category and country, with a country selector in the registration tickets step that syncs with the Country field. An optional setting lets unlisted combinations continue at no charge instead of showing an error.",
+"stories": [
+"Visibility by country for tickets in Old UI Registration",
+"Addition to the Visibility by country for tickets in Old UI Registration"
+]
+},
+{
+"id": "reg-vat-rules",
+"theme": "reg",
+"q": "2024-Q4",
+"title": "Updated VAT rules",
+"benefit": "Charge VAT correctly based on where the billing and paying companies are located.",
+"what": "VAT on payments is calculated from where the billing and paying companies are located, with EU VAT number validation and a setting to turn the rules off. For example, tax is zero when a non-EU billing company charges an EU payer.",
+"detail": "VAT calculation now considers billing and paying company location, EU VAT number validation and a setting to disable VAT rules; for example, tax is zero when a non-EU billing company charges an EU payer.",
+"stories": [
+"Changes to the current VAT logic"
+]
+},
+{
+"id": "mobile-app-builder-options",
+"theme": "mobile",
+"q": "2024-Q4",
+"title": "App builder options",
+"benefit": "Tailor app content by login status, font and links from the app builder.",
+"what": "In the app builder, custom block pages can be shown only to logged-out users, custom blocks can link to the app sign-in page and other app pages, and Gilroy can be chosen for headings and text. The preview shows the real app view.",
+"detail": "Custom block pages can be shown only to logged-out users; custom blocks can link to the app sign-in page and to other app pages; the Gilroy font can be chosen for headings and text; and the app builder preview now shows the real app view, without a Download all button the apps do not show.",
+"stories": [
+"App builder -> Custom Documents block -> Hide \" Download all\" btn on preview ",
+"Font in the app ",
+"Login Link for App Sign In Page",
+"Add an option in app builder to specify page for logged in / non logged user",
+"Add app link to the app builder for the custom block",
+"Change App builder form HTML to iframe"
+]
+},
+{
+"id": "mobile-tiered-menus",
+"theme": "mobile",
+"q": "2024-Q4",
+"title": "Tiered app menus",
+"benefit": "Organise the app menu into expandable sections with sub-items.",
+"what": "The app menu uses a tiered structure. Main items show first, and their sub-items appear indented when the parent is expanded, with the parent staying visible.",
+"detail": "Main menu items show first, and their sub-items appear indented when the parent is expanded, with the parent staying visible.",
+"stories": [
+"Tiered Menu Navigation for App Browser"
+]
+},
+{
+"id": "reg-payment-setup-checks",
+"theme": "reg",
+"q": "2025-Q1",
+"title": "Payment setup checks",
+"benefit": "Catch payment integration mistakes before they affect checkout, with validation of required fields and PayPal keys.",
+"what": "Saving a payment integration now checks that its required fields are filled in, and an invalid PayPal secret key for the active test or live mode blocks saving with a clear message. UK VAT number checks use the updated government service.",
+"detail": "Required fields for payment integrations are now validated, and an invalid PayPal secret key for the active test or live mode blocks saving with a clear message. The UK VAT validation service connection was also updated.",
+"stories": [
+"Validation of Required Fields for Payment Integrations",
+"Check secret key of PayPal for validity",
+"Check and implement new changes to the UK VAT API service"
+]
+},
+{
+"id": "mobile-event-selector-2025",
+"theme": "mobile",
+"q": "2025-Q1",
+"title": "Event selector improvements",
+"benefit": "Help attendees pick the right event in the app.",
+"what": "On Android, the event selection and login screens show each event's country and city, and current and past events are ordered by event time. Favourite icons on iOS were replaced with higher-quality versions.",
+"detail": "The Android event selection and login screens show each event’s country and city and order current and past events by event time. Favourite icons on iOS were updated to sharper versions.",
+"stories": [
+"Android/ Need dislay  Country/City on \"choose event\" and \"logination\" screens",
+"Android/ Check events position ( current / past) on event selector screen based on event time  ",
+"iOS/ Please update the favorite icons, as their current quality appears quite low."
+]
+},
+{
+"id": "reg-tickets-profile-basket",
+"theme": "reg",
+"q": "2025-Q2",
+"title": "Tickets in the profile and basket",
+"benefit": "Participants can view their tickets and buy more from their profile, with new tickets paid for through the basket.",
+"what": "Participants have a Tickets tab listing their tickets and those still available. Tickets have their own basket section with discount codes and taxes and are held for 15 minutes during payment. Tickets with sales can only be viewed.",
+"detail": "A Tickets tab shows purchased and available tickets. Tickets have their own basket section with discount codes and taxes, and are held for 15 minutes during payment. Organisers get ticketing settings and an on/off toggle with a warning, and tickets with sales become view-only.",
+"stories": [
+"(Part 1) Ticketing settings in Admin panel",
+"(Part 2) Tickets in Participant profile",
+"(Part 2) Introducing new tickets to the basket",
+"(Part 2) Reservation of tickets on the payment page",
+"(Part 2) Restriction and Conditional Behavior for Purchased Tickets",
+"(Part 2) Rerendering of the basket after deletion and items becoming unavailable",
+"(Part 2) No Pay for this order button if we have only one section",
+"(Part 2)  Behaviour of ticketing toggle",
+"[Part 2] Warning while turning off Ticketing",
+"(Part 2) Changes to the logic of All locations selector"
+]
+},
+{
+"id": "reg-disable-repeated-registration",
+"theme": "reg",
+"q": "2025-Q2",
+"title": "Option to disable repeated registration",
+"benefit": "Treat returning visitors as new registrants when an event should not reuse accounts from other events.",
+"what": "A Disable Repeated Registration visitor setting treats people as new registrants even if their email is already registered for another event on the platform. Duplicate prevention, continuous registration and buyer upgrade still apply.",
+"detail": "A visitor setting lets users register without a one-time code or their old password even if their email exists on other events, while duplicate prevention, continuous registration and buyer upgrade still apply.",
+"stories": [
+"Repeated registration flor flow for users"
+]
+},
+{
+"id": "reg-orders-invoices-profile",
+"theme": "reg",
+"q": "2025-Q2",
+"title": "Orders and invoices in the profile",
+"benefit": "Participants can see everything they have bought and download their invoices from their profile.",
+"what": "The participant profile has an Orders section with an Ordered items tab listing purchased tickets and sessions, newest first, and an Invoices tab listing paid orders with sortable columns, item breakdowns and invoice download.",
+"detail": "The profile Orders section has an Ordered items tab listing purchased tickets and sessions, and an Invoices tab listing paid orders with sortable columns, item breakdowns and invoice download.",
+"stories": [
+"A new Slider for Orders tab",
+"Invoices tab",
+"Ordered items tab",
+"[Ticketing] Create module for ordered items"
+]
+},
+{
+"id": "reg-ticket-category-upgrades",
+"theme": "reg",
+"q": "2025-Q2",
+"title": "Ticket category upgrades",
+"benefit": "Let participants upgrade to a higher category by buying a ticket and paying only the difference.",
+"what": "When category changes are allowed, participants can buy a ticket of an equal or higher-value category, replacing their current category tickets and paying the difference, on desktop and in the app. Their category shows on the dashboard.",
+"detail": "When category changes are allowed, participants can buy a ticket of an equal or higher-value category, replacing their current tickets, on desktop and in the app. Their current category is shown on the dashboard and ticketing pages.",
+"stories": [
+"(Part 2) Tickets upgrade",
+"(Part 2) Tickets in the basket | Upgrading the category ",
+"(Part 2) Category indication in Participant profile"
+]
+},
+{
+"id": "mobile-resync-builder-2025",
+"theme": "mobile",
+"q": "2025-Q2",
+"title": "Manual data re-sync",
+"benefit": "Let attendees refresh the app’s event data themselves from Settings.",
+"what": "A Re-sync button on the app's Settings page fetches the latest event data, up to once an hour. Logged-in users also find Cancel Registration and Delete My Account there. Old workaround text blocks were removed from the app builder.",
+"detail": "A Re-sync button on the Settings page fetches the latest data, up to once an hour; logged-in users also find Cancel Registration and Delete My Account there. Text blocks were removed from the app builder.",
+"stories": [
+" \"Re-sync\" button to fetch the latest SQL data file manually",
+"Removing text blocks from the app builder"
+]
+},
+{
+"id": "reg-phone-validation",
+"theme": "reg",
+"q": "2025-Q3",
+"title": "Phone number validation",
+"benefit": "Reduce invalid phone numbers with format validation on the phone field.",
+"what": "The phone field checks the format of the number entered.",
+"detail": "The phone field now validates the format of the value entered.",
+"stories": [
+"Add validation of the phone field by value format"
+]
+},
+{
+"id": "reg-multilingual-invoices-tax",
+"theme": "reg",
+"q": "2025-Q3",
+"title": "Translated invoices and tax names",
+"benefit": "Show invoices and tax names in each event language.",
+"what": "Invoices can be translated, with a logo, footer and terms per language and translated labels. Tax names can be set per event language and appear translated on invoices, the basket, exhibitor manuals, tickets and ordered items.",
+"detail": "Invoices can be translated, and tax names can be set per event language so they appear translated on invoices, the basket, exhibitor manuals, tickets and ordered items.",
+"stories": [
+"Translation for invoices",
+"Multilingual Tax name"
+]
+},
+{
+"id": "mobile-scrolling-location-text",
+"theme": "mobile",
+"q": "2025-Q3",
+"title": "Scrolling location text",
+"benefit": "Read long location names in full on session and networking detail pages in the app.",
+"what": "In the app, long location text on session, exhibitor event, round table and speed networking detail pages scrolls continuously across the location button, and stays still when it fits.",
+"detail": "Location buttons on session, exhibitor event, round table and speed networking pages scroll long text continuously and stay static when it fits.",
+"stories": [
+"Rotating Location Text on Button"
+]
+},
+{
+"id": "reg-invoice-payment-registration",
+"theme": "reg",
+"q": "2025-Q4",
+"title": "Invoice payment during registration",
+"benefit": "Let participants choose to pay by invoice when buying paid items during registration.",
+"what": "With a new setting on, participants can choose to pay by invoice when buying paid items during registration. Their paid sessions are scheduled, and the activation email is sent once the organiser confirms payment in Invoice payments.",
+"detail": "With the new setting on, registrants can pay by invoice; their paid sessions are scheduled, and the activation email is sent once the organiser confirms payment in Invoice payments.",
+"stories": [
+"[InvoicePayment][BE][FE] Invoice Payment for Participants in Registration"
+]
+},
+{
+"id": "reg-category-lock",
+"theme": "reg",
+"q": "2025-Q4",
+"title": "Lock participant categories",
+"benefit": "Prevent participant categories being changed by mistake in the admin panel.",
+"what": "An optional registration setting, off by default, locks the participant category field in the admin panel so no admin can change a participant's category.",
+"detail": "An optional registration setting, off by default, locks the participant category field in the admin panel for all admins.",
+"stories": [
+"Disabled category selection"
+]
+},
+{
+"id": "reg-ticketing-version-switch",
+"theme": "reg",
+"q": "2025-Q4",
+"title": "Switch between ticketing versions",
+"benefit": "Choose old or new ticketing per event or for all events without losing existing tickets.",
+"what": "A New Ticketing module toggle selects the old or new ticketing, globally or per event. Each version keeps its own tickets and settings, and users' tickets are kept when the version changes.",
+"detail": "A module toggle selects the ticketing version per event or globally. Each version keeps its own tickets and settings, and users’ tickets are kept.",
+"stories": [
+"[T&I]Feature flag for new Ticketing"
+]
+},
+{
+"id": "reg-new-ticketing-country",
+"theme": "reg",
+"q": "2026-Q1",
+"title": "Country visibility in new ticketing",
+"benefit": "Target new-style tickets by the registrant’s country as well as category.",
+"what": "The new ticketing can show each ticket only to registrants from chosen countries, during registration and on the Ticketing page, with a setting, a country choice per ticket and country markers.",
+"detail": "Ticket visibility by country, previously available in the older ticketing, is now part of the new ticketing.",
+"stories": [
+"[Ticketing&Invoicing] Visibility of Tickets by Country"
+]
+},
+{
+"id": "mobile-usability-2026",
+"theme": "mobile",
+"q": "2026-Q1",
+"title": "App usability improvements",
+"benefit": "Open sessions from links, see tidier profiles and get loading feedback on the Tickets page.",
+"what": "Sessions and exhibitor events have shareable links that open the session in the app when it is installed, or on the web. On iOS, empty About me sections are hidden on delegate profiles, and the Tickets page shows a spinner while it updates.",
+"detail": "Deep links open sessions directly in the app. The About me section on delegate profiles on iOS is hidden when empty, and the Tickets page shows a loading spinner while updating.",
+"stories": [
+"Deeplinks for Sessions",
+"iOS/ Update \"About me\" section behaviour inside DELEGATES profiles ",
+"iOS/ Pls update \"Tickets\" page loading/updating behaviour "
+]
+},
+{
+"id": "mobile-global-resync-no-logout",
+"theme": "mobile",
+"q": "2026-Q1",
+"title": "Event data reset without logout",
+"benefit": "Reset event data in the app mid-event without logging attendees out.",
+"what": "The global resync in the admin panel now performs a full reset of the app's event data without logging users out, in the same way as the resync in the app's settings.",
+"detail": "The admin panel’s global resync performs a full reset of app data without logging users out, matching the resync in the app’s settings.",
+"stories": [
+"Global Force Resync - Shoptalk"
+]
+},
+{
+"id": "mobile-offline-favourites",
+"theme": "mobile",
+"q": "2026-Q2",
+"title": "Offline feedback for favourites",
+"benefit": "Let users know when a favourite cannot be saved because they are offline.",
+"what": "On Android and iOS, tapping Favourite without an internet connection shows the app's standard connection-lost message, across lists, profiles and recommendations.",
+"detail": "Tapping Favourite without a connection shows the app’s standard connection-lost message across lists, profiles and recommendations on Android and iOS.",
+"stories": [
+"Android/ Update \"Favourite\" icon behaviour in case of internet connection lost ",
+"iOS/ Update \"Favourite\" icon behaviour in case of internet connection lost"
+]
+},
+{
+"id": "reg-new-registration",
+"theme": "reg",
+"q": "2026-Q3",
+"title": "New registration experience",
+"benefit": "Registrants move through a rebuilt, step-by-step registration with tickets, sessions, a summary and payment in one flow.",
+"what": "Registration starts with email verification, which blocks duplicates and resumes unfinished or repeat registrations with details pre-filled. Tabs with an order summary cover conditional fields, tickets, sessions, terms and payment.",
+"detail": "Email verification catches duplicates and resumes unfinished or repeat registrations with data pre-filled. Tabs with a live order summary cover conditional fields, tickets held during checkout, session booking, discount codes, terms and payment. Category links pre-filter tickets, and organisers switch each event to the new flow when ready.",
+"stories": [
+"Story 7. Registration with payment",
+"Story 8. Registration: Visitor can verify Email on Registration Landing Page",
+"Story 9. Registration: Visitor can verify Email on Buyer Registration Landing Page",
+"Story 11. Registration: Participant can select and purchase Tickets during Registration",
+"Story 12. Registration: Condition logic for Grids and Fields during Registration",
+"Story 13. Tabs navigation",
+"Story 14. Grids and fields layout",
+"Story 15. Sessions as part of Registration",
+"Story 16. Summary",
+"Story 17. Terms and Conditions",
+"Story 18. Email notifications for Registration",
+"Story 20. Embed Participant Category in Registration URLs",
+"Story 23. Public Registration",
+"Story 28. Continue unfinished Registration",
+"Story 29. Repeated Registration",
+"Story 30. Enable New UI Registration Toggle",
+"[Ticketing&Invoicing](Part 3) [FE] Ticketing tab to be displayed via iframe - blocked by Registration"
+]
+},
+{
+"id": "reg-approval-buyer-waitlist",
+"theme": "reg",
+"q": "2026-Q3",
+"title": "Approval, buyer and waiting-list flows",
+"benefit": "Run approval-based, buyer and capacity-limited registrations in the new flow, with payment collected after approval.",
+"what": "Private events with public access and buyer registrations go to the organiser for approval, then are paid via the basket. Participants can upgrade to buyer with details pre-filled, and sign-ups over a limit join a waiting list.",
+"detail": "Private events with public access and buyer registrations submit for organiser approval, then pay through the basket once activated. Participants can upgrade to buyer with pre-filled data, and registrations over the limit join a waiting list with its own email.",
+"stories": [
+"Story 24. Registration to Private event with Public access",
+"Story 25. Registration of Buyers",
+"Story 26. Upgrade from Participant to Buyer",
+"Story 27. Registrations with limit"
+]
+},
+{
+"id": "reg-branded-registration-pages",
+"theme": "reg",
+"q": "2026-Q3",
+"title": "Branded registration pages",
+"benefit": "Brand the registration welcome, confirmation and sold-out pages for participants and buyers from the admin panel.",
+"what": "Organisers set up participant and buyer welcome pages with a hero image, title and description per language. Confirmation pages support merge variables such as QR code and badge link, scripts or a custom page. Sold-out pages have a button.",
+"detail": "A visual constructor sets hero image, title and description per language for welcome pages. Confirmation pages support merge variables such as name, QR code and badge link, scripts or a custom website page. A sold-out page offers a configurable call-to-action button.",
+"stories": [
+"Story 1. Main Participant registration page setup",
+"Story 2. Main Buyer registration page setup",
+"Story 3. Confirmation page setup for Participant",
+"Story 4. Confirmation page setup for Buyer",
+"Story 5. Sold out tickets page setup",
+"Story 6. Sold out tickets page",
+"Story 21. Confirmation page for Participant",
+"Story 22. Confirmation page for Buyer",
+"1 Confirmation page setup for Participant"
+]
+},
+{
+"id": "reg-checkout-payment-improvements",
+"theme": "reg",
+"q": "2026-Q3",
+"title": "Checkout and payment admin improvements",
+"benefit": "Complete free bookings in one step, find payments quickly and keep app registrants in the flow when reading the terms.",
+"what": "Bookings with a total of zero skip the payment form and go straight to the success page. The transaction and invoice payment pages can be searched by payer name or email. In the app, the terms of use open in the device browser.",
+"detail": "Bookings with a total of zero skip the payment form and go straight to the success page. Transaction and invoice payment pages can be searched by payer name or email. In the app, the terms of use open in the device browser.",
+"stories": [
+"Skip the payment form when the basket total is 0 (100% discount) in the Booking flow",
+"[Invoice&Payments] Search Functionality on Transaction Dashboard and Invoice Payments Pages",
+"Open T&Cs in new browser"
+]
+},
+{
+"id": "mobile-branding-typography",
+"theme": "mobile",
+"q": "2026-Q3",
+"title": "App branding and typography",
+"benefit": "An event app’s custom typeface now appears consistently across every Android screen.",
+"what": "An event app's custom typeface, previously used only on the My Account and Event Info screens, now covers all remaining Android screens. The mobile app also shows ExpoPlatform branding.",
+"detail": "An event app’s custom font, previously used only on the My Account and Event Info screens, now covers all remaining Android screens for a consistent look, and the app shows ExpoPlatform branding.",
+"stories": [
+"Add FBM Gabarito to remaining pages [Android]",
+"Expoplatform branding promotion in mobile app"
+]
+}
+],
+"claims": [
+{
+"id": "05_transactions_and_purchasing:64",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Shopping basket, participant + exhibitor + unified admin",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:65",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Ticket creation/config, pricing models, categories, validity, zones, hide/clone, old+new experience",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:66",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Ticket purchasing + upgrades with auto-discount on category switch",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:67",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Basket payment page, individual/company payee, VAT capture, card-or-invoice",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:68",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Gateway integrations Stripe / PayPal / ParamPOS",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:69",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Taxes/VAT: default country tax, custom per item type, EU rules, VRN validation, Disable-VAT-rules",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:70",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Invoicing: customisable layout, PDF",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:71",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Receipt/invoice email template",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:72",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Discount codes: %/absolute, per-category, per-session-type, time-limited, usage-capped, import/export",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:73",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Multi-buy discounts, sessions-only, applied before code discounts, per-order limit",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:74",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Transaction Dashboard with PDF + regeneration + net/VAT/total",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:75",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Payments by Invoice: confirm/cancel, confirmed moves to dashboard",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:76",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "General Payment Settings (currency, merchant, billing, payee default, zero invoice, disable invoice, send-payee-email)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:77",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Included",
+"claim": "Module controls: Basket on/off per user type, Discounts gate, New Ticketing flag",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:83",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Excluded (an excluded item found in code = CONTRADICTED)",
+"claim": "Refunds not supported through the platform",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:84",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Excluded (an excluded item found in code = CONTRADICTED)",
+"claim": "Partial payments not supported",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:85",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Excluded (an excluded item found in code = CONTRADICTED)",
+"claim": "Payments only to organiser's gateway account",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "05_transactions_and_purchasing:86",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Excluded (an excluded item found in code = CONTRADICTED)",
+"claim": "Participant invoice payments not available",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "05_transactions_and_purchasing:87",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Excluded (an excluded item found in code = CONTRADICTED)",
+"claim": "Exhibitor discount codes not available",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "05_transactions_and_purchasing:88",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Excluded (an excluded item found in code = CONTRADICTED)",
+"claim": "Mobile app basket out of scope",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:89",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Excluded (an excluded item found in code = CONTRADICTED)",
+"claim": "RFP currency settings live elsewhere",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:90",
+"product": "Transactions & Purchasing",
+"section": "§2 Scope — Excluded (an excluded item found in code = CONTRADICTED)",
+"claim": "No post-approval charging",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "05_transactions_and_purchasing:96",
+"product": "Transactions & Purchasing",
+"section": "§3 Roles",
+"claim": "Organiser admin configures everything, cannot purchase",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:97",
+"product": "Transactions & Purchasing",
+"section": "§3 Roles",
+"claim": "Participant buys tickets + sessions, code + multi-buy discounts",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:98",
+"product": "Transactions & Purchasing",
+"section": "§3 Roles",
+"claim": "Exhibitor buys equipment + lead capture, invoice download, no codes",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:99",
+"product": "Transactions & Purchasing",
+"section": "§3 Roles",
+"claim": "Sponsor = exhibitor for EM items",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "05_transactions_and_purchasing:100",
+"product": "Transactions & Purchasing",
+"section": "§3 Roles",
+"claim": "Speaker can book paid sessions",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:101",
+"product": "Transactions & Purchasing",
+"section": "§3 Roles",
+"claim": "Admin team member: unified basket, discounts on participant items only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:102",
+"product": "Transactions & Purchasing",
+"section": "§3 Roles",
+"claim": "Super Admin can enable/disable discounts module globally",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:103",
+"product": "Transactions & Purchasing",
+"section": "§3 Roles",
+"claim": "\"Partial payments and refunds not available; exhibitors only invoice payers\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:109",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Basket core, counter, sections, availability re-check, Grand Total",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:110",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "\"Grand Total = Subtotal + Taxes − Discount\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "05_transactions_and_purchasing:111",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Exhibitor basket: EM items, deadlines, per-exhibitor vs per-member LC, custom tax",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:112",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Participant basket, one code at a time, multi-buy first, persistence",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:113",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Discount feedback messages (4 strings)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:114",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Unified admin-team-member basket",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:115",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Payment page fields, payee types, ParamPOS cardholder name, summary block",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:116",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "15-minute reservation on payment initiation (EP-37784)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:117",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Ticketing toggle default OFF; cannot enable with zero tickets; sold tickets locked",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:118",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Ticket setup form: name/desc limits, category, zones, quantity, validity, header background",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:119",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Six ticket statuses incl. `Expired`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "05_transactions_and_purchasing:120",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Participant purchase flow, snackbar, confirmation email",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:121",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Upgrade: same-category merge; cross-category replaces with auto credit",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:122",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Downgrade blocked (BR-12)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "05_transactions_and_purchasing:123",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Three gateways, one active at a time, all fields required, ExpoPlatform holds ParamPOS SSL cert",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:124",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "General settings list",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:125",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Two-tier taxes; custom rates for Tickets/Sessions/Equipment/Lead Capture",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:126",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "VAT rules engine",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:127",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Invoice layout toggles, PNG/JPEG logo, tab stays visible",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:128",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Receipts template, copy from another event, \"Send invoice email\" master toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:129",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Transaction Dashboard columns, statuses, pagination, IDs non-sequential/environment-level",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:130",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Payments by Invoice, cancel/confirm, confirmed moves to dashboard",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:131",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Discount codes: one per basket, once per user, absolute/percent, scopes, dates, use limit, export/import",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:132",
+"product": "Transactions & Purchasing",
+"section": "§4 Feature inventory",
+"claim": "Multi-buy: sessions only, before code, one per category+session, Apply-From, Limit-for-Order",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:138",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-1 one active gateway, last-saved wins",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "05_transactions_and_purchasing:139",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-2 all gateway fields required",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:140",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-3 Grand Total = Subtotal + Taxes − Discount",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "05_transactions_and_purchasing:141",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-4 multi-buy before code",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:142",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-5 one code at a time, new replaces",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:143",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-6 one use per user",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:144",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-7 invoice payment exhibitors only",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "05_transactions_and_purchasing:145",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-8 sold ticket cannot be edited/deleted",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:146",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-9 ticketing cannot be enabled with zero tickets",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:147",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-10 EU reverse charge → zero tax",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:148",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-11 individuals always pay configured tax",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:149",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-12 downgrade blocked",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "05_transactions_and_purchasing:150",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-13 basket module off hides icon",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:151",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-14 no partial payments, no platform refunds",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:152",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-15 EM deadline blocks payment",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:153",
+"product": "Transactions & Purchasing",
+"section": "§7 Business rules",
+"claim": "BR-16 15-minute reservation, not configurable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:189",
+"product": "Transactions & Purchasing",
+"section": "§10 Integrations",
+"claim": "PayPal Manager",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:190",
+"product": "Transactions & Purchasing",
+"section": "§10 Integrations",
+"claim": "ParamPOS (Virtual/Physical/Mobile/ParamTIK)",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:191",
+"product": "Transactions & Purchasing",
+"section": "§10 Integrations",
+"claim": "EU VAT validation service",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:192",
+"product": "Transactions & Purchasing",
+"section": "§10 Integrations",
+"claim": "Invoice email (SMTP)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:193",
+"product": "Transactions & Purchasing",
+"section": "§10 Integrations",
+"claim": "Registration module",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:194",
+"product": "Transactions & Purchasing",
+"section": "§10 Integrations",
+"claim": "Exhibitor Manual",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:195",
+"product": "Transactions & Purchasing",
+"section": "§10 Integrations",
+"claim": "Data Export / Analytics payments report",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:220",
+"product": "Transactions & Purchasing",
+"section": "§12 Reports (four)",
+"claim": "Transaction Dashboard",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:221",
+"product": "Transactions & Purchasing",
+"section": "§12 Reports (four)",
+"claim": "Payments by Invoice",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:222",
+"product": "Transactions & Purchasing",
+"section": "§12 Reports (four)",
+"claim": "Payments report (`admin/data`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:223",
+"product": "Transactions & Purchasing",
+"section": "§12 Reports (four)",
+"claim": "Discount codes export",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:224",
+"product": "Transactions & Purchasing",
+"section": "§12 Reports (four)",
+"claim": "\"Total Payments in admin/visitors includes deleted participants\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:245",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Discount code with trailing space fails",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:246",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Multi-buy then code on reduced price",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:247",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Removing a code removes it from the whole basket",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:248",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Transaction IDs non-sequential, environment-level",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:249",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Deleted participant payments remain in Total Payments",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:250",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Sold count increments at reservation, not confirmation",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:251",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Timezone change retroactively moves ticket validity",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:252",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Double payment risk: reservation does not prevent two charges",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:253",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Webhook non-delivery leaves Pending forever",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:254",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Invoice disabled mid-event leaves pending invoices",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:255",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Currency mismatch",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:256",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Missing gateway secret key → money out, no status",
+"verdict": "PARTIAL"
+},
+{
+"id": "05_transactions_and_purchasing:257",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "PayPal live-only key validation",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:258",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "ParamPOS test credentials in production (Client Code 10738 / Test / Test)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "05_transactions_and_purchasing:259",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Organiser with invoice disabled can still reach Invoicing tab",
+"verdict": "CONFIRMED"
+},
+{
+"id": "05_transactions_and_purchasing:260",
+"product": "Transactions & Purchasing",
+"section": "§14 Edge cases",
+"claim": "Two participants buy the last ticket simultaneously",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:69",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Five registration flow types",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:70",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Drag-and-drop builder, Grid 1/2/3-col, Information Frame, tabs",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:71",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Standard + custom field types (Text/Area, Select, Checkbox Group, Radio Group, Checkbox, File, Date)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:72",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Common field properties (14 listed)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:73",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Conditional logic: grid visibility by category or multi-select",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:74",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Participant Categories (14 sub-settings)",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:75",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Terms & Conditions: WYSIWYG + mandatory checkbox",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:76",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Confirmation page: WYSIWYG + JS + variables + custom-page override, Visitor and Buyer variants",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:77",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "End-user page: pipeline bar, summary, payment, category selection",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:78",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Account + login: activation link, OTP, generated password, roles, first-login redirect, force password change, force photo",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:79",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Organiser reports ×4",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:80",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Clone registration settings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:81",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Clone participant/exhibitor categories",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:82",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Disable participant category change",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:83",
+"product": "Online Registration",
+"section": "§2 Scope — Included",
+"claim": "Registration Pipeline Best Practices guidance",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "06_online_registration:89",
+"product": "Online Registration",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Exhibitor registration configuration is a separate product area",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:90",
+"product": "Online Registration",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Ticketing / invoicing back-end belongs to Transactions & Purchasing",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:91",
+"product": "Online Registration",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Onsite / kiosk registration belongs to Onsite & Kiosk",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:92",
+"product": "Online Registration",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Mobile app build pipeline excluded",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:93",
+"product": "Online Registration",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Matchmaking / meeting scheduling logic excluded",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:94",
+"product": "Online Registration",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Email campaign management excluded",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:95",
+"product": "Online Registration",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Analytics dashboards beyond registration counts excluded",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:101",
+"product": "Online Registration",
+"section": "§3 User Roles",
+"claim": "Super Admin has full access across all events",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:102",
+"product": "Online Registration",
+"section": "§3 User Roles",
+"claim": "Organiser/Admin: full registration configuration",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:103",
+"product": "Online Registration",
+"section": "§3 User Roles",
+"claim": "Exhibitor can register for private events; creates team members",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:104",
+"product": "Online Registration",
+"section": "§3 User Roles",
+"claim": "Team members inherit exhibitor's category",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:105",
+"product": "Online Registration",
+"section": "§3 User Roles",
+"claim": "Speaker/Moderator not assigned during registration",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:106",
+"product": "Online Registration",
+"section": "§3 User Roles",
+"claim": "API user sets External ID, category, networking opt-in, explicit ACTIVE",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:107",
+"product": "Online Registration",
+"section": "§3 User Roles",
+"claim": "API-created accounts default to `registered`; must set `status=ACTIVE` explicitly for password login",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:113",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Public Events: publicly accessible, no vetting",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:114",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Registration with Approval = private ON + public access ON",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:115",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Approve → `Approved` → activation email fires",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:116",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Simple Registration toggle at `/admin/registration/settings`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:117",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Simple: skips summary, lands on dashboard, optional after-registration JS",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:118",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Simple + public → active immediately",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:119",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Public (non-simple) → `Registered` status",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:120",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Private Event: registration page inaccessible, redirect to main page",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:121",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Private event still admits invited/uploaded accounts via code",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:122",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Limited Registration: \"Limit registrations\" toggle + \"Number of limit\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:123",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Limit reached → waiting-list email + `In waiting list` status",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:124",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Waiting-list count is stale by up to one hour",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:125",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Waiting-list counting excludes admins and exhibitor-linked accounts",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:126",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Already-waiting registrant blocked from re-submitting",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:127",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Registration-closed redirect URL",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:128",
+"product": "Online Registration",
+"section": "§4.1 Registration Flow Types",
+"claim": "Visitor form auto-redirects to exhibitor form when visitor registration is off",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:134",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Editor at `Registration Settings > Visitor > Contact Details / Custom Sections`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:135",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Grid settings pop-up: Show label, Label text, Visible to",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:136",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Parent Grid \"Visible to\" overrides child",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "06_online_registration:137",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Standard fields may appear only once per form (BR-2)",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:138",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Tab toggles: Hide on Summary, Hide on Registration, Hide on Edit Profile, Enable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:139",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Form JSON persisted per event",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:140",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Standard fields map to account properties",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:141",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Language Preference field",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:142",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Networking Opt-in field",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:143",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Category field selects participant category during registration",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:144",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Social links, billing info, VAT country+number",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:145",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Register with social sign-in — \"currently disabled\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:146",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Four custom field types",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:147",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "HTML5 Type setting (text, email, colour, time, number, year, website)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:148",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Conditional mode only on Select / Checkbox Group / Radio Group / Checkbox",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:149",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Use as filter, Use for Speed Networking, Add OTHER, Add label, preselect",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:150",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "All 14 Common Field Properties",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:151",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "\"Sensitive\" field data clearable via `/admin/data/gdpr`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:152",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Personal Assistant Email CCs all participant emails",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:153",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Capture Input Timestamp (EP-26281)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:154",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "A 15th property exists: round-table placement",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:155",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "\"Enable Required Fields\" global toggle forces profile-edit redirect after login",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:156",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Required-fields gate is suppressed on the first login",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:157",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Required-fields check skips speakers and moderators unless separately enabled",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:158",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Networking opt-in inversion toggle",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:159",
+"product": "Online Registration",
+"section": "§4.2 Form Builder · §4.3 Standard Fields · §4.4 Custom Fields · §4.5 Field Properties · §4.6 Global Settings",
+"claim": "Inversion \"does not affect values in the database\" (admin tooltip, `settings.volt:368`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:165",
+"product": "Online Registration",
+"section": "§4.7 Conditional Logic",
+"claim": "Category-based grid visibility; empty = visible to all",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:166",
+"product": "Online Registration",
+"section": "§4.7 Conditional Logic",
+"claim": "MCQ-based visibility via `Conditional` checkbox, options appear in sibling Grids' \"Visible to\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:167",
+"product": "Online Registration",
+"section": "§4.7 Conditional Logic",
+"claim": "At least one matching option required (BR-6)",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:168",
+"product": "Online Registration",
+"section": "§4.7 Conditional Logic",
+"claim": "Grids appear/hidden client-side",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:169",
+"product": "Online Registration",
+"section": "§4.7 Conditional Logic",
+"claim": "Conditional visibility is not enforced server-side",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:170",
+"product": "Online Registration",
+"section": "§4.7 Conditional Logic",
+"claim": "Tab-level conditions with OR-of-AND groups",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:171",
+"product": "Online Registration",
+"section": "§4.7 Conditional Logic",
+"claim": "Transitive / chained conditions with cycle guard",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:172",
+"product": "Online Registration",
+"section": "§4.7 Conditional Logic",
+"claim": "A condition segment can carry a third value",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:181",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Managed at `/admin/registration/categories`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:182",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Default Category, auto-assigned, cannot be reordered (EP-14938)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:183",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Confirmation Code",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:184",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Visibility — Registration Form",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:185",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Visibility — Frontend Invisible",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:186",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Do not hide in badges",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:187",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Notify visitor when switching category",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:188",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Is Buyer",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:189",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Default Team Member Category",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:190",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Gear icon: meeting limits",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:191",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Gear icon: chat limits",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:192",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Gear icon: Meetings Autoconfirm",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:193",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Gear icon: Meetings Minimal Requirements",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:194",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Gear icon: Table Meetings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:195",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Gear icon: Custom Meeting Rating Form",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:196",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Hide Features: Matchmaking menu, Attendee List",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:197",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Category icons (web only)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:198",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Clone category (EP-23224) copies name, permissions, linked form, codes, templates, flags",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:199",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Disable category change hard-locks the field for all admins",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:200",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Category set via form / import / API / admin",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:201",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Outputs Account `category_id`",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:202",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Per-category allow-list of switchable categories",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:203",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Ticket visibility by country per category (EP-37154)",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:204",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Category `settings` jsonb escape hatch",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:205",
+"product": "Online Registration",
+"section": "§4.8 Participant Categories",
+"claim": "Minutes-credit per category",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:211",
+"product": "Online Registration",
+"section": "§4.9 Terms & Conditions",
+"claim": "Content authored at `/admin/registration/terms` with WYSIWYG",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:212",
+"product": "Online Registration",
+"section": "§4.9 Terms & Conditions",
+"claim": "\"Terms and Conditions\" toggle at `/admin/registration/settings`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:213",
+"product": "Online Registration",
+"section": "§4.9 Terms & Conditions",
+"claim": "Separate \"Terms and Conditions text\" box",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:214",
+"product": "Online Registration",
+"section": "§4.9 Terms & Conditions",
+"claim": "Mandatory \"I agree\" checkbox blocks submission",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:215",
+"product": "Online Registration",
+"section": "§4.9 Terms & Conditions",
+"claim": "\"Checkbox acknowledgement recorded\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:216",
+"product": "Online Registration",
+"section": "§4.9 Terms & Conditions",
+"claim": "T&C rendered on a separate page",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:222",
+"product": "Online Registration",
+"section": "§4.10 Registration Confirmation Page",
+"claim": "Configured at `Registration settings > Visitor > Confirmation page`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:223",
+"product": "Online Registration",
+"section": "§4.10 Registration Confirmation Page",
+"claim": "Separate Visitor and Buyer configurations",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:224",
+"product": "Online Registration",
+"section": "§4.10 Registration Confirmation Page",
+"claim": "Field 1 — Page name",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:225",
+"product": "Online Registration",
+"section": "§4.10 Registration Confirmation Page",
+"claim": "Field 2 — Main information frame (WYSIWYG + variables)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:226",
+"product": "Online Registration",
+"section": "§4.10 Registration Confirmation Page",
+"claim": "Variables: print badge link (EP-10489), category type (EP-14498), badge bar/QR (EP-22505)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:227",
+"product": "Online Registration",
+"section": "§4.10 Registration Confirmation Page",
+"claim": "Field 3 — Additional scripts",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:228",
+"product": "Online Registration",
+"section": "§4.10 Registration Confirmation Page",
+"claim": "\"After registration script\" fires post-submit",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:229",
+"product": "Online Registration",
+"section": "§4.10 Registration Confirmation Page",
+"claim": "Field 4 — Use existing custom page as confirmation page",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:230",
+"product": "Online Registration",
+"section": "§4.10 Registration Confirmation Page",
+"claim": "UTM codes forwarded to the confirmation page (EP-20762)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:231",
+"product": "Online Registration",
+"section": "§4.10 Registration Confirmation Page",
+"claim": "Registrant payload passed base64-encoded in the URL",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:237",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "Accessible at `eventURL/index/registration`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:238",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "Built from organiser-configured steps; Pipeline Bar with drag/disable/delete/add",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:239",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "Standard steps: Contact Details, Summary, Confirmation",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:240",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "\"Hide on Summary\" per tab",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:241",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "Payments on the Summary step: PayPal, Stripe, Parampos, configured at `/admin/payments/integration`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:242",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "Only one payment system active at a time (BR-9)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:243",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "Only three payment systems",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:244",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "Category hidden on registration form → absent from dropdown",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:245",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "Registration abandonment tracking and resume",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:246",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "Hosted-buyer-only registration mode",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:247",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "Invite-link entry point",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:248",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "CAPTCHA on the registration form",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:249",
+"product": "Online Registration",
+"section": "§4.11 End-user Registration Page",
+"claim": "Embedded registration widget",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:255",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "Account ID globally unique",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:256",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "Account External ID via `/api/v2/account/set`",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:257",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "Roles: Visitor, Speaker, Moderator, Team Member, Buyer, Guest",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:258",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "Activation link sent with every activation/approval email",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:259",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "OTP enabled at `/admin/general/settings`, email-only entry",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:260",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "OTP valid for 120 minutes (BR-12)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:261",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "OTP via WhatsApp/SMS (EP-26859)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:262",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "OTP code storage",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:263",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "System-generated password only works after activation (BR-3)",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:264",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "First Login Redirection at `/admin/registration/settings`, separate Visitor / Team Member",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:265",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "Force password change on first login (toggle)",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:266",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "Force upload photo (Visitor and Buyer)",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:267",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "Activation link works every time it is followed",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:268",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "Platform tells users the link is single-use",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:269",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "Activation codes are cryptographically weak",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:270",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "The only real invalidation is a password change",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:271",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "Account activation timestamp in exports (EP-26794)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:272",
+"product": "Online Registration",
+"section": "§4.12 Account and Login",
+"claim": "Inactive-user login error message (EP-14583 web / EP-15585 app)",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:278",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Clone entry point exists, irreversible",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:279",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Clones Contact Details / Personal Information / Custom Sections / Kiosk Onsite",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:280",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Clone is destructive before it is additive",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:281",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Clone does not copy categories, pipeline or ticket pricing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:282",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Four report types, all toggled at `/admin/registration/settings`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:283",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Day report template `/admin/emails/index/day_report`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:284",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Individual report template `/admin/emails/index/ind_report`, fires per submission",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:285",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Daily buyer report `/admin/hostedbuyers/emails/buyer_day_report`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:286",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Buyer individual report `/admin/hostedbuyers/emails/buyer_ind_report`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:287",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Recipients set in the template \"To\" field",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:288",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Daily at 4:30 pm event time",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:289",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Buyer registrations trigger both reports (BR-11)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:290",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Reports stop after the event ends",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:291",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Empty days send nothing",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:292",
+"product": "Online Registration",
+"section": "§4.13 Clone Registration Settings · §4.14 Reports",
+"claim": "Day report counts `account_events` excluding exhibitor-linked rows",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:298",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-1 First/Last/Email mandatory in every form",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:299",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-2 Standard fields once per form",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:300",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-3 Password unusable until activation",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:301",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-4 Required enforced on submission + post-login",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:302",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-5 Parent Grid overrides child",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "06_online_registration:303",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-6 At least one MCQ option must match",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:304",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-7 Category deletion instant and irreversible",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:305",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-8 Clone cannot be undone",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:306",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-9 Only one payment system active",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:307",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-10 Disable category change is event-wide, no per-admin exception",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:308",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-11 Buyer registration triggers both reports",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:309",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-12 OTP valid 120 minutes",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:310",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-13 Waiting-list approval triggers activation email",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:311",
+"product": "Online Registration",
+"section": "§7 Business Rules",
+"claim": "BR-14 Ticket expiry exclusive of the set date",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:317",
+"product": "Online Registration",
+"section": "§8 Data Model + registrant state diagram",
+"claim": "`REGISTRATION_FORM` / `FORM_TAB` / `GRID_ELEMENT` / `FORM_FIELD` / `FIELD_RESPONSE` / `PIPELINE_STEP` entities",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:318",
+"product": "Online Registration",
+"section": "§8 Data Model + registrant state diagram",
+"claim": "`REGISTRATION` entity with `submitted_at` and its own status",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:320",
+"product": "Online Registration",
+"section": "§8 Data Model + registrant state diagram",
+"claim": "`ACCOUNT.external_id` column",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:322",
+"product": "Online Registration",
+"section": "§8 Data Model + registrant state diagram",
+"claim": "Doc's `Registered` ↔ code `INACTIVE=0` mapping",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:323",
+"product": "Online Registration",
+"section": "§8 Data Model + registrant state diagram",
+"claim": "Two status vocabularies in one file",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:324",
+"product": "Online Registration",
+"section": "§8 Data Model + registrant state diagram",
+"claim": "`PARTICIPANT_CATEGORY` fields",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:325",
+"product": "Online Registration",
+"section": "§8 Data Model + registrant state diagram",
+"claim": "`EVENT.private_event / public_registration / simple_registration / registration_limit`",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:326",
+"product": "Online Registration",
+"section": "§8 Data Model + registrant state diagram",
+"claim": "Registrant state diagram — transitions",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:327",
+"product": "Online Registration",
+"section": "§8 Data Model + registrant state diagram",
+"claim": "`CategoryChanged` as a state",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:333",
+"product": "Online Registration",
+"section": "§9 Permissions Matrix",
+"claim": "Organiser/Admin has all eight configure capabilities",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:334",
+"product": "Online Registration",
+"section": "§9 Permissions Matrix",
+"claim": "Super Admin ⊃ Organiser",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:335",
+"product": "Online Registration",
+"section": "§9 Permissions Matrix",
+"claim": "Exhibitor/Visitor/Buyer cannot configure",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:336",
+"product": "Online Registration",
+"section": "§9 Permissions Matrix",
+"claim": "API user can create/update accounts and set ACTIVE",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:337",
+"product": "Online Registration",
+"section": "§9 Permissions Matrix",
+"claim": "Registration is additionally gated by tenant + event module flags",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:343",
+"product": "Online Registration",
+"section": "§10 Integrations",
+"claim": "PayPal / Stripe / Parampos",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:344",
+"product": "Online Registration",
+"section": "§10 Integrations",
+"claim": "Visit (Informa) sync, EP-1122 multithreading",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:345",
+"product": "Online Registration",
+"section": "§10 Integrations",
+"claim": "Google Analytics / UTM",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:346",
+"product": "Online Registration",
+"section": "§10 Integrations",
+"claim": "CRM/SSO generic API via `/api/v2/account/set`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:347",
+"product": "Online Registration",
+"section": "§10 Integrations",
+"claim": "Email delivery, no automatic activation resend",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:348",
+"product": "Online Registration",
+"section": "§10 Integrations",
+"claim": "Badge module supplies confirmation-page variables",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:349",
+"product": "Online Registration",
+"section": "§10 Integrations",
+"claim": "Additional registration integrations exist",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:355",
+"product": "Online Registration",
+"section": "§11 Notifications",
+"claim": "\"Visitor activation\" template",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:356",
+"product": "Online Registration",
+"section": "§11 Notifications",
+"claim": "`visitor_waiting_list` template",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:357",
+"product": "Online Registration",
+"section": "§11 Notifications",
+"claim": "Visitor private registration email",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:358",
+"product": "Online Registration",
+"section": "§11 Notifications",
+"claim": "`visitor_switch_category`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:359",
+"product": "Online Registration",
+"section": "§11 Notifications",
+"claim": "`day_report`, `ind_report`, `buyer_day_report`, `buyer_ind_report`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:360",
+"product": "Online Registration",
+"section": "§11 Notifications",
+"claim": "OTP email template",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:361",
+"product": "Online Registration",
+"section": "§11 Notifications",
+"claim": "SMS/push not natively used",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:362",
+"product": "Online Registration",
+"section": "§11 Notifications",
+"claim": "Eight further registration templates exist",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:363",
+"product": "Online Registration",
+"section": "§11 Notifications",
+"claim": "Per-account template-name override",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:369",
+"product": "Online Registration",
+"section": "§12 Reporting & Analytics",
+"claim": "Day Registration Report: count of accounts registered today, email only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:370",
+"product": "Online Registration",
+"section": "§12 Reporting & Analytics",
+"claim": "\"Covers all visitors including buyers\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:371",
+"product": "Online Registration",
+"section": "§12 Reporting & Analytics",
+"claim": "Individual Registration Report: real-time per submission",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:372",
+"product": "Online Registration",
+"section": "§12 Reporting & Analytics",
+"claim": "Daily Buyer Registration Report",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:373",
+"product": "Online Registration",
+"section": "§12 Reporting & Analytics",
+"claim": "Buyer Individual Registration Report",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:374",
+"product": "Online Registration",
+"section": "§12 Reporting & Analytics",
+"claim": "Registration analytics in admin (EP-1065)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:375",
+"product": "Online Registration",
+"section": "§12 Reporting & Analytics",
+"claim": "The React registration-statistics page shows registration analytics",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:376",
+"product": "Online Registration",
+"section": "§12 Reporting & Analytics",
+"claim": "Legacy statistics query is unsafe",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:384",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/general/edit`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:385",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/registration/settings`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:386",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/registration/terms`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:387",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/registration/categories`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:388",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/registration/details`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:389",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/registration/information`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:390",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/registration/customSection/XXXX`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:391",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/registration/onsite`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:392",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/general/settings`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:393",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/payments/integration`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:394",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/data/gdpr`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:395",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/admin/emails/index/<template>`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:396",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "\"Registration > Settings\" / \"Registration > Visitor > Additional settings\" (prose paths)",
+"verdict": "PARTIAL"
+},
+{
+"id": "06_online_registration:397",
+"product": "Online Registration",
+"section": "§13 Configuration Guide",
+"claim": "`/registration/settings/Visitor/Additional Settings`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:403",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Activation link reusable, no state change if already active",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:404",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Duplicate email → \"duplicate detection should redirect the user to login\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:405",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Duplicate registration can be explicitly permitted",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:406",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "A second, hard-error duplicate path exists for social sign-up",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "06_online_registration:407",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Category confirmation code not known → category not selectable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:408",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Deleting a form field destroys historical answers",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:409",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Clone overwrites irreversibly",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:410",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "API account without explicit ACTIVE cannot log in",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "06_online_registration:411",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Capture Input Timestamp records latest value per field",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:412",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Limit reduced below current count → existing unaffected",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:413",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "\"Hide on Summary\" data still collected",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:414",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "External ID uniqueness not enforced",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:415",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Two registrants at the limit boundary — race condition",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:416",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Two admins edit categories — last save wins, no locking",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:417",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Payment gateway timeout leaves a `Registered` record with no paid ticket",
+"verdict": "CONFIRMED"
+},
+{
+"id": "06_online_registration:418",
+"product": "Online Registration",
+"section": "§14 Edge Cases",
+"claim": "Custom confirmation page deleted after being selected",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:76",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Container App architecture supporting multiple events in one binary\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:77",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"App Builder — no-code configuration of appearance, menus, content, features, settings\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:78",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"App Build Pipeline — create-build, version tracking, beta/release publishing (operated via Client Manager)\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "19_mobile_app:79",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"In-App Updates — force-update and soft-update policies\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:80",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Authentication: username/password, OTP (email, SMS, WhatsApp), badge scan login, registration, forgot password, custom Web View login\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:81",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Digital Badge — per-category, QR/barcode, animated anti-screenshot ring, external code support\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:82",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Badge Scanning and Lead Capture — QR and barcode, online and offline; My Scans; Scanned Me; lead export by email and web; custom lead questions\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:83",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Networking: meeting request/confirm/reschedule/block, ratings, matchmaking, AI recommendations, messenger, favourites, connections\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:84",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"My Schedule — diary, date picker, filters, calendar sync (Outlook/Google), PDF/XLS download\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:85",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Sessions in App — list, search, filter, date picker, on-demand tab, detail page, paid session basket\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:86",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Exhibitor and Product Catalogue; Attendee/Buyer lists and profiles\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:87",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Floor Plans — native EP, ExpoFP, InVisual, external linking\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:88",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Push Notifications — meeting, session, custom; configurable timing; notification centre\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:89",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"App Settings / My Account — profile, edit, badge, company profile, basket, delete account, re-sync\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:90",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Data re-sync button, active only if ≥1 hour since last manual re-sync\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:91",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Multilanguage Webview — webview pages open in the user's active app language (EP-23090)\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:92",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Onboarding Experience — interest category pop-up on first login (EP-36617, EP-40162)\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:93",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Content Settings for Exhibitor Events\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:94",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"App Menu — configurable side menu and bottom navigation, category-level restrictions, colour settings\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:95",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Custom Pages and Documents in app\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:96",
+"product": "Mobile App",
+"section": "§2 Product Scope — Included",
+"claim": "\"Sponsor 'Featured Exhibitors' block (EP-27558)\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:102",
+"product": "Mobile App",
+"section": "§2 Product Scope — Excluded (F44 applies: this list is as unreliable as the Included list)",
+"claim": "\"daily/total chat limits enforcement (web only)\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:103",
+"product": "Mobile App",
+"section": "§2 Product Scope — Excluded (F44 applies: this list is as unreliable as the Included list)",
+"claim": "\"Community Groups … Feeds … Event News Page\" not on mobile",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:104",
+"product": "Mobile App",
+"section": "§2 Product Scope — Excluded (F44 applies: this list is as unreliable as the Included list)",
+"claim": "\"Interaction Dashboard\" not on mobile",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:105",
+"product": "Mobile App",
+"section": "§2 Product Scope — Excluded (F44 applies: this list is as unreliable as the Included list)",
+"claim": "\"Parent-Child frontend management\" not on mobile",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:107",
+"product": "Mobile App",
+"section": "§2 Product Scope — Excluded (F44 applies: this list is as unreliable as the Included list)",
+"claim": "\"Third-party analytics beyond the platform's own mobile analytics pipeline\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:108",
+"product": "Mobile App",
+"section": "§2 Product Scope — Excluded (F44 applies: this list is as unreliable as the Included list)",
+"claim": "\"Physical badge printing (Onsite & Kiosk)\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:109",
+"product": "Mobile App",
+"section": "§2 Product Scope — Excluded (F44 applies: this list is as unreliable as the Included list)",
+"claim": "\"Billing and invoicing for paid sessions (Transactions & Purchasing)\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:115",
+"product": "Mobile App",
+"section": "§3 User Roles",
+"claim": "Eight roles with distinct app capabilities",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:116",
+"product": "Mobile App",
+"section": "§3 User Roles",
+"claim": "\"Category-level menu restrictions … apply independently of the web permission matrix\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:118",
+"product": "Mobile App",
+"section": "§3 User Roles",
+"claim": "\"Organizer does not log into the attendee-facing app with admin privileges\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:119",
+"product": "Mobile App",
+"section": "§3 User Roles",
+"claim": "\"Super Admin / TAM: App Builder + Client Manager build pipeline + Global Module Management\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:127",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Configuration tabs: General (splash, logo), Settings (colors, fonts, login buttons), Features (menu items, category restrictions, OTP/badge toggles), Content\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:128",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Build triggered via Client Manager > client > Apps > Create Build\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "19_mobile_app:129",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Colors, fonts, content, menu items do not require a rebuild\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:130",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"App name, subtitle, bundle ID, icon, screenshots … require a rebuild\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:131",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Splash, Background and Logo are three distinct assets\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:132",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Splash type image or video, MP4 ≤10MB, show time configurable\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:133",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Event Loading Screen configured separately in App Builder > Features (EP-36)\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:139",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Five active colour slots; sixth (white) deprecated\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:140",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Login screen button colors: Login, Registration, Login via Scan\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:141",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Font selection including Gilroy (EP-27462)\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:142",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Per-event colour selector in multi-event apps\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:148",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"OTP by email (valid 10 minutes), SMS, or WhatsApp (valid 3 minutes)\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:149",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"SMS and WhatsApp channels configurable\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:150",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"'Generate One Time Password' button resends; only most recent code valid\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:151",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"OTP can be generated from the admin panel for a specific participant\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:152",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Badge Scan Login requires OTP to be enabled first\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:153",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Badge scan login: both external and internal QR codes supported\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:154",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "Badge-scan-login button text and colour configurable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:155",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Custom Web View login option redirects to a configurable web page\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:163",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Configured at Registration Settings > Badges > Digital Badges; per-category setup\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:164",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "Digital badge is a distinct object per category",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:165",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "Badge fields: Photo, Mr./Mrs., Full Name, Job Title, Company, Country, City, barcode/QR, Category, custom fields, background image",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:166",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Barcode types: `barcode_new`, `external_qr`, `external_barcode`\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:167",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Copy badge setup between categories\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:168",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"`Domains/Badge/` is the badge domain\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:174",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Fast path (~10ms): direct account ID lookup\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:175",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Slow path: barcode lookup in `account_attr` for `external_qr`, `external_barcode`, `barcode_new`, `external_code`\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:176",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"`any_scans` saves unknown barcodes to `account_scans_code`\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:177",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"`protected_scan_id_filter` forces barcode-only lookup; setting it to `false` does not disable it because of `isset()`\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:178",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"scan_id > 2,147,483,647 falls back to barcode lookup — fixed at `ApiController.php:21090-21093`\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:179",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Barcode collision (scan_id matches a different account) — no mitigation\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:180",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "Scanning Settings: Scanned Me list, colocated scans, any codes, exhibitor logo, category/role, visitor email after scan",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:182",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "Lead export columns \"Name, Email, Company, Position, Address, Phone, Star Rating, Notes, Products, Client type, Scan time, Lead Owner\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:183",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Unknown barcode + any_scans disabled → 'Not found', error code 2\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:189",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Meeting and message limits set on web are enforced on mobile (EP-24046)\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:190",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "Mobile has a pre-flight limit check",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "19_mobile_app:191",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Exhibitor meeting booking possible on mobile even with no team members (web blocks this)\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:192",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Chat notification sent once on chat creation only\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:193",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Session reminder timing configurable, multiple intervals (EP-36743)\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:194",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Sessions: 'Visible to' restricts categories; speakers always see their own sessions\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:200",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"APNS (iOS) / FCM (Android) tokens\" (§10)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:201",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Failed delivery not retried (platform behavior)\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:202",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "Device token storage",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:203",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "Registration endpoints",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:204",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Organisers can send custom broadcast push to participant segments\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:210",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "ExpoFP config (Event Id, Event Name, Map with Hall)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:211",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"IPS/GPS toggle for ExpoFP (EP-40363)\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:212",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"InVisual GPS Android implementation (EP-40070)\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:213",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Bi-directional sync — favourites and floor plan bookmarks\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "19_mobile_app:214",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Native EP floor plan — basic built-in map\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:220",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Required Update Version in App Builder … mismatch causes force-update loop\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:221",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "\"Force-update and soft-update policies\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:222",
+"product": "Mobile App",
+"section": "§4 Feature Inventory",
+"claim": "The update policy is served securely",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:228",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "App update required for store-sensitive changes",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:229",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "Badge scan login requires OTP enabled",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:230",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "OTP validity 10 min email / 3 min SMS-WhatsApp",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:231",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "Only the most recent OTP is valid",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:232",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "Re-sync cooldown ≥1 hour",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:234",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "Meeting limits enforced on mobile",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:235",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "Message limits enforced on mobile",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "19_mobile_app:236",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "Category menu restriction takes precedence over the permission matrix",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:238",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "Exhibitor meeting-booking parity gap",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:239",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "`protected_scan_id_filter` `false` does not disable it",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:240",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "Digital badge required per category; team members inherit exhibitor badge",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:241",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "`any_scans` → `account_scans_code`, else error code 2",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:242",
+"product": "Mobile App",
+"section": "§7 Business Rules Engine (13 rules)",
+"claim": "Multilanguage webview fallback to default",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:248",
+"product": "Mobile App",
+"section": "§8 Data Model",
+"claim": "`APP_RECORD {id, app_name, bundle_id, platform, status, event_id, required_update_version, current_build_version}`",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:249",
+"product": "Mobile App",
+"section": "§8 Data Model",
+"claim": "`DIGITAL_BADGE {id, account_id, category_id, barcode_data, qr_data, badge_color, ring_enabled, ring_color}`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:250",
+"product": "Mobile App",
+"section": "§8 Data Model",
+"claim": "`ACCOUNT_SCANS {id, account_id, scan_id, code, event_id, add_time, rate, notes, contacted, badge_scan}`",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:251",
+"product": "Mobile App",
+"section": "§8 Data Model",
+"claim": "`ACCOUNT_SCANS_CODE {id, code, event_id, account_id}`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:252",
+"product": "Mobile App",
+"section": "§8 Data Model",
+"claim": "`ACCOUNT_ATTR {account_id, attr_key, attr_val}`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:253",
+"product": "Mobile App",
+"section": "§8 Data Model",
+"claim": "`PUSH_NOTIFICATION {id, event_id, recipient_category, notification_type, body, scheduled_at, status}`",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:254",
+"product": "Mobile App",
+"section": "§8 Data Model",
+"claim": "App build/publish state machine (Draft → BuildQueued → … → LiveInStore → Deleted)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "19_mobile_app:266",
+"product": "Mobile App",
+"section": "§9 Permissions Matrix",
+"claim": "The permission-flow diagram: authenticate → category menu check → feature permission matrix check → action allowed",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:268",
+"product": "Mobile App",
+"section": "§9 Permissions Matrix",
+"claim": "\"Configure App Builder — Organizer Yes / TAM Yes\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:269",
+"product": "Mobile App",
+"section": "§9 Permissions Matrix",
+"claim": "\"Trigger app build — TAM only\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "19_mobile_app:270",
+"product": "Mobile App",
+"section": "§9 Permissions Matrix",
+"claim": "Roles computed for the app",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:276",
+"product": "Mobile App",
+"section": "§10 Integrations (7 rows)",
+"claim": "Apple App Store",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "19_mobile_app:277",
+"product": "Mobile App",
+"section": "§10 Integrations (7 rows)",
+"claim": "Google Play Store",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "19_mobile_app:278",
+"product": "Mobile App",
+"section": "§10 Integrations (7 rows)",
+"claim": "ExpoFP Floor Plan",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:279",
+"product": "Mobile App",
+"section": "§10 Integrations (7 rows)",
+"claim": "InVisual Floor Plan",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:280",
+"product": "Mobile App",
+"section": "§10 Integrations (7 rows)",
+"claim": "Aditus (Custom Badge) — \"toggle at `/admin/general/settings`: Use Aditus Custom Page; email as UID\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:281",
+"product": "Mobile App",
+"section": "§10 Integrations (7 rows)",
+"claim": "Outlook / Google Calendar",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:282",
+"product": "Mobile App",
+"section": "§10 Integrations (7 rows)",
+"claim": "Push Notification Service (APNS/FCM)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:283",
+"product": "Mobile App",
+"section": "§10 Integrations (7 rows)",
+"claim": "SMS / WhatsApp (OTP)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:293",
+"product": "Mobile App",
+"section": "§11 Notifications",
+"claim": "\"Push for chat sent once on chat creation only\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:300",
+"product": "Mobile App",
+"section": "§12 Reporting and Analytics",
+"claim": "\"Mobile App Analytics: unique mobile app logins (iOS/Android); sessions per user; active users per day. Filters: date range, event, platform (iOS/Android). XLS via Data Import/Export > Unique Mobile App Logins\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:301",
+"product": "Mobile App",
+"section": "§12 Reporting and Analytics",
+"claim": "The doc lists 5 mobile report families",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:302",
+"product": "Mobile App",
+"section": "§12 Reporting and Analytics",
+"claim": "Badge Scan Summary, Lead Export, Notifications Analytics, Schedule Download usage",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:313",
+"product": "Mobile App",
+"section": "§13 Configuration Guide (22 rows)",
+"claim": "\"Font selection — Requires app update\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:314",
+"product": "Mobile App",
+"section": "§13 Configuration Guide (22 rows)",
+"claim": "\"Animated ring at `/admin/appbuilder/feature/2`; ring colour per category at `/admin/badges/digital`\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:315",
+"product": "Mobile App",
+"section": "§13 Configuration Guide (22 rows)",
+"claim": "\"Data re-sync cooldown — 1 hour, platform fixed, non-configurable\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:316",
+"product": "Mobile App",
+"section": "§13 Configuration Guide (22 rows)",
+"claim": "\"Required Update Version — App Builder\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "19_mobile_app:317",
+"product": "Mobile App",
+"section": "§13 Configuration Guide (22 rows)",
+"claim": "\"Aditus custom badge page — `Use Aditus Custom Page`\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "19_mobile_app:318",
+"product": "Mobile App",
+"section": "§13 Configuration Guide (22 rows)",
+"claim": "\"IPS/GPS Toggle (ExpoFP) — App Builder / General Settings\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "19_mobile_app:319",
+"product": "Mobile App",
+"section": "§13 Configuration Guide (22 rows)",
+"claim": "\"Enable Exhibitor Events in app — App Builder > Content Settings\"",
+"verdict": "PARTIAL"
+}
+]
+}

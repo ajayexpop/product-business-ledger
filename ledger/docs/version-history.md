@@ -4,6 +4,93 @@ The ledger at **https://claude.ai/artifact/WS7mJGdC1y2RzsPTScKu6d**. Versions 1 
 "preview" of the redesign (a separate artifact beside the old ledger, with its own database). On 28 Sep 2026 it became the
 ledger (version 13) and the old link got a "moved" page.
 
+## Version 21 (30 Sep 2026): published, 1790786519-79a4 — Beta: logging with Claude; Must-have ledger open to everyone
+**Beta** replaces the logging placeholder for the Settings viewers (Ajay, Bartosz); everyone else still sees the card, now marked
+*In testing*. Two ways in, one window: **Quick share** (clients, then Speak or type / Chat snippet / Call recording; Claude fills in
+what, why and outcome with a source chip on each, finds the clients named, and asks "Is this it?" against the needs asked for,
+what is built, the Must-have ledger and the Feature ledger; join a need, record it as already built, follow work on its way, or
+log it new; Claude tidies the wording and asks one question) and **Full review** (Describe, Check matches, Review, Send: match
+percentages and relations, the combined signal and the tickets it would close, Claude's draft with sources, up to 3 questions,
+the platform surfaces, the product area and the sales colleague who adds the value). New items go into `ledger` / `ledger-events`
+through the same writer as the form (`feWriteNew`, `via: "beta"`); joins and the rest are voices in a new `ledger-voices`
+collection that add their clients to the need's signal. Test mode tags everything and keeps it out of every count. The item gains
+a Beta section (what the client said, quotes, clients and signal, links and Link more, Close the chain, Sign and move it along for
+Settings viewers). New sub-tab **Sync & logs → Beta lab** (test mode, cases, clear my tests, Check Claude, the session's AI log);
+History gains a Beta intake source, including one line per call to Claude. Capabilities: the Fathom connector
+(`get_recording_by_url`, `get_meeting_transcript`) added. The **Must-have ledger is open to everyone**: the lock, the countdown
+and the access code are gone. QA: 0 errors, 0 issues in all five runs.
+
+## Version 20 (30 Sep 2026): published, 1790774512-be2c — Product delivery, Settings, logging placeholder
+Tab groups renamed: **Work → Product delivery** (Requests, Demand, Delivery, Bugs, Incidents) and **How it works → Settings**
+(Rules, Method & sources, Sync & logs). Logging a new work item is moving to a Claude skill: every Log entry point opens an
+*In progress* card saying so; Ajay and Bartosz get "Use the old form" on it; filling in owed details on an existing item still
+opens the form. Tours and the Guide's Ask say the same. The Must-have countdown reached zero (30 Sep, 13:12 UTC); the ledger
+stays locked until the owner decides. QA: 0 errors, 0 issues in all five runs.
+
+## Version 19 (30 Sep 2026): published, 1790768830-d89c — How it works for Bartosz
+The whole How it works section (Rules, Method & sources, Sync & logs with Data refresh and History) now opens to the ids in
+`EP_HOW_IDS` as well as Ajay: Bartosz (bartosz@expoplatform.com, `u_0KCjQDtQxEOgVhmNzuV5SQ`, found from his visit record). Tours,
+the Guide's Ask and landing follow the same access. The Must-have ledger, the Feedback inbox, day counts, and the visits and
+feedback in History stay Ajay's (the last two by `db` rule). QA: 0 errors, 0 issues in all five runs, with a new check that a
+How it works viewer gets the three tabs and nothing else.
+
+## Version 18 (29 Sep 2026): published, 1790691879-0d2c — Must-have access code
+While the countdown runs, the Must-have ledger's lock card has a small key icon (bottom right). It opens an access code box;
+the right code opens the Must-have ledger, and only it (Rules, Method & sources and Sync & logs stay Ajay's), for that viewer,
+remembered in their browser; a wrong code is refused. Only the code's SHA-256 is in the page, and each unlock is recorded in
+the viewer's activity (History). A soft gate, not a security boundary. QA: 0 errors, 0 issues in all five runs, with checks
+that a wrong code is refused, the right one opens the ledger, and nothing else opens.
+
+## Version 17 (28 Sep 2026): published, 1790620458-ecec — status follows Jira; IMEX Frankfurt 2027; funded
+**Must-have status is Jira's.** Every item with a ticket shows the ticket's own status (Ready for release, In testing, Ready to
+start, Open…) on the board, the grid, the table and the form (read-only there), placed in the column that status maps to;
+the 13 items whose ledger status disagreed were set to Jira's with a history entry, and every Jira refresh now re-reads
+every must-have ticket, so the ledger matches every board. The "status differs from Jira" flag is gone. **For show**: the four
+open IMEX items (EP-57297, EP-55779, EP-57914, EP-57918) are for IMEX Frankfurt 2027 (18-20 May 2027) with delivery this year,
+so they are checked against that show and not flagged overdue. **Funded**: all Hyve dedicated team work (Hyve bar and every HV
+tag), the IMEX AI Search project (EP-55779, EP-57914, EP-57918) and Vinexposium's required custom filters (EP-56915), with a
+badge, a filter and a Funded field. QA: 0 errors, 0 issues in all five runs.
+
+## Version 16 (28 Sep 2026): published, 1790619040-9c09 — Sync & logs with History; must-have items complete
+**Must-have items filled in from their sources** (database writes): every item's Jira description and comments, and the 16
+Confluence pages they link, were read (four agents, one batch each, every value with its source); the empty Why, Impact,
+Rationale, Priority, Dependencies, Estimate and Notes were filled where a source supports them, and nothing already written was
+replaced. Drivers follow Jira's Reported by and Pipedrive id: DLG on the four Session Calendar stories and EP-57107 (split from
+DLG's EP-57014), Vinexposium on EP-56915 and EP-48716, BeautyIstanbul on EP-55900, HINTE on EP-56170; Platform on the internal
+tickets that name no client. Ajay's own edits made meanwhile (EP-55432: Why and Driver Informa; EP-56170: HINTE) were kept.
+EP-48716's estimate follows the 28 Sep comments (BE 21-22d). Each item's pop-up shows **Where the details came from**: the
+source of every field, the pages read and what the sources did not say. **Data refresh is now Sync & logs** with two sub-tabs,
+**Data refresh** and **History**: one timeline of every change anyone made (must-have items and columns, work-item events, rule
+saves, data pulls and requests, feedback) and every visit, filterable by period, source, person and text, each line opening its
+item. Visits come from a new private **activity log** (`activity/<id>/months/<yyyy-mm>`: sign-ins, tabs and pop-ups opened),
+readable only by the owner under two new `db` rules (checked live: a regular viewer's write into someone else's folder is
+refused); the sign-in notice says so. Tour cards now also look beside a tall target. QA: 0 errors, 0 issues in all five runs.
+
+## Version 15 (28 Sep 2026): published, 1790617311-ceb0 — Must-have Board, signal explained
+**Must-have ledger refreshed and redesigned.** The Confluence page was read again with its Jira keys and folded in by the new
+`tools/pipeline_pull.py` (database write, no page change needed): 26 items, 8 new, the Iyzico row's ticket (EP-55900), one
+estimate and one month changed, every item's Jira columns re-read. The ledger opens on a new **Board**: a column per month
+(plus *No month yet*), every item a card with key, status, feature, client and tier, team, days and its flags, each client's
+show marked in its month; columns switch to Client, Team or Status. Nine figure tiles became five figures and one
+**Needs attention** line whose parts filter the board. The grid and table stay one click away; the effort charts sit under
+the board. **Demand: the signal score explained**: a panel above the ranked list and the Needs table (formula, weights,
+worked example from the top need, what it does and does not count), each need's pop-up shows its own sum customer by
+customer, every signal number explains itself on hover, and the Guide's glossary has the term. QA: 0 errors, 0 issues in all
+five runs, with new checks that the board is the default, its cards fit, every grouping renders, the attention line filters
+and clears, and the worked example adds up to the top need's signal.
+
+## Version 14 (28 Sep 2026): published, 1790600716-0bb8 — Feedback
+**Feedback: Happy / Sad / Want.** A Feedback button in the header and a Feedback pane in the Guide: pick a mood, write one
+line, optionally say how much it matters (nice to have, important, blocking); where the viewer was (tab and open pop-up) is
+attached unless they untick it. Senders see their own notes, the status and Ajay's replies in the Guide, a dot on the Feedback
+tab and a one-time "Ajay replied" notice. For Ajay the header button is the **Feedback inbox** (also Guide → You): mood counts,
+filters (mood, status, theme, search), per note a status (New, Planned, Building, Shipped, Won't do), a theme to group related
+notes, a reply thread (changing the status drafts a reply), and a **Roadmap** board of themes by status with people and mood
+counts. Privacy is enforced by two new `db` rules: `feedback` is readable and writable only by the owner, and `feedback/{self}`
+by each person as well (checked live: a regular viewer's write into someone else's folder is refused). `tools/feedback.py`
+builds `docs/feedback-roadmap.md` from the export. QA: 0 errors, 0 issues as Ajay, as someone else (both widths) and without
+connectors, including "nobody else's feedback visible".
+
 ## Version 13 (28 Sep 2026): published, 1790565657-42b7 — the ledger
 Preview mode removed: no ribbon, no read-only Requests or Rules, no "preview test entry" labels; the page title is
 "Internal Product Business Ledger". Data refresh gains in-page **Planhat** (every Active company: tier, health, CSM and RM

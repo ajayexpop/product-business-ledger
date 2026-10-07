@@ -1,5 +1,28 @@
 {
   "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "deps": "EP-48716 comments 2026-09-16, 2026-09-18, 2026-09-28 by Maryna Dovgal | EP-48716 comments 2026-09-16, 2026-09-27, 2026-09-28 by Kavinder Rawal | EP-48716 comment 2026-09-17 by Olena Khromei",
+      "driver": "Jira Reported by INTERNAL and Vinexposium",
+      "estimate": "EP-48716 comments 2026-09-28",
+      "notes": "EP-48716 comment 2026-09-28 by Kavinder Rawal | EP-48716 comment 2026-09-28 by Maryna Dovgal",
+      "why": "EP-48716 Reported by INTERNAL, Vinexposium | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/1476886541/Email+digest (Background)"
+    },
+    "gaps": [
+      "observation (not a missing field): current estimate 'BE - 18d' is out of date; 28 Sep comments put backend at ~21-22 days, FE and MQA unconfirmed; Jira description rough total 24-29 days"
+    ],
+    "pages": [
+      {
+        "note": "Last modified 10 Apr 2026; describes the old template-in-Meetings design, superseded by the Campaigns approach (comments 16-28 Sep)",
+        "read": true,
+        "title": "Email digest",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/1476886541/Email+digest"
+      }
+    ]
+  },
   "flags": {
     "drift": true,
     "dueSoon": false,
@@ -73,54 +96,136 @@
       "k": "migrate",
       "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
       "to": ""
+    },
+    "hb260928conf-month": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "month",
+      "from": "2026-10",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 2026-09-28.",
+      "to": "2026-11"
+    },
+    "hb260928enr-deps": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "deps",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-48716 comments 2026-09-16, 2026-09-18, 2026-09-28 by Maryna Dovgal | EP-48716 comments 2026-09-16, 2026-09-27, 2026-09-28 by Kavinder Rawal | EP-48716 comment 2026-09-17 by Olena Khromei",
+      "to": "Built as a new campaign type in the shared Campaigns module (agreed 16 Sep), so existing campaigns need a regression check. Email layouts from EP-52511; layout of the Booking Activity total and bar awaited from Nazar Melnyk; FE and MQA estimates still to be confirmed by Evgen Polivach; the admin send screen gets no design and is built to existing patterns. Meeting status change log only fills from release, so Booking Activity stays hidden at first. Covers exhibitors from EP-47533. The Confluence spec still describes the superseded design. Risk: the timeline cannot go to the client until the full estimate is locked."
+    },
+    "hb260928enr-driver": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Jira Reported by INTERNAL and Vinexposium",
+      "to": "5368"
+    },
+    "hb260928enr-estimate": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "estimate",
+      "from": "BE - 18d. FE and QA estimates are pending",
+      "k": "edit",
+      "note": "Filled from EP-48716 comments 2026-09-28",
+      "to": "BE 21-22d (revised in the 28 Sep comments); FE and QA estimates pending"
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-48716 comment 2026-09-28 by Kavinder Rawal | EP-48716 comment 2026-09-28 by Maryna Dovgal",
+      "to": "28 Sep: aggregate send statistics and ~21-22 backend days approved; 'turn it back on' button kept; admin screen to be built without design. Waiting on FE and MQA estimates (Evgen Polivach) and the Booking Activity card layout (Nazar Melnyk)."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-48716 Reported by INTERNAL, Vinexposium | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/1476886541/Email+digest (Background)",
+      "to": "Asked by Vinexposium and internally: attendees miss meetings and unread messages; a digest email cuts no-shows and support tickets."
+    },
+    "hb260928jira-status": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "status",
+      "from": "Discovery",
+      "k": "edit",
+      "note": "Status now follows Jira: In Progress (owner, 28 Sep 2026: the ledger must match every board)",
+      "to": "In Progress"
     }
   },
   "j": {
-    "aggOrigDays": null,
+    "aggOrigDays": 32.88,
     "assignee": "Evgen Polivach",
-    "canon": "Planned",
-    "due": "2026-10-28",
-    "origDays": null,
+    "canon": "In Progress",
+    "due": "2026-11-11",
+    "origDays": 0,
     "priority": "Urgent",
     "resolved": null,
-    "spentDays": 2.36,
-    "status": "Open",
+    "spentDays": 3.74,
+    "status": "In Progress",
     "summary": "Email Digest",
     "team": "Visitor team",
     "teamField": "customfield_10001",
     "type": "Story"
   },
+  "jAt": "2026-09-30T11:34:54Z",
   "migrated": {
     "at": "2026-09-22",
     "schema": 2
   },
   "n": {
-    "days": 18,
-    "daysKind": "partial"
+    "days": 21.5,
+    "daysKind": "range"
   },
-  "order": 180,
+  "order": 250,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "Jira Reported by INTERNAL and Vinexposium",
+      "by": "Claude",
+      "field": "Jira",
+      "name": "5368",
+      "quote": "Jira Reported by INTERNAL and Vinexposium",
+      "value": "5368"
+    }
+  },
   "raw": {
     "area": "Communication Channels (Email, Chat & Notifications / Networking)",
-    "month": "Oct 2026",
+    "month": "Nov 2026",
     "status": "Discovery / Ready for dev (Design completed in EP-52511; architecture aligned with Engineering; finalizing re-estimates and spec update)"
   },
   "source": "confluence-2155872263",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-28",
   "v": {
     "area": "Communication Channels",
-    "deps": "",
-    "driver": "",
-    "estimate": "BE - 18d. FE and QA estimates are pending",
+    "deps": "Built as a new campaign type in the shared Campaigns module (agreed 16 Sep), so existing campaigns need a regression check. Email layouts from EP-52511; layout of the Booking Activity total and bar awaited from Nazar Melnyk; FE and MQA estimates still to be confirmed by Evgen Polivach; the admin send screen gets no design and is built to existing patterns. Meeting status change log only fills from release, so Booking Activity stays hidden at first. Covers exhibitors from EP-47533. The Confluence spec still describes the superseded design. Risk: the timeline cannot go to the client until the full estimate is locked.",
+    "driver": "5368",
+    "estimate": "BE 21-22d (revised in the 28 Sep comments); FE and QA estimates pending",
     "feature": "Email Digest",
     "impact": "Attendees & Exhibitors: timely daily summaries of scheduled meetings, incoming requests and unread messages. Organizers & Support: full delivery/open-rate analytics and logs via Campaigns with zero-spam protection.",
     "key": "EP-48716",
-    "month": "2026-10",
-    "notes": "",
+    "month": "2026-11",
+    "notes": "28 Sep: aggregate send statistics and ~21-22 backend days approved; 'turn it back on' button kept; admin screen to be built without design. Waiting on FE and MQA estimates (Evgen Polivach) and the Booking Activity card layout (Nazar Melnyk).",
     "owner": "Kavi",
     "priority": "Strategic",
     "rationale": "Boosts attendee/exhibitor engagement and meeting show-up rates by delivering an automated, phase-aware daily digest (pre-event booking activity vs during-event upcoming 24h schedule and unread chats).",
-    "status": "Discovery",
+    "status": "In Progress",
     "team": "",
-    "why": ""
+    "why": "Asked by Vinexposium and internally: attendees miss meetings and unread messages; a digest email cuts no-shows and support tickets."
   }
 }

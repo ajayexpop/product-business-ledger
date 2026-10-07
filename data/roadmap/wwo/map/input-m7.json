@@ -1,0 +1,1265 @@
+{
+"features": [
+{
+"id": "integ-event-system-import",
+"theme": "integ",
+"q": "2023-Q1",
+"title": "Event system content import",
+"benefit": "Pull exhibitors, sessions and speakers automatically from an external event management system.",
+"what": "Exhibitors, sessions and speakers sync from an external event management system, configured per event. Exhibitors are matched by account number and kept up to date, and main contacts are added as admin team members.",
+"detail": "Exhibitors, sessions and speakers sync from the external system, configured per event, with exhibitors matched by account number and main contacts added as admin team members.",
+"stories": [
+"Integration with ASP events system to pull in Exhibitors, Sessions and Speakers"
+]
+},
+{
+"id": "integ-visit-badge-scanner",
+"theme": "integ",
+"q": "2023-Q2",
+"title": "Visit badge and scanner integration",
+"benefit": "Use Visit digital badges and the Visit lead scanner inside the platform, with scanned leads pulled back in.",
+"what": "Organisers can switch on the Visit digital badge and Visit lead scanner for web and app, sync leads scanned in Visit into the platform, and choose email or external ID to match accounts.",
+"detail": "Organisers can switch on the external Visit badge and lead scanner for web and app, sync leads scanned in Visit into the platform, and choose email or external ID as the matching identifier.",
+"stories": [
+"Visit G2 external badge",
+"Visit G2 external scanner",
+"Visit G2 pull external leads to EP",
+"Identifier setting for Visit integration"
+]
+},
+{
+"id": "integ-api-meeting-data",
+"theme": "integ",
+"q": "2023-Q2",
+"title": "Meeting data in the public API",
+"benefit": "Retrieve full meeting data through the public API, including incremental updates since your last sync.",
+"what": "A paginated public API endpoint returns every meeting with the same fields as the meetings export, filterable by account and time. Session responses include the exhibitor ID, and API stand changes move pre-scheduled meetings.",
+"detail": "A paginated endpoint returns every meeting with the same fields as the meetings export, with filters by account and time and sort options. Session responses include the exhibitor ID for exhibitor events, updating an exhibitor's hall and stand also moves their pre-scheduled meetings, and the account interactions endpoint was documented.",
+"stories": [
+"API endpoints int the public API to pull out meeting data in its entirety",
+"Account Interactions public endpoint. Formatting changes + doc",
+"Replacing the halls and stand numbers for exhibitor via API parameters should replace the pre-scheduled existing meetings with the new Halls & stand numbers",
+"Add additional filter param for /api/v2/meetings/export endpoint to fetch incremental updates ",
+"Exhibitor Id need to add from session export file, /api/v2/sessions/getSession  and /api/v2/sessions/get API resposne for Exhibitor events"
+]
+},
+{
+"id": "integ-expofp-floor-plan",
+"theme": "integ",
+"q": "2023-Q3",
+"title": "ExpoFP floor plan integration",
+"benefit": "Show the interactive ExpoFP floor plan on the event site, with search, deep links and wayfinding.",
+"what": "Organisers switch on the ExpoFP floor plan with an account token. Attendees search exhibitors, custom locations and sessions, including in-person sessions and exhibitor events, with deep links and wayfinding.",
+"detail": "Enabled with an account token, the ExpoFP floor plan lets attendees search exhibitors, custom locations and sessions, including in-person sessions and exhibitor events with a physical location.",
+"stories": [
+"ExpoFP Floorplan | Integration",
+"Sessions in ExpoFP integration",
+"ExpoFP || Add field for account token"
+]
+},
+{
+"id": "integ-reach5-buyer-registration",
+"theme": "integ",
+"q": "2023-Q3",
+"title": "Reach5 login for buyer registration",
+"benefit": "Let returning buyers log in with their Reach5 account in the buyer registration pop-up.",
+"what": "Reach5 login is available in the buyer registration pop-up used on the repeat-registration link.",
+"detail": "Reach5 login was added to the buyer registration pop-up used on the repeat-registration link.",
+"stories": [
+"Please add reach 5 settings functionality to the EP internal buyer registration pop up for all buyers to register using EP reg link "
+]
+},
+{
+"id": "integ-klipso-integration",
+"theme": "integ",
+"q": "2023-Q4",
+"title": "Klipso integration",
+"benefit": "Import exhibitors from Klipso automatically, with categories and custom questions kept up to date.",
+"what": "The platform pulls exhibitor data from Klipso every minute or on demand with a Sync button, maps categories by text, imports chosen exhibitor custom questions and passes contact email and username.",
+"detail": "The integration pulls exhibitor data from Klipso every minute or on demand with a Sync button, maps categories by text, brings in chosen exhibitor custom questions and passes contact email and username.",
+"stories": [
+"Build an integration between EP and Klipso",
+"Klipso Integration - Addition of two parameters",
+"Klipso Integration - Addition of Custom Questions"
+]
+},
+{
+"id": "integ-public-api-2023q4",
+"theme": "integ",
+"q": "2023-Q4",
+"title": "Public API improvements",
+"benefit": "Do more through the public API, from exporting buyers to creating products with image links.",
+"what": "The API offers a buyers-only export, product images as URLs, speaker and moderator ID arrays on sessions, 'Other' locations for exhibitor events, the indoor maps toggle and activity category limits on profile edits.",
+"detail": "A buyers-only export is available through the API, product images can be sent as URLs, session responses include speakers and moderators, exhibitor event 'Other' locations can be set, the indoor maps toggle is exposed and activity category limits can be set when editing profiles.",
+"stories": [
+"Export Buyers - Via API",
+"Accept URL for the images[] field for /api/v2/product/set endpoint",
+"/api/v2/sessions/get - Parameters \"speakers\" and \"moderators\"",
+"Text Field for \"Other\"  option in Session Location for Exhibitor events is missing in Imports and API",
+"Include value of MapsPeople \"Enable\" toggle to the API",
+"Edit profile add activity category limit from API"
+]
+},
+{
+"id": "integ-aditus-app-badges",
+"theme": "integ",
+"q": "2024-Q2",
+"title": "Aditus badges in the app",
+"benefit": "Show attendees their Aditus tickets on the badge page of the mobile app.",
+"what": "When the Aditus badge integration is on, the app's badge menu lists the user's Aditus tickets, found by email, each opening its badge page, with screens for not found and offline.",
+"detail": "When the Aditus badge integration is switched on, the app's badge menu lists the user's Aditus tickets, found by email.",
+"stories": [
+"Custom Badge Page Integration with Aditus"
+]
+},
+{
+"id": "integ-crm-session-import",
+"theme": "integ",
+"q": "2024-Q2",
+"title": "CRM session import",
+"benefit": "Import sessions and speakers from an organiser's own CRM, along with their tracks, types and tags.",
+"what": "An integration with an organiser's own CRM, switched on in event setup, pulls sessions and speakers into the agenda with their tracks, types and tags.",
+"detail": "An integration with an organiser's own CRM, switched on in event setup, pulls sessions and speakers into the agenda with their tracks, types and tags.",
+"stories": [
+"Sessions integration with DWTC CRM"
+]
+},
+{
+"id": "integ-event-system-import-enhancements",
+"theme": "integ",
+"q": "2024-Q2",
+"title": "Event system import enhancements",
+"benefit": "Control which sessions, speakers and exhibitor details are imported from the external event system.",
+"what": "Imports bring in moderators, only the speakers of imported sessions, exhibitor custom fields and categories, tracks and session types, and filter sessions by stream and seminar name. Fields can be locked and welcome emails sent.",
+"detail": "Imports now bring in moderators, only the speakers of imported sessions, exhibitor custom fields and categories, tracks and session types, and can filter sessions by stream and seminar name. Fields can be locked from updates and welcome emails sent to imported exhibitors.",
+"stories": [
+"ASP Integration - Sessions/Filtering/Speakers Enhancements",
+"ASP Integration - Enhancements",
+"ASP Exhibitor Integration - Send Email Functionality",
+"ASP Integration Enhancements"
+]
+},
+{
+"id": "integ-expofp-data-sync",
+"theme": "integ",
+"q": "2024-Q2",
+"title": "ExpoFP exhibitor data sync",
+"benefit": "Keep ExpoFP floor plans current with exhibitor details sent automatically from the platform.",
+"what": "Exhibitor name, stand, order ID, description, logo and category are sent to ExpoFP whenever an exhibitor is created, edited or deleted, with changes grouped and sent together every ten minutes.",
+"detail": "Exhibitor name, stand, order ID, description, logo and category are pushed to ExpoFP whenever an exhibitor changes, with changes grouped and sent together every ten minutes.",
+"stories": [
+"ExpoFP - Data Integration",
+"Gather exhibitor changes and send them to the ExpoFP together once in 10 minutes"
+]
+},
+{
+"id": "integ-public-api-2024q2",
+"theme": "integ",
+"q": "2024-Q2",
+"title": "Public API improvements",
+"benefit": "Set networking opt-in, filter statistics by time and export meeting tags through the public API.",
+"what": "The account endpoint accepts a networking opt-in, statistics endpoints filter by Unix timestamps, meeting locations follow stand changes sent by API, and meeting tags appear in the meetings export and endpoint.",
+"detail": "The account endpoint accepts a networking opt-in parameter, statistics endpoints filter by Unix timestamps, stand transmission via the API was improved and meeting tags appear in the meetings export and its endpoint.",
+"stories": [
+"Add Networking Opt IN/OUT parameter to the /api/v2/account/set endpoint",
+" Add time filter to API request of /api/v2/statistics/accountsInteractions and /api/v2/statistics/pageVisits",
+"Improve transmission of exhibitor stands to the EP via API, so remain posibility to replace them",
+"Expose Meeting Tags in Export & API"
+]
+},
+{
+"id": "integ-crowd-connected",
+"theme": "integ",
+"q": "2024-Q3",
+"title": "Crowd Connected location and messaging",
+"benefit": "Send location-based push messages through Crowd Connected and link app users to their location data.",
+"what": "The apps pass each user's ID to Crowd Connected, which can send notifications with category targeting through a dedicated API. ExpoFP and Crowd Connected settings can be entered when an app is created.",
+"detail": "The apps pass each user's ID to Crowd Connected, Crowd Connected can send notifications with category targeting through a dedicated API, and ExpoFP and Crowd Connected settings can be entered when an app is created.",
+"stories": [
+" Pass User ID through to Crowd Connected",
+"Push messaging through Crowd Connected on app",
+"ExpoFP/CrowdConnected settings during app creation"
+]
+},
+{
+"id": "integ-reach5-registration",
+"theme": "integ",
+"q": "2024-Q3",
+"title": "Reach5 accounts at registration",
+"benefit": "Let visitors register with an existing Reach5 account, with their details carried across.",
+"what": "Visitor registration checks an email against both the platform and Reach5, logs in known users and creates platform accounts from Reach5 data.",
+"detail": "Visitor registration checks an email against both systems and creates platform accounts from Reach5 data.",
+"stories": [
+"Autologged in mode + Reach 5 in EP Registration - VinExpo"
+]
+},
+{
+"id": "integ-public-api-2024q4",
+"theme": "integ",
+"q": "2024-Q4",
+"title": "Public API exhibitor and product controls",
+"benefit": "Switch an exhibitor's sponsor pop-up and activate or deactivate products through the public API.",
+"what": "The exhibitor endpoint accepts a sponsor pop-up parameter, and the product endpoint accepts an active or inactive status.",
+"detail": "The exhibitor endpoint accepts a sponsor pop-up parameter, and the product endpoint accepts an active or inactive status.",
+"stories": [
+"Sponsor pop-up parameter on api/v2/exhibitor/set",
+"/api/v2/product/set - Addition of parameter \"status\""
+]
+},
+{
+"id": "integ-a2z-enhancements",
+"theme": "integ",
+"q": "2025-Q1",
+"title": "A2Z integration enhancements",
+"benefit": "Choose which A2Z exhibitors to import by booth status and map their pavilion and hall.",
+"what": "The A2Z integration imports only exhibitors with a selected booth status, and maps pavilion and hall codes to chosen custom fields.",
+"detail": "Only exhibitors with the selected booth status are imported, and pavilion and hall codes map to chosen custom fields.",
+"stories": [
+"A2Z Enhancements"
+]
+},
+{
+"id": "integ-reach5-sso",
+"theme": "integ",
+"q": "2025-Q1",
+"title": "Reach5 single sign-on",
+"benefit": "Let attendees sign in with Reach5 single sign-on.",
+"what": "The event site accepts a Reach5 authorisation code and exchanges it for an access token, logging the participant in and taking them to their dashboard.",
+"detail": "The site accepts a Reach5 authorisation code and exchanges it for an access token to log the user in.",
+"stories": [
+"Reach5 SSO"
+]
+},
+{
+"id": "integ-visit-sso-meetings",
+"theme": "integ",
+"q": "2025-Q1",
+"title": "Visit staff sign-on and meeting rights",
+"benefit": "Let exhibitors register their staff through single sign-on and control who can have meetings from Visit data.",
+"what": "A 'Register Your Staff' item under Team Members signs exhibitor admins into the partner registration system. A custom question and response set in the Visit integration decides which participants can have meetings.",
+"detail": "A 'Register Your Staff' option under Team Members signs exhibitor admins into the partner system, and a custom question and response set in the Visit integration decides which participants can have meetings.",
+"stories": [
+"GES - Single Sign-on (SSO)",
+"GES - allow_meetings",
+"GES SSO Button - Relocate"
+]
+},
+{
+"id": "integ-aditus-participants",
+"theme": "integ",
+"q": "2025-Q2",
+"title": "Aditus participant sync",
+"benefit": "Sync participants and team members from Aditus for one or more events.",
+"what": "Participants and team members are pulled from Aditus for one or more events, with category mapping, badge fields and email options. The Aditus badge page settings are back in the admin panel.",
+"detail": "Registrations are pulled from Aditus with category mapping, badge fields and email options, and the Aditus badge page settings are available again in the admin panel.",
+"stories": [
+"InfoSalons/Aditus Participant API.",
+"Custom Badge Page with Aditus - Reinstate the Settings on Admin Panel"
+]
+},
+{
+"id": "integ-klipso-enhancements",
+"theme": "integ",
+"q": "2025-Q2",
+"title": "Klipso integration enhancements",
+"benefit": "Bring exhibitor admins, multiple stands and product categories across from Klipso.",
+"what": "Klipso contact person details become the exhibitor's admin team member, optionally active on arrival. Exhibitors can have several halls and stands, and product categories can be copied from an earlier event.",
+"detail": "Contact person details become the exhibitor's admin team member, optionally set as active, exhibitors can have several halls and stands, and product categories can be copied from an earlier event.",
+"stories": [
+"Klipso Integration - Team member admin",
+"Klipso Native Integration - Status change on Team Member Admin",
+"Klipso Integration - Multiple Hall/Stands",
+"Klipso Native Integration - Exhibitor Product Categories Enhancement"
+]
+},
+{
+"id": "integ-public-api-2025q2",
+"theme": "integ",
+"q": "2025-Q2",
+"title": "Public API improvements",
+"benefit": "Filter meeting exports by creation and change dates, remove team members and fetch badge QR codes through the API.",
+"what": "The meetings export filters by creation and last-modified dates, sending empty exhibitor IDs detaches a team member from an exhibitor, and the account endpoint returns the participant's badge QR code.",
+"detail": "The meetings export accepts created and last-modified date filters, sending empty exhibitor IDs detaches a team member, and the account endpoint returns the participant's badge QR code.",
+"stories": [
+"/api/v2/meetings/export - New parameters",
+"Remove Team Members via API",
+"Badge QR - Exposing it to the api/v2/account/get",
+"/api/v2/meetings/export - New parameter for IMEX"
+]
+},
+{
+"id": "integ-event-system-push-back",
+"theme": "integ",
+"q": "2025-Q3",
+"title": "Event system data push-back",
+"benefit": "Send exhibitors, news and exhibitor content from the platform back to the external event system.",
+"what": "Exhibitors in selected categories, approved news and exhibitor manual brochures, images and videos are sent from the platform to the external event system with an agreed field mapping, including product export columns.",
+"detail": "Exhibitors in selected categories, approved news and exhibitor manual brochures, images and videos flow to the external system with an agreed field mapping, including product export columns.",
+"stories": [
+"ASP - Data Push Back",
+"ASP API Field Mapping Changes"
+]
+},
+{
+"id": "integ-api-v2-lists",
+"theme": "integ",
+"q": "2025-Q3",
+"title": "Participant and exhibitor list endpoints",
+"benefit": "Fetch all participants and exhibitors through paginated API v2 endpoints, or only what changed since a given time.",
+"what": "New API v2 endpoints list all participants and all exhibitors with their details, including parent and child companies, with pagination and timestamp filters. Deleted participant IDs can also be retrieved.",
+"detail": "New endpoints list participants and exhibitors with their details, including parent and child companies, with timestamp filters. Deleted participant IDs can also be retrieved.",
+"stories": [
+"API V1 Visitors list Migration to API V2",
+"API V1 Synchronize data Migration to API V2",
+"/api/v2/participants/{eventId}/list -> Requested Parameter Addition for IMEX"
+]
+},
+{
+"id": "integ-public-api-v3",
+"theme": "integ",
+"q": "2025-Q4",
+"title": "Public API v3",
+"benefit": "Start building on the new Public API v3, beginning with events, categories and registration questions.",
+"what": "The first Public API v3 endpoints list an environment's events, the exhibitor and participant categories of an event, and the custom questions of the visitor registration pipeline.",
+"detail": "The first v3 endpoints list an environment's events, exhibitor and participant categories, and the custom questions of the visitor registration pipeline.",
+"stories": [
+"GET - Event List",
+"GET - Exhibitor Categories",
+"GET - Participant Categories",
+"Accounts - New Endpoint on API V3"
+]
+},
+{
+"id": "integ-visit-api-v2",
+"theme": "integ",
+"q": "2025-Q4",
+"title": "Visit integration on API V2",
+"benefit": "Sync participants and exhibitors with Visit in near real time, with automatic retries and full request logs.",
+"what": "The Visit integration moved to Visit's API v2. It receives updates as they happen, pushes chosen fields back, runs an end-of-day push, handles deletions, syncs profile pictures both ways, retries failed calls and logs every request.",
+"detail": "The integration moved to Visit's V2 API, receives updates as they happen, pushes chosen fields back and runs an end-of-day push. Deletions are handled, profile pictures sync both ways, failed calls retry automatically and every request is logged in the admin panel.",
+"stories": [
+"HYVE - N200 API V2. New version on N200 using V2",
+"HYVE - N200 API V2. Handles of deletes",
+"HYVE - N200 API V2. Sync from EP to GES",
+"HYVE - N200 API V2. New logs",
+"HYVE - N200 API V2. Error handling and automation",
+"N200 Addition of Profile Picture for accounts",
+"Profile Picture sync in GES/Visit integration"
+]
+},
+{
+"id": "integ-genesis-world",
+"theme": "integ",
+"q": "2025-Q4",
+"title": "Genesis World integration",
+"benefit": "Connect the platform with the Genesis World CRM.",
+"what": "The first phase of a native integration with the Genesis World CRM was delivered, connecting it with the platform.",
+"detail": "The first phase of a native integration with Genesis World was delivered.",
+"stories": [
+"Phase 1 - HINTE - Genesis World Integration"
+]
+},
+{
+"id": "integ-map-your-show",
+"theme": "integ",
+"q": "2026-Q1",
+"title": "Map Your Show integration",
+"benefit": "Import exhibitors from Map Your Show, with custom fields and product categories.",
+"what": "Built on the integration hub, the Map Your Show integration fetches exhibitors from the Map Your Show API with their custom fields, and maps product categories from an uploaded Excel file. A second stage completed the remaining scope.",
+"detail": "Built on the integration hub, the integration fetches exhibitors from the Map Your Show API with their custom fields and product categories, and a second stage completed the remaining requirements.",
+"stories": [
+"Integration Hub - Map Your Show",
+"MYS Stage 2"
+]
+},
+{
+"id": "integ-hub-mapping",
+"theme": "integ",
+"q": "2026-Q1",
+"title": "Integration hub mapping improvements",
+"benefit": "Map more data through the integration hub, including team member roles, default language and Aditus exhibitor data.",
+"what": "Team member roles can be set in the integration hub mapping, and existing admins keep their role on resync. Exhibitor mappings include a default language field, and exhibitor and team member admin data can be pushed to Aditus.",
+"detail": "Team member roles can be set in the mapping without downgrading existing admins on resync, exhibitor mappings include a default language field, and exhibitor and team member data can be pushed to Aditus.",
+"stories": [
+"Aditus - Exhibitor and Team member data push",
+"Add team member role matching to the mapping schema",
+"Native Integration Hub - Addition of new field"
+]
+},
+{
+"id": "integ-public-api-v3-expansion",
+"theme": "integ",
+"q": "2026-Q1",
+"title": "More Public API v3 endpoints",
+"benefit": "Check accounts, read registration questions, export meetings and pull check-in data through Public API v3.",
+"what": "New v3 endpoints check whether an account exists, return visitor and exhibitor registration questions, export meetings with filters and incremental sync, and provide check-in data. The API rejects new accounts that use an admin's email.",
+"detail": "New v3 endpoints check whether an account exists, return visitor and exhibitor registration custom questions, export meetings with filters and incremental sync, and provide check-in data. The API also no longer creates an account with an email already used by an admin.",
+"stories": [
+"GET - Check if the Account exists in the environment",
+"GET - Visitor Registration Pipeline Custom Questions",
+"GET - Exhibitor Registration Pipeline Custom Questions",
+"API V3 - Meetings Export Migration",
+"API - Check-in data",
+"Super Admins - Emails can be used when creating accounts using the API"
+]
+},
+{
+"id": "integ-public-api-v3-content",
+"theme": "integ",
+"q": "2026-Q2",
+"title": "Public API v3 content endpoints",
+"benefit": "Pull sponsors, products, floor plan halls and stands, session metadata and reference data through Public API v3.",
+"what": "New v3 endpoints return sponsors and sponsor categories, products, and event floor plan halls and stands. Session tracks, types, tags, languages, countries and regions follow, with localisation, sorting, paging and modified-since filters.",
+"detail": "New v3 endpoints return sponsors and sponsor categories, products filtered by exhibitor, and event-scoped floor plan halls and stands. Session tracks, types, tags and languages, countries and regions follow with localisation, sorting, paging and modified-since filters.",
+"stories": [
+"Exhibitors - New Endpoint on API V3",
+"API V3 - [GET] /api/v3/events/{eventId}/sponsors",
+"API V3 - [GET] /api/v3/events/{eventId}/products (New Endpoint - Not present in V2)",
+"API V3 - [GET] /api/v3/events/{eventId}/sponsor-categories",
+"API V3 Migration - /api/v2/floorplan/getStands to V3",
+"API V3 Migration - /api/v2/floorplan/getHalls to V3",
+"API V3 Migration - /api/v2/location/countries to V3",
+"API V3 Migration - /api/v2/location/regions to V3",
+"API V3 Migration - /api/v2/sessions/getTracks to V3",
+"API V3 Migration - /api/v2/sessions/getTypes to V3",
+"API V3 Migration - /api/v2/sessions/getTags to V3",
+"API V3 Migration - /api/v2/sessions/getLanguages to V3"
+]
+},
+{
+"id": "integ-cds-participants",
+"theme": "integ",
+"q": "2026-Q2",
+"title": "CDS participant integration",
+"benefit": "Sync large volumes of registrations from CDS reliably.",
+"what": "Participants are pulled from CDS page by page with full field mapping, matched by email for updates, with order type and included items set in the admin panel.",
+"detail": "Participants are pulled from CDS page by page with full field mapping, matched by email for updates, with order type and included items set in the admin panel.",
+"stories": [
+"CDS - Participant Integration with Pagination",
+"CDS - Participant Integration"
+]
+},
+{
+"id": "integ-d2i",
+"theme": "integ",
+"q": "2026-Q2",
+"title": "D2i integration",
+"benefit": "Import registration and attendee data from D2i automatically.",
+"what": "A native integration searches and pages through D2i registrations and syncs only changed records into the platform, with D2i as the source of truth.",
+"detail": "A native integration searches and pages through D2i registrations and syncs only changed records, with D2i as the source of truth.",
+"stories": [
+"D2i - Native Integration Build"
+]
+},
+{
+"id": "integ-hub-migrations",
+"theme": "integ",
+"q": "2026-Q2",
+"title": "Integrations move to the integration hub",
+"benefit": "Run the Aventri, Aditus and A2Z integrations on the integration hub.",
+"what": "The Aventri V2, Aditus and A2Z integrations were moved to the integration hub, keeping their current functions and default field mapping. A2Z now uses the newer REST API.",
+"detail": "The Aventri V2, Aditus and A2Z integrations were migrated to the integration hub.",
+"stories": [
+"Integration HUB Migration - Aventri V2",
+"Integration HUB Migration - Infosalon/Aditus",
+"Integration HUB Migration - A2Z"
+]
+},
+{
+"id": "integ-integrations-page",
+"theme": "integ",
+"q": "2026-Q3",
+"title": "Integrations catalogue",
+"benefit": "See every available integration in one catalogue in the admin panel, with its category and status for your event.",
+"what": "A new Integrations page in the admin panel lists hub and existing integrations with descriptions, category tags and whether each is active for the event. SAML 2.0 settings have their own page in the catalogue.",
+"detail": "A new Integrations page lists hub and existing integrations with descriptions, category tags and whether each is active for the event. SAML 2.0 settings now have their own page in the catalogue.",
+"stories": [
+"Integrations page - Back-end work",
+"Integrations catalog: move SAML 2.0 settings to a dedicated integration page (urgent – DLG)"
+]
+},
+{
+"id": "integ-public-api-v2-2026q3",
+"theme": "integ",
+"q": "2026-Q3",
+"title": "API sponsor analytics and session filters",
+"benefit": "Read sponsor interaction analytics and set custom session filters through the public API.",
+"what": "A new endpoint returns sponsor views, clicks, favourites, meetings and messages. Session endpoints can set and return up to five custom filters, matched in the request language.",
+"detail": "A new endpoint returns sponsor views, clicks, favourites, meetings and messages, and session endpoints can set and return up to five custom filters.",
+"stories": [
+"[Open API V2] New endpoint for \"sponsor\" analytics for accounts",
+"API V2 — Add filter_1 to filter_5 support on sessions/set",
+"API V2 — Return filter_1 to filter_5 on sessions/get and sessions/getSession"
+]
+},
+{
+"id": "integ-hub-sync",
+"theme": "integ",
+"q": "2026-Q3",
+"title": "More reliable integration syncing",
+"benefit": "Keep partner data in step with self-healing sync, sync history and email-first matching.",
+"what": "ExpoFP and Visit run on the integration hub's automatic update engine, with removed exhibitors recreated, sync history, logs and a set polling interval. An 'Email First' option keeps profiles together when an email changes upstream.",
+"detail": "ExpoFP and Visit now run on the hub's automatic update engine, with removed exhibitors recreated, sync history and logs, and a configurable polling interval. An 'Email First' matching option keeps attendee profiles together when their email changes upstream.",
+"stories": [
+"ExpoFP - Migration to HUB",
+"VISIT Native Integration - Updates on Sync Mechanism",
+"Integration Hub - Change on Matching Mechanism"
+]
+},
+{
+"id": "integ-api-v3-products",
+"theme": "integ",
+"q": "2026-Q3",
+"title": "Product management in Public API v3",
+"benefit": "Create, update and delete products across all events through the API, including their images, videos and media.",
+"what": "New v3 endpoints create global products, update their global fields, delete a product from every event in one call, and upload or remove images, videos and media files, keeping image order and the main image.",
+"detail": "New v3 endpoints create global products, update global fields, delete a product from every event in one call, and upload or remove images, videos and media files, keeping image order and the main image.",
+"stories": [
+"API V3 - [POST] /api/v3/products (Create global product, no event relation)",
+"API V3 - [PATCH] /api/v3/products/{id} (Update global product fields)",
+"API V3 - [DELETE] /api/v3/products/{id} (Delete product globally, cascades all event relations)",
+"API V3 - [POST] /api/v3/products/{id}/images (Upload product image from a file or a URL)",
+"API V3 - [DELETE] /api/v3/products/{id}/images/{imageId} (Remove product image)",
+"API V3 - [POST] /api/v3/products/{id}/video (Upload product video)",
+"API V3 - [DELETE] /api/v3/products/{id}/video (Remove product video)",
+"API V3 - [POST] /api/v3/products/{id}/media (Upload product media file)",
+"API V3 - [DELETE] /api/v3/products/{id}/media/{mediaId} (Remove product media file)"
+]
+},
+{
+"id": "integ-swoogo",
+"theme": "integ",
+"q": "2026-Q3",
+"title": "Swoogo integration",
+"benefit": "Sync registrants, speakers and exhibitors from Swoogo automatically, including cancellations.",
+"what": "An inbound Swoogo integration on the integration hub syncs registrants, speakers and exhibitors, including cancellations, matching records by external ID, grouping exhibitors by company and keeping team members linked.",
+"detail": "The inbound integration runs on the integration hub, matches records by external ID, groups exhibitors by company and keeps team members linked.",
+"stories": [
+"Native Integration - Swoogo"
+]
+}
+],
+"claims": [
+{
+"id": "20_integrations:72",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"REST API v2 and v3 over HTTPS with HTTP Basic authentication\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:73",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"covering all core resources: Accounts, Exhibitors, Products, Sessions, Meetings, Floor Plan, Statistics, Location, News, Event Categories\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:74",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"API Key management: generation, per-event scoping, lifecycle enforcement (issue → active → turn off at event end → delete on supplier change)\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:75",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"`send_email` flag semantics\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:76",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"delta-sync patterns … after the first full pull\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:77",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"Proposed Solution Document workflow; testing sign-off process\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:78",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"API Logs: SuperAdmin-accessible, filterable by endpoint/status/date/parameters, XLS export\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:79",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"Native Integrations: SAML 2.0 SSO (generic + IIRIS), ExpoFP, Crowdconnected, Aventri\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:80",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"SAML config: entityID, SSO/SLO URLs, x509 cert, custom error page, login pop-up checkbox, Enable EP Authorization checkbox\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:81",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"Integration HUB: admin-panel-managed catalogue of native connectors (EP-45437, COMPLETE)\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:82",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"Public API v3 migration ongoing (EP-46812)\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:83",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"Statistics API v2 with full interaction type/action coverage and pagination\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:84",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Included",
+"claim": "\"Meetings export API with pagination and `last_modified` filter\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:90",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Excluded (F44: read these as unreliably as the Included list)",
+"claim": "\"Financial/payment gateway integrations (covered by Transactions & Purchasing)\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:91",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Excluded (F44: read these as unreliably as the Included list)",
+"claim": "\"Third-party marketing automation or CRM integrations not listed in the native catalogue\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:92",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Excluded (F44: read these as unreliably as the Included list)",
+"claim": "\"Google Analytics GA4 … noted as a source gap\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:93",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Excluded (F44: read these as unreliably as the Included list)",
+"claim": "\"Manual spreadsheet data imports (Data Import module)\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:94",
+"product": "Integrations (Open API & Native)",
+"section": "§2 Product Scope — Excluded (F44: read these as unreliably as the Included list)",
+"claim": "\"Option 3 — custom integration development from scratch\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:100",
+"product": "Integrations (Open API & Native)",
+"section": "§3 User Roles",
+"claim": "\"Only Super Admin can access API Logs\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:101",
+"product": "Integrations (Open API & Native)",
+"section": "§3 User Roles",
+"claim": "\"Organizer configures SAML at Event Setup → General → Settings\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:102",
+"product": "Integrations (Open API & Native)",
+"section": "§3 User Roles",
+"claim": "\"TAM/API Manager generates keys via EP API Manager tooling\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:103",
+"product": "Integrations (Open API & Native)",
+"section": "§3 User Roles",
+"claim": "\"Organisers cannot self-serve key generation\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:104",
+"product": "Integrations (Open API & Native)",
+"section": "§3 User Roles",
+"claim": "\"Organizer: Integration HUB view for their events\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:110",
+"product": "Integrations (Open API & Native)",
+"section": "§4.1 Open API — REST interface",
+"claim": "\"The base URL is event-specific and provided by the TAM\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:111",
+"product": "Integrations (Open API & Native)",
+"section": "§4.1 Open API — REST interface",
+"claim": "\"POST for create/update, GET for retrieval, DELETE for removal\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:112",
+"product": "Integrations (Open API & Native)",
+"section": "§4.1 Open API — REST interface",
+"claim": "\"`external_id` is the preferred matching key\"; upsert order `id > external_id > email`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:113",
+"product": "Integrations (Open API & Native)",
+"section": "§4.1 Open API — REST interface",
+"claim": "\"Status management: provisioned as `UPLOADED`; default when omitted is `ACTIVE`\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:114",
+"product": "Integrations (Open API & Native)",
+"section": "§4.1 Open API — REST interface",
+"claim": "\"Partial updates: only changed fields should be included\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:115",
+"product": "Integrations (Open API & Native)",
+"section": "§4.1 Open API — REST interface",
+"claim": "\"On success `200 OK`; on failure `400`/`401`/`404`/`500`\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:116",
+"product": "Integrations (Open API & Native)",
+"section": "§4.1 Open API — REST interface",
+"claim": "\"Swagger documentation at `…/apidocs/v2/swagger.html`\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:117",
+"product": "Integrations (Open API & Native)",
+"section": "§4.1 Open API — REST interface",
+"claim": "\"All fields available via API — no subset restrictions\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:118",
+"product": "Integrations (Open API & Native)",
+"section": "§4.1 Open API — REST interface",
+"claim": "\"High-volume data must be pushed in multiple streams\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:124",
+"product": "Integrations (Open API & Native)",
+"section": "§4.2 API Key Management — the weakest section in the document",
+"claim": "\"unique, event-scoped key … per integration per event cycle\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:125",
+"product": "Integrations (Open API & Native)",
+"section": "§4.2 API Key Management — the weakest section in the document",
+"claim": "\"generated via the EP API Manager tooling\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:126",
+"product": "Integrations (Open API & Native)",
+"section": "§4.2 API Key Management — the weakest section in the document",
+"claim": "\"At event end: key is turned off\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:127",
+"product": "Integrations (Open API & Native)",
+"section": "§4.2 API Key Management — the weakest section in the document",
+"claim": "\"Outputs: a Base64-encoded API key string\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:128",
+"product": "Integrations (Open API & Native)",
+"section": "§4.2 API Key Management — the weakest section in the document",
+"claim": "\"Expired or revoked key returns `401` on all API calls\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:129",
+"product": "Integrations (Open API & Native)",
+"section": "§4.2 API Key Management — the weakest section in the document",
+"claim": "\"Key compromise: TAM revokes immediately\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:130",
+"product": "Integrations (Open API & Native)",
+"section": "§4.2 API Key Management — the weakest section in the document",
+"claim": "\"Key is shared in a Google Doc … by dedicated email\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:140",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`account/set`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:141",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`account/get`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:142",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`account/getList`",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:143",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`account/getCategories`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:144",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`account/setCategory`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:145",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`account/delete`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:146",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`account/deleteBulk`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:147",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`account/checkToken`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:148",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`account/exists`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:149",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`account/setSessions`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:150",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`account/buyers`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:167",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`product/set`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:168",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`product/getList`",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:169",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`product/getCategories`",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:170",
+"product": "Integrations (Open API & Native)",
+"section": "§4.3-4.9 Endpoint inventory",
+"claim": "`product/delete`",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:209",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "SAML 2.0 via a standards toolkit, signature verification, email claim",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:210",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "\"SP entityID, ACS, SLO are configured\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:211",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "\"SAML token must contain the email claim — EP does not support alternatives\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:212",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "\"IdP unavailable → users locked out unless Enable EP Authorization is on\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:213",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "Event resolution for a SAML request",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "20_integrations:214",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "§4.11 \"ExpoFP API Token field at `/admin/general/settings`\" (EP-20080)",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:215",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "§4.11 \"Map with Hall\" toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:216",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "§4.12 \"Crowdconnected SDK integrated into the EP iOS and Android apps\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:217",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "§4.13 Aventri/Cvent participant sync",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:218",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "§4.13 \"The Confluence pages do not document webhook or retry semantics for Aventri\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:219",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "§4.14 \"Integration HUB centralises connector configuration\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:220",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "§4.14 \"All integration FRs are added to the Integration HUB Epic (EP-45437, COMPLETE)\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:221",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "§4.15 \"MicroGateway routes v3 API traffic\" (EP-45959 COMPLETE, EP-51153 COMPLETE)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:222",
+"product": "Integrations (Open API & Native)",
+"section": "§4.10-4.15 Native integrations",
+"claim": "§4.15 \"EP-46812: migrate all v2 endpoints to v3\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:242",
+"product": "Integrations (Open API & Native)",
+"section": "§8 Data Model",
+"claim": "`API_KEY {key_value, event_id, vendor, status, created_at, turned_off_at}`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:244",
+"product": "Integrations (Open API & Native)",
+"section": "§8 Data Model",
+"claim": "Participant lifecycle `UPLOADED → ACTIVE → INACTIVE`",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:245",
+"product": "Integrations (Open API & Native)",
+"section": "§8 Data Model",
+"claim": "Exhibitor lifecycle \"Pending → Approved → Active\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:246",
+"product": "Integrations (Open API & Native)",
+"section": "§8 Data Model",
+"claim": "Meeting lifecycle \"Incoming → Pending → Confirmed → Cancelled\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:247",
+"product": "Integrations (Open API & Native)",
+"section": "§8 Data Model",
+"claim": "\"external_id … on participant and exhibitor records\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:253",
+"product": "Integrations (Open API & Native)",
+"section": "§9 Permissions Matrix",
+"claim": "\"Call Open API endpoints — Super Admin (any key) / API Integrator (own key)\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:254",
+"product": "Integrations (Open API & Native)",
+"section": "§9 Permissions Matrix",
+"claim": "\"View API Logs — Super Admin only\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:255",
+"product": "Integrations (Open API & Native)",
+"section": "§9 Permissions Matrix",
+"claim": "\"Configure SAML — Organizer (own event)\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:256",
+"product": "Integrations (Open API & Native)",
+"section": "§9 Permissions Matrix",
+"claim": "\"Manage Integration HUB — Organizer view only\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:257",
+"product": "Integrations (Open API & Native)",
+"section": "§9 Permissions Matrix",
+"claim": "\"Generate/revoke API keys — Super Admin, TAM\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "20_integrations:265",
+"product": "Integrations (Open API & Native)",
+"section": "§10 Integrations table (11 rows)",
+"claim": "Native SAML 2.0 SSO",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:266",
+"product": "Integrations (Open API & Native)",
+"section": "§10 Integrations table (11 rows)",
+"claim": "IIRIS SSO (Informa)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:267",
+"product": "Integrations (Open API & Native)",
+"section": "§10 Integrations table (11 rows)",
+"claim": "ExpoFP Floor Plan",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:268",
+"product": "Integrations (Open API & Native)",
+"section": "§10 Integrations table (11 rows)",
+"claim": "ExpoFP — Crowdconnected",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:269",
+"product": "Integrations (Open API & Native)",
+"section": "§10 Integrations table (11 rows)",
+"claim": "Aventri / Cvent",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:270",
+"product": "Integrations (Open API & Native)",
+"section": "§10 Integrations table (11 rows)",
+"claim": "\"Failure Handling / Retry\" columns",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:271",
+"product": "Integrations (Open API & Native)",
+"section": "§10 Integrations table (11 rows)",
+"claim": "\"Security\" column",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:277",
+"product": "Integrations (Open API & Native)",
+"section": "§11 Notifications",
+"claim": "\"No automated alerting on API call failures\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:278",
+"product": "Integrations (Open API & Native)",
+"section": "§11 Notifications",
+"claim": "\"API key sharing notification is manual — no automated platform notification\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:279",
+"product": "Integrations (Open API & Native)",
+"section": "§11 Notifications",
+"claim": "\"`send_email=true` triggers the standard activation email\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:280",
+"product": "Integrations (Open API & Native)",
+"section": "§11 Notifications",
+"claim": "\"SAML: no email notifications\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:281",
+"product": "Integrations (Open API & Native)",
+"section": "§11 Notifications",
+"claim": "§15 FAQ: \"the documentation does not describe an outbound webhook system; integrations are pull- or push-to-EP\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:287",
+"product": "Integrations (Open API & Native)",
+"section": "§12 Reporting & Analytics",
+"claim": "API Logs (admin panel), XLS export",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:288",
+"product": "Integrations (Open API & Native)",
+"section": "§12 Reporting & Analytics",
+"claim": "Swagger documentation viewer",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:289",
+"product": "Integrations (Open API & Native)",
+"section": "§12 Reporting & Analytics",
+"claim": "Statistics API v2 pagination metrics",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:290",
+"product": "Integrations (Open API & Native)",
+"section": "§12 Reporting & Analytics",
+"claim": "Meetings Export API",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:291",
+"product": "Integrations (Open API & Native)",
+"section": "§12 Reporting & Analytics",
+"claim": "\"No dedicated integration-specific analytics dashboard beyond the API Logs view\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:306",
+"product": "Integrations (Open API & Native)",
+"section": "§14 Edge Cases",
+"claim": "\"Participant with no `external_id` → duplicate on email change\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:307",
+"product": "Integrations (Open API & Native)",
+"section": "§14 Edge Cases",
+"claim": "\"Exhibitor username auto-generation collision\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:308",
+"product": "Integrations (Open API & Native)",
+"section": "§14 Edge Cases",
+"claim": "\"Product image URLs must be publicly accessible at call time\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "20_integrations:310",
+"product": "Integrations (Open API & Native)",
+"section": "§14 Edge Cases",
+"claim": "\"API key reuse across event cycles returns 401\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "20_integrations:311",
+"product": "Integrations (Open API & Native)",
+"section": "§14 Edge Cases",
+"claim": "\"Sending `event_id` for the wrong event returns data for that event if the key has access — data contamination risk\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:312",
+"product": "Integrations (Open API & Native)",
+"section": "§14 Edge Cases",
+"claim": "\"Bulk delete with active SAML sessions — force-logout not documented\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:313",
+"product": "Integrations (Open API & Native)",
+"section": "§14 Edge Cases",
+"claim": "\"SAML disabled mid-event: existing sessions persist\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "20_integrations:314",
+"product": "Integrations (Open API & Native)",
+"section": "§14 Edge Cases",
+"claim": "\"Simultaneous updates to the same participant — last write wins\"",
+"verdict": "CONFIRMED"
+}
+]
+}

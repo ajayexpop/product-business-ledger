@@ -1,0 +1,640 @@
+[
+ {
+  "id": "p14",
+  "key": "EP-57015",
+  "current": {
+   "area": "Sessions",
+   "deps": "",
+   "driver": "",
+   "estimate": "7d",
+   "feature": "Redesigned Session Cards in Calendar View with Overflow Indicator",
+   "impact": "Attendees: instant readability for packed time slots with one-click access to all concurrent sessions. Organizers & Speakers: eliminates hidden or compressed sessions, giving equal visibility to all tracks.",
+   "key": "EP-57015",
+   "month": "2026-09",
+   "notes": "Deployed under parent EP-57118; FE by Oleksandr Zakablukov, QA by Olena Khromei.",
+   "owner": "Kavi",
+   "priority": "Customer",
+   "rationale": "Solves visual clutter when multiple overlapping or parallel sessions occur in the same time slot. Replaces cramped, illegible cards with a clean card design and a dedicated \"+X more\" overflow drawer.",
+   "status": "In Progress",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps"
+  ],
+  "jira": {
+   "summary": "Redesigned Session Cards in Calendar View for Enhanced Attendee Experience with Overflow Indicator",
+   "description": "‌\n\n[https://expoplatform.atlassian.net/wiki/x/CQBPfg](https://expoplatform.atlassian.net/wiki/x/CQBPfg)FE - 3-5 days Zakablukov\n\nQA - 2 days Khromei",
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "labels": [
+    "DoDUserStory"
+   ],
+   "parent": "EP-57118",
+   "comments": [
+    {
+     "author": "Oleksandr Zakablukov",
+     "created": "2026-09-14T16:11:34.775+0100",
+     "body": "Following your answer on EP-57098 — option 1, three lines everywhere — this story's page still describes two, and it is the page that governs the card in the time grid:\n\n* **AC 3** — \"Title — maximum 2 lines, truncated with ellipsis if longer\"\n* **AC 5** — \"the card expands slightly to show more of the title (3 lines instead of 2)\"\n\nThe All Day page has been updated to 3; this one has not, so the two documents now specify different line counts for what is one and the same card. Could you bring AC 3 to three lines?\n\nAC 5 needs slightly more than a number swap. With three lines at rest there is no fourth line to reveal, so hover no longer adds one — what it does is expand a card that a short time slot was cutting off. A 15-minute session is only a couple of dozen pixels tall and shows a fraction of its title; hovering grows the card past the slot and reveals the rest. That behaviour is in place and unchanged, so the AC holds as written in intent; it is the parenthetical \"(3 lines instead of 2)\" that no longer describes it.\n\nSuggested wording, if it helps: \"the card expands to show the title in full where the time slot was cutting it off — existing behaviour, kept as-is\".\n\nNothing to change in the implementation either way; both cards render three lines today, in the grid and in the All Day banner alike."
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-14T16:27:04.402+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Zakablukov</custom>   \nThank you for pointing that out, I have updated the story."
+    }
+   ],
+   "links": [
+    "Polaris work item link: PBV11-477",
+    "Relates: EP-57603"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 6,
+   "assignee": "Evgen Polivach",
+   "canon": "Ready for Release",
+   "due": "2026-09-23",
+   "origDays": 6,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 1.46,
+   "status": "Ready for release",
+   "summary": "Redesigned Session Cards in Calendar View for Enhanced Attendee Experience with Overflow Indicator",
+   "team": "Visitor team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p15",
+  "key": "EP-57098",
+  "current": {
+   "area": "Sessions",
+   "deps": "",
+   "driver": "",
+   "estimate": "5d",
+   "feature": "All Day Session in the calendar view",
+   "impact": "Attendees: clear distinction between ongoing all-day activities and time-specific presentations. Organizers: flexibility to schedule all-day events without disrupting standard speaker tracks.",
+   "key": "EP-57098",
+   "month": "2026-09",
+   "notes": "Deployed under parent EP-57118; FE by Oleksandr Zakablukov, QA by Olena Khromei.",
+   "owner": "Kavi",
+   "priority": "Customer",
+   "rationale": "Multi-hour and full-day sessions (over 6 hours, such as exhibitions, hackathons or networking lounges) previously stretched across the entire vertical time grid, squishing normal 30-60 min sessions.",
+   "status": "In Progress",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps"
+  ],
+  "jira": {
+   "summary": "All Day Session in the calendar view",
+   "description": "‌\n\n[https://expoplatform.atlassian.net/wiki/x/uoDQfg](https://expoplatform.atlassian.net/wiki/x/uoDQfg) FE - 3 days Zakablukov\n\nQA - 2 days Khromei",
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "labels": [
+    "DoDUserStory"
+   ],
+   "parent": "EP-57118",
+   "comments": [
+    {
+     "author": "Oleksandr Zakablukov",
+     "created": "2026-09-14T14:27:26.327+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom>All Day banner — title line count: spec says 2, approved G3 prototype uses 3\n\nAC 2 of All Day Session in calendar view specifies the promoted card's title as maximum 2 lines. The approved G3 prototype (/dlg-g) renders 3, and so does our implementation.\n\nWhere the 2 comes from: in the prototype the line count is a per-brand setting, titleLines, which defaults to 2. The DLG G3 brand overrides it to 3, and the same value drives both the All Day banner card and the time-grid card — they are the same markup rendered twice. In our library it is literally the same component: the banner and the grid both render the session card the consumer passes in, with one clamp definition shared between them. So the spec's 2 looks like the prototype's generic default rather than a G3 decision — the same shape as the 8h/6h threshold we just settled at 6h.\n\nWhich of these do you want?\n\n1. 3 lines everywhere — matches the approved G3 screens, nothing changes, and the two cards stay identical. This is our recommendation.\n2. 2 lines everywhere — consistent, but departs from the G3 screens that were signed off, and shortens titles in the grid where density already costs the most.\n3. 2 lines in the banner, 3 in the grid — matches the spec text literally, but makes the banner card a separate variant of a component that is currently shared, so it carries real cost and the two cards stop looking the same.\n\nOnly option 3 needs new work; 1 is what is already built.\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=6b2d1ceb0043&id=19f7934a-d8a1-4e78-bbc8-f6c7d06aa25b&&collection=&height=584&occurrenceKey=null&width=1020&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=a7ffb389780b&id=83b945bf-d396-48d3-a31d-58c8d1a3ad09&&collection=&height=159&occurrenceKey=null&width=810&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n"
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-14T14:33:48.889+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Zakablukov</custom>   \nLet’s go with option 1 that matches G3 screen, I have updated the user story to “3” lines."
+    },
+    {
+     "author": "Oleksandr Zakablukov",
+     "created": "2026-09-14T16:11:22.659+0100",
+     "body": "Thanks for both decisions — 6 hours and 3 lines are what we have built, so nothing changes on our side.\n\nOne request before QA picks this up: the 8→6 edit on the page landed in some places but not others, and the document now contradicts itself. Six hours is in the Release Notes Summary, in the first half of AC 1, and in Out of Scope. Eight hours is still in five places:\n\n* **Background / Context** — \"The threshold for promotion is 8 hours\"\n* **User Story** — \"long-running Sessions (8 hours or more)\"\n* **AC 1, second clause** — \"Given a Session has a duration of less than 8 hours...\" — directly under the clause that now says 6 hours or more, so a session of 6–8 hours is described as both promoted and not promoted\n* **AC 4** — \"Given a single event day has one or more Sessions exceeding 8 hours\"\n* **AC 5, second clause** — \"Given no visible day column has any Sessions exceeding 8 hours\"\n\nCould you sweep those to 6? It matters because a tester reads whichever clause they land on, and AC 1 in particular reads as a contradiction rather than a leftover — the 6–8 hour band is exactly where the two numbers disagree.\n\nAC 2 is already updated to 3 lines, so that one is clean."
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-14T16:30:00.684+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Zakablukov</custom> Thanks, I have updated it in rest of the lines as well"
+    }
+   ],
+   "links": []
+  },
+  "jiraColumns": {
+   "aggOrigDays": 5,
+   "assignee": "Evgen Polivach",
+   "canon": "Ready for Release",
+   "due": "2026-09-23",
+   "origDays": 5,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 1.24,
+   "status": "Ready for release",
+   "summary": "All Day Session in the calendar view",
+   "team": "Visitor team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p16",
+  "key": "EP-57237",
+  "current": {
+   "area": "Sessions",
+   "deps": "",
+   "driver": "",
+   "estimate": "1d",
+   "feature": "Session Calendar: Sync \"By Track\" drawer label with the Admin Display Filter name",
+   "impact": "Attendees: consistent taxonomy and terminology throughout agenda browsing. Organizers: full white-label fidelity — custom filter naming is respected everywhere.",
+   "key": "EP-57237",
+   "month": "2026-09",
+   "notes": "",
+   "owner": "Kavi",
+   "priority": "Operational",
+   "rationale": "When organizers rename the \"Track\" taxonomy in admin (to \"Stage\", \"Theme\", \"Stream\" or \"Room\"), the calendar side drawer previously hardcoded \"By Track\", causing brand confusion and attendee disorientation.",
+   "status": "In Progress",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Session Calendar: Sync \"By Track\" Side Drawer tab label with the configured Display Filter name from Admin Panel",
+   "description": "‌\n\n| Field | Value |\n| --- | --- |\n| **Jira Story Link** | TBD |\n| **Created Date** | 2026-09-11 |\n| **Created By** | Kavinder Rawal |\n| **Product Area** | Attendee Experience |\n| **Status** | Discovery |\n| **Productboard Link** | None |\n| **Effort Estimate** | S |\n| **Target Month / Year** | TBD |\n| **Platform** | Web |\n| **Release Notes Summary** | The \"By Track\" tab label in the Session Calendar Side Drawer now dynamically reflects the organizer-configured Display Filter name from the Admin Panel, including localized variants when multi-language is enabled. |\n\n---\n\n## Title\n\n`Program: Attendee can see the correct organizer-configured label on the Side Drawer tab in the Session Calendar so that the terminology is consistent with the rest of the event`\n\n---\n\n## Background / Context\n\n> **This is a fix to an existing feature.** The Session Calendar Side Drawer currently hardcodes the tab label **\"By Track\"**. ExpoPlatform allows event organizers to rename the Tracks filter via **Admin Panel → Sessions → Display Filters** (e.g. renaming \"Tracks\" to \"Streams\", \"Topics\", \"Themes\"). This configured label is already respected elsewhere in the platform but is not being picked up in the Session Calendar Side Drawer tab, causing a label inconsistency for clients who have customised this value.\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=06d7b81cf1c9&id=03aad9b2-a298-4f03-b75b-283aaabfa4dc&&collection=&height=1099&occurrenceKey=null&width=1610&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n---\n\n## User Story\n\nAs an **Attendee**,  \nI want to **see the correct filter label on the Side Drawer tab in the Session Calendar** (during **Live event / Pre-event**),  \nso that **the terminology shown to me is consistent with how the organizer has named their filters across the rest of the event**.\n\n---\n\n## Acceptance Criteria (testable + glossary nouns only)\n\n### 1. Side Drawer Tab Label Reflects Organizer-Configured Display Filter Name\n\n* **Given** I am an **Attendee** viewing the Session Calendar and the organizer has **not** customised the Tracks filter label in **Admin Panel → Sessions → Display Filters**, **when** I open the Side Drawer, **then** the tab displays the default label **\"By Track\"**.\n* **Given** the organizer has renamed the Tracks filter to a custom label (e.g. **\"Streams\"**), **when** I open the Side Drawer in the Session Calendar, **then** the tab displays **\"By Streams\"** instead of \"By Track\".\n\n### 2. Localized Custom Label is Respected\n\n* **Given** the organizer has provided a localized version of the custom Display Filter label, **when** an **Attendee** views the Session Calendar in that language, **then** the Side Drawer tab displays the localized version of the custom label.\n\n---\n\n## Out of Scope\n\nNot included:\n\n* Renaming any other labels or tabs beyond the \"By Track\" Side Drawer tab in the Session Calendar\n* Changes to the Side Drawer layout or content\n* Admin Panel UI changes to the Display Filter settings\n\n",
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "labels": [],
+   "parent": "EP-57118",
+   "comments": [],
+   "links": []
+  },
+  "jiraColumns": {
+   "aggOrigDays": 6,
+   "assignee": "Evgen Polivach",
+   "canon": "Ready for Release",
+   "due": "2026-09-23",
+   "origDays": 5,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 0.96,
+   "status": "Ready for release",
+   "summary": "Session Calendar: Sync \"By Track\" Side Drawer tab label with the configured Display Filter name from Admin Panel",
+   "team": "Visitor team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p17",
+  "key": "EP-56170",
+  "current": {
+   "area": "Sessions",
+   "deps": "Backend dynamic sorting and response order_num renumbering for active locale. Risk: mobile smoke test coordination needed; public API v3 remains on manual DB order by design.",
+   "driver": "",
+   "estimate": "12d",
+   "feature": "Alphabetical Sorting for Filter Items for sessions and Exhibitor Events",
+   "impact": "",
+   "key": "EP-56170",
+   "month": "2026-10",
+   "notes": "",
+   "owner": "Kavi",
+   "priority": "Customer",
+   "rationale": "German organizers / enterprise customers requested alphabetical sorting of Tracks, Tags and Types to improve discoverability on events with large taxonomy sets. Supports multilingual events by sorting according to the attendee's active language locale.",
+   "status": "In Progress",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "impact",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Alphabetical Sorting for Filter Items for sessions and Exhibitor Events",
+   "description": "‌\n\n[https://expoplatform.atlassian.net/wiki/x/CwCLeg](https://expoplatform.atlassian.net/wiki/x/CwCLeg)‌\n\nRoug Estimate (still waiting or task description update <custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom>)\n\nBE - 6 days Akimov\n\nFE - 2? days Zakablukov\n\nQA - 4 days Khromei",
+   "reportedBy": [
+    "HINTE"
+   ],
+   "pipedrive": null,
+   "labels": [
+    "mig-in-preparation"
+   ],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Oleksandr Parashchuk",
+     "created": "2026-09-03T17:09:41.949+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> this is the story for team visitor area. And here is the corrected description for the story  \ncc <custom data-type=\"mention\" data-id=\"id-1\">@Elena Potapov</custom>   \nAlphabetical Order for Tracks, Tags and Types Options\n\n### Background\n\nGerman organizers are concerned that it is difficult for users to browse options in Tracks, Types and Tags. They want these options to be sorted alphabetically. For multilingual events, each language must have its own alphabetical order.\n\n### What needs to be done\n\n#### Add new setting\n\nIn **Admin Panel → Management → Sessions → Config → General settings**, add a new toggle:\n\n* **\"Alphabetical order for Tracks, Tags and Types options\"**\n* Default value: **OFF**\n\n#### Behavior when enabled — Admin Panel\n\n* In **Admin Panel → Management → Sessions**, options in the **Tracks**, **Tags** and **Types** sections are sorted alphabetically automatically.\n* Sorting is applied **per edit language** — each language has its own alphabetical order based on its translated values.\n* When a new option is added, it is automatically placed into its alphabetical position after save.\n* Manual reordering of options is **disabled** in the Tracks, Tags and Types sections.\n* A helptext is displayed in these sections:\n\n    _\"Automatic alphabetical order for options is enabled, if you want to reorder options manually switch off automatic alphabetical order for options in Config section\"_\n\n\n\n#### Behavior when disabled after being enabled\n\n* Automatic sorting stops being applied.\n* Options **remain in the last sorted order — alphabetical based on the English version** — they do not revert to their pre-sorting order.\n* Manual reordering becomes available again.\n\n#### Behavior when enabled — Frontend\n\nThe sorted order for the chosen language is reflected in:\n\n* **Sessions lists**: All Sessions, Round Tables, On-Demand — Tracks, Tags and Types options are ordered alphabetically.\n* **Marketplace → Exhibitor Events list** — Tracks, Tags and Types options are ordered alphabetically.\n* The same applies to these lists in the **mobile app**.\n\n### ✅ Acceptance Criteria\n\n#### Admin Panel — Setting\n\n**Given** an Organizer opens Admin Panel → Management → Sessions → Config  \n**When** they view the General settings section  \n**Then** the \"Alphabetical order for Tracks, Tags and Types options\" toggle is displayed and is OFF by default.\n\n#### Admin Panel — Sorting\n\n**Given** the setting is ON  \n**When** the Organizer opens the Tracks, Tags or Types section in Admin Panel → Management → Sessions  \n**Then** the options are sorted alphabetically for the currently selected edit language.\n\n**Given** the setting is ON and the event is multilingual  \n**When** the Organizer switches the edit language  \n**Then** the options are re-sorted alphabetically according to the translated values of that language.\n\n**Given** the setting is ON  \n**When** the Organizer adds a new Track, Tag or Type option and saves  \n**Then** the new option is automatically placed into its alphabetical position.\n\n#### Admin Panel — Manual reordering lock\n\n**Given** the setting is ON  \n**When** the Organizer opens the Tracks, Tags or Types section  \n**Then** the ability to change the order of options manually is disabled.\n\n**Given** the setting is ON  \n**When** the Organizer views the Tracks, Tags or Types section  \n**Then** the following helptext is displayed: _\"Automatic alphabetical order for options is enabled, if you want to reorder options manually switch off automatic alphabetical order for options in Config section\"_.\n\n**Given** the setting is turned OFF after being ON  \n**When** the Organizer opens the Tracks, Tags or Types section  \n**Then** manual reordering is available again and the helptext is not displayed.\n\n#### Admin Panel — Toggle OFF behavior\n\n**Given** the setting is turned OFF after being ON  \n**When** the Organizer views the Tracks, Tags or Types sections  \n**Then** options remain in the last sorted order (alphabetical based on the English version) across all languages, and no automatic sorting is applied to subsequent changes.\n\n**Given** the setting is OFF and a new option is added  \n**When** the Organizer saves it  \n**Then** the option is not sorted automatically and is placed according to current (non-sorted) ordering behavior.\n\n#### Frontend — Web\n\n**Given** the setting is ON and a user has language X selected  \n**When** they open All Sessions, Round Tables or On-Demand lists  \n**Then** Tracks, Tags and Types options are displayed in alphabetical order for language X.\n\n**Given** the setting is ON and a user has language X selected  \n**When** they open the Marketplace → Exhibitor Events list  \n**Then** Tracks, Tags and Types options are displayed in alphabetical order for language X.\n\n#### Frontend — Mobile App\n\n**Given** the setting is ON  \n**When** a user opens the Sessions lists or Exhibitor Events list in the app  \n**Then** Tracks, Tags and Types options are ordered alphabetically for the chosen language, consistent with web."
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-04T09:40:57.578+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Evgen Polivach</custom>   \nNeed your help to determine whether this belongs to Team Visitor or Team Exhibitor."
+    },
+    {
+     "author": "Evgen Polivach",
+     "created": "2026-09-04T11:21:49.852+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Parashchuk</custom> \n\n1. Is the sorting computed once in the backend (all lists just read the ready order), or does each listing sort on its own frontend? This decides whether it's one owner or split across teams.\n2. Marketplace - Exhibitor Events list – is it rendered by the Session & Speakers code (Visitor) or by separate Marketplace code (Exhibitor)?\n3. Mobile app - does it read the already-sorted list from the API, or does it need to sort client-side?\n\nFYI <custom data-type=\"mention\" data-id=\"id-1\">@Kavinder Rawal</custom> "
+    },
+    {
+     "author": "Elena Potapov",
+     "created": "2026-09-04T12:36:11.472+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> hihi, how do u feel if we change the fallback from EN to an event default language?"
+    },
+    {
+     "author": "Oleksandr Parashchuk",
+     "created": "2026-09-07T09:46:50.488+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Evgen Polivach</custom>   \n1\\. once in admin panel on save of tracks/types/tags  \n2\\. just reads from backend from point 1  \n3\\. same (unless app team have other plans)"
+    },
+    {
+     "author": "Evgen Polivach",
+     "created": "2026-09-08T11:28:32.282+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Parashchuk</custom>  is this task description approved? May I ask to add it to Confluence?\n\n<custom data-type=\"mention\" data-id=\"id-1\">@Kavinder Rawal</custom> <custom data-type=\"mention\" data-id=\"id-2\">@Oleksandr Parashchuk</custom> "
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-09T12:16:47.068+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Elena Potapov</custom>   \nYes, we will do that, I have updated the user story description"
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-09T12:17:03.712+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Evgen Polivach</custom> I have added it to the confluence"
+    },
+    {
+     "author": "Maryna Dovgal",
+     "created": "2026-09-09T16:15:50.820+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Oleksandr Parashchuk</custom>   \nCould you please confirm whether we understand the implementation correctly?\n\nSetting: **\"Alphabetical order for Tracks, Tags and Types options\"**, Sessions → Config → General settings, OFF by default.\n\n1. **Toggle OFF** — options keep their manual order, exactly as arranged by drag-and-drop in the admin panel (current behaviour).\n2. **Toggle ON** — Tracks, Tags and Types are sorted alphabetically according to the rules of the interface language (the edit language in the admin panel, the language selected by the user on the frontend) — both in the admin panel and on the frontend. The alphabetical order is not stored in the database: the data is read, sorted on the fly and returned to the interface. The manual order stays untouched in the database and applies again as soon as the toggle is switched off.\n3. **Toggle ON** — manual reordering is not available in the Tracks, Tags and Types sections; instead, the following helptext is displayed: \"Automatic alphabetical order for options is enabled, if you want to reorder options manually switch off automatic alphabetical order for options in Config section\".\n\nIf anything in this short description is understood incorrectly, please let us know.\n\nWe also need a clarification on where the toggle should be placed. Tracks, Tags and Types are shared event entities: the same list is used in Sessions, Exhibitor Events and Round Tables. This means the toggle controls the same set of data regardless of where it is physically located. Please confirm which option you need:\n\na) the toggle only in the Sessions configuration — a single place from which the behaviour is controlled for all three types;  \nb) the toggle duplicated in the General settings block of each configuration tab — Sessions, Exhibitor Events, Round Tables — while remaining one and the same setting: a change made in any tab is reflected in the others.\n\nIn addition, please bring the Confluence page to a single consistent state — the specification should state how the functionality is to be implemented, taking the clarifications above into account. At the moment the description in the specification and the description in the comment from 3 September contradict each other, and we cannot commit to an estimate until there is one up-to-date source of requirements."
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-09T17:52:12.325+0100",
+     "body": "Hi <custom data-type=\"mention\" data-id=\"id-0\">@Maryna Dovgal</custom>\n\nThanks for highlighting these points! We’ve aligned the requirements and updated the **Jira ticket description** and [Alphabetical Sorting for Filter Items](https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2055929867/Alphabetical+Sorting+for+Filter+Items) to resolve all contradictions.\n\nHere are the key points for estimation:\n\n1. **Toggle Placement**: **Option (a)** — A single toggle under `Admin Panel → Management → Sessions → Config → General settings`.\n2. **Scope**: Applies strictly to **Tracks, Tags, and Types** for Sessions and Exhibitor Events (Web & Mobile).\n3. **Toggle ON**: Items sort alphabetically per the active language using locale-aware collation. Manual reordering is disabled in Admin with a warning banner.\n4. **Toggle OFF**: Options **retain their last sorted state** based on the **Event Default Language** (not hardcoded English), and manual drag-and-drop is re-enabled.\n5. **Fallback**: Missing translations fall back to the **Event Default Language** value.\n\nPlease use the updated Jira description as the single source of truth for estimation. Let me know if you have any questions!"
+    },
+    {
+     "author": "Olena Khromei",
+     "created": "2026-09-11T10:17:13.999+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom>, thanks for the updated story description — a few things I'd still like to clarify before we can estimate. Seven points are open: the first three block the estimate, the rest block writing expected results.\n\n1. Platform scope. The page header says \"Admin Panel / Web\", while the Scope section and AC 4 include the mobile app (iOS / Android). Is the app part of this story, or does it get its own story? If it's separate, could you create it and link it here?\n2. How the order is produced. The Technical Rules say the order is computed and stored by the backend when options are saved. AC 2.1 and AC 4 require a different order per language (edit language in Admin, attendee's language on the frontend). A single stored order can't be alphabetical in German and English at the same time. Which one is correct — one stored order, or sorted on the fly for the active language? If it is stored, which language is it computed for?\n3. Manual order after the toggle is switched off. AC 3.1 says options keep their last sorted state and explicitly do not revert to the pre-toggle order. Is that intended? As written, an organizer who has spent time arranging options manually loses that arrangement permanently after switching the toggle on once. Is the manual order kept somewhere and restored on switch-off, or is there no way back?\n4. Tracks shown above the list. On Sessions and Exhibitor Events, Tracks are also rendered as clickable items above the list, not only inside the filter panel. The spec only covers filter dropdowns. Should alphabetical order apply to that display as well?\n5. Character precedence. The Technical Rules keep the fixed order \"Symbols / Punctuation → Numbers → Letters\" alongside locale-aware collation. These two rules can disagree, and locale collation places symbols and digits by its own rules. Which one wins? I need this to define the expected result for an option that starts with a digit or a bracket.\n6. Ties. Sorting is case-insensitive, so \"apple\" and \"Apple\" are equivalent — but no tie-breaker is defined, and the same applies to two options with identical names in one language. What decides their order? Without a rule the order can change between page loads.\n7. Permissions. The spec doesn't say who can see and change the toggle. Is it available to every admin role that can open Sessions → Config, or restricted?\n\n"
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-11T11:02:36.490+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Olena Khromei</custom>   \nThank you for laying these out so clearly! Here are the answers to resolve the 3 estimation blockers and the 4 test-case criteria:\n\n1. **Platform Scope**:\n\n    * **Scope**: The primary scope of this story is **Admin Panel / Web + Backend API**.\n    * **Mobile**: Because the backend API will return the sorted list dynamically, mobile apps consuming the API will inherit the sorted order automatically.   \n      <custom data-type=\"mention\" data-id=\"id-1\">@Taimoor Zulfiqar</custom> can you please confirm that no separate story or work is needed from the mobile team?  \n    \n2. **How the Order is Produced (On-the-Fly vs. Stored)**:\n\n    * **Decision**: **Sorted on-the-fly based on the active locale.**\n    * **Reasoning**: Because each language has a different alphabetical order (e.g., German vs. English vs. French), a single static order cannot be pre-saved in DB for all languages. The backend API dynamically sorts the data per request based on the user’s selected interface/edit language.  \n    \n3. **Manual Order When Toggle is Switched** `OFF`:\n\n    * **Decision**: **Manual order is PRESERVED in DB and RESTORED when toggle is** `OFF`.\n    * **Reasoning**: The manual drag-and-drop order in the database stays untouched. The toggle acts as a display override. Turning the toggle `OFF` immediately restores the organiser's original manual drag-and-drop arrangement.  \n    \n\n4. **Tracks Displayed Above the List**:\n\n    * **YES**. Alphabetical sorting applies to Tracks everywhere they function as filters—both inside the filter panel dropdowns and as quick-filter chips/tabs above the list.  \n    \n5. **Character Precedence vs. Locale Rules**:\n\n    * **Locale Collation (ICU Standard) takes precedence.** The system relies on standard ICU (`Intl.Collator`) locale rules per active language, which naturally handle digits, punctuation, and letters for that specific language.  \n    \n6. **Ties & Deterministic Sorting**:\n\n    * If two items produce identical translated names in the active language (or differ only by casing like _\"apple\"_ vs _\"Apple\"_):\n    \n        1. Standard ICU variant comparison distinguishes case/accents.\n        2. **Tie-breaker**: If names are identical, sort by **Entity ID (ascending)** to guarantee deterministic, stable ordering across page reloads.  \n        \n    \n7. **Permissions**:\n\n    * Standard **Sessions Config Permissions**. Any admin role with access to manage `Admin Panel → Management → Sessions → Config` can view and edit the toggle. No new standalone permission node is required.\n    \n\nBased on these answers I will update the **Jira ticket description** to reflect all of the above so it serves as the single source of truth for estimation. Let me know if anything needs further clarification!"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-11T11:42:29.041+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> Yep, no work needed"
+    },
+    {
+     "author": "Maryna Dovgal",
+     "created": "2026-09-11T12:19:18.658+0100",
+     "body": "A clarification about one side effect of the decision to sort on the fly and store nothing in the database — we would like to record it explicitly so it does not come up as a bug during testing.\n\nBesides the filter lists on the website and in the app, the platform has a public API (`/api/v3/events/{eventId}/sessions/tracks`, `/types`, `/tags`) that external systems use to export the tracks, tags and types reference lists. It works differently from the filters on the frontend:\n\n* the data is returned in pages, and there is a mode that returns only what has changed since a given date;\n* the order of the records in the response comes from the manual order set by the organiser via drag-and-drop, and the same value is returned in every item in the `orderNum` field.\n\nWe do not know how external consumers actually use this data — whether they sort by `orderNum`, rely on the order of the records in the response, or build the list in some other way. What we do know is that both the order of the records and the `orderNum` field in this API reflect the manual order stored in the database. Since, per the decision taken, the alphabetical order is never stored and is calculated on the fly at display time, this channel will keep returning the manual order regardless of the state of the setting.\n\n**Summary: sorting in the public API v3 is out of scope for this story. If any changes are needed there, they should be raised as a separate task for the integrations team.**\n\nCc: <custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Olena Khromei</custom>"
+    },
+    {
+     "author": "Oleksandr Zakablukov",
+     "created": "2026-09-14T11:05:10.260+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Maryna Dovgal</custom> a question to the backend on the Tracks displayed above the list (answer #4 from 11 Sep).\n\nThe filter payload from `POST /api/v1/search/filters` carries an `order_num` on every `category` item, and the web frontend currently re-sorts the Tracks chips shown above the list by that field — it does not render them in response order. So with the setting ON the filter panel dropdowns would be alphabetical while the chips above the list stay in the manual drag-and-drop order.\n\nTwo ways to close this — please confirm which one you take:\n\n* a) when the setting is ON, `order_num` is recomputed in the response to match the alphabetical position for the active locale — the frontend needs no change;\n* b) `order_num` keeps the manual value, and the response carries the state of the setting in `data.settings` (next to the existing `showTracksAsFilter`), so the frontend skips its own sorting.\n\nWith the setting OFF, behaviour is unchanged in both options.\n\nThis is a contract question, not a product one — the product decision (#4: alphabetical order applies to Tracks everywhere they act as filters) is clear."
+    },
+    {
+     "author": "Maryna Dovgal",
+     "created": "2026-09-14T15:54:29.770+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Zakablukov</custom> \n\nWe take option (a).\n\nWhen the setting is ON, the items in the response are returned in alphabetical order for the active locale, and `order_num` is renumbered to match that order. The value stored in the database does not change. When the setting is OFF, the response stays exactly as it is today.\n\nWe will apply this to all three filters in scope — Tracks, Tags and Types."
+    },
+    {
+     "author": "Olena Khromei",
+     "created": "2026-09-16T09:26:43.018+0100",
+     "body": "**QA — spec is behind the decisions, please update before decomposition**\n\n<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> — the Confluence page was last updated on 9 Sep, before your answers of 11 Sep and the backend contract decision of 14 Sep. Four places contradict the agreed behaviour:\n\n1. **Technical Rules — \"Backend Pre-computation\"** still says the order is computed and stored on save. Agreed: sorted on the fly per active locale, nothing stored (11 Sep; confirmed 14 Sep — `order_num` is renumbered in the response only).\n2. **AC 3.1 — \"Retain Last State\"** still says options keep the sorted order after the toggle is switched off. Agreed: the manual order is preserved in the DB and restored (11 Sep).\n3. **Technical Rules — Precedence** still keeps \"Symbols → Numbers → Letters\". Agreed: ICU collation takes precedence.\n4. **Platform vs AC 4** — the header says Admin Panel / Web, AC 4 still lists iOS / Android.\n\nAlso missing from the spec although already decided: Tracks rendered as chips above the list (incl. the `order_num` renumbering agreed on 14 Sep), the Entity ID tie-breaker, permissions, and public API v3 explicitly listed as out of scope.\n\nFour things still open, all needed for expected results:\n\n* **Case sensitivity.** Answer #6 says sorting is case-insensitive and that ICU variant comparison distinguishes case — these conflict. Which collation sensitivity do we use (`base` / `accent` / `variant`)?\n* **Numeric collation.** Is `numeric` enabled? This decides whether \"Track 10\" comes before or after \"Track 2\".\n* **Round Tables.** On 19 Aug the answer was \"Round Tables topics — out of scope\", but AC 4 lists Round Tables among the sessions pages. Do the Tracks / Tags / Types filters on the Round Tables page sort or not?\n* **Who verifies the app.** Mobile confirmed no work is needed, but someone has to check the app reflects the sorted order. Is that on us or on the mobile team?\n\n"
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-16T13:10:17.018+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Olena Khromei</custom> \n\nThanks for catching these! I have updated the Confluence spec and the Jira description. Here are the answers to the 4 open points to finalise test cases and expected results:\n\n1. **Collation & Case Sensitivity**: We use standard locale collation with sensitivity: 'accent'.\n2. **Numeric Collation:** Enabled (`numeric: true`) — natural sorting applies so \"Track 2\" comes before \"Track 10\".\n3. **Round Tables:** The standard Tracks, Tags, and Types filter dropdowns on the Round Tables page ARE in scope. Tracks / Tags / Types filters on the Round Tables page should be sorted.\n4. **Mobile Verification**: Since the mobile app consumes the backend API and requires no mobile team code changes, a smoke test by the **App QA team** should be sufficient. <custom data-type=\"mention\" data-id=\"id-1\">@Taimoor Zulfiqar</custom> could you please confirm this on your side and ensure it gets scheduled for your team once the API changes are ready?\n\n"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-16T13:25:40.308+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> When will we need to run the smoke test? We have a lot of other items in the pipeline so will need to plan accordingly"
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-18T11:35:03.725+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom>   \nThis will be on RC on 7th October so your team can run the smoke test accordingly."
+    }
+   ],
+   "links": [
+    "Polaris work item link: PBV11-484"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 23,
+   "assignee": "Evgen Polivach",
+   "canon": "In Testing",
+   "due": "2026-10-07",
+   "origDays": 11,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 5.18,
+   "status": "In testing",
+   "summary": "Alphabetical Sorting for Filter Items for sessions and Exhibitor Events",
+   "team": "Visitor team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p18",
+  "key": "EP-48716",
+  "current": {
+   "area": "Communication Channels",
+   "deps": "",
+   "driver": "",
+   "estimate": "BE - 18d. FE and QA estimates are pending",
+   "feature": "Email Digest",
+   "impact": "Attendees & Exhibitors: timely daily summaries of scheduled meetings, incoming requests and unread messages. Organizers & Support: full delivery/open-rate analytics and logs via Campaigns with zero-spam protection.",
+   "key": "EP-48716",
+   "month": "2026-11",
+   "notes": "",
+   "owner": "Kavi",
+   "priority": "Strategic",
+   "rationale": "Boosts attendee/exhibitor engagement and meeting show-up rates by delivering an automated, phase-aware daily digest (pre-event booking activity vs during-event upcoming 24h schedule and unread chats).",
+   "status": "Discovery",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Email Digest",
+   "description": "Description\n\n[https://expoplatform.atlassian.net/wiki/spaces/P2/pages/1476886541/Email+digest](https://expoplatform.atlassian.net/wiki/spaces/P2/pages/1476886541/Email+digest)‌\n\n‌\n\n# Rough estimation (Internal Only - For External Use Contact Assignee)\n\n| Design, d | BE , d | FE, d | MQA, d | Android, d | iOS, d | App QA, d | Total, days |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| - | if based on companies - then 13-14 days, if without companies - then around 18 days | 2 days | 9 | - | - | - | 24 - 29 days |\n",
+   "reportedBy": [
+    "INTERNAL",
+    "Vinexposium"
+   ],
+   "pipedrive": null,
+   "labels": [
+    "mig-in-preparation"
+   ],
+   "parent": "EP-54526",
+   "comments": [
+    {
+     "author": "Ajay Singh",
+     "created": "2026-04-10T14:22:04.559+0100",
+     "body": "Pre Event Phase:\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=885040ae-0bf3-42f3-9af8-f6b22c92409d&&collection=&height=963&occurrenceKey=null&width=450&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\nDuring Event:\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=95ae672b-0479-4517-b681-7eb7f20e7b4c&&collection=&height=1053&occurrenceKey=null&width=399&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> For your reference, this is what we will achieve (interface based on story description)"
+    },
+    {
+     "author": "Ajay Singh",
+     "created": "2026-06-09T10:46:33.674+0100",
+     "body": "⚠️ Independent user story — no parent Epic, so it can't roll up to an Initiative (Initiative → Epic → Story). <custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> — please attach it to an Epic so it inherits an Initiative. Flagged automatically by the Initiative-assignment process."
+    },
+    {
+     "author": "Olena Khromei",
+     "created": "2026-09-15T13:02:56.192+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> , a few clarifications needed before this goes into development:\n\n1. **Enabling the template silently starts a daily send.** Once the template is switched on, the digest goes out every day at 09:00 event time, but nothing in the admin panel tells the organiser that. Should we show an info message next to the template? \n2. **When does the digest stop?** Phase detection only looks at the event start date, so after the event ends the digest would keep going indefinitely. Should sending stop at the event end date? And if it does, will the template still show as enabled in the list?\n3. **{Pending_meetings} — statuses and time window.** The spec refers to \"pending\" / \"awaiting response\", but we have no \"awaiting response\" status in the platform. Please confirm which statuses are actually meant. Also, the pending count is explicitly not windowed, so requests from six months ago would keep inflating the number. Should there be a cut-off?\n4. **Meetings Block limit before the event.** The variable description says up to 8 meetings with no qualification, but the phase table states the limit of 8 only in the During Event column. Which one governs — does the same limit apply in the pre-event phase?\n5. **Chats Block scope.** The spec consistently says \"personal chats\". Is the exclusion of group chats deliberate? \n6. **Recipients — attendees only?** This spec covers attendees only, while the client request in EP-47533 asked for the same digest to cover exhibitors as well. Is the narrower scope deliberate, or is this a gap?\n7. **Which attendee statuses are in scope?** Please confirm explicitly.\n\n---\n\n**Separately — reporting.** This is a template that will go out to attendees every single day, yet we will have no way of knowing who actually received it. For Campaigns we have a dedicated statistics page showing how many emails were sent, who received them and who opened them. Is any equivalent visibility planned here? Without it, neither the organiser nor support can answer \"did this attendee get the digest?\"."
+    },
+    {
+     "author": "Maryna Dovgal",
+     "created": "2026-09-15T15:37:46.639+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> — adding to Olena's questions. The points below haven't been discussed anywhere yet; I've flagged where the answer affects the estimate.\n\n**1. \"Confirmed / cancelled in the last 5 days\" counters — how accurate do they need to be?** (+3 days for the accurate option)  \nThe system doesn't store the date on which a meeting changed status — only its current status and the date it was last modified. That leaves two options. Approximate: a meeting counts towards the figure if it was last modified within those five days, but then any edit — a time change, a location change — is also counted as \"confirmed this week\". Accurate: we start keeping a status change log, so the numbers are correct, but that adds +3 days of development, and the data only accumulates from release onwards — for the first five days after go-live the counters would be incomplete.\n\n**2. Sending frequency and time — fixed or configurable?** (+2 days for configurable)  \nThe spec hard-codes 09:00 event time, and the organiser can change neither the time nor the frequency. The client request in EP-47533 asked for exactly that: a choice of frequency (daily / weekly) and of time.\n\n**3. Pending — whose response are we waiting for?**  \nThe counter covers meeting requests awaiting a reaction. Please confirm which ones: only those awaiting the attendee's own response; only those where the attendee is waiting on someone else; or both together.\n\n**4. An \"unsubscribe\" link in the email itself.** (+0.5 day)  \nThe profile toggle exists, but to use it an attendee has to log into the platform and find the setting. For a daily send, an unsubscribe link directly in the email is normally expected. Do we add one?\n\n**5. Module disabled but data exists.**  \nThe rule \"if all blocks are empty, no email is sent\" is already covered in the spec. What remains is a narrow case: the attendee's role has messages or meetings disabled, yet data for them formally exists. Do we hide the block — as Campaign emails do — or show it?"
+    },
+    {
+     "author": "Maryna Dovgal",
+     "created": "2026-09-16T10:41:10.362+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> — a separate proposal on how to implement this. We would like to propose implementing the digest not as a separate template in the Meetings section, but as a new type of campaign.\n\n**Why**\n\nThe mechanism becomes universal: the same setup also covers a digest for exhibitors (the client request in EP-47533) and any future recurring digests — an unread messages digest, for example. Nothing has to be developed separately for each audience.\n\nIt also answers the reporting question straight away: Campaigns already have a statistics page for every send — how many emails went out, how many were opened, and the list of recipients with search and export. If each daily send is recorded as a separate send event, per-day statistics come for free.\n\n**What already exists in Campaigns and needs no development**\n\n* Audience: visitors by category, exhibitors by category, team members (regular and admin), speakers, moderators. Plus profile-data filters, Meeting Program and Round Tables filters, session filters, and selections such as \"activated\", \"invited\", \"only with incoming meeting requests\".\n* An email editor and a separate preview page: you can see how the email looks for a specific attendee, subject line included.\n* Language versions of the template, including the subject line per language — the version is picked by the recipient's language.\n* Number of items per block: the template editor lets the organiser set how many meetings and chats to show, up to 10 — so \"up to 8 meetings\" and \"up to 10 chats\" from the spec both fit.\n* Ready-made variables: meetings block, chats block, the attendee's number of meetings, their number of chats, first name, last name, email, company, event name, login link, profile link.\n* Send statistics: how many were sent, how many were opened, the recipient list with date and status, search and export.\n\n**What we would build**\n\n1. A recurring schedule — daily or weekly at a given hour.\n2. The rule \"do not send the email if all blocks are empty\".\n3. The attendee's personal toggle in profile settings.\n4. The Booking Activity block and the 5-day counters.\n5. The meetings selection: the existing variable shows incoming requests, whereas the digest needs confirmed meetings for the next 24 hours.\n6. Automatic switching of content by event phase: before the event starts the email shows the Booking Activity block, and once the event begins it stops being shown even if the variable is still in the template. Campaigns have no such logic today — the email is assembled from whatever sits in the template, with no link to the event dates.\n\n**So that the digest behaves like a built-in feature rather than an ordinary campaign**\n\n* The \"Email Digest\" template ships with the platform update and is made non-deletable.\n* Creating a second active digest send for the same event is not allowed.\n* Duplicate protection: an attendee receives no more than one digest per day, even if something is set up twice.\n\n**What to keep in mind**\n\n* The organiser assembles the send themselves — choosing the audience and the schedule — rather than simply switching a toggle on. This differs from the current spec, where the template lives in the Meetings section and is enabled with a single switch.\n* The changes touch a shared module used by all current sends, so a regression check of existing campaigns will be needed.\n* Carrying over to new events: the \"Email Digest\" template will be present on every event — it ships with the platform update and is copied when an event is cloned. The configured send (audience and schedule), however, is not carried over on cloning, so on a new event the digest is off by default: no emails go out until the organiser sets the send up. This matches the spec requirement that the template is off by default.\n\nWould you be open to this approach? If yes, we will come back with the updated estimate for this route."
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-16T17:55:39.740+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Maryna Dovgal</custom>   \nThis is a great proposal, and moving this into the Campaigns module makes a lot of architectural sense. It cleanly solves several challenges in one go:\n\n* **Reporting & Delivery Logs**: Gives organizers and support full visibility into delivery, opens, and logs without extra UI work.\n* **Audience Scope**: Natively supports Attendees and unlocks Exhibitors (<custom data-type=\"smartlink\" data-id=\"id-1\">https://expoplatform.atlassian.net/browse/EP-47533</custom>) and other roles without needing separate builds later.\n* **Localization**: Provides multi-language support, custom subject lines, and preview out of the box.\n\nA few questions, guardrails, and design considerations I'd like to align on:\n\n1. **Utilising Existing Designs**: @Nazar Melnyk has already completed the email digest design layouts (dynamic blocks, styling, and card components under <custom data-type=\"smartlink\" data-id=\"id-2\">https://expoplatform.atlassian.net/browse/EP-52511</custom>). We should ensure these exact designs and layouts are fully utilised as the pre-built template structure inside the Campaigns framework.\n2. **Unsubscribe Handling**: How will the unsubscribe flow behave under this Campaign approach? Will the standard Campaign email footer token directly toggle off the new \"Email Digest\" setting in the attendee's profile, or does clicking unsubscribe opt them out of all campaigns/emails? Could you clarify how you envision the one-click unsubscribe vs. preference page working here?\n3. **Low-Friction Setup**: Let's make sure we ship a pre-configured, ready-to-use default Digest campaign using Nazar's template so organizers only need to select their audience/time and activate it.\n4. **Automated Dynamic Content**: The campaign renderer should handle the phase logic automatically (Booking Activity pre-event vs. Upcoming Meetings during-event) and skip sending if all blocks are empty.\n5. **Dispatch Safeguards**: Ensure a hard limit of max 1 digest per participant per day, respecting opt-outs.\n\nPlease put together the updated effort estimate and timeline for this approach so we can finalize and lock in the plan."
+    },
+    {
+     "author": "Olena Khromei",
+     "created": "2026-09-17T17:38:20.637+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Maryna Dovgal</custom>   — following the Campaigns proposal, a short QA follow-up before the re-estimate is done, so these don't shift it a second time.\n\n1. **When does the digest stop?** Phase detection only looks at the event start date. A recurring schedule needs an end condition — does sending stop at the event end date, or does the organiser set an end date on the schedule? Without this, the digest runs indefinitely after the event.\n2. **Pending counter — statuses and window.** The spec refers to \"pending\" / \"awaiting response\", but we have no \"awaiting response\" status. Please confirm which statuses are meant, whose response we're waiting for (Maryna's point 3), and whether there is a cut-off — as written, the count is not windowed, so six-month-old requests keep inflating it.\n3. **Group chats.** The spec consistently says \"personal chats\". Is excluding group and exhibitor team chats deliberate?\n4. **Default audience.** Which participant statuses land in the pre-configured send ? And are previously unsubscribed participants excluded by default?\n\n**New, created by the Campaigns approach**\n\n5. **Pre-configured campaign vs. cloning.** Kavinder asks for a ready-to-use default digest campaign so organisers only pick audience and time. Maryna's note says the configured send is not carried over when an event is cloned — only the template is. These two need reconciling, because they produce different behaviour on every new event: either the digest is half-set-up out of the box, or it is empty until the organiser builds it.\n6. **Spec is now out of date.** The Confluence page still describes the old design — template under Meetings, hard-coded 09:00, single toggle. Once the direction is locked, it needs rewriting, otherwise development and testing will follow a superseded document.\n\n"
+    },
+    {
+     "author": "Maryna Dovgal",
+     "created": "2026-09-18T12:53:20.668+0100",
+     "body": "**For** <custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> **— your five points**\n\n**1. Utilising Existing Designs.**  \nConfirmed: the digest template and all of its blocks are built new, exactly to the EP-52511 layouts.\n\n**2. Unsubscribe Handling.**  \nOne correction to the starting assumption: there is no standard unsubscribe link in Campaigns today. What exists is the organiser-side exclusion of an account from a send, and the platform-wide address blacklist, which fills automatically from bounces and complaints.\n\nOur proposal: the link in the digest email switches off only the Email Digest setting in the attendee's profile and does not affect the organiser's other emails. We would not build a separate subscription preferences page in the first version — there would be nothing to choose from: ordinary campaigns are one-off sends, and only the digest template can make a send recurring. If such a page is needed later, it sits on top without rework.\n\n**3. Low-Friction Setup.**  \nEvery event automatically gets a system \"Email Digest\" send in the \"Not active\" state: the template is already selected and cannot be changed, the audience is all active visitors, the frequency is daily, the time is 09:00 event time, the end date is the event end date, and the start date is empty. The organiser adjusts audience and time if needed, sets the start date and presses Activate. This send cannot be deleted, and a second one cannot be created.\n\n**4. Automated Dynamic Content.**  \nBoth parts confirmed. The phase logic sits in the email builder: Booking Activity is rendered only before the event starts. The \"all blocks empty — do not send\" check sits immediately before dispatch.\n\n**5. Dispatch Safeguards.**  \nConfirmed: no more than one digest per attendee per day, enforced by the send log. While the Email Digest toggle in the profile is off, no emails go to that attendee; switch it back on and they receive the next send. The platform-wide blacklist continues to apply on top.\n\n---\n\n**For** <custom data-type=\"mention\" data-id=\"id-1\">@Olena Khromei</custom> **— your points**\n\n**1. When does the digest stop?**  \nCovered by the schedule in point 3 above: the send has an end date, defaulting to the event end date, and the organiser can set it earlier. On reaching that date the send moves to \"Not active\" by itself and emails stop. There are only two states — \"Active\" and \"Not active\".\n\n**2. Pending counter — statuses and window.**  \nThe platform has four statuses: pending, incoming, confirmed, canceled. The spec's \"awaiting response\" is incoming — a request waiting for the attendee's own answer. We propose counting both directions: requests awaiting the attendee, and the attendee's own requests awaiting others. <custom data-type=\"mention\" data-id=\"id-2\">@Kavinder Rawal</custom>, please confirm this — or we count incoming only.\n\nOn the cut-off: request auto-expiry exists in the platform, but it is switched on per event in the meeting settings, so we cannot rely on it. We propose counting only requests whose meeting time has not yet passed — expired ones drop out on their own and no extra setting is needed.\n\n**3. Group chats.**  \nWe recommend keeping personal chats only in the first version, as the spec says: exhibitor team chats are noisy and the digest would lose its value. <custom data-type=\"mention\" data-id=\"id-3\">@Kavinder Rawal</custom>, your decision is needed here.\n\n**4. Default audience.**  \nThe draft send targets all active visitors; the organiser adds exhibitors and team members if needed. There will be no previously unsubscribed attendees at launch — the toggle is new. After that the rule is simple: while an attendee's toggle is off, the digest is not sent to them; switch it on and they start receiving it again. The platform-wide blacklist applies on top.\n\n**5. Pre-configured campaign vs. cloning.**  \nThere is no contradiction. Standard event cloning does not carry sends over — we create the draft ourselves on every event, cloned ones included. We do not carry settings over from the source event: audience filters reference category and session IDs of that specific event, those IDs change on cloning, and carrying them over would mean remapping every identifier. One mistake there would quietly send emails to the wrong audience. The draft is always created with defaults and in the \"Not active\" state.\n\n---\n\n**On the admin design**\n\nWe have the email layouts, but the admin side — the send screen with the repeat setting, start and end dates and the Activate button — has not been designed yet. If the designers have capacity to propose that screen, it would be very welcome. If not, we will build it along existing admin patterns and the designers can review the finished implementation."
+    },
+    {
+     "author": "Maryna Dovgal",
+     "created": "2026-09-18T13:23:47.434+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Evgen Polivach</custom> — the updated estimate for the Campaigns approach.\n\n**Estimate**\n\nBackend — 18 days.\n\n**What you get on top of the original spec**\n\n* Statistics for every send: how many went out, how many were opened, who received it — organisers and support can see this themselves.\n* Exhibitors, team members and speakers through the same setup, with no separate development — this closes EP-47533.\n* Configurable frequency and time instead of a hard-coded 09:00.\n* Accurate confirmed and cancelled meeting counters — we keep a log of status changes.\n* An unsubscribe link directly in the email.\n* A ready-made send on every event out of the box: pick the audience, set the time, activate.\n* Multi-language emails with a subject line per language.\n\n**Why 18 and not less**\n\nThe original estimate on the ticket is 15 backend days, and it was made in February, before Booking Activity with the 5-day counters was added to the spec.\n\nCampaigns do give us part of the work for free: the audience, the email editor, language versions, send statistics. But the digest itself does not get any simpler — the recurring schedule, switching blocks by event phase, the rule not to send an empty email, Booking Activity with its counters, building the template and blocks to the designs, the personal toggle and the unsubscribe link all remain work in either approach. The only genuine addition is the pre-configured send with duplicate protection, from your point 3.\n\nWithout Campaigns the same scope would cost more: send statistics would have to be built separately, and exhibitors would stay a separate task."
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-23T18:08:48.835+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Maryna Dovgal</custom>   \n2\\. Let’s keep incoming only. Requests they've sent and are waiting on someone else for aren't actionable by them, and merging the two directions into one number means it no longer tells them anything specific.   \n3\\. I agree: exhibitor team chats are high-volume and would drown the signal. Personal 1-on-1 chats with unread messages only.  \n  \nFor admin side:  \nI'll check this with <custom data-type=\"mention\" data-id=\"id-1\">@Nazar Melnyk</custom> . This screen is where a misconfigured recurring send would originate, so it's worth designing properly rather than retrofitting. If there's no capacity in time, build to existing admin patterns and we'll review."
+    },
+    {
+     "author": "Maryna Dovgal",
+     "created": "2026-09-24T23:32:52.275+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> - one scope confirmation on which meetings the digest covers.\n\nFrom the spec, the digest surfaces the attendee's regular meetings - the ones they book by sending/receiving meeting requests and confirming/declining. On that basis we plan to INCLUDE only those, and to EXCLUDE:\n\n* round table / session bookings,\n* speed networking,\n* auto-generated Meeting Program meetings.\n\nReason: the spec describes only the request/confirm booking flow (\"sending and receiving meeting requests\", \"awaiting response\", confirmed/cancelled), which is exactly the regular meetings; it does not mention the other types.\n\nPlease confirm this scope, or tell us if any of the three should be included."
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-25T12:22:02.619+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Maryna Dovgal</custom>   \n  \n**Meetings block (next 24 hours):** please add Meeting Program meetings that are already confirmed, together with the regular ones. They are shown in the attendee's My Schedule, so the email should show the same thing. Round tables, sessions and speed networking are still out.\n\n**Booking Activity block:** regular meetings only, as you suggested. In Meeting Program, there are no meeting requests, and confirmation happens in one window with a deadline, so the counters do not fit there.  \n  \nI will add this to the user story as well."
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-27T10:26:48.566+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Maryna Dovgal</custom>  decisions below, plus a few questions. Please tell me at the end if any of this changes the 18 days.\n\n**1. Time windows for the blocks**\n\nThe spec uses fixed windows — next 24 hours for meetings, last 5 days for the counters. Those only work for a daily send, but now that we are implementing the weekly frequency as well, if the organiser picks Weekly with one day, the meetings block would show one day out of seven, and the rest would never appear in any email.\n\nNew rule:\n\n* **Meetings block:** everything up to the next scheduled send.\n* **Counters:** whichever is longer — 5 days, or the time since the previous send.\n\nFor a daily send this behaves exactly as today, so nothing changes on that path. The 5 days stays as a minimum so the block still has something to show.\n\n**2. Pending count**\n\nIncoming requests only, those waiting for the attendee's own answer, as already agreed. No time window on when the request arrived: it is the total outstanding, per the original spec. Your cut-off is confirmed too: exclude requests whose meeting time has already passed, so expired ones drop out without depending on the per-event auto-expiry setting.\n\n**3. The \"Last 5 days\" label on the Booking Activity card**  \n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=05f2b63a0789&id=bcffbbe2-6b3c-4a00-99d8-b5503550926b&&collection=&height=648&occurrenceKey=null&width=683&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\nThis needs to change, for two reasons.\n\nIt can no longer be fixed text, since the window now depends on the schedule. Please render the real lookback.\n\nAnd it must apply only to Confirmed and Cancelled. Pending is a live count of outstanding requests, not activity in a period, so it does not belong under a period label. The TOTAL figure and the progress bar have the same problem, as they add a live state to two windowed counts.\n\nI am raising the layout side with <custom data-type=\"mention\" data-id=\"id-1\">@Nazar Melnyk</custom> . Flagging it here because the backend now has to supply the label value rather than it being static copy.\n\n**4. Counters in the first days after release**\n\nThe status change log starts filling on release day, so the counters will be too low until it has five full days of history. Please hide the Booking Activity block until then. A visibly wrong number in an attendee-facing email is worse than no block.\n\n**5. Unsubscribe — confirmed**\n\nYour proposal is right: the link switches off only the Email Digest setting in the attendee's profile and leaves the organiser's other emails untouched. Agreed too that a separate preferences page is not needed in v1.\n\nOne addition: the page the attendee lands on after unsubscribing should have a one-click option to turn the digest back on. Otherwise a mis-click means logging in and hunting for the setting.\n\n**7. Confirmation before activating**\n\nActivate currently starts a recurring send to the whole audience with no summary. Please add a confirmation showing: the number of recipients, the frequency and selected days, the send time with timezone, the start and end dates, and the date and time of the first email.\n\n---\n\n**Questions for you**\n\n**8. Statistics — same as Campaigns?**\n\nFor a campaign, the organiser opens statistics from the three-dot menu on the campaign row. Will it work in the same way for email digest? And a daily send over two months creates sixty or more sends; does that screen handle it?\n\n**9. Template — same as Campaigns?**\n\nWill the digest template sit in Templates List like a normal one?\n\n---\n\nPlease confirm whether any of the above moves the 18 days. Points 1 and 7 are the most likely to."
+    },
+    {
+     "author": "Maryna Dovgal",
+     "created": "2026-09-28T12:47:50.809+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Kavinder Rawal</custom> -- thanks, point by point below.\n\n**1. Dynamic windows.** Agreed. Meetings block = everything up to the next scheduled send; counters = 5 days or the time since the previous send, whichever is longer. For a daily send nothing changes.\n\n**2. Pending.** Agreed: incoming only (awaiting the attendee's own answer), no window on the request date, excluding requests whose meeting time has already passed.\n\n**3. Period label and counters.** Agreed. The backend will supply the real lookback value instead of fixed text. The period label applies only to Confirmed and Cancelled; Pending is a live count and carries no period label. The TOTAL figure and the progress bar -- we're waiting on the layout from Nazar.\n\n**4. First days after release.** Agreed. We hide the Booking Activity block until the log has accumulated the full window. An empty block is better than wrong numbers in the email.\n\n**5. Unsubscribe.** Agreed. The page shown after unsubscribing will have a one-click \"turn it back on\" option, in case of a mis-click.\n\n**7. Confirmation before activating.** Agreed. Before activation, a dialog showing: the number of recipients, the frequency and selected days, the send time with timezone, the start and end dates, and the date and time of the first email. Plus a live recipient count right on the screen while the audience is being edited.\n\n**8. Statistics.** We propose an aggregate -- one summary for the whole recurring send: totals (sent / opened) plus a recipient list showing, per recipient, how many emails they received, the date of the last one, and whether they opened it; with search and export. This way the screen doesn't hit the 60+ sends over two months -- it's a single summary, not one row per send. It opens the same way, from the three-dot menu on the send's row. Export is of the aggregate; a per-day export and a per-recipient day-by-day drill-down we'll add post-release if needed.\n\nIs the aggregate fine -- or do you need a breakdown per individual send?\n\n**9. Template.** Yes, the template will sit in the Templates List like a normal one, but as a system template: it can't be deleted and its type can't be changed.\n\n**On the timeline.** Yes, the accepted changes move the 18 days. Points 1, 3, 4, 5, 7 together add roughly 3-4 days -> \\~21-22 backend days. The main drivers are points 1 and 7, as you noted.\n\nHow far we can trim: the per-day export and the per-recipient drill-down are already out of v1 (post-release, no cost now). The only thing we can defer is the \"turn it back on\" button on the landing page -- that's -0.5 day, i.e. \\~20.5-21. Getting closer to 18 isn't possible without dropping the weekly frequency (point 1), which is what drives most of the shift.\n\nWe're waiting on your decision on point 8 and your approval of the timeline shift -- after that we take everything into work."
+    },
+    {
+     "author": "Kavinder Rawal",
+     "created": "2026-09-28T17:26:33.627+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Maryna Dovgal</custom>   \nThanks, that all looks right.\n\n**8. Statistics  aggregate is fine**\n\nThe aggregate answers the question support actually gets, \"did this attendee receive the digest?\", and does so in one place instead of sixty. No need for a per-send breakdown in v1.\n\nTwo small things to include:\n\n* Please show recipients who received nothing. Someone in the audience with zero emails, because every block was empty or their toggle is off, is the most useful case to be able to look up. If they are filtered out of the list, that is the one question the screen cannot answer.\n* For the totals, please make it clear what the numbers count. \"Sent 450\" is ambiguous on a recurring send. Emails sent, plus how many different people received at least one, would be clearer.\n\n**Timeline  approved, with one thing to confirm**\n\n21-22 backend days is fine. Please keep the \"turn it back on\" button; half a day is not worth losing the thing that stops a mis-click turning into a support ticket.\n\nBefore I take the new timeline to client, <custom data-type=\"mention\" data-id=\"id-1\">@Evgen Polivach</custom> can you confirm the frontend and MQA numbers as well? Every estimate so far has been backend only. The original 2 FE and 9 MQA were sized for the old approach, before the admin send screen existed and before we were touching a module all campaigns use. I would rather lock a full number now than come back with a second change later.\n\n**Admin screen design  go ahead without it**\n\nI checked with <custom data-type=\"mention\" data-id=\"id-2\">@Nazar Melnyk</custom> . The send screen is in the old admin panel, which his team does not design for, so there will be no design coming. Please build it according to the existing admin patterns, as you suggested, and we will review the result.\n\nThat includes the activation dialog from point 7  treat it as a normal requirement rather than something waiting on design.\n\n**3. Booking Activity card**\n\n<custom data-type=\"mention\" data-id=\"id-3\">@Nazar Melnyk</custom>  is looking at the layout for the TOTAL figure and the bar. I will come back to you as soon as he does, so it does not hold up the rest.\n\nEverything else is agreed; please go ahead."
+    }
+   ],
+   "links": [
+    "Polaris work item link: PBV11-91"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 58.38,
+   "assignee": "Evgen Polivach",
+   "canon": "In Progress",
+   "due": "2026-11-04",
+   "origDays": 29,
+   "priority": "Urgent",
+   "resolved": null,
+   "spentDays": 3.24,
+   "status": "In Progress",
+   "summary": "Email Digest",
+   "team": "Visitor team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p19",
+  "key": "EP-56770",
+  "current": {
+   "month": "2026-10",
+   "area": "Exhibitor Manual",
+   "owner": "Taimoor",
+   "key": "EP-56770",
+   "feature": "Exhibitor side repeatable entries and multi-file upload",
+   "rationale": "Needed by FESPA",
+   "impact": "Will remove limitations on file upload and reduce dependency on manual workarounds for uploading exhibitor manual data",
+   "priority": "Customer",
+   "deps": "",
+   "status": "In Progress",
+   "estimate": "15d",
+   "notes": "",
+   "driver": "44021",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Exhibitor side repeatable entries and multi-file upload",
+   "description": "## User Story\n\n**As an** Exhibitor filling out a Manual Form\n**I want to** add as many rows as I need to a table section, and upload more than one file to a single File field\n**So that** I can submit complete information (e.g. a full machine list, or multiple stand-design documents) without hitting an arbitrary cap or resorting to email\n\n## Background\n\nTable section row counts are currently fixed by the Organizer at setup, and the File element accepts one file per field. Exhibitors with more entries than the configured cap (e.g. 25+ machines vs. a 10-row limit) or documents that need multiple files (e.g. chemical safety sheets plus stand designs) work around this today by emailing the Organizer directly — defeating the point of structured data collection and creating manual work. Raised via FESPA Middle East (Apr 2027, Dubai, \\~500 exhibitors) — REQ-2026-075.\n\n## Acceptance Criteria\n\n- [ ] In a table section, the Exhibitor can add a new row on demand, not limited to the Organizer's configured starting row count and upload data in that row which gets saved along with the rest of the entries\n- [ ] The Exhibitor can remove a row they added, prior to submission\n- [ ] When exhibitor clicks on Add Row, a new row will get created at the bottom of the table where exhibitor will be shown text fields where applicable and fields for entering numbers where applicable. After exhibitor clicks on submit, they cannot edit the row\n- [ ] Empty rows should not get submitted\n- [ ] A File field accepts multiple uploads, each shown as its own entry and individually removable before submission\n- [ ] Existing forms/submissions built with a single fixed row count or single-file fields continue to render and save correctly — no migration needed for historical data\n- [ ] The Organizer's view of a submitted Manual Form shows all added rows and all uploaded files, not just the first\n- [ ] In Admin Panel > Exhibitor Manual > Manual Settings, when Organizer click on edit file upload button, they will see checkbox to enable or disable multi file upload\n- [ ] In Admin Panel > Exhibitor Manual > Manual Settings, when Organizer click on edit table button, they will see checkbox to enable or disable option to allow exhibitor to increase row in exhibitor manual front-end\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=955b79dbc72e&id=b22ef9cf-f63c-4ca6-bdec-5c469501ece9&&collection=&height=998&occurrenceKey=null&width=1682&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n",
+   "reportedBy": [
+    "FESPA"
+   ],
+   "pipedrive": "44021",
+   "labels": [
+    "mig-in-preparation"
+   ],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Konstantin Shyrokov",
+     "created": "2026-09-15T14:45:04.748+0100",
+     "body": "<custom data-type=\"smartlink\" data-id=\"id-0\">https://claude.ai/artifact/JKKySdfGETG3NW2AKdX8Ag?sk=o8mePO1goWCdPKCfX-bnjg</custom> "
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-16T09:41:16.493+0100",
+     "body": "Design is completed and linked in the design subtask <custom data-type=\"mention\" data-id=\"id-0\">@Mariia Ivanova</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Konstantin Shyrokov</custom> "
+    }
+   ],
+   "links": [
+    "Polaris work item link: PBV11-472"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 8,
+   "assignee": "Rostyslav Kvitnytskyi",
+   "canon": "Planned",
+   "due": "2026-10-08",
+   "origDays": null,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 2.22,
+   "status": "Ready to start",
+   "summary": "Exhibitor side repeatable entries and multi-file upload",
+   "team": "Organizer team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p20",
+  "key": "EP-56742",
+  "current": {
+   "month": "2026-10",
+   "area": "Invoicing",
+   "owner": "Taimoor",
+   "key": "EP-56742",
+   "feature": "Exclude surcharge/tax from invoice when offline payment method is selected",
+   "rationale": "Requested by ACI",
+   "impact": "",
+   "priority": "",
+   "deps": "",
+   "status": "Planned",
+   "estimate": "",
+   "notes": "",
+   "driver": "58938",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "impact",
+   "priority",
+   "deps",
+   "estimate",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Exclude surcharge/tax from invoice when offline payment method is selected",
+   "description": "Original request: EP-55785 (ACI Asia-Pacific & Middle East, RACE 2027, 11–13 May 2027, Kuala Lumpur). Sample invoice: Derar's comment, 21 Sep 2026.\n\n## Actor\n\n**Delegate** registering for the event and paying for tickets and/or sessions (e.g. \"Delegate (ACI-Member) Early Bird Rate\", \"Pre-Conference Workshop\").  \nSecondary: **Event admin**, who configures the setting.\n\n## Entry point\n\nDelegate registration journey → checkout → payment method selection. The observable result is on the **generated invoice document (PDF)**, not on the checkout page. The checkout page already stopped showing the surcharge on 31 Aug 2026, whatever the payment method.\n\n## Trigger\n\nThe delegate selects **Invoice payment** (the \"offline payment\" in the client's request) as the payment method and completes the order, and the system generates the invoice.\n\n## Observable outcome\n\n```gherkin\nScenario: Surcharge excluded from the invoice when Invoice payment is selected\n  Given the event has the Credit Card Surcharge (4.5%) configured\n  And the \"exclude for Invoice payment\" setting is ON\n  When a delegate completes checkout with Invoice payment\n  Then the generated invoice shows no Credit Card Surcharge rate or amount on the Tickets and Sessions line items\n  And the invoice total equals the net amount with no surcharge added\n\nScenario: Card payment is unchanged\n  Given the event has the Credit Card Surcharge configured\n  And the \"exclude for Invoice payment\" setting is ON\n  When a delegate completes checkout with card payment\n  Then the invoice shows the Credit Card Surcharge rate and amount exactly as it does today\n\nScenario: Setting OFF keeps current behaviour\n  Given the \"exclude for Invoice payment\" setting is OFF\n  When a delegate completes checkout with Invoice payment\n  Then the invoice shows the Credit Card Surcharge exactly as it does today\n\nScenario: Other taxes are not affected\n  Given the event has another tax configured in addition to the Credit Card Surcharge\n  And the \"exclude for Invoice payment\" setting is ON\n  When a delegate completes checkout with Invoice payment\n  Then only the Credit Card Surcharge is excluded\n  And the other tax is still applied and shown on the invoice\n\nScenario: Totals stay consistent across the platform\n  Given an order was placed with Invoice payment and the surcharge was excluded\n  Then the order total, the transaction record, the Transaction Dashboard and the Payments report all show the same amount as the invoice\n\nScenario: Invoices already issued are not changed\n  Given invoices were generated before the setting was switched ON\n  When the admin switches the setting ON\n  Then those existing invoices and transactions are not recalculated or regenerated\n```\n\n## Config\n\n* **Where:** Event setup → Payments. ACI's surcharge appears to be set up as a custom tax (see EP-38903), so the control most likely sits on the tax/surcharge configuration. Engineering to confirm.\n* **Scope:** per event. It is not hardcoded to ACI.\n* **Default:** OFF, so every existing event keeps its current behaviour.\n* **Decision needed:** is this a per-tax setting (\"do not apply to Invoice payment\"), so admins choose which tax is excluded, or one event-level switch? A per-tax setting is recommended, because excluding every tax would also remove a real tax such as VAT/SST.\n\n## Out of scope\n\nEditing the tax/surcharge rate or amount, including Taichi's request to set a flat 5% rate (see EP-55785, 6 Aug comment). That goes to a separate ticket. This story only covers the exclusion.\n\n## Open questions\n\n**Blocking refinement**\n\n1. **Is Invoice payment available in the delegate flow?** Mariia's refinement note says Payments by Invoice is exhibitor-only today (Type = \"basket\"). ACI's sample invoice shows delegate tickets and sessions, so it needs checking how their delegates reach Invoice payment. If the delegate flow doesn't support it today, adding it is extra scope.\n2. **Which build path?** EP-56047 (epic EP-55566, Purchasing module) is rewriting VAT rules and invoice generation and warns against a parallel invoice path. We need to decide whether to build this in the legacy invoice now and accept migration debt, or fold it into the Purchasing module. Either way, link EP-55566 / EP-56047.\n3. **What happens when the payment method changes?** For example, the delegate switches from Invoice to card after the invoice was generated, or the admin uses Cancel Payment / Confirm Payment on an invoice-paid order. Recommended default: the invoice reflects the payment method at the time it is generated, and a method change regenerates it with the correct surcharge treatment. Confirm in refinement.\n4. **How is the exclusion shown?** Should the surcharge columns be hidden, or shown with 0 / 0.00? Derar's comment allows either. It is also open whether the invoice needs an explicit line such as \"No surcharge applied for invoice payment\", and in which languages.\n\n**Non-blocking (needed for delivery)**\n\n* A target date. Early bird registration opened in September 2026. We also need to know what ACI does in the meantime.\n* Written confirmation from ACI, on the ticket, that the surcharge applies to card payments only and that excluding it for invoice payment is their policy.\n\n",
+   "reportedBy": [
+    "ACI"
+   ],
+   "pipedrive": "58938",
+   "labels": [
+    "mig-in-preparation"
+   ],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Mariia Ivanova",
+     "created": "2026-09-16T08:38:31.848+0100",
+     "body": "Returning this <custom data-type=\"smartlink\" data-id=\"id-0\">https://expoplatform.atlassian.net/browse/EP-56742</custom>  from backlog refinement — the team can't estimate or test it as written. The story has no entry point and no observable outcome, so BE/FE/QA each have to guess a different thing.\n\n**What is needed before re-refinement:**\n\n1. **Actor and flow.** AC1 says \"delegate selects offline payment\", but Payments by Invoice today is exhibitor-only (Type column is always \"basket\" ). Is this the delegate registration journey, the exhibitor basket, or both? This changes the estimate several times over.\n2. **Terminology.** \"Offline payment\" isn't a platform term. Suppose it means **Invoice payment** (the `Disable invoice payment` setting in Event setup → Payments → General),\n3. **Scope of the exclusion.** **Interaction with the existing tax model.** **Сonfig.** \n4. **Scope vs. what the client asked for.** EP-55785 asked to _exclude **or** edit_ the amount, and Derar's 6 Aug comment records Taichi asking for an **editable tax rate** (they need a flat 5%, the system restricts to 5.5/6.5 increments) — with Rachid already treating this ticket as covering it. This story is exclude-only. Please either extend it or add an explicit Out of scope line plus a separate ticket, so we don't ship something the client reads as the wrong thing.\n5. **State transitions.** What happens when the payer switches from invoice to card after the invoice is generated, or when an admin uses Cancel Payment / Confirm Payment? Recalculate? Regenerate the invoice? What about already-issued pending invoices?\n6. **Dependency decision.** EP-56047 (under the in-progress EP-55566 epic) is rewriting exactly this ground — discounts, VAT rules and invoice generation — and explicitly warns against building a parallel invoice path. EP-55641 is on hold on a related VAT question. We need your call: build in legacy now and accept the migration debt, or fold this into the Purchasing module. Please link EP-55566 / EP-56047 either way.\n\n**Also needed, non-blocking for refinement but blocking for delivery:**\n\n* The client's actual invoice template — Derar flagged on 31 Jul that the attachment never arrived. AC3 (\"the invoice clearly mentions that no tax was applied\") can't be specified or translated without it, and our invoices are multilingual.\n* A target date, and what ACI does in the meantime. Early bird opened in September 2026; the last timeline update on EP-55785 was \"I'll get back to you\" on 27 Aug.\n* Written confirmation from ACI that excluding VAT based on payment method is their tax policy and their responsibility. VAT normally depends on jurisdiction and buyer status, not on how the buyer pays — I'd like that on the ticket, not only in email.\n\n---\n\n**Proposal — a minimum bar for stories entering refinement**\n\nSuppose it should remove most of what we lose sprint time to:\n\n* **Actor** — the specific role, not \"user\"\n* **Entry point** — the screen or admin URL where it starts\n* **Trigger** — what the actor does\n* **Observable outcome** — what they see, where, and what changes in the data\n* **Config** — where the setting lives and what its default is (for anything configurable)\n* **Out of scope** — one line, mandatory\n\nHappy to agree this as the Organizer-team Userstory Refinement Definition of Ready and walk through EP-56742 against it together.\n\ncc <custom data-type=\"mention\" data-id=\"id-1\">@Taimoor Zulfiqar</custom> <custom data-type=\"mention\" data-id=\"id-2\">@Ajay Singh</custom> "
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-16T08:48:22.103+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Mariia Ivanova</custom>We already agreed on last backlog refinement that the story was pending details including the sample invoices which I have requested from the TAM. On points 1,2 and 3, 5 - aligned and will make those changes. For 4, the scope of this ticket is limited to exclusion only"
+    },
+    {
+     "author": "Derar Toujgani",
+     "created": "2026-09-21T17:30:35.006+0100",
+     "body": "Sample invoice attached (pulling from Connie Wong's original 16 Aug 2026 email - I'll attach the image file below).\n\n**What it shows:** the invoice's \"Tickets\" and \"Sessions\" tables both include a \"Credit Card Surcharge Rate\" column (4.5%) and a \"Credit Card Surcharge Amount\" column, applied to the Delegate (ACI-Member) Early Bird Rate line item and the Pre-Conference Workshop line item.\n\n**What needs to be excluded:** those two columns (rate + amount) - or their values zeroed out - specifically when the registrant has selected Invoice/offline payment, not credit card. This is a test/sample invoice Connie generated to illustrate the issue, not a live one, so the client (company name \"test\", address \"ghf\"/\"hfh\") is placeholder data - the structure and column layout are what matters here, not the specific values.\n\n<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom>  re: not finding the surcharge on the client's live event - worth double-checking whether you were looking at the payment/checkout step (which was already fixed on 31 Aug 2026 per a separate item - surcharge no longer shown there regardless of payment method) versus the actual generated invoice document/PDF itself, which is what this ticket is about and what's shown in the attached sample. Those are two different places in the flow.\n\n‌\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=11c82e702208&id=f729f3e4-e888-4674-97a9-cbd46248416e&&collection=&height=544&occurrenceKey=null&width=1240&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-24T11:30:19.329+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Derar Toujgani</custom> \n\n1. Mariia's refinement note says Payments by Invoice is exhibitor-only today (Type = \"basket\"). ACI's sample invoice shows delegate tickets and sessions, so it needs checking how their delegates reach Invoice payment. If the delegate flow doesn't support it today, adding it is extra scope.\n\n"
+    }
+   ],
+   "links": [
+    "Relates: EP-55785",
+    "Polaris work item link: PBV11-478"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": null,
+   "assignee": "Mariia Ivanova",
+   "canon": "Planned",
+   "due": null,
+   "origDays": null,
+   "priority": "High",
+   "resolved": null,
+   "spentDays": null,
+   "status": "Open",
+   "summary": "Exclude surcharge/tax from invoice when offline payment method is selected",
+   "team": "Organizer team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ }
+]

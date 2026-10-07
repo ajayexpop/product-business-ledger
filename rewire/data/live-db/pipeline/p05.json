@@ -1,0 +1,183 @@
+{
+  "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "deps": "EP-57291 description; links; EP-52201 comment 2026-09-23 by Przemysław Wrzeszcz; jiraColumns (spentDays 0.42, due 2026-10-14)",
+      "notes": "EP-57291 comment 2026-09-21 by Taimoor Zulfiqar; EP-52201 comment 2026-09-23 by Przemysław Wrzeszcz; jiraColumns",
+      "why": "EP-57291 description; Jira Reported by DLG, Pipedrive 81808"
+    },
+    "gaps": [
+      "client: no client named in description or comments beyond Jira Reported by",
+      "pages: no Confluence links (only Figma links) in description or comments"
+    ],
+    "pages": []
+  },
+  "flags": {
+    "drift": false,
+    "dueSoon": false,
+    "noEstimate": false,
+    "noJira": false,
+    "overEstimate": false,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "October 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-10"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "h0mig-driver": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "migrate",
+      "note": "pre-filled: Why it matters names the client: \"DLG commitment\" (pp-driver-prefill)",
+      "to": "81808"
+    },
+    "h0mig-rationale": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "migrate",
+      "note": "the old Why, word for word",
+      "to": "DLG commitment"
+    },
+    "h0mig-why": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "why",
+      "from": "DLG commitment",
+      "k": "migrate",
+      "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
+      "to": ""
+    },
+    "hb260928enr-deps": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "deps",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57291 description; links; EP-52201 comment 2026-09-23 by Przemysław Wrzeszcz; jiraColumns (spentDays 0.42, due 2026-10-14)",
+      "to": "Same event data and option sets as the web filters; related EP-57882; linked with calendar view EP-52201 and EP-57332 (filters drive the calendar grid). iOS filters sub-task EP-57557 was assigned to an Android developer and reassigned to the iOS side on 23 Sep. Risk: due 14 Oct with little time logged so far."
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57291 comment 2026-09-21 by Taimoor Zulfiqar; EP-52201 comment 2026-09-23 by Przemysław Wrzeszcz; jiraColumns",
+      "to": "21 Sep: iOS and Android designs linked. 23 Sep (on EP-52201): iOS filters sub-task EP-57557 reassigned to an iOS developer. Jira In Progress, due 14 Oct."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57291 description; Jira Reported by DLG, Pipedrive 81808",
+      "to": "For DLG: the app needs the web's Language and Location session filters so the same filters give the same results on mobile."
+    },
+    "hb260928jira-status": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "status",
+      "from": "Planned",
+      "k": "edit",
+      "note": "Status now follows Jira: In Progress (owner, 28 Sep 2026: the ledger must match every board)",
+      "to": "In Progress"
+    }
+  },
+  "j": {
+    "aggOrigDays": null,
+    "assignee": "Maciej Grabowski",
+    "canon": "In Progress",
+    "due": "2026-10-14",
+    "origDays": null,
+    "priority": "Urgent",
+    "resolved": null,
+    "spentDays": 0.42,
+    "status": "In progress",
+    "summary": "Language and Location Filters for Sessions and Exhibitor Events (Mobile App)",
+    "team": "Mobile team",
+    "teamField": "customfield_10001",
+    "type": "Story"
+  },
+  "jAt": "2026-09-29T15:59:39Z",
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": 8.8,
+    "daysKind": "point"
+  },
+  "order": 50,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-22",
+      "basis": "Why it matters names the client: \"DLG commitment\"",
+      "by": "Claude",
+      "field": "Why it matters",
+      "name": "DLG Markets GmbH",
+      "quote": "DLG commitment",
+      "value": "81808"
+    }
+  },
+  "raw": {
+    "area": "Legacy mobile app",
+    "month": "October 2026",
+    "status": "Planned"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-28",
+  "v": {
+    "area": "Legacy mobile app",
+    "deps": "Same event data and option sets as the web filters; related EP-57882; linked with calendar view EP-52201 and EP-57332 (filters drive the calendar grid). iOS filters sub-task EP-57557 was assigned to an Android developer and reassigned to the iOS side on 23 Sep. Risk: due 14 Oct with little time logged so far.",
+    "driver": "81808",
+    "estimate": "Dev: 2.5 d Android | 2.5 d iOS | 5.0 d Total. QA: 1.9 d Android | 1.9 d iOS | 3.8 d Total. Total: 8.8 person-days",
+    "feature": "Language and Location Filters for Sessions and Exhibitor Events (Mobile App)",
+    "impact": "DLG expects to have this feature",
+    "key": "EP-57291",
+    "month": "2026-10",
+    "notes": "21 Sep: iOS and Android designs linked. 23 Sep (on EP-52201): iOS filters sub-task EP-57557 reassigned to an iOS developer. Jira In Progress, due 14 Oct.",
+    "owner": "Taimoor",
+    "priority": "Customer",
+    "rationale": "DLG commitment",
+    "status": "In Progress",
+    "team": "",
+    "why": "For DLG: the app needs the web's Language and Location session filters so the same filters give the same results on mobile."
+  }
+}

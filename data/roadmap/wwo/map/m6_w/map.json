@@ -1,0 +1,481 @@
+[
+ {
+  "id": "onsite-interactive-floor-plans-launch",
+  "kind": "new",
+  "kindWhy": "First 'Mobile app for Floor Plan' and a 'New Floorplan' with admin stand drawing",
+  "buildsOn": [
+   "16_floor_plan:118",
+   "16_floor_plan:192",
+   "16_floor_plan:193"
+  ],
+  "buildsOnWhy": "Stand uniqueness and hide booth/exhibitor names and hide stand, as the floor plan has them today"
+ },
+ {
+  "id": "onsite-badge-builder-controls",
+  "kind": "improved",
+  "kindWhy": "Adds rotation, aligning, duplication, margins and resize to existing Badge builder fields",
+  "buildsOn": [
+   "04_onsite_and_kiosks:170",
+   "04_onsite_and_kiosks:105",
+   "04_onsite_and_kiosks:258"
+  ],
+  "buildsOnWhy": "Per-field rotation/margins/alignment, field positioning and the Visitor Switch Category badge variable"
+ },
+ {
+  "id": "onsite-qr-code-pdf-export",
+  "kind": "unclear",
+  "kindWhy": "'Export QR Codes in pdf format': cannot tell if it is a new export or a new format of an existing one",
+  "buildsOn": [
+   "15_lead_intelligence:130"
+  ],
+  "buildsOnWhy": "Existing QR code exports (visitor personal QR, company/product/content QR)"
+ },
+ {
+  "id": "analytics-report-columns-2023",
+  "kind": "improved",
+  "kindWhy": "'Add the notes ... in Excel export', 'Add Session Id column' to existing reports",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the exhibitor export or favourited sessions report"
+ },
+ {
+  "id": "onsite-external-code-scanning",
+  "kind": "improved",
+  "kindWhy": "'Ability to scan external QR and Barcodes' in the existing Check-In app, app and kiosk",
+  "buildsOn": [
+   "04_onsite_and_kiosks:137",
+   "04_onsite_and_kiosks:244",
+   "04_onsite_and_kiosks:278"
+  ],
+  "buildsOnWhy": "External QR/barcode scanning in kiosk, external codes via import/API, non-EP barcodes in Scanned Code"
+ },
+ {
+  "id": "onsite-expofp-stand-linking",
+  "kind": "improved",
+  "kindWhy": "'Redirection ExpoFP Floorplan': adds a linking setting to existing stand links",
+  "buildsOn": [
+   "16_floor_plan:157",
+   "16_floor_plan:198"
+  ],
+  "buildsOnWhy": "ExpoFP integration and the external floor plan URL"
+ },
+ {
+  "id": "onsite-kiosk-improvements",
+  "kind": "improved",
+  "kindWhy": "'Search Improvements for Kiosk', 'conditional logic in the Kiosk Builder Registration'",
+  "buildsOn": [
+   "04_onsite_and_kiosks:119",
+   "04_onsite_and_kiosks:295",
+   "04_onsite_and_kiosks:120"
+  ],
+  "buildsOnWhy": "Kiosk conditional logic (config) and name/email check-in search"
+ },
+ {
+  "id": "analytics-new-analytics",
+  "kind": "improved",
+  "kindWhy": "Stories are '(New Analytics) ... fixes' and 'Change default date range', fixing an existing New Analytics",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the general analytics dashboard"
+ },
+ {
+  "id": "analytics-export-progress",
+  "kind": "improved",
+  "kindWhy": "'Cancel button for exports', 'percentage indication', 'Check-in export: optimize database query'",
+  "buildsOn": [
+   "04_onsite_and_kiosks:189",
+   "04_onsite_and_kiosks:191"
+  ],
+  "buildsOnWhy": "Exports on the SQS queue and the check-in report export"
+ },
+ {
+  "id": "analytics-mobile-app-stats",
+  "kind": "new",
+  "kindWhy": "'Mobile analytics MVP: Get the total logins ... per app'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers mobile app analytics"
+ },
+ {
+  "id": "onsite-android-scanning-no-google",
+  "kind": "improved",
+  "kindWhy": "'Opensource scanner | Non google play devices' extends existing scanning to more devices",
+  "buildsOn": [],
+  "buildsOnWhy": "Only matching claim (Zxing scanner, 04:251) is NOT-IN-CODE"
+ },
+ {
+  "id": "onsite-live-location-expofp",
+  "kind": "new",
+  "kindWhy": "'ExpoFP - Crowdconnected Integration': a new location integration",
+  "buildsOn": [
+   "16_floor_plan:161",
+   "16_floor_plan:199",
+   "16_floor_plan:172"
+  ],
+  "buildsOnWhy": "CrowdConnected integration, its config keys and location push"
+ },
+ {
+  "id": "analytics-custom-checkin-reports",
+  "kind": "improved",
+  "kindWhy": "'Including column Scanned code in the check-in report', '2 check-in reports' change the check-in report",
+  "buildsOn": [
+   "04_onsite_and_kiosks:130",
+   "04_onsite_and_kiosks:131",
+   "04_onsite_and_kiosks:278"
+  ],
+  "buildsOnWhy": "Check-in report unique per event/day, customisable columns, co-located and Scanned Code"
+ },
+ {
+  "id": "analytics-dashboard-improvements-2023",
+  "kind": "improved",
+  "kindWhy": "'Favorites Dashboard - Optimize data load time', 'Pining interactions header'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the favourites or visitor/exhibitor dashboards"
+ },
+ {
+  "id": "onsite-floor-plan-improvements-2023",
+  "kind": "improved",
+  "kindWhy": "'FloorPlan improvement', remove arrows, 'No results' for quick filters on the existing floor plan",
+  "buildsOn": [
+   "16_floor_plan:151"
+  ],
+  "buildsOnWhy": "Front-end floor plan view and search"
+ },
+ {
+  "id": "analytics-login-source",
+  "kind": "improved",
+  "kindWhy": "'Additional column to Visitors/Exhibitors login'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the login report"
+ },
+ {
+  "id": "onsite-meeting-location-floor-plan",
+  "kind": "improved",
+  "kindWhy": "'Interactive location on meeting cards in app' adds a link to existing meeting cards",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers meeting-card locations"
+ },
+ {
+  "id": "analytics-checkin-analytics-refresh",
+  "kind": "improved",
+  "kindWhy": "'Check-in Analytics refresh' of analytics, check-in list and zones pages, 'Design changes'",
+  "buildsOn": [
+   "04_onsite_and_kiosks:190",
+   "04_onsite_and_kiosks:272",
+   "04_onsite_and_kiosks:188"
+  ],
+  "buildsOnWhy": "Check-in analytics, check-ins/outs by hour/day, check-in list"
+ },
+ {
+  "id": "analytics-mobile-analytics-page",
+  "kind": "unclear",
+  "kindWhy": "Only 'Mobile analytics page'; cannot tell if new or a rework of the base stats page",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers mobile app analytics"
+ },
+ {
+  "id": "analytics-meetings-tab",
+  "kind": "unclear",
+  "kindWhy": "Only '(New Analytics UI) Meetings'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers meeting analytics"
+ },
+ {
+  "id": "analytics-standard-report",
+  "kind": "unclear",
+  "kindWhy": "Only 'Standard Report generation'",
+  "buildsOn": [
+   "15_lead_intelligence:203"
+  ],
+  "buildsOnWhy": "Standard Report via /admin/data"
+ },
+ {
+  "id": "onsite-invisual-integration",
+  "kind": "new",
+  "kindWhy": "'InVisual Floor Plan Integration': a new integration",
+  "buildsOn": [
+   "16_floor_plan:159",
+   "16_floor_plan:197"
+  ],
+  "buildsOnWhy": "InVisual deep links/bookmarks and its configuration"
+ },
+ {
+  "id": "onsite-badge-printing-improvements",
+  "kind": "improved",
+  "kindWhy": "'BULK PRINT BADGES - REFACTORING', 'Print badge statistics capture', edit error text",
+  "buildsOn": [
+   "04_onsite_and_kiosks:108",
+   "04_onsite_and_kiosks:176",
+   "04_onsite_and_kiosks:157"
+  ],
+  "buildsOnWhy": "Bulk/individual badge printing and exhibitor team badge printing"
+ },
+ {
+  "id": "onsite-checkin-app-zones",
+  "kind": "improved",
+  "kindWhy": "'Check-in app improvement'",
+  "buildsOn": [
+   "04_onsite_and_kiosks:184",
+   "04_onsite_and_kiosks:126",
+   "04_onsite_and_kiosks:125"
+  ],
+  "buildsOnWhy": "Check-in app zone/in-out flow, session check-in, scanned list"
+ },
+ {
+  "id": "onsite-expofp-app-redesign",
+  "kind": "improved",
+  "kindWhy": "'Redesign of expoFP UI elements'",
+  "buildsOn": [
+   "16_floor_plan:151",
+   "16_floor_plan:161"
+  ],
+  "buildsOnWhy": "Front-end floor plan search/wayfinding and CrowdConnected location"
+ },
+ {
+  "id": "analytics-export-additions-2024",
+  "kind": "improved",
+  "kindWhy": "'News Export', add activation timestamp and parent exhibitor columns to existing exports",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers these exports"
+ },
+ {
+  "id": "analytics-report-time-zones",
+  "kind": "improved",
+  "kindWhy": "'Change the time format' of existing export/import links",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers export time stamps"
+ },
+ {
+  "id": "analytics-session-report-additions",
+  "kind": "improved",
+  "kindWhy": "'Improve Sessions report with security concern info', 'Add info for Exhibitor event info'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the sessions report"
+ },
+ {
+  "id": "analytics-team-schedule-export",
+  "kind": "improved",
+  "kindWhy": "'Column for Attendee Names - Team Schedule Export'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the team schedule export"
+ },
+ {
+  "id": "analytics-marketplace-supply-demand",
+  "kind": "improved",
+  "kindWhy": "'Include category to the Supply&Demand graph', display all categories",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the supply and demand graph"
+ },
+ {
+  "id": "analytics-login-checkin-exports-2025",
+  "kind": "improved",
+  "kindWhy": "'Exclude Customer Service Logins', 'Enhancing Check-in List Export with Session Information'",
+  "buildsOn": [
+   "04_onsite_and_kiosks:188",
+   "04_onsite_and_kiosks:191"
+  ],
+  "buildsOnWhy": "Check-in list and its export"
+ },
+ {
+  "id": "onsite-ticket-validation-checkin",
+  "kind": "improved",
+  "kindWhy": "'(Part 2) Usage of check-in app in Ticketing' extends the existing check-in app",
+  "buildsOn": [
+   "04_onsite_and_kiosks:184",
+   "04_onsite_and_kiosks:121"
+  ],
+  "buildsOnWhy": "Check-in app scan flow and attendance tracking"
+ },
+ {
+  "id": "onsite-floor-plan-display-2025",
+  "kind": "improved",
+  "kindWhy": "'Order of Exhibitor filters ... mirrored on Floorplan', 'Change floor plan mini header'",
+  "buildsOn": [],
+  "buildsOnWhy": "Only floor plan filter claim (16:123) is NOT-IN-CODE"
+ },
+ {
+  "id": "onsite-gps-ips-positioning",
+  "kind": "improved",
+  "kindWhy": "'GPS Android Implementation' as on iOS, 'Toggle for IPS / GPS Config'",
+  "buildsOn": [
+   "16_floor_plan:159",
+   "16_floor_plan:161",
+   "16_floor_plan:199"
+  ],
+  "buildsOnWhy": "InVisual and CrowdConnected integrations and CrowdConnected config"
+ },
+ {
+  "id": "onsite-badge-templates-redesign",
+  "kind": "improved",
+  "kindWhy": "'Badges | Redesign of templating and output'",
+  "buildsOn": [
+   "04_onsite_and_kiosks:286",
+   "04_onsite_and_kiosks:104",
+   "04_onsite_and_kiosks:110"
+  ],
+  "buildsOnWhy": "Print/digital badge templates, badge builder, pre-print via profile"
+ },
+ {
+  "id": "analytics-total-meetings-graph",
+  "kind": "improved",
+  "kindWhy": "'Logic of displaying of how the Total meetings graph'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers meeting analytics"
+ },
+ {
+  "id": "onsite-stand-bookmarking",
+  "kind": "new",
+  "kindWhy": "'Bookmarking Stands on Floor Plan - Stage 1'",
+  "buildsOn": [],
+  "buildsOnWhy": "Bookmark claims (16:140, 16:150, 16:171) are CONTRADICTED or NOT-IN-CODE"
+ },
+ {
+  "id": "onsite-live-badge-ring",
+  "kind": "new",
+  "kindWhy": "'Display a Moving Colored Ring Around Badge QR Codes'",
+  "buildsOn": [
+   "04_onsite_and_kiosks:172"
+  ],
+  "buildsOnWhy": "Digital badge configuration (colour-ring claims 04:109/173/288 are CONTRADICTED)"
+ },
+ {
+  "id": "onsite-category-at-checkin",
+  "kind": "improved",
+  "kindWhy": "'Participant category display in Check-in app', category in KIOSK, logout button",
+  "buildsOn": [
+   "04_onsite_and_kiosks:125",
+   "04_onsite_and_kiosks:309"
+  ],
+  "buildsOnWhy": "Check-in app scanned list and category shown for walk-ins"
+ },
+ {
+  "id": "analytics-meeting-programme-reports",
+  "kind": "new",
+  "kindWhy": "'Reports for Meeting Program': a first report for meeting programmes",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers meeting programme reports"
+ },
+ {
+  "id": "onsite-expofp-hall-stands",
+  "kind": "improved",
+  "kindWhy": "'ExpoFP - New stand format in our applications'",
+  "buildsOn": [
+   "16_floor_plan:157"
+  ],
+  "buildsOnWhy": "ExpoFP stand number exchange"
+ },
+ {
+  "id": "analytics-programme-roundtable-reports",
+  "kind": "improved",
+  "kindWhy": "'Meeting Program report ... tab extension' (plus a 'Round tables report')",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers meeting programme or round table reports"
+ },
+ {
+  "id": "onsite-offline-expofp",
+  "kind": "improved",
+  "kindWhy": "'Full Offline Support - ExpoFP' adds offline to existing ExpoFP plans",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers floor plan offline use"
+ },
+ {
+  "id": "onsite-bookmark-favourites-sync",
+  "kind": "improved",
+  "kindWhy": "'Bi-directional Sync Between Favorites and Floorplan Bookmarks' links two existing features",
+  "buildsOn": [],
+  "buildsOnWhy": "Bookmark claims are CONTRADICTED or NOT-IN-CODE"
+ },
+ {
+  "id": "onsite-checkin-qr-2026",
+  "kind": "improved",
+  "kindWhy": "'Add a new simplified QR Code type', 'Add limitation to Zone filter in Check-in List'",
+  "buildsOn": [
+   "04_onsite_and_kiosks:132",
+   "04_onsite_and_kiosks:287",
+   "04_onsite_and_kiosks:188"
+  ],
+  "buildsOnWhy": "Default/External ID switch, QR source per category, check-in list filters"
+ },
+ {
+  "id": "onsite-aditus-badge-errors",
+  "kind": "improved",
+  "kindWhy": "'Error Handling - Custom Badge Page'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers Aditus custom badges"
+ },
+ {
+  "id": "analytics-export-additions-2026",
+  "kind": "improved",
+  "kindWhy": "Adds 'External QR', 'is_new' and profile completion columns to existing exports",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers these exports"
+ },
+ {
+  "id": "analytics-programme-report-additions-2026",
+  "kind": "improved",
+  "kindWhy": "'All meetings tab. Add extra column', 'Meeting Ratings in All Meetings Tab'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers meeting programme reports"
+ },
+ {
+  "id": "onsite-ocr-badge-scanning",
+  "kind": "new",
+  "kindWhy": "'OCR Badge Scanning'",
+  "buildsOn": [
+   "15_lead_intelligence:93"
+  ],
+  "buildsOnWhy": "Mobile badge scanning (lead scanning)"
+ },
+ {
+  "id": "onsite-floor-plan-management-2026",
+  "kind": "improved",
+  "kindWhy": "'Adding sorting and multi-select to internal floorplan', hidden hall fix",
+  "buildsOn": [
+   "16_floor_plan:191",
+   "16_floor_plan:122"
+  ],
+  "buildsOnWhy": "Hide hall on front-end and hidden halls invisible to end users"
+ },
+ {
+  "id": "analytics-event-reporting-dashboards",
+  "kind": "new",
+  "kindWhy": "'Development <first> dashboard', dashboards 'embedded as a new sub-section'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers event reporting dashboards"
+ },
+ {
+  "id": "analytics-colocated-checkins",
+  "kind": "improved",
+  "kindWhy": "'Organizer can compare Check-ins across co-located Events ... in Total Check-In / Check-Out graph'",
+  "buildsOn": [
+   "04_onsite_and_kiosks:272",
+   "04_onsite_and_kiosks:278"
+  ],
+  "buildsOnWhy": "Total check-ins/outs graph and co-located check-in data"
+ },
+ {
+  "id": "analytics-faster-exports",
+  "kind": "improved",
+  "kindWhy": "'bySession export rework', 'N+1 query loop in By Booking report'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers these reports"
+ },
+ {
+  "id": "analytics-ga4-support",
+  "kind": "improved",
+  "kindWhy": "'Restoring Google Analytics Support: Enhancements for GA4'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers Google Analytics"
+ },
+ {
+  "id": "analytics-meeting-outcome-columns",
+  "kind": "improved",
+  "kindWhy": "'Enhancing Meetings report ... Adding ... Columns'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the meetings report"
+ },
+ {
+  "id": "analytics-sponsorship-engagement-reporting",
+  "kind": "new",
+  "kindWhy": "'New SponsorAccountsInteractionsReport', 'Sponsorships Deep Dive' dashboard",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers sponsor performance reporting"
+ }
+]

@@ -490,6 +490,49 @@ def assemble():
     print('highlights', len(out), 'headlines', sum(h['level'] == 'headline' for h in out))
 
 
+TIER_ORDER = 'ABCSW'  # strongest first, as in data/roadmap/dlg/EVIDENCE.md
+TIER_TEXT = {'A': 'DLG named as asking', 'B': 'DLG case in the ticket', 'C': 'Reported-by field only',
+             'S': 'Shared with other clients', 'W': 'Not a DLG request'}
+
+
+def _quote(q):
+    """An evidence quote made safe to show internally: no links, tokens or raw JSON."""
+    import re
+    if not q or '": "' in q:
+        return None
+    q = re.sub(r'https?://\S+', '[link]', q)
+    q = re.sub(r'\S+@\S+\.\w+', '[email]', q)
+    q = re.sub(r'\b[A-Za-z0-9_-]{24,}\b', '[token]', q)
+    q = re.sub(r'\s+', ' ', q).strip()
+    return q[:320] + ('…' if len(q) > 320 else '')
+
+
+def dlg_evidence(W, tiers):
+    """The internal review's DLG section: every item the DLG page presents as done or in development for DLG,
+    with each source story's evidence (data/roadmap/dlg/evidence.csv, pulled from Jira 25 Sep 2026)."""
+    import csv
+    ev = {r['key']: r for r in csv.DictReader(open(os.path.join(RM, 'dlg', 'evidence.csv'), encoding='utf-8'))}
+    cd = load(os.path.join(RM, 'dlg', 'dlg.json'))
+
+    def row(kind, i, x):
+        x = dict(x); x.update({f: v for f, v in W.get('dlg-%s-%d' % (kind, i), {}).items() if f in ('title', 'benefit', 'what', 'why', 'outcome', 'who')})
+        stories = []
+        for k in x['stories']:
+            r = ev.get(k, {}); t = (r.get('tier') or tiers.get(k) or '?')[0]
+            stories.append({'k': k, 's': r.get('summary'), 't': t, 'tt': TIER_TEXT.get(t, 'Not rated'), 'why': r.get('reason'),
+                            'rep': r.get('reportedByField'), 'by': r.get('createdBy'), 'd': r.get('created'), 'st': r.get('status'),
+                            'lab': r.get('labels'), 'q': [q for q in (_quote(r.get('quote1')), _quote(r.get('quote2'))) if q][:1 if r.get('quote1') == r.get('quote2') else 2]})
+        best = min((s['t'] for s in stories), key=lambda t: TIER_ORDER.index(t) if t in TIER_ORDER else 9)
+        return {**{f: x.get(f) for f in ('q', 'theme', 'title', 'benefit', 'what', 'why', 'outcome', 'who', 'stories')},
+                'tags': [], 'tier': best, 'tierText': TIER_TEXT.get(best), 'ev': stories}
+    return {'name': 'DLG', 'eyebrow': 'Done for DLG · internal evidence',
+            'title': 'What the DLG page claims, and where the proof is',
+            'intro': 'Every item the DLG Product Journey presents as built or in development for DLG Markets GmbH, with each Jira story, its evidence rating and the line in Jira that ties it to DLG. A = DLG named as asking, B = DLG case in the ticket, C = Reported-by field only (set by our team; confirm with the account manager), S = shared with other clients, W = not a DLG request (remove or reword). Source: data/roadmap/dlg/EVIDENCE.md.',
+            'nextTitle': 'In development for DLG',
+            'items': [row('item', i, x) for i, x in enumerate(cd['items'])],
+            'next': [row('next', i, x) for i, x in enumerate(cd['next'])]}
+
+
 def build(draft, client=None, internal=False):
     """highlights + copy + coming-next -> dist/roadmap/index.html. Public fields only; no story keys."""
     import base64, re
@@ -545,7 +588,16 @@ def build(draft, client=None, internal=False):
         tiers = load(os.path.join(RM, 'dlg', 'tiers.json'))
         day = lambda r: (r.get('doneAt') or '')[:10]
         src = lambda k, r: {'k': k, 's': r['summary'], 'd': day(r), 'st': r.get('status'), 'dlg': tiers.get(k)}
+        MP = {}
+        for mp in glob.glob(os.path.join(RM, 'wwo', 'map', 'm*_w', 'map.json')):
+            MP.update({x['id']: x for x in load(mp)})
+        for mp in glob.glob(os.path.join(RM, 'wwo', 'map', 'm*_v', 'verdicts.json')):
+            for v in load(mp):
+                if v.get('verdict') == 'fix' and v.get('fix'):
+                    MP.setdefault(v['id'], {}).update(v['fix'])
         for it, h in zip(items, hl):
+            m = MP.get(h['id'], {})
+            it['kind'], it['kindWhy'], it['buildsOn'] = m.get('kind'), m.get('kindWhy'), m.get('buildsOn') or []
             it['basis'], it['evidence'] = h.get('basis'), h.get('evidence')
             it['src'] = sorted((src(k, recs[k]) for k in h['stories']), key=lambda x: x['d'])
         for it, n in zip(data['next'], nxt):
@@ -555,6 +607,7 @@ def build(draft, client=None, internal=False):
         data['removed'] = removed
         data['excluded'] = sorted(({'k': k, 's': recs[k]['summary'], 'd': day(recs[k]), 'r': t['exclude'], 'theme': t['theme'],
                                     'why': t.get('override')} for k, t in tags.items() if not t.get('include')), key=lambda x: x['d'])
+        # 28 Sep 2026: the owner removed the DLG evidence section and its filter from the internal page (dlg_evidence kept for reuse)
         data['internal'] = {'jira': 'https://expoplatform.atlassian.net/browse/'}
         data['copy'].update({'heroTitle': 'Product journey: review with Jira sources',
                              'heroLede': 'Internal. The full customer roadmap with every feature traced to its Jira stories, plus the stories left off the page and why. Select a feature to see its sources.',

@@ -1,5 +1,28 @@
 {
   "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "deps": "EP-55315 description; EP-55315 comment 2026-07-18 by Taimoor Zulfiqar; Confluence https://expoplatform.atlassian.net/wiki/spaces/ExpoDoc/pages/685998293",
+      "driver": "Jira Reported by INTERNAL; no client named: sponsor statistics for every event",
+      "notes": "EP-55315 comments 2026-07-17 by Oleksandr Yelfutin and 2026-07-18 by Taimoor Zulfiqar; jiraColumns",
+      "why": "EP-55315 description"
+    },
+    "gaps": [
+      "estimate: no Jira original estimate (null) and no comment or page gives one",
+      "client: no client named anywhere; reported as INTERNAL"
+    ],
+    "pages": [
+      {
+        "note": "Documents the statistics pages and the slider view-counting rules; no client named, no estimate.",
+        "read": true,
+        "title": "Sponsor Statistics for Organiser",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/ExpoDoc/pages/685998293"
+      }
+    ]
+  },
   "flags": {
     "drift": false,
     "dueSoon": false,
@@ -53,11 +76,51 @@
       "k": "migrate",
       "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
       "to": ""
+    },
+    "hb260928enr-deps": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "deps",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-55315 description; EP-55315 comment 2026-07-18 by Taimoor Zulfiqar; Confluence https://expoplatform.atlassian.net/wiki/spaces/ExpoDoc/pages/685998293",
+      "to": "Must follow the documented slider counting rules and match the web fix EP-55280; events must flow into the same statistics pipeline as web (admin Sponsorship statistics and exports, sponsor Interactions Dashboard). Open questions: the agreed mobile equivalent of a page refresh (session), and whether meet/message taps on the exhibitor page are tracked (asked 18 Jul, unanswered). Risk: sponsor performance stays under-reported while delayed."
+    },
+    "hb260928enr-driver": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Jira Reported by INTERNAL; no client named: sponsor statistics for every event",
+      "to": "Platform"
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-55315 comments 2026-07-17 by Oleksandr Yelfutin and 2026-07-18 by Taimoor Zulfiqar; jiraColumns",
+      "to": "18 Jul: meeting and message tracking removed from scope (app slider cards only have a Favourite button); PO's question on exhibitor-page meet/message tracking has no reply. Jira Open, no due date."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-55315 description",
+      "to": "Views and clicks on sponsored cards in the app are never counted, so sponsor statistics undercount sponsors on app-heavy events."
     }
   },
   "j": {
     "aggOrigDays": null,
-    "assignee": null,
+    "assignee": "Przemysław Wrzeszcz",
     "canon": "Planned",
     "due": null,
     "origDays": null,
@@ -70,6 +133,7 @@
     "teamField": "customfield_10001",
     "type": "Story"
   },
+  "jAt": "2026-09-28T19:00:00Z",
   "migrated": {
     "at": "2026-09-22",
     "schema": 2
@@ -79,28 +143,39 @@
     "daysKind": "none"
   },
   "order": 60,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "Jira Reported by INTERNAL; no client named: sponsor statistics for every event",
+      "by": "Claude",
+      "field": "Jira",
+      "name": "Platform",
+      "quote": "Jira Reported by INTERNAL; no client named: sponsor statistics for every event",
+      "value": "Platform"
+    }
+  },
   "raw": {
     "area": "Legacy mobile app",
     "month": "October 2026",
     "status": "Planned"
   },
   "source": "confluence-2155872263",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-28",
   "v": {
     "area": "Legacy mobile app",
-    "deps": "",
-    "driver": "",
+    "deps": "Must follow the documented slider counting rules and match the web fix EP-55280; events must flow into the same statistics pipeline as web (admin Sponsorship statistics and exports, sponsor Interactions Dashboard). Open questions: the agreed mobile equivalent of a page refresh (session), and whether meet/message taps on the exhibitor page are tracked (asked 18 Jul, unanswered). Risk: sponsor performance stays under-reported while delayed.",
+    "driver": "Platform",
     "estimate": "",
     "feature": "Adding tracking for sponsor and sponsored product clicks",
     "impact": "Tracking clicks is essential for organizers to sell sponsored slots to customers",
     "key": "EP-55315",
     "month": "2026-10",
-    "notes": "",
+    "notes": "18 Jul: meeting and message tracking removed from scope (app slider cards only have a Favourite button); PO's question on exhibitor-page meet/message tracking has no reply. Jira Open, no due date.",
     "owner": "Taimoor",
     "priority": "Customer",
     "rationale": "Gap in product needs to be fixed urgently",
     "status": "Planned",
     "team": "",
-    "why": ""
+    "why": "Views and clicks on sponsored cards in the app are never counted, so sponsor statistics undercount sponsors on app-heavy events."
   }
 }

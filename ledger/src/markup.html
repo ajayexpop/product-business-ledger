@@ -12,6 +12,7 @@
       <div class="hero-side">
         <div class="hero-acts">
           <button class="findbtn" id="find-open" type="button" aria-keyshortcuts="/"><span class="fi" aria-hidden="true"></span>Find a client<kbd>/</kbd></button>
+          <button class="fbbtn" id="fb-open" type="button" hidden><svg class="fb-face" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><circle cx="8.8" cy="9.8" r="1.2" class="fb-fill"/><circle cx="15.2" cy="9.8" r="1.2" class="fb-fill"/><path d="M8.5 14.2c1.9 2.2 5.1 2.2 7 0"/></svg><span id="fb-open-l">Feedback</span><span class="fb-badge" id="fb-badge" hidden></span></button>
           <span class="who" id="who" hidden></span>
         </div>
         <button class="syncpill" id="sync-pill" type="button"><i></i><span id="sync-text">Jira: baseline 17 Sep 2026</span></button>
@@ -32,17 +33,17 @@
       <button class="tab" role="tab" data-tab="ledger" aria-selected="false">Clients</button>
       <button class="tab" role="tab" data-tab="timeline" aria-selected="false">Timeline</button>
     </span>
-    <span class="tgrp"><span class="tgl">Work</span>
+    <span class="tgrp"><span class="tgl">Product delivery</span>
       <button class="tab" role="tab" data-tab="pipeline" aria-selected="false">Requests</button>
       <button class="tab" role="tab" data-tab="demand" aria-selected="false">Demand</button>
       <button class="tab" role="tab" data-tab="delivery" aria-selected="false">Delivery</button>
       <button class="tab" role="tab" data-tab="bugs" aria-selected="false">Bugs</button>
       <button class="tab" role="tab" data-tab="incidents" aria-selected="false">Incidents</button>
     </span>
-    <span class="tgrp" id="tg-how" hidden><span class="tgl">How it works</span>
+    <span class="tgrp" id="tg-how" hidden><span class="tgl">Settings</span>
       <button class="tab" role="tab" data-tab="logic" aria-selected="false">Rules</button>
       <button class="tab" role="tab" data-tab="method" aria-selected="false">Method &amp; sources</button>
-      <button class="tab" role="tab" data-tab="refresh" aria-selected="false">Data refresh</button>
+      <button class="tab" role="tab" data-tab="refresh" aria-selected="false">Sync &amp; logs</button>
     </span>
   </nav>
 
@@ -403,7 +404,9 @@
   </section>
 
   <!-- DATA REFRESH (Ajay only) -->
-  <section class="panel" id="panel-refresh" role="tabpanel" hidden><div id="rf-host"></div></section>
+  <section class="panel" id="panel-refresh" role="tabpanel" hidden>
+    <div class="sl-head"><span class="seg sl-sub" id="sl-sub" role="tablist" aria-label="Sync &amp; logs"><button type="button" role="tab" data-slsub="refresh" aria-selected="true">Data refresh</button><button type="button" role="tab" data-slsub="history" aria-selected="false">History</button><button type="button" role="tab" data-slsub="beta" aria-selected="false">Beta lab</button></span><span class="small sl-priv">Only you see this tab.</span></div>
+    <div id="rf-host"></div><div id="hs-host" hidden></div><div id="bt-lab" hidden></div></section>
 
   <!-- METHOD -->
   <section class="panel" id="panel-method" role="tabpanel" hidden>

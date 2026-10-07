@@ -1,0 +1,2146 @@
+{
+"features": [
+{
+"id": "sessions-exhibitor-events-launch",
+"theme": "sessions",
+"q": "2023-Q1",
+"title": "Exhibitor events",
+"benefit": "Let exhibitors create their own events, which organisers approve and publish alongside the conference programme.",
+"what": "Exhibitors create their own events from the frontend within limits and durations the organiser sets. Organisers approve or reject them, can create or import them by XLS, and approved events get their own Marketplace tab and schedule tab.",
+"detail": "Exhibitors create events from the frontend within organiser-set limits and durations; organisers approve or reject them, create events for exhibitors in admin and import them by XLS. Exhibitor events have their own Marketplace tab, booked-attendee lists, stand-restricted locations, invite links and an Events tab in My schedule.",
+"stories": [
+"Main parts 1-3",
+"Changes and additions from IMEX part 1",
+"Additional part - 4",
+"Changes and additions from IMEX part 2.1",
+"Changes and additions from IMEX part 2.2"
+]
+},
+{
+"id": "sessions-session-filter-improvements-2023q1",
+"theme": "sessions",
+"q": "2023-Q1",
+"title": "Session filters and speaker display",
+"benefit": "Give attendees more ways to filter sessions and show speakers who have not yet activated their accounts.",
+"what": "Tracks can appear as a session filter, and up to five renamable standard filters can be set per event. A toggle shows speakers who have not activated their accounts, and signing in from Join opens the online session room.",
+"detail": "Tracks can be shown as a session filter, and up to five renamable standard filters can be configured per event. A toggle shows inactive, invited or uploaded speakers on the frontend, and attendees are taken straight to the online session room after signing in.",
+"stories": [
+"Make tracks part of content session filters",
+"Additional Standard Fields for Sessions",
+"Allow displayment of Speakers with INACTIVE status on the frontend",
+"Make a redirect to the online room after authorization in the system"
+]
+},
+{
+"id": "sessions-exhibitor-event-controls",
+"theme": "sessions",
+"q": "2023-Q2",
+"title": "Exhibitor event editing controls",
+"benefit": "Lock approved exhibitor events against changes and give organisers clearer status and import options.",
+"what": "A session-type toggle stops exhibitors editing or deleting events once approved, while organisers can still change them. Ended events show a Past status, imports accept child exhibitor and contact IDs, and stand hours are checked.",
+"detail": "A session-type toggle stops exhibitors editing or deleting events once approved, while organisers can still edit them. Ended events show a Past status, imports accept child exhibitor and contact IDs, and events are checked against session-type and stand hours.",
+"stories": [
+"Changes and additions from IMEX part 3",
+"Exhibitor events. Not editable after approval"
+]
+},
+{
+"id": "sessions-exhibitor-events-app-webview",
+"theme": "sessions",
+"q": "2023-Q2",
+"title": "Exhibitor events in the app",
+"benefit": "Let app users browse all exhibitor events, add them to their schedule and see the ones they have booked.",
+"what": "The iOS and Android apps have an all exhibitor events list with date switching and filters, and a My exhibitor events page of booked events with a Download My Schedule button that saves the schedule as a PDF.",
+"detail": "The iOS and Android apps gain an all exhibitor events list with date switching and filters, and a My exhibitor events page listing booked events, with a Download My Schedule button to save the schedule as a PDF.",
+"stories": [
+"Exhibitor Events, new page for Mobile team ( My exhibitor events) ",
+"Exhibitor Events. Public list in apps using widget. ( All exhibitor events) ",
+"My Exhibitor events widget improvement"
+]
+},
+{
+"id": "sessions-session-import-schedule-download",
+"theme": "sessions",
+"q": "2023-Q2",
+"title": "Session import and schedule download",
+"benefit": "Import and export session filters in bulk and download a personal schedule from a clearly named button.",
+"what": "The five session filters are included in the sessions XLS import and export. The Export data button on My Schedule and Team Schedule is now Download My Schedule, and sessions have extra indexes for online type, dates and description.",
+"detail": "The five session filters are included in the sessions XLS import and export. The Export data button on My Schedule and Team Schedule becomes Download My Schedule, and sessions gained additional indexes for online type, dates and description.",
+"stories": [
+"Change wording for Export data",
+"Add 5 filters for Sessions to the file import",
+"Add additional indexes for Sessions"
+]
+},
+{
+"id": "sessions-session-speaker-management-2023q3",
+"theme": "sessions",
+"q": "2023-Q3",
+"title": "Session and speaker management improvements",
+"benefit": "Avoid double-booking speakers, control anonymous questions and give the app's speaker list its own menu item.",
+"what": "Speakers and moderators with blocked time can no longer be assigned to clashing sessions unless organisers allow it. Organisers can hide Ask anonymously in session rooms, speakers get an app menu item, and past paid sessions show a price.",
+"detail": "Speakers and moderators with blocked time can no longer be assigned to clashing sessions unless organisers allow it. Organisers can hide the Ask anonymously option in session rooms, the app's speaker list moves to its own menu item, and the apps show the price on past paid sessions.",
+"stories": [
+"HIDE \"ASK ANONYMOUSLY\" ON SESSION",
+"Speakers and moderators asignment corelation with blocked time",
+"Separate speakers list from session page. Move to new menu item",
+"iOS|Sessions|For past paid session need display PRICE on session PROFILE page",
+"Android|Sessions|For past paid session need display PRICE on session PROFILE page"
+]
+},
+{
+"id": "ai-global-search-launch",
+"theme": "ai",
+"q": "2023-Q3",
+"title": "Global search",
+"benefit": "Search the event from one place, with results ranked by weighted relevance across exhibitors, products and brands.",
+"what": "A new search engine scores matches using admin-set multipliers and category weights, supports prefix and fuzzy matching, shows result counters, finds brands and products by exhibitor name, and finds people by activity category.",
+"detail": "A new search engine scores matches using admin-set multipliers and category weights, supports prefix and fuzzy matching, shows result counters and lets delegates, buyers and speakers be found by activity category.",
+"stories": [
+"Global search (Stage 1)",
+"No action on the front with search query for 1 latter ",
+"Global search: search request can contain only spaces",
+"Include Exhibitor as multiplicator and indexes for Products and Brands",
+"Counters for the front",
+"Change the names and order of the multiplicators",
+"Search should be done by activity categories for delegates, buyers and speakers"
+]
+},
+{
+"id": "sessions-native-exhibitor-events-app",
+"theme": "sessions",
+"q": "2023-Q4",
+"title": "Native exhibitor events in the app",
+"benefit": "Browse, search and filter exhibitor events in a native app page that follows the same rules as the web.",
+"what": "A native app page with Exhibitor Events and On-demand tabs replaces the web view. The apps follow the web rules for blocked slots, non-removable events, visibility, tracks and speaker, moderator and sponsor display, and mark moderators.",
+"detail": "A native page with Exhibitor Events and On-demand tabs replaces the web view. The apps honour slot blocking, non-removable events, visibility, tracks and speaker, moderator and sponsor display, and moderators are marked with an icon in profiles, lists and sessions.",
+"stories": [
+"Native public list of exhibitor events for app",
+"Exhibitor events mobile API improvement",
+"Android|Exhibitor settings| Need made header of the event card smaller in case of empty track and image ",
+"Basic configuration of exh events settings",
+"Blocked time slots for Events ",
+"Ability to remove Event from schedule (calendar block) ",
+"Display option for Exhibitor and Moderator in Event",
+"Display Tracks on the  Exhibitor Event card",
+"On-demand Events tab",
+"(Android) Add a moderator icon in the moderator profile, in the list, in sessions",
+"(IOS) Add a moderator icon in the moderator profile, in the list, in sessions "
+]
+},
+{
+"id": "sessions-multilingual-exhibitor-events",
+"theme": "sessions",
+"q": "2023-Q4",
+"title": "Multilingual exhibitor events",
+"benefit": "Publish exhibitor event names and descriptions in several languages on the web and in the app.",
+"what": "A language switcher lets users read exhibitor events in any supported language, starting from the language the organiser sets, with event names and descriptions shown in that language where translated.",
+"detail": "A language switcher lets users read exhibitor events in any supported language, defaulting to the language set by the organiser, with translated event names and descriptions.",
+"stories": [
+"Exhibitor Events : Multilanguage"
+]
+},
+{
+"id": "ai-search-refinements-2023q4",
+"theme": "ai",
+"q": "2023-Q4",
+"title": "Search refinements and new search bar",
+"benefit": "Search from one simpler search bar, with products, brands, sessions and exhibitor events matched on more fields.",
+"what": "One redesigned search bar appears on the marketplace, sessions, delegates, news, groups and floor plan pages. Products and brands are searchable by country, speaker and exhibitor names weight results, and stop-words are ignored.",
+"detail": "A single redesigned search bar now appears on the marketplace, sessions, delegates, news, groups and floor plan pages. Country is indexed for products and brands, speaker names and exhibitors boost session and exhibitor event results, stop-words are ignored and permission rules filter the delegate list.",
+"stories": [
+"Modify the search bar",
+"Include Country field for Products in elastic",
+"Include Country field for Brand in elastic",
+"Include the name of the speaker to the session as multiplicator",
+"Include Exhibitor as multiplicator and indexes for Exhibitor Events",
+"Permission matrix filters delegate list for the search ",
+"Ignore stop-words for objects"
+]
+},
+{
+"id": "sessions-other-locations",
+"theme": "sessions",
+"q": "2024-Q1",
+"title": "Other locations for sessions and events",
+"benefit": "Place sessions and exhibitor events at venues outside the floor plan, with addresses shown on web and app cards.",
+"what": "Organisers manage a list of other locations for sessions and exhibitor events, can allow a custom location, and can add an address that shows on session and event cards on web and app, in the API and in export and import.",
+"detail": "Organisers manage a predefined list of other locations for sessions and exhibitor events, can allow a custom alternative location, and can add an address that appears on session cards, in the API and in export and import. The iOS and Android apps show the address on cards.",
+"stories": [
+"Address for other location - Ex Events & Sessions",
+"Improvement of Other location - Ex Events & Sessions",
+"Predefined list of Other locations for Sessions/Events",
+"[expo-react-components] Add to the session card (in the expo-react-components) address",
+"Address for other location (APP)"
+]
+},
+{
+"id": "sessions-schedule-improvements-2024q1",
+"theme": "sessions",
+"q": "2024-Q1",
+"title": "Schedule and invite link improvements",
+"benefit": "Stop attendees adding items that clash with blocked time and show times in event time only if preferred.",
+"what": "Direct invite links for meetings, sessions and exhibitor events add the item and open the schedule, or name the clashing item. A setting hides local time on web and app, and session speakers and moderators can be added to exhibitor events.",
+"detail": "Direct invite links for meetings, sessions and exhibitor events add the item and open the schedule, or name the clashing item. A setting hides local time on web and app, session speakers and moderators can be added to exhibitor events, and app session pages gain loading and not-found states.",
+"stories": [
+"Direct links checking",
+"No local time option (App)",
+"Session speakers in Exhibitor events",
+"Skeleton for SessionProfileViewController",
+"Not Found for SessionProfileViewController"
+]
+},
+{
+"id": "ai-admin-ai-assistant",
+"theme": "ai",
+"q": "2024-Q1",
+"title": "AI assistant in the admin panel",
+"benefit": "Ask an AI assistant questions about the platform from any admin page and get answers drawn from the documentation.",
+"what": "A chat assistant based on a large language model opens from an icon on every admin page, answers from the platform documentation, keeps conversation history and collects feedback. Access is set per client and the icon can be dragged aside.",
+"detail": "A chat assistant based on a large language model opens from an icon on every admin page, keeps conversation history and collects feedback on answers. Access is controlled per client, and the icon can be dragged out of the way.",
+"stories": [
+"Chatbot based on Large Language Model in Admin Panel",
+"Add ability to drag chatbot icon in the admin panel"
+]
+},
+{
+"id": "ai-global-search-expansion",
+"theme": "ai",
+"q": "2024-Q1",
+"title": "Global search across all content",
+"benefit": "Search exhibitor events, sessions, on-demand content, news, groups, delegates, speakers and buyers with the same ranked search.",
+"what": "Ranked search now covers exhibitor events, sessions, on-demand, news, groups, delegates, speakers and buyers, with section multipliers and filters, and is on by default for new events. Android keeps search results when you go back.",
+"detail": "The search engine now covers every main section with section-specific multipliers and filters, is on by default for new events and matches exhibitor names on exhibitor events. The Android app keeps search results when users return from a profile.",
+"stories": [
+"Global search (Stage 2)",
+"Elastic is on by default for all new events",
+"Exhibitor name (Exhibitor events) should be searched via elastic",
+"Android/ Search results UPDATE behaviour "
+]
+},
+{
+"id": "ai-recommendation-display",
+"theme": "ai",
+"q": "2024-Q1",
+"title": "Recommendation display improvements",
+"benefit": "Control how personalised recommendations are shown on the session overview and in the Android app.",
+"what": "A setting decides whether personalised session recommendations are expanded when the session overview loads. In the Android app, recommended sections respect networking opt-in and permission settings.",
+"detail": "A new setting decides whether session recommendations are expanded when the session overview loads, and the logic behind the recommended sections in the Android app was improved.",
+"stories": [
+"Default State of 'Show Recommendations' as Open on Session Overview",
+"Android/ Improvement  logic of recommended sections"
+]
+},
+{
+"id": "sessions-exhibitor-event-reporting",
+"theme": "sessions",
+"q": "2024-Q2",
+"title": "Content reporting for exhibitor events",
+"benefit": "Let attendees report offensive exhibitor events and let organisers reject events on security grounds.",
+"what": "Users report exhibitor events with preset reasons, and organisers review the reports against a content policy for exhibitors. A final Rejected for security concern status needs a reason and has its own filter and column.",
+"detail": "Users report exhibitor events with preset reasons and organisers review the reports against a content policy for exhibitors. A final Rejected for security concern status requires a reason, with filters and a rejection reason column.",
+"stories": [
+"Users report offensive content in Exhibitor events",
+"New status for Exhibitor events - Rejected for Security concern"
+]
+},
+{
+"id": "sessions-sessions-list-improvements-2024q2",
+"theme": "sessions",
+"q": "2024-Q2",
+"title": "Sessions list and schedule download options",
+"benefit": "Show exhibitor events on the Sessions page and choose which profile fields go into downloaded schedules.",
+"what": "An optional setting lists exhibitor events alongside sessions with a Session Format filter. Registration fields can be flagged for the XLS schedule download, and exhibitors search speakers and moderators by name or title in event forms.",
+"detail": "An optional setting lists exhibitor events alongside sessions with a Session Format filter. Registration fields can be flagged for inclusion in the XLS schedule download, and exhibitors can search speakers and moderators by name or title when creating events.",
+"stories": [
+"Include exhibitor events in sessions",
+"Additional fields for Download Schedule in xls",
+"Search in lists "
+]
+},
+{
+"id": "sessions-exhibitor-event-approval-workflow",
+"theme": "sessions",
+"q": "2024-Q3",
+"title": "Exhibitor event approval workflow",
+"benefit": "Review exhibitor events with security questions, auto-approval by type and notifications at every step.",
+"what": "Organisers can require exhibitors to answer custom security questions and accept a policy on submission, auto-approve events by type, and save changes without approving or rejecting. Emails and notifications cover each status change.",
+"detail": "Organisers can require exhibitors to answer custom security questions and accept a policy on submission, auto-approve events by event type, and save changes without approving or rejecting. Email and platform notifications cover submission, approval, rejection and change requests.",
+"stories": [
+"Events Security concern. Ability for Organizer to set questions for Exhibitor",
+"Allow Saving Exhibitor Events without approving / rejecting",
+"Autoapproval of Exhibitor Events",
+"Email and platform notifications for events"
+]
+},
+{
+"id": "sessions-clickable-custom-locations",
+"theme": "sessions",
+"q": "2024-Q3",
+"title": "Clickable custom locations",
+"benefit": "Add a link to a session or exhibitor event location so attendees can open it from the card.",
+"what": "With the setting on, other locations can carry a URL that opens from session and exhibitor event cards on the web and in the apps, inside the app for internal pages or in the browser for external ones.",
+"detail": "With the setting on, other locations can carry a URL that opens from session and exhibitor event cards on the web and in the apps, inside the app for internal pages or in the browser for external ones.",
+"stories": [
+"Hyperlinking custom locations",
+"Hyperlinking custom locations (in app)"
+]
+},
+{
+"id": "sessions-internal-notes-flags",
+"theme": "sessions",
+"q": "2024-Q3",
+"title": "Internal notes and critical flags",
+"benefit": "Keep back-office notes on sessions and exhibitor events and flag the critical ones for follow-up.",
+"what": "Sessions and exhibitor events have an internal Notes field and a Flag as critical checkbox, visible only in the back office, with a filter, export columns and import support.",
+"detail": "Sessions and exhibitor events gain an internal Notes field and a Flag as critical checkbox, visible only in the back office, with a filter, export columns and import support.",
+"stories": [
+"FBF:Add an option to add internal Notes in the sessions.",
+"FBF: Add a critical field on the sessions in the back-end"
+]
+},
+{
+"id": "sessions-schedule-list-view-app",
+"theme": "sessions",
+"q": "2024-Q3",
+"title": "Schedule list view in the app",
+"benefit": "View a day of meetings, sessions and events as a chronological list in the app.",
+"what": "The app schedule has a list view that groups meetings, sessions, events and blocked time by hour, and the organiser's default view setting now applies in the apps.",
+"detail": "The app schedule gains a list view grouping meetings, sessions, events and blocked time by hour, and the default view setting now applies to the apps.",
+"stories": [
+"Schedule list view"
+]
+},
+{
+"id": "sessions-session-import-filtering-2024q3",
+"theme": "sessions",
+"q": "2024-Q3",
+"title": "Session import and filtering improvements",
+"benefit": "Import multilingual sessions, link speakers by external code and filter sessions by product category.",
+"what": "The session import maps a name and description field per frontend language and attaches speakers and moderators by external code. A product category filter is available on the All Sessions, On-demand and Round tables tabs.",
+"detail": "The session import maps a name and description field per frontend language and attaches speakers and moderators by external code. A product category display filter is available on the All Sessions, On-demand and Round tables tabs.",
+"stories": [
+"Multilingual Sessions/Events Import",
+"Attach Speakers/Moderators to Events/Sessions by external code",
+"Product categories as a filter for sessions"
+]
+},
+{
+"id": "ai-related-exhibitor-recommendations",
+"theme": "ai",
+"q": "2024-Q3",
+"title": "Related exhibitor recommendations",
+"benefit": "Discover exhibitors similar to the ones you have requested meetings with, and see exhibitor events among your recommendations.",
+"what": "After requesting a meeting, attendees see a pop-up and a schedule page block listing up to 20 related exhibitors. Organisers can also switch on exhibitor events in the Recommendations section.",
+"detail": "After requesting a meeting, attendees see a pop-up and a schedule page block listing up to 20 related exhibitors. Organisers can also switch on exhibitor events in the Recommendations section.",
+"stories": [
+"Enhanced Networking through Intelligent Exhibitor Recommendations",
+"Exhibitor event in the Recommendations "
+]
+},
+{
+"id": "sessions-session-ratings",
+"theme": "sessions",
+"q": "2024-Q4",
+"title": "Session ratings",
+"benefit": "Collect star ratings and feedback on attended sessions on the web and in the app.",
+"what": "Attendees rate sessions they attended with stars and a short comment, or mark that a session did not take place, from a ratings page or a prompt afterwards. The apps prompt singly or in batches, and organisers export ratings.",
+"detail": "Attendees rate sessions they attended with stars and a short comment, or mark that a session did not take place, from a ratings page or a prompt after the session. The apps prompt for ratings singly or in batches, and organisers export ratings with user details.",
+"stories": [
+"Session Ratings",
+"Android/Sessin rating/ Remouve OWN EXHIBITOR - Exhibitor  EVENTS from session rating tab",
+"Android/ Session rating/ Online room physical location ",
+" iOS/Sessin rating/ Remouve OWN EXHIBITOR - Exhibitor  EVENTS from session rating tab",
+"Session Ratings in Mobile App"
+]
+},
+{
+"id": "sessions-session-scheduling-improvements-2024q4",
+"theme": "sessions",
+"q": "2024-Q4",
+"title": "Session scheduling safeguards",
+"benefit": "Get warned about location and time clashes when creating sessions and exhibitor events.",
+"what": "A warning appears on the frontend and in admin when a session or exhibitor event is set at the same location and an overlapping time as another. Time zones are validated, and an empty Sessions page says no sessions have been added.",
+"detail": "A warning appears on front end and admin when a session or exhibitor event is set at the same location and an overlapping time as another. Time zone validation was added, and the Sessions page shows an empty state when there are no sessions.",
+"stories": [
+"Warning for same time and location for event creation/edit",
+"Add validation of timezone",
+"Empty state in case there are no sessions"
+]
+},
+{
+"id": "ai-ai-exhibitor-search",
+"theme": "ai",
+"q": "2024-Q4",
+"title": "AI-powered exhibitor search",
+"benefit": "Describe what you are looking for in plain language and let AI find matching exhibitors, refining the results with follow-up prompts.",
+"what": "A prompt-based AI search widget sits on the exhibitor list, switched on as its own module with open or sign-in-only access. Organisers set up to three suggested prompts, and the conversation stays open as visitors move around the site.",
+"detail": "A prompt-based AI search widget sits on the exhibitor list, enabled as its own module with open or sign-in-only access. Organisers can set up to three suggested prompts, and the conversation is kept as visitors move around the site.",
+"stories": [
+"Module AI search",
+"Prompt Based Search using AI on Exhibitor List",
+"Implementation of the AI prompt suggestions",
+"Saving chat while moving thoughout the new front"
+]
+},
+{
+"id": "sessions-session-details-app-2025q1",
+"theme": "sessions",
+"q": "2025-Q1",
+"title": "Session details in the app",
+"benefit": "See full locations on session cards and moderators in the speakers list in the app.",
+"what": "Session and exhibitor event cards in the iOS and Android apps display the complete location, and the iOS speakers list also shows moderators.",
+"detail": "Session and exhibitor event cards in the iOS and Android apps display the complete location, and the iOS speakers list also shows moderators.",
+"stories": [
+"Display Full Location - Session & Exhibitor Events",
+" iOS|Refactor app|On speakers list need display moderators also "
+]
+},
+{
+"id": "ai-unified-recommendations",
+"theme": "ai",
+"q": "2025-Q1",
+"title": "Unified recommendations page",
+"benefit": "Give attendees one configurable recommendations page on web and app, with sections for matchmaking, products, exhibitors, sessions and people.",
+"what": "Organisers choose, title, order and target each recommendation section, including matchmaking, and preview the page for web or app. The app shows role icons on recommended people, and admin warns when no sections are enabled.",
+"detail": "Organisers choose, title, order and target each recommendation section, including matchmaking, and preview the page for web or app. The app page shows role icons on recommended people, and the admin page warns when no sections are enabled.",
+"stories": [
+"Unified Recommendations Page",
+"Recommendations Page Revamp",
+"Android/ Add pls \"roles\" icons on \"Recommended\" sections ( Recommended page/ Visitors page/ Speakers page) ",
+"Change default state of category select on the recommendations page in the admin panel",
+"Make changes at Recommendations page in the admin panel"
+]
+},
+{
+"id": "sessions-agenda-sharing-2025q2",
+"theme": "sessions",
+"q": "2025-Q2",
+"title": "Agenda sharing improvements",
+"benefit": "Choose who receives an exhibitor’s agenda and show child exhibitors on session cards.",
+"what": "A Send Agenda pop-up in the admin exhibitor list and profile explains the action and lets organisers pick recipients, including team members, with a success or error message. Session cards can show child exhibitors.",
+"detail": "A Send Agenda pop-up in the admin exhibitor list and profile explains the action and lets organisers pick recipients, including team members. Session cards can show child exhibitors.",
+"stories": [
+"Send Agenda Improvement",
+"Add exhibitor childs to session card in expo-components"
+]
+},
+{
+"id": "sessions-custom-session-filters-app",
+"theme": "sessions",
+"q": "2025-Q2",
+"title": "Custom session filters in the app",
+"benefit": "Filter sessions in the app with the same custom filters used on the web, in the attendee’s language.",
+"what": "Custom session filters are available in the mobile apps, working with existing filters and search, and custom filter items can be translated into each event language.",
+"detail": "Custom session filters are available in the mobile apps, working with existing filters and search, and custom filter items can be translated.",
+"stories": [
+"Session Custom Filters in the Mobile App",
+"Apply translation to custom session filter items"
+]
+},
+{
+"id": "sessions-easy-session-check-in",
+"theme": "sessions",
+"q": "2025-Q2",
+"title": "Easy session check-in",
+"benefit": "Let attendees check in to sessions and exhibitor events even if they did not add them to their schedule.",
+"what": "An optional Easy Entrance setting in Sessions config lets attendees check in without errors to sessions and exhibitor events that are not in their schedule.",
+"detail": "An optional Easy Entrance setting in Sessions config allows check-in without errors for sessions and exhibitor events not in the attendee’s schedule.",
+"stories": [
+"Easy Entrance for Sessions\n"
+]
+},
+{
+"id": "sessions-exhibitor-event-applications",
+"theme": "sessions",
+"q": "2025-Q3",
+"title": "Applications for exhibitor events",
+"benefit": "Let attendees apply for places at exhibitor events and let organisers approve applicants on the web and in the app.",
+"what": "Exhibitor events can use an application deadline with manual or first-come approval. Organisers review applicants on an Applications tab with status filters, search and clash details, and applicants are notified and emailed of the decision.",
+"detail": "Exhibitor events can use an application deadline with manual or first-come approval. Organisers review applicants on an Applications tab with status filters, search and clash details; applicants are notified and emailed when approved or rejected, and can request or cancel places in the app.",
+"stories": [
+"Approval Process",
+"Application page",
+"Notifications for Approved/Rejected applications",
+"Comments from Hyve about the Approval process",
+"App Improvements for Exhibitor Events",
+"iOS/ Provide Exhibitors events page loading update"
+]
+},
+{
+"id": "sessions-session-attendee-management",
+"theme": "sessions",
+"q": "2025-Q3",
+"title": "Session attendee management",
+"benefit": "Manage who is scheduled for or has attended a session from a dedicated tab.",
+"what": "Attendees and Favourited move from the session and exhibitor event edit page to a separate Attendees tab, where organisers add or remove scheduled users and mark attendance. Saving keeps organisers on the edit page.",
+"detail": "Attendees and Favourited move from the session and exhibitor event edit page to a separate Attendees tab, where organisers add or remove scheduled users and mark attendance. After saving, organisers stay on the session’s edit page instead of returning to the list.",
+"stories": [
+"Moving Attendees and Favourited to separate tab",
+"After saving changes for a Session/Exhibitor event, need change the redirect from the All Sessions page to the current session's edit page"
+]
+},
+{
+"id": "sessions-speaker-profile-events-app",
+"theme": "sessions",
+"q": "2025-Q3",
+"title": "Speaker profile events in the app",
+"benefit": "See the exhibitor events a speaker or moderator is taking part in from their app profile.",
+"what": "Speaker and moderator profiles in the mobile app have an Events block listing their active, visible exhibitor events with date, time and a button to add each one to the schedule.",
+"detail": "Speaker and moderator profiles in the mobile app gain an Events block listing their active, visible exhibitor events with date, time and an add-to-schedule button.",
+"stories": [
+"Speaker / Moderator Profile - Events Block"
+]
+},
+{
+"id": "sessions-exhibitor-event-auto-approval",
+"theme": "sessions",
+"q": "2026-Q1",
+"title": "Exhibitor event auto-approval rules",
+"benefit": "Set up automatic approval for exhibitor event applications with a required capacity limit.",
+"what": "Organisers run automatic approval of exhibitor event applications from Sessions config, and a place limit is required when approval is on. Rejection notifications are removed, and events sort consistently on exhibitor profiles.",
+"detail": "A new auto-approval interface and mechanism for exhibitor event applications, a required limit when the approval process is on, and removal of rejection notifications. Exhibitor events are sorted consistently in exhibitor profiles, and app content settings include exhibitor events.",
+"stories": [
+"New Autoapproval interface",
+"Required limit when approval process is enabled for Exhibitor events",
+"Autoapproval mechanism",
+"Remove rejection notifications and indication",
+"Exhibitor Events. Sorting in Exhibitor Profile",
+"[Hyve] Extend Content Settings with Exhibitor events for app"
+]
+},
+{
+"id": "ai-mobile-search",
+"theme": "ai",
+"q": "2026-Q1",
+"title": "Better search in the mobile app",
+"benefit": "Search exhibitor descriptions in the app and see exhibitors whose names match your query at the top.",
+"what": "Search in the mobile app looks at descriptions as well as names, and orders exhibitor results so name matches, exact names first, come before description matches.",
+"detail": "Mobile search now looks at descriptions as well as names, and orders exhibitor results so name matches come before description matches.",
+"stories": [
+"Expand Search to Include Descriptions - Mobile App",
+"Prioritize Exhibitor Search Result Matches by Name"
+]
+},
+{
+"id": "ai-ai-search-relevance",
+"theme": "ai",
+"q": "2026-Q1",
+"title": "More accurate AI search results",
+"benefit": "Find the right exhibitor even with language or accent variants, spacing differences or partial names, with suggestions when nothing matches.",
+"what": "Exact name matches outrank description mentions in results and autocomplete, language and accent variants are recognised, spaced and joined-up names match, parent and child exhibitors follow a set order, and empty searches get suggestions.",
+"detail": "Exact name matches now outrank description mentions in results and autocomplete, language and accent variants of names are recognised, spaced and joined-up names match, parent and child exhibitors follow a consistent order, and empty searches offer 'Did you mean' and category suggestions.",
+"stories": [
+"Prioritizing name matches over description matches",
+"No alias or multi-lingual variant handling",
+"Name matches not prioritized in autocomplete suggestion results",
+"Overlenient substring matching pulling in noise",
+"Spaces and special characters breaking name matches",
+"Coordinator/partner ranking hierarchy",
+"Weak recovery states/dead ends",
+"IMEX demo CR"
+]
+},
+{
+"id": "sessions-external-session-registration",
+"theme": "sessions",
+"q": "2026-Q2",
+"title": "External session registration links",
+"benefit": "Send attendees from a session’s Register button to an external registration or payment page.",
+"what": "Organisers set an external registration URL for each session, with a custom button label and an external-link icon, so the Register button sends attendees to that page during the pre-event and live event.",
+"detail": "Organisers set a per-session external registration URL with a custom button label and an external-link icon, used during the pre-event and live event.",
+"stories": [
+"Session: External registration URL for “Register” button"
+]
+},
+{
+"id": "sessions-now-upcoming-sessions-app",
+"theme": "sessions",
+"q": "2026-Q2",
+"title": "Now and upcoming sessions",
+"benefit": "Jump straight to what is on now and next in the app’s session list.",
+"what": "On the current day, the mobile Sessions list scrolls to the current time, shows a now separator and highlights Now and Upcoming sessions.",
+"detail": "On the current day, the mobile Sessions list scrolls to the current time with a now separator and highlights Now and Upcoming sessions.",
+"stories": [
+"Highlight Now & Upcoming Sessions - Mobile App"
+]
+},
+{
+"id": "sessions-session-cards-admin-filters-2026q2",
+"theme": "sessions",
+"q": "2026-Q2",
+"title": "Session cards and admin filters",
+"benefit": "Filter sessions and exhibitor events in admin and see type and host details on session cards.",
+"what": "The admin Sessions and Exhibitor Events pages have filter sections such as session type. Detail cards show the session or exhibitor event type, and exhibitor event cards show the hosting exhibitor's name, on web, iOS and Android.",
+"detail": "The admin Sessions and Exhibitor Events pages gain filter sections such as session type. Detail cards show the session or exhibitor event type, and exhibitor event cards show the hosting exhibitor’s name.",
+"stories": [
+"Add more Filters to Exhibitor Events / Sessions Page on Admin Panel",
+"Add session/exhibitor event type to the detail card view",
+"Add exhibitor name on the Exhibitor Event Detail View"
+]
+},
+{
+"id": "ai-ai-event-assistant",
+"theme": "ai",
+"q": "2026-Q2",
+"title": "AI event assistant for sessions",
+"benefit": "Ask the AI event assistant about sessions by day, topic, time or format instead of scrolling through the full agenda.",
+"what": "The first phase of the AI event assistant includes a sessions and agenda tool, so it answers attendee questions about the programme by day, topic, time and format.",
+"detail": "A sessions and agenda tool was built into the first phase of the AI event assistant, so it can answer attendee questions about the programme.",
+"stories": [
+"Session and Agenda Queries"
+]
+},
+{
+"id": "ai-ai-search-service",
+"theme": "ai",
+"q": "2026-Q2",
+"title": "AI search across the event",
+"benefit": "Search exhibitors, people, sessions, products and news semantically, with filters and paging that work alongside AI relevance.",
+"what": "A new AI search service indexes exhibitors, team members, products, people, sessions and news and stays up to date as data changes. Marketplace filters narrow AI results, and results can be paged beyond the first set.",
+"detail": "A new AI search service indexes exhibitors, team members, products, people, sessions and news, and stays up to date as data changes. Marketplace filters narrow AI results, and results can be paged beyond the first set.",
+"stories": [
+"Develop and deploy AI search exposed via API (tool)",
+"People, Session, Products, News entity not indexed",
+"[Sprint 1] Data Ingestion API - DS (1,2,3,4,5,6,7,8,9,10)",
+"[Sprint 2] Real-Time Data Sync - DS (29–35)",
+"Enable filtering on DS side for marketplace filters",
+"AI Search: implement post-filtering by allowed ID list",
+"AI Search: add pagination support (offset + frame size)",
+"AI Search: adapt API to the request contract proposed by the Exhibitors team"
+]
+},
+{
+"id": "ai-recommendation-service",
+"theme": "ai",
+"q": "2026-Q2",
+"title": "New recommendation service",
+"benefit": "Get category-based recommendations and matching scores from a rebuilt recommendation service with a shorter wait on an event's first request.",
+"what": "A rebuilt recommendation service calculates matching scores from category similarity and provides recommendations through a new API. The delay on an event's first request was cut, and caching now updates incrementally.",
+"detail": "The service calculates matching scores from category similarity and provides recommendations through a new API. Start-up delay on an event's first request was cut, and caching now updates incrementally.",
+"stories": [
+"Implement calculation of Matching Score and providing recommendations via API",
+"Implement calculations of embeddings and distances for categories",
+"Implement the API for the new Recommendation service",
+"Optimization of recommendation service inference cold start time",
+"Improve caching in the inference service"
+]
+},
+{
+"id": "sessions-session-calendar-view",
+"theme": "sessions",
+"q": "2026-Q3",
+"title": "Session calendar view",
+"benefit": "Browse the agenda in a day, week or multi-day calendar, search it and add sessions without leaving the view.",
+"what": "The agenda can be browsed as a day, week or multi-day calendar that handles overlapping sessions, shows a live now indicator and marks scheduled sessions, with search by title or speaker and a details drawer with bookmarking.",
+"detail": "The calendar handles overlapping sessions, shows a live now indicator and marks sessions already in the attendee’s schedule. Search by title or speaker, a slide-out drawer with session details and bookmarking, logged-out browsing and optional exhibitor events in the mobile calendar are included.",
+"stories": [
+"Add sessions calendar-view endpoint (day / week)",
+"Story 4 - Include Exhibitor Events in Calendar View",
+"Add isScheduled:boolean to session items in sessionsCalendarView response",
+"Story 1 - Calendar Component",
+"Story 2 – API Connection & Search",
+"Story 3 – Slide-out Component",
+"[API] Multi-day Session Calendar View Enhancements",
+"Navigate to sessions page specific date without prefetch data"
+]
+},
+{
+"id": "sessions-session-display-settings",
+"theme": "sessions",
+"q": "2026-Q3",
+"title": "Default view and track colours",
+"benefit": "Choose the default layout of the Sessions page and give tracks custom colours.",
+"what": "A Default view setting in Sessions config makes List, Grid or Calendar the first layout attendees see on the Sessions and Exhibitor Events pages, and tracks can have custom colours.",
+"detail": "A Default view setting in Sessions config makes List, Grid or Calendar the first layout attendees see on the Sessions and Exhibitor Events pages, and tracks can have custom colours.",
+"stories": [
+"Default View Setting (List / Grid / Calendar) for Sessions & Exhibitor Events",
+"Custom colors for tracks"
+]
+},
+{
+"id": "sessions-exhibitor-event-locations-2026q3",
+"theme": "sessions",
+"q": "2026-Q3",
+"title": "Exhibitor event location improvements",
+"benefit": "Place exhibitor events at any floor plan location and translate predefined locations.",
+"what": "An optional setting lets exhibitor events use any live floor plan location, not only the exhibitor's stand. Predefined other locations are stored per language, and exhibitor events show even when no team member is assigned.",
+"detail": "An optional setting lets exhibitor events use any live floor plan location, not just the exhibitor’s stand. Predefined other locations can be stored per language, and exhibitor events show even when no team member is assigned.",
+"stories": [
+"Enable all conference flagged Floor Plan Location Selection for Exhibitor Events Beyond Assigned Booth",
+"Add translation (multi-language) support for predefined \"Other locations\" in Sessions/Events",
+"Show exhibitor events with no associated team member"
+]
+},
+{
+"id": "ai-unified-global-search",
+"theme": "ai",
+"q": "2026-Q3",
+"title": "Unified global search",
+"benefit": "Search everything from one field with live suggestions and a single results page that groups people, sessions and content.",
+"what": "The search field suggests queries as you type and opens one results page with top results, quick links, Show all views, saved queries and a way back from any detail page. Organisers control which blocks appear, their labels and order.",
+"detail": "The search field suggests queries as you type and opens a unified results page with top results, quick links, 'Show all' views, saved queries and a way back to results from any detail page. Organisers control which blocks appear, their labels and order, and search terms in links filter news, participants and sessions.",
+"stories": [
+"Global Search. Improve current search field to be global",
+"Global Search. Search field with suggestions",
+"Global Search. Unified Global Search page",
+"Global Search. Top results",
+"Global Search. Quick links, Show all, and Back navigation",
+"Global Search. Save query",
+"Global search. UI improvements based on feedback from IMEX",
+"support `q` search param on initial page load for news, participants, and sessions",
+"Return Button to Global search result page",
+"Global Search. Blocks, Labels, Order and Availability Control"
+]
+},
+{
+"id": "ai-ai-search-categories",
+"theme": "ai",
+"q": "2026-Q3",
+"title": "More content in AI search",
+"benefit": "Find pavilions, community groups and on-demand sessions through AI search.",
+"what": "AI search indexes pavilions with their grouped exhibitors, community groups by name or topic, and on-demand sessions by title, speaker or topic.",
+"detail": "Pavilions are indexed with their grouped exhibitors, community groups can be found by name or topic, and on-demand sessions are searchable by title, speaker or topic.",
+"stories": [
+"Include Pavilions as a searchable category in AI Search",
+"Include Community Groups as a searchable category in AI Search",
+"Include On-Demand Sessions as a searchable category in AI Search"
+]
+},
+{
+"id": "ai-admin-assistant-redesign",
+"theme": "ai",
+"q": "2026-Q3",
+"title": "Redesigned admin AI assistant",
+"benefit": "Use a redesigned chat interface for the AI assistant in the admin panel.",
+"what": "The AI assistant in the admin panel has a redesigned chat front end, the first version of the interface for the platform's new AI assistant.",
+"detail": "The admin assistant has a new front end, built as the first version of the interface for the platform's AI assistant.",
+"stories": [
+"Front-end for chatbot"
+]
+}
+],
+"claims": [
+{
+"id": "10_sessions_and_speakers:95",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Session content management: create/edit/activate/feature/delete with full metadata",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:96",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Speaker accounts + public profiles + assignment",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:97",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Moderator accounts + assignment + moderator dashboard",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:98",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Session types and tracks as configurable taxonomies with per-category access",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:99",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Subject tags, colour-coded, reorderable, usable as filters",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:100",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Five additional standard session filter fields",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:101",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Sessions List page with search / date picker / filters / recommendations / list-grid",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:102",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Session Page (frontend) with speakers/moderators/sponsors blocks",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:103",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Speaker Page and Speakers List",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:104",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Personal schedule \"Add to Schedule\" with capacity + add-to-schedule limits",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:105",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Paid sessions: price, max tickets, basket, discounts, by-booking export",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:106",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Session registration page: per-session toggle, custom form, gated add-to-schedule",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:107",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Online sessions: three sub-types Broadcast / Breakout / External + Hybrid",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:108",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "On-demand: embed code (iframe), from/to window, separate or integrated tab",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "10_sessions_and_speakers:109",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor events with approval workflow, auto-approval by type, lock after approval",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:110",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Session import (XLS) and speaker import via participant import",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:111",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Export reports By Booking / By Session / By Rating + full sessions export",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:112",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Five session email notification templates",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:113",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Session restrictions: booking, add-to-schedule, category visibility, type, track",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:114",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "External calendar sync to Google or Outlook",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:115",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "ICS attachment on calendar entries",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "10_sessions_and_speakers:116",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Schedule page: My Schedule, Team Schedule, list/calendar, PDF/XLS, Send Agenda",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:117",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "QR codes auto-generated for sessions",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "10_sessions_and_speakers:118",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Global search including sessions and speakers",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:119",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Session recommendations on community homepage",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:120",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Easy Entrance QR/check-in bypass",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:121",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Ignore blocked time for speakers/moderators",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:122",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Included",
+"claim": "Hide \"Ask Anonymously\" toggle for Q&A",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:128",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Excluded",
+"claim": "Meeting scheduling / matchmaking engine",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:129",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Excluded",
+"claim": "Payment gateway config and invoicing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:130",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Excluded",
+"claim": "Registration forms builder",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:131",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Excluded",
+"claim": "Round tables (separate sub-module)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "10_sessions_and_speakers:132",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Excluded",
+"claim": "Exhibitor product catalogue",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:133",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Excluded",
+"claim": "News/blog content",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:134",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Excluded",
+"claim": "Community groups",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:135",
+"product": "Sessions & Speakers",
+"section": "§2 Scope — Excluded",
+"claim": "Push notifications (\"mobile push not documented — a source gap\")",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "10_sessions_and_speakers:141",
+"product": "Sessions & Speakers",
+"section": "§3 Roles",
+"claim": "Super Admin: full access all events, module toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:142",
+"product": "Sessions & Speakers",
+"section": "§3 Roles",
+"claim": "Organiser: full session CRUD, approve exhibitor events, reports",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:143",
+"product": "Sessions & Speakers",
+"section": "§3 Roles",
+"claim": "Exhibitor: create/edit/submit own events from frontend, cannot approve",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:144",
+"product": "Sessions & Speakers",
+"section": "§3 Roles",
+"claim": "Exhibitor cannot edit after approval if type setting on",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:145",
+"product": "Sessions & Speakers",
+"section": "§3 Roles",
+"claim": "Auto-approved per type",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:146",
+"product": "Sessions & Speakers",
+"section": "§3 Roles",
+"claim": "Speaker: no admin panel access, profile only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:147",
+"product": "Sessions & Speakers",
+"section": "§3 Roles",
+"claim": "Moderator: dashboard access only",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:148",
+"product": "Sessions & Speakers",
+"section": "§3 Roles",
+"claim": "Attendee limits/restrictions",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:149",
+"product": "Sessions & Speakers",
+"section": "§3 Roles",
+"claim": "Team Member appears in Team Schedule",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:150",
+"product": "Sessions & Speakers",
+"section": "§3 Roles",
+"claim": "Exhibitor-event creation right granted at category or individual level",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:156",
+"product": "Sessions & Speakers",
+"section": "§7 Business Rules",
+"claim": "Blank Exhibitor ID in import ⇒ regular session, silently",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "10_sessions_and_speakers:157",
+"product": "Sessions & Speakers",
+"section": "§7 Business Rules",
+"claim": "Registration page gates Add to Schedule",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:158",
+"product": "Sessions & Speakers",
+"section": "§7 Business Rules",
+"claim": "Max ticket quantity hides Add to Cart",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:159",
+"product": "Sessions & Speakers",
+"section": "§7 Business Rules",
+"claim": "Add to Schedule limit enforced globally",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:160",
+"product": "Sessions & Speakers",
+"section": "§7 Business Rules",
+"claim": "Category visibility restricts discovery",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:161",
+"product": "Sessions & Speakers",
+"section": "§7 Business Rules",
+"claim": "Not-editable-after-approval locks exhibitor event",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:162",
+"product": "Sessions & Speakers",
+"section": "§7 Business Rules",
+"claim": "Auto-approved type bypasses approval",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:163",
+"product": "Sessions & Speakers",
+"section": "§7 Business Rules",
+"claim": "Deleted track propagates immediately",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:164",
+"product": "Sessions & Speakers",
+"section": "§7 Business Rules",
+"claim": "On-demand expires on To date",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:165",
+"product": "Sessions & Speakers",
+"section": "§7 Business Rules",
+"claim": "Blocked-time conflict for speakers/moderators",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:166",
+"product": "Sessions & Speakers",
+"section": "§7 Business Rules",
+"claim": "Registration does not reserve capacity",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "10_sessions_and_speakers:192",
+"product": "Sessions & Speakers",
+"section": "§9 Permissions",
+"claim": "Role × action matrix (7 roles × 8 actions)",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:193",
+"product": "Sessions & Speakers",
+"section": "§9 Permissions",
+"claim": "\"Organiser: Moderator Dashboard = No\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "10_sessions_and_speakers:194",
+"product": "Sessions & Speakers",
+"section": "§9 Permissions",
+"claim": "Auth-then-role flow (`MASTER:8934-8960`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:200",
+"product": "Sessions & Speakers",
+"section": "§10 Integrations",
+"claim": "ASP Events System (EP-11456)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:201",
+"product": "Sessions & Speakers",
+"section": "§10 Integrations",
+"claim": "DWTC CRM (EP-27396)",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:202",
+"product": "Sessions & Speakers",
+"section": "§10 Integrations",
+"claim": "Workcast via embed (Header + Body Script)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:203",
+"product": "Sessions & Speakers",
+"section": "§10 Integrations",
+"claim": "External Calendar Google/Outlook, OAuth",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:204",
+"product": "Sessions & Speakers",
+"section": "§10 Integrations",
+"claim": "Payment / Basket module",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:205",
+"product": "Sessions & Speakers",
+"section": "§10 Integrations",
+"claim": "Forms / Marketing module for registration",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:206",
+"product": "Sessions & Speakers",
+"section": "§10 Integrations",
+"claim": "Check-in / Easy Entrance",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:207",
+"product": "Sessions & Speakers",
+"section": "§10 Integrations",
+"claim": "SQS export pipeline",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:208",
+"product": "Sessions & Speakers",
+"section": "§10 Integrations",
+"claim": "Sessions API v2 (EP-14481)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:209",
+"product": "Sessions & Speakers",
+"section": "§10 Integrations",
+"claim": "API v3 sessions endpoints",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "10_sessions_and_speakers:219",
+"product": "Sessions & Speakers",
+"section": "§11 Notifications",
+"claim": "Session Added to Schedule",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:220",
+"product": "Sessions & Speakers",
+"section": "§11 Notifications",
+"claim": "Session Removed from Schedule",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:221",
+"product": "Sessions & Speakers",
+"section": "§11 Notifications",
+"claim": "Session Deleted",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:222",
+"product": "Sessions & Speakers",
+"section": "§11 Notifications",
+"claim": "Session Changed to On-Demand",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:223",
+"product": "Sessions & Speakers",
+"section": "§11 Notifications",
+"claim": "Online Session Reminder",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:224",
+"product": "Sessions & Speakers",
+"section": "§11 Notifications",
+"claim": "Moderator assigned (system)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "10_sessions_and_speakers:225",
+"product": "Sessions & Speakers",
+"section": "§11 Notifications",
+"claim": "Send Agenda",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:226",
+"product": "Sessions & Speakers",
+"section": "§11 Notifications",
+"claim": "Download Schedule",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "10_sessions_and_speakers:240",
+"product": "Sessions & Speakers",
+"section": "§12 Reporting",
+"claim": "By Booking",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:241",
+"product": "Sessions & Speakers",
+"section": "§12 Reporting",
+"claim": "By Session",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:242",
+"product": "Sessions & Speakers",
+"section": "§12 Reporting",
+"claim": "By Rating",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:243",
+"product": "Sessions & Speakers",
+"section": "§12 Reporting",
+"claim": "Full sessions setup export",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:253",
+"product": "Sessions & Speakers",
+"section": "§13 Configuration",
+"claim": "Ignore Blocked Time for Speakers/Moderators",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:254",
+"product": "Sessions & Speakers",
+"section": "§13 Configuration",
+"claim": "Notifications Before Session/Exhibitor Event Start (mins)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:255",
+"product": "Sessions & Speakers",
+"section": "§13 Configuration",
+"claim": "Easy Entrance",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:256",
+"product": "Sessions & Speakers",
+"section": "§13 Configuration",
+"claim": "Allow Other Location / Hyperlinking",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:257",
+"product": "Sessions & Speakers",
+"section": "§13 Configuration",
+"claim": "Allow Address",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:258",
+"product": "Sessions & Speakers",
+"section": "§13 Configuration",
+"claim": "Display Inactive Speakers on Frontend",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:259",
+"product": "Sessions & Speakers",
+"section": "§13 Configuration",
+"claim": "Track access per exhibitor category",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:260",
+"product": "Sessions & Speakers",
+"section": "§13 Configuration",
+"claim": "Custom Filter Fields (5)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:261",
+"product": "Sessions & Speakers",
+"section": "§13 Configuration",
+"claim": "Auto Approved (per type)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:262",
+"product": "Sessions & Speakers",
+"section": "§13 Configuration",
+"claim": "Not Editable After Approval (per type)",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:288",
+"product": "Sessions & Speakers",
+"section": "§14 Edge Cases",
+"claim": "Attendee at capacity — button hidden, no message",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:289",
+"product": "Sessions & Speakers",
+"section": "§14 Edge Cases",
+"claim": "Inactive speaker hidden unless setting on",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:290",
+"product": "Sessions & Speakers",
+"section": "§14 Edge Cases",
+"claim": "Registration form deleted ⇒ empty registration page",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:291",
+"product": "Sessions & Speakers",
+"section": "§14 Edge Cases",
+"claim": "Deleted track propagates",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:292",
+"product": "Sessions & Speakers",
+"section": "§14 Edge Cases",
+"claim": "Calendar sync is a one-time push, not live",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "10_sessions_and_speakers:293",
+"product": "Sessions & Speakers",
+"section": "§14 Edge Cases",
+"claim": "Two attendees booking last slot — \"standard database-level transaction locking applies\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "10_sessions_and_speakers:294",
+"product": "Sessions & Speakers",
+"section": "§14 Edge Cases",
+"claim": "Organiser + exhibitor editing simultaneously — last write wins",
+"verdict": "CONFIRMED"
+},
+{
+"id": "10_sessions_and_speakers:295",
+"product": "Sessions & Speakers",
+"section": "§14 Edge Cases",
+"claim": "On-demand past To date auto-hides",
+"verdict": "PARTIAL"
+},
+{
+"id": "10_sessions_and_speakers:296",
+"product": "Sessions & Speakers",
+"section": "§14 Edge Cases",
+"claim": "ASP/DWTC failure ⇒ manual re-trigger",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:76",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor List (web + app), card / list / short-list / custom-table views",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:77",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor Profile page — banner, logo, description, video, categories, TMs, products, brands, news, MC, sessions, floor plan",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:78",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Product List / Profile — slider, categories, WYSIWYG, video, MC, sample request (RFS), matchmaking info",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:79",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Brand List / Profile — logo, description, categories, social links, associated exhibitors",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:80",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "News pages, news export for organisers",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:81",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Marketing Content — per exhibitor and per product, track filtering, optional public page, login-required download",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:82",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Search & filters — keyword, ElasticSearch, AI natural language, system + custom filters, shareable links",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:83",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Pagination default or endless scroll; 12 or 24 per page",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:84",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Sponsor visibility — sponsored blocks, banners top + left, pop-ups, sponsored products",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:85",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Parent-Child — public indication, filter, hide child indication",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:86",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor categories & permissions — 15 named entitlements",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:87",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Per-exhibitor settings — custom overrides",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:88",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor registration form — multi-tab, custom fields, \"Use as filter\", \"Show in exhibitor card\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:89",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor Product Form — custom fields, launch label, required image/description/MC",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:90",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Matchmaking sorting on marketplace",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:91",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "PDF directory download (rebuilds every 30 min)",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:92",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Leads Dashboard — exhibitor-facing, incl. sponsor tabs",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:93",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor Profile Analytics (organiser admin) — 10 widgets",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:99",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Exhibitor Manual",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:100",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Onsite badge printing / kiosk check-in",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:101",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Payment processing for exhibitor packages",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:102",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Delegate / attendee directory",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:103",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Session / programme agenda",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:104",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "\"Mobile app build pipeline (Client Manager product)\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:110",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Exhibitor list at `/newfront/marketplace/exhibitors`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:111",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Sponsored block name configurable, max 60 chars",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:112",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Interaction buttons hidden on own card; Meet hidden if no TM available",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:113",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Default alphabetical sort unless matchmaking sorting on",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:114",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "\"If ElasticSearch is unavailable, regular search continues\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:115",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "ElasticSearch field priority multipliers are organiser-configurable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:116",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "\"Category multiplier 3 > Description 2 > Name 0\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:117",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Multipliers apply to pavilions too",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "14_exhibitor_marketplace:118",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "AI search: ≤500 results",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:119",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "AI search: English only",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:120",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "AI search: mutually exclusive with ElasticSearch",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:121",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "AI search: web only, Exhibitors tab only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:122",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Filters configured at `/admin/displayFilters/list/exhibitors`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:123",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Filter config storage",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:124",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Custom filters from registration fields with \"Use as filter\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:125",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "System filters: New, Hall, Exhibitor categories, Product categories, Countries, Tags, Head Office/Child, Meeting availability",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:126",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Categories for brands limited per exhibitor, not by category (Referencing block)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:127",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Product Active / Inactive / Sponsored",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:128",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Deactivation clears Product TM, Sample event, Sponsorship fields (EP-26427)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:129",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Active product limit; \"Forbid adding active products\" (EP-10479); \"Allow to create when limit reached\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:130",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Sponsored products require entitlement; limit is Custom-only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:131",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Sample ribbon overrides Launch",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:132",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Duplicate email creates a new exhibitor account",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:133",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Child cross-event import deletes products and TMs",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:134",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "\"Do not indicate Child companies\" toggle",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:135",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Parent/child custom labels, multilingual (EP-37234/37278)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:136",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Meeting lead attribution changed May 2026",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:137",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Logo placeholder colour assigned randomly and persists",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "14_exhibitor_marketplace:138",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Profile \"since date\" set at first creation, stable across editions",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:144",
+"product": "Exhibitor Marketplace",
+"section": "§9 Permissions",
+"claim": "Access modes: open browse vs sign-in-only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:145",
+"product": "Exhibitor Marketplace",
+"section": "§9 Permissions",
+"claim": "Admin TM edits company profile; Regular TM cannot unless autologin",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:146",
+"product": "Exhibitor Marketplace",
+"section": "§9 Permissions",
+"claim": "Organiser cannot change Global Module Management (SuperAdmin only)",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:147",
+"product": "Exhibitor Marketplace",
+"section": "§9 Permissions",
+"claim": "Role × Capability table (19 rows)",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:153",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "Exhibitor Portal (frontend) supplies all marketplace data",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:154",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "`/api/v2/product/set` with `status`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:155",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "Sponsorship module",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:156",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "ElasticSearch service",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:157",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "AI Search service",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:158",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "ExpoFP floor plan",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:159",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "Matchmaking algorithm",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:160",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "Favorites Dashboard attribution via shareable filter link",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:161",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "Registration emails, \"SMTP\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:167",
+"product": "Exhibitor Marketplace",
+"section": "§11 Notifications",
+"claim": "Pre-registration, approval/password, child-created, activation-link emails",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:168",
+"product": "Exhibitor Marketplace",
+"section": "§11 Notifications",
+"claim": "\"The Exhibitor Marketplace does not have its own push or SMS layer\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:174",
+"product": "Exhibitor Marketplace",
+"section": "§12 Reporting",
+"claim": "Marketplace total numbers (EP-1066)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:175",
+"product": "Exhibitor Marketplace",
+"section": "§12 Reporting",
+"claim": "10 per-exhibitor widgets",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:176",
+"product": "Exhibitor Marketplace",
+"section": "§12 Reporting",
+"claim": "Exhibitor Leads Dashboard tabs",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:177",
+"product": "Exhibitor Marketplace",
+"section": "§12 Reporting",
+"claim": "News Export (EP-55)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "14_exhibitor_marketplace:178",
+"product": "Exhibitor Marketplace",
+"section": "§12 Reporting",
+"claim": "\"2-year lookback\", \"only active exhibitors in averages\", \"deleted objects remove stats\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:186",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Exhibitor category settings (all tiers)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:187",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Per-exhibitor custom restrictions",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:188",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Display Filters — Exhibitors / Products",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:189",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "ElasticSearch field weights",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:190",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "PDF exhibitor list download + date window",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:191",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Allow to create products when limit reached / Forbid active products",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:192",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Marketing Content Tracks",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:193",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Module Management — Brands / AI Search",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:194",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Module Management — Parent-Child",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "14_exhibitor_marketplace:195",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Content public page / preview+download requires login",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:196",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "PDF exhibitor list download window",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:197",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Default exhibitor logo, logo placeholder",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "14_exhibitor_marketplace:203",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"RFP and RFS are always category-controlled with no custom override\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:204",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"Restricted access\" and \"showroom\" are category settings",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "14_exhibitor_marketplace:205",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"Online/onsite meeting limits always inherit from Category, cannot be Custom\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:206",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"Parent-child and Allow-customize-room are Custom-only\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:207",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"Session sponsorships configured inside sessions, not Sponsors\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:208",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"When the event ends the marketplace remains browsable; no archiving\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:209",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "Deleted exhibitors remove all associated statistics",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:219",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`EXHIBITOR` (`company_name, slug, status, category_id, parent_exhibitor_id, is_new, is_sponsored, logo_url, banner_url, description, created_at`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:220",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`EXHIBITOR_CATEGORY` (12 attributes)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:221",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`TEAM_MEMBER` table",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:222",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`PRODUCT` (`status, is_sponsored, is_launch, sample_available, assigned_tm_id`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:223",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`BRAND` (shared entity)",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:224",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`EXHIBITOR_BRAND`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:225",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`MARKETING_CONTENT` (`owner_id, owner_type, track_id`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:226",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`MC_TRACK`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:227",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`FILTER_CONFIG` table",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:228",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`INTERACTION` table",
+"verdict": "CONTRADICTED"
+}
+]
+}

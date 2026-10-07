@@ -1,5 +1,22 @@
 {
   "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {},
+    "gaps": [
+      "estimate: Jira original estimate is 0 (origDays and aggOrigDays both 0) and no comment or page gives one"
+    ],
+    "pages": [
+      {
+        "note": "QA questions and PO answers on iOS/Android design consistency per OTP state; no client named, no estimate.",
+        "read": true,
+        "title": "[Mobile] Q&A. New OTP settings.",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/~7120202599a672a19a41d391977c7366e68b93/pages/2061139977/Mobile+Q+A.+New+OTP+settings."
+      }
+    ]
+  },
   "flags": {
     "drift": false,
     "dueSoon": false,
@@ -53,23 +70,92 @@
       "k": "migrate",
       "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
       "to": ""
+    },
+    "hb260928jira-status": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "status",
+      "from": "In Progress",
+      "k": "edit",
+      "note": "Status now follows Jira: Ready for release (owner, 28 Sep 2026: the ledger must match every board)",
+      "to": "Ready for Release"
+    },
+    "hmuljgic801wc9": {
+      "at": "2026-09-28T17:45:52Z",
+      "b": "hmuljgic700s07",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "f": "why",
+      "from": "",
+      "k": "revert",
+      "rev": "h0mig-why",
+      "to": "Web part already released - parity needed"
+    },
+    "hmuljgkih035nk": {
+      "at": "2026-09-28T17:45:55Z",
+      "b": "hmuljgkih029qa",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "f": "why",
+      "from": "Web part already released - parity needed",
+      "k": "revert",
+      "rev": "hmuljgic700s07",
+      "to": ""
+    },
+    "hmuljgpu505duh": {
+      "at": "2026-09-28T17:46:02Z",
+      "b": "hmuljgpu5044wr",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "f": "why",
+      "from": "",
+      "k": "revert",
+      "rev": "hmuljgkih035nk",
+      "to": "Web part already released - parity needed"
+    },
+    "hmuljgqt907hqt": {
+      "at": "2026-09-28T17:46:03Z",
+      "b": "hmuljgqt906a7r",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "f": "why",
+      "from": "Web part already released - parity needed",
+      "k": "revert",
+      "rev": "hmuljgpu505duh",
+      "to": ""
+    },
+    "hmuljgvis09oaz": {
+      "at": "2026-09-28T17:46:09Z",
+      "b": "hmuljgvis08src",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "to": "82918"
+    },
+    "hmuljheew0byxt": {
+      "at": "2026-09-28T17:46:34Z",
+      "b": "hmuljheev0aijw",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "to": "Web part already released - parity needed"
     }
   },
   "j": {
-    "aggOrigDays": null,
-    "assignee": null,
-    "canon": "In Progress",
+    "aggOrigDays": 0,
+    "assignee": "Przemysław Wrzeszcz",
+    "canon": "Ready for Release",
     "due": "2026-08-20",
-    "origDays": null,
+    "origDays": 0,
     "priority": "Medium",
     "resolved": null,
-    "spentDays": 12.84,
-    "status": "In Progress",
+    "spentDays": 13.18,
+    "status": "Ready for release",
     "summary": "Build support for new OTP settings",
     "team": "Mobile team",
     "teamField": "customfield_10001",
     "type": "Story"
   },
+  "jAt": "2026-09-28T19:00:00Z",
   "migrated": {
     "at": "2026-09-22",
     "schema": 2
@@ -85,11 +171,12 @@
     "status": "In Progress"
   },
   "source": "confluence-2155872263",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-28",
+  "updatedBy": "u_odCcEgwJ2lNM84eM7e5ykg",
   "v": {
     "area": "Legacy mobile app",
     "deps": "OTP rollout will remain incomplete",
-    "driver": "",
+    "driver": "82918",
     "estimate": "",
     "feature": "Build support for new OTP settings",
     "impact": "Benefits users across the board",
@@ -99,8 +186,8 @@
     "owner": "Taimoor",
     "priority": "Operational",
     "rationale": "Web part already released - parity needed",
-    "status": "In Progress",
+    "status": "Ready for Release",
     "team": "",
-    "why": ""
+    "why": "Web part already released - parity needed"
   }
 }

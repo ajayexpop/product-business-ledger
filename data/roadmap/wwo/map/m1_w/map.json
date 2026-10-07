@@ -1,0 +1,529 @@
+[
+ {
+  "id": "comms-chat-comments-2023q1",
+  "kind": "improved",
+  "kindWhy": "'Comments and Likes v.1.1 (Live comments and Replies)', fixed chat header, add team members to group chat",
+  "buildsOn": [
+   "11_community:78",
+   "12_user_engagement:139"
+  ],
+  "buildsOnWhy": "Feed comments/likes and in-app chat as they exist today"
+ },
+ {
+  "id": "web-seo-tracking-2023",
+  "kind": "improved",
+  "kindWhy": "Fixes to existing pages: 'Write H1 for all pages', 'Fixing problems with page layout', 'Optimize SEO with links'",
+  "buildsOn": [
+   "07_event_website:201"
+  ],
+  "buildsOnWhy": "Website SEO tooling"
+ },
+ {
+  "id": "comms-multilingual-marketing-emails",
+  "kind": "improved",
+  "kindWhy": "'Multi-Language Email templates - Marketing' adds languages to existing sender/campaign templates",
+  "buildsOn": [
+   "12_user_engagement:386",
+   "12_user_engagement:116",
+   "12_user_engagement:117"
+  ],
+  "buildsOnWhy": "Multilanguage templates in Campaigns and Email Sender"
+ },
+ {
+  "id": "web-new-builder-launch",
+  "kind": "new",
+  "kindWhy": "Launches the new builder: 'Main menu of the Website builder', 'Two Website builders on the Platform'",
+  "buildsOn": [
+   "07_event_website:188",
+   "07_event_website:197",
+   "07_event_website:191"
+  ],
+  "buildsOnWhy": "Core website builder: create/publish, global settings, header"
+ },
+ {
+  "id": "web-events-listing-2023",
+  "kind": "improved",
+  "kindWhy": "'New dates format for the events on the front', reset button only when filters applied",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the front-end events listing"
+ },
+ {
+  "id": "comms-email-nurturing",
+  "kind": "improved",
+  "kindWhy": "'Recommended exhibitors/products/sessions/news variable redesign' plus new variables in existing campaigns",
+  "buildsOn": [
+   "12_user_engagement:119",
+   "12_user_engagement:387",
+   "12_user_engagement:116"
+  ],
+  "buildsOnWhy": "Email variables and recommended content cards in campaigns"
+ },
+ {
+  "id": "comms-messenger-improvements-2023q3",
+  "kind": "improved",
+  "kindWhy": "'New filters for Messenger', 'Messenger mobile view (web)'",
+  "buildsOn": [
+   "12_user_engagement:139"
+  ],
+  "buildsOnWhy": "In-app chat messaging"
+ },
+ {
+  "id": "comms-segmented-push-notifications",
+  "kind": "improved",
+  "kindWhy": "'Segmentation of Push Notifications' adds targeting to existing admin notifications",
+  "buildsOn": [
+   "12_user_engagement:123",
+   "12_user_engagement:385"
+  ],
+  "buildsOnWhy": "Scheduled push notifications with advanced filters"
+ },
+ {
+  "id": "web-dynamic-blocks",
+  "kind": "new",
+  "kindWhy": "First block library of the new builder: 'Blocks - Content', 'Exhibitors block', 'Products block' etc.",
+  "buildsOn": [
+   "07_event_website:193",
+   "07_event_website:194",
+   "07_event_website:200"
+  ],
+  "buildsOnWhy": "Static and dynamic blocks and block item filtering"
+ },
+ {
+  "id": "web-display-updates-2023",
+  "kind": "improved",
+  "kindWhy": "'Attendee List Changes | Widgetview Changes', 'Twitter logo and text update'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the attendee widget or social branding"
+ },
+ {
+  "id": "web-media-gallery",
+  "kind": "new",
+  "kindWhy": "'Main menu - Gallery button' adds the builder gallery; 'Setting to enable / disable the new Website builder'",
+  "buildsOn": [
+   "07_event_website:196",
+   "07_event_website:228"
+  ],
+  "buildsOnWhy": "Builder Gallery and the module toggle for the new builder"
+ },
+ {
+  "id": "comms-campaigns-refresh",
+  "kind": "improved",
+  "kindWhy": "'Campaigns refresh (1st/2nd iteration)', 'Hide Export data if there was no send-out'",
+  "buildsOn": [
+   "12_user_engagement:116",
+   "12_user_engagement:122"
+  ],
+  "buildsOnWhy": "Marketing campaigns and campaign statistics/export"
+ },
+ {
+  "id": "comms-message-limits",
+  "kind": "improved",
+  "kindWhy": "'Setting for determining the number of messages' in an existing variable",
+  "buildsOn": [
+   "12_user_engagement:387",
+   "12_user_engagement:119"
+  ],
+  "buildsOnWhy": "Recommended content card count (gear icon) and email variables"
+ },
+ {
+  "id": "web-language-consent-2024",
+  "kind": "improved",
+  "kindWhy": "'Changing Website Language Based on Browser's Language' changes the existing language selector",
+  "buildsOn": [
+   "07_event_website:204",
+   "07_event_website:305"
+  ],
+  "buildsOnWhy": "Multi-language with browser detection; header language selector"
+ },
+ {
+  "id": "web-rich-content-2024",
+  "kind": "improved",
+  "kindWhy": "'Improve Text Editor', 'Add ability to run js scripts in the custom HTML block', new blocks in the existing builder",
+  "buildsOn": [
+   "07_event_website:193",
+   "07_event_website:303",
+   "07_event_website:199"
+  ],
+  "buildsOnWhy": "Static content blocks, custom HTML block, block-level settings"
+ },
+ {
+  "id": "comms-badge-codes-in-emails",
+  "kind": "improved",
+  "kindWhy": "'Please add badge BAR & QRcode variable for Campaigns' and to the Buyer Accept template",
+  "buildsOn": [
+   "12_user_engagement:119",
+   "12_user_engagement:136"
+  ],
+  "buildsOnWhy": "Email variables; Hosted Buyers emails"
+ },
+ {
+  "id": "comms-company-job-title-user-cards",
+  "kind": "improved",
+  "kindWhy": "'Enhancing User Card Information with Company Name & Job Title'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers participant cards"
+ },
+ {
+  "id": "web-multilingual-sites",
+  "kind": "improved",
+  "kindWhy": "'Part 2 - Multilanguage' extends the builder with language sync/desync",
+  "buildsOn": [
+   "07_event_website:204",
+   "07_event_website:245",
+   "07_event_website:312"
+  ],
+  "buildsOnWhy": "Multi-language sync/desync, desync reset, favourite blocks"
+ },
+ {
+  "id": "web-editing-controls-2024",
+  "kind": "improved",
+  "kindWhy": "'Disable autosave', 'Add addition settings to all video blocks', 'Add support special links'",
+  "buildsOn": [
+   "07_event_website:240",
+   "07_event_website:199"
+  ],
+  "buildsOnWhy": "Autosave/site history and block-level video/link settings"
+ },
+ {
+  "id": "comms-email-group-improvements-2024q2",
+  "kind": "improved",
+  "kindWhy": "'Add Activation link variable in email sender', 'Filter for the search query in Group tab'",
+  "buildsOn": [
+   "12_user_engagement:117",
+   "12_user_engagement:119",
+   "11_community:77"
+  ],
+  "buildsOnWhy": "Email Sender variables; community groups"
+ },
+ {
+  "id": "web-custom-forms",
+  "kind": "new",
+  "kindWhy": "'Custom form 1 (simple)', then image/video, pop-up, sidebar variants: first version of builder forms",
+  "buildsOn": [
+   "07_event_website:195",
+   "07_event_website:291"
+  ],
+  "buildsOnWhy": "Custom Forms and their submissions export"
+ },
+ {
+  "id": "web-builder-improvements-2024q3",
+  "kind": "improved",
+  "kindWhy": "'Adding Banners as OLD website', 'add slug to the page list', 'Transferring new website builder when cloning an event'",
+  "buildsOn": [
+   "07_event_website:189",
+   "07_event_website:242"
+  ],
+  "buildsOnWhy": "Multi-page management; website/event cloning"
+ },
+ {
+  "id": "web-custom-css-html-2024",
+  "kind": "improved",
+  "kindWhy": "'Add ability to edit old CSS', pseudo-class support, full-screen custom HTML",
+  "buildsOn": [
+   "07_event_website:302",
+   "07_event_website:303",
+   "07_event_website:199"
+  ],
+  "buildsOnWhy": "Custom CSS/JS and custom HTML blocks"
+ },
+ {
+  "id": "web-embeddable-widgets",
+  "kind": "improved",
+  "kindWhy": "'Add ability to get height in the widgets mode for portal UI'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers portal widget/iframe mode"
+ },
+ {
+  "id": "web-team-editing",
+  "kind": "new",
+  "kindWhy": "'Part 2 - Team work' introduces live co-editing, block locks and shared autosave",
+  "buildsOn": [
+   "07_event_website:207",
+   "07_event_website:311",
+   "07_event_website:240"
+  ],
+  "buildsOnWhy": "Collaboration/concurrent editors and save history"
+ },
+ {
+  "id": "comms-campaign-editor-redesign",
+  "kind": "improved",
+  "kindWhy": "'Additional tasks to Campaign redesign (2nd iteration)', save confirmation popup",
+  "buildsOn": [
+   "12_user_engagement:116",
+   "12_user_engagement:122",
+   "12_user_engagement:135"
+  ],
+  "buildsOnWhy": "Campaigns, statistics and registration email templates"
+ },
+ {
+  "id": "comms-networking-list-filters",
+  "kind": "improved",
+  "kindWhy": "'Networking Filters for Attendee and Exhibitor Lists' added to existing lists",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers attendee/exhibitor list filters"
+ },
+ {
+  "id": "web-block-design-2024",
+  "kind": "improved",
+  "kindWhy": "'Reduce the size of the shadow', 'more than 8 FAQs', 'Re-arrangement of Cards within Selected Blocks'",
+  "buildsOn": [
+   "07_event_website:193",
+   "07_event_website:199"
+  ],
+  "buildsOnWhy": "Static content blocks and block-level settings"
+ },
+ {
+  "id": "web-popups-logos-2024",
+  "kind": "improved",
+  "kindWhy": "'Introduce Custom Pop up ... just like the legacy', social links block, 'Enhanced Control for Header and Footer Logos'",
+  "buildsOn": [
+   "07_event_website:303",
+   "07_event_website:197",
+   "07_event_website:191"
+  ],
+  "buildsOnWhy": "Custom HTML pop-up, floating social buttons, header logo"
+ },
+ {
+  "id": "comms-campaign-sending-chat-limits",
+  "kind": "improved",
+  "kindWhy": "'Limits on creating chats'; fix 'Email campaign is not sent out to multiple recipients'",
+  "buildsOn": [
+   "12_user_engagement:116",
+   "12_user_engagement:139"
+  ],
+  "buildsOnWhy": "Campaign sending and in-app chat"
+ },
+ {
+  "id": "comms-multilingual-admin-notifications",
+  "kind": "improved",
+  "kindWhy": "'Multilanguage Admin Notifications' adds languages to existing notifications",
+  "buildsOn": [
+   "12_user_engagement:123",
+   "12_user_engagement:386"
+  ],
+  "buildsOnWhy": "Admin push notifications and multilanguage templates"
+ },
+ {
+  "id": "web-seo-custom-pages",
+  "kind": "improved",
+  "kindWhy": "'Add alt attribute', 'Change div to section', per-block SSR work on existing blocks",
+  "buildsOn": [
+   "07_event_website:201",
+   "07_event_website:193",
+   "07_event_website:194"
+  ],
+  "buildsOnWhy": "SEO tooling over static and dynamic blocks"
+ },
+ {
+  "id": "web-block-updates",
+  "kind": "new",
+  "kindWhy": "'Block versioning', 'Update mechanism for existing blocks' introduce versioning",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers block versioning"
+ },
+ {
+  "id": "web-server-rendered-pages",
+  "kind": "improved",
+  "kindWhy": "Re-platform of existing pages ('/community', '/events', '/exhibitor/[id]'...) to Next 14",
+  "buildsOn": [
+   "07_event_website:203"
+  ],
+  "buildsOnWhy": "Next.js v14 SSR migration of system pages (verdict CONTRADICTED)"
+ },
+ {
+  "id": "web-page-access",
+  "kind": "improved",
+  "kindWhy": "'Visibility Settings for Links and Buttons and Pages access' adds options to existing links, buttons and pages",
+  "buildsOn": [
+   "07_event_website:232",
+   "07_event_website:259",
+   "07_event_website:246"
+  ],
+  "buildsOnWhy": "Page Access All/Logged/Unlogged and its enforcement"
+ },
+ {
+  "id": "web-builder-improvements-2025q1",
+  "kind": "improved",
+  "kindWhy": "'Remove /page part from urls', 'Ability to add links in images', 'Font Size Customization for Header Menu Items'",
+  "buildsOn": [
+   "07_event_website:189",
+   "07_event_website:191",
+   "11_community:79"
+  ],
+  "buildsOnWhy": "Pages, header navbar, news publishing/moderation"
+ },
+ {
+  "id": "comms-longer-group-descriptions",
+  "kind": "improved",
+  "kindWhy": "'Increase the character limit ... from 200 to 400'",
+  "buildsOn": [
+   "11_community:77"
+  ],
+  "buildsOnWhy": "Community groups"
+ },
+ {
+  "id": "web-header-styling-2025",
+  "kind": "improved",
+  "kindWhy": "'Header Title and Subtitle improvements', CSS class/data attribute for customer",
+  "buildsOn": [
+   "07_event_website:191"
+  ],
+  "buildsOnWhy": "Header/navbar"
+ },
+ {
+  "id": "web-alt-text-sitemap",
+  "kind": "improved",
+  "kindWhy": "'Alt Text for Images', 'Change logic of the sitemap generation'",
+  "buildsOn": [
+   "07_event_website:201",
+   "07_event_website:190"
+  ],
+  "buildsOnWhy": "SEO tooling and sitemap generation"
+ },
+ {
+  "id": "comms-configurable-session-reminders",
+  "kind": "improved",
+  "kindWhy": "'Possibility to adjust time of Session reminder push notification' replaces fixed times",
+  "buildsOn": [
+   "12_user_engagement:383",
+   "12_user_engagement:123"
+  ],
+  "buildsOnWhy": "Session notification timing"
+ },
+ {
+  "id": "comms-personal-assistant-emails",
+  "kind": "improved",
+  "kindWhy": "'Personal Assistant Improvement'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers assistant email copies"
+ },
+ {
+  "id": "web-mobile-cards-2025",
+  "kind": "improved",
+  "kindWhy": "'Change mobile adaptive for FourCardView in system elements'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers system-page card layouts"
+ },
+ {
+  "id": "comms-advanced-targeting",
+  "kind": "improved",
+  "kindWhy": "'Advanced Filters for Admin Notifications/Campaigns', 'Variables for Email Campaigns'",
+  "buildsOn": [
+   "12_user_engagement:384",
+   "12_user_engagement:385",
+   "12_user_engagement:119"
+  ],
+  "buildsOnWhy": "Campaign audience and notification filters; email variables"
+ },
+ {
+  "id": "comms-registration-email-variables",
+  "kind": "improved",
+  "kindWhy": "'Extending the List of Available Variables for Registration Email Templates'",
+  "buildsOn": [
+   "12_user_engagement:135",
+   "12_user_engagement:119"
+  ],
+  "buildsOnWhy": "Transactional registration emails and variables"
+ },
+ {
+  "id": "comms-notification-email-improvements-2025q4",
+  "kind": "improved",
+  "kindWhy": "'add ability to click on the notification in the notification dropdown', new information request template",
+  "buildsOn": [
+   "12_user_engagement:124"
+  ],
+  "buildsOnWhy": "Standard platform notifications"
+ },
+ {
+  "id": "web-custom-grids",
+  "kind": "new",
+  "kindWhy": "'Website buider. Custom grids main functional' then improvements",
+  "buildsOn": [
+   "07_event_website:198"
+  ],
+  "buildsOnWhy": "Custom Grids"
+ },
+ {
+  "id": "web-carousel-editor-2026",
+  "kind": "improved",
+  "kindWhy": "'Change swiper logic to carousel when not enough slides', editor controls theming",
+  "buildsOn": [
+   "07_event_website:193"
+  ],
+  "buildsOnWhy": "Static content blocks (carousel)"
+ },
+ {
+  "id": "comms-messenger-status-filters",
+  "kind": "improved",
+  "kindWhy": "'Messenger. Conversation status filters' alongside existing filters",
+  "buildsOn": [
+   "12_user_engagement:139"
+  ],
+  "buildsOnWhy": "In-app chat messaging"
+ },
+ {
+  "id": "web-card-styling-2026",
+  "kind": "improved",
+  "kindWhy": "'Add border and shadow options for individual card views', hide button on cards",
+  "buildsOn": [
+   "07_event_website:199"
+  ],
+  "buildsOnWhy": "Block-level settings"
+ },
+ {
+  "id": "web-footer-2026",
+  "kind": "improved",
+  "kindWhy": "'Allignment of the columns in footer', 'delete a column', 'Text position', branding toggle",
+  "buildsOn": [
+   "07_event_website:192"
+  ],
+  "buildsOnWhy": "Footer"
+ },
+ {
+  "id": "comms-campaign-recommendation-blocks",
+  "kind": "improved",
+  "kindWhy": "'Organizer sees recommendation blocks with full-width layout and clear boundaries'",
+  "buildsOn": [
+   "12_user_engagement:119",
+   "12_user_engagement:387"
+  ],
+  "buildsOnWhy": "Recommended content variables in campaign emails"
+ },
+ {
+  "id": "web-ai-builder",
+  "kind": "new",
+  "kindWhy": "Stories 1-5 build a new 'Describe CSS Changes' entry point, AI proxy and block-scoped CSS",
+  "buildsOn": [
+   "07_event_website:209",
+   "07_event_website:302"
+  ],
+  "buildsOnWhy": "AI-Assisted Website Builder Phase I; custom CSS"
+ },
+ {
+  "id": "web-tracking-links",
+  "kind": "improved",
+  "kindWhy": "'Ability to edit the tracking links'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers marketing tracking links"
+ },
+ {
+  "id": "web-header-2026",
+  "kind": "improved",
+  "kindWhy": "'Scroll settings', 'Line Layout', mobile header search changes",
+  "buildsOn": [
+   "07_event_website:191",
+   "07_event_website:304"
+  ],
+  "buildsOnWhy": "Header/navbar and header style"
+ },
+ {
+  "id": "comms-custom-smtp",
+  "kind": "improved",
+  "kindWhy": "'Create setting for using custom SMPT service': an option on existing email sending",
+  "buildsOn": [
+   "12_user_engagement:367",
+   "12_user_engagement:381"
+  ],
+  "buildsOnWhy": "Internal email sending infrastructure; custom sender domain"
+ }
+]

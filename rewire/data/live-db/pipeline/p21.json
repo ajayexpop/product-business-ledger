@@ -1,0 +1,138 @@
+{
+  "createdAt": "2026-09-28",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "driver": "Jira Reported by INTERNAL; no client named",
+      "notes": "EP-29630 comment 2026-07-27 by Konstantin Shein; EP-29630 comment 2026-09-28 by Ajay Singh; EP-29630 jiraColumns (status, due, spentDays, origDays)",
+      "why": "EP-29630 description (Initial request: 'This will make it easier to manage a large number of categories')"
+    },
+    "gaps": [
+      "No Confluence links in the description or comments; the only links are two Figma design links (not fetched, not needed for these fields) and Polaris items ADP-318 and PBV11-382 (not Confluence pages).",
+      "No client is named in the description or comments; the ledger rationale 'a lot of clients' is not backed by a Jira source.",
+      "No explicit estimate in any source (origDays null); ledger estimate left as is."
+    ],
+    "pages": []
+  },
+  "h": {
+    "hb260928conf-area": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "area",
+      "from": "Netwokring",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "Networking"
+    },
+    "hb260928conf-month": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "month",
+      "from": "November 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-11"
+    },
+    "hb260928confadd": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 2026-09-28."
+    },
+    "hb260928enr-driver": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Jira Reported by INTERNAL; no client named",
+      "to": "Platform"
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-29630 comment 2026-07-27 by Konstantin Shein; EP-29630 comment 2026-09-28 by Ajay Singh; EP-29630 jiraColumns (status, due, spentDays, origDays)",
+      "to": "Open, due 2026-12-31, no original estimate, 12.15 days already logged. 2026-07-27 Konstantin Shein: requirements and design need to be actualised (agreed with Oleksandr Parashchuk). 2026-09-28 Ajay Singh: tentative start and due dates must always be filled."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-29630 description (Initial request: 'This will make it easier to manage a large number of categories')",
+      "to": "Admins need a tabbed permissions page so permissions for a large number of categories and roles are clear and easy to manage."
+    }
+  },
+  "j": {
+    "aggOrigDays": null,
+    "assignee": "Ajay Singh",
+    "canon": "Planned",
+    "due": "2026-12-31",
+    "origDays": null,
+    "priority": "High",
+    "resolved": null,
+    "spentDays": 12.15,
+    "status": "Open",
+    "summary": "Permission Matrix - Upgrade UI",
+    "team": "Exhibitor team",
+    "teamField": "customfield_10001",
+    "type": "Story"
+  },
+  "jAt": "2026-09-28T19:00:00Z",
+  "migrated": {
+    "at": "2026-09-28",
+    "schema": 2
+  },
+  "n": {
+    "days": null,
+    "daysKind": "none"
+  },
+  "order": 150,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "Jira Reported by INTERNAL; no client named",
+      "by": "Claude",
+      "field": "Jira",
+      "name": "Platform",
+      "quote": "Jira Reported by INTERNAL; no client named",
+      "value": "Platform"
+    }
+  },
+  "raw": {
+    "area": "Netwokring",
+    "month": "November 2026",
+    "status": "Planned"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-28",
+  "v": {
+    "area": "Networking",
+    "deps": "Can be taken after contracted items are done",
+    "driver": "Platform",
+    "estimate": "To be estimated after prototyping is done",
+    "feature": "Permission Matrix - Upgrade UI",
+    "impact": "Makes permission settings easy and clear to use",
+    "key": "EP-29630",
+    "month": "2026-11",
+    "notes": "Open, due 2026-12-31, no original estimate, 12.15 days already logged. 2026-07-27 Konstantin Shein: requirements and design need to be actualised (agreed with Oleksandr Parashchuk). 2026-09-28 Ajay Singh: tentative start and due dates must always be filled.",
+    "owner": "Alex",
+    "priority": "Operational",
+    "rationale": "A lot of clients feel significant strain managing permissions",
+    "status": "Planned",
+    "team": "",
+    "why": "Admins need a tabbed permissions page so permissions for a large number of categories and roles are clear and easy to manage."
+  }
+}

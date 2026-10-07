@@ -1,0 +1,173 @@
+{
+  "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "deps": "EP-57237 description (Background / Context, Out of Scope)",
+      "driver": "Jira Reported by DLG, Pipedrive 81808",
+      "why": "EP-57237 Reported by DLG | EP-57237 description (Background / Context)"
+    },
+    "gaps": [
+      "notes: the ticket has no comments, so nothing states current progress (Jira status is Ready for release, due 2026-09-23)",
+      "no Confluence link in the description; no client is named in the text beyond Reported by"
+    ],
+    "pages": []
+  },
+  "flags": {
+    "drift": true,
+    "dueSoon": true,
+    "noEstimate": false,
+    "noJira": false,
+    "overEstimate": false,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "September 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-09"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "h0mig-rationale": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "migrate",
+      "note": "the old Why, word for word",
+      "to": "When organizers rename the \"Track\" taxonomy in admin (to \"Stage\", \"Theme\", \"Stream\" or \"Room\"), the calendar side drawer previously hardcoded \"By Track\", causing brand confusion and attendee disorientation."
+    },
+    "h0mig-why": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "why",
+      "from": "When organizers rename the \"Track\" taxonomy in admin (to \"Stage\", \"Theme\", \"Stream\" or \"Room\"), the calendar side drawer previously hardcoded \"By Track\", causing brand confusion and attendee disorientation.",
+      "k": "migrate",
+      "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
+      "to": ""
+    },
+    "hb260928enr-deps": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "deps",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57237 description (Background / Context, Out of Scope)",
+      "to": "Child of EP-57118. Relies on the existing Admin Panel > Sessions > Display Filters label and its localised variants, which the platform already respects elsewhere; no Admin Panel changes are in scope. Risk if delayed: clients who renamed Tracks keep seeing an inconsistent 'By Track' label."
+    },
+    "hb260928enr-driver": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Jira Reported by DLG, Pipedrive 81808",
+      "to": "81808"
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57237 Reported by DLG | EP-57237 description (Background / Context)",
+      "to": "For DLG: the calendar drawer hardcodes 'By Track' and ignores the filter name the organiser set, which the rest of the event uses."
+    },
+    "hb260928jira-status": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "status",
+      "from": "In Progress",
+      "k": "edit",
+      "note": "Status now follows Jira: Ready for release (owner, 28 Sep 2026: the ledger must match every board)",
+      "to": "Ready for Release"
+    }
+  },
+  "j": {
+    "aggOrigDays": 6,
+    "assignee": "Evgen Polivach",
+    "canon": "Ready for Release",
+    "due": "2026-09-23",
+    "origDays": 5,
+    "priority": "Medium",
+    "resolved": null,
+    "spentDays": 0.96,
+    "status": "Ready for release",
+    "summary": "Session Calendar: Sync \"By Track\" Side Drawer tab label with the configured Display Filter name from Admin Panel",
+    "team": "Visitor team",
+    "teamField": "customfield_10001",
+    "type": "Story"
+  },
+  "jAt": "2026-09-28T19:00:00Z",
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": 1,
+    "daysKind": "point"
+  },
+  "order": 230,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "Jira Reported by DLG, Pipedrive 81808",
+      "by": "Claude",
+      "field": "Jira",
+      "name": "81808",
+      "quote": "Jira Reported by DLG, Pipedrive 81808",
+      "value": "81808"
+    }
+  },
+  "raw": {
+    "area": "Sessions",
+    "month": "September 2026",
+    "status": "In Progress"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-28",
+  "v": {
+    "area": "Sessions",
+    "deps": "Child of EP-57118. Relies on the existing Admin Panel > Sessions > Display Filters label and its localised variants, which the platform already respects elsewhere; no Admin Panel changes are in scope. Risk if delayed: clients who renamed Tracks keep seeing an inconsistent 'By Track' label.",
+    "driver": "81808",
+    "estimate": "1d",
+    "feature": "Session Calendar: Sync \"By Track\" drawer label with the Admin Display Filter name",
+    "impact": "Attendees: consistent taxonomy and terminology throughout agenda browsing. Organizers: full white-label fidelity — custom filter naming is respected everywhere.",
+    "key": "EP-57237",
+    "month": "2026-09",
+    "notes": "",
+    "owner": "Kavi",
+    "priority": "Operational",
+    "rationale": "When organizers rename the \"Track\" taxonomy in admin (to \"Stage\", \"Theme\", \"Stream\" or \"Room\"), the calendar side drawer previously hardcoded \"By Track\", causing brand confusion and attendee disorientation.",
+    "status": "Ready for Release",
+    "team": "",
+    "why": "For DLG: the calendar drawer hardcodes 'By Track' and ignores the filter name the organiser set, which the rest of the event uses."
+  }
+}

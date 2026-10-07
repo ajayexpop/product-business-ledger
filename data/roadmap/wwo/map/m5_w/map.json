@@ -1,0 +1,532 @@
+[
+ {
+  "id": "exhib-parent-child-launch",
+  "kind": "new",
+  "kindWhy": "'Parent-Child management on Frontend v.1': first version of the frontend 'My child exhibitors' page",
+  "buildsOn": [
+   "13_exhibitor_portal:87",
+   "14_exhibitor_marketplace:85"
+  ],
+  "buildsOnWhy": "Parent-child exhibitor relationships and their public indication"
+ },
+ {
+  "id": "exhib-content-limits",
+  "kind": "improved",
+  "kindWhy": "'Marketing content limit on individual level', 'description to be extended to 3000 characters', 'Add load indication': limits and options on existing content",
+  "buildsOn": [
+   "14_exhibitor_marketplace:81",
+   "14_exhibitor_marketplace:80",
+   "14_exhibitor_marketplace:87"
+  ],
+  "buildsOnWhy": "Marketing content, news pages and per-exhibitor overrides"
+ },
+ {
+  "id": "exhib-marketplace-2023q1",
+  "kind": "improved",
+  "kindWhy": "'display 24 items ... instead of 12 by default', 'Zip Code Field', 'Remove product category auto selection': marketplace options",
+  "buildsOn": [
+   "14_exhibitor_marketplace:83",
+   "14_exhibitor_marketplace:76",
+   "14_exhibitor_marketplace:79"
+  ],
+  "buildsOnWhy": "Marketplace pagination, exhibitor list and brand profiles"
+ },
+ {
+  "id": "exhib-sponsor-banners-category",
+  "kind": "improved",
+  "kindWhy": "'Featured exhibitors to be configurable at Exhibitor Category level', 'Sponsor Pop Up - Category Level Config': category-level settings on existing sponsorship",
+  "buildsOn": [
+   "17_sponsorship:63",
+   "17_sponsorship:65",
+   "17_sponsorship:64"
+  ],
+  "buildsOnWhy": "Is Sponsor at category level, sponsor pop-up, banner ads"
+ },
+ {
+  "id": "exhib-sponsored-sessions-profile",
+  "kind": "improved",
+  "kindWhy": "'Sponsored Session Should be Visible on Company Profile', 'Include session interactions in the dashboard', 'Enhancement'",
+  "buildsOn": [
+   "17_sponsorship:72",
+   "17_sponsorship:73",
+   "17_sponsorship:75"
+  ],
+  "buildsOnWhy": "Sponsored session block, session sponsorship, exhibitor sponsorship stats"
+ },
+ {
+  "id": "exhib-setup-2023q2",
+  "kind": "improved",
+  "kindWhy": "'Exhibitor default category', 'Forbid exhibitors to add active products', manual sections 'divided by their links': settings on existing setup",
+  "buildsOn": [
+   "14_exhibitor_marketplace:129",
+   "14_exhibitor_marketplace:86",
+   "13_exhibitor_portal:78"
+  ],
+  "buildsOnWhy": "Active product limit, exhibitor categories, manual section management"
+ },
+ {
+  "id": "exhib-performance-2023q2",
+  "kind": "improved",
+  "kindWhy": "'Sync to Elasticsearch only in the end of importing', 'Remove duplicated queries': performance fixes",
+  "buildsOn": [
+   "14_exhibitor_marketplace:82",
+   "14_exhibitor_marketplace:156"
+  ],
+  "buildsOnWhy": "Marketplace search and the ElasticSearch service"
+ },
+ {
+  "id": "exhib-colocated-scans",
+  "kind": "improved",
+  "kindWhy": "'Change Code to scan QR codes for colocated events', names on lead capture page made clickable",
+  "buildsOn": [
+   "15_lead_intelligence:128",
+   "15_lead_intelligence:117"
+  ],
+  "buildsOnWhy": "Colocated scanning and scanning settings"
+ },
+ {
+  "id": "exhib-leads-meetings-events",
+  "kind": "improved",
+  "kindWhy": "'Exhibitor events. Interactions and Leads generation', 'Leads Download to Include - All Meeting Requests': extends existing leads",
+  "buildsOn": [
+   "15_lead_intelligence:114",
+   "15_lead_intelligence:116",
+   "15_lead_intelligence:92"
+  ],
+  "buildsOnWhy": "Lead toggles, include all meeting statuses, leads dashboard"
+ },
+ {
+  "id": "exhib-rich-text",
+  "kind": "improved",
+  "kindWhy": "'Text Editor', 'Text Editor - Exhibitor News': editor added to existing profile and news fields",
+  "buildsOn": [
+   "14_exhibitor_marketplace:77",
+   "14_exhibitor_marketplace:80"
+  ],
+  "buildsOnWhy": "Exhibitor profile description and news pages"
+ },
+ {
+  "id": "exhib-sponsor-layout-2023q2",
+  "kind": "improved",
+  "kindWhy": "'*Improvement* In Sponsor Banner for Mobile and Tablet View', 'Sponsors ... cards are 6 in a raw'",
+  "buildsOn": [
+   "17_sponsorship:66",
+   "17_sponsorship:64"
+  ],
+  "buildsOnWhy": "Sponsored exhibitor placement and banner ads on the marketplace"
+ },
+ {
+  "id": "exhib-custom-lead-questions",
+  "kind": "improved",
+  "kindWhy": "'Custom Questions stage2. Additional questions', 'two new features': extends existing custom lead questions",
+  "buildsOn": [
+   "15_lead_intelligence:91",
+   "15_lead_intelligence:120",
+   "15_lead_intelligence:90"
+  ],
+  "buildsOnWhy": "Lead question builder for exhibitors and organisers, field types"
+ },
+ {
+  "id": "exhib-custom-listings",
+  "kind": "improved",
+  "kindWhy": "'Option to have Custom Listing', 'Custom listing additional features': a table view option on existing lists",
+  "buildsOn": [
+   "14_exhibitor_marketplace:76",
+   "14_exhibitor_marketplace:102"
+  ],
+  "buildsOnWhy": "Exhibitor list custom-table view, delegate directory"
+ },
+ {
+  "id": "exhib-sponsor-section",
+  "kind": "improved",
+  "kindWhy": "'Move Sponsors to the separate section', 'Choosing the way sponsors displayed', 'optimization for apps'",
+  "buildsOn": [
+   "17_sponsorship:66",
+   "17_sponsorship:77",
+   "17_sponsorship:114"
+  ],
+  "buildsOnWhy": "Sponsored exhibitor placement, display settings, click tracking"
+ },
+ {
+  "id": "exhib-overview-report",
+  "kind": "new",
+  "kindWhy": "'Download detailed report (parent+child)': a new exhibitor overview spreadsheet",
+  "buildsOn": [
+   "13_exhibitor_portal:87",
+   "14_exhibitor_marketplace:93"
+  ],
+  "buildsOnWhy": "Parent-child relationships and exhibitor profile analytics"
+ },
+ {
+  "id": "exhib-team-interaction",
+  "kind": "improved",
+  "kindWhy": "'Exhibitor to define if team members can interact (WEB/App)', 'Extract interaction settings in xls': a control on existing team member meetings and chats",
+  "buildsOn": [
+   "14_exhibitor_marketplace:87",
+   "13_exhibitor_portal:88"
+  ],
+  "buildsOnWhy": "Per-exhibitor settings and API v2 exposure"
+ },
+ {
+  "id": "exhib-manual-translation",
+  "kind": "new",
+  "kindWhy": "'Translation tool for Exhibitor Manual': first translation tool for manual sections",
+  "buildsOn": [
+   "13_exhibitor_portal:85"
+  ],
+  "buildsOnWhy": "Per-section language tool in the exhibitor manual"
+ },
+ {
+  "id": "exhib-sponsor-mgmt-2023q4",
+  "kind": "improved",
+  "kindWhy": "'Search and filter for sponsor categories on the sponsors page', 'Buttons for Sponsor cards on Marketplace'",
+  "buildsOn": [
+   "17_sponsorship:61",
+   "17_sponsorship:62",
+   "17_sponsorship:66"
+  ],
+  "buildsOnWhy": "Sponsor records, sponsor categories, marketplace placement"
+ },
+ {
+  "id": "exhib-exports-2024q1",
+  "kind": "improved",
+  "kindWhy": "'Leads Export: Exhibitor Event - Date / Time', 'Inclusion of Meeting Rating Notes', sponsor stats export look",
+  "buildsOn": [
+   "15_lead_intelligence:95",
+   "15_lead_intelligence:225",
+   "17_sponsorship:74"
+  ],
+  "buildsOnWhy": "Leads export, meeting rating notes, sponsorship statistics export"
+ },
+ {
+  "id": "exhib-leads-2024q2",
+  "kind": "improved",
+  "kindWhy": "'Download leads improvements', 'Unrecognized Badge Scans', 'Lead capture availability settings'",
+  "buildsOn": [
+   "15_lead_intelligence:95",
+   "15_lead_intelligence:89",
+   "15_lead_intelligence:181"
+  ],
+  "buildsOnWhy": "Leads export, lead capture access, backend badge QR resolution"
+ },
+ {
+  "id": "exhib-settings-2024q2",
+  "kind": "improved",
+  "kindWhy": "'Product Description and Product Image Mandatory', 'Rename the sponsor block name', 'Changing deadlines of Exhibitor Manual'",
+  "buildsOn": [
+   "14_exhibitor_marketplace:89",
+   "14_exhibitor_marketplace:111",
+   "13_exhibitor_portal:118"
+  ],
+  "buildsOnWhy": "Product form required fields, sponsored block name, manual deadlines"
+ },
+ {
+  "id": "exhib-invite-stats",
+  "kind": "new",
+  "kindWhy": "'Invite Visitors - Statistics': a new statistics tab for exhibitor invitations",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers exhibitor visitor invitations"
+ },
+ {
+  "id": "exhib-exhibitor-account",
+  "kind": "improved",
+  "kindWhy": "'Exhibitor Account. Header and footer / Registration Info / Settings page ...': redesign of the existing exhibitor account",
+  "buildsOn": [
+   "13_exhibitor_portal:86"
+  ],
+  "buildsOnWhy": "Exhibitor Account (New UI)"
+ },
+ {
+  "id": "exhib-parent-child-auto",
+  "kind": "new",
+  "kindWhy": "'Parent/Child - Exhibitor Assignment': a new automatic assignment script (plus checks in API and import)",
+  "buildsOn": [
+   "13_exhibitor_portal:87",
+   "14_exhibitor_marketplace:85"
+  ],
+  "buildsOnWhy": "Parent-child exhibitor relationships"
+ },
+ {
+  "id": "exhib-event-cloning",
+  "kind": "improved",
+  "kindWhy": "'Option to clone products with Active Status', 'Option to clone Brands': options on existing event cloning",
+  "buildsOn": [
+   "15_lead_intelligence:144"
+  ],
+  "buildsOnWhy": "Event cloning leaves interaction info in the original event"
+ },
+ {
+  "id": "exhib-lead-download-controls",
+  "kind": "improved",
+  "kindWhy": "'Download leads feature on Exhibitor Category level and Individual exhibitor level', 'Renaming setting under Contact Sharing'",
+  "buildsOn": [
+   "15_lead_intelligence:219",
+   "15_lead_intelligence:113"
+  ],
+  "buildsOnWhy": "Download Leads toggle and Contact Sharing settings"
+ },
+ {
+  "id": "exhib-profile-2024q3",
+  "kind": "improved",
+  "kindWhy": "'Extend logic of adding of Product categories', apps use social links from the exhibitor object",
+  "buildsOn": [
+   "14_exhibitor_marketplace:89",
+   "14_exhibitor_marketplace:77"
+  ],
+  "buildsOnWhy": "Exhibitor product form and exhibitor profile"
+ },
+ {
+  "id": "exhib-lead-question-levels",
+  "kind": "improved",
+  "kindWhy": "'Improve Lead Questions logic on global, category and exhibitor levels'",
+  "buildsOn": [
+   "15_lead_intelligence:90",
+   "15_lead_intelligence:213",
+   "15_lead_intelligence:214"
+  ],
+  "buildsOnWhy": "Lead question builder, standard/additional questions, category limits"
+ },
+ {
+  "id": "exhib-marketplace-2024q4",
+  "kind": "improved",
+  "kindWhy": "'option to set up a default view on exhibitor marketplace page', 'amend the order of product category'",
+  "buildsOn": [
+   "14_exhibitor_marketplace:76",
+   "14_exhibitor_marketplace:122"
+  ],
+  "buildsOnWhy": "Exhibitor list views and display filter configuration"
+ },
+ {
+  "id": "exhib-sponsor-banners-2024q4",
+  "kind": "improved",
+  "kindWhy": "'Unclickable Banners', 'Display the sponsors with the pagination'",
+  "buildsOn": [
+   "17_sponsorship:108",
+   "17_sponsorship:64"
+  ],
+  "buildsOnWhy": "Disable Link toggle and banner ads"
+ },
+ {
+  "id": "exhib-parent-child-app",
+  "kind": "improved",
+  "kindWhy": "'Parent / Child - App', label settings, A-z sorting: existing parent-child brought to the app and extended",
+  "buildsOn": [
+   "14_exhibitor_marketplace:85",
+   "14_exhibitor_marketplace:135",
+   "14_exhibitor_marketplace:125"
+  ],
+  "buildsOnWhy": "Parent-child indication, custom labels, Head Office/Child filter"
+ },
+ {
+  "id": "exhib-profile-2025q1",
+  "kind": "improved",
+  "kindWhy": "'Sponsored sessions & Sessions We Speak At Block in Profiles', 'Add validation to the Embedded code video field', back button",
+  "buildsOn": [
+   "17_sponsorship:72",
+   "14_exhibitor_marketplace:77"
+  ],
+  "buildsOnWhy": "Sponsored session block and exhibitor profile page"
+ },
+ {
+  "id": "exhib-manual-2025q1",
+  "kind": "improved",
+  "kindWhy": "'Improved Badge Limit Logic in Exhibitor Manuals', 'Save and submit ... on Submit', 'Hide the fields from the Table section'",
+  "buildsOn": [
+   "13_exhibitor_portal:132",
+   "13_exhibitor_portal:136",
+   "13_exhibitor_portal:125"
+  ],
+  "buildsOnWhy": "Manual summary submit, edit profile section, service badge limits"
+ },
+ {
+  "id": "exhib-category-search",
+  "kind": "improved",
+  "kindWhy": "'Category Selection Process', 'Search bar option for Categories', 'Hierarchical search results'",
+  "buildsOn": [
+   "14_exhibitor_marketplace:82",
+   "14_exhibitor_marketplace:125"
+  ],
+  "buildsOnWhy": "Marketplace search and filters, category system filters"
+ },
+ {
+  "id": "exhib-lead-scan-2025q2",
+  "kind": "improved",
+  "kindWhy": "'Force scanned list sync', 'Change name of the Reason for Scanning of any code'",
+  "buildsOn": [
+   "15_lead_intelligence:127",
+   "15_lead_intelligence:141",
+   "15_lead_intelligence:129"
+  ],
+  "buildsOnWhy": "Offline sync / Force Sync, Reason column, any code scan"
+ },
+ {
+  "id": "exhib-parent-child-2025q2",
+  "kind": "improved",
+  "kindWhy": "'Control if Child companies indication is present', 'Add country / city', 'Parent/Child script Enhancements 2025'",
+  "buildsOn": [
+   "14_exhibitor_marketplace:134",
+   "14_exhibitor_marketplace:85"
+  ],
+  "buildsOnWhy": "'Do not indicate Child companies' toggle and parent-child indication"
+ },
+ {
+  "id": "exhib-team-news-2025q2",
+  "kind": "improved",
+  "kindWhy": "'Control if Telephone and Job Title fields ... are required', 'News header image | Change the cropper ratio'",
+  "buildsOn": [
+   "14_exhibitor_marketplace:80"
+  ],
+  "buildsOnWhy": "News pages (no claim covers the add team member form)"
+ },
+ {
+  "id": "exhib-lead-capture-pro",
+  "kind": "new",
+  "kindWhy": "'Lead Capture Journey', 'Lead Capture Pro logic for App': launch of paid Lead Capture Pro",
+  "buildsOn": [
+   "15_lead_intelligence:96",
+   "15_lead_intelligence:133",
+   "15_lead_intelligence:134"
+  ],
+  "buildsOnWhy": "Lead Capture Pro packages, add-ons and pricing page"
+ },
+ {
+  "id": "exhib-manual-discounts",
+  "kind": "new",
+  "kindWhy": "'Discount Functionality for Exhibitor Manuals': discount codes introduced",
+  "buildsOn": [
+   "13_exhibitor_portal:127",
+   "13_exhibitor_portal:98"
+  ],
+  "buildsOnWhy": "Manual Equipment items and payment configuration"
+ },
+ {
+  "id": "exhib-dashboard-banners-2025q3",
+  "kind": "improved",
+  "kindWhy": "'exhibitor dashboard remove weeks and days filter', 'Update banner tap behavior for Sponsored Banners without website link'",
+  "buildsOn": [
+   "17_sponsorship:64"
+  ],
+  "buildsOnWhy": "Sponsor banner ads (no claim covers the Top Performers block)"
+ },
+ {
+  "id": "exhib-attend-stand",
+  "kind": "new",
+  "kindWhy": "'Attend a stand', 'Attend a Stand. App listing': a new plan-to-visit capability",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers stand-visit intentions"
+ },
+ {
+  "id": "exhib-profile-2026q1",
+  "kind": "improved",
+  "kindWhy": "'clone Product Category custom filters within an Event', 'add some loader in Team members section'",
+  "buildsOn": [
+   "14_exhibitor_marketplace:122",
+   "14_exhibitor_marketplace:124"
+  ],
+  "buildsOnWhy": "Display filter configuration and custom filters"
+ },
+ {
+  "id": "exhib-lead-app-2026q1",
+  "kind": "improved",
+  "kindWhy": "'Autosave on Lead Capture Form', 'Logic for Scan Badges Page - Lead Capture Pro', 'Custom Questions Page UI Improvements'",
+  "buildsOn": [
+   "15_lead_intelligence:93",
+   "15_lead_intelligence:137"
+  ],
+  "buildsOnWhy": "Mobile lead scanning form and LC Pro scan-button activation"
+ },
+ {
+  "id": "exhib-lcp-access",
+  "kind": "improved",
+  "kindWhy": "'Lead Capture Access Control by Exhibitor Category', 'Exhibitor-Level Granular Control', 'Lead Capture Pro — Settings Consolidation'",
+  "buildsOn": [
+   "15_lead_intelligence:89",
+   "15_lead_intelligence:94",
+   "15_lead_intelligence:216"
+  ],
+  "buildsOnWhy": "Lead capture access management, non-badge QR access control, per-TM lead capture"
+ },
+ {
+  "id": "exhib-permissions-2026q2",
+  "kind": "improved",
+  "kindWhy": "'Extend Exhibitor Permissions to Products', 'Update on Team Member Creation Rules', 'Removal of Google+'",
+  "buildsOn": [
+   "14_exhibitor_marketplace:86",
+   "14_exhibitor_marketplace:187",
+   "14_exhibitor_marketplace:79"
+  ],
+  "buildsOnWhy": "Exhibitor category entitlements, per-exhibitor restrictions, brand social links"
+ },
+ {
+  "id": "exhib-lead-2026q2",
+  "kind": "improved",
+  "kindWhy": "'Changing badge display logic', 'Update Lead Contribution Logic ... Meeting Appointments', 'notes field. Character limitation'",
+  "buildsOn": [
+   "14_exhibitor_marketplace:136",
+   "15_lead_intelligence:125",
+   "15_lead_intelligence:93"
+  ],
+  "buildsOnWhy": "Meeting lead attribution, lead capture page notes, lead scanning"
+ },
+ {
+  "id": "exhib-multilingual-manual",
+  "kind": "improved",
+  "kindWhy": "'Organizer can upload Exhibitor Manual documents per Event language': per-language files in the existing Documents section",
+  "buildsOn": [
+   "13_exhibitor_portal:121",
+   "13_exhibitor_portal:85"
+  ],
+  "buildsOnWhy": "Manual Documents section and translation tool"
+ },
+ {
+  "id": "exhib-sponsor-visibility",
+  "kind": "improved",
+  "kindWhy": "'Random sorting for Sponsors and Sponsored products', 'Increasing Sponsor Limit to 150', 'Always display Sponsor Name on Session cards'",
+  "buildsOn": [
+   "17_sponsorship:66",
+   "17_sponsorship:67",
+   "17_sponsorship:73"
+  ],
+  "buildsOnWhy": "Sponsored exhibitor/product placement and session sponsorship"
+ },
+ {
+  "id": "exhib-insights-portal",
+  "kind": "new",
+  "kindWhy": "'Story 2: Page 01 — Celebrate your wins': first page of a new exhibitor insights portal",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim describes an exhibitor insights portal"
+ },
+ {
+  "id": "exhib-lcp-profile",
+  "kind": "improved",
+  "kindWhy": "'Create Lead Capture Pro settings config for profile level', 'Lead Capture Pro – Full Access to Custom Questions'",
+  "buildsOn": [
+   "15_lead_intelligence:89",
+   "15_lead_intelligence:133",
+   "15_lead_intelligence:216"
+  ],
+  "buildsOnWhy": "Lead capture access per team member and LC Pro add-ons"
+ },
+ {
+  "id": "exhib-profile-2026q3",
+  "kind": "improved",
+  "kindWhy": "'Region filters', 'Enhancing Exhibitor Import to Attach Brands', 'Logo option as an exhibitor settings': additions to existing filters, import and settings",
+  "buildsOn": [
+   "14_exhibitor_marketplace:125",
+   "14_exhibitor_marketplace:79",
+   "14_exhibitor_marketplace:87"
+  ],
+  "buildsOnWhy": "Marketplace system filters, brands, per-exhibitor settings"
+ },
+ {
+  "id": "exhib-search-sponsors",
+  "kind": "new",
+  "kindWhy": "'Global Search. Sponsorship banner / Sponsored Exhibitors / Sponsored Products': new sponsored placements in global search",
+  "buildsOn": [
+   "17_sponsorship:64",
+   "17_sponsorship:66",
+   "17_sponsorship:67"
+  ],
+  "buildsOnWhy": "Banner ads, sponsored exhibitor and sponsored product placements"
+ }
+]

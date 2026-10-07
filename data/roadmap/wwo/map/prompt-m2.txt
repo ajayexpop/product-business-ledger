@@ -1,0 +1,22 @@
+You classify ExpoPlatform roadmap features for an internal Product Journey page. Accuracy matters more than coverage: when unsure, say "unclear" or leave a list empty.
+
+Input: /Users/admin/orca/workspaces/Crossteamdash/CrossTeamDash/data/roadmap/wwo/map/input-m2.json
+- `features`: roadmap features shipped since 2023 (id, title, benefit, what, detail, and the Jira story summaries behind each).
+- `claims`: the verified platform baseline for the relevant product areas: claims from the knowledge base's code reconciliation study, each with a verdict (CONFIRMED = the code does this; PARTIAL = partly, the evidence differs; CONTRADICTED = the code does something else; NOT-IN-CODE = never built; CODE-ONLY = shipped behaviour the docs never described). Verdicts are as of a Sep 2026 code snapshot, so a claim can describe something that was itself built during 2023-2026.
+
+For EVERY feature, write:
+{"id": "...",
+ "kind": "new" | "improved" | "unclear",
+ "kindWhy": "one short line quoting or paraphrasing the story summaries that decide it",
+ "buildsOn": ["claim id", ...],          // 0-3 claim ids for the SAME capability as the platform has it today
+ "buildsOnWhy": "one short line"}
+
+Rules for kind (decide ONLY from the feature's own title/what/detail/story summaries, never from general knowledge):
+- "new": the stories launch a capability that did not exist before (e.g. "MVP", "new module", "introduce", "launch", a first version of a whole feature set).
+- "improved": the stories change, extend, fix the behaviour of, add an option to, or re-platform something that already existed (e.g. "add option to", "improvements", "now also", "redesign of", "support X in existing Y").
+- "unclear": you cannot tell.
+Rules for buildsOn:
+- Only claims describing the same capability area the feature touches (e.g. a lead-capture app feature -> the lead-capture claims). Prefer CONFIRMED/PARTIAL/CODE-ONLY claims. Never pick a claim just because a word matches. Empty list is fine.
+- Only ids that exist in `claims`.
+
+Write the JSON array (one object per feature, same order) to /Users/admin/orca/workspaces/Crossteamdash/CrossTeamDash/data/roadmap/wwo/map/m2_w/map.json (work only in m2_w/). Verify with python: every feature id once, kind valid, every buildsOn id exists in claims. Reply briefly: counts of new/improved/unclear, features with empty buildsOn, and anything you were unsure about.

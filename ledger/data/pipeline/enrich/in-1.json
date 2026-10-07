@@ -1,0 +1,690 @@
+[
+ {
+  "id": "p01",
+  "key": "EP-55432",
+  "current": {
+   "area": "Legacy mobile app",
+   "deps": "OTP rollout will remain incomplete",
+   "driver": "",
+   "estimate": "",
+   "feature": "Build support for new OTP settings",
+   "impact": "Benefits users across the board",
+   "key": "EP-55432",
+   "month": "2026-10",
+   "notes": "Testing uncovered some bugs that need to be sorted",
+   "owner": "Taimoor",
+   "priority": "Operational",
+   "rationale": "Web part already released - parity needed",
+   "status": "In Progress",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "estimate"
+  ],
+  "jira": {
+   "summary": "Build support for new OTP settings",
+   "description": "**User Story**  \nAs a _Mobile App user logging into an Event_ (Attendee or Exhibitor), I want the app's login screen to show the correct authentication method — OTP or username/password — based on how the Organizer has configured OTP independently for my profile type\n\n**Background / Problem Statement**\nThe mobile apps currently read OTP Authentication as a _single global flag_ for an Event, mirroring the old Admin Panel behaviour. Once the web/admin side ships independent toggles for _OTP for Individual Profiles_ and _OTP for Company Profiles_, the mobile apps will be reading a config shape that no longer matches what they expect, and will need to:\n\n* Fetch and interpret _two separate flags_ per Event instead of one.\n* Determine which flag applies based on the _profile type_ of the user attempting to log in (Individual vs Company).\n* Render the correct login UI (OTP vs. standard username + password fields) per profile type, on both iOS and Android.\n\nWithout this change, mobile users would either be stuck on the old single-toggle behaviour or hit a broken/mismatched login flow once the backend configuration changes.\n\n**What Needs to Be Done**\n\n* Update the mobile app's event-config consumption to read the two independent OTP flags (\"OTP for Individual Profiles\", \"OTP for Company Profiles\") instead of the single legacy flag.\n* Update login screen logic to select OTP flow vs. username/password flow based on the _profile type being authenticated_, not a single Event-wide setting.\n* Ensure backward compatibility for app versions/Events still on the legacy single-toggle config during rollout.\n\n**Login Flow**\n\n1. New login screen where we show email field only → \"Login\" button\n2. User enters email which activates login button. User presses login and we check user type - visitor/company\n3. Based on backend response:\n\n    * OTP **off** for that user type → show screen with email **pre-filled** and **non-editable** and option to enter password\n    * OTP **on** for that user type → show OTP screen with email **pre-filled** and **non-editable**\n    \n\n**OTP Rules**\n\n* Visitor OTP setting → applies to all visitors\n* Company OTP setting → applies to company owners only\n* Company team members (member/admin roles) → use the **Individual/Visitor OTP setting**, not the Company setting\n\n**Acceptance Criteria**\n\n* Given the Organizer has set \"OTP for Individual Profiles\" ON and \"OTP for Company Profiles\" OFF, when an Attendee logs in via the mobile app, then the app presents the OTP input flow; when an Exhibitor Company Profile logs in via the mobile app, then the app presents standard username + password fields.\n* Given the Organizer has set \"OTP for Company Profiles\" ON and \"OTP for Individual Profiles\" OFF, when an Exhibitor Company Profile logs in via the mobile app, then the app presents the OTP input flow; when an Attendee logs in via the mobile app, then the app presents standard username + password fields.\n* Given both toggles are ON, when any profile type logs in via the mobile app, then all profile types use the OTP flow.\n* Given both toggles are OFF, when any profile type logs in via the mobile app, then all profile types use the standard username/email + password flow\n* Given an existing **Event** where OTP was previously enabled (single toggle ON), when this feature is deployed, then the default for **both** new toggles should be **ON**, preserving current behaviour until the Organizer explicitly changes them.\n\n",
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": null,
+   "labels": [
+    "DoDUserStory"
+   ],
+   "parent": null,
+   "comments": [
+    {
+     "author": "CI CD",
+     "created": "2026-08-13T13:00:57.684+0100",
+     "body": "🍏 iOS · ✅ Done **RC 1.103.0 (12508)**  \nAvailable on TestFlight."
+    },
+    {
+     "author": "Yurii Lytvynenko",
+     "created": "2026-08-14T14:40:01.369+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom> Hi, gathered some questions to document, please take a look.\n\n<custom data-type=\"smartlink\" data-id=\"id-1\">https://expoplatform.atlassian.net/wiki/spaces/~7120202599a672a19a41d391977c7366e68b93/pages/2061139977/Mobile+Q+A.+New+OTP+settings.</custom> "
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-08-14T15:15:38.804+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Yurii Lytvynenko</custom> Responded"
+    },
+    {
+     "author": "Yurii Lytvynenko",
+     "created": "2026-08-14T15:40:00.809+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom> Got it, thanks. One more thing to clarify about _I already have a password_. I see this extra button shows when only one of group have a OTP ON, but when both groups are ON, from the start client shows screen with one button, like for old flow, should we add _I already have a password_ is this cases also or not?\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=3dd92cdeb311&id=cf5d558f-c24b-447a-888c-b1f5daad3b48&&collection=&height=1266&occurrenceKey=null&width=585&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-08-14T15:51:57.242+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Yurii Lytvynenko</custom>There should be no change in the logic for showing the 'I already have a password' button. It was in previous OTP flow already so we should use that same logic"
+    },
+    {
+     "author": "Yurii Lytvynenko",
+     "created": "2026-08-17T12:59:46.329+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Arman Тuralin</custom> Hi, can you please take a look on issues 1 and 3.2 and check if we can implement design and behavior changes like it was implemented on Android to have consistency on both platforms?\n\nPlease check description and Taimoor answers\n\n<custom data-type=\"smartlink\" data-id=\"id-1\">https://expoplatform.atlassian.net/wiki/spaces/~7120202599a672a19a41d391977c7366e68b93/pages/2061139977/Mobile+Q+A.+New+OTP+settings.</custom> "
+    },
+    {
+     "author": "Yurii Lytvynenko",
+     "created": "2026-08-18T13:08:05.398+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom>  Hi, a few points to discuss, please take a look :\n\n1.  From what I researched about  _‘I already have a password’_ button, it looks like it wasn’t implemented before and it was described only in this ticket. Maybe developers can check from code side if it's needed. Based on this info I need more details, should it be shown when we have old otp screen (both OTP options are ON) ? Should it be shown in a new flow ? (one of OTP options is ON), user eligible for OTP login on a 2nd screen. What is a design/text that should be shown after tap on _‘I already have a password’_ button. (Attached screenshots)\n2. When one of OTP options is ON we don’t have any validation on a 1st screen if email/exhibitor login are existing for event. Only when I am trying to send otp code, validation appears, is it ok ? Pls see att. video\n\nCC: <custom data-type=\"mention\" data-id=\"id-1\">@Arman Тuralin</custom> <custom data-type=\"mention\" data-id=\"id-2\">@Andrii Skakunenko</custom> \n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=bc858baa12e0&id=fdd51e60-8d7d-4951-a2ce-7495acf47c6a&&collection=&height=1266&occurrenceKey=null&width=585&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=35d373a975c1&id=3baee01e-fcfb-4042-bfdc-fa17404eb8cc&&collection=&height=1266&occurrenceKey=null&width=585&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=ab8c58e3692f&id=6600a6cf-0c26-477e-be28-6b1aacc6f2bd&&collection=&height=2532&occurrenceKey=null&width=1170&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-08-18T13:21:06.989+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Yurii Lytvynenko</custom> \n\n1. Here is the design that I referenced when creating the ticket <custom data-type=\"smartlink\" data-id=\"id-1\">https://www.figma.com/design/hVnhmVJX49s3Ug45vau1FZ/Mobile-App---Android?node-id=5804-76792&t=wC8mn0nl4RiTR1R1-1</custom>  This has the additional I already have password button. If that functionality does not exist or is not implemented then its fine to release without it\n2. If we aren’t validating the emails then how exactly are checking if this is an exhibitor or a visitor account?\n\n"
+    },
+    {
+     "author": "Yurii Lytvynenko",
+     "created": "2026-08-18T13:34:16.205+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom> \n\n1. Got it, thanks. Please delete it from task descriptions.  I will ask Arman to delete it. It was added only for iOS and only if one of options is ON.\n2. Look like backend issues, it just return me available otp for non existing accounts, I will create a bug for it\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=e50a08930945&id=386d6f18-266e-4968-a8fe-9b962dbd891f&&collection=&height=633&occurrenceKey=null&width=383&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n"
+    },
+    {
+     "author": "Yurii Lytvynenko",
+     "created": "2026-08-18T15:49:49.258+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom>  Update about point 2. It was made by design as I understood, already discussed there. So it will work like in the video above for non existing accounts.  \n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=3ab15c88f17a&id=41b7b1cf-6c2e-4125-a5d0-70fd90b4d4ea&&collection=&height=381&occurrenceKey=null&width=393&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-08-18T15:58:32.873+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Yurii Lytvynenko</custom>Makes sense. Thanks!"
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-08-19T08:57:30.764+0100",
+     "body": "🍏 iOS · ✅ Done **New App 1.103.0 (12551)**  \nAvailable on TestFlight."
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-08-19T09:20:18.806+0100",
+     "body": "🍏 iOS · ✅ Done **RC 1.103.0 (12552)**  \nAvailable on TestFlight."
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-08-27T15:55:16.299+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.rc.app4** 1.78.3 (11492).  \nDownload the build "
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-08-27T16:10:55.347+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.mobileappmobileappmobileapp.app67** 1.78.3 (11492).  \nDownload the build "
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-01T12:02:26.616+0100",
+     "body": "🍏 iOS · ✅ Done **New App 1.103.0 (12668)**  \nAvailable on TestFlight."
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-01T17:41:58.721+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.mobileappmobileappmobileapp.app67** 1.78.6 (11561).  \nDownload the build "
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-01T17:42:01.773+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.rc.app4** 1.78.6 (11561).  \nDownload the build "
+    },
+    {
+     "author": "Denys Bunchuk",
+     "created": "2026-09-28T14:11:15.240+0100",
+     "body": "nothing blocks this from the QA side: all subtasks are done, the linked bugs are closed (EP-56707 is a separate UX story, not a blocker). moving to Ready for release.\n\nit has to be re-checked on the release candidate builds before the store release, not only on the feature builds above — main cases: company only / individual only / both ON / both OFF on event 7 (app67): exhibitor → OTP, participant → password, both ON → OTP for everyone, both OFF → password for everyone, team member follows the individual setting.\n\niOS in particular: the new login flow was rolled back from 1.105.0 (PR #2466, see [EP-56709](https://expoplatform.atlassian.net/browse/EP-56709)), so it has to come back into the release branch first and be verified on that RC.\n\nthe old-app compatibility question ([EP-56083](https://expoplatform.atlassian.net/browse/EP-56083)) stays open separately and does not block this — the sooner this ships, the fewer users are affected by it."
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-28T14:11:23.582+0100",
+     "body": "🍏 iOS · ✅ Done **New App 1.104.0 (13013)**  \nAvailable on TestFlight."
+    }
+   ],
+   "links": [
+    "Polaris work item link: PBV11-434",
+    "Relates: EP-56707",
+    "Relates: EP-56709",
+    "Relates: EP-56710",
+    "Relates: EP-56711",
+    "Relates: EP-56723",
+    "Relates: EP-56893",
+    "Relates: EP-56894",
+    "Relates: EP-56896"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 0,
+   "assignee": "Przemysław Wrzeszcz",
+   "canon": "Ready for Release",
+   "due": "2026-08-20",
+   "origDays": 0,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 13.18,
+   "status": "Ready for release",
+   "summary": "Build support for new OTP settings",
+   "team": "Mobile team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p02",
+  "key": "EP-52201",
+  "current": {
+   "area": "Legacy mobile app",
+   "deps": "",
+   "driver": "81808",
+   "estimate": "",
+   "feature": "Session Calendar View - Mobile",
+   "impact": "DLG expects to have this feature",
+   "key": "EP-52201",
+   "month": "2026-10",
+   "notes": "Testing is pending",
+   "owner": "Taimoor",
+   "priority": "Customer",
+   "rationale": "DLG commitment",
+   "status": "In Testing",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps",
+   "estimate"
+  ],
+  "jira": {
+   "summary": "Session Calendar View - Mobile",
+   "description": "## User Story\n\nAs an Attendee or Exhibitor, I want to browse Sessions in a Calendar View within an Event during Pre-event, Live event, and Post-event, so that I can navigate the programme visually by day and time slot.\n\n---\n\n## Acceptance Criteria\n\n### View Toggle\n\n* Given I am on the Sessions screen, when I tap the view toggle, then I can switch between Calendar View and List View.\n* Given I have previously selected List View, when I return to the Sessions screen, then List View is restored.\n* Given I am in Calendar View, when I navigate away and return, then Calendar View is restored.\n* The active view mode is visually indicated on the toggle at all times.\n* Given the Sessions screen is in Calendar View on Android on a foldable device in expanded state, then the view automatically switches to List View and a toast is displayed: \"You have been switched to List View. Please switch back to compact mode for Calendar View\" and the view toggle disappears\n* Given the screen width drops back below 600dp (e.g. the device is folded), then the view toggle becomes functional again but the user stays on list screen\n\n### Calendar Grid — 1-Day and 3-Day\n\n* Given I am in Calendar View, when the view loads, then Sessions are displayed in a vertical time grid.\n* Given I am in Calendar View, when I tap the grid mode control, then I can switch between 1-Day view and 3-Day view.\n* Given I have previously selected 1-Day or 3-Day, when I return to the Sessions screen in Calendar View, then that grid mode is restored.\n* Given I am in 1-Day view, when I swipe left or right, then the grid advances or retreats by one day while the hour gutter remains fixed and the vertical scroll position is preserved.\n* Given I am in 3-Day view, when I swipe left or right or click on the date next to the one I am currently on, then the grid advances or retreats by one fixed 3-day block; previously viewed blocks do not repeat and the final block may contain fewer than 3 days.\n* Given I am in 3-Day view, when I tap a column header, then the view drills into the 1-Day view for that day.\n* Tapping a Session block navigates to the Session Detail page\n\n### Week Glance Strip\n\n* Given I am in Calendar View, when the view loads, then all event days are displayed in a horizontally scrollable strip at the top of the screen which is collapsed by default\n* The strip will open when the user clicks on the date/small arrow right above the filter chips\n* The currently selected day is visually highlighted in the strip.\n* Days that contain Sessions are visually distinguished from days with no Sessions.\n* Tapping a day in the strip loads that day in the active grid mode (1-Day or 3-Day).\n* This date-strip rule applies identically in List View: every event day is shown (not only days with Sessions), a dot marks the days that currently have Sessions under the active filters, and a day the filters empty keeps its place and shows the same no-results state as the time grid. Switching between Calendar and List does not change which day is selected or add/remove any days from the strip.\n\n### Overlapping Sessions\n\n* Given multiple Sessions share the same time slot, when they are displayed in the grid, then they appear side by side without obscuring each other.\n* Given concurrent Sessions in 1-Day view exceed displayable space (3 or more overlapping), when the slot is rendered, then the first two Sessions are shown as cards and the remainder collapse into a \"+N more\" overflow button whose height spans the union of the hidden Sessions' time range.\n* Given concurrent Sessions in 3-Day view exceed one card per column (2 or more overlapping), when the slot is rendered, then one Session card is shown and the remainder collapse into a compact \"+N\" overflow button.\n* Given an overflow button is present, when I tap it, then a bottom sheet opens listing all Sessions in that slot. At the top of the bottom sheet is the date of those sessions followed by the start time\n* Given the overflow bottom sheet is open on iOS, when I tap a Session in the list, then the sheet expands to full height and the Session Detail is pushed inside the same sheet; tapping Back returns to the slot list with the sheet remaining full height.\n* Given the overflow bottom sheet is open on Android, when I tap a Session in the list, then the Session Detail opens as a full-screen page; tapping Back closes the detail and the bottom sheet reappears on the slot list.\n\n### Today Button\n\n* Given I am in Calendar View and the current date falls within the event date range, when I am viewing a day other than today, then a Today button is visible (visually this will be shown as a number that represents today’s date)\n* Given the Today button is visible, when I tap it, then the view snaps to today and the grid scrolls to the current time (now-line).\n* Given the current date falls outside the event date range (Pre-event or Post-event), then the Today button is not shown.\n* Today button should be greyed out when user is on current date\n\n### Track Chips Quick-Filter\n\n* Given I am in Calendar View, when the view loads, then a horizontally scrollable row of track chips is displayed between the calendar header strip and the time grid.\n* Selecting a track chip applies that track as an active filter and is reflected in the filter panel's Tracks section.\n* Selecting a track in the filter panel's Tracks section is reflected in the chip row.\n* Multiple track chips can be selected simultaneously.\n* Clearing the Tracks section in the filter panel resets the chip row to \"All\".\n* Track chips are only present in Calendar View and are not shown in List View.\n\n### Search\n\n* Given I am in Calendar View, when I activate the search input, then the time grid is replaced by a search results view; no Session cards are shown until the user begins typing.\n* Given I have typed a query, when results are found, then matching Sessions are displayed as a list\n* Given no Sessions match the query, then a no-results state is displayed similar to the one we have today\n\n### Filters\n\n* Given I am in Calendar View, when I tap the filter entry point, then the filter panel opens showing all admin-configured filter dimensions.\n* Multiple filters across dimensions can be applied simultaneously.\n* Each active filter can be removed individually.\n* A \"Clear all\" action removes all active filters at once.\n* Applied filters narrow which days show a dot in the Week Glance strip and which Sessions appear in the time grid\n* Given applied filters return no Sessions for a day, then a no-results state is shown in the grid for that day.\n* Filters applied on one view (calendar or list) will be applied across both views\n\n### Setting\n\n* The app will consume a setting from web which will determine whether the session calendar view is the default view or the list view is the default view (<custom data-type=\"smartlink\" data-id=\"id-0\">https://expoplatform.atlassian.net/browse/EP-55021</custom> ) If the backend provides flag `List` (card view) we will show list view and if the web provides `Calendar` flag then we will show calendar view. Regardless of what view is the default view - once the user has logged in on the app and changes his view to either list or calendar, his choice will persist until he logs out\n\n---\n\n## Out of Scope\n\nNot included:\n\n* Web platform — Calendar View is mobile only (iOS and Android)\n* Recommending Sessions based on browsing behaviour or engagement history\n* Saved Sessions being visually indicated within the calendar grid (covered separately)\n* Any new search functionality beyond what exists today in List View\n* Admin panel controls to enable or disable Calendar View per event\n* Exhibitors managing or editing their own Sessions from this view\n* Accessibility (screen reader, contrast, dynamic text) — to be addressed separately\n* Performance benchmarking for high-volume events (50–200+ concurrent Sessions)\n\n",
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "labels": [
+    "DoDUserStory"
+   ],
+   "parent": "EP-54525",
+   "comments": [
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-14T17:42:59.033+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Yurii Lytvynenko</custom> This is sponsorship banner? Then yes"
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-17T10:04:18.382+0100",
+     "body": "🍏 iOS · ✅ Done **RC 1.103.0 (12803)**  \nAvailable on TestFlight."
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-17T11:13:37.188+0100",
+     "body": "🍏 iOS · ✅ Done **RC 1.103.0 (12805)**  \nAvailable on TestFlight."
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-17T13:20:10.807+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.rc.app4** 1.81.0 (11801).  \nDownload the build "
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-17T13:33:29.019+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.mobileappmobileappmobileapp.app67** 1.81.0 (11801).  \nDownload the build "
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-18T15:12:58.643+0100",
+     "body": "🍏 iOS · ✅ Done **RC 1.103.0 (12815)**  \nAvailable on TestFlight."
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-18T18:15:43.098+0100",
+     "body": "🍏 iOS · ✅ Done **New App 1.103.0 (12822)**  \nAvailable on TestFlight."
+    },
+    {
+     "author": "Yurii Lytvynenko",
+     "created": "2026-09-21T12:59:44.513+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom> Hi, question, do we need this Europe/Madrid location for sessions card?\n\nIt can be present for some designs, for some not.\n\n‌\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=6fefb59d7b7e&id=4d7c0d6c-89dc-4049-916a-0c32c12da20c&&collection=&height=482&occurrenceKey=null&width=290&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n‌\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=59b4e72671fc&id=48166cd0-3b4e-4356-8846-706e9256908a&&collection=&height=566&occurrenceKey=null&width=294&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-21T13:10:34.000+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Nazar Melnyk</custom> You reused the components from schedule view right? It looks like Yurii is talking about the timezone in the card and I didn’t see timezone in the card on web"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-21T14:28:08.873+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Yurii Lytvynenko</custom> lets keep it"
+    },
+    {
+     "author": "Przemysław Wrzeszcz",
+     "created": "2026-09-21T14:52:57.808+0100",
+     "body": "**Proposed release criteria for 14 Oct — for discussion, not yet agreed**\n\nThis story cannot realistically reach _Closed_ by 14 Oct, so I want to propose a narrower exit criterion. Nothing below has been actioned — this needs QA and the PO to agree first.\n\n**Why \"closed\" isn't achievable**\n\n21 defects have been raised against this story between 2 Sept and 21 Sept — roughly 1.4 per working day — and the rate has not slowed (EP-57575 was raised today). Both QA sub-tasks, EP-55568 and EP-55578, are still _In Progress_, so testing has not finished generating defects. On top of that, iOS capacity is reduced for this period, and 13 of the 21 defects have been iOS against 8 Android.\n\n**The problem with a priority-based gate**\n\nAll 8 open items on this story are currently priority _Urgent_. A gate of \"no open Urgent/High defects\" therefore excludes nothing. For the gate to mean anything, the open items need re-triaging into genuinely release-blocking versus fix-if-time.\n\n**Proposed split**\n\n_Release-blocking — attendee-facing missing or wrong information:_\n\n* EP-57117 — iOS / incorrect set of days after switching to 3-day view (core navigation)\n* EP-57575 — iOS / time zone absent on session card\n* EP-57565 — iOS / room absent on session card\n\n_Proposed downgrade to Medium, fix if time allows:_\n\n* EP-57011 — iOS / white track text not visible when selected (only affects tracks configured white)\n* EP-56968 — iOS / chosen view doesn't reset to default after logout (edge case, already Ready for testing)\n* EP-57081 — Android / speakers, moderators and sponsors shown in Calendar view (spec deviation, cosmetic, already In testing)\n\n_Needs a PO decision:_\n\n* EP-57548 — iOS / sponsored banner shows with incorrect scale. Cosmetically minor, but it is a paid sponsor placement, so the call belongs to the PO rather than to engineering.\n\n_Proposed to move out of this story:_\n\n* EP-57309 — Design, separate session card component (iOS + Android). This is new scope rather than a defect: it is unassigned, no design work has started, and the implementation sub-tasks do not exist yet. Suggest splitting it into its own story so it stops gating this one.\n\n**What this would change**\n\nEight blockers become three, which is the difference between \"not deliverable\" and \"tight but achievable\" for the 14 Oct build.\n\n**Two things worth fixing regardless**\n\n1. This story has no fixVersion set, so there is nothing in Jira that actually defines the 14 Oct release scope.\n2. EP-57557 (\"iOS: add Language and Location filters\") is assigned to an Android developer.\n\nPlease comment if you disagree with any of the three blockers or the four downgrades, and I'll apply whatever we settle on."
+    },
+    {
+     "author": "Yurii Lytvynenko",
+     "created": "2026-09-22T10:08:15.157+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom> Hi, want to clarify about set of dates that user can open/collaple by tap on a date in a left top corner. Is it ok that these dates appears in a different places for iOS and Android? It was implemented by design but usually we have similar position across platforms for such big UI elements.\n\n‌\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=27b7bb4067a2&id=dcb8bf33-8b27-400e-b506-44b7e0825d46&&collection=&height=580&occurrenceKey=null&width=683&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=30649edbe30a&id=16f5e513-0e94-41bc-9b68-def293b99455&&collection=&height=1266&occurrenceKey=null&width=585&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=ffe4b564e30d&id=99b64c57-a8fc-4605-aea1-6afa013d7343&&collection=&height=2400&occurrenceKey=null&width=1080&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-22T10:21:46.578+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Yurii Lytvynenko</custom> If its matching the design then its fine"
+    },
+    {
+     "author": "Przemysław Wrzeszcz",
+     "created": "2026-09-22T14:18:18.825+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Yurii Lytvynenko</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Taimoor Zulfiqar</custom>  please reply"
+    },
+    {
+     "author": "Yurii Lytvynenko",
+     "created": "2026-09-22T14:32:41.684+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Przemysław Wrzeszcz</custom> Ok for me, but we need to review updated list of defects from time to time, as I creating new during testing."
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-22T14:32:59.647+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Przemysław Wrzeszcz</custom> The session card component was designed and it was being implemented as far as I know"
+    },
+    {
+     "author": "Yurii Lytvynenko",
+     "created": "2026-09-22T14:43:19.903+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Przemysław Wrzeszcz</custom> Was this one added by mistake?  \nits not a bug but separate sub task for another user story  \n\n1. EP-57557 (\"iOS: add Language and Location filters\") is assigned to an Android developer.\n\n"
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-22T15:12:31.532+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.rc.app4** 1.81.2 (11858).  \nDownload the build "
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-22T15:12:31.720+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.mobileappmobileappmobileapp.app67** 1.81.2 (11858).  \nDownload the build "
+    },
+    {
+     "author": "Przemysław Wrzeszcz",
+     "created": "2026-09-23T10:45:35.680+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Yurii Lytvynenko</custom> good catch. EP-57557 (iOS filters) belongs to the iOS side. Reassigning it to <custom data-type=\"mention\" data-id=\"id-1\">@Vitalii Vasylyda</custom>."
+    }
+   ],
+   "links": [
+    "Polaris work item link: PBV11-166",
+    "Gantt End to End: EP-57291",
+    "Gantt End to End: EP-57332"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 0,
+   "assignee": "Przemysław Wrzeszcz",
+   "canon": "In Testing",
+   "due": "2026-10-14",
+   "origDays": 0,
+   "priority": "Urgent",
+   "resolved": null,
+   "spentDays": 40.24,
+   "status": "In testing",
+   "summary": "Session Calendar View - Mobile",
+   "team": "Mobile team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p03",
+  "key": "EP-57332",
+  "current": {
+   "area": "Legacy mobile app",
+   "deps": "",
+   "driver": "81808",
+   "estimate": "Dev: 2.5 d Android | 2.5 d iOS | 5.0 d Total. QA: 2.2 d Android | 2.2 d iOS | 4.4 d Total. Total: 9.4 person-days",
+   "feature": "Session Calendar View - All Day Sessions with fixed 44px +N button (Mobile)",
+   "impact": "DLG expects to have this feature",
+   "key": "EP-57332",
+   "month": "2026-10",
+   "notes": "",
+   "owner": "Taimoor",
+   "priority": "Customer",
+   "rationale": "DLG commitment",
+   "status": "Planned",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Session Calendar View - All Day Sessions with fixed 44px +N button (Mobile)",
+   "description": "## OUTCOME\n\nSessions of 6 hours or more no longer compete with time-specific Sessions in the mobile Calendar View time grid. They are promoted to a dedicated ALL DAY banner above the grid in both 1-Day and 3-Day modes, and are excluded from the overlap/cascade calculation so shorter Sessions get the full column width. An attendee can still see and open an all-day Session from the banner, and days with no all-day Sessions lose no vertical space to it.\n\nThis is the mobile adaptation of the web behaviour specified in [EP-57098](https://expoplatform.atlassian.net/browse/EP-57098) / [All Day Session in calendar view](https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view).\n\nPromoted session here refers to an all-day session\n\nThe \"+N\" overflow button has a fixed width of 44px, so the banner layout stays stable regardless of how many Sessions are hidden behind it.\n\n---\n\n## ACCEPTANCE CRITERIA\n\n### Promotion threshold\n\n- [ ] Given a Session with a duration of 6 hours or more (Session start time to Session end time), when Calendar View renders, then that Session is displayed in the ALL DAY banner and not in the time grid.\n- [ ] Given a Session with a duration of less than 6 hours, when Calendar View renders, then it remains in the time grid and participates in the normal overlap layout.\n\n### Banner layout — 1-Day and 3-Day\n\n- [ ] Given at least one Session on a visible day is promoted, when the view renders, then an ALL DAY banner is displayed as a horizontal band between the day column header(s) and the time grid, with an \"ALL DAY\" label on the time axis, left-aligned with the hour gutter labels.\n- [ ] Given no visible day has a promoted Session, when the view renders, then the ALL DAY banner is not rendered at all and the time grid starts directly below the day column header(s) — no empty band, no lost vertical space.\n- [ ] Given I am in 1-Day view, when the banner renders, then the promoted Session card spans the full grid width.\n- [ ] Given I am in 3-Day view, when the banner renders, then it is one continuous band across all three day columns, each day showing its own promoted Session in its own column; a day with no promoted Session shows an empty banner cell so the columns stay vertically aligned.\n\n### Overflow\n\n- [ ] Given a day has more than one promoted Session, when the banner renders for that day, then one Session card is shown and the remainder collapse into a \"+N\" badge\n- [ ] Given the \"+N\" badge is rendered, then it has a fixed width of 44px, in both 1-Day and 3-Day, regardless of the value of N.\n- [ ] Given the \"+N\" badge is present, when I tap it, then a bottom sheet opens listing all of that day's all-day Sessions in chronological order by start time.\n- [ ] We will be removing additional text ‘more’ from the +N badge\n- [ ] Given the all-day overflow bottom sheet is open, when a listed Session is not the one displayed in the banner, then it shows a \"NOT SHOWN IN GRID\" badge.\n\n### Opening a Session\n\n- [ ] Given a Session is displayed in the ALL DAY banner, when I tap it, then the Session Detail opens using the same navigation the time grid already uses for a Session card.\n\n### Interaction with the rest of Calendar View\n\n* Given promoted Sessions exist, when the overlap/cascade columns are calculated for the remaining Sessions, then promoted Sessions are excluded from the calculation entirely and do not consume a column.\n* Given promoted Sessions exist, when the time grid range is calculated per [EP-57330](https://expoplatform.atlassian.net/browse/EP-57330) (first session start to last session end), then promoted Sessions are excluded from that calculation, so an all-day Session does not drag the grid range back out to the full day.\n* Given active filters exclude a promoted Session, when the view re-renders, then that Session is removed from the banner, and the banner is hidden entirely if no promoted Sessions remain on the visible day(s).\n* Given a day where every Session is promoted to the banner, then the banner renders and the time grid below it renders at 09:00–18:00 per [EP-57330](https://expoplatform.atlassian.net/browse/EP-57330). The EP-52201 no-results state is not used here — it is shown only when filters or search return no Sessions, and it reads wrong under a banner that visibly contains Sessions.\n* Behaviour is identical on iOS and Android except where the platform navigation patterns above differ.\n\n",
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "labels": [],
+   "parent": null,
+   "comments": [
+    {
+     "author": "CI CD",
+     "created": "2026-09-22T16:33:56.035+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.rc.app4** 1.81.2 (11862).  \nDownload the build "
+    }
+   ],
+   "links": [
+    "Gantt End to End: EP-52201",
+    "Gantt End to End: EP-57330",
+    "Gantt End to End: EP-57291"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": null,
+   "assignee": "Przemysław Wrzeszcz",
+   "canon": "In Progress",
+   "due": "2026-10-14",
+   "origDays": null,
+   "priority": "Urgent",
+   "resolved": null,
+   "spentDays": 1.87,
+   "status": "In Progress",
+   "summary": "Session Calendar View - All Day Sessions with fixed 44px +N button (Mobile)",
+   "team": "Mobile team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p04",
+  "key": "EP-57330",
+  "current": {
+   "area": "Legacy mobile app",
+   "deps": "",
+   "driver": "81808",
+   "estimate": "Dev: 2.0 d Android | 2.0 d iOS | 4.0 d Total. QA: 1.76 d Android | 1.76 d iOS | 3.52 d Total. Total: 7.52 person-days",
+   "feature": "Session Calendar View - Show starting and ending time slots only",
+   "impact": "DLG expects to have this feature",
+   "key": "EP-57330",
+   "month": "2026-10",
+   "notes": "",
+   "owner": "Taimoor",
+   "priority": "Customer",
+   "rationale": "DLG commitment",
+   "status": "In Progress",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Session Calendar View - Show starting and ending time slots only",
+   "description": "## OUTCOME\n\nWhen an attendee opens the Session Calendar View, the visible time grid starts at the time slot containing the earliest session start and ends at the time slot containing the latest session end for the days currently in view. No time slots are rendered above the first session or below the last session. The attendee sees the programme immediately on load, with no empty-hour scrolling at either end.\n\nSessions promoted to the ALL DAY banner under [EP-57332](https://expoplatform.atlassian.net/browse/EP-57332) are not in the time grid and take no part in the range calculation.\n\n---\n\n## ACCEPTANCE CRITERIA\n\n- [ ] Given a day with sessions, when the Calendar View grid renders that day, then the first rendered time slot is the slot containing the earliest start among the sessions rendered in the time grid on that day, and the last rendered time slot is the slot containing the latest end among those same sessions.\n- [ ] Given a day with sessions, when the grid renders, then no time slot is rendered before the first session's slot or after the last session's slot.\n- [ ] Given a session that starts partway through a slot (e.g. 09:15), when the grid renders, then the grid starts at the slot boundary containing that start time (09:00) and the session card is still positioned correctly within the slot.\n- [ ] Given a session that ends partway through a slot (e.g. 17:40), when the grid renders, then the grid ends at the end of the slot containing that end time (18:00).\n- [ ] Given I am in 3-Day view, when the block renders, then the shared hour gutter spans from the earliest start among the sessions rendered in the time grid across the three visible days to the latest end among those same sessions.\n- [ ] Given sessions are promoted to the ALL DAY banner per EP-57332, when the range is calculated, then those sessions are excluded from it, so an all-day session does not drag the grid range back out to the full day.\n- [ ] Given I move to a different day or 3-day block, when the new range loads, then the grid range recalculates for the newly visible day(s).\n- [ ] Given I apply or clear filters, when the grid re-renders, then the range recalculates against the sessions matching the active filters.\n- [ ] Given a day where the active filters return no sessions, then the existing no-results state from EP-52201 is shown and no time grid is rendered.\n- [ ] Given a day holds no sessions and no filters are applied, when the grid renders, then the rendered range is 09:00–18:00.\n- [ ] Given all three visible days in a 3-Day block hold no sessions and no filters are applied, when the block renders, then the rendered range is 09:00–18:00.\n- [ ] Given an event with no sessions at all, when the grid renders, then the rendered range is 09:00–18:00. This is the same rule as the two lines above — one range whenever there is nothing to derive one from.\n- [ ] Given a day holds sessions but all of them are promoted to the ALL DAY banner, then it is not an empty day and the behaviour is governed by EP-57332, not by the 09:00–18:00 rule.\n- [ ] Given I move between two days whose sessions span different hours, when the new day renders, then the hour scale, labels and scroll offset may differ. This is accepted, and applies equally when moving into or out of a day with no sessions.\n- [ ] Given a session crosses midnight, when a day's range is computed, then that session contributes 00:00 as its start if it began on an earlier day, and 24:00 as its end if it finishes on a later day. The grid never extends beyond 00:00–24:00. Card rendering across midnight is unchanged from EP-52201.\n- [ ] Given today is in view and the current time falls outside the rendered range, when the Today button is used, then the grid scrolls to the nearest end of the rendered range rather than to an unrendered now-line.\n- [ ] Grid range behaviour is identical on iOS and Android.\n\n---\n\n## SCOPE\n\n**In scope:**\n\n* Session Calendar View time grid on mobile (iOS + Android), 1-Day and 3-Day grid modes\n* Recalculation of the rendered range on day change, block change, and filter change\n\n**Out of scope:**\n\n* List View — unchanged\n* Web platform — Calendar View is mobile only\n* Exhibitor Events Calendar View (EP-55571) — to be assessed separately if the same behaviour is wanted there\n* Any change to session card layout, overlap handling, or the \"+N more\" overflow behaviour defined in EP-52201\n* Any change to slot granularity (the size of a time slot itself)\n* Admin-configurable grid start/end times\n* What fills the screen when the rendered range is shorter than the viewport — treated as an edge case, not specified here\n\n",
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "labels": [],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Oleksandr Yelfutin",
+     "created": "2026-09-17T14:27:24.426+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom>\n\nA day or block with no sessions and no filters applied is a real state. The day list is contiguous, so gaps between event dates are filled with empty days: an event dated 5-8 June with one session on the 20th produces days 5..20, where 9..19 hold nothing.\n\nYour ruling of 2026-08-03 is that such a day shows the empty grid, not an empty state, and the app does that today.\n\nThis story derives the grid range from the sessions on the visible day(s). An empty day has no sessions, so there is nothing to derive the range from. The AC covers the filtered-empty case (\"the existing no-results state from EP-52201 is shown and no time grid is rendered\") but not this one, where no filter is applied.\n\nIt affects both grid modes. In 3-Day the block takes its range from whichever of its days hold sessions, but a block whose three days are all empty hits the same problem. In the example above, days 9-11, 12-14 and 15-17 are each a fully empty block.\n\n**Question: what hour range should the grid show when the visible day, or the whole visible 3-day block, holds no sessions and no filter is applied?**"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-17T14:31:40.313+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Yelfutin</custom>\n\nThanks — you're right that the AC doesn't cover this, and it should.\n\n**When the visible day, or the whole visible 3-day block, holds no sessions and no filter is applied, the grid shows the event's overall programme range** — the earliest session start to the latest session end across the entire event, not just the visible day(s).\n\nThe reason is continuity. An empty day's grid is a placeholder, so the priority is that it doesn't read as a different screen: keeping the same hour range as the populated days means swiping from the 8th into the empty 9th changes the content but not the scale, the hour labels, or the scroll offset. Anything derived per-day would make the gutter jump around as someone swipes through a gap.\n\nSame rule for a fully empty 3-day block — it takes the event-wide range. I don't want it inheriting from the nearest populated day: that's order-dependent, ambiguous in 3-Day mode, and more to test for a state nobody dwells on.\n\nFallback: if the event has no sessions at all, and so there is no event-wide range to take, use a fixed 09:00–18:00.\n\nI'll add this to the AC."
+    },
+    {
+     "author": "Oleksandr Yelfutin",
+     "created": "2026-09-17T14:58:25.235+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom> AC line 1 sets each day's range from the earliest session start \"on that day\", and line 6 recalculates it for each newly visible day. So every populated day has its own range, and there is no shared \"hour range of the populated days\" for an empty day to keep.\n\nThat is the range the new empty-day lines reach for. Because it does not exist, the event-wide range they specify matches a populated day's only by coincidence, with two effects: swiping from a populated day into an empty one still changes the scale, the labels and the scroll offset, and since the event-wide range contains every day's range, the empty day renders a wider grid than any populated day.\n\nThe rule still delivers stability across a run of empty days, which is the gap case. It does not deliver it at the step into the gap."
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-17T16:23:25.646+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Yelfutin</custom> \n\nThe continuity argument was wrong — AC 1 and AC 6 give every populated day its own range, so there is no shared range for an empty day to keep. Withdrawing it, and changing the ruling with it.\n\nYour second point decides this. The event range contains every day's range, so it gives an empty day the longest grid in the event, entirely empty — the most dead scroll on the one day with nothing to find, which is the opposite of what this story is for. It also reaches for session times outside the visible window, where every other rule here derives from the days in view.\n\n**New ruling: a day holding no sessions with no filters applied renders a fixed 09:00–18:00, and so does a 3-Day block whose three days are all empty.** That is the range the AC already specifies for an event with no sessions at all — one rule for \"nothing to derive from\", identical in both grid modes, independent of which day you arrived from, needing no data beyond the visible range.\n\nOn your first point: the step into a gap changes scale, and so does any step between two populated days whose sessions span different hours, which is the normal case. That is inherent to per-day ranging and this story accepts it everywhere. No rule for empty days removes it, so it does not separate the options. Writing it into the AC so it is not raised later as a defect.\n\nTwo related things I am correcting while this is open.\n\n**All-day sessions.** EP-57332 excludes promoted sessions from this story's range calculation, but that line lives only in that ticket — AC 1 here still says \"earliest session start on that day\" with no exclusion, which reads wrong to anyone building from this story alone. Adding it. It also means a day can hold sessions and still have an empty grid, so the 09:00–18:00 rule is keyed to a day holding no sessions at all, not to the grid being empty. A day whose sessions are all promoted is EP-57332's case, and I am amending that ticket so it renders the grid rather than the EP-52201 no-results state — EP-52201 defines that state for filters only, and it reads wrong under a banner that visibly contains sessions.\n\n**Sessions crossing midnight.** A session ending after midnight has an end earlier than every start, which breaks AC 1 as written, not only the empty-day rules. The 6h threshold promotes the long ones out of the grid, so this bites for cases like 23:00–01:30. Clipping per day below.\n\nAC changes, now applied to the description:\n\n* AC 1 and AC 5: \"earliest session start / latest session end\" becomes \"earliest start / latest end among the sessions rendered in the time grid\". Sessions promoted to the ALL DAY banner per EP-57332 are excluded.\n* Replaced the two empty-day lines (day, and 3-day block, taking the event-wide range) with: the rendered range is 09:00–18:00.\n* Kept the existing 09:00–18:00 line for an event with no sessions at all; it is now the same rule. A day holding only promoted sessions is not an empty day and is governed by EP-57332.\n* New: Given I move between two days whose sessions span different hours, when the new day renders, then the hour scale, labels and scroll offset may differ. This is accepted, and applies equally when moving into or out of an empty day.\n* New: Given a session crosses midnight, when a day's range is computed, then it contributes 00:00 as its start if it began on an earlier day and 24:00 as its end if it finishes on a later day. The grid never extends beyond 00:00–24:00. Card rendering across midnight is unchanged from EP-52201.\n\n"
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-21T09:55:43.145+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.mobileappmobileappmobileapp.app67** 1.81.2 (11839).  \nDownload the build "
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-21T09:55:44.449+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.rc.app4** 1.81.2 (11839).  \nDownload the build "
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-22T15:32:57.692+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.rc.app4** 1.81.2 (11859).  \nDownload the build "
+    },
+    {
+     "author": "CI CD",
+     "created": "2026-09-22T15:55:35.013+0100",
+     "body": "🎉 Build successfully uploaded! Available on Firebase Distribution: **net.expoplatform.mobileappmobileappmobileapp.app67** 1.81.2 (11859).  \nDownload the build "
+    }
+   ],
+   "links": [
+    "Gantt End to End: EP-57332"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": null,
+   "assignee": "Przemysław Wrzeszcz",
+   "canon": "In Progress",
+   "due": "2026-10-14",
+   "origDays": null,
+   "priority": "Urgent",
+   "resolved": null,
+   "spentDays": 1.49,
+   "status": "In Progress",
+   "summary": "Session Calendar View - Show starting and ending time slots only",
+   "team": "Mobile team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p05",
+  "key": "EP-57291",
+  "current": {
+   "area": "Legacy mobile app",
+   "deps": "",
+   "driver": "81808",
+   "estimate": "Dev: 2.5 d Android | 2.5 d iOS | 5.0 d Total. QA: 1.9 d Android | 1.9 d iOS | 3.8 d Total. Total: 8.8 person-days",
+   "feature": "Language and Location Filters for Sessions and Exhibitor Events (Mobile App)",
+   "impact": "DLG expects to have this feature",
+   "key": "EP-57291",
+   "month": "2026-10",
+   "notes": "",
+   "owner": "Taimoor",
+   "priority": "Customer",
+   "rationale": "DLG commitment",
+   "status": "Planned",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Language and Location Filters for Sessions and Exhibitor Events (Mobile App)",
+   "description": "## OUTCOME\n\nA mobile attendee opening the Sessions page and the Exhibitor Events page sees Language and Location filters alongside the existing filters, populated from the same event data the web filters use, with the same option sets, the same multi-select behaviour and the same AND logic against other filters. Filtering the same event on mobile and on web returns the same result set.\n\n## ACCEPTANCE CRITERIA\n\nIn the criteria below, **item** means a session on the Sessions page and an exhibitor event on the Exhibitor Events page. Every criterion applies to both pages independently — the options shown on a page are derived from the items on that page.\n\n**Language filter — Sessions page and Exhibitor Events page**\n\n- [ ] The Language filter appears alongside the existing filters on the page when at least one item on that page has a value in the Language field.\n- [ ] Within the filter in the app, the same options that are visible on the web for that page are displayed.\n\n**Location filter — Sessions page and Exhibitor Events page**\n\n- [ ] Options are presented in three visually separated groups, in this order: floorplan locations, online location, custom locations.\n- [ ] Floorplan group: stands are shown by stand name nested under their hall; a hall is itself selectable when at least one item is assigned directly to the hall rather than to a stand within it; standalone halls with no stands are supported.\n- [ ] Online group: a single \"Online location\" option covering all items with an online location, including on-demand.\n- [ ] Custom group: custom locations shown by name.\n- [ ] Only locations assigned to at least one item on that page appear as options.\n- [ ] Location filter does not need to be displayed when user is on the On-Demand tab\n\n**Shared filtering behaviour — both filters, both pages**\n\n- [ ] Both filters are multi-select\n\n",
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "labels": [
+    "ForgeDev",
+    "mig-in-preparation"
+   ],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-21T14:26:31.599+0100",
+     "body": "<custom data-type=\"smartlink\" data-id=\"id-0\">https://www.figma.com/design/kobeadcza43krVOhQn5qcR/Mobile-App---IOS?node-id=34621-47467&t=r5D4DKCUtGJMIMJx-0</custom> <custom data-type=\"smartlink\" data-id=\"id-1\">https://www.figma.com/design/hVnhmVJX49s3Ug45vau1FZ/Mobile-App---Android?node-id=24179-32618&t=yikbqCzpyq4LrdlP-0</custom> "
+    }
+   ],
+   "links": [
+    "Relates: EP-57882",
+    "Gantt End to End: EP-52201",
+    "Gantt End to End: EP-57332"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": null,
+   "assignee": "Maciej Grabowski",
+   "canon": "In Progress",
+   "due": "2026-10-14",
+   "origDays": null,
+   "priority": "Urgent",
+   "resolved": null,
+   "spentDays": 0.42,
+   "status": "In Progress",
+   "summary": "Language and Location Filters for Sessions and Exhibitor Events (Mobile App)",
+   "team": "Mobile team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p06",
+  "key": "EP-55315",
+  "current": {
+   "area": "Legacy mobile app",
+   "deps": "",
+   "driver": "",
+   "estimate": "",
+   "feature": "Adding tracking for sponsor and sponsored product clicks",
+   "impact": "Tracking clicks is essential for organizers to sell sponsored slots to customers",
+   "key": "EP-55315",
+   "month": "2026-10",
+   "notes": "",
+   "owner": "Taimoor",
+   "priority": "Customer",
+   "rationale": "Gap in product needs to be fixed urgently",
+   "status": "Planned",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps",
+   "estimate",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Adding tracking for sponsor and sponsored product clicks",
+   "description": "### Background\n\nIn [EP-18109](https://expoplatform.atlassian.net/browse/EP-18109), Sponsored Exhibitors and Sponsored Products were moved into separate slider blocks in the mobile app (on the exhibitor list and product list), mirroring the web implementation. However, that story covered display only — analytics gathering (views and clicks) for cards in these sliders was missed and never implemented.\n\nAs a result, sponsor exposure and interactions happening in the app are not reflected in sponsor statistics, undercounting sponsor performance for events with significant app usage. For comparison, app **banner** interactions are already tracked and reported with `app_`-prefixed placement values (e.g., `app_exhibitor`, `app_products`) in Banner Statistics.\n\nThe counting rules for sliders are already documented in [Sponsor Statistics for Organiser](https://expoplatform.atlassian.net/wiki/spaces/ExpoDoc/pages/685998293) and must be followed from day one, consistent with the web fix in [EP-55280](https://expoplatform.atlassian.net/browse/EP-55280).\n\n### What Needs to Be Done\n\n#### Scope\n\n* **App → Exhibitor list → Sponsored Exhibitors slider** (iOS and Android)\n* **App → Product list → Sponsored Products slider** (iOS and Android)\n\n#### View (Show) tracking\n\nImplement view event collection for cards in both sliders, following the documented slider rules:\n\n* A view is recorded only for cards actually visible to the user in the slider viewport.\n* Repeated appearances of the same card within one session (due to auto-rotation or manual slider navigation) are counted as **one** view.\n* A new session (mobile equivalent of web page refresh) counts as an additional view.\n\n#### Click tracking\n\nImplement click event collection for cards in both sliders:\n\n* A tap on a card (navigating to the public exhibitor/product page) is recorded as a click.\n* Clicks are counted per click, not per completed downstream action (consistent with the platform-wide sponsor stats rule).\n\n#### Data pipeline\n\nRecorded events must flow into the **same statistics pipeline as web** sponsored card events, so that they appear in:\n\n* **Organizer side:** Admin Panel → Sponsorship → Statistics → Search Statistics (exhibitors) and Product Search Statistics (products), including the downloadable exports.\n* **Sponsor side:** frontend Interactions Dashboard → Search Statistics / Product Search Statistics tabs (Exhibitor List / Product List Interactions).\n\n### ✅ Acceptance Criteria\n\n#### Mobile App — View tracking\n\n**Given** a user opens the exhibitor list in the app and the Sponsored Exhibitors slider is displayed  \n**When** sponsor cards become visible in the slider viewport  \n**Then** a view is recorded for each visible card.\n\n**Given** the same sponsor card re-appears in the slider viewport multiple times within one session (auto-rotation or manual navigation)  \n**When** the user has not started a new session  \n**Then** only one view is recorded for that card.\n\n**Given** a user has already generated views for cards in a slider  \n**When** the user starts a new session (per the agreed mobile refresh-equivalent)  \n**Then** a new view is recorded for cards that become visible again.\n\n**Given** the app contains more sponsor cards in the slider than fit the viewport  \n**When** some cards are never scrolled/rotated into view during the session  \n**Then** no views are recorded for those cards.\n\n**Given** the same scenarios on the Sponsored Products slider on the product list  \n**When** product cards are shown  \n**Then** view counting behaves identically to the Sponsored Exhibitors slider.\n\n#### Mobile App — Click tracking\n\n**Given** a user taps a sponsor card in the Sponsored Exhibitors slider  \n**When** the app navigates to the exhibitor public page  \n**Then** one click is recorded for that sponsor.\n\n**Given** a user taps a sponsored product card in the Sponsored Products slider  \n**When** the app navigates to the product public page  \n**Then** one click is recorded for that sponsored product.\n\n**Given** a user taps a card but leaves the destination page immediately without further action  \n**When** statistics are recorded  \n**Then** the click is still counted (clicks, not completed actions).\n\n#### Statistics surfaces\n\n**Given** view and click events were generated from the app sliders  \n**When** an Organizer opens Admin Panel → Sponsorship → Statistics → Search Statistics / Product Search Statistics  \n**Then** app-originated events are included in the displayed stats and in the downloaded reports.\n\n**Given** view and click events were generated from the app sliders  \n**When** a sponsor opens their frontend Interactions Dashboard (Search Statistics / Product Search Statistics tabs)  \n**Then** app-originated interactions are included, with per-user detail consistent with web-originated ones.\n\n#### Platform parity\n\n**Given** the same user performs identical actions on the sliders on iOS and on Android  \n**When** statistics are recorded  \n**Then** both platforms produce identical events (one AC verification pass per platform).\n\n**Given** view/click counting is implemented in the app  \n**When** compared against web slider counting (after [EP-55280](https://expoplatform.atlassian.net/browse/EP-55280) is fixed)  \n**Then** the counting rules are identical across platforms for the same event.",
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": null,
+   "labels": [
+    "mig-in-preparation"
+   ],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Oleksandr Yelfutin",
+     "created": "2026-07-17T14:46:48.499+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom> **Scope clarification - app slider cards don't have Meeting/Message buttons**\n\nThe AC lists all five interaction types (view, click, meeting, message, favourite) under the app-side scope, but on Android the Sponsored Exhibitors / Sponsored Products slider cards only expose a **Favourite** button. There are **no Meeting or Message buttons** on these cards (unlike web, where the sponsor card has MeetButton/MessageButton).\n\nSince the ticket does not include adding those buttons, meeting and message have no UI trigger to hook into and are not implementable as scoped. Confirmed by code review of the app.\n\nFor app-side tickets it helps a lot if the AC is checked against the current app build (and the design of the target screens) before handoff - it would have caught this button gap upfront. Happy to pair on a quick pre-check for future mobile stories.\n\nCC <custom data-type=\"mention\" data-id=\"id-1\">@Ajay Singh</custom> "
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-07-18T09:58:39.600+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Yelfutin</custom> Thanks for clarifying this. I had listed it under edge cases for confirmation. I’ve removed that logic. Can you confirm the following -\n\nFor sponsored exhibitors that are visible on the slider - if I click on their card > exhibitor page opens and then I click on either meet or message for those exhibitors, are the meet and message events tracked?"
+    }
+   ],
+   "links": [
+    "Polaris work item link: PBV11-431"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": null,
+   "assignee": "Przemysław Wrzeszcz",
+   "canon": "Planned",
+   "due": null,
+   "origDays": null,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 0.08,
+   "status": "Open",
+   "summary": "Adding tracking for sponsor and sponsored product clicks",
+   "team": "Mobile team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p07",
+  "key": "EP-55900",
+  "current": {
+   "area": "Registration",
+   "deps": "Payment refactoring needs to be completed first",
+   "driver": "",
+   "estimate": "",
+   "feature": "Replace ParamPOS with Iyzico",
+   "impact": "",
+   "key": "EP-55900",
+   "month": "2026-10",
+   "notes": "",
+   "owner": "Taimoor",
+   "priority": "Customer",
+   "rationale": "Needed specifically for Turkish clients to allow them to use a replacement for ParamPOS",
+   "status": "Planned",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "impact",
+   "estimate",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Replace ParamPOS with Iyzico",
+   "description": "**User Story**  \nAs an Organizer running events with Turkish card payments, I want Iyzico available as a payment gateway option (alongside Stripe and PayPal) so that registrants can pay by card — including installments — now that ParamPOS can no longer process transactions.\n\n**What Needs to Be Done**\n\n* Add a new native gateway driver for Iyzico, following the same pattern as the existing Stripe/PayPal/ParamPos\n* Add an Iyzico panel to Event Setup → Payments → Integration\n* Extend the backend payment validators to accept and process Iyzico as a payment method.\n* Implement Iyzico's payment callback/webhook handling for transaction status updates.\n\n**Acceptance Criteria**\n\n* Given an Organizer opens Event Setup → Payments → Integration, when they view the panel, then Iyzico appears as a gateway option alongside Stripe, PayPal\n* Given Iyzico is enabled and configured with valid credentials, when a registrant selects \"Credit or debit card\" at checkout, then the payment is processed via Iyzico\n* Given a payment succeeds via Iyzico, then the registrant is marked paid/activated and a transaction record is created, consistent with how Stripe/PayPal payments are recorded today.\n* Given a payment fails or Iyzico is unreachable, then the registrant sees a clear error state — matching the standard already set for ParamPOS in EP-54983.\n\nLink to Iyzico developer documentation - [https://docs.iyzico.com/en](https://docs.iyzico.com/en)",
+   "reportedBy": [
+    "BeautyIstanbul"
+   ],
+   "pipedrive": "11798",
+   "labels": [
+    "mig-in-preparation"
+   ],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Oleksiy Leshchenko",
+     "created": "2026-09-08T09:22:48.295+0100",
+     "body": "**Preliminary investigation.** No code written. This is what the ticket would actually take, plus the one decision that changes its size. Final call is yours.\n\nThe gateway list, config pattern and \"keep ParamPOS code in place\" instruction are all accurate, and Iyzico is a better vendor bet than Param -- BDDK-licensed, PayU-owned, versus a suspended licence (see EP-54983: our integration code is fine, Param itself is regulatorily dead).\n\n### Corrections to the ticket\n\n* **Installments have never worked here.** `Payments::payParamPOS()` sends `installment = '1'`, hardcoded (`universal/models/Payments.php:1590`). The installment-plan call we do make only reads the bank's 1-month rate as a commission uplift and fetches a logo. No selection UI in either frontend. So AC 2 is new capability, not parity -- and it needs a business answer first: today we inflate the amount charged to the card while `payments_new.total_value` keeps the un-inflated total. Does the buyer or the organiser bear the installment cost?\n* **Iyzico installments are TRY-only.** Fine, given these are Turkish-market events. Unrelated one-query check while we are here: ParamPOS is sent no currency field at all, so any non-TRY event would have been displaying one currency and charging another.\n* **Our ParamPOS is not SOAP.** It talks JSON to our own proxy (`turkpos2.expoplatform.com`). That proxy is a second deployable, and the ticket does not say whether Iyzico goes direct from the monolith or behind one.\n\n### The decision that sets the size\n\nIyzico offers two opposite integration models:\n\n* **Direct API** -- we collect the card, our server posts the raw card number. ParamPOS's twin: smallest diff, keeps card data on our servers.\n* **Checkout Form** -- Iyzico hosts the form (iframe, popup or redirect) and renders installment selection itself. Stripe/PayPal's twin: no card data on us, less frontend work in both frontends.\n\n**Recommendation: Checkout Form, as an iframe or popup.** 3DS is effectively mandatory in Turkey and Iyzico escalates to it dynamically regardless, so a challenge step is unavoidable either way -- and our ParamPOS flow already redirects for it. Given that, hosting the form costs little in UX and removes our card-data exposure.\n\nThis needs deciding before estimation: the two paths differ in admin config, frontend shape and even webhook signature scheme.\n\n### Required, but not in the ticket's file list\n\n* **Two** factories, not one -- `GatewayConfigFactory` (config) and `PaymentDriverFactory` (driver).\n* `ExpoConfig::getApiPaymentOptions()` -- emits the `paymentSystem.type` that both frontends key their card form off. Miss it and no form renders anywhere.\n* **portal-ui / newfront** -- separate repo, needs an FE owner. The ticket's Out of Scope says the checkouts already handle a generic card gateway; they do not.\n* The client-side exclusivity array in `backend/admin/views/payments/integration.volt` -- hardcoded, three entries. Miss it and AC 3 silently fails.\n* The Purchasing module tier -- story 5 below.\n\n### Missing acceptance criteria\n\n* **Webhook signature verification.** Our webhook route is unauthenticated by construction. Iyzico signs callbacks, but the feature has to be switched on by their support on request.\n* **AC 5 is not met by copying the ParamPOS shape.** Our ParamPOS webhook computes a failed status and then never persists it -- only success is written. Copying that reproduces exactly the false-status defect AC 5 forbids.\n* **Reconciliation.** Iyzico retries a webhook 3 times and then stops, so an outage past \\~45 minutes loses the notification permanently.\n* **Buyer payload.** Iyzico requires basket items, buyer identity and a billing address; a pay-now registration has no account at that point.\n* **Events left on ParamPOS.** Keeping the config is right, but the gateway cascade will keep selecting it and keep failing. Force-disable, or accept?\n\n### Placement and delivery\n\nPlacement is clear:\n\n* **Not inside Part 2** -- it is date-pinned to the new registration launch and deliberately left the payment-method layer alone (EP-56050 Sec. 2.3).\n* **Not after Part 3** -- EP-56050 Sec. 2.4 and Sec. 4 record Part 3 as _waiting on this product decision_. Both waiting on each other means nothing moves.\n\n**On running it alongside Part 2:** the code overlap is genuinely small (the Part 2 branches touch none of `Payments.php` or the drivers), so git will not fight us. But both workstreams are payments and the same people hold Part 2's context, so this needs its own slice of capacity rather than being absorbed into the current one -- otherwise the cost lands on Part 2's date, which is the more expensive one to miss.\n\n**Worth starting now whatever the schedule, because it is pure waiting:** Iyzico merchant account with sandbox and live credentials; webhook signature activation via their support; and confirmation from them that the hosted form renders installment selection.\n\n| # | Story | Notes |\n| --- | --- | --- |\n| 1 | BE gateway: driver, config, webhook + signature, reconciliation | legacy |\n| 2 | Admin integration panel | legacy volt, isolated |\n| 3 | Legacy checkout card form | src + gulp dist, both committed |\n| 4 | portal-ui integration | separate repo, FE owner needed |\n| 5 | Purchasing module awareness -- 3 files + drift guard | **must ship with story 1** |\n| 6 | Installments | separate; blocked on the commission decision |\n\n**If a fast date is needed:** what we lost is card payments, not installments -- those never worked. Restoring capability is stories 1, 2 and 5, plus whichever of 3 or 4 matches the frontend these events actually run. Story 6 can follow later without blocking anything, and treating it as included in a fast date is the likeliest way this goes wrong.\n\n**Story 5 is the one I would not trade for speed.** Purchasing is already on master with a live payment route, and it picks the event's gateway from its own hardcoded three-gateway list. An Iyzico-only event falls through it to Stripe and is then refused with \"no payment gateway is configured for this event\" -- telling the organiser to configure a gateway they already configured. Three small edits. The drift guard shipped with it is what makes the merge order against Part 2 stop mattering: any future gateway added to legacy without the module knowing reds a test that runs on every PR.\n\n**One release-time check, not a build-time one:** whether the new registration journey is serving production traffic yet. That decides whether the module gap above is latent or live on the day this ships.\n\n**For EP-56050:** its open ParamPOS question now has an answer, and Iyzico becomes a fourth arm in the driver switch that Part 3's per-method registry is meant to replace.\n\nHappy to size stories 1-5 once the Checkout Form / direct API call is made. Story 6 needs the commission answer first."
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-08T09:51:59.481+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksiy Leshchenko</custom> \n\n1. We don’t need to change the existing installment logic - let me know if the current installment logic we have is compatible with Iyzico\n2. We can go with your recommendation regarding checkout form\n3. I think my initial approach to mention suggested approaches was wrong - I’m not aware of the how the backend architecture is setup so I’m thinking of scrapping the description and letting the developers use the Iyzico documentation to implement. For product decisions, I can be looped in but for any technical related decisions, I would not be much use here\n\n"
+    }
+   ],
+   "links": [
+    "Polaris work item link: PBV11-456"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 8,
+   "assignee": "Mariia Ivanova",
+   "canon": "Planned",
+   "due": null,
+   "origDays": null,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 0.91,
+   "status": "Open",
+   "summary": "Replace ParamPOS with Iyzico",
+   "team": "Organizer team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ }
+]

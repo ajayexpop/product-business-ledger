@@ -1,5 +1,17 @@
 {
   "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "why": "EP-57511 summary and Reported by"
+    },
+    "gaps": [
+      "why: filled only from the summary and Reported by; the ticket has no description, no comments and no Confluence link, so nothing says what commitment or gap makes it a must-have"
+    ],
+    "pages": []
+  },
   "flags": {
     "drift": false,
     "dueSoon": false,
@@ -63,6 +75,16 @@
       "k": "migrate",
       "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
       "to": ""
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57511 summary and Reported by",
+      "to": "New filters for Sessions and Exhibitor events, requested by DLG and HINTE."
     }
   },
   "j": {
@@ -73,13 +95,14 @@
     "origDays": null,
     "priority": "Medium",
     "resolved": null,
-    "spentDays": 0.06,
+    "spentDays": 2.15,
     "status": "Open",
     "summary": "New filters for Sessions and Exhibitor events",
     "team": "Exhibitor team",
     "teamField": "customfield_10001",
     "type": "Epic"
   },
+  "jAt": "2026-09-28T19:00:00Z",
   "migrated": {
     "at": "2026-09-22",
     "schema": 2
@@ -88,7 +111,7 @@
     "days": 16,
     "daysKind": "point"
   },
-  "order": 110,
+  "order": 130,
   "prefill": {
     "driver": {
       "at": "2026-09-22",
@@ -106,7 +129,7 @@
     "status": "Planned"
   },
   "source": "confluence-2155872263",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-28",
   "v": {
     "area": "Sessions",
     "deps": "New reported issues on Global Search may delay delivery",
@@ -122,6 +145,6 @@
     "rationale": "DLG commitment",
     "status": "Planned",
     "team": "",
-    "why": ""
+    "why": "New filters for Sessions and Exhibitor events, requested by DLG and HINTE."
   }
 }

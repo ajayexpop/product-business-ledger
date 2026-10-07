@@ -1,0 +1,456 @@
+[
+ {
+  "id": "platform-passwordless-login",
+  "kind": "new",
+  "kindWhy": "'Passwordless logination' introduces one-time-code login per event",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers attendee OTP login (only admin email/password login)"
+ },
+ {
+  "id": "platform-participant-email-warnings",
+  "kind": "improved",
+  "kindWhy": "'Indication of Fake Email' / email errors added to the existing participants list and meeting wizard",
+  "buildsOn": [
+   "02_admin_platform_core:187"
+  ],
+  "buildsOnWhy": "Placeholder (fake) email generation is the capability being flagged"
+ },
+ {
+  "id": "platform-profile-and-page-access-2023q1",
+  "kind": "improved",
+  "kindWhy": "'Add search function to data fields' and detaching public pages from the preview toggle change existing behaviour",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers profile select fields or public page access"
+ },
+ {
+  "id": "platform-module-management",
+  "kind": "improved",
+  "kindWhy": "'Module management improvement' restructures existing global/event module management",
+  "buildsOn": [
+   "01_client_manager:115",
+   "01_client_manager:136"
+  ],
+  "buildsOnWhy": "Global Module Management entitlements and grouped controls"
+ },
+ {
+  "id": "platform-admin-action-log",
+  "kind": "new",
+  "kindWhy": "'Add logs from clickhouse to admin panel' presents a new admin action log",
+  "buildsOn": [
+   "02_admin_platform_core:126",
+   "02_admin_platform_core:197",
+   "00b_identity_and_authorization:1206"
+  ],
+  "buildsOnWhy": "Admin Log Info audit trail, its filters/export, and view-admin-logs permission"
+ },
+ {
+  "id": "platform-arabic-language",
+  "kind": "improved",
+  "kindWhy": "'Arabic language option' adds a language to the existing language list",
+  "buildsOn": [
+   "01_client_manager:114",
+   "01_client_manager:141"
+  ],
+  "buildsOnWhy": "Client language assignment and the language list that includes AR"
+ },
+ {
+  "id": "platform-assigned-admins",
+  "kind": "new",
+  "kindWhy": "'Assigning Visitor/Exhibitor to Admin team' launches admin assignment with column, pop-up, filters",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers assigning accounts to admins"
+ },
+ {
+  "id": "platform-admin-panel-guidance",
+  "kind": "improved",
+  "kindWhy": "'Renaming settings', 'Adding Tool Tips', intro copy on existing admin pages",
+  "buildsOn": [
+   "02_admin_platform_core:135"
+  ],
+  "buildsOnWhy": "Tool tips + renamed settings (EP-15966/15967)"
+ },
+ {
+  "id": "platform-inactive-account-activation",
+  "kind": "improved",
+  "kindWhy": "'Correct naming of errors for inactive users', 'Improvement in the flow of sending activation email'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers end-user account activation"
+ },
+ {
+  "id": "platform-search-performance-2023",
+  "kind": "improved",
+  "kindWhy": "'Optimization of sync with elastic', 'Change sync ... to bulk', 'Include additional indexes'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers frontend search indexing (Global Search claims are the admin bar)"
+ },
+ {
+  "id": "platform-registration-spam-protection",
+  "kind": "improved",
+  "kindWhy": "'The exhibitor registration reCaptcha' adds a step to existing exhibitor sign-up",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers frontend exhibitor registration forms"
+ },
+ {
+  "id": "platform-admin-mfa",
+  "kind": "new",
+  "kindWhy": "'MFA | Admins' adds an MFA tab to enable authenticator-app login for admins",
+  "buildsOn": [
+   "02_admin_platform_core:124",
+   "02_admin_platform_core:169",
+   "00b_identity_and_authorization:1198"
+  ],
+  "buildsOnWhy": "Admin MFA with authenticator apps, batch email, and MFA permission"
+ },
+ {
+  "id": "platform-sso-sign-in-2023",
+  "kind": "improved",
+  "kindWhy": "'Remove log in pop up' and customise the SAML not-found error page change existing SSO",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers SAML SSO for attendees"
+ },
+ {
+  "id": "platform-module-permission-alignment",
+  "kind": "improved",
+  "kindWhy": "'Improve relations between Module Management and Permission Matrix for meetings and messages'",
+  "buildsOn": [
+   "00b_identity_and_authorization:1250"
+  ],
+  "buildsOnWhy": "Configure Permission Matrix"
+ },
+ {
+  "id": "platform-floor-plan-performance",
+  "kind": "improved",
+  "kindWhy": "'Cache for integrated Floorplan', 'Optimisation of the api/filters'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers floor plans or the filters API"
+ },
+ {
+  "id": "platform-loading-indicators",
+  "kind": "improved",
+  "kindWhy": "'Add loaders to listing pages' on existing listings",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers frontend listing loaders"
+ },
+ {
+  "id": "platform-badge-scan-login",
+  "kind": "new",
+  "kindWhy": "'Login via badge scan' introduces a new login method in the app",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers app badge-scan login"
+ },
+ {
+  "id": "platform-gdpr-account-deletion",
+  "kind": "new",
+  "kindWhy": "'Create an Event selection page for GDPR politics to delete accounts'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers end-user self-service deletion"
+ },
+ {
+  "id": "platform-otp-login-improvement",
+  "kind": "improved",
+  "kindWhy": "'OTP improvement' changes when codes are sent and activation",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers attendee OTP login"
+ },
+ {
+  "id": "platform-admin-workflow-2024q1",
+  "kind": "improved",
+  "kindWhy": "'Adding a customer service button', 'Persistent Filter and Search', 'Regroup ... Config page of Sessions'",
+  "buildsOn": [
+   "02_admin_platform_core:204",
+   "02_admin_platform_core:205"
+  ],
+  "buildsOnWhy": "Customer Service list action and persistent filter/search"
+ },
+ {
+  "id": "platform-local-time-setting",
+  "kind": "improved",
+  "kindWhy": "'No local time option (Web)' adds an option to existing time display",
+  "buildsOn": [
+   "02_admin_platform_core:182"
+  ],
+  "buildsOnWhy": "Event timezone set from country and city"
+ },
+ {
+  "id": "platform-reliable-exports",
+  "kind": "improved",
+  "kindWhy": "'re work exports to new schema with statuses', 'Exhibitor Manual export rework'",
+  "buildsOn": [
+   "02_admin_platform_core:129",
+   "00b_identity_and_authorization:1222"
+  ],
+  "buildsOnWhy": "Data export and exhibitor manual export"
+ },
+ {
+  "id": "platform-security-hardening-2024q1",
+  "kind": "improved",
+  "kindWhy": "'Web secure fixes', 'Applications secure fixes'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers security fixes"
+ },
+ {
+  "id": "platform-admin-colours",
+  "kind": "improved",
+  "kindWhy": "'Admin panel primary/secondary colors changes'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers admin styling"
+ },
+ {
+  "id": "platform-saml-return-to-page",
+  "kind": "improved",
+  "kindWhy": "Fix: 'SAML User is always directed to Event homepage and not intended page'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers SAML SSO for attendees"
+ },
+ {
+  "id": "platform-admin-panel-languages",
+  "kind": "improved",
+  "kindWhy": "'[adminv2] Add language selector on the login page', 'Choose language from storage'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers admin UI language (language claims are frontend languages)"
+ },
+ {
+  "id": "platform-consent-gated-videos",
+  "kind": "improved",
+  "kindWhy": "'Block <iframe> video until consent is given - Videos in EXH profile' adds an option to existing profiles",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers exhibitor profile videos or consent"
+ },
+ {
+  "id": "platform-account-switcher",
+  "kind": "improved",
+  "kindWhy": "'Enhancing Account Switcher Visibility and Accessibility'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the account switcher"
+ },
+ {
+  "id": "platform-otp-whatsapp-sms",
+  "kind": "improved",
+  "kindWhy": "'OTP login workflow with Whatsapp/SMS' adds channels to existing one-time-code login",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers attendee OTP login"
+ },
+ {
+  "id": "platform-admin-panel-2024q4",
+  "kind": "improved",
+  "kindWhy": "'Remove redundant settings', 'Create empty state for the tables', hide retired settings",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers these admin tidy-ups"
+ },
+ {
+  "id": "platform-australia-hosting",
+  "kind": "new",
+  "kindWhy": "'Create aws resources on australia' sets up a region that did not exist",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers hosting regions"
+ },
+ {
+  "id": "platform-performance-2024q4",
+  "kind": "improved",
+  "kindWhy": "'PG bouncer', 'Optimization of Account Attribute Retrieval', widget and page optimisations",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers performance"
+ },
+ {
+  "id": "platform-security-hardening-2024q4",
+  "kind": "improved",
+  "kindWhy": "'Add account_id to activation_code hash generation', 'Add secure token to scanBadge endpoint'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers these endpoints"
+ },
+ {
+  "id": "platform-sign-in-profile-2024q4",
+  "kind": "improved",
+  "kindWhy": "'Dynamic Edit Profile Labels', 'Add error codes', 'custom service on the newFront (login by token)'",
+  "buildsOn": [
+   "02_admin_platform_core:204"
+  ],
+  "buildsOnWhy": "Login-by-token extends the Customer Service list action"
+ },
+ {
+  "id": "platform-buttons-validation-2025q1",
+  "kind": "improved",
+  "kindWhy": "'Update the Save and similar buttons to the Primary type', 'Change text of error'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers frontend button styling"
+ },
+ {
+  "id": "platform-country-city-data",
+  "kind": "improved",
+  "kindWhy": "'Switching Country Manager to external API Service' re-platforms the country manager",
+  "buildsOn": [
+   "02_admin_platform_core:186"
+  ],
+  "buildsOnWhy": "Country management"
+ },
+ {
+  "id": "platform-attendee-onboarding",
+  "kind": "new",
+  "kindWhy": "'Onboarding Experience - Admin Panel & Web & App API' launches an onboarding pop-up",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers attendee onboarding"
+ },
+ {
+  "id": "platform-custom-labels",
+  "kind": "improved",
+  "kindWhy": "'Custom Label changes' and label customisation in the cancel/delete pop-ups",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers custom labels"
+ },
+ {
+  "id": "platform-admin-panel-2025q2",
+  "kind": "improved",
+  "kindWhy": "'Add timezone view in the admin panel to show selected TZ', old-panel settings apply in new",
+  "buildsOn": [
+   "02_admin_platform_core:182"
+  ],
+  "buildsOnWhy": "Event timezone derived from country and city"
+ },
+ {
+  "id": "platform-landing-page-after-login",
+  "kind": "improved",
+  "kindWhy": "'Extend Page Opened on Login Functionality', server-side redirect",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers post-login landing page"
+ },
+ {
+  "id": "platform-performance-security-2025q2",
+  "kind": "improved",
+  "kindWhy": "'Postgresql IndexPack04', MultiSelect optimisation, 'Remove token and id from request'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers performance"
+ },
+ {
+  "id": "platform-admin-safeguards-2025q3",
+  "kind": "improved",
+  "kindWhy": "'Warning for Participant Category Change', 'Add region validation', blurred save bar",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers participant category change warnings"
+ },
+ {
+  "id": "platform-editor-admin-2025q4",
+  "kind": "improved",
+  "kindWhy": "'Add remove styling button for TextEditor', 'Hide the Maintenance notification'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the text editor"
+ },
+ {
+  "id": "platform-performance-2025q4",
+  "kind": "improved",
+  "kindWhy": "'Reduce number of requests from app to server', 'Optimize response data for delegate search', caching",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers performance"
+ },
+ {
+  "id": "platform-security-hardening-2025q4",
+  "kind": "improved",
+  "kindWhy": "Fix: 'XSS in places where HTML should work'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers XSS"
+ },
+ {
+  "id": "platform-locale-dates-translations",
+  "kind": "improved",
+  "kindWhy": "'Date formats depend on locale', 'Add missed keys and languages', missing translations",
+  "buildsOn": [],
+  "buildsOnWhy": "Language-list claims concern client/event language enablement, not portal translations"
+ },
+ {
+  "id": "platform-sign-in-options-2026q1",
+  "kind": "improved",
+  "kindWhy": "'Separate login buttons', 'Adding additional login option on mobile app', hover colour",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers attendee sign-in options"
+ },
+ {
+  "id": "platform-profile-completion",
+  "kind": "improved",
+  "kindWhy": "'Participant Profile Completion Calculation Update', completion column in participants list",
+  "buildsOn": [
+   "02_admin_platform_core:202"
+  ],
+  "buildsOnWhy": "Profile Completion Indicator"
+ },
+ {
+  "id": "platform-admin-save-cloning",
+  "kind": "improved",
+  "kindWhy": "'save/apply changes ... without page redirection', 'persistent banner ... during event cloning'",
+  "buildsOn": [
+   "02_admin_platform_core:179",
+   "02_admin_platform_core:188"
+  ],
+  "buildsOnWhy": "Event cloning and the mobile app builder whose save behaviour changed"
+ },
+ {
+  "id": "platform-admin-navigation-pagination",
+  "kind": "improved",
+  "kindWhy": "'Standardising Pagination', 'Universal Pagination Memory', 'Move Sponsorship'",
+  "buildsOn": [
+   "02_admin_platform_core:133"
+  ],
+  "buildsOnWhy": "Pagination standardisation across admin lists"
+ },
+ {
+  "id": "platform-performance-2026q2",
+  "kind": "improved",
+  "kindWhy": "'Remove duplicated requests for banners', 'Reduce db_route connection usage', loaders",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers performance"
+ },
+ {
+  "id": "platform-security-hardening-2026q2",
+  "kind": "improved",
+  "kindWhy": "'Add rate limiting to /api/v1/resend', 'Meet API Standards for api/v1/schedule/note'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers these APIs"
+ },
+ {
+  "id": "platform-performance-2026q3",
+  "kind": "improved",
+  "kindWhy": "'request sized WebP variants', manifest caching, 'Optimization next14'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers frontend performance"
+ },
+ {
+  "id": "platform-private-favourites",
+  "kind": "improved",
+  "kindWhy": "'allow opted-out users to favourite exhibitors, visitors and products' extends favourites",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers favourites (opt-in claim is a meetings permission step)"
+ },
+ {
+  "id": "platform-admin-redesign",
+  "kind": "improved",
+  "kindWhy": "'[Admin Redesign] ...' restyles existing pages with no change to how they work",
+  "buildsOn": [
+   "02_admin_platform_core:170"
+  ],
+  "buildsOnWhy": "Event list page (one of the restyled pages)"
+ },
+ {
+  "id": "platform-selective-cloning",
+  "kind": "improved",
+  "kindWhy": "'Extend Event Cloning to Support Selective Cloning of Sponsors, News, Sessions...'",
+  "buildsOn": [
+   "02_admin_platform_core:179",
+   "02_admin_platform_core:120"
+  ],
+  "buildsOnWhy": "Event cloning pop-up with opt-ins and the event portfolio clone action"
+ },
+ {
+  "id": "platform-auth-settings-2026q3",
+  "kind": "improved",
+  "kindWhy": "'Independent OTP Authentication Configuration for Company and Individual Profiles', 'Phone field for Admins'",
+  "buildsOn": [
+   "02_admin_platform_core:123"
+  ],
+  "buildsOnWhy": "Admin account management (phone field added to admin accounts)"
+ },
+ {
+  "id": "platform-trusted-embed-domains",
+  "kind": "new",
+  "kindWhy": "'Whitelist Trusted Embed Domains for Authenticated Iframe Content' adds a new security settings section",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers embed domains"
+ }
+]

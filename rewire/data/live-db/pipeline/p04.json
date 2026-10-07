@@ -1,0 +1,173 @@
+{
+  "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "deps": "EP-57330 description; links (Gantt End to End: EP-57332); jiraColumns due 2026-10-14",
+      "notes": "EP-57330 comment 2026-09-17 by Taimoor Zulfiqar; EP-57330 comments 2026-09-21 and 2026-09-22 by CI CD; jiraColumns",
+      "why": "EP-57330 description; Jira Reported by DLG, Pipedrive 81808"
+    },
+    "gaps": [
+      "client: no client named in description or comments beyond Jira Reported by",
+      "pages: no Confluence links in description or comments"
+    ],
+    "pages": []
+  },
+  "flags": {
+    "drift": false,
+    "dueSoon": false,
+    "noEstimate": false,
+    "noJira": false,
+    "overEstimate": false,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "October 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-10"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "h0mig-driver": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "migrate",
+      "note": "pre-filled: Why it matters names the client: \"DLG commitment\" (pp-driver-prefill)",
+      "to": "81808"
+    },
+    "h0mig-rationale": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "migrate",
+      "note": "the old Why, word for word",
+      "to": "DLG commitment"
+    },
+    "h0mig-why": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "why",
+      "from": "DLG commitment",
+      "k": "migrate",
+      "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
+      "to": ""
+    },
+    "hb260928enr-deps": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "deps",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57330 description; links (Gantt End to End: EP-57332); jiraColumns due 2026-10-14",
+      "to": "Mobile calendar view EP-52201 (no-results state, card rendering across midnight) and all-day banner EP-57332 (all-day sessions excluded from the range). Risk: shares the 14 Oct DLG mobile delivery."
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57330 comment 2026-09-17 by Taimoor Zulfiqar; EP-57330 comments 2026-09-21 and 2026-09-22 by CI CD; jiraColumns",
+      "to": "17 Sep: PO ruled that an empty day, or an all-empty 3-day block, shows a fixed 09:00-18:00 grid; midnight and all-day rules added to the criteria. 21-22 Sep: Android builds 1.81.2 (11839, 11859) uploaded for testing. Jira In Progress, due 14 Oct."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57330 description; Jira Reported by DLG, Pipedrive 81808",
+      "to": "For DLG: attendees should see the programme on load in the mobile calendar, without scrolling through empty hours."
+    }
+  },
+  "j": {
+    "aggOrigDays": null,
+    "assignee": "Przemysław Wrzeszcz",
+    "canon": "In Progress",
+    "due": "2026-10-14",
+    "origDays": null,
+    "priority": "Urgent",
+    "resolved": null,
+    "spentDays": 1.49,
+    "status": "In progress",
+    "summary": "Session Calendar View - Show starting and ending time slots only",
+    "team": "Mobile team",
+    "teamField": "customfield_10001",
+    "type": "Story"
+  },
+  "jAt": "2026-09-29T15:59:39Z",
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": 7.52,
+    "daysKind": "point"
+  },
+  "order": 40,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-22",
+      "basis": "Why it matters names the client: \"DLG commitment\"",
+      "by": "Claude",
+      "field": "Why it matters",
+      "name": "DLG Markets GmbH",
+      "quote": "DLG commitment",
+      "value": "81808"
+    }
+  },
+  "raw": {
+    "area": "Legacy mobile app",
+    "month": "October 2026",
+    "status": "In Progress"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-28",
+  "v": {
+    "area": "Legacy mobile app",
+    "deps": "Mobile calendar view EP-52201 (no-results state, card rendering across midnight) and all-day banner EP-57332 (all-day sessions excluded from the range). Risk: shares the 14 Oct DLG mobile delivery.",
+    "driver": "81808",
+    "estimate": "Dev: 2.0 d Android | 2.0 d iOS | 4.0 d Total. QA: 1.76 d Android | 1.76 d iOS | 3.52 d Total. Total: 7.52 person-days",
+    "feature": "Session Calendar View - Show starting and ending time slots only",
+    "impact": "DLG expects to have this feature",
+    "key": "EP-57330",
+    "month": "2026-10",
+    "notes": "17 Sep: PO ruled that an empty day, or an all-empty 3-day block, shows a fixed 09:00-18:00 grid; midnight and all-day rules added to the criteria. 21-22 Sep: Android builds 1.81.2 (11839, 11859) uploaded for testing. Jira In Progress, due 14 Oct.",
+    "owner": "Taimoor",
+    "priority": "Customer",
+    "rationale": "DLG commitment",
+    "status": "In Progress",
+    "team": "",
+    "why": "For DLG: attendees should see the programme on load in the mobile calendar, without scrolling through empty hours."
+  }
+}

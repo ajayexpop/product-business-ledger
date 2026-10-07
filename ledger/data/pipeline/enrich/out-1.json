@@ -1,0 +1,228 @@
+[
+ {
+  "id": "p01",
+  "key": "EP-55432",
+  "fields": {
+   "why": {
+    "value": "Admin now sets one-time passcode login separately for individuals and companies; without app support, mobile login breaks or mismatches.",
+    "source": "EP-55432 description"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": null,
+   "named": []
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/~7120202599a672a19a41d391977c7366e68b93/pages/2061139977/Mobile+Q+A.+New+OTP+settings.",
+    "title": "[Mobile] Q&A. New OTP settings.",
+    "read": true,
+    "note": "QA questions and PO answers on iOS/Android design consistency per OTP state; no client named, no estimate."
+   }
+  ],
+  "gaps": [
+   "estimate: Jira original estimate is 0 (origDays and aggOrigDays both 0) and no comment or page gives one"
+  ]
+ },
+ {
+  "id": "p02",
+  "key": "EP-52201",
+  "fields": {
+   "why": {
+    "value": "Committed to DLG (the reporter): attendees and exhibitors need a mobile calendar view to browse sessions by day and time slot.",
+    "source": "EP-52201 description; Jira Reported by DLG, Pipedrive 81808"
+   },
+   "deps": {
+    "value": "Web setting for the default view (EP-55021). Both QA sub-tasks (EP-55568, EP-55578) still in progress; 21 defects raised 2-21 Sep, 13 on iOS, with iOS capacity reduced. Proposed release blockers: EP-57117, EP-57575, EP-57565; EP-57548 (sponsored banner scale) needs a PO decision; EP-57309 (session card design) proposed to split out. No fixVersion defines the 14 Oct release scope. Follow-on stories EP-57330, EP-57332 and EP-57291 build on this. Risk: the 14 Oct build is only 'tight but achievable' if blockers are cut to three.",
+    "source": "EP-52201 description; EP-52201 comment 2026-09-21 by Przemysław Wrzeszcz; links (Gantt End to End: EP-57291, EP-57332)"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "named": []
+  },
+  "pages": [],
+  "gaps": [
+   "estimate: Jira original estimate is 0 and no comment gives one",
+   "client: no client named in description or comments beyond Jira Reported by",
+   "pages: no Confluence links in description or comments"
+  ]
+ },
+ {
+  "id": "p03",
+  "key": "EP-57332",
+  "fields": {
+   "why": {
+    "value": "For DLG: day-long sessions (6 hours or more) crowd the mobile calendar grid; this brings the web All Day banner to the app.",
+    "source": "EP-57332 description; Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view"
+   },
+   "deps": {
+    "value": "Mobile calendar view EP-52201 (no-results state, overlap layout); grid range story EP-57330 (all-day sessions excluded from the range); web specification EP-57098 and its Confluence page; linked with EP-57291. Risk: part of the 14 Oct DLG mobile delivery, which EP-52201 comments already describe as tight.",
+    "source": "EP-57332 description; links (Gantt End to End: EP-52201, EP-57330, EP-57291); EP-52201 comment 2026-09-21 by Przemysław Wrzeszcz"
+   },
+   "notes": {
+    "value": "22 Sep: Android release-candidate build 1.81.2 (11862) uploaded for testing; no other status comment. Jira In Progress, due 14 Oct. 17 Sep (on EP-57330): PO amended this story so a day whose sessions are all all-day renders the 09:00-18:00 grid.",
+    "source": "EP-57332 comment 2026-09-22 by CI CD; jiraColumns; EP-57330 comment 2026-09-17 by Taimoor Zulfiqar"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "named": [
+    {
+     "client": "DLG Agritechnica",
+     "quote": "In high-density events like DLG Agritechnica, sessions such as \"Robotics Live Arena: Daily Robotic Live Demonstration\" run from 09:00–18:00 on every event day.",
+     "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view"
+    }
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view",
+    "title": "All Day Session in calendar view",
+    "read": true,
+    "note": "Web specification (status Discovery, effort estimate M, platform Web); names DLG Agritechnica and the DLG G3 prototype."
+   }
+  ],
+  "gaps": []
+ },
+ {
+  "id": "p04",
+  "key": "EP-57330",
+  "fields": {
+   "why": {
+    "value": "For DLG: attendees should see the programme on load in the mobile calendar, without scrolling through empty hours.",
+    "source": "EP-57330 description; Jira Reported by DLG, Pipedrive 81808"
+   },
+   "deps": {
+    "value": "Mobile calendar view EP-52201 (no-results state, card rendering across midnight) and all-day banner EP-57332 (all-day sessions excluded from the range). Risk: shares the 14 Oct DLG mobile delivery.",
+    "source": "EP-57330 description; links (Gantt End to End: EP-57332); jiraColumns due 2026-10-14"
+   },
+   "notes": {
+    "value": "17 Sep: PO ruled that an empty day, or an all-empty 3-day block, shows a fixed 09:00-18:00 grid; midnight and all-day rules added to the criteria. 21-22 Sep: Android builds 1.81.2 (11839, 11859) uploaded for testing. Jira In Progress, due 14 Oct.",
+    "source": "EP-57330 comment 2026-09-17 by Taimoor Zulfiqar; EP-57330 comments 2026-09-21 and 2026-09-22 by CI CD; jiraColumns"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "named": []
+  },
+  "pages": [],
+  "gaps": [
+   "client: no client named in description or comments beyond Jira Reported by",
+   "pages: no Confluence links in description or comments"
+  ]
+ },
+ {
+  "id": "p05",
+  "key": "EP-57291",
+  "fields": {
+   "why": {
+    "value": "For DLG: the app needs the web's Language and Location session filters so the same filters give the same results on mobile.",
+    "source": "EP-57291 description; Jira Reported by DLG, Pipedrive 81808"
+   },
+   "deps": {
+    "value": "Same event data and option sets as the web filters; related EP-57882; linked with calendar view EP-52201 and EP-57332 (filters drive the calendar grid). iOS filters sub-task EP-57557 was assigned to an Android developer and reassigned to the iOS side on 23 Sep. Risk: due 14 Oct with little time logged so far.",
+    "source": "EP-57291 description; links; EP-52201 comment 2026-09-23 by Przemysław Wrzeszcz; jiraColumns (spentDays 0.42, due 2026-10-14)"
+   },
+   "notes": {
+    "value": "21 Sep: iOS and Android designs linked. 23 Sep (on EP-52201): iOS filters sub-task EP-57557 reassigned to an iOS developer. Jira In Progress, due 14 Oct.",
+    "source": "EP-57291 comment 2026-09-21 by Taimoor Zulfiqar; EP-52201 comment 2026-09-23 by Przemysław Wrzeszcz; jiraColumns"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "named": []
+  },
+  "pages": [],
+  "gaps": [
+   "client: no client named in description or comments beyond Jira Reported by",
+   "pages: no Confluence links (only Figma links) in description or comments"
+  ]
+ },
+ {
+  "id": "p06",
+  "key": "EP-55315",
+  "fields": {
+   "why": {
+    "value": "Views and clicks on sponsored cards in the app are never counted, so sponsor statistics undercount sponsors on app-heavy events.",
+    "source": "EP-55315 description"
+   },
+   "deps": {
+    "value": "Must follow the documented slider counting rules and match the web fix EP-55280; events must flow into the same statistics pipeline as web (admin Sponsorship statistics and exports, sponsor Interactions Dashboard). Open questions: the agreed mobile equivalent of a page refresh (session), and whether meet/message taps on the exhibitor page are tracked (asked 18 Jul, unanswered). Risk: sponsor performance stays under-reported while delayed.",
+    "source": "EP-55315 description; EP-55315 comment 2026-07-18 by Taimoor Zulfiqar; Confluence https://expoplatform.atlassian.net/wiki/spaces/ExpoDoc/pages/685998293"
+   },
+   "notes": {
+    "value": "18 Jul: meeting and message tracking removed from scope (app slider cards only have a Favourite button); PO's question on exhibitor-page meet/message tracking has no reply. Jira Open, no due date.",
+    "source": "EP-55315 comments 2026-07-17 by Oleksandr Yelfutin and 2026-07-18 by Taimoor Zulfiqar; jiraColumns"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": null,
+   "named": []
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/ExpoDoc/pages/685998293",
+    "title": "Sponsor Statistics for Organiser",
+    "read": true,
+    "note": "Documents the statistics pages and the slider view-counting rules; no client named, no estimate."
+   }
+  ],
+  "gaps": [
+   "estimate: no Jira original estimate (null) and no comment or page gives one",
+   "client: no client named anywhere; reported as INTERNAL"
+  ]
+ },
+ {
+  "id": "p07",
+  "key": "EP-55900",
+  "fields": {
+   "why": {
+    "value": "ParamPOS can no longer process payments, so Turkish-market events (reported by Beauty Istanbul) have lost card payments.",
+    "source": "EP-55900 description; EP-55900 comment 2026-09-08 by Oleksiy Leshchenko; Jira Reported by BeautyIstanbul"
+   },
+   "impact": {
+    "value": "Organisers of events taking Turkish card payments and their registrants: card payment at checkout is restored through Iyzico, with registrants marked paid and transaction records created as for Stripe and PayPal, and a clear error when payment fails.",
+    "source": "EP-55900 description (user story and acceptance criteria); EP-55900 comment 2026-09-08 by Oleksiy Leshchenko"
+   },
+   "estimate": {
+    "value": "8d (Jira original estimate)",
+    "source": "jiraColumns.aggOrigDays = 8 (note: the 8 Sep comment says stories 1-5 are still to be sized once the integration model is chosen)"
+   },
+   "notes": {
+    "value": "8 Sep: preliminary investigation done, no code written; recommends Iyzico's hosted Checkout Form. PO agreed to the Checkout Form, keep existing installment logic, and leave technical design to developers. Merchant account, sandbox and webhook signing still to be requested. Jira Open.",
+    "source": "EP-55900 comments 2026-09-08 by Oleksiy Leshchenko and Taimoor Zulfiqar; jiraColumns"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "BeautyIstanbul"
+   ],
+   "pipedrive": "11798",
+   "named": []
+  },
+  "pages": [],
+  "gaps": [
+   "client: no client named in description or comments beyond Jira Reported by (description says 'Organizer running events with Turkish card payments')",
+   "pages: no Confluence links (only Iyzico developer documentation)"
+  ]
+ }
+]

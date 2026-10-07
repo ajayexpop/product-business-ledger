@@ -1,0 +1,2210 @@
+{
+"features": [
+{
+"id": "comms-chat-comments-2023q1",
+"theme": "comms",
+"q": "2023-Q1",
+"title": "Chat and comments improvements",
+"benefit": "Reply to comments live in feeds and groups, and manage several chats at once on the web.",
+"what": "Comments in Feed and Groups update live and support replies. Web chat windows minimise to a tab with unread badges, and exhibitors see their own team members first when creating a group chat.",
+"detail": "Comments in Feed and Groups update live and support replies. Web chat windows can be minimised to a tab with unread badges, and exhibitors see their team members first when creating group chats.",
+"stories": [
+"EMEA: Header of chat is fixed on the web version",
+"Comments and Likes functionality v.1.1 (Live comments and Replies) || Feed & Groups",
+"Able to add team members to group chat"
+]
+},
+{
+"id": "web-seo-tracking-2023",
+"theme": "web",
+"q": "2023-Q2",
+"title": "Website SEO and form tracking improvements",
+"benefit": "Event websites are easier for search engines to read, and form analytics record only genuine submissions.",
+"what": "Every website page has an H1 heading, markup errors reported by the W3C validator are fixed and internal links are crawlable. Form tracking codes fire only when a form passes validation and submits.",
+"detail": "Every page now has an H1 heading, page markup errors reported by the W3C validator were fixed and internal links were optimised for search. Form tracking codes fire only after a form passes validation and submits successfully.",
+"stories": [
+"Write H1 for all pages on the website",
+"Fixing problems with page layout",
+"Optimize SEO with links (Add LinkWrapper)",
+"Codes for the form "
+]
+},
+{
+"id": "comms-multilingual-marketing-emails",
+"theme": "comms",
+"q": "2023-Q2",
+"title": "Multilingual marketing emails",
+"benefit": "Send marketing emails in each recipient’s chosen language.",
+"what": "Email sender and campaign templates have a language selector, so organisers can write each marketing email per language. Recipients get the version in their selected language, or the default language.",
+"detail": "Email sender and campaign templates can be written per language, and recipients receive the version in their selected language, falling back to the default language.",
+"stories": [
+"Multi-Language Email templates - Marketing"
+]
+},
+{
+"id": "web-new-builder-launch",
+"theme": "web",
+"q": "2023-Q3",
+"title": "New website builder",
+"benefit": "Build event websites in a new visual builder with site-wide styling, custom headers and footers, and mobile-ready pages.",
+"what": "A new visual website builder has a main menu for blocks, pages, device previews, languages, history, global settings, save and publish, plus site-wide fonts, colours, buttons, favicon, SEO and custom headers and footers.",
+"detail": "A main menu gives access to blocks, pages, device previews, languages, history, global settings, save and publish. Global settings cover fonts (including uploaded fonts), colours, buttons, favicon and SEO; the header and footer include logo, navigation, search and calls to action. Each event can switch between the old and new builders.",
+"stories": [
+"Main menu of the Website builder",
+"Main menu - Add block",
+"Main menu - Global settings",
+"Mobile adaptation",
+"Two Website builders on the Platform",
+"Header & Footer",
+"Update header"
+]
+},
+{
+"id": "web-events-listing-2023",
+"theme": "web",
+"q": "2023-Q3",
+"title": "Events page improvements",
+"benefit": "Visitors see clearer event dates and a tidier filter bar on the events listing.",
+"what": "Event date ranges on the events listing use compact formats for events within one month, across two months or across two years. The filter reset button appears only when filters are applied.",
+"detail": "Event date ranges use compact formats for events within one month, across two months or across two years. The filter reset button appears only when filters are applied.",
+"stories": [
+"New dates format for the events on the front",
+"Reset button should be shown only if we have some filters applied "
+]
+},
+{
+"id": "comms-email-nurturing",
+"theme": "comms",
+"q": "2023-Q3",
+"title": "Email nurturing content blocks",
+"benefit": "Add personalised recommendations, meetings, messages and activity to campaign emails.",
+"what": "Campaign email variables show recommended exhibitors, products, sessions and news as cards with meeting, message and favourite actions, plus incoming meetings, unanswered chats, activity counts and a sign-in link to the profile.",
+"detail": "Campaign email variables show recommended exhibitors, products, sessions and news as cards with meeting, message and favourite actions, plus incoming meetings, unanswered chats and activity counts. A profile link variable signs recipients in, and templates were rolled out to all events.",
+"stories": [
+"Recommended exhibitors variable redesign",
+"Recommended Products variable redesign",
+"Recommended Sessions variable redesign",
+"Recommended News variable redesign",
+"Variables with pictures and value",
+"Incoming meeting variable",
+"Incoming messages variable",
+"Variable for moving to profile",
+"Decrease the size of the incoming messages variable",
+"View of the cards in the emails",
+"Implement templates for all events",
+"Adjust the outlook of the variable"
+]
+},
+{
+"id": "comms-messenger-improvements-2023q3",
+"theme": "comms",
+"q": "2023-Q3",
+"title": "Messenger improvements",
+"benefit": "Filter chats by who started them and by meeting status, and chat comfortably on mobile web.",
+"what": "Messenger has filters for who started a chat and for the meeting status between the two sides. On mobile web, private chat has a back-to-list button, a fixed header and a fixed message input.",
+"detail": "Messenger gains filters for who initiated a chat and for meeting status. On mobile web, private chat has a back-to-list button and a fixed header and input.",
+"stories": [
+"New filters for Messenger",
+"Messenger mobile view (web)"
+]
+},
+{
+"id": "comms-segmented-push-notifications",
+"theme": "comms",
+"q": "2023-Q3",
+"title": "Segmented push notifications",
+"benefit": "Target admin notifications by profile attributes or by what attendees have in their schedule.",
+"what": "Admin notifications can target users by advanced profile filters, or by what they have in their schedule: a particular session, exhibitor event, type, track or tag.",
+"detail": "Organisers send notifications to users matching advanced profile filters, or who have scheduled a particular session, exhibitor event, type, track or tag.",
+"stories": [
+"Segmentation of Push Notifications"
+]
+},
+{
+"id": "web-dynamic-blocks",
+"theme": "web",
+"q": "2023-Q4",
+"title": "Content and dynamic blocks",
+"benefit": "Add ready-made blocks that show exhibitors, products, brands, sponsors, speakers, sessions and news straight from event data.",
+"what": "The website builder has static content blocks (text, media, cards, testimonials, countdown, app download, FAQ) and dynamic blocks for exhibitors, products, brands, sponsors, speakers, sessions and news taken from event data.",
+"detail": "A library of static content blocks covers text, media, cards, testimonials, countdown, app download and FAQ. Dynamic blocks display as sliders or static grids, with filters such as category, tag or specific items, plus sorting, cards per row and style settings.",
+"stories": [
+"Blocks - Content",
+"Exhibitors block",
+"Products block",
+"News block",
+"Brands block",
+"Sponsors block",
+"Speakers block",
+"Session block"
+]
+},
+{
+"id": "web-display-updates-2023",
+"theme": "web",
+"q": "2023-Q4",
+"title": "Attendee widget and X branding",
+"benefit": "Show a rotating set of attendees on the website, and see the updated X logo and name in the main places social links appear.",
+"what": "An attendee widget shows a rotating selection of attendee cards without meeting, message or favourite buttons. The Twitter logo and name are updated to X in the email builder, registration pages, profiles and exhibitor services.",
+"detail": "An attendee widget shows a rotating set of attendee cards without interaction buttons. The Twitter logo and name were updated to X in the email builder, registration pages, profiles and exhibitor services.",
+"stories": [
+"Attendee List Changes | Widgetview Changes",
+"Twitter logo and text update MVP places"
+]
+},
+{
+"id": "web-media-gallery",
+"theme": "web",
+"q": "2023-Q4",
+"title": "Media gallery and builder switch",
+"benefit": "Store and organise website images, videos and files in one gallery, and turn the new builder on per event.",
+"what": "The website builder gallery stores images, videos and files with uploads, nested folders, sorting, gallery and list views, video conversion, and rename, preview and move actions. Settings control when the new builder is used.",
+"detail": "The gallery supports uploads, nested folders, sorting, gallery and list views, video conversion, and renaming, previewing and moving files. A module setting and an event setting control when the new builder is used.",
+"stories": [
+"Main menu - Gallery button",
+"API",
+"Setting to enable / disable the new Website builder"
+]
+},
+{
+"id": "comms-campaigns-refresh",
+"theme": "comms",
+"q": "2023-Q4",
+"title": "Campaigns refresh",
+"benefit": "Manage email campaigns in a redesigned area with duplication, warnings and clearer statistics.",
+"what": "The campaigns list and campaign page are redesigned with filters, empty states and statistics. Organisers can duplicate campaigns, are warned about unsaved changes or empty templates, and see export data only after a send.",
+"detail": "The campaigns list and campaign page were redesigned with filters, empty states and statistics. Organisers can duplicate campaigns, are warned about unsaved changes or empty templates, and export data only appears once a campaign has been sent.",
+"stories": [
+"Campaigns refresh (1st iteration)",
+"Campaigns refresh (2nd iteration)",
+"Hide Export data if there was no send-out"
+]
+},
+{
+"id": "comms-message-limits",
+"theme": "comms",
+"q": "2023-Q4",
+"title": "Email message count setting",
+"benefit": "Choose how many unanswered messages appear in each recipient's nurturing email.",
+"what": "A setting in the email recommendations panel lets organisers choose how many incoming messages, up to ten, the incoming messages variable shows in each recipient's email.",
+"detail": "Organisers set how many messages, up to ten, the incoming messages variable shows in each recipient's email.",
+"stories": [
+"Setting for determining the number of messages "
+]
+},
+{
+"id": "web-language-consent-2024",
+"theme": "web",
+"q": "2024-Q1",
+"title": "Browser language detection",
+"benefit": "Websites open in the visitor's browser language when the site offers it.",
+"what": "The website language selector defaults to the visitor's browser language when the site offers it, and visitors can still switch language manually.",
+"detail": "The language selector defaults to the visitor's browser language when the site supports it, and visitors can still switch manually.",
+"stories": [
+"Changing Website Language Based on Browser's Language",
+"Consent mode for corp site"
+]
+},
+{
+"id": "web-rich-content-2024",
+"theme": "web",
+"q": "2024-Q1",
+"title": "Rich content and text editing",
+"benefit": "Build free-form page sections with a full text editor, title blocks and custom HTML that can run scripts.",
+"what": "A Custom Content block offers backgrounds, overlays and a rich-text editor with tables, columns, images and YouTube. Text modules have a WYSIWYG editor, a Title & Subtitle block has six layouts and custom HTML can run JavaScript.",
+"detail": "A Custom Content block offers backgrounds, overlays and a rich-text editor with tables, columns, images and YouTube. Text modules gain a WYSIWYG editor, a Title & Subtitle block comes in six layouts, and custom HTML blocks can run JavaScript.",
+"stories": [
+"Webbuilder stage3. Title and Subtitle block",
+"Custom content (by Ajay)",
+"Part 2 - Improve Text Editor in the New Website Builder",
+"Add ability to run js scripts in the custom HTML block"
+]
+},
+{
+"id": "comms-badge-codes-in-emails",
+"theme": "comms",
+"q": "2024-Q1",
+"title": "Badge codes in emails",
+"benefit": "Include each recipient’s badge barcode and QR code in campaign and buyer emails.",
+"what": "Badge barcode and QR code variables are available in campaign emails and in the buyer acceptance email, showing each recipient's internal or external badge code for the check-in app to scan.",
+"detail": "Badge barcode and QR code variables are available in campaign emails and in the buyer acceptance email, showing internal or external badge codes that the check-in app can scan.",
+"stories": [
+"Please add badge BAR & QRcode variable for Campaigns",
+"Possibility to insert the Badge Bar Code & Badge QR Code variable to Buyer Accept email template."
+]
+},
+{
+"id": "comms-company-job-title-user-cards",
+"theme": "comms",
+"q": "2024-Q1",
+"title": "Company and job title on cards",
+"benefit": "See who people are at a glance, with company and job title on user cards across web and app.",
+"what": "Participant cards in community, team members, meetings, messenger, profiles and sessions show company name and job title, on the web and in the mobile app.",
+"detail": "Participant cards in community, team members, meetings, messenger, profiles and sessions show company name and job title on the web and in the mobile app.",
+"stories": [
+"Enhancing User Card Information with Company Name & Job Title (WEB)",
+"Enhancing User Card Information with Company Name & Job Title (APP)"
+]
+},
+{
+"id": "web-multilingual-sites",
+"theme": "web",
+"q": "2024-Q2",
+"title": "Multilingual websites",
+"benefit": "Run the same website in several languages, keeping page structure in sync while translating the text of each version.",
+"what": "Website blocks are shared across language versions with independent text, so each language keeps the same structure. A language can be desynced and later restored, and favourite blocks make common content quicker to add.",
+"detail": "Blocks are shared across language versions with independent text by default; organisers can desync a language and later restore it. Favourite blocks and an extra blocks section make frequently used content quicker to add.",
+"stories": [
+"Part 2 - Multilanguage"
+]
+},
+{
+"id": "web-editing-controls-2024",
+"theme": "web",
+"q": "2024-Q2",
+"title": "Website builder editing controls",
+"benefit": "Control autosave, video autoplay and special link types while building pages.",
+"what": "Autosave in the site builder is off by default and can be turned on. Every video block has an autoplay setting, and links support mailto, tel and on-page anchor types.",
+"detail": "Autosave in the builder is off by default and can be turned on, every video block has an autoplay setting, and links in blocks support mailto, tel and anchor links.",
+"stories": [
+"Disable autosave in the site builder",
+"Add addition settings to all video blocks, autoplay true/false",
+"[sitebulder] Add support special links to the links"
+]
+},
+{
+"id": "comms-email-group-improvements-2024q2",
+"theme": "comms",
+"q": "2024-Q2",
+"title": "Email sender and group search improvements",
+"benefit": "Send activation links from the email sender and see your active search and filters in Groups.",
+"what": "An Activation Link variable in the email sender takes recipients to their profile and activates it. The Groups tab shows the active search term and filters, as other sections already do.",
+"detail": "An Activation link variable in the email sender opens and activates the recipient's profile, and the Groups tab shows the active search term and filters.",
+"stories": [
+"Add Activation link variable in email sender",
+"Filter for the search query in Group tab"
+]
+},
+{
+"id": "web-custom-forms",
+"theme": "web",
+"q": "2024-Q3",
+"title": "Custom forms and pop-ups",
+"benefit": "Place marketing forms on the website inline, beside images or videos, as pop-ups or as sidebars, in several languages.",
+"what": "Form blocks embed a chosen marketing form inline, beside an image or video, as a pop-up or as a sidebar, with colour and typography settings and display triggers. A feedback pop-up collects ratings, and forms can be multilingual.",
+"detail": "Form blocks embed a chosen marketing form with colour and typography settings. Pop-up and sidebar forms support multi-column layouts and triggers such as exit intent, delay, scroll or page count. A feedback pop-up collects emoji or star ratings with comments, and forms can be multilingual and split into steps.",
+"stories": [
+"Custom form 1 (simple)",
+"Custom form (with image/ video)",
+"Custom form (pop-up)",
+"Custom form (sidebar)",
+"Feedback Form (Popup)",
+"Multilingual custom forms",
+"Add step controls for FormBulider ",
+"Add external controls for FormBuilder tabs"
+]
+},
+{
+"id": "web-builder-improvements-2024q3",
+"theme": "web",
+"q": "2024-Q3",
+"title": "Banners, page slugs and event cloning",
+"benefit": "Add rotating banners, see page slugs at a glance and keep the website when cloning an event.",
+"what": "A Banner block shows several linked banners in three sizes with timed rotation. The page list shows each page's address slug, and cloning an event copies its new-builder website.",
+"detail": "A Banner block shows several linked banners in three sizes with timed rotation. The page list shows each page's slug, and cloning an event copies its new-builder website.",
+"stories": [
+"New Website Builder: Adding Banners as OLD website",
+"add slug to the page list",
+"Transferring new website builder when cloning an event"
+]
+},
+{
+"id": "web-custom-css-html-2024",
+"theme": "web",
+"q": "2024-Q3",
+"title": "Custom CSS and HTML controls",
+"benefit": "Fine-tune the website's look with editable custom CSS and full-screen custom HTML.",
+"what": "Organisers can edit the old builder's global CSS from the custom CSS window, custom CSS supports pseudo-classes such as hover, custom HTML can show full screen, and anchor IDs and custom CSS pass to the header and footer.",
+"detail": "Existing custom CSS can be edited, custom CSS supports pseudo-classes, custom HTML can be shown full screen, and anchor IDs and custom CSS pass through to the header and footer.",
+"stories": [
+"Add ability to edit old CSS",
+"[site builder] Add to the custom CSS support for pseudo-class",
+"[site builder] add the ability to show in full-screen custom HTML",
+"Pass anchor id, custom css to header and footer from sitebuilder"
+]
+},
+{
+"id": "web-embeddable-widgets",
+"theme": "web",
+"q": "2024-Q3",
+"title": "Embeddable portal widgets",
+"benefit": "Embed portal widgets in other websites with frames that resize to fit their content.",
+"what": "In widget mode the portal reports its content height to the page that embeds it, and the frame is tracked for the session so its height stays correct.",
+"detail": "In widget mode the portal reports its height to the host page, and the frame is tracked across the session so the height stays correct.",
+"stories": [
+"[iframe height] Add ability to get height in the widgets mode for portal UI",
+"Keep iframe id in session storage to observe height"
+]
+},
+{
+"id": "web-team-editing",
+"theme": "web",
+"q": "2024-Q3",
+"title": "Real-time team editing",
+"benefit": "Several admins can edit the same website at once and see who is working where.",
+"what": "The website builder shows who else is working, updates changes live, locks a block while someone edits it, shares autosave and warns before a version is restored.",
+"detail": "The builder shows active users, updates live, locks a block while someone edits it, shares autosave and warns before a version is restored.",
+"stories": [
+"Part 2 - Team work"
+]
+},
+{
+"id": "comms-campaign-editor-redesign",
+"theme": "comms",
+"q": "2024-Q3",
+"title": "Campaign and email editor redesign",
+"benefit": "Edit campaign variables as tags and get save confirmations in every email template editor.",
+"what": "Campaign variables appear as tags with settings behind a gear icon, with a sender details section and clearer statistics. Unsaved-changes warnings and save confirmations cover all admin email template editors.",
+"detail": "Campaign variables appear as tags with settings behind a gear icon, with a sender details section and clearer statistics. Unsaved-changes warnings and save confirmations extend to all admin email template editors.",
+"stories": [
+"Additional tasks to Campaign redesign (2nd iteration)",
+"Implement Registration Emails Template Save Confirmation Popup"
+]
+},
+{
+"id": "comms-networking-list-filters",
+"theme": "comms",
+"q": "2024-Q3",
+"title": "Networking filters for lists",
+"benefit": "Filter attendee and exhibitor lists by existing chats and meetings.",
+"what": "Delegate, speaker, buyer, exhibitor, pavilion and product lists can be filtered by existing chats, by who started meetings and by meeting status. Organisers switch the filters on in display filters.",
+"detail": "Delegate, speaker, buyer, exhibitor, pavilion and product lists can be filtered by existing chats, by who initiated meetings and by meeting status, configured in display filters.",
+"stories": [
+"Networking Filters for Attendee and Exhibitor Lists (chat filter)) ",
+"Networking Filters for Attendee and Exhibitor Lists"
+]
+},
+{
+"id": "web-block-design-2024",
+"theme": "web",
+"q": "2024-Q4",
+"title": "Card and block design improvements",
+"benefit": "Arrange and style cards more freely, with more FAQs, consistent image ratios and better link handling.",
+"what": "Cards in card-row and counter blocks can be reordered by drag and drop, FAQ blocks take more than eight questions and images use a chosen aspect ratio. News and sponsor cards have rounded corners.",
+"detail": "Cards in card rows and counter blocks can be reordered by drag and drop, FAQ blocks allow more than eight questions, and images use a chosen aspect ratio. News and sponsor cards have rounded corners, testimonial shadows are lighter, carousel buttons align per card, and icons can open platform and external links.",
+"stories": [
+"Reduce the size of the shadow",
+"Make the News and sponsor cards’ corners rounded in the new website builder.",
+"Phase 3 New Builder - Ability to add more than 8 FAQs in the New web builder",
+"Re-arrangement of Cards within Selected Blocks in Website Builder",
+"[sitebuilder]: Text & video & button",
+"Content Blocks: Image Asset Dimensions",
+"[New Website Builder] Change buttons aligning logic in Сards Carousel block",
+"Add the ability to open platform links and external links by clicking on the icon and fix typing "
+]
+},
+{
+"id": "web-popups-logos-2024",
+"theme": "web",
+"q": "2024-Q4",
+"title": "Pop-ups, social links and logo controls",
+"benefit": "Show custom HTML as a pop-up, pin social links to the page edge and control where header and footer logos link.",
+"what": "Custom HTML can appear as a pop-up with display triggers, auto-close and per-device settings. A social links block sits on the page edge, and header and footer logos can be static or link to any URL.",
+"detail": "Custom HTML pop-ups have display triggers, auto-close and per-device settings. A social links block attaches to the left or right edge. Header and footer logos can be static or link to any URL. Custom domain setup explains SSL certificate options.",
+"stories": [
+"Introduce Custom Pop up check box on New web builder just like the legacy",
+"[site builder] create a block with social links which should be attached to right/left border",
+"Enhanced Control for Header and Footer Logos",
+"Add warning text to admin portal"
+]
+},
+{
+"id": "comms-campaign-sending-chat-limits",
+"theme": "comms",
+"q": "2024-Q4",
+"title": "Bulk campaign sending and chat limits",
+"benefit": "Large campaign send-outs reach every selected recipient in one action, and a daily limit slows anyone starting new chats too quickly.",
+"what": "Campaigns send to every selected recipient in one action, without duplicates, as shown in campaign statistics. A daily limit on starting new chats applies to all users and events and tells users when they can try again.",
+"detail": "Campaigns reach all selected recipients without duplicates in a single send, visible in campaign statistics. A daily limit on starting new chats applies to all users and events, telling users when they can try again.",
+"stories": [
+"Limits on creating chats",
+"Email campaign is not sent out to multiple recipients"
+]
+},
+{
+"id": "comms-multilingual-admin-notifications",
+"theme": "comms",
+"q": "2024-Q4",
+"title": "Multilingual admin notifications",
+"benefit": "Send admin notifications in each user’s language, including to app users who are not logged in.",
+"what": "Organisers write notification titles and messages per language with a fallback language. Web users get them in their profile language, app users in their device language, and pushes can reach app users who are not logged in.",
+"detail": "Organisers write notification titles and messages per language with a fallback language; users receive them in their profile or app language. Push notifications can also reach app users who are not logged in, opening a chosen page.",
+"stories": [
+"Multilanguage Admin Notifications",
+"Multilanguage Admin Notifications (for non-logged-in user)"
+]
+},
+{
+"id": "web-seo-custom-pages",
+"theme": "web",
+"q": "2025-Q1",
+"title": "SEO for custom pages",
+"benefit": "Custom pages built in the website builder are rendered for search engines, with configurable headings and image alt text.",
+"what": "Content, dynamic, header and footer blocks on builder pages render in the server response, apart from pop-up forms, with configurable H1 to H6 heading tags, semantic section elements, image alt text and working buttons.",
+"detail": "Content, dynamic, header and footer blocks render in the server response, apart from pop-up forms, with configurable H1–H6 heading tags, semantic section elements, image alt text and working buttons.",
+"stories": [
+"Add alt attribute to all images in builder blocks",
+"Change div to section in root elements.",
+"Intro Block",
+"2 / 3 / 4 Cards Row",
+"Cards with icon",
+"Cards with Counter",
+"Download App",
+"FAQ",
+"Heading & text & image & button",
+"Image Gallery",
+"Text List",
+"Testimonials",
+"Carousel",
+"Cards Carousel",
+"Countdown",
+"Text & video & button",
+"Text & iframe & button",
+"Dev / Text editor",
+"Dev / Custom HTML",
+"Title & Subtitle",
+"Dynamic / Brands",
+"Dynamic / Exhibitor",
+"Dynamic / News",
+"Dynamic / Products",
+"Dynamic / Sessions",
+"Dynamic / Speakers",
+"Dynamic / Sponsors",
+"Text Editor",
+"Banners block",
+"Header",
+"Footer",
+"Dynamic / Custom Form",
+"Heading for SEO"
+]
+},
+{
+"id": "web-block-updates",
+"theme": "web",
+"q": "2025-Q1",
+"title": "Block versioning and updates",
+"benefit": "Keep website blocks up to date, updating one block or a whole page after reviewing what has changed.",
+"what": "Website blocks are versioned. Outdated blocks show an indicator, a single update lists the changes before you confirm, and a bulk update applies across a page.",
+"detail": "Blocks are versioned; outdated blocks show an indicator, single updates list the changes before confirming and bulk updates apply across a page.",
+"stories": [
+"Block versioning",
+"Webbuilder. Update mechanism for existing blocks"
+]
+},
+{
+"id": "web-server-rendered-pages",
+"theme": "web",
+"q": "2025-Q1",
+"title": "Search-friendly event pages",
+"benefit": "Key event website pages, such as community, exhibitor, product, session and news article pages, now return their content for search engines.",
+"what": "Community, events, news, brand, exhibitor, participant, product, session, group, manual, marketplace and floor plan pages move to a new framework, many returning their content from the server, keeping existing blocks and actions.",
+"detail": "Community, events, news, content, brand, exhibitor, participant, product, session, group, manual, marketplace and floor plan pages moved to a new framework, keeping their blocks and actions. Community, events, brand, exhibitor, product, session and news article pages return their content from the server, as do custom text and HTML.",
+"stories": [
+"Community page - /community",
+"Events page - /events",
+"News page - /news",
+"News single page - /news/[id]",
+"Marketing content page - /content/[id]",
+"Brand page - /brand/[id]",
+"Exhibitor page - /exhibitor/[id]",
+"Participant single page - /participant/[id]",
+"Floor plan - general view",
+"Floor plan - Hall view",
+"Groups page",
+"Manual page - /manual/[id]",
+"Marketplace page",
+"Participants page - /participants",
+"Product single page",
+"Session single page - /sessions/[id]",
+"Group single page - /groups/[id]",
+"[next14] render custom text and HTML on the server side"
+]
+},
+{
+"id": "web-page-access",
+"theme": "web",
+"q": "2025-Q1",
+"title": "Visibility and page access",
+"benefit": "Choose who sees each link and button and who can open each custom page.",
+"what": "Header and footer links and block buttons can be shown to everyone, to logged-in or to logged-out visitors. A page access tab controls who can open each custom page.",
+"detail": "Header and footer links and block buttons can be shown to everyone, logged-in or logged-out visitors, and a page access tab controls access to each custom page.",
+"stories": [
+"Website builder. Visibility Settings for Links and Buttons and Pages access"
+]
+},
+{
+"id": "web-builder-improvements-2025q1",
+"theme": "web",
+"q": "2025-Q1",
+"title": "Website builder improvements",
+"benefit": "Cleaner page URLs, linkable card images, adjustable header menu font size and smoother page and news editing.",
+"what": "Custom page URLs no longer include /page, slugs can be typed in full before validation, and card images can link to a URL. Header menu items have a font size slider, and news paging is kept after approvals.",
+"detail": "Custom page URLs drop the /page segment, slugs can be changed before validation, and images in card rows and carousels can link to a URL. Header menu items have a font size slider with overflow into Show More. Legacy colour settings are hidden when the new builder is on, font key errors are shown, and news paging is kept after approvals.",
+"stories": [
+"Hide color settings from legacy admin panel when new site builder enabled",
+"New web builder - Ability to add links in images for 2, 3, 4 card rows & carousel ",
+"Remove /page part from urls of custom pages in new website builder",
+"[admin-ui] site builder add ability to change slub and input all data before make validation",
+"To keep “news items per page” and “page number” fixed after approving a news item in the back-end",
+"Show rest of google api key errors",
+"Font Size Customization for Header Menu Items"
+]
+},
+{
+"id": "comms-longer-group-descriptions",
+"theme": "comms",
+"q": "2025-Q1",
+"title": "Longer group descriptions",
+"benefit": "Describe community groups more clearly with longer short descriptions.",
+"what": "The character limit for community group short descriptions is raised from 200 to 400.",
+"detail": "The character limit for community group short descriptions was raised from 200 to 400.",
+"stories": [
+"Increase the character limit for the short description in groups from 200 to 400"
+]
+},
+{
+"id": "web-header-styling-2025",
+"theme": "web",
+"q": "2025-Q2",
+"title": "Header and styling improvements",
+"benefit": "Header titles and subtitles display on mobile, and portal elements can be targeted with custom styling.",
+"what": "Header titles and subtitles show on mobile, with character limits and colour settings. The portal adds CSS classes or data attributes for user role, category and login state, for custom styling.",
+"detail": "Header titles and subtitles show on mobile with character limits and colour settings, and portal pages expose CSS classes or data attributes for custom styling.",
+"stories": [
+"Header Title and Subtitle improvements",
+"[portalUI] Add CSS class or data attribute for customer"
+]
+},
+{
+"id": "web-alt-text-sitemap",
+"theme": "web",
+"q": "2025-Q2",
+"title": "Image alt text and sitemap",
+"benefit": "Describe every website image for search engines and screen readers, with an improved sitemap.",
+"what": "Every image in the builder, including header and footer, has an optional alt text field with SEO tips and a warning when empty. The sitemap lists every builder page that logged-out visitors can see.",
+"detail": "Every image in the builder, including header and footer, has an optional alt text field with SEO tips and a warning when empty. Sitemap generation logic was updated.",
+"stories": [
+"Alt Text for Images",
+"Change logic of the sitemap generation"
+]
+},
+{
+"id": "comms-configurable-session-reminders",
+"theme": "comms",
+"q": "2025-Q2",
+"title": "Configurable session reminders",
+"benefit": "Choose when session and exhibitor event reminders are sent.",
+"what": "Organisers choose reminder times from 0 to 60 minutes before a session or exhibitor event starts, replacing fixed reminder times. Reminders apply on the web and in the app and are resent if the start time changes.",
+"detail": "Organisers pick reminder times from 0 to 60 minutes before a session or exhibitor event starts, replacing fixed reminder times, on the web and in the app.",
+"stories": [
+"Possibility to adjust time of Session reminder push notification"
+]
+},
+{
+"id": "comms-personal-assistant-emails",
+"theme": "comms",
+"q": "2025-Q2",
+"title": "Personal assistant email copies",
+"benefit": "Copy a participant’s emails to their personal assistant.",
+"what": "A Personal Assistant Email field in participant registration copies emails sent to participants, buyers and team members to the assistant's address.",
+"detail": "A Personal Assistant Email field in registration copies emails sent to participants, buyers and team members to the assistant’s address.",
+"stories": [
+"Personal Assistant Improvement"
+]
+},
+{
+"id": "web-mobile-cards-2025",
+"theme": "web",
+"q": "2025-Q3",
+"title": "Mobile layout for card rows",
+"benefit": "Four-card rows display better on mobile devices.",
+"what": "The four-card view used in system page elements stays on one row until the smallest screen breakpoint.",
+"detail": "The mobile layout of the four-card view used in system pages was adjusted.",
+"stories": [
+"[site build] Change mobile adaptive for FourCardView in system elements"
+]
+},
+{
+"id": "comms-advanced-targeting",
+"theme": "comms",
+"q": "2025-Q3",
+"title": "Advanced campaign and notification targeting",
+"benefit": "Target emails and notifications by session, round table and meeting programme activity.",
+"what": "Campaign and notification filters cover session, round table and exhibitor event attributes, profile completeness and meeting programme activity. Campaign variables show each recipient's meeting programme status and round tables.",
+"detail": "Campaign and notification filters cover session, round table and exhibitor event attributes, profile completeness and meeting programme activity. New campaign variables show each recipient's meeting programme status and assigned round tables; in notifications, meeting programme filters appear only when that module is on.",
+"stories": [
+"Advanced Filters for Admin Notifications ",
+"Advanced Filters for Campaigns ",
+"Variables for Email Campaigns",
+"Admin notification filters adjustment"
+]
+},
+{
+"id": "comms-registration-email-variables",
+"theme": "comms",
+"q": "2025-Q3",
+"title": "Registration email variables",
+"benefit": "Use any registration form field in registration email templates.",
+"what": "Registration email templates for visitors, speakers, moderators and exhibitors can use every system and custom registration form field, grouped as General, System and Custom. Leaderboard tooltips are reworded.",
+"detail": "Registration email templates for visitors, speakers, moderators and exhibitors can use all system and custom registration fields, grouped as General, System and Custom. Leaderboard tooltips were also reworded.",
+"stories": [
+"Extending the List of Available Variables for Registration Email Templates",
+"Leader board | Change the text of the tooltips"
+]
+},
+{
+"id": "comms-notification-email-improvements-2025q4",
+"theme": "comms",
+"q": "2025-Q4",
+"title": "Notification and information request improvements",
+"benefit": "Open items from the notification dropdown and ask participants for missing registration details.",
+"what": "Notifications in the dropdown menu open the related profile or session. A participant information request email template and a Send Information Request action in profiles and lists let organisers ask for missing details.",
+"detail": "Notifications in the dropdown are clickable. A participant information request email template and a Send Information Request action in participant profiles and lists let organisers request missing details.",
+"stories": [
+"[portalUI] add ability to click on the notification in the notification dropdown menu",
+"Information Request email template for participants"
+]
+},
+{
+"id": "web-custom-grids",
+"theme": "web",
+"q": "2026-Q1",
+"title": "Custom grids",
+"benefit": "Build multi-column page layouts without code, and they still look right on mobile.",
+"what": "Custom grids take one to six cells, can sit inside other grids and accept text, buttons, images and video by drag and drop. Cells resize and wrap on smaller screens, and a Buttons block adds as many styled buttons as needed.",
+"detail": "Custom grids take one to six cells, can sit inside other grids and accept text, buttons, images and video by drag and drop. Cells resize and wrap on smaller screens, and a Buttons block adds as many styled buttons as a section needs.",
+"stories": [
+"Website buider. Custom grids main functional",
+"Custom grids improvements. Improve base structure and elements placement",
+"Custom grids improvements. Change settings placement",
+"Custom grids. Improve number of columns display",
+"~Buttons Block~ - New website builder (ability to use simple components block)"
+]
+},
+{
+"id": "web-carousel-editor-2026",
+"theme": "web",
+"q": "2026-Q1",
+"title": "Carousel and text editor refinements",
+"benefit": "Carousels handle short sets of items better, and text editor controls follow their own design.",
+"what": "Carousel blocks change how they behave when there are not enough slides to swipe through. Text editor controls follow their own design instead of taking on the builder's theme.",
+"detail": "Carousel blocks change how they behave when there are not enough slides to swipe through, and text editor controls follow their intended design instead of inheriting the builder's theme.",
+"stories": [
+"[next14] Change swiper logic to carousel when not enough slides",
+"Controls for TextEditor inherit theme from Builder"
+]
+},
+{
+"id": "comms-messenger-status-filters",
+"theme": "comms",
+"q": "2026-Q1",
+"title": "Messenger conversation filters",
+"benefit": "Spot unanswered conversations at a glance.",
+"what": "Messenger has a conversation status filter: all chats, two-way chats where both sides have written, or one-way chats where only one side has. It works alongside the existing filters.",
+"detail": "Messenger filters conversations into two-way chats, where both sides have replied, and one-way chats still waiting for an answer, alongside the existing filters.",
+"stories": [
+"Messenger. Conversation status filters"
+]
+},
+{
+"id": "web-card-styling-2026",
+"theme": "web",
+"q": "2026-Q2",
+"title": "Card styling options",
+"benefit": "Give every card view borders and shadows, and hide the button on individual cards without custom CSS.",
+"what": "Card views that lacked them now have border and shadow options, and each card has a toggle to show or hide its call-to-action button.",
+"detail": "Border and shadow options were added to card views that lacked them, and each card has a toggle to show or hide its call-to-action button.",
+"stories": [
+"Add border and shadow options for individual card views",
+"Website Builder: Organizer can hide the button on individual Cards"
+]
+},
+{
+"id": "web-footer-2026",
+"theme": "web",
+"q": "2026-Q2",
+"title": "Footer layout controls",
+"benefit": "Lay out the website footer more precisely, with column alignment, text position and logo width settings.",
+"what": "Footer columns can be aligned, sized and deleted, text position has its own setting and the logo and text block width can be set. ExpoPlatform can show or hide the 'Powered by ExpoPlatform' footer branding per event.",
+"detail": "Footer columns can be aligned and deleted, text position is configurable and logo plus text width can be set. ExpoPlatform can show or hide the 'Powered by ExpoPlatform' footer branding per event.",
+"stories": [
+"Allignment of the columns in footer",
+"Add the ability to delete a column",
+"Have a new setting “Text position”",
+"Width in footer for logo + text",
+"Superadmin can toggle ExpoPlatform branding in Website Footer"
+]
+},
+{
+"id": "comms-campaign-recommendation-blocks",
+"theme": "comms",
+"q": "2026-Q2",
+"title": "Clearer recommendation blocks in emails",
+"benefit": "Send campaign emails whose recommendation blocks are full width and clearly separated.",
+"what": "Recommendation blocks for exhibitors, products, news and sponsors in campaign emails have clear boundaries and full-width card layouts, on desktop and mobile, matching the visitor-side design.",
+"detail": "Recommendation blocks in organiser campaign emails use full-width card layouts with clear boundaries, matching the visitor-side design.",
+"stories": [
+"Organizer sees recommendation blocks with full-width layout and clear boundaries in email templates within an Event"
+]
+},
+{
+"id": "web-ai-builder",
+"theme": "web",
+"q": "2026-Q3",
+"title": "AI-assisted website styling",
+"benefit": "Restyle website blocks by describing the change in plain language and let AI generate on-brand CSS.",
+"what": "Organisers describe a styling change in everyday words. The builder sends the block's structure and design tokens through a secure server-side connection, shows the generated CSS for review and applies it to that block only.",
+"detail": "Organisers describe a change in everyday words; the builder sends the block's structure and design tokens through a secure server-side connection, shows the generated CSS for review and applies it only to that block.",
+"stories": [
+"Story 5: Plain Language Prompt Interpretation",
+"Story 1: \"Describe CSS Changes\" UI Entry Point",
+"Story 2: Block HTML Snapshot Serialization",
+"Story 3: Secure Backend Proxy for AI Requests",
+"Story 4: Block-Scoped CSS Preview & Application"
+]
+},
+{
+"id": "web-tracking-links",
+"theme": "web",
+"q": "2026-Q3",
+"title": "Editable marketing tracking links",
+"benefit": "Edit the name and destination of existing tracking links without recreating and re-sharing them.",
+"what": "Each marketing tracking link has an edit action to update its name and landing page URL, with validation. The tracked link people use stays the same.",
+"detail": "Each tracking link has an edit action to update its name and landing page URL, with validation.",
+"stories": [
+"Ability to edit the tracking links"
+]
+},
+{
+"id": "web-header-2026",
+"theme": "web",
+"q": "2026-Q3",
+"title": "Header layout and mobile search",
+"benefit": "Choose header scroll behaviour and line layout, and search by category on mobile.",
+"what": "Headers can scroll with the page, stay fixed or hide while scrolling down, and links flow over up to three rows. Mobile header search shows the categories selector, and its panel pushes content down instead of covering it.",
+"detail": "Header menus gain scroll settings and a line layout. Mobile header search shows the categories selector and its panel pushes content down instead of covering it.",
+"stories": [
+"Scroll settings",
+"Line Layout",
+"CustomHeader search: show categories selector on mobile + static in-flow panel"
+]
+},
+{
+"id": "comms-custom-smtp",
+"theme": "comms",
+"q": "2026-Q3",
+"title": "Custom SMTP email sending",
+"benefit": "Send platform emails through your own SMTP service.",
+"what": "A setting lets organisers send platform emails, including registration, meeting, message, campaign and reminder emails, through their own SMTP service.",
+"detail": "A setting lets organisers use a custom SMTP service for sending emails.",
+"stories": [
+"Create setting for using custom SMPT service"
+]
+}
+],
+"claims": [
+{
+"id": "07_event_website:188",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Create / rename / clone / delete / publish / save website",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:189",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Multi-page: custom + system pages, ordering, home page, page access",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:190",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Sitemap generation",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:191",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Header/navbar: single/double line, logo shapes, sublinks, system buttons, per-layer colours",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:192",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Footer: logo, text, links, social, colours, columns, dev anchor",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:193",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Static content blocks (15 listed)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:194",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "System (dynamic) blocks — 7 types",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:195",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Custom Forms: embedded / pop-up / sidebar, triggers, CAPTCHA, fields, media",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:196",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Builder Gallery: images/videos/files, folders, crop, search, sort, pagination",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:197",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Global Settings: text styles, colours, buttons, favicon, floating social, SEO, multi-lang",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:198",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Custom Grids",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:199",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Block-level settings (general/typography/carousel/link/button/icon/video/dev/custom CSS+JS)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:200",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Block Item Filtering",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:201",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "SEO tooling (6 per-page fields)",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:202",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "robots.txt editor",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:203",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Next.js v14 SSR migration of system pages",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "07_event_website:204",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Multi-language sync/desync, 15 favourite blocks, browser detection",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:205",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Site History: list, restore, delete, user attribution",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:206",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Website Preview — Mobile/Tablet/Desktop",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:207",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "Collaboration — concurrent editors visible",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:208",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "GDPR: YouTube privacy mode, cookie classification",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:209",
+"product": "Event Website",
+"section": "§2 Scope — Included",
+"claim": "AI-Assisted Website Builder Phase I (EP-52646, in progress)",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:215",
+"product": "Event Website",
+"section": "§2 Scope — Excluded",
+"claim": "Backend entity management out of scope",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:216",
+"product": "Event Website",
+"section": "§2 Scope — Excluded",
+"claim": "Mobile app interface out of scope",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:217",
+"product": "Event Website",
+"section": "§2 Scope — Excluded",
+"claim": "Registration form logic / payments out of scope",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:218",
+"product": "Event Website",
+"section": "§2 Scope — Excluded",
+"claim": "Email template builder out of scope",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:219",
+"product": "Event Website",
+"section": "§2 Scope — Excluded",
+"claim": "Custom domain / DNS out of scope",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:220",
+"product": "Event Website",
+"section": "§2 Scope — Excluded",
+"claim": "Paid GA4 / analytics config out of scope",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:221",
+"product": "Event Website",
+"section": "§2 Scope — Excluded",
+"claim": "CMS blog authoring / approval pipelines out of scope",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:227",
+"product": "Event Website",
+"section": "§3 Roles",
+"claim": "Organizer full builder access",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:228",
+"product": "Event Website",
+"section": "§3 Roles",
+"claim": "Super Admin toggles New Website Builder in Module Management",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:229",
+"product": "Event Website",
+"section": "§3 Roles",
+"claim": "\"The new builder is on by default\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "07_event_website:230",
+"product": "Event Website",
+"section": "§3 Roles",
+"claim": "TAM / Developer as distinct roles",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "07_event_website:231",
+"product": "Event Website",
+"section": "§3 Roles",
+"claim": "Exhibitor / Sponsor / Attendee / Speaker have no builder access",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:232",
+"product": "Event Website",
+"section": "§3 Roles",
+"claim": "Page Access All / Logged / Unlogged",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:238",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Publish applies to all pages simultaneously",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:239",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Save creates a draft; Publish makes it live",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "07_event_website:240",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Save creates a Site History entry; autosave too",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:241",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Restore creates a new history entry",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:242",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Custom CSS/JS excluded from cloning (website *and* event)",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:243",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Dynamic blocks show only active entities",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:244",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Filter OR within type, AND between types",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:245",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Desync Reset overwrites all languages with the main language",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:246",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Page Access Unlogged hides page from authenticated users",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:247",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Cookie consent must classify token/fingerprint/PHPSESSID as Necessary",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "07_event_website:248",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "YouTube embeds must use Privacy-Enhanced Mode",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:249",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Website name is internal only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:250",
+"product": "Event Website",
+"section": "§7 Business Rules",
+"claim": "Block not visible if filters return zero results",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:258",
+"product": "Event Website",
+"section": "§9 Permissions",
+"claim": "Role × capability matrix (16 rows × 6 roles)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "07_event_website:259",
+"product": "Event Website",
+"section": "§9 Permissions",
+"claim": "Page Access enforcement (All/Logged/Unlogged)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:260",
+"product": "Event Website",
+"section": "§9 Permissions",
+"claim": "\"Submit custom forms — all users\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:266",
+"product": "Event Website",
+"section": "§10 Integrations",
+"claim": "Backend entity APIs power dynamic blocks",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:267",
+"product": "Event Website",
+"section": "§10 Integrations",
+"claim": "Google Analytics 4",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "07_event_website:268",
+"product": "Event Website",
+"section": "§10 Integrations",
+"claim": "YouTube embeds",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:269",
+"product": "Event Website",
+"section": "§10 Integrations",
+"claim": "Cookie consent tools",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "07_event_website:270",
+"product": "Event Website",
+"section": "§10 Integrations",
+"claim": "CDN font delivery",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:271",
+"product": "Event Website",
+"section": "§10 Integrations",
+"claim": "SAML / SSO redirect to intended URL (EP-20669)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:272",
+"product": "Event Website",
+"section": "§10 Integrations",
+"claim": "Sitemap XML generator, \"Download Sitemap in Pages Switcher\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "07_event_website:278",
+"product": "Event Website",
+"section": "§11 Notifications",
+"claim": "\"The builder generates no outbound notifications\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "07_event_website:279",
+"product": "Event Website",
+"section": "§11 Notifications",
+"claim": "\"Custom notification text not yet supported\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "07_event_website:280",
+"product": "Event Website",
+"section": "§11 Notifications",
+"claim": "Restore / delete confirmation modals",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:281",
+"product": "Event Website",
+"section": "§11 Notifications",
+"claim": "Published Info panel",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:287",
+"product": "Event Website",
+"section": "§12 Reporting",
+"claim": "No dedicated analytics dashboard in the builder",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:288",
+"product": "Event Website",
+"section": "§12 Reporting",
+"claim": "GA4 traffic report",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "07_event_website:289",
+"product": "Event Website",
+"section": "§12 Reporting",
+"claim": "Site History list",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:290",
+"product": "Event Website",
+"section": "§12 Reporting",
+"claim": "Sitemap XML export",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "07_event_website:291",
+"product": "Event Website",
+"section": "§12 Reporting",
+"claim": "Custom Form submissions export",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:292",
+"product": "Event Website",
+"section": "§12 Reporting",
+"claim": "Send Feedback (smiley + text)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:298",
+"product": "Event Website",
+"section": "§13 Configuration paths",
+"claim": "Enable New Website Builder",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "07_event_website:299",
+"product": "Event Website",
+"section": "§13 Configuration paths",
+"claim": "Robots.txt",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:300",
+"product": "Event Website",
+"section": "§13 Configuration paths",
+"claim": "Text Styles / Colours / Buttons / Favicon / Floating Buttons / Page Access / SEO / Multi-language",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:301",
+"product": "Event Website",
+"section": "§13 Configuration paths",
+"claim": "Block Visibility toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:302",
+"product": "Event Website",
+"section": "§13 Configuration paths",
+"claim": "Custom CSS/JS as \"Add Block > Custom CSS and JS\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:303",
+"product": "Event Website",
+"section": "§13 Configuration paths",
+"claim": "Custom HTML block, pop-up config",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:304",
+"product": "Event Website",
+"section": "§13 Configuration paths",
+"claim": "Header Style (single/double)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:305",
+"product": "Event Website",
+"section": "§13 Configuration paths",
+"claim": "Language Selector in Header",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:311",
+"product": "Event Website",
+"section": "§14 Edge Cases",
+"claim": "Concurrent editors — last save wins",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:312",
+"product": "Event Website",
+"section": "§14 Edge Cases",
+"claim": "Favourite Blocks limit 15",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:313",
+"product": "Event Website",
+"section": "§14 Edge Cases",
+"claim": "Dynamic block with zero results is hidden",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:314",
+"product": "Event Website",
+"section": "§14 Edge Cases",
+"claim": "Delete Home Page → fallback",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:315",
+"product": "Event Website",
+"section": "§14 Edge Cases",
+"claim": "Publish without Save publishes last saved state",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "07_event_website:316",
+"product": "Event Website",
+"section": "§14 Edge Cases",
+"claim": "Clone loses Custom CSS/JS",
+"verdict": "PARTIAL"
+},
+{
+"id": "07_event_website:317",
+"product": "Event Website",
+"section": "§14 Edge Cases",
+"claim": "Autosave vs manual Save race → duplicate history rows",
+"verdict": "CONFIRMED"
+},
+{
+"id": "07_event_website:318",
+"product": "Event Website",
+"section": "§14 Edge Cases",
+"claim": "Multi-language enabled after build → sync clones blocks into the new language",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "11_community:73",
+"product": "Community",
+"section": "§2 Scope — Included",
+"claim": "Community Home Page with configurable template (10 ordered blocks)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:74",
+"product": "Community",
+"section": "§2 Scope — Included",
+"claim": "General Settings (banner, theme colours, wayfinding, disclaimer)",
+"verdict": "PARTIAL"
+},
+{
+"id": "11_community:75",
+"product": "Community",
+"section": "§2 Scope — Included",
+"claim": "Membership Management incl. Community Event mode + SSO",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:76",
+"product": "Community",
+"section": "§2 Scope — Included",
+"claim": "Attaching Events",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:77",
+"product": "Community",
+"section": "§2 Scope — Included",
+"claim": "Micro-community Groups (public / approval / private, tags, categories, sponsors)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:78",
+"product": "Community",
+"section": "§2 Scope — Included",
+"claim": "Feeds — posts, articles, photos, videos; moderation queue; likes/comments",
+"verdict": "PARTIAL"
+},
+{
+"id": "11_community:79",
+"product": "Community",
+"section": "§2 Scope — Included",
+"claim": "News — organiser + exhibitor authored, publishing/moderation, SEO fields, sponsor banners",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:80",
+"product": "Community",
+"section": "§2 Scope — Included",
+"claim": "Online Sessions and Webinars (5 types)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:81",
+"product": "Community",
+"section": "§2 Scope — Included",
+"claim": "RFP — visitor-initiated Product Finder to matched exhibitors",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:82",
+"product": "Community",
+"section": "§2 Scope — Included",
+"claim": "RFS — product-level sample requests",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:83",
+"product": "Community",
+"section": "§2 Scope — Included",
+"claim": "Networking features shared with events",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:89",
+"product": "Community",
+"section": "§2 Scope — Excluded",
+"claim": "Event setup, ticketing, registration forms, floorplans",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:90",
+"product": "Community",
+"section": "§2 Scope — Excluded",
+"claim": "Onsite badge scanning, kiosk check-in",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:91",
+"product": "Community",
+"section": "§2 Scope — Excluded",
+"claim": "Payment processing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:92",
+"product": "Community",
+"section": "§2 Scope — Excluded",
+"claim": "Mobile app build",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:93",
+"product": "Community",
+"section": "§2 Scope — Excluded",
+"claim": "Third-party BI / analytics",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:94",
+"product": "Community",
+"section": "§2 Scope — Excluded",
+"claim": "Event-specific meeting formats (Speed Networking, Meeting Program, Concierge, Round Tables)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:100",
+"product": "Community",
+"section": "§3 Roles",
+"claim": "Organiser/Admin: full config, create groups, publish + moderate news, RFP/RFS settings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:101",
+"product": "Community",
+"section": "§3 Roles",
+"claim": "Exhibitor: news (with moderation), RFP respond, RFS manage, groups/feeds",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:102",
+"product": "Community",
+"section": "§3 Roles",
+"claim": "Visitor/Member: browse, initiate RFPs (visitors only), RFS, groups, feeds",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "11_community:103",
+"product": "Community",
+"section": "§3 Roles",
+"claim": "Speaker/Moderator: host/moderate sessions",
+"verdict": "PARTIAL"
+},
+{
+"id": "11_community:104",
+"product": "Community",
+"section": "§3 Roles",
+"claim": "Super Admin: module management gates RFP, RFS, Feed, Sessions, Groups",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:105",
+"product": "Community",
+"section": "§3 Roles",
+"claim": "Group Admin / Moderator: elevated rights within one group",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:106",
+"product": "Community",
+"section": "§3 Roles",
+"claim": "Groups can only be created at `/newfront/profile/groups?add=true` by admin accounts",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:129",
+"product": "Community",
+"section": "§10 Integrations",
+"claim": "SSO — linked events",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:130",
+"product": "Community",
+"section": "§10 Integrations",
+"claim": "Vimeo iframe embed",
+"verdict": "PARTIAL"
+},
+{
+"id": "11_community:131",
+"product": "Community",
+"section": "§10 Integrations",
+"claim": "External session links (Zoom/YouTube)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:132",
+"product": "Community",
+"section": "§10 Integrations",
+"claim": "RFP email templates",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:133",
+"product": "Community",
+"section": "§10 Integrations",
+"claim": "RFS email templates (4 named)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:134",
+"product": "Community",
+"section": "§10 Integrations",
+"claim": "Platform notification service",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:140",
+"product": "Community",
+"section": "§11 Notifications",
+"claim": "RFP received / accepted / declined",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:141",
+"product": "Community",
+"section": "§11 Notifications",
+"claim": "RFS received / sent / accepted / declined",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:142",
+"product": "Community",
+"section": "§11 Notifications",
+"claim": "Group invitation",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:143",
+"product": "Community",
+"section": "§11 Notifications",
+"claim": "Group join approved",
+"verdict": "PARTIAL"
+},
+{
+"id": "11_community:144",
+"product": "Community",
+"section": "§11 Notifications",
+"claim": "Exhibitor news approved",
+"verdict": "PARTIAL"
+},
+{
+"id": "11_community:145",
+"product": "Community",
+"section": "§11 Notifications",
+"claim": "Session moderator assigned",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "11_community:146",
+"product": "Community",
+"section": "§11 Notifications",
+"claim": "RFP requester anonymisation",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "11_community:165",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "Community Event toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:166",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "Allow SSO Login toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:167",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "Events that belong to this Community",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:168",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "Community home page ON/OFF",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:169",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "Banner / theme colours / wayfinding / disclaimer",
+"verdict": "PARTIAL"
+},
+{
+"id": "11_community:170",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "Feed module toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:171",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "Frontend-RFP / Frontend-RFP Limits / Backend-RFP",
+"verdict": "PARTIAL"
+},
+{
+"id": "11_community:172",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "RFP limits per exhibitor category",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:173",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "RFS global / per-category / per-exhibitor / per-product toggles",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:174",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "RFS events/delivery table",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:175",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "Allow exhibitor news toggle",
+"verdict": "PARTIAL"
+},
+{
+"id": "11_community:176",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "News limits per exhibitor category",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:177",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "Group privacy + auto-approval by category/role",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:178",
+"product": "Community",
+"section": "§13 Configuration",
+"claim": "Featured Session toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:184",
+"product": "Community",
+"section": "§14 Edge Cases",
+"claim": "SSO does not auto-provision accounts",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:185",
+"product": "Community",
+"section": "§14 Edge Cases",
+"claim": "\"Undefined\" participants from multiple devices",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "11_community:186",
+"product": "Community",
+"section": "§14 Edge Cases",
+"claim": "Group admin cannot create groups",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:187",
+"product": "Community",
+"section": "§14 Edge Cases",
+"claim": "News slug change breaks shared links",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:188",
+"product": "Community",
+"section": "§14 Edge Cases",
+"claim": "RFP accepted/declined are immutable",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "11_community:189",
+"product": "Community",
+"section": "§14 Edge Cases",
+"claim": "RFS \"Sample available\" is per-product and independent of the category toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:190",
+"product": "Community",
+"section": "§14 Edge Cases",
+"claim": "Feed posts sync to a linked event if the user has accounts on both",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "11_community:191",
+"product": "Community",
+"section": "§14 Edge Cases",
+"claim": "Two organisers editing group settings — last save wins",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:192",
+"product": "Community",
+"section": "§14 Edge Cases",
+"claim": "Exhibitor at RFP limit sees requests but cannot accept",
+"verdict": "CONFIRMED"
+},
+{
+"id": "11_community:193",
+"product": "Community",
+"section": "§14 Edge Cases",
+"claim": "Linked event stays on the home page after it ends",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:116",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Marketing Email Campaigns — scheduled, trigger-based, segmented, tracked",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:117",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Email Sender — immediate sends, segments or mailing lists, stats",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:118",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Shared Email Builder used across all email contexts",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:119",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Email Variables — four groups",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:120",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Default Email Campaign Templates (6, events after 8 Nov 2023)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "12_user_engagement:121",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Campaign Triggers — AND/OR, Switch/Add/Unsubscribe",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:122",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Campaign Performance & statistics + XLS export",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:123",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Scheduled Push Notifications with advanced filters",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:124",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Standard Platform Notifications",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:125",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Visitor Onboarding Tool",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:126",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Deeplinks for Sessions and Exhibitor Events",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "12_user_engagement:127",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Mailing Lists (manual or XLS), scoped to Email Sender",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:128",
+"product": "User Engagement",
+"section": "§2 Scope — Included",
+"claim": "Recommended Email Campaigns & Timing (guidance library)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "12_user_engagement:134",
+"product": "User Engagement",
+"section": "§2 Scope — Excluded",
+"claim": "SMS / WhatsApp channels (not offered on the platform)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "12_user_engagement:135",
+"product": "User Engagement",
+"section": "§2 Scope — Excluded",
+"claim": "Transactional registration emails",
+"verdict": "PARTIAL"
+},
+{
+"id": "12_user_engagement:136",
+"product": "User Engagement",
+"section": "§2 Scope — Excluded",
+"claim": "Hosted Buyers email notifications",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:137",
+"product": "User Engagement",
+"section": "§2 Scope — Excluded",
+"claim": "Exhibitor Manual vendor emails",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:138",
+"product": "User Engagement",
+"section": "§2 Scope — Excluded",
+"claim": "Third-party ESP (Mailchimp, HubSpot) — \"platform uses its own sending infrastructure\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "12_user_engagement:139",
+"product": "User Engagement",
+"section": "§2 Scope — Excluded",
+"claim": "In-app chat messaging",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:287",
+"product": "User Engagement",
+"section": "Push infrastructure",
+"claim": "\"Firebase / APNS\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "12_user_engagement:288",
+"product": "User Engagement",
+"section": "Push infrastructure",
+"claim": "Device tokens managed by app SDK",
+"verdict": "PARTIAL"
+},
+{
+"id": "12_user_engagement:358",
+"product": "User Engagement",
+"section": "§9 Permissions",
+"claim": "Organizer + Super Admin only for all send/manage capabilities",
+"verdict": "PARTIAL"
+},
+{
+"id": "12_user_engagement:359",
+"product": "User Engagement",
+"section": "§9 Permissions",
+"claim": "\"Enable/disable Marketing module — Super Admin only\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "12_user_engagement:360",
+"product": "User Engagement",
+"section": "§9 Permissions",
+"claim": "\"Configure sender domain — Super Admin only\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "12_user_engagement:361",
+"product": "User Engagement",
+"section": "§9 Permissions",
+"claim": "Unsubscribe: participants yes, admins no",
+"verdict": "PARTIAL"
+},
+{
+"id": "12_user_engagement:367",
+"product": "User Engagement",
+"section": "§10 Integrations",
+"claim": "Internal email sending infrastructure",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:368",
+"product": "User Engagement",
+"section": "§10 Integrations",
+"claim": "\"No documented automatic retry\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:369",
+"product": "User Engagement",
+"section": "§10 Integrations",
+"claim": "Matchmaking / AI recommendation engine",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:370",
+"product": "User Engagement",
+"section": "§10 Integrations",
+"claim": "Mobile push (Firebase / APNS)",
+"verdict": "PARTIAL"
+},
+{
+"id": "12_user_engagement:371",
+"product": "User Engagement",
+"section": "§10 Integrations",
+"claim": "Visit integration (Kortrijkxpo) identifier",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:372",
+"product": "User Engagement",
+"section": "§10 Integrations",
+"claim": "Analytics / General Dashboard for Event Information variables",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:378",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Enable Marketing module",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:379",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Enable Admin Notifications module",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:380",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Enable Onboarding module",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "12_user_engagement:381",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Custom sender domain",
+"verdict": "PARTIAL"
+},
+{
+"id": "12_user_engagement:382",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Sender from-name / reply-to per template",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:383",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Session notification timing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:384",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Campaign audience filter",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:385",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Admin Notification advanced filters",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:386",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Multilanguage templates",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:387",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Recommended Content card count (gear icon)",
+"verdict": "PARTIAL"
+},
+{
+"id": "12_user_engagement:388",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Onboarding mandatory / reappearance",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:389",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Enable deeplinks for sessions",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "12_user_engagement:390",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Visit integration identifier",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:391",
+"product": "User Engagement",
+"section": "§13 Configuration",
+"claim": "Disable individual email template",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:397",
+"product": "User Engagement",
+"section": "§14 Edge Cases",
+"claim": "No interest categories ⇒ Recommended Content renders empty",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:398",
+"product": "User Engagement",
+"section": "§14 Edge Cases",
+"claim": "Fake `@expoplatform.eu` / empty / MX flagged",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:399",
+"product": "User Engagement",
+"section": "§14 Edge Cases",
+"claim": "External list contacts get no badge/activation variables",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:400",
+"product": "User Engagement",
+"section": "§14 Edge Cases",
+"claim": "Variables resolved at send time, not template time",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:401",
+"product": "User Engagement",
+"section": "§14 Edge Cases",
+"claim": "Clone event carries templates + language variants",
+"verdict": "PARTIAL"
+},
+{
+"id": "12_user_engagement:402",
+"product": "User Engagement",
+"section": "§14 Edge Cases",
+"claim": "Deleting a campaign while Sending is \"not documented\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:403",
+"product": "User Engagement",
+"section": "§14 Edge Cases",
+"claim": "Two admins editing one template — last save wins",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:404",
+"product": "User Engagement",
+"section": "§14 Edge Cases",
+"claim": "Email can be sent after event closure",
+"verdict": "CONFIRMED"
+},
+{
+"id": "12_user_engagement:405",
+"product": "User Engagement",
+"section": "§14 Edge Cases",
+"claim": "Onboarding popup does not reappear once submitted",
+"verdict": "CONFIRMED"
+}
+]
+}

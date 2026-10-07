@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-09-22",
+  "asOf": "2026-09-30",
   "columns": [
     {
       "key": "month",
@@ -16,16 +16,28 @@
       "w": 110
     },
     {
+      "key": "forShow",
+      "label": "For show",
+      "note": "The show an item is promised for when it is not the client’s next one (OP key). The after-the-show check and the overdue flag use it.",
+      "opts": [],
+      "type": "select",
+      "w": 170
+    },
+    {
       "key": "area",
       "label": "Area",
       "norm": true,
       "opts": [
         "API",
         "Communication Channels",
+        "Exhibitor Manual",
         "Global Search",
+        "Invoicing",
+        "Lead Intelligence",
         "Legacy mobile app",
         "Networking",
         "Registration",
+        "Search",
         "Sessions"
       ],
       "type": "select",
@@ -253,6 +265,18 @@
       "note": "The long form of Why. Shown on the expanded record, not in the table.",
       "type": "long",
       "w": 320
+    },
+    {
+      "key": "funded",
+      "label": "Funded",
+      "note": "Whether the client pays towards it.",
+      "opts": [
+        "Yes",
+        "Part",
+        "No"
+      ],
+      "type": "select",
+      "w": 90
     }
   ],
   "dayHours": 8,
@@ -316,6 +340,55 @@
       "k": "columns",
       "note": "moved the columns to schema 2: Owner relabelled Raised by; Team (no Jira ticket), Driver and Rationale added; Why limited to one line",
       "op": "migrate"
+    },
+    "hb260928conf-area": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "area",
+      "from": [
+        "API",
+        "Communication Channels",
+        "Global Search",
+        "Legacy mobile app",
+        "Networking",
+        "Registration",
+        "Sessions"
+      ],
+      "k": "import",
+      "note": "Areas added by the 28 Sep Confluence refresh: Exhibitor Manual, Invoicing, Lead Intelligence, Search",
+      "op": "opts",
+      "to": [
+        "API",
+        "Communication Channels",
+        "Exhibitor Manual",
+        "Global Search",
+        "Invoicing",
+        "Lead Intelligence",
+        "Legacy mobile app",
+        "Networking",
+        "Registration",
+        "Search",
+        "Sessions"
+      ]
+    },
+    "hb260928jira-col-forShow": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "forShow",
+      "k": "add",
+      "note": "Column added: For show (owner, 28 Sep 2026: IMEX items are for IMEX Frankfurt 2027)",
+      "op": "add"
+    },
+    "hb260928jira-col-funded": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "funded",
+      "k": "add",
+      "note": "Column added: Funded (owner, 28 Sep 2026)",
+      "op": "add"
     }
   },
   "migrated": {
@@ -327,11 +400,11 @@
   "note": "Column schema for the pipeline ledger. Edited from the Pipeline tab's column menu.",
   "schema": 2,
   "source": {
-    "lastModified": "2026-09-18",
+    "lastModified": "2026-09-28",
     "page": "2155872263",
     "space": "P2",
     "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2155872263/Must-Have+Product+Pipeline+Ledger"
   },
-  "teamsAsOf": "2026-09-22",
-  "updatedAt": "2026-09-22"
+  "teamsAsOf": "2026-09-28",
+  "updatedAt": "2026-09-28"
 }

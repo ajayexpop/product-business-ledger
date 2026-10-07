@@ -1,0 +1,410 @@
+{
+  "asOf": "2026-09-29",
+  "columns": [
+    {
+      "key": "month",
+      "label": "Month",
+      "norm": true,
+      "opts": [
+        "2026-09",
+        "2026-10",
+        "2026-11",
+        "2026-12",
+        "2027-01"
+      ],
+      "type": "select",
+      "w": 110
+    },
+    {
+      "key": "forShow",
+      "label": "For show",
+      "note": "The show an item is promised for when it is not the client’s next one (OP key). The after-the-show check and the overdue flag use it.",
+      "opts": [],
+      "type": "select",
+      "w": 170
+    },
+    {
+      "key": "area",
+      "label": "Area",
+      "norm": true,
+      "opts": [
+        "API",
+        "Communication Channels",
+        "Exhibitor Manual",
+        "Global Search",
+        "Invoicing",
+        "Lead Intelligence",
+        "Legacy mobile app",
+        "Networking",
+        "Registration",
+        "Search",
+        "Sessions"
+      ],
+      "type": "select",
+      "w": 150
+    },
+    {
+      "key": "owner",
+      "label": "Raised by",
+      "note": "The person who wrote the item down. Kept on the row; it enters no total (pp-team-unit).",
+      "opts": [
+        "Alex",
+        "Kavi",
+        "Pedro + Alex",
+        "Taimoor"
+      ],
+      "type": "select",
+      "w": 110
+    },
+    {
+      "key": "key",
+      "label": "Jira",
+      "type": "text",
+      "w": 100
+    },
+    {
+      "key": "feature",
+      "label": "Feature",
+      "type": "text",
+      "w": 300
+    },
+    {
+      "key": "why",
+      "label": "Why",
+      "limit": "pp-why-one-line",
+      "note": "One line, hard limit set by the pp-why-one-line rule. Long prose goes in Rationale.",
+      "type": "text",
+      "w": 260
+    },
+    {
+      "key": "impact",
+      "label": "Impact",
+      "type": "long",
+      "w": 300
+    },
+    {
+      "key": "priority",
+      "label": "Priority",
+      "opts": [
+        "Customer",
+        "Compliance",
+        "Revenue",
+        "Operational",
+        "Strategic"
+      ],
+      "type": "select",
+      "w": 120
+    },
+    {
+      "key": "driver",
+      "label": "Driver",
+      "note": "Who the item is for: a client from the Planhat active list, or Platform. Tier derives from it (pp-driver).",
+      "optLabels": {
+        "1306": "Dubai World Trade Centre DWTC/ DXB Live",
+        "1489": "ADS Group",
+        "2011": "Rapid News Group",
+        "3032": "Messe Frankfurt GmbH USA",
+        "4121": "Hyve Group Plc",
+        "4168": "IFTM Top Resa / Reed",
+        "5209": "Mercator Media Limited",
+        "5368": "Vinexposium",
+        "6682": "Informa Markets (UK)",
+        "9800": "Lexis Nexis",
+        "11798": "BeautyIstanbul (Ipekyolu International Exhibitions)",
+        "19895": "Verband der Automobilindustrie e.V. (VDA) - (German Association Of Automotive Industry)",
+        "19945": "Tampereen Messut (Tampere Trade Fairs)",
+        "25165": "Connect",
+        "26874": "IMEX",
+        "28208": "Messe Dortmund - Westfalenhallen Unternehmensgruppe GmbH",
+        "41618": "FOCUS - The Meeting Place for International Production",
+        "42045": "Frankfurter Buchmesse GmbH",
+        "42089": "Kortrijk Xpo (Busworld)",
+        "42415": "ANWR Group eG",
+        "42470": "Afreximbank",
+        "44021": "FESPA",
+        "44360": "Integrated Systems Events GmbH",
+        "44404": "HINTE Expo & Conference GmbH",
+        "57878": "Informa North America",
+        "58938": "Airports Council International - ACI Asia-Pacific",
+        "60271": "AgriFutures Australia",
+        "61259": "Association for Advancing Automation - A3",
+        "61901": "BolognaFiere",
+        "64009": "MEX Exhibitions Pvt Ltd",
+        "68559": "Event Developers",
+        "69320": "HMP Global",
+        "75199": "SNAC International",
+        "76488": "Fairtrade Messe GmbH & Co KG",
+        "78020": "Arabian Research Bureau LLC (OITE)",
+        "80889": "Farnborough International",
+        "81136": "Northstar Travel Group",
+        "81808": "DLG Markets GmbH",
+        "82155": "CloserStill Media",
+        "82821": "UFI",
+        "82918": "Informa",
+        "82946": "BPL Business Media Limited",
+        "83067": "NGF (Next Generation Fairs)",
+        "83103": "RetailX Events",
+        "83108": "VDI Technologiezentrum GmbH",
+        "87134": "CommerceNext",
+        "87166": "International Mining Events",
+        "87269": "Hisern International Pty Ltd",
+        "Platform": "Platform"
+      },
+      "opts": [
+        "1489",
+        "42470",
+        "60271",
+        "58938",
+        "42415",
+        "78020",
+        "61259",
+        "11798",
+        "61901",
+        "82946",
+        "82155",
+        "87134",
+        "25165",
+        "81808",
+        "1306",
+        "68559",
+        "76488",
+        "80889",
+        "44021",
+        "41618",
+        "42045",
+        "44404",
+        "87269",
+        "69320",
+        "4121",
+        "4168",
+        "26874",
+        "82918",
+        "6682",
+        "57878",
+        "44360",
+        "87166",
+        "42089",
+        "9800",
+        "5209",
+        "28208",
+        "3032",
+        "64009",
+        "83067",
+        "81136",
+        "2011",
+        "83103",
+        "75199",
+        "19945",
+        "82821",
+        "83108",
+        "19895",
+        "5368",
+        "Platform"
+      ],
+      "type": "select",
+      "w": 170
+    },
+    {
+      "key": "team",
+      "label": "Team (no Jira ticket)",
+      "note": "Required only when the row has no Jira ticket, or the ticket carries no team (pp-team-source).",
+      "opts": [
+        "Visitor team",
+        "Exhibitor team",
+        "Organizer team",
+        "Staff Team",
+        "Mobile team",
+        "Integration team",
+        "Data Science",
+        "QA",
+        "Back-end dev",
+        "Front-end dev",
+        "Hyve dedicated team"
+      ],
+      "type": "select",
+      "w": 150
+    },
+    {
+      "key": "deps",
+      "label": "Dependencies / Risks",
+      "type": "long",
+      "w": 280
+    },
+    {
+      "key": "status",
+      "label": "Status",
+      "norm": true,
+      "opts": [
+        "Planned",
+        "Discovery",
+        "In Progress",
+        "In Testing",
+        "Ready for Release",
+        "Done",
+        "Blocked",
+        "At Risk"
+      ],
+      "type": "select",
+      "w": 150
+    },
+    {
+      "key": "estimate",
+      "label": "Estimate",
+      "type": "text",
+      "w": 180
+    },
+    {
+      "key": "notes",
+      "label": "Notes",
+      "type": "long",
+      "w": 250
+    },
+    {
+      "key": "rationale",
+      "label": "Rationale",
+      "note": "The long form of Why. Shown on the expanded record, not in the table.",
+      "type": "long",
+      "w": 320
+    },
+    {
+      "key": "funded",
+      "label": "Funded",
+      "note": "Whether the client pays towards it.",
+      "opts": [
+        "Yes",
+        "Part",
+        "No"
+      ],
+      "type": "select",
+      "w": 90
+    }
+  ],
+  "dayHours": 8,
+  "derived": [
+    {
+      "key": "_team",
+      "label": "Team",
+      "type": "txt",
+      "w": 130
+    },
+    {
+      "key": "_tier",
+      "label": "Tier",
+      "type": "txt",
+      "w": 70
+    },
+    {
+      "key": "_days",
+      "label": "Days",
+      "type": "num",
+      "w": 80
+    },
+    {
+      "key": "_jstatus",
+      "label": "Jira status",
+      "type": "txt",
+      "w": 140
+    },
+    {
+      "key": "_jdue",
+      "label": "Jira due",
+      "type": "txt",
+      "w": 110
+    },
+    {
+      "key": "_jspent",
+      "label": "Logged",
+      "type": "num",
+      "w": 90
+    },
+    {
+      "key": "_flags",
+      "label": "Flags",
+      "type": "flags",
+      "w": 150
+    }
+  ],
+  "h": {
+    "h0cfg-import": {
+      "at": "2026-09-22",
+      "b": "h0cfg-import",
+      "by": "claude",
+      "k": "columns",
+      "note": "created the column schema from the Confluence ledger’s table",
+      "op": "import"
+    },
+    "h0cfg-schema2": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "h0cfg-schema2",
+      "by": "claude",
+      "k": "columns",
+      "note": "moved the columns to schema 2: Owner relabelled Raised by; Team (no Jira ticket), Driver and Rationale added; Why limited to one line",
+      "op": "migrate"
+    },
+    "hb260928conf-area": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "area",
+      "from": [
+        "API",
+        "Communication Channels",
+        "Global Search",
+        "Legacy mobile app",
+        "Networking",
+        "Registration",
+        "Sessions"
+      ],
+      "k": "import",
+      "note": "Areas added by the 28 Sep Confluence refresh: Exhibitor Manual, Invoicing, Lead Intelligence, Search",
+      "op": "opts",
+      "to": [
+        "API",
+        "Communication Channels",
+        "Exhibitor Manual",
+        "Global Search",
+        "Invoicing",
+        "Lead Intelligence",
+        "Legacy mobile app",
+        "Networking",
+        "Registration",
+        "Search",
+        "Sessions"
+      ]
+    },
+    "hb260928jira-col-forShow": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "forShow",
+      "k": "add",
+      "note": "Column added: For show (owner, 28 Sep 2026: IMEX items are for IMEX Frankfurt 2027)",
+      "op": "add"
+    },
+    "hb260928jira-col-funded": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "funded",
+      "k": "add",
+      "note": "Column added: Funded (owner, 28 Sep 2026)",
+      "op": "add"
+    }
+  },
+  "migrated": {
+    "at": "2026-09-22",
+    "by": "Claude",
+    "spec": "Client Ledger — Risk, Flow and Investment, spec v1, §2 and §3",
+    "what": "Owner relabelled Raised by and removed from every total; Team added (from the Jira ticket, else the row); Driver added (a Planhat active client or Platform); Why cut to one line with its old text moved verbatim to Rationale"
+  },
+  "note": "Column schema for the pipeline ledger. Edited from the Pipeline tab's column menu.",
+  "schema": 2,
+  "source": {
+    "lastModified": "2026-09-28",
+    "page": "2155872263",
+    "space": "P2",
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2155872263/Must-Have+Product+Pipeline+Ledger"
+  },
+  "teamsAsOf": "2026-09-28",
+  "updatedAt": "2026-09-28"
+}

@@ -8,14 +8,17 @@ Last updated 28 Sep 2026 (the ledger moved to WS7mJG…, the old link shows a mo
 
 | Artifact | Audience | Status | Link |
 |---|---|---|---|
-| Internal Product Business Ledger | Internal (product, CS, leadership) | **Live, source of truth** since 28 Sep 2026 (v13). Project: `ledger/` | https://claude.ai/artifact/WS7mJGdC1y2RzsPTScKu6d |
+| Internal Product Business Ledger | Internal (product, CS, leadership) | **Live, source of truth** since 28 Sep 2026 (v21: Beta logging with Claude for Settings viewers; Must-have ledger open to everyone). Project: `ledger/` | https://claude.ai/artifact/WS7mJGdC1y2RzsPTScKu6d |
+| Ledger Rewire Preview | Internal (owner, Ilaria; then Product, Sales, Ops, Engineering) | New 29 Sep 2026: working preview of the planned restructure on live data, read-only. Project: `rewire/` | https://claude.ai/artifact/BUv7s6D31RAuodnBFsqJ7o |
+| ~~Department Lens~~ | Internal | Superseded 29 Sep 2026 by the Rewire Preview; `deptlens/` removed. Owner to delete it from `/artifacts` (the delete needs their confirmation) | ~~https://claude.ai/artifact/8fbYFs6yCseVTq6Yy7By8b~~ |
+| Ledger Rewire Map | Internal (owner, Ilaria) | New 29 Sep 2026: planning diagram of the ledger restructure (tab remap, Home lenses, intake pipeline, link layer). Source: `ledger/docs/diagrams/next-ui-structure.html`; plan: `ledger/docs/planning-the-next-part-of-ui-ux.md` | https://claude.ai/artifact/9QGLoezhu8tJYezDMRHhEq |
 | Product Demand Map | Internal | Kept as is; its data is also the Demand tab of the ledger | https://claude.ai/artifact/NfBA41XSVuf4cCJaaEAkzH |
 | ~~Old Business Ledger~~ | Internal | Retired 28 Sep 2026: shows a “moved” page linking to the ledger (v7). Final page and database in `ledger/backup/2026-09-28/` | https://claude.ai/artifact/Dpc9Z8uabRxLCryUSGML7G |
 | ExpoPlatform Product Journey | **Customers** (any client) | Review draft, not approved for sharing | https://claude.ai/artifact/8VKK3M2dKZ3KgDRtfALuLD |
 | DLG Product Journey | **DLG** (DLG Markets GmbH) | Review draft, not approved for sharing | https://claude.ai/artifact/WyaoHjtdggStN5xrNTcwaX |
 | Product Journey Review | **Internal only** (head of product) | Working review copy | https://claude.ai/artifact/8ut25xL9zrhJsWYVdLD85b |
 | Story Value Roadmap | Internal only (product, CS, leadership) | Live, v3 (status filter; Done + In Progress category only) | https://claude.ai/artifact/SGNUmh5QxcfuULj1U2yn3d |
-| Product Demand Map | Internal (whole business: product, CS, leadership) | Live, v3 (light default + dark toggle, multi-select filters, QA'd; no priority score yet) | https://claude.ai/artifact/NfBA41XSVuf4cCJaaEAkzH |
+| ~~Product Demand Map~~ | Internal (whole business: product, CS, leadership) | Deleted 28 Sep 2026 after v3; source kept in `intel/viz/` (republish creates a new link) | ~~https://claude.ai/artifact/NfBA41XSVuf4cCJaaEAkzH~~ |
 | ~~Product Truth~~ | Internal | Gone as of 27 Sep 2026 (deleted or unshared); rebuild from `truth/` and publish as a new artifact if wanted | ~~https://claude.ai/artifact/AUY6eCqXX1fPoHEA3a6rLT~~ |
 | ~~Product Truth Map~~ | Internal | Gone as of 27 Sep 2026 (deleted or unshared); source kept in `docs/diagrams/product-truth-map.html` | ~~https://claude.ai/artifact/BV21bZbFArWnodFekbfv45~~ |
 | ~~Product Demand Explorer~~ | Internal | Deleted 26 Sep 2026; its Requests view now lives inside the Product Demand Map | ~~https://claude.ai/artifact/SAdNszqYvdRzsLqXNa2H2v~~ |
@@ -38,6 +41,20 @@ Last updated 28 Sep 2026 (the ledger moved to WS7mJG…, the old link shows a mo
 - Client Ledger (Copy): https://claude.ai/artifact/Bi283GmERvsCg4bJSHcZ8D
 - Client Ledger (Copy) (Copy): https://claude.ai/artifact/6VVJaZfF6eN3SfFLMeR5Xr
 - Client Ledger (Copy) (Copy) (Copy): https://claude.ai/artifact/HZyVgzGo2Lg8hTzAYWoadr
+
+---
+
+## Ledger Rewire Preview
+
+**Link:** https://claude.ai/artifact/BUv7s6D31RAuodnBFsqJ7o (created 29 Sep 2026). Project folder: `rewire/` (start with `rewire/README.md`).
+
+**What it is:** the restructure from `ledger/docs/planning-the-next-part-of-ui-ux.md`, built end to end on the ledger's real data so it can be clicked through and reviewed. Home with role views, then Clients (table and timeline), Work (ladder, must-have board, built and shipped, short intake form), Demand and Quality. Every number opens its list; every client, need, item and month has a linkable drawer. Design follows `docs/design.md`.
+
+**Who it's for:** the owner and Ilaria first, then the departments.
+
+**Not the source of truth:** a read-only snapshot. The data is the ledger's built data with the live ledger's Jira, incident, event and Hyve refreshes laid over it (exported 29 Sep 2026). It never writes to the ledger or its database. Capabilities: `sample` (the intake AI draft, run on each viewer's own account) and `user` with scope `profile` (shows the How it works tab to the owner only and resolves names in its history). Light / Dark / System switch, Light by default (v3, 29 Sep 2026). v4 (29 Sep 2026): intake matching with percentages across demand, delivery since 2023, in-flight work and the platform baseline; linking matches into an ask; Fathom call evidence (capability `mcp`, Fathom `get_recording_by_url` and `get_meeting_transcript`, so no public-link sharing); onboarding tours, tab hints and a Guide button. v5 (29 Sep 2026): Drop a feature as four guided steps (Describe, Check matches, Review, Send) with a named reason on every disabled button, editable AI suggestions, answerable AI questions, a colleague picker for the value hand-off and a confirmation screen. v6 (29 Sep 2026): Demand renamed Feature requests; anyone can share a feature request (voice or typing, Fathom call, chat snippet) with AI auto-fill, "Is this it?" one-tap joins, an AI wording tidy before saving and signal before and after; the preview's own shared store (capability `db`, rules `fr` read view / write admin, `fr/{self}` write interact); admin means owner or editor; Test lab with test mode, scenarios, view as a colleague, merge queue and AI inspector. v7 (29 Sep 2026): AI calls rebuilt (plain call with lenient JSON reading, named errors with codes for admins, progress, a Check the AI button in the Test lab), a built-in fill when the AI is unavailable, marked AI guesses for why and outcome, Speak instead with device dictation steps, several clients per request, and Add work visible to admins only; QA now runs with a stand-in AI in four modes. v8 (29 Sep 2026): every ask opens with edit, delete, history, the four value levers with figures and signing, linking and unlinking, and Close the chain; feature requests show In the pipeline or Delivered; voice help with correct dictation steps and a phone QR code. v9 (29 Sep 2026): Voices shared here on the Feature requests tab, with an Everyone / Mine filter; each voice opens its own panel (`#voice-<id>`) to view, edit (clients, wording, move to another feature request) or delete with confirmation; AI placeholders such as "Not stated" are no longer saved.
+
+**Update:** see `rewire/README.md` (export, `tools/pack.py`, `tools/probe.py`, republish with `files` = `data.json`; omit `icon` and `capabilities`).
 
 ---
 
@@ -109,9 +126,22 @@ Last updated 28 Sep 2026 (the ledger moved to WS7mJG…, the old link shows a mo
 
 **Who it's for:** internal only. It has a red banner and contains internal story titles and client names. Never share it with customers.
 
+**v8 (28 Sep 2026):** new filters on all three journey pages: one Filters panel (products by group, who it helps, year, highlights, and on this page New capability / Improvement), each option with a live count; quick product-group chips; removable chips for everything that is on, with Clear all. Onboarding on this page: a first-visit welcome asks the viewer's role (Account Manager, Sales, Customer Success, Product, Leadership, Support) and optionally a client, then runs a spotlight tour of the parts that matter for that role; replay it from **Guide** in the top bar. The choice is remembered in the viewer's browser only.
+
+**v7 (28 Sep 2026):** the DLG evidence section and the "Requested by DLG" filter are removed from this page (owner request; `dlg_evidence()` kept in `tools/roadmap.py`). Chat: a citation now opens its source beside the panel, each status label explains itself when clicked, and the label follows the strongest cited verdict. New **Roadmap PDF** button (capability `downloads`): pick products, years, coming next and audience (customer-safe without Jira keys or clients, or internal with them plus "Platform today"); built in the browser with jsPDF.
+
+**Ask the roadmap beta (v6, 28 Sep 2026):** internal only, capability `sample` (answers run on each viewer's own Claude account).
+- **"I work at [client] as a [role]":** choosing a client filters the page to what we built with them (from `analysis/stories.json`); *Build my briefing* asks the AI for a role-specific briefing.
+- **Ask the roadmap panel:** answers only through page tools (search roadmap, read an item, search the verified platform baseline, search open requests, client overview). Every statement carries a status (New since 2023, Improved, Part of the platform, Partly, Documented not built, In development, Asked for not built, Not found) and citations; the page sets the status from the source, and drops any statement without a valid citation. It never says "we don't have it".
+- **Platform today view:** the verified baseline, 2,238 claims from the knowledge base's code reconciliation study (`kb/legacy/platform/init/kb`, snapshot Sep 2026), never Source A. Built by `tools/platform_baseline.py`; companion data `ask.json` by `tools/journey_ask.py` (published beside the page).
+- **Feature sheets** show New capability / Improvement and "Builds on" claims (AI-classified from the stories, `data/roadmap/wwo/map/`, not yet reviewed).
+- QA: `tools/roadmap_qa.py` runs a stand-in runtime (`tools/roadmap_qa_mock.js`) with 12 known questions (12/12 retrieved) and a made-up feature (no hits). Live answers can only be tested in a Claude viewer.
+
+**DLG evidence (v5, 27 Sep 2026):** a "Done for DLG · internal evidence" section at the top lists every item the DLG page presents as built or in development for DLG, each with its strongest evidence rating (A named as asking, B DLG case in the ticket, C Reported-by field only, S shared with other clients, W not a DLG request). Open an item for its What / Why / Outcome and, per Jira story, where it says this was for DLG: the evidence note, the Reported-by field, who created it and when, labels, and the quote from the ticket (links and tokens stripped). The timeline also carries the "Requested by DLG" badges and filter. Source: `data/roadmap/dlg/evidence.csv` (pulled from Jira 25 Sep 2026); built by `dlg_evidence()` in `tools/roadmap.py`. None of this reaches the customer or DLG pages.
+
 **Also shows** whether each Why is stated in the stories or implied, with the evidence line, and the items the owner removed from Coming next.
 
-**Update:** `tools/journey_build.sh` and the QA above, then publish `dist-journey/roadmap-internal/index.html` to this URL.
+**Update:** `tools/journey_build.sh` and the QA above, then publish `dist-journey/roadmap-internal/index.html` to this URL with `files` = `ask.json`; omit `capabilities` to keep `sample` and `downloads`.
 
 ---
 
@@ -215,7 +245,7 @@ then publish `analysis/roadmap/index.html` to this URL with `files` = `data.json
 
 ## Product Demand Map
 
-**Link:** https://claude.ai/artifact/NfBA41XSVuf4cCJaaEAkzH (replaces the deleted Product Demand Explorer)
+**Link:** ~~https://claude.ai/artifact/NfBA41XSVuf4cCJaaEAkzH~~ (deleted 28 Sep 2026 after v3; `intel/viz/index.html` is the last published build)
 
 **What it is:** the one view of open demand. 1,781 tickets and intake pages (822 EP Feature Requests, 839 Open Stories, 120 FIS requests) are enriched against the product knowledge base (KB product, what / why / outcome, built overlap) and merged into 1,122 distinct needs, with 151 duplicates folded in. Three tabs:
 - **Tier map:** a product graph with KB products as hubs, needs shaded by the best Sales Tier asking, and customers as diamonds. The lens switches between Tier 1, Tier 1–2, all tiers and all demand, and there is a ranking of where Tier 1 is asking.

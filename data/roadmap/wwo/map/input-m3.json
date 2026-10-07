@@ -1,0 +1,2505 @@
+{
+"features": [
+{
+"id": "meet-auto-cancellation",
+"theme": "meet",
+"q": "2023-Q1",
+"title": "Automatic meeting cancellation",
+"benefit": "Automatically cancel a participant's meetings and bookings when they become inactive, and meetings they started if they move to a category without meetings.",
+"what": "Organisers can switch on automatic cancellation of a participant's confirmed, incoming and pending meetings, session bookings and exhibitor events if they become inactive, and of meetings they began if moved to a category without meetings.",
+"detail": "Organisers can switch on automatic cancellation of confirmed, incoming and pending meetings, session bookings and exhibitor events when a participant's status is no longer active, and of meetings a user started when they move to a category that does not allow meetings, with the reason stated.",
+"stories": [
+"Switching to a category which does not allow meetings will trigger a cancellation",
+"Inactive status cancels all scheduled Sessions and Meetings"
+]
+},
+{
+"id": "meet-confirmation-location-rules",
+"theme": "meet",
+"q": "2023-Q1",
+"title": "Meeting confirmation and location rules",
+"benefit": "Auto-confirm meetings for chosen participant categories and keep meeting locations accurate once the in-person event ends.",
+"what": "Meeting auto-confirmation can be switched on per participant category. After the last in-person slot, requests offer only online meetings, and requesters type an 'other' location when no preset options exist.",
+"detail": "Meeting auto-confirmation can be switched on per participant category. After the last in-person slot, requests offer only online meetings, and when 'other location' is allowed without preset options, requesters type the location themselves.",
+"stories": [
+"Auto confirmation of meetings | Participant Category Level",
+"(App+Web) EMEA: Remove the stand hall meeting option from selection after In-person event ends",
+"User have to enter other location by himself when no other location mentioned in admin panel",
+"Optimization in ScheduleService -> checkTimes function"
+]
+},
+{
+"id": "meet-cards-improvements",
+"theme": "meet",
+"q": "2023-Q2",
+"title": "Meeting and matchmaking card improvements",
+"benefit": "See who you are meeting and where at a glance, with clearer meeting cards and company names on matchmaking cards.",
+"what": "Calendar meeting cards show the other party and location first, then time and title. Matchmaking cards show company name. Admin meeting pages link participants to their profiles, and contact sharing settings sit in three groups.",
+"detail": "Calendar meeting cards now show the other party and location first, then time and title. Matchmaking cards show the participant's company name. In the admin meeting management pages, participant photos and names link to their edit pages, and contact sharing settings are grouped into three labelled sections.",
+"stories": [
+"Meeting cards title",
+"ММ cards improvement",
+"*DWTC* Improvement in Manage Meeting Section",
+"Create groupings for contact sharing settings"
+]
+},
+{
+"id": "meet-request-improvements-2023q2",
+"theme": "meet",
+"q": "2023-Q2",
+"title": "Meeting request improvements",
+"benefit": "Attach files to meeting requests, return to where you started after booking, and run the meetings grid in 20-minute steps.",
+"what": "When organisers enable it, requesters can attach a file to a meeting request in the app. Users can return to the page where they started a request with filters and pagination kept, and the meetings grid offers a 20-minute step.",
+"detail": "Requesters can attach a file to a meeting request in the app when organisers enable it. Users can be returned to the page where they started a request, keeping filters and pagination. A 20-minute time step was added to the meetings grid, with matching maximum meeting lengths.",
+"stories": [
+"(APP) Meeting request includes the attached file option",
+"Filter and pagination retention after booking meetings",
+"Add new Time step to meetings grid - 20 min"
+]
+},
+{
+"id": "meet-rescheduling-controls",
+"theme": "meet",
+"q": "2023-Q2",
+"title": "Meeting rescheduling controls",
+"benefit": "Reschedule meetings from the existing slot, and hide rescheduling for chosen roles and categories on web and app.",
+"what": "The rescheduling time grid opens on the meeting's current date with its time preselected, and the summary line includes the date. A setting hides the Reschedule button for selected roles and categories on web and app.",
+"detail": "The rescheduling time grid now opens on the meeting's current date with its time preselected. A 'Disallow meeting reschedule for' setting hides the Reschedule button on meeting cards for selected roles and categories, on web and in the app.",
+"stories": [
+"Apply minor improvements to the meeting rescheduling process",
+"Hide Reschedule button option (Web)",
+"Hide Reschedule button option (App)"
+]
+},
+{
+"id": "meet-speaker-schedule-blocking",
+"theme": "meet",
+"q": "2023-Q2",
+"title": "Schedule blocking for speakers",
+"benefit": "Stop meetings from being booked over speakers' and moderators' sessions, and keep blocking events from clashing with confirmed meetings.",
+"what": "Speakers' and moderators' calendars are blocked during their sessions and exhibitor events for meeting requests and confirmations. Slot-blocking exhibitor events can no longer be booked over confirmed meetings or other commitments.",
+"detail": "Speakers' and moderators' calendars are blocked during their sessions and exhibitor events for meeting requests and confirmations. Slot-blocking exhibitor events can no longer be booked over confirmed meetings, blocked time, other blocking events or speaker duties.",
+"stories": [
+"Block schedule for Speakers and Moderators",
+"Blocking schedule booking improvement"
+]
+},
+{
+"id": "meet-blocked-time",
+"theme": "meet",
+"q": "2023-Q3",
+"title": "Blocked time management",
+"benefit": "Manage blocked time directly from your schedule, and let exhibitors block time for their team members.",
+"what": "Blocked time is a schedule item with its own cards and edit and delete actions, added from the Schedule and Team Schedule pages. Exhibitor companies can block time for team members, and blocked time can apply to exhibitor events only.",
+"detail": "Blocked time is now a schedule item with its own cards and edit and delete actions, managed from the Schedule and Team Schedule pages through an 'Add blocked time' pop-up. Exhibitor companies can set blocked time for team members, and blocked time can apply to exhibitor events only. Allowance settings gained explanatory tooltips.",
+"stories": [
+"Manage blocked time of team member+blocked time unification",
+"Visual Representation | Blocked Times",
+"Blocked time for exhibition events only",
+"Add a tooltip to the blocked time allowance management settings"
+]
+},
+{
+"id": "meet-calendar-sync-improvements",
+"theme": "meet",
+"q": "2023-Q3",
+"title": "Calendar sync improvements",
+"benefit": "Get clearer meeting details in synced Outlook and Google Calendar entries.",
+"what": "Meetings synced to Outlook include a structured block listing companies, participants, title and message. A Google Calendar option leaves out attendee emails and lists participant names in the event description, as Outlook does.",
+"detail": "Synced Outlook meeting entries include a structured block with companies, participants, title and message. A Google Calendar option excludes attendee emails and puts participant names in the event description instead, matching the Outlook behaviour.",
+"stories": [
+"Change structure of the Title of Outlook calendar card",
+"Google Calendar sync improvements : make it similar to the Outlook calendar sync as much as possible"
+]
+},
+{
+"id": "meet-hosted-buyer-teams",
+"theme": "meet",
+"q": "2023-Q3",
+"title": "Hosted buyer team setup",
+"benefit": "Bring exhibitor team members into a hosted buyer programme with a single approval and the right category automatically.",
+"what": "For private events with public registration, buyer-category team members need only one hosted buyer acceptance. A default category setting gives team members that exhibitors create themselves a buyer category automatically.",
+"detail": "For private events with public registration, buyer-category team members need only one hosted buyer acceptance. A default category setting assigns a buyer category to team members that exhibitors create themselves.",
+"stories": [
+"Change in Team Member Approval Process for Hosted Buyer Using Clients",
+"Setting in the back-end which will provide team members with participant category automatically"
+]
+},
+{
+"id": "meet-badge-scan-completion",
+"theme": "meet",
+"q": "2023-Q3",
+"title": "Meeting completion by badge scan",
+"benefit": "Mark confirmed meetings as completed simply by scanning the other participant's badge, with completion visible in exports and the API.",
+"what": "Scanning the other participant's badge marks a confirmed regular meeting as completed, optionally also outside the meeting time. Completion shows in exports and the API, including meetings an exhibitor joined before adding team members.",
+"detail": "Badge-scan auto-completion covers regular meetings, with an option to complete meetings scanned outside the meeting time. Completion appears in exports and the API. A scan by any of an exhibitor's team members completes meetings the exhibitor joined before adding team members.",
+"stories": [
+"*DWTC* All Meetings Tracking",
+"Autocomplete improvement for Exhibitors without team members"
+]
+},
+{
+"id": "meet-meeting-ratings",
+"theme": "meet",
+"q": "2023-Q3",
+"title": "Meeting ratings",
+"benefit": "Ask attendees to rate their meetings after each meeting, daily or after the event, by email, WhatsApp or SMS.",
+"what": "Organisers choose, per role or category, whether meeting ratings are requested after each meeting, daily or after the event. Digest emails and WhatsApp or SMS links go to the ratings page or app, and the template is named 'Meeting Ratings'.",
+"detail": "Organisers choose when ratings are requested for each role or category. Digest emails list meetings to rate and link straight to the ratings page or the app, and the email template is now named 'Meeting Ratings'.",
+"stories": [
+"*DWTC* Request For New Email Template/Custom Meeting Template",
+"Rename Appointment Rate Meeting >> Email Template"
+]
+},
+{
+"id": "meet-new-meeting-request-flow",
+"theme": "meet",
+"q": "2023-Q3",
+"title": "New meeting request flow",
+"benefit": "Book a meeting on a single page that shows both sides' live availability for date, time, location and duration.",
+"what": "An optional meeting request flow puts participants, date, time, location and duration on one page. Users see every bookable date for both sides, each choice updates the remaining options, and unavailable options are disabled.",
+"detail": "An optional new meeting request flow brings participants, date, time, location and duration onto one page. Users see all bookable dates for both sides, each choice updates the remaining options, and unavailable options are disabled.",
+"stories": [
+"Meeting creation/edit steps improvement",
+"Add error to the meeting wizard"
+]
+},
+{
+"id": "meet-schedule-calendar-view",
+"theme": "meet",
+"q": "2023-Q3",
+"title": "New schedule calendar view",
+"benefit": "See your schedule in a calendar view that separates committed meetings from optional activities, on web and in the app.",
+"what": "Schedule pages split into Diary and Optional Activities, with team member selection, activity filters and a legend, and the app has a matching calendar view. Organisers set the default view, and a new time picker shows unavailable slots.",
+"detail": "Schedule pages are split into Diary and Optional Activities, with team member selection, activity filters and a legend. The app gained a matching calendar view for My Schedule and Team Schedule. Organisers set the default view and items shown, and a new time picker shows unavailable slots.",
+"stories": [
+"Schedule overview (New Calendar Schedule view)",
+"Schedule overview in app",
+"Define default items for Schedule (App + Web)",
+"Add ability to choose view by default for schedule page (WEB)",
+"Replace widget for timepicking"
+]
+},
+{
+"id": "meet-reassign-team-members",
+"theme": "meet",
+"q": "2023-Q3",
+"title": "Reassign team members to meetings",
+"benefit": "Let exhibitors swap which team member attends a meeting, including across child companies.",
+"what": "When organisers enable it, exhibitors with more than one team member get a Reassign members button on incoming, pending and confirmed meeting cards to pick other available team members, including across child companies.",
+"detail": "When enabled, a Reassign members button on exhibitor meeting cards opens a pop-up to choose another available team member for the meeting.",
+"stories": [
+"Reasigning team members (Web)"
+]
+},
+{
+"id": "meet-schedule-downloads",
+"theme": "meet",
+"q": "2023-Q3",
+"title": "Schedule downloads in Excel and app",
+"benefit": "Download your schedule as an Excel file, including team and child company details, or have it emailed from the app.",
+"what": "Organisers can let participants download their schedule as XLS as well as PDF, with team and parent or child company columns for exhibitors. App users can have it emailed as an attachment, and downloads include personal blocked time.",
+"detail": "Participants can choose PDF or XLS schedule downloads, with team and parent/child company columns for exhibitors. App users can request their schedule and receive it by email as an attachment. Downloaded files now include personal blocked time.",
+"stories": [
+"Download My Schedule in xls format",
+"Download My Schedule in xls format including Childs",
+"Download Schedule in app",
+"Download My Schedule in xls format"
+]
+},
+{
+"id": "meet-favourites-dashboard",
+"theme": "meet",
+"q": "2023-Q3",
+"title": "User favourites dashboard",
+"benefit": "See every participant's favourites with meeting status and notes, and start meetings from them as an organiser.",
+"what": "A User Favourites Dashboard in Networking & Matchmaking lists every case of one user favouriting another, with meeting status, notes and the admin who shared the link. Shared filter links now record who created them.",
+"detail": "A favourites dashboard in Networking & Matchmaking lists each favourite with its meeting status, notes and the admin who shared it, and shared filter links now record who shared them.",
+"stories": [
+"User Favorites Dashboard"
+]
+},
+{
+"id": "meet-schedule-limits-2023q4",
+"theme": "meet",
+"q": "2023-Q4",
+"title": "Schedule and meeting limit improvements",
+"benefit": "Move through event dates more easily and get clearer agenda exports and meeting limit settings.",
+"what": "The Schedule date selector shows all relevant dates with back and forward arrows. The agenda PDF matches web wording and can include the event logo and date headings. Exhibitor meeting limits no longer treat zero as unlimited.",
+"detail": "The Schedule page date selector shows all relevant dates with back and forward arrows. The agenda PDF can include the event logo and date headings. Exhibitor category meeting limits no longer treat zero as unlimited, and delegate page custom filters no longer offer an 'other' option.",
+"stories": [
+"Improve logic of date selector on the Schedule page",
+"Export My Agenda pdf file changes",
+"Remove \"0 as unlimited\" option for meeting limits of Exhibitor categories",
+"Need prohibit possibility choose \"other\" options on admin panel when managed custom filters for delegates page "
+]
+},
+{
+"id": "meet-prefilled-requests",
+"theme": "meet",
+"q": "2024-Q1",
+"title": "Prefilled meeting requests",
+"benefit": "Save a default subject, message, duration and file once and have them pre-filled in every new meeting request.",
+"what": "In the new web meeting request flow, users can save a default subject, message, duration and file from a pop-up or their profile settings. These pre-fill each new request and can still be edited.",
+"detail": "In the new web meeting request flow, users save default meeting information from a pop-up or their profile settings, and can still edit it on each request.",
+"stories": [
+"Prefilled meeting info (WEB)"
+]
+},
+{
+"id": "formats-meeting-availability-filter",
+"theme": "formats",
+"q": "2024-Q1",
+"title": "Meeting availability filter",
+"benefit": "Let buyers filter lists to show only exhibitors and people who still have meetings available.",
+"what": "Organisers can add a 'Meeting availability' filter to exhibitor, product, pavilion, speaker, delegate and buyer lists through display filters, showing only those whose meeting limits are not yet reached. It works on the web.",
+"detail": "A 'Meeting availability' filter can be added to exhibitor, product, pavilion, speaker, delegate and buyer lists through display filters, with an explanatory tooltip in the admin panel.",
+"stories": [
+"Ability for buyers to be able to see and filter exhibitors who have used up their allotment of confirmed meetings vs. exhibitors who have not",
+"Add tooltip to \"Meeting availability\" filters in the admin panel "
+]
+},
+{
+"id": "formats-minimum-meeting-reminders",
+"theme": "formats",
+"q": "2024-Q1",
+"title": "Minimum meeting reminders",
+"benefit": "Set a minimum number of confirmed meetings per category and remind participants who have not reached it.",
+"what": "Organisers set a minimum number of confirmed meetings per category. Users see their confirmed meetings against the requirement on their meetings page and receive automated reminder emails until they reach it.",
+"detail": "Organisers set a required number of confirmed meetings per category. Users see confirmed versus required meetings on their meetings page and receive automated reminder emails until they reach it.",
+"stories": [
+"Ability to setup auto email reminders when a meeting minimal requirement has not been reached"
+]
+},
+{
+"id": "meet-limits-auto-confirm",
+"theme": "meet",
+"q": "2024-Q2",
+"title": "Meeting limits with auto-confirmation",
+"benefit": "Keep auto-confirmed meetings within category limits, with clear messages on web and in the app when a limit is reached.",
+"what": "Auto-confirmation respects category daily and total confirmation limits, and the limit settings have clearer names and tooltips. The apps apply the same meeting and message limits as the web, with specific messages for each limit.",
+"detail": "Auto-confirmation respects category daily and total confirmation limits, and the limit settings were renamed with clearer tooltips. The apps enforce the same meeting and message limits as the web, with specific error messages for pending and confirmation limits.",
+"stories": [
+"Meeting auto confirm should work with Category settings of meetings",
+"Error Mechanism: Meetings,Messages Limits"
+]
+},
+{
+"id": "meet-schedule-while-booking",
+"theme": "meet",
+"q": "2024-Q2",
+"title": "Schedule view while booking",
+"benefit": "Check your own or your team's schedule without leaving the meeting request page.",
+"what": "The new meeting request flow has a 'See my Schedule' drawer, with a team member selector for exhibitors, and a 'View Today's Schedule' pop-up that keeps form data. The break organisers add between meetings is stated on screen.",
+"detail": "The new meeting request flow gained a 'See my Schedule' drawer with a team member selector for exhibitors, and a 'View Today's Schedule' pop-up that keeps form data intact. The break between meetings set by organisers is now always stated on the request screen.",
+"stories": [
+"My/Team schedule drawer in meeting request page ",
+"Viewing Daily Schedule on Meeting Creation Page",
+"Make tooltip text visible without needing to hover on icon"
+]
+},
+{
+"id": "formats-speed-networking",
+"theme": "formats",
+"q": "2024-Q2",
+"title": "Speed networking",
+"benefit": "Run timed, table-based networking rounds where checked-in attendees are matched automatically and see who to meet next.",
+"what": "Organisers set up speed networking sessions with location, timings, meetings per person and breaks. The platform pairs checked-in participants, lets them reject matches, emails schedules and contacts, and runs a live timeline and board.",
+"detail": "Organisers set up sessions with location, timings, meetings per person and breaks; the platform pairs checked-in participants, lets them reject irrelevant matches, emails schedules and contacts, and shows a live timeline, table view and public display board. Organisers can adjust meetings by hand and export feedback.",
+"stories": [
+"Speed Networking. Event Organizer Setup (MVP)",
+"Speed Networking.Matchmaking and Meeting Organization (MVP)",
+"Speed Networking. Meeting Notifications (MVP)",
+"Speed Networking. Dynamic timeline with counters (MVP)",
+"Speed Networking. Table view of generated meetings (MVP)",
+"Speed Networking. Public Meeting Display (MVP)",
+"Speed Networking. Offering users Matchmaking proposal (MVP)",
+"Speed Networking. Manual adjustment of generated meetings (MVP)",
+"Speed Networking. Frontend module for user access (MVP)",
+"Add sorting and search to the Speed Networking main page",
+"Admin Panel Export for Speed Networking Feedback"
+]
+},
+{
+"id": "meet-recommended-sorting",
+"theme": "meet",
+"q": "2024-Q3",
+"title": "Recommended for you sorting",
+"benefit": "Sort exhibitors, products, delegates, speakers and buyers by AI matchmaking relevance with 'Recommended for you'.",
+"what": "With matchmaking on, exhibitor, product, pavilion, delegate, speaker and buyer pages offer 'Recommended for you' sorting alongside A to Z, optionally as the default. Choosing a column sort in custom listings turns it off.",
+"detail": "With matchmaking on, listing pages offer 'Recommended for you' alongside A–Z sorting, optionally as the default, with explanatory text. Choosing a column sort in custom listings switches off recommended sorting.",
+"stories": [
+"Matchmaking Sorting on all marketplace and delegates pages",
+"Matchmaking Sorting for custom listing",
+"Removing Matchmaking sorting on Marketplace setting"
+]
+},
+{
+"id": "formats-opt-in-speed-networking",
+"theme": "formats",
+"q": "2024-Q3",
+"title": "Opt-in speed networking",
+"benefit": "Add eligible participants to speed networking by set conditions, let them mark who is relevant ahead of time and get a generated schedule.",
+"what": "Organisers can run opt-in speed networking: they pick participants by category and registration fields, manage a pre-registered list, set sponsored and buyer meeting limits, and adjust the generated tables by drag and drop.",
+"detail": "Organisers select participants using categories and registration fields, manage a pre-registered list, set sponsored and buyer meeting limits and adjust generated tables by drag and drop. Participants mark relevant matches, see sessions and meetings in their profile, schedule and app, and receive email and bell notifications.",
+"stories": [
+"Opt-In Speed Networking. Event Organizer Setup",
+"Opt-In Speed Networking. Pre-Registration conditions",
+"Add the “Use for Speed Networking“ checkbox to every select-type  registration form element",
+"Opt-In Speed Networking. Pre-registration list",
+"Opt-in Speed Networking. Meeting limits and set as a Buyer",
+"Opt-in Speed Networking.  Card in My Schedule",
+"Opt-In Speed Networking.  Offering users matchmaking proposals",
+"Opt-in Speed Networking. Profile pages and list of meetings in user profile",
+"Opt-In Speed Networking. Table view of generated meetings",
+"Opt-In Speed Networking.  Shedule of generated meetings",
+"Opt-in Speed Networking. Manual adjustment of meetings by Organizer",
+"Opt-In Speed Networking.  Dynamic timeline",
+"Opt-in Speed Networking.  Notifications",
+"Opt-in Speed Networking. Meeting creation logic",
+"Opt-in Speed Networking.  Card and details page in App Schedule"
+]
+},
+{
+"id": "formats-round-tables",
+"theme": "formats",
+"q": "2024-Q3",
+"title": "Round tables",
+"benefit": "Run round table sessions where attendees apply for topics and are seated at tables with a leader or moderator.",
+"what": "Organisers create round table sessions with topics, see who applied and manage the generated tables, editing seats and assigning leaders, moderators and sponsors. Attendees apply for topics and see their table in My Schedule on web and app.",
+"detail": "Organisers create sessions with topics, see applicants, and manage generated tables with seat editing and leader, moderator and sponsor assignment. Attendees find round tables in sessions, apply for topics, and see their table in My Schedule on web and app, with notifications once seated.",
+"stories": [
+"Round tables. Admin panel. Session creation and edit",
+"Round tables. Admin panel. Users list",
+"Round tables. Admin panel. Topics list",
+"Round tables. Admin panel. Tables list and management",
+"Round tables. Frontend part. All Sessions listing",
+"Round tables. Frontend part. Round tables listing",
+"Round tables. Frontend part. Round table Session page",
+"Round tables. Frontend part. My Schedule listing",
+"Round tables. Admin panel. Session timeline and header in management view",
+"Increase min number of field \"max number of people per table (number field)\"",
+"Round tables. Notifications",
+"Round tables. App part. My Schedule listing"
+]
+},
+{
+"id": "formats-speed-networking-checkin",
+"theme": "formats",
+"q": "2024-Q3",
+"title": "Speed networking check-in and voting",
+"benefit": "Track speed networking check-in from a registration list and vote on matches with clearer buttons.",
+"what": "Speed networking session pages list checked-in participants with filter, search, sort and QR code actions. Voting buttons start neutral and show the chosen vote in colour, and meetings can start one minute after final schedules.",
+"detail": "Session pages gained a registration list of checked-in participants with filter, search, sort and QR code actions. Voting buttons start neutral and show the chosen vote in colour, and meetings can start one minute after final schedules are sent.",
+"stories": [
+"Speed Networking. Participant Check-in (MVP)",
+" Enhance User Intuitiveness for Speedmatchmaking Voting Buttons",
+"[SN 1] Adjust Minimum Time Between Final Schedule and Meeting Start"
+]
+},
+{
+"id": "meet-blocked-time-team-schedule",
+"theme": "meet",
+"q": "2024-Q4",
+"title": "Blocked time and team schedule improvements",
+"benefit": "Limit blocked time to event days and find team members quickly on the Team Schedule page.",
+"what": "An 'Allow blocked time outside the event days' setting, when off, limits blocked-time pickers to event dates and times. The Team Schedule member selector can be searched by team member name and company.",
+"detail": "An 'Allow blocked time outside the event days' setting restricts blocked-time pickers to event dates and times when switched off. The Team Schedule member selector gained search by name and company.",
+"stories": [
+"Blocked Time - Show Only Event Dates",
+"Search Functionality for Team Schedule Management"
+]
+},
+{
+"id": "meet-exhibitor-recommendations",
+"theme": "meet",
+"q": "2024-Q4",
+"title": "Exhibitor recommendations when booking",
+"benefit": "See recommended exhibitors when starting a meeting with an exhibitor from any page.",
+"what": "The recommended exhibitors pop-up appears on every page where a meeting with an exhibitor can be started, not only on the marketplace.",
+"detail": "An exhibitor recommendations pop-up now appears across all pages where a meeting with an exhibitor can be started.",
+"stories": [
+"Add Exhibitor recomendations pop-up to all pages of meeting with exhibitor initiation"
+]
+},
+{
+"id": "meet-automatic-calendar-sync",
+"theme": "meet",
+"q": "2025-Q1",
+"title": "Automatic calendar sync",
+"benefit": "Keep meetings and sessions in step with your external calendar automatically after a one-time consent.",
+"what": "After a one-time consent, meetings and sessions sync to users' external calendars in the background every six hours, so additions, changes and deletions arrive without manual action.",
+"detail": "Meetings and sessions sync to users' external calendars in the background every six hours, so additions, changes and deletions arrive without manual action.",
+"stories": [
+"Automated Calendar Sync for Meetings & Sessions"
+]
+},
+{
+"id": "meet-real-time-matchmaking",
+"theme": "meet",
+"q": "2025-Q1",
+"title": "Real-time matchmaking",
+"benefit": "Switch on real-time matchmaking recommendations from the admin panel and see their status live.",
+"what": "The admin Matchmaking page runs on a real-time recommender, with an Enable toggle and a live status showing in progress, error or completed. Switching it off shuts the pipeline down.",
+"detail": "The admin Matchmaking page now runs on the real-time recommender, with an Enable toggle and a live status of in progress, error or completed. Switching it off shuts the pipeline down.",
+"stories": [
+"Re-wiring Matchmaking Page"
+]
+},
+{
+"id": "meet-wizard-profile-2025q1",
+"theme": "meet",
+"q": "2025-Q1",
+"title": "Meeting wizard and profile improvements",
+"benefit": "Spot team members with email problems when booking for them, and share profile links in one click.",
+"what": "The admin meeting wizard marks team members with fake, empty or undeliverable emails. Profile pages have a Copy button for the public profile link, with a bulk export of team links. Meeting limits show only where they apply.",
+"detail": "The admin meeting wizard marks team members with fake, empty or undeliverable emails. Profile pages gained a Copy button for the public profile link, with a bulk export of links for team members. Meeting limits are displayed more clearly on the front end.",
+"stories": [
+"Fake email label in meeting wizard",
+"Profile Link Copy Functionality for Participants and Exhibitors",
+"Improve logic of limits display on the frontend"
+]
+},
+{
+"id": "meet-meet-button-availability",
+"theme": "meet",
+"q": "2025-Q2",
+"title": "Meeting button availability checks",
+"benefit": "Only offer meetings with exhibitors who have a team member available, on web and in the app.",
+"what": "The Meeting button on exhibitor, pavilion and product cards and profiles checks team member permissions, opt-in, settings and limits. If no team member is available, the app hides the button and the web suggests sending a message.",
+"detail": "The Meeting button on exhibitor, pavilion and product cards and profiles checks team member permissions, opt-in, settings and limits. If no team member is available, the button is hidden in the app and the web suggests alternatives.",
+"stories": [
+"Hide Meet Button for Exhibitors Without Available Team Members (APP)",
+"Hide Meet Button for Exhibitors Without Available Team Members (WEB)"
+]
+},
+{
+"id": "meet-ratings-in-app",
+"theme": "meet",
+"q": "2025-Q2",
+"title": "Meeting ratings in the app",
+"benefit": "Rate completed meetings in the mobile app with stars, comments and the likely business outcome.",
+"what": "Completed meetings in the mobile app have a 'Rate This Meeting' button. Users give one to five stars, an optional comment and the likelihood of a business outcome, or mark that the meeting did not take place, and can edit it later.",
+"detail": "Completed meetings in the app show a 'Rate This Meeting' button with 1–5 stars, comments, likely business outcome or 'did not take place', and ratings can be edited later.",
+"stories": [
+"Meeting Rating Button - Meetings Page"
+]
+},
+{
+"id": "formats-opt-in-general-use",
+"theme": "formats",
+"q": "2025-Q2",
+"title": "Opt-in speed networking for any event",
+"benefit": "Use opt-in speed networking with visibility presets and pairing based on relevance and matchmaking score.",
+"what": "Opt-in speed networking was adapted for general use. Buyer status is a tag, organisers set two-sided visibility or choose presets, only opted-in eligible users appear in offers, and pairing uses relevance and match score.",
+"detail": "Buyers became a tag rather than a separate setup, organisers set two-sided visibility or choose presets, only opted-in eligible users appear in offers, and pairing uses relevance and matchmaking score.",
+"stories": [
+"MVP Opt-in Speed Networking project adjustments (WEB & AP)"
+]
+},
+{
+"id": "meet-ai-meeting-notes",
+"theme": "meet",
+"q": "2025-Q3",
+"title": "AI meeting notes",
+"benefit": "Record meetings in the app after a badge scan and receive an AI summary by email.",
+"what": "A first release of AI meeting notes in the app lets users give a voice sample, record a meeting from the Scans tab after a badge scan with explicit consent, and receive an AI summary by email. Organisers switch it on in the app builder.",
+"detail": "A first release of AI meeting notes in the app covers voice sample onboarding, recording from the Scans tab after a badge scan, explicit consent and emailed AI summaries. Organisers switch it on in the app builder.",
+"stories": [
+"AI Meeting Note Taker - Stage 1"
+]
+},
+{
+"id": "meet-admin-wizard-2025q3",
+"theme": "meet",
+"q": "2025-Q3",
+"title": "Admin meeting wizard improvements",
+"benefit": "Find the right team member fast when booking meetings for exhibitors in the admin panel.",
+"what": "In the admin meeting wizard, the team member dropdown is sorted A to Z, shows job title and company and can be searched. The exhibitor profile Team Members table combines columns and adds phone numbers.",
+"detail": "The meeting wizard team member dropdown is sorted A–Z, shows job title and company and supports search. The exhibitor profile Team Members table combines columns and adds a phone column.",
+"stories": [
+"Improvements in Meeting Wizard & Exhibitor Profile (Admin Panel)"
+]
+},
+{
+"id": "formats-meeting-programmes",
+"theme": "formats",
+"q": "2025-Q3",
+"title": "Meeting programmes",
+"benefit": "Take part in hosted meeting programmes: mark who you want to meet, confirm proposed meetings and follow your schedule.",
+"what": "Participants in hosted meeting programmes mark people Relevant or Super Relevant with an optional message, see who picked them and mutual matches, and confirm or decline meetings by round. Exhibitors manage their team's part.",
+"detail": "Participants mark people Relevant or Super Relevant with an optional message, see who picked them and mutual matches, and confirm or decline meetings by round. They follow a timeline, see their schedule and a connections dashboard, get calendar files for deadlines and rate meetings afterwards; exhibitors manage their team.",
+"stories": [
+"MP || FE Meeting Ratings section",
+"MP || FE Meeting Rating Popup",
+"MP || FE ICS files for emails",
+"MP || FE Main Page Logic",
+"MP || FE Meeting Program Details Page (Top Part)",
+"MP || FE Timeline",
+"MP || FE Sponsored limit",
+"MP || FE Connections and Meetings Dashboard (Exhibitor)",
+"MP || FE Team Members Block in Meeting Program (Exhibitor)",
+"MP || FE Schedule Block in Meeting Program (Exhibitor)",
+"MP || FE Matches List Section structure and logic",
+"MP || FE User Cards in Matches List Section",
+"MP || FE Exhibitor Card in Matches List Section",
+"MP || FE Connections and Meetings Dashboard (Users)",
+"MP || FE User Profile Details Pop-up",
+"MP || FE Exhibitor Profile Details Pop-up",
+"MP || FE Relevance Actions and Message",
+"MP || FE Confirmation List Section: Structure & Logic",
+"MP || FE User Cards in Confirmation List",
+"MP || FE Matches List: Search, Filters & Sorting",
+"MP || FE Schedule Block in Meeting Program (User)",
+"MP || Sponsored Meetings limit",
+"MP || User info pop-up (Frontend)",
+"Make optimization for long api fetches"
+]
+},
+{
+"id": "formats-round-table-confirmation",
+"theme": "formats",
+"q": "2025-Q3",
+"title": "Round table confirmation and reassignment",
+"benefit": "Ask round table participants to confirm their seat and move people between topics and tables.",
+"what": "Round tables can include an optional step where participants confirm or reject their topic and table, with statuses organisers can filter. Organisers see each topic's applicants and can move people to another topic or table, or remove them.",
+"detail": "An optional confirmation step lets participants confirm or reject their topic and table, with statuses organisers can filter. Organisers see each topic's applicants and can move or remove participants by drag and drop. Notifications, tooltips and the admin and front-end views were also refined.",
+"stories": [
+"Applications list in Topic details",
+"Confirmation Process",
+"Reasignment to another Topic",
+"Additional Round tables improvements",
+"[adminv2] browser history, back, in the round tables",
+"Round tables. Frontend impovements",
+"[adminv2] add virtualization for the sponsor list to the in the round tables"
+]
+},
+{
+"id": "meet-remaining-meetings",
+"theme": "meet",
+"q": "2025-Q4",
+"title": "Remaining meetings with auto-confirm",
+"benefit": "Cap auto-confirmed meetings at the exhibitor category limit and show how many meetings remain.",
+"what": "When meeting auto-confirmation is on, exhibitor category meeting limits still apply, and the number of meetings remaining is shown on the front end.",
+"detail": "When auto-confirm is on, exhibitor category meeting limits still apply, and the remaining meeting count is displayed on the front end.",
+"stories": [
+"[CMPL] Auto Confirm Meetings and Meeting limits Cap function"
+]
+},
+{
+"id": "formats-meeting-programme-admin",
+"theme": "formats",
+"q": "2025-Q4",
+"title": "Meeting programme management",
+"benefit": "Configure and run meeting programmes from the admin panel, from roles and participants through to tables and final schedules.",
+"what": "Organisers configure meeting programmes in the admin panel: roles, limits and a custom timeline, a pre-registered list with dashboards, and confirmation, schedule and table views where they can create or move meetings by hand.",
+"detail": "Organisers set roles, limits and a custom timeline, manage the pre-registered list with dashboards, and review generated meetings in confirmation, schedule and table views with search and filters. They can create or move meetings manually. Both generation runs create sponsored and free meetings, with email and platform notifications at each step.",
+"stories": [
+"MP || Meeting Program page and MM settings (Admin panel)",
+"MP || Roles settings (Admin panel)",
+"MP || Pre-registered list (Admin panel)",
+"MP || Pre-registered list. “Add Users“ button and pop-up (Admin panel)",
+"MP || Pre-registered list. Counters and dashboards (Admin panel)",
+"MP || Timeline and counters (Admin panel)",
+"MP || Confirmation list (Admin panel)",
+"MP || Confirmation list. Filters and Search (Admin panel)",
+"MP || Confirmation list. \"Create Meeting\" button and pop-up (Admin panel)",
+"MP || Schedule (Admin panel)",
+"MP || Schedule. Filters and Search (Admin panel)",
+"MP || Tables (Admin panel)",
+"MP || Tables. Search (Admin panel)",
+"MP || Schedule, Table. “Create Meeting“ button and pop-up (Admin panel)",
+"MP || Tables. Move meeting (Admin panel)",
+"MP || FE Email and platform web Notifications",
+"MP || Display filters extension",
+"MP || FE Meeting Program Cards in My Schedule",
+"12-hour based time for Meeting program",
+"Meeting program. Algo change. Free meetings on 1st generation",
+"Meeting Program. Timeline redesign"
+]
+},
+{
+"id": "formats-meeting-programmes-app",
+"theme": "formats",
+"q": "2025-Q4",
+"title": "Meeting programmes in the app",
+"benefit": "Follow meeting programmes in the mobile app with notifications, schedule cards and meeting ratings.",
+"what": "Meeting programmes are supported in the mobile app. Users are notified when added, removed or when final schedules are ready, see placeholder and then per-meeting cards with table numbers in My Schedule, filter them and rate meetings.",
+"detail": "App users are notified when added, removed or when final schedules are sent, see placeholder and then per-meeting cards with table numbers in My Schedule, filter them, and rate their meetings.",
+"stories": [
+"MP || App part"
+]
+},
+{
+"id": "formats-round-table-numbering",
+"theme": "formats",
+"q": "2025-Q4",
+"title": "Round table numbering",
+"benefit": "Give every round table in a session a unique number that never shifts.",
+"what": "Round table numbers run in one continuous sequence across all topics in a session, so each table has a unique number. New tables take the smallest free number.",
+"detail": "Table numbers run in one sequence across all topics in a session; new tables take the smallest free number.",
+"stories": [
+"Round tables. Table numbers across all topics"
+]
+},
+{
+"id": "meet-matchmaking-booking-2026q1",
+"theme": "meet",
+"q": "2026-Q1",
+"title": "Matchmaking and booking improvements",
+"benefit": "Control which categories shape matchmaking and spot every available time slot when booking.",
+"what": "Organisers can set each parent category to be included in, excluded from or strictly applied in the new matchmaking. The meeting time picker shows a scroll hint so users can see more time slots below.",
+"detail": "Organisers can set each parent category to be included in, excluded from or strictly applied in matchmaking, and the meeting time picker now shows a scroll hint so users see that more slots are available below.",
+"stories": [
+"Matchmaking Improvements. Precise Matchmaking",
+"Timepicker. Scroll Hint"
+]
+},
+{
+"id": "formats-meeting-programme-attendance",
+"theme": "formats",
+"q": "2026-Q1",
+"title": "Meeting programme attendance tracking",
+"benefit": "Record completed meetings by badge or QR scan and flag no-shows as an organiser or participant.",
+"what": "Meeting programme meetings are marked completed when the table QR code or the other person's badge is scanned. Organisers and participants can record a no-show, and ratings open in the app once final schedules are received.",
+"detail": "Meeting programme meetings can be completed by QR or badge scan, and both organisers and participants can mark a no-show. Ratings open in the app once final schedules are received.",
+"stories": [
+"MP || FE Meeting Completion via QR & Badge Scan",
+"Meeting program. No Show (Admin)",
+"Meeting program. No Show (User)",
+"Change meeting rating trigger in app"
+]
+},
+{
+"id": "formats-meeting-programme-improvements",
+"theme": "formats",
+"q": "2026-Q1",
+"title": "Meeting programme improvements",
+"benefit": "Run meeting programmes with a simpler participant view, split voting phases, early exhibitor access and more organiser control.",
+"what": "Meeting programmes have split voting phases, restructured tabs and one schedule list, and exhibitors can get early access to set team roles. Users can sort matches; organisers can delete meetings, limit timeslots and turn off notifications.",
+"detail": "Voting phases were split and tabs restructured, meeting blocks combine into one schedule list, and exhibitors can get early access. Users can sort matches in the relevance and opt-in phases, and organisers gained manual meeting deletion, timeslot blocking limits, optional conditions for team members and a switch to disable notifications; deleted users are removed.",
+"stories": [
+"Meeting program. Combine Meeting Blocks into Single Schedule List",
+"Meeting Program. Remove Image and Description",
+"Meeting Program. Remove User Profile Block",
+"Meeting Program. Replace Icon for Sponsored Meetings",
+"Meeting program. Remove Download Schedule option",
+"Meeting program. Early access for Exhibitors",
+"MP || FE Meeting Timeslot Blocking",
+"Meeting program. Meeting Confirmation Changes",
+"Meeting program. Manual meeting creation improvements",
+"Meeting program. Option to disable notification for Meeting program",
+"MP || Sessions list page & details page (Frontend)",
+"MP || FE Exhibitor flow",
+"MP || FE User flow",
+"MP || Meeting Program session creation and configuration (Admin panel)",
+"Meeting program. Split Voting Phase, Hide Mutual Matches, Restructure Tabs",
+"Meeting Program. Show General Buyers During Relevance Stage",
+"Meeting program. Sorting options for Relevance and opt-ins phases",
+"Meeting Program. Manual Delete Meetings",
+"Remove Deleted Users From Meeting Program",
+"Meeting program. Remove Mutual matches tab",
+"Meeting Program. Optionally extending Participation Conditions for Team Members "
+]
+},
+{
+"id": "formats-round-table-seating",
+"theme": "formats",
+"q": "2026-Q1",
+"title": "Round table seating controls",
+"benefit": "Add people to tables after final schedules and set a limit on the number of tables.",
+"what": "Organisers can add, remove and move people between round tables after the final schedule is sent, and set a limit on the number of tables per session. Users deleted from the platform are removed from sessions.",
+"detail": "Organisers can add users to a table after the final schedule is sent and define a tables limit, and deleted users are removed from sessions.",
+"stories": [
+"Round tables. Allow to add users to the table after the final schedule",
+"Round tables. Add setting to define the tables limit",
+"Round Tables. Remove Deleted Users from Sessions",
+"Develop BASIC version of RT Service"
+]
+},
+{
+"id": "formats-speed-networking-push",
+"theme": "formats",
+"q": "2026-Q1",
+"title": "Speed networking push notifications",
+"benefit": "Receive opt-in speed networking updates as push notifications on iOS and Android.",
+"what": "The iOS and Android apps send push notifications for opt-in speed networking, such as being added or removed, schedules being ready and changes, according to each person's role.",
+"detail": "Push notifications for opt-in speed networking were set up in the iOS and Android apps.",
+"stories": [
+"Set up push notifications for Speed Networking 2 in iOS and Android"
+]
+},
+{
+"id": "meet-personalised-meeting-notes",
+"theme": "meet",
+"q": "2026-Q2",
+"title": "Meeting notes, private and AI",
+"benefit": "Keep private notes on every meeting, and get AI meeting notes in the language the meeting was held in.",
+"what": "Attendees can add a private note when requesting a meeting or from their schedule, on web and in the app, and find all notes in one My Notes panel. AI meeting notes are produced in the meeting language, with one shared action list.",
+"detail": "Attendees add a private note when requesting a meeting or from their schedule, on web and in the app, and find every note in one My Notes panel. AI meeting notes are produced in the meeting language, with one shared list of action points for all participants.",
+"stories": [
+"Generate outputs in the meeting language",
+"Personalized Meeting Notes  (Core)- Web",
+"Personalized Meeting Notes (List) - Web",
+"Reformat action points to single list to send to all participants",
+"Personalized Meeting Notes - Mobile "
+]
+},
+{
+"id": "meet-meeting-setup-2026q2",
+"theme": "meet",
+"q": "2026-Q2",
+"title": "Meeting setup improvements",
+"benefit": "Set up matchmaking categories faster and get improved table meeting setup and meeting cards in the app.",
+"what": "Selecting a parent category in Networking & Matchmaking selects all of its child categories. In the app, meetings created by organisers show as confirmed and marked as such, and table meetings are booked with zone and table selection.",
+"detail": "Selecting a parent category in Networking & Matchmaking now selects all its child categories. The app gained improvements to table meeting setup and meeting cards.",
+"stories": [
+"Networking & Matchmaking: Select All Child Categories When Parent is Selected",
+"Table meeting setup and meeting cards improvements in app"
+]
+},
+{
+"id": "formats-meeting-formats-admin",
+"theme": "formats",
+"q": "2026-Q2",
+"title": "Centralised meeting formats admin",
+"benefit": "Manage speed networking, meeting programmes, concierge meetings, round tables and exhibitor events from one place.",
+"what": "A Meeting Formats area in the admin panel holds speed networking, meeting programmes and concierge meetings, each with its own email templates. Round tables and exhibitor events have their own sections there, and each format has a switch.",
+"detail": "Module management for meeting formats was restructured, with a central area for speed networking, meeting programmes and concierge meetings. Email templates for every format are managed there, round tables are managed independently, and exhibitor events management was enhanced.",
+"stories": [
+"Restructure Module Management for Meeting Format",
+"Centralised Management for Speed Networking, Meeting Program, and Concierge Meetings",
+"Email Templates Management for Speed Networking, Meeting Program, and Concierge Meetings in Admin Panel",
+"Email Templates Management for Exhibitor Events and Round Tables in Meeting Formats",
+"Enhancements to Exhibitor Events Management in Meeting Formats for Organizers",
+"Independent Management for Round Tables in Admin Panel"
+]
+},
+{
+"id": "formats-smarter-meeting-generation",
+"theme": "formats",
+"q": "2026-Q2",
+"title": "Smarter meeting generation",
+"benefit": "Get fuller, fairer generated schedules for speed networking and meeting programmes.",
+"what": "Meeting generation for speed networking and meeting programmes spreads meetings more evenly, can pool likes across an exhibitor's team, can count one-sided likes as mutual for chosen roles, and can add pairs where no likes exist.",
+"detail": "Meetings are spread more evenly across participants, likes can be pooled across an exhibitor's team, one-sided likes can count as mutual for chosen role directions, and extra pairs can be generated where no likes exist. Invalid input now returns an error rather than creating meetings in blocked slots, and sponsored limits no longer block organiser-created meetings.",
+"stories": [
+"1st generation of meetings - DS",
+"2nd generation of meetings - DS",
+"[Shoptalk Spring] #2c Backend logic to be changed",
+"Change validation of sponsored  limits on DS side (Speed Networking)",
+"Make more uniform distribution of meetings among SN participants",
+"Add API functionality to propagate likes across exhibitor team members (API param)",
+"Expand non-mutual likes into mutual likes",
+"For incorrect data input to SN change ignoring + warning to algo fail + error",
+"Generate additional pairs or meetings without existing likes"
+]
+},
+{
+"id": "meet-ai-notes-add-on",
+"theme": "meet",
+"q": "2026-Q3",
+"title": "AI meeting notes add-on",
+"benefit": "Offer AI meeting notes to exhibitors as a paid Lead Capture Pro add-on they can buy themselves.",
+"what": "Organisers can offer AI meeting notes as a Lead Capture Pro add-on and set its price in the event's payment currency. Exhibitors see and buy it on their Lead Capture Pro page, which turns on AI transcription for their whole team.",
+"detail": "Organisers enable AI meeting notes as a Lead Capture Pro add-on and set its price in the event's payment currency. Exhibitors see and buy it on the Lead Capture Pro page, unlocking AI transcription for their whole team.",
+"stories": [
+"Move AI Meeting Notetaker configuration to Lead Capture Pro as an add-on, allowing Event Organizers to access it along other lead capture pro configurations.",
+"Display AI Meeting Notetaker as an Add-on under Lead Capture Pro in the Exhibitor profile on the front-end allowing them to purchase it"
+]
+},
+{
+"id": "meet-meeting-management-2026q3",
+"theme": "meet",
+"q": "2026-Q3",
+"title": "Meeting management improvements",
+"benefit": "Open Bulk Respond without waiting for large teams to load, and restrict meetings with exhibitors without teams in the app.",
+"what": "Bulk Respond opens straight away whatever the team size and refreshes after changes are applied. The mobile app follows the setting that restricts meetings with exhibitors who have no team members, as the web does.",
+"detail": "Bulk Respond now opens instantly regardless of team size and refreshes after changes are applied. The mobile app respects the setting that restricts meetings with exhibitors who have no team members.",
+"stories": [
+"Bulk respond: remove full-team prefetch and pre-Apply sweep in favor of a post-apply grid refetch",
+"Backend endpoint with \"Restrict meetings\" setting "
+]
+},
+{
+"id": "formats-round-table-waitlist",
+"theme": "formats",
+"q": "2026-Q3",
+"title": "Round table waitlist replacement",
+"benefit": "More reliable waitlist replacement when round table seats are freed.",
+"what": "When a round table seat is freed, eligible waitlist candidates are now worked out within matching itself: applicants not already invited to a seat in any generation or earlier replacement.",
+"detail": "Eligible waitlist candidates for a freed round table seat are now worked out within matching itself: applicants who have not already been invited to a seat in any generation or earlier replacement. This removes an error-prone step.",
+"stories": [
+"Improve waitlist replacement to auto-detect available candidates"
+]
+}
+],
+"claims": [
+{
+"id": "08_networking_and_interactions:87",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Default Matchmaking — interest ↔ activity category scoring",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:88",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Multi-space Matchmaking (spaces = category filters)",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:89",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Matchmaking pipeline status: In Progress / Error / Completed",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:90",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Turning matchmaking OFF calls a DS lambda to release resources",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:91",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Toggle blocked while pipeline is In Progress",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:92",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Product Categories — global + local trees, hierarchical, multilingual",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:93",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Exclusion Filters between participant groups",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:94",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Data Matching — an additional refinement layer",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "08_networking_and_interactions:95",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Unified Recommendations Page with configurable blocks",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:96",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Recommend Related Exhibitors (Online RecSys)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:97",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Propagate Likes for Exhibitor Teams — API parameter only",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "08_networking_and_interactions:98",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Favourites — star save across all entity types",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:99",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Attend a Stand",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:100",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Messaging — 1-1 + group chat, user- and organiser-created",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:101",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "My Schedule — aggregated personal calendar",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:102",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Speed Networking (full sub-feature list)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:103",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Networking Notifications (web + mobile push)",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:104",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Included",
+"claim": "Organiser Networking Controls (matchmaking settings, allowed time, matrix, limits, module toggles, exhibitor controls, opt-in, privacy)",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:110",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Excluded",
+"claim": "Self-managed meeting flow excluded → in Meetings & Matchmaking",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:111",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Excluded",
+"claim": "Meeting Program / Concierge / Round Tables excluded",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "08_networking_and_interactions:112",
+"product": "Networking & Interactions",
+"section": "§2 Scope — Excluded",
+"claim": "Check-in / badge scanning excluded but scanned contacts appear in Favourites export",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:118",
+"product": "Networking & Interactions",
+"section": "§3 Roles",
+"claim": "Exhibitors cannot initiate messages unless \"Allow exhibitors to initiate conversations\" is ON",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "08_networking_and_interactions:119",
+"product": "Networking & Interactions",
+"section": "§3 Roles",
+"claim": "\"Only Mutual Connection Interaction\" — both sides must have favourited",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "08_networking_and_interactions:120",
+"product": "Networking & Interactions",
+"section": "§3 Roles",
+"claim": "Hiding the Favourite button for Participants also hides it for Speakers",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "08_networking_and_interactions:121",
+"product": "Networking & Interactions",
+"section": "§3 Roles",
+"claim": "Organiser cannot participate in networking as a regular user",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "08_networking_and_interactions:122",
+"product": "Networking & Interactions",
+"section": "§3 Roles",
+"claim": "Platform Admin (Data Science) enables RecSys; no self-service toggle",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "08_networking_and_interactions:128",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.1 Positive interactions raise affinity, negative lower it, learned over time",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:129",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.1 Full matchmaking view at `/newfront/profile/bm`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:130",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.1 \"Enable Broader Networking Connections\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:131",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.1 \"About Me mandatory per user type\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:132",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.3 Category limits enforced at registration and profile update",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:133",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.3 Deletion only from Database → Categories",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "08_networking_and_interactions:134",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.6 Recommendations page returns Access Denied if the Meetings module is off",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:135",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.6 Per-block category audience multiselect",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:136",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.6 Block order drag-and-drop",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:137",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.7 Block/pop-up hidden if exhibitor↔exhibitor matchmaking is OFF",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:138",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.9 Unfavouriting removes from the list but retains the dashboard record",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "08_networking_and_interactions:139",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.9 Favourites export is async via SQS (EP-1115)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:140",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.10 Attend a Stand: date + time, 08:00-20:00 in 30-min steps, up to 10 future dates",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:141",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.10 Unfavouriting does NOT remove a planned visit; re-favouriting re-opens for edit",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:142",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.11 Group chat: only favourited users addable (exhibitors may add own TMs)",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:143",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.11 Automatic group chat per exhibitor with team members",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:144",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.11 Conversation status filters (EP-20716)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:145",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.12 My Schedule grid 08:00-21:00, dynamically extended",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:146",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.12 \"Do not show local time\" toggle at `/admin/appointments`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "08_networking_and_interactions:147",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.12 XLS schedule download",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:148",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.12 External calendar sync via .ics",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:149",
+"product": "Networking & Interactions",
+"section": "§4 Feature inventory",
+"claim": "4.14 No notification for individual messages — only on chat creation",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:155",
+"product": "Networking & Interactions",
+"section": "§7 Business rules",
+"claim": "Exclusion filters are bidirectional",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:156",
+"product": "Networking & Interactions",
+"section": "§7 Business rules",
+"claim": "Exhibitor/TM connection-settings mutual exclusion",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:157",
+"product": "Networking & Interactions",
+"section": "§7 Business rules",
+"claim": "Disabling connections does not cancel existing meetings or chats",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:158",
+"product": "Networking & Interactions",
+"section": "§7 Business rules",
+"claim": "Favourites removal does not remove Attend a Stand",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:159",
+"product": "Networking & Interactions",
+"section": "§7 Business rules",
+"claim": "Speed Networking never pairs same-company participants",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "08_networking_and_interactions:160",
+"product": "Networking & Interactions",
+"section": "§7 Business rules",
+"claim": "Propagation requires API access",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "08_networking_and_interactions:161",
+"product": "Networking & Interactions",
+"section": "§7 Business rules",
+"claim": "\"Local time suppression: event timezone is always shown regardless\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:167",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§8 ERD: `USER.networking_opt_in`, `.allow_meetings`, `.allow_messages` as user columns",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "08_networking_and_interactions:168",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§8 `MATCHMAKING_SCORE` table with `score`, `last_updated`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "08_networking_and_interactions:169",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§8 `SCHEDULE_ITEM.item_type ∈ meeting/session/blocked_time/attend_stand`",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:170",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§8.3 Recommendation/Favourite connection lifecycle (Unseen → Viewed → Relevant/NotRelevant → …)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "08_networking_and_interactions:171",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§9 permission flow: module → opt-in → matrix → connection settings → limits → allowed time",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:172",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§10 DS Lambda pipeline",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:173",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§10 SQS async export",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:174",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§10 \"Platform API v2 — Propagate Likes\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "08_networking_and_interactions:175",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§12 User Favourites Dashboard with Notes and Admin attribution",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:176",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§12 Matchmaking sorting on marketplace pages (EP-27225)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "08_networking_and_interactions:177",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§13 admin paths under \"Networking & Matchmaking → …\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:178",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§14 Cloning an event resets the matchmaking toggle to OFF",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:179",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§14 \"No direct undo Not Relevant; the effect is gradual\" (`MASTER:7369`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "08_networking_and_interactions:180",
+"product": "Networking & Interactions",
+"section": "§8-§14",
+"claim": "§14 Opting out removes the profile from match results immediately",
+"verdict": "PARTIAL"
+},
+{
+"id": "08_networking_and_interactions:197",
+"product": "Networking & Interactions",
+"section": "Owned by this product",
+"claim": "`event_id, exhibitor_id, account_id, selected_date bigint, deleted, create/update_timestamp`",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:127",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Self-managed 1:1 meetings — request/confirm/reschedule/cancel/reassign",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:128",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Concierge Meetings — zones, tables, wizard, dashboard",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:129",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Speed Networking — walk-in + pre-matched modes",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:130",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Meeting Program — algorithmic full-event 1:1 scheduling",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:131",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Round Tables — expert-led themed group discussions",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:132",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor Events — exhibitor-created, organiser-approved",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:133",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Meeting Tags",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:134",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Meeting Ratings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:135",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Allowed Meeting Times (online/offline separated)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:136",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Location settings: online / stand / other",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:137",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Duration settings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:138",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Auto-confirm, auto-expire, block slots for pending",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:139",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Auto-complete via badge scan",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:140",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "Reporting: meetings export, seated export, real-time dashboard, `/api/v2/meetings/export`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:141",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Included",
+"claim": "May-2026 \"Meeting Formats\" admin regrouping",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:147",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Excluded",
+"claim": "Session/agenda management excluded",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "09_meetings_and_matchmaking:148",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Excluded",
+"claim": "Badge-scanning infra excluded",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:149",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Excluded",
+"claim": "AI Meeting Transcription (MTT, EP-47872) not delivered",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:150",
+"product": "Meetings & Matchmaking",
+"section": "§2 Scope — Excluded",
+"claim": "Third-party video (Zoom/Teams) out of scope beyond embed",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:156",
+"product": "Meetings & Matchmaking",
+"section": "§3 Roles",
+"claim": "Permission Matrix at category level governs who may initiate",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:157",
+"product": "Meetings & Matchmaking",
+"section": "§3 Roles",
+"claim": "\"A user with multiple categories is allowed if at least one category permits\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:158",
+"product": "Meetings & Matchmaking",
+"section": "§3 Roles",
+"claim": "Connection Settings can restrict beyond the Matrix but cannot grant",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:159",
+"product": "Meetings & Matchmaking",
+"section": "§3 Roles",
+"claim": "MP roles: Hosted Buyer / General Buyer / Sponsored TM / Free TM",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:160",
+"product": "Meetings & Matchmaking",
+"section": "§3 Roles",
+"claim": "Guest cannot initiate meetings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:166",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.1 New vs old request flow, toggled per event",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:167",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.1 \"Any Available Team Member\" option",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:168",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.1 File attachment on meeting request",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:169",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.2 One receiver-side confirm promotes both sides",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:170",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.2 Cancellation reason required",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:171",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.2 \"Disallow meeting reschedule\" is a global toggle",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:172",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.3 Concierge CSV import (user id, time slot, table id)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "09_meetings_and_matchmaking:173",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.3 Zone-level admin roles restrict visibility",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "09_meetings_and_matchmaking:174",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.3 Deleting a zone/table unassigns its meetings",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:175",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.4 SN walk-in: badge scan adds to pool",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:176",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.4 SN opt-in: relevance marks feed the algorithm",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:177",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.4 SN pairing by AI",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:178",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.5 MP timeline phases: voting → run 1 → confirm 1 → run 2 → confirm 2 → final",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:179",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.5 SR / R relevance levels",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:180",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.5 Only mutually marked pairs are eligible",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:181",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.5 One pair per company, by exact company name",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "09_meetings_and_matchmaking:182",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.5 Hosted Buyers see only Sponsored TMs",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:183",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.5 Sponsored limits, live counter, cancellations restore",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:184",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.5 Final Schedule must be triggered manually",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:185",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.5 Confirmation flow is explicit Accept",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:186",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.6 Round Tables report (.xlsx), per-session and per-topic",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:187",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.8 Statuses: Pending/Incoming/Confirmed/Cancelled/Completed/Expired",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:188",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.9 Meeting tags: \"Use for\" and \"Show at\" attributes",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:189",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.10 Three rating modes; daily at 14:30 GMT",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:190",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.10 WhatsApp / SMS rating channels",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:191",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.11 Custom reminders: automatic + scheduled + required-confirmed",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:192",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.11 Required-confirmed-meeting threshold",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:193",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.11 Several `/admin/appointments/emails` templates deprecated",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:194",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.13 10-minute duration option (EP-1780)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:195",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.14 \"Pause after meeting\" buffer",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:196",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.15 Exhibitor/TM connection-setting mutual exclusion + tooltip",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:197",
+"product": "Meetings & Matchmaking",
+"section": "§4 Feature inventory",
+"claim": "4.15 Settings exposed in `/api/v2/account/get",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:203",
+"product": "Meetings & Matchmaking",
+"section": "§7 Business rules",
+"claim": "Global autoconfirm supersedes category autoconfirm",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:204",
+"product": "Meetings & Matchmaking",
+"section": "§7 Business rules",
+"claim": "Turning autoconfirm ON does NOT retroactively confirm existing Pending meetings (`MASTER:7318`, `:8248`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "09_meetings_and_matchmaking:205",
+"product": "Meetings & Matchmaking",
+"section": "§7 Business rules",
+"claim": "Auto-expire moves the meeting to `Expired`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "09_meetings_and_matchmaking:206",
+"product": "Meetings & Matchmaking",
+"section": "§7 Business rules",
+"claim": "Past meetings cannot be cancelled or rescheduled",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:207",
+"product": "Meetings & Matchmaking",
+"section": "§7 Business rules",
+"claim": "Connection Settings OFF is the final gate; existing requests still repliable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:208",
+"product": "Meetings & Matchmaking",
+"section": "§7 Business rules",
+"claim": "Inactive user deactivation cancels all confirmed meetings (EP-12585)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:209",
+"product": "Meetings & Matchmaking",
+"section": "§7 Business rules",
+"claim": "Category change to a non-meeting category cancels meetings (EP-12587)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:210",
+"product": "Meetings & Matchmaking",
+"section": "§7 Business rules",
+"claim": "Sponsored limit lowered does not cancel existing meetings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:211",
+"product": "Meetings & Matchmaking",
+"section": "§7 Business rules",
+"claim": "Block-slots treats Incoming the same as Pending",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:212",
+"product": "Meetings & Matchmaking",
+"section": "§7 Business rules",
+"claim": "Max meeting length must be ≥ default",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:218",
+"product": "Meetings & Matchmaking",
+"section": "§9-§14",
+"claim": "§9 permission flow: module → opt-in → matrix → connection settings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:219",
+"product": "Meetings & Matchmaking",
+"section": "§9-§14",
+"claim": "§10 `/api/v2/meetings/export` with `last_modified` filter (EP-40013)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:220",
+"product": "Meetings & Matchmaking",
+"section": "§9-§14",
+"claim": "§10 `/api/v2/statistics/` for meeting analytics",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:221",
+"product": "Meetings & Matchmaking",
+"section": "§9-§14",
+"claim": "§10 ICS attached to confirmations when enabled (EP-1833959464)",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:222",
+"product": "Meetings & Matchmaking",
+"section": "§9-§14",
+"claim": "§11 17 notification templates keyed to transitions",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:223",
+"product": "Meetings & Matchmaking",
+"section": "§9-§14",
+"claim": "§12 Meeting Program reports (acceptance, no-show, top-requested)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "09_meetings_and_matchmaking:224",
+"product": "Meetings & Matchmaking",
+"section": "§9-§14",
+"claim": "§13 all self-managed settings at `/admin/appointments`",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:225",
+"product": "Meetings & Matchmaking",
+"section": "§9-§14",
+"claim": "§13 \"Meeting limits\" as a Networking-Controls screen",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:226",
+"product": "Meetings & Matchmaking",
+"section": "§9-§14",
+"claim": "§14 Concurrency: server resolves double-booking, first wins",
+"verdict": "PARTIAL"
+},
+{
+"id": "09_meetings_and_matchmaking:227",
+"product": "Meetings & Matchmaking",
+"section": "§9-§14",
+"claim": "§14 \"Two admins assign the same table: no system-level lock\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:54",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Included",
+"claim": "Agent management: create/edit/delete, unique registration links, XLS export, agent login portal (`:14860`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:55",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Included",
+"claim": "Buyer categories: name, colour, description, benefits, required documents (`:14861`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:56",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Included",
+"claim": "Benefits: three types + document builder for signable PDFs + frontend display (`:14862`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:57",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Included",
+"claim": "Document dashboard: statuses, individual + bulk export, email chasers (`:14863`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:58",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Included",
+"claim": "Automated filters routing to Accepted / Pre-Accepted / Pre-Rejected / Rejected with organiser notification (`:14864`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:59",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Included",
+"claim": "Buyers management: list, search, multi-field filter, Meeting Wizard, batch accept, batch resend, cancel, global delete (`:14865`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:60",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Included",
+"claim": "Buyers list (frontend) for exhibitors and team members (`:14866`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:61",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Included",
+"claim": "Email templates: agent creation, buyer accept, document information request, pending documents reminder (`:14867`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:62",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Included",
+"claim": "Badge / Print badge: static benefit with VivoTicket integration; minimum confirmed meetings threshold (`:14868`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:68",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Excluded (per F44)",
+"claim": "\"Registration form builder … Hosted Buyer consumes questionnaire data but does not own form design\" (`:14872`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:69",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Excluded (per F44)",
+"claim": "\"Meeting scheduling logic … covered by Meetings & Matchmaking\" (`:14871`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:70",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Excluded (per F44)",
+"claim": "\"Analytics dashboards beyond the document dashboard\" excluded (`:14876`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:71",
+"product": "Hosted Buyer Management",
+"section": "§2 Product Scope — Excluded (per F44)",
+"claim": "\"VivoTicket integration internals … owned by Onsite & Kiosk\" (`:14874`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:77",
+"product": "Hosted Buyer Management",
+"section": "§3 User Roles (`:14882-14891`)",
+"claim": "Organizer: full access to all HB admin screens",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:79",
+"product": "Hosted Buyer Management",
+"section": "§3 User Roles (`:14882-14891`)",
+"claim": "Agent: dedicated login, own buyers only, own buyers' meetings, XLS import, dashboard (`:14884`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:80",
+"product": "Hosted Buyer Management",
+"section": "§3 User Roles (`:14882-14891`)",
+"claim": "Hosted Buyer: frontend profile at `/newfront/profile/benefits` (`:14885`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:81",
+"product": "Hosted Buyer Management",
+"section": "§3 User Roles (`:14882-14891`)",
+"claim": "Exhibitor / Team Member: frontend Buyers List at `/newfront/participants?page=buyers` (`:14886`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:82",
+"product": "Hosted Buyer Management",
+"section": "§3 User Roles (`:14882-14891`)",
+"claim": "\"Attendee sees buyers only in the Delegate List\" (`:14888`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:88",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Agents: \"Agent Code and Agent Reg Number cannot be changed post-creation\" (`:14903`)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "18_hosted_buyer_management:89",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "\"Deleting an agent does not delete the buyers they recruited; attribution preserved\" (`:14909`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:90",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Categories: \"Deleting a category automatically unassigns it from all buyers\" (`:14917`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:91",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Categories: \"Optional description surfaces on the frontend when at least one document is attached\" (`:14917`)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "18_hosted_buyer_management:92",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Benefits: four document types `upload_only \\",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:93",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Benefits: \"Static Benefit supports download-only documents only\" (`:14936`)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "18_hosted_buyer_management:94",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Benefits: \"Set Limit functionality is disabled\" (`:14940`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:95",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Benefits: \"Deleting a benefit deletes attached documents; processed buyer documents are also deleted\" (`:14946`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:96",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "EP-10422: signature-optional toggle on \"to sign\" documents (`:15026`, BR-9 `:15121`, FAQ `:15384`)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "18_hosted_buyer_management:97",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Document dashboard statuses: Not Started / In Progress / Uploaded / Approved (`:14954`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:98",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Dashboard filter: All / Not Started / Approved / Uploaded / In Progress (`:14960`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:99",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "\"Statuses may update with a delay of a few minutes\" (`:14954`, `:15338`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:100",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Automated filters: \"Filters are evaluated in sequence; the first matching filter applies\" (`:14974`, BR-2 `:15114`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:101",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Filters evaluated only on new registrations (`:14980`, `:15364`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:102",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Filters: \"Multiple agents can be associated with one filter\" (`:14974`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:103",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Buyers management statuses: New, Accepted, Pre-Accepted, Pre-Rejected, Rejected (`:14988`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:104",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Three-dots menu: Meeting Wizard, Manage Meetings, Not Active, Delete → Cancel / Delete Globally (`:14988`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:105",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "\"Batch Accept changes all Pre-Accepted buyers with an assigned category to Accepted\" (`:14991`, BR-4)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:106",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "\"Leading/trailing spaces prevent search from working\" (`:14991`, BR-11)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:107",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Buyers list (frontend): only Accepted status shown; organiser can restrict categories (`:15005`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:108",
+"product": "Hosted Buyer Management",
+"section": "§4 Feature Inventory",
+"claim": "Buyers list: ElasticSearch optional (`:15005`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:114",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Only Accepted buyers appear on the frontend Buyers List; category exclusion overrides",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:115",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Automated filter assigns at most one status; first match wins; no match → New",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:116",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Category can only be auto-assigned when status is Accepted or Pre-Accepted",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:117",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Batch Accept only for Pre-Accepted with a category",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:118",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Delete Globally only after Cancelled",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:119",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Deleting a category auto-unassigns it from all buyers",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:120",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Deleting an agent preserves buyers and attribution",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:121",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Print Badge requires Badge checkbox AND meeting threshold; threshold 0 = no minimum",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:122",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Signature can be made optional (EP-10422)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "18_hosted_buyer_management:123",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Auto-reminder emails when meeting minimum not reached by a configured date (EP-23256)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:124",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Search fails on leading/trailing spaces",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:125",
+"product": "Hosted Buyer Management",
+"section": "§7 Business Rules Engine (`:15113-15124`)",
+"claim": "Buyers appear in the Delegate List unless their category is excluded",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:131",
+"product": "Hosted Buyer Management",
+"section": "§8 Data Model (`:15131-15217`)",
+"claim": "`AGENT { id, email, first_name, last_name, agent_code, agent_reg_number, phone, country, creation_date }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:132",
+"product": "Hosted Buyer Management",
+"section": "§8 Data Model (`:15131-15217`)",
+"claim": "`BUYER { id, name, email, company_name, status, agent_id, category_id, is_active, registration_date }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:133",
+"product": "Hosted Buyer Management",
+"section": "§8 Data Model (`:15131-15217`)",
+"claim": "BUYER_CATEGORY` (mandatory 1:1)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:134",
+"product": "Hosted Buyer Management",
+"section": "§8 Data Model (`:15131-15217`)",
+"claim": "`BUYER_CATEGORY { id, name, colour, description }`",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:135",
+"product": "Hosted Buyer Management",
+"section": "§8 Data Model (`:15131-15217`)",
+"claim": "static\", badge_enabled, badge_meeting_threshold }`",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:136",
+"product": "Hosted Buyer Management",
+"section": "§8 Data Model (`:15131-15217`)",
+"claim": "`BENEFIT_DOCUMENT { doc_type enum, file_reference, signature_required }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:137",
+"product": "Hosted Buyer Management",
+"section": "§8 Data Model (`:15131-15217`)",
+"claim": "`BUYER_DOCUMENT_STATUS { buyer_id, document_id, status enum, last_updated }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:138",
+"product": "Hosted Buyer Management",
+"section": "§8 Data Model (`:15131-15217`)",
+"claim": "`AUTOMATED_FILTER { name, buyer_status, category_id, questionnaire_criteria json }`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:139",
+"product": "Hosted Buyer Management",
+"section": "§8 Data Model (`:15131-15217`)",
+"claim": "--o{ AGENT : references`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:140",
+"product": "Hosted Buyer Management",
+"section": "§8 Data Model (`:15131-15217`)",
+"claim": "Buyer state diagram: `New → PreAccepted/Accepted/PreRejected/Rejected → … → Cancelled → [*]` (`:15202-15217`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:165",
+"product": "Hosted Buyer Management",
+"section": "§9 Permissions Matrix (`:15254-15269`)",
+"claim": "Organizer/Super Admin have all 8 admin capabilities",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:167",
+"product": "Hosted Buyer Management",
+"section": "§9 Permissions Matrix (`:15254-15269`)",
+"claim": "Agent capabilities: own portfolio, own buyers' meetings, XLS import",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:168",
+"product": "Hosted Buyer Management",
+"section": "§9 Permissions Matrix (`:15254-15269`)",
+"claim": "\"Enable/disable HB module: Super Admin only\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:174",
+"product": "Hosted Buyer Management",
+"section": "§10 Integrations (`:15275-15280`)",
+"claim": "Meetings & Matchmaking",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:175",
+"product": "Hosted Buyer Management",
+"section": "§10 Integrations (`:15275-15280`)",
+"claim": "Stripe payment card in the document builder",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "18_hosted_buyer_management:176",
+"product": "Hosted Buyer Management",
+"section": "§10 Integrations (`:15275-15280`)",
+"claim": "VivoTicket",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:177",
+"product": "Hosted Buyer Management",
+"section": "§10 Integrations (`:15275-15280`)",
+"claim": "Email system (SMTP/SES)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:178",
+"product": "Hosted Buyer Management",
+"section": "§10 Integrations (`:15275-15280`)",
+"claim": "ElasticSearch",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:179",
+"product": "Hosted Buyer Management",
+"section": "§10 Integrations (`:15275-15280`)",
+"claim": "Registration module",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:185",
+"product": "Hosted Buyer Management",
+"section": "§11 Notifications (`:15286-15292`)",
+"claim": "Agent creation",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:186",
+"product": "Hosted Buyer Management",
+"section": "§11 Notifications (`:15286-15292`)",
+"claim": "Buyer Accept",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:187",
+"product": "Hosted Buyer Management",
+"section": "§11 Notifications (`:15286-15292`)",
+"claim": "Buyer Filter Auto Status Notification (to organiser)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:188",
+"product": "Hosted Buyer Management",
+"section": "§11 Notifications (`:15286-15292`)",
+"claim": "Document information request `/admin/hostedbuyers/emails/buyer_doc_info`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:189",
+"product": "Hosted Buyer Management",
+"section": "§11 Notifications (`:15286-15292`)",
+"claim": "Bulk pending document reminder `/admin/hostedbuyers/emails/buyer_doc_pending_inform`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:190",
+"product": "Hosted Buyer Management",
+"section": "§11 Notifications (`:15286-15292`)",
+"claim": "Batch Resend Accept",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:191",
+"product": "Hosted Buyer Management",
+"section": "§11 Notifications (`:15286-15292`)",
+"claim": "Auto meeting minimum reminder (EP-23256)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:192",
+"product": "Hosted Buyer Management",
+"section": "§11 Notifications (`:15286-15292`)",
+"claim": "\"SMS and push notifications are not documented for Hosted Buyer\" (`:15294`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:193",
+"product": "Hosted Buyer Management",
+"section": "§11 Notifications (`:15286-15292`)",
+"claim": "Missing from the doc",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "18_hosted_buyer_management:199",
+"product": "Hosted Buyer Management",
+"section": "§12 Reporting & Analytics (`:15300-15305`)",
+"claim": "Document Dashboard",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:200",
+"product": "Hosted Buyer Management",
+"section": "§12 Reporting & Analytics (`:15300-15305`)",
+"claim": "Buyers Management status summary",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:201",
+"product": "Hosted Buyer Management",
+"section": "§12 Reporting & Analytics (`:15300-15305`)",
+"claim": "Agent performance tracking + XLS export",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:202",
+"product": "Hosted Buyer Management",
+"section": "§12 Reporting & Analytics (`:15300-15305`)",
+"claim": "Online Meeting Analytics \"Account Agent\" column",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:209",
+"product": "Hosted Buyer Management",
+"section": "§13 Configuration Guide (`:15312-15326`) — corrections",
+"claim": "\"Buyers List category visibility — Networking & Matchmaking > Delegate List\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:210",
+"product": "Hosted Buyer Management",
+"section": "§13 Configuration Guide (`:15312-15326`) — corrections",
+"claim": "Document signature toggle (EP-10422)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "18_hosted_buyer_management:211",
+"product": "Hosted Buyer Management",
+"section": "§13 Configuration Guide (`:15312-15326`) — corrections",
+"claim": "Badge checkbox + meeting threshold",
+"verdict": "PARTIAL"
+},
+{
+"id": "18_hosted_buyer_management:212",
+"product": "Hosted Buyer Management",
+"section": "§13 Configuration Guide (`:15312-15326`) — corrections",
+"claim": "Missing from the doc",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "18_hosted_buyer_management:218",
+"product": "Hosted Buyer Management",
+"section": "§14 Edge Cases (`:15330-15366`) — selected",
+"claim": "\"Deleting a benefit after buyers have processed documents destroys compliance records — irreversible\" (`:15339`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:219",
+"product": "Hosted Buyer Management",
+"section": "§14 Edge Cases (`:15330-15366`) — selected",
+"claim": "\"Two organisers trigger Batch Accept simultaneously: second completes with no changes, no error\" (`:15360`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:220",
+"product": "Hosted Buyer Management",
+"section": "§14 Edge Cases (`:15330-15366`) — selected",
+"claim": "\"Automated filters are only evaluated on new registrations\" (`:15364`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "18_hosted_buyer_management:221",
+"product": "Hosted Buyer Management",
+"section": "§14 Edge Cases (`:15330-15366`) — selected",
+"claim": "\"A buyer who registered via a different agent's link will not appear in the first agent's portal\" (`:15355`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "18_hosted_buyer_management:222",
+"product": "Hosted Buyer Management",
+"section": "§14 Edge Cases (`:15330-15366`) — selected",
+"claim": "\"Batch Accept silently skips Pre-Accepted buyers with no category; no error\" (`:15344`)",
+"verdict": "CONFIRMED"
+}
+]
+}

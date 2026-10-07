@@ -1,0 +1,432 @@
+[
+ {
+  "id": "reg-language-preference",
+  "kind": "new",
+  "kindWhy": "'New system field of Language Preference' adds a field that did not exist",
+  "buildsOn": [
+   "06_online_registration:141"
+  ],
+  "buildsOnWhy": "Language Preference field in the form builder"
+ },
+ {
+  "id": "reg-form-field-options",
+  "kind": "improved",
+  "kindWhy": "'Add the option to make custom text field as a website field' / 'Add option for state/region and city' extend existing fields",
+  "buildsOn": [
+   "06_online_registration:147",
+   "06_online_registration:71",
+   "06_online_registration:226"
+  ],
+  "buildsOnWhy": "Custom field types, HTML5 website type and confirmation-page category variable"
+ },
+ {
+  "id": "reg-default-category",
+  "kind": "improved",
+  "kindWhy": "'Participant default category' adds a default to the existing participant categories",
+  "buildsOn": [
+   "06_online_registration:182"
+  ],
+  "buildsOnWhy": "Default Category, auto-assigned"
+ },
+ {
+  "id": "mobile-language-wording-2023",
+  "kind": "improved",
+  "kindWhy": "'Add support for US English language' and 'Replace Matchmaking Information Wording' change the existing app",
+  "buildsOn": [],
+  "buildsOnWhy": "No baseline claim covers app UI languages or wording"
+ },
+ {
+  "id": "reg-category-setup",
+  "kind": "improved",
+  "kindWhy": "'Ticketing order' (category ordering) and 'Prohibit same names for answer options' change existing setup",
+  "buildsOn": [
+   "06_online_registration:181",
+   "06_online_registration:74"
+  ],
+  "buildsOnWhy": "Participant category management"
+ },
+ {
+  "id": "mobile-android-redesign",
+  "kind": "improved",
+  "kindWhy": "'Delegate/Exhibitor/Products/Brands list redesign', 'Android Sessions redesign'",
+  "buildsOn": [
+   "19_mobile_app:86",
+   "19_mobile_app:85"
+  ],
+  "buildsOnWhy": "Catalogue/attendee lists and sessions in the app"
+ },
+ {
+  "id": "reg-utm-tracking",
+  "kind": "improved",
+  "kindWhy": "'UTM codes on the Confirmation Pages' adds tracking to the existing confirmation page",
+  "buildsOn": [
+   "06_online_registration:230",
+   "06_online_registration:345"
+  ],
+  "buildsOnWhy": "UTM forwarding to the confirmation page, Google Analytics"
+ },
+ {
+  "id": "mobile-arabic-multilingual",
+  "kind": "improved",
+  "kindWhy": "'Arabic translation for mobile app' and 'Multilanguage webview pages' extend the app's languages",
+  "buildsOn": [
+   "19_mobile_app:91",
+   "19_mobile_app:242"
+  ],
+  "buildsOnWhy": "Multilanguage webview in the app language, with fallback"
+ },
+ {
+  "id": "reg-category-cloning",
+  "kind": "new",
+  "kindWhy": "'Ability to clone participant and exhibitor categories' introduces cloning",
+  "buildsOn": [
+   "06_online_registration:81",
+   "06_online_registration:198"
+  ],
+  "buildsOnWhy": "Clone participant/exhibitor categories"
+ },
+ {
+  "id": "reg-print-badge-link",
+  "kind": "improved",
+  "kindWhy": "'Adding More Variables in Visitor Confirmation Page'",
+  "buildsOn": [
+   "06_online_registration:226",
+   "06_online_registration:348"
+  ],
+  "buildsOnWhy": "Confirmation-page variables incl. print badge link"
+ },
+ {
+  "id": "mobile-in-app-updates",
+  "kind": "new",
+  "kindWhy": "'In-App Updates' launches update prompts",
+  "buildsOn": [
+   "19_mobile_app:79",
+   "19_mobile_app:221",
+   "19_mobile_app:220"
+  ],
+  "buildsOnWhy": "Force/soft update policies and Required Update Version"
+ },
+ {
+  "id": "reg-basket-discounts-invoices",
+  "kind": "improved",
+  "kindWhy": "'Applying of the discounts', 'Change logic for invoice payment', add-to-basket link",
+  "buildsOn": [
+   "05_transactions_and_purchasing:112",
+   "05_transactions_and_purchasing:73",
+   "05_transactions_and_purchasing:75"
+  ],
+  "buildsOnWhy": "Participant basket discount order, multi-buy, payments by invoice"
+ },
+ {
+  "id": "reg-field-timestamps",
+  "kind": "improved",
+  "kindWhy": "'Add the option to record timestamp for a specific field'",
+  "buildsOn": [
+   "06_online_registration:153",
+   "06_online_registration:411"
+  ],
+  "buildsOnWhy": "Capture Input Timestamp"
+ },
+ {
+  "id": "mobile-app-behaviour-2024",
+  "kind": "improved",
+  "kindWhy": "'Dynamic Event Handling for User Session Management' and friendlier section close change existing behaviour",
+  "buildsOn": [
+   "19_mobile_app:76"
+  ],
+  "buildsOnWhy": "Multi-event container app and event selection"
+ },
+ {
+  "id": "reg-new-basket-payment",
+  "kind": "improved",
+  "kindWhy": "'(New UI) My Basket', 'Payment page upgrade' re-platform the basket and payment page",
+  "buildsOn": [
+   "05_transactions_and_purchasing:64",
+   "05_transactions_and_purchasing:109",
+   "05_transactions_and_purchasing:67"
+  ],
+  "buildsOnWhy": "Shopping basket and basket payment page"
+ },
+ {
+  "id": "reg-new-ticketing",
+  "kind": "improved",
+  "kindWhy": "'(Part 1) Tickets list/creation in Admin panel' under 'New ticketing' re-platforms ticketing",
+  "buildsOn": [
+   "05_transactions_and_purchasing:65",
+   "05_transactions_and_purchasing:118"
+  ],
+  "buildsOnWhy": "Ticket creation/config and setup form"
+ },
+ {
+  "id": "reg-app-basket-payment",
+  "kind": "new",
+  "kindWhy": "'Basket for the mobile app', 'Payment page for the mobile app' bring the basket into the app for the first time",
+  "buildsOn": [
+   "19_mobile_app:85",
+   "19_mobile_app:89"
+  ],
+  "buildsOnWhy": "Paid-session basket and basket in app My Account"
+ },
+ {
+  "id": "reg-ticket-pricing-tiers",
+  "kind": "improved",
+  "kindWhy": "'Setting few timeranges with different pricing' adds a pricing option to tickets",
+  "buildsOn": [
+   "05_transactions_and_purchasing:65"
+  ],
+  "buildsOnWhy": "Ticket pricing models"
+ },
+ {
+  "id": "reg-ticket-visibility-country",
+  "kind": "improved",
+  "kindWhy": "'Visibility by country for tickets in Old UI Registration' extends existing tickets",
+  "buildsOn": [
+   "06_online_registration:203",
+   "05_transactions_and_purchasing:65"
+  ],
+  "buildsOnWhy": "Ticket visibility by country per category"
+ },
+ {
+  "id": "reg-vat-rules",
+  "kind": "improved",
+  "kindWhy": "'Changes to the current VAT logic'",
+  "buildsOn": [
+   "05_transactions_and_purchasing:126",
+   "05_transactions_and_purchasing:69",
+   "05_transactions_and_purchasing:147"
+  ],
+  "buildsOnWhy": "VAT rules engine, EU rules, reverse charge"
+ },
+ {
+  "id": "mobile-app-builder-options",
+  "kind": "improved",
+  "kindWhy": "'Add an option in app builder...', 'Font in the app', 'Login Link' extend the app builder",
+  "buildsOn": [
+   "19_mobile_app:77",
+   "19_mobile_app:141",
+   "19_mobile_app:95"
+  ],
+  "buildsOnWhy": "App Builder, font selection incl. Gilroy, custom pages"
+ },
+ {
+  "id": "mobile-tiered-menus",
+  "kind": "improved",
+  "kindWhy": "'Tiered Menu Navigation for App Browser' restructures the existing menu",
+  "buildsOn": [
+   "19_mobile_app:94"
+  ],
+  "buildsOnWhy": "Configurable app menu"
+ },
+ {
+  "id": "reg-payment-setup-checks",
+  "kind": "improved",
+  "kindWhy": "'Validation of Required Fields', 'Check secret key of PayPal', 'new changes to the UK VAT API'",
+  "buildsOn": [
+   "05_transactions_and_purchasing:139",
+   "05_transactions_and_purchasing:257",
+   "05_transactions_and_purchasing:191"
+  ],
+  "buildsOnWhy": "Gateway required fields, PayPal key validation, VAT validation service"
+ },
+ {
+  "id": "mobile-event-selector-2025",
+  "kind": "improved",
+  "kindWhy": "'Display Country/City on choose event' and ordering of events on the selector",
+  "buildsOn": [
+   "19_mobile_app:76"
+  ],
+  "buildsOnWhy": "Multi-event container app event selection"
+ },
+ {
+  "id": "reg-tickets-profile-basket",
+  "kind": "improved",
+  "kindWhy": "'(Part 2) Introducing new tickets to the basket', 'Reservation of tickets', 'Behaviour of ticketing toggle'",
+  "buildsOn": [
+   "05_transactions_and_purchasing:116",
+   "05_transactions_and_purchasing:117",
+   "05_transactions_and_purchasing:120"
+  ],
+  "buildsOnWhy": "15-min reservation, ticketing toggle/sold lock, participant purchase flow"
+ },
+ {
+  "id": "reg-disable-repeated-registration",
+  "kind": "improved",
+  "kindWhy": "'Repeated registration flow for users' adds a setting to existing duplicate handling",
+  "buildsOn": [
+   "06_online_registration:405"
+  ],
+  "buildsOnWhy": "Duplicate registration can be explicitly permitted"
+ },
+ {
+  "id": "reg-orders-invoices-profile",
+  "kind": "new",
+  "kindWhy": "'A new Slider for Orders tab', 'Invoices tab', 'Create module for ordered items'",
+  "buildsOn": [],
+  "buildsOnWhy": "No baseline claim covers the participant profile orders/invoices area"
+ },
+ {
+  "id": "reg-ticket-category-upgrades",
+  "kind": "new",
+  "kindWhy": "'(Part 2) Tickets upgrade' introduces upgrading by ticket",
+  "buildsOn": [
+   "05_transactions_and_purchasing:66",
+   "05_transactions_and_purchasing:121"
+  ],
+  "buildsOnWhy": "Ticket upgrades with auto credit on category switch"
+ },
+ {
+  "id": "mobile-resync-builder-2025",
+  "kind": "new",
+  "kindWhy": "'Re-sync button to fetch the latest SQL data file manually' adds a new button",
+  "buildsOn": [
+   "19_mobile_app:89"
+  ],
+  "buildsOnWhy": "App Settings incl. re-sync"
+ },
+ {
+  "id": "reg-phone-validation",
+  "kind": "improved",
+  "kindWhy": "'Add validation of the phone field by value format'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers phone field validation"
+ },
+ {
+  "id": "reg-multilingual-invoices-tax",
+  "kind": "improved",
+  "kindWhy": "'Translation for invoices', 'Multilingual Tax name' extend existing invoices and taxes",
+  "buildsOn": [
+   "05_transactions_and_purchasing:70",
+   "05_transactions_and_purchasing:127",
+   "05_transactions_and_purchasing:125"
+  ],
+  "buildsOnWhy": "Invoice layout and taxes"
+ },
+ {
+  "id": "mobile-scrolling-location-text",
+  "kind": "improved",
+  "kindWhy": "'Rotating Location Text on Button' changes an existing button",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers detail-page location buttons"
+ },
+ {
+  "id": "reg-invoice-payment-registration",
+  "kind": "improved",
+  "kindWhy": "'Invoice Payment for Participants in Registration' extends invoice payment to participants",
+  "buildsOn": [
+   "05_transactions_and_purchasing:75",
+   "05_transactions_and_purchasing:130",
+   "05_transactions_and_purchasing:67"
+  ],
+  "buildsOnWhy": "Payments by Invoice and card-or-invoice payment page"
+ },
+ {
+  "id": "reg-category-lock",
+  "kind": "improved",
+  "kindWhy": "'Disabled category selection' adds an option to categories",
+  "buildsOn": [
+   "06_online_registration:82",
+   "06_online_registration:199",
+   "06_online_registration:307"
+  ],
+  "buildsOnWhy": "Disable participant category change"
+ },
+ {
+  "id": "reg-ticketing-version-switch",
+  "kind": "improved",
+  "kindWhy": "'Feature flag for new Ticketing' adds a switch between versions",
+  "buildsOn": [
+   "05_transactions_and_purchasing:77",
+   "05_transactions_and_purchasing:65"
+  ],
+  "buildsOnWhy": "New Ticketing flag and old+new ticket experience"
+ },
+ {
+  "id": "reg-new-ticketing-country",
+  "kind": "improved",
+  "kindWhy": "'Visibility of Tickets by Country' in the new ticketing",
+  "buildsOn": [
+   "06_online_registration:203",
+   "05_transactions_and_purchasing:65"
+  ],
+  "buildsOnWhy": "Ticket visibility by country"
+ },
+ {
+  "id": "mobile-usability-2026",
+  "kind": "improved",
+  "kindWhy": "'Deeplinks for Sessions' plus iOS 'Update About me / Tickets page behaviour'",
+  "buildsOn": [
+   "19_mobile_app:85"
+  ],
+  "buildsOnWhy": "Sessions in the app"
+ },
+ {
+  "id": "mobile-global-resync-no-logout",
+  "kind": "improved",
+  "kindWhy": "'Global Force Resync' now resets without logout",
+  "buildsOn": [
+   "19_mobile_app:89"
+  ],
+  "buildsOnWhy": "App settings re-sync"
+ },
+ {
+  "id": "mobile-offline-favourites",
+  "kind": "improved",
+  "kindWhy": "'Update Favourite icon behaviour in case of internet connection lost'",
+  "buildsOn": [
+   "19_mobile_app:83"
+  ],
+  "buildsOnWhy": "Networking favourites"
+ },
+ {
+  "id": "reg-new-registration",
+  "kind": "improved",
+  "kindWhy": "'Story 7-20' rebuild registration (email verification, tabs, tickets, sessions, summary) on the existing flow",
+  "buildsOn": [
+   "06_online_registration:77",
+   "06_online_registration:245",
+   "06_online_registration:73"
+  ],
+  "buildsOnWhy": "End-user registration page, abandonment resume, conditional logic"
+ },
+ {
+  "id": "reg-approval-buyer-waitlist",
+  "kind": "improved",
+  "kindWhy": "'Registration to Private event with Public access', 'Registration of Buyers', 'Registrations with limit'",
+  "buildsOn": [
+   "06_online_registration:114",
+   "06_online_registration:122",
+   "06_online_registration:123"
+  ],
+  "buildsOnWhy": "Registration with approval, limited registration, waiting list"
+ },
+ {
+  "id": "reg-branded-registration-pages",
+  "kind": "improved",
+  "kindWhy": "'Main Participant/Buyer registration page setup', 'Confirmation page setup'",
+  "buildsOn": [
+   "06_online_registration:76",
+   "06_online_registration:226",
+   "06_online_registration:223"
+  ],
+  "buildsOnWhy": "Confirmation page, variables, Visitor/Buyer variants"
+ },
+ {
+  "id": "reg-checkout-payment-improvements",
+  "kind": "improved",
+  "kindWhy": "'Skip the payment form when total is 0', 'Search Functionality on Transaction Dashboard and Invoice Payments'",
+  "buildsOn": [
+   "05_transactions_and_purchasing:74",
+   "05_transactions_and_purchasing:130"
+  ],
+  "buildsOnWhy": "Transaction Dashboard and Payments by Invoice"
+ },
+ {
+  "id": "mobile-branding-typography",
+  "kind": "improved",
+  "kindWhy": "'Add FBM Gabarito to remaining pages [Android]', branding promotion",
+  "buildsOn": [
+   "19_mobile_app:141"
+  ],
+  "buildsOnWhy": "App font selection"
+ }
+]

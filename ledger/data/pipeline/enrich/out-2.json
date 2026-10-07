@@ -1,0 +1,244 @@
+[
+ {
+  "id": "p08",
+  "key": "EP-57107",
+  "fields": {
+   "why": {
+    "value": "API behind the new multi-day session calendar (split from EP-57014): day-range sessions and a days-with-sessions list in one call each.",
+    "source": "EP-57107 description; EP-57107 link 'Work item split: EP-57014'"
+   },
+   "deps": {
+    "value": "Frontend adaptation (EP-57014, Visitor team) had to ship with it: the change is breaking (old view/day body now answers 400), the calendar was broken on alpha until the adapted frontend reached rc on 23 Sep, and pushes to alpha/rc/prod had to be agreed with the frontend developer. Sub-tasks EP-57262 (contract), EP-57263 (build, PR 5089), EP-57264 and EP-57391 (QA). Mobile is not a consumer: Android and iOS calendars are native and call no API for it. Open risks carried: 4 performance cases blocked because the EP-57286 test stand is gone with no one named to replace it; id-list validation defect EP-57367 filed separately across all search endpoints.",
+    "source": "EP-57107 description; EP-57107 comments 2026-09-16 by Oleksandr Zakablukov, 2026-09-17 by Oleksii Tur, 2026-09-17 by Taimoor Zulfiqar, 2026-09-17 by Oleksandr Yelfutin, 2026-09-16 by Oleksii Tur"
+   },
+   "notes": {
+    "value": "17 Sep: QA complete on 154 cases with no failures, but 15 cases not executed (performance, planner, timezone, null-start) and none human-verified; four documentation corrections owed, JD-15 fixed in the Description the same day. 17 Sep: Android and iOS confirmed native, not calling these endpoints. Jira: Done, resolved 23 Sep.",
+    "source": "EP-57107 comments 2026-09-17 by Roman Kubashevych, 2026-09-17 by Oleksii Tur, 2026-09-17 by Taimoor Zulfiqar and Oleksandr Yelfutin; jiraColumns status/resolved"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": "",
+   "named": [
+    {
+     "client": "DLG",
+     "quote": "Work item split: EP-57014 (EP-57014 Reported by: DLG, Pipedrive 81808)",
+     "source": "EP-57107 links; EP-57014 jira.reportedBy in in-2.json"
+    },
+    {
+     "client": "DLG",
+     "quote": "Design: https://calendar-view-proto.vercel.app/dlg-g3",
+     "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2118254608/Multi-day+Session+Calendar+View+Enhancements+for+Attendee+Experience (linked from EP-57014, not from EP-57107)"
+    },
+    {
+     "client": "(none named)",
+     "quote": "EP-57107 description and all 19 comments name no client; the only hint is the German-date acceptance criterion and example days 14-11-2025 on the Confluence page / original request, which do not name a client",
+     "source": "EP-57107 description and comments"
+    }
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/x/EABCfg",
+    "title": "Multi-day Session Calendar View Enhancements for Attendee Experience",
+    "read": true,
+    "note": "Not linked from EP-57107 itself (no Confluence link in its description or comments); read via EP-57014, from which EP-57107 was split. EP-57107 comments state there is no Confluence page for the API contract."
+   }
+  ],
+  "gaps": []
+ },
+ {
+  "id": "p09",
+  "key": "EP-57297",
+  "fields": {
+   "why": {
+    "value": "IMEX escalation: about 3.1% of exhibitor-favourite interactions go missing from API incremental syncs, ahead of IMEX America, Oct 2026.",
+    "source": "EP-57297 description; Confluence https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2144600068/DS+Proposal+Architecture+sync_ts+cursor+field+for+accountsInteractions; Confluence https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2116354050/REQ-2026-088+Add+synctimestamp+to+accountsInteractions+API+Endpoint"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "IMEX"
+   ],
+   "pipedrive": "26874",
+   "named": [
+    {
+     "client": "IMEX",
+     "quote": "driven by IMEX escalation",
+     "source": "EP-57297 description"
+    },
+    {
+     "client": "IMEX",
+     "quote": "Flagged by Pedro Goncalves as high priority for Integration given IMEX relevance",
+     "source": "EP-57297 description"
+    },
+    {
+     "client": "IMEX",
+     "quote": "so IMEX team can use this new field as a filter",
+     "source": "EP-57297 comment 2026-09-17 by Olena Dubnytska"
+    },
+    {
+     "client": "IMEX (IMEX America 2026)",
+     "quote": "Event Name: IMEX America 2026 ... Customer Contact: IMEX (Puerto) ... Escalated by client POC Puerto to their CTO.",
+     "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2116354050/REQ-2026-088+Add+synctimestamp+to+accountsInteractions+API+Endpoint"
+    }
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2144600068/DS+Proposal+Architecture+sync_ts+cursor+field+for+accountsInteractions",
+    "title": "[DS Proposal] Architecture: sync_ts cursor field for accountsInteractions",
+    "read": true,
+    "note": ""
+   },
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2116354050/REQ-2026-088+Add+synctimestamp+to+accountsInteractions+API+Endpoint",
+    "title": "[REQ-2026-088] Add synctimestamp to accountsInteractions API Endpoint",
+    "read": true,
+    "note": ""
+   }
+  ],
+  "gaps": []
+ },
+ {
+  "id": "p10",
+  "key": "EP-57221",
+  "fields": {
+   "why": {
+    "value": "Raised for IMEX: closes Global Search gaps left by EP-47675 (block order, labels, availability) and fixes Delegates not showing.",
+    "source": "EP-57221 Reported by; Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2137915393/Global+Search.+Blocks+Labels+Order+and+Availability+Control"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "IMEX"
+   ],
+   "pipedrive": "26874",
+   "named": [
+    {
+     "client": "IMEX",
+     "quote": "TAMs (especially IMEX) were already warned that they need to reapply customisation of labels in Translation manager",
+     "source": "EP-57221 comment 2026-09-17 by Oleksandr Parashchuk"
+    }
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2137915393/Global+Search.+Blocks+Labels+Order+and+Availability+Control",
+    "title": "Global Search. Blocks, Labels, Order and Availability Control",
+    "read": true,
+    "note": "Names no client"
+   }
+  ],
+  "gaps": []
+ },
+ {
+  "id": "p11",
+  "key": "EP-57511",
+  "fields": {
+   "why": {
+    "value": "New filters for Sessions and Exhibitor events, requested by DLG and HINTE.",
+    "source": "EP-57511 summary and Reported by"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "DLG",
+    "HINTE"
+   ],
+   "pipedrive": "81808, 44404",
+   "named": []
+  },
+  "pages": [],
+  "gaps": [
+   "why: filled only from the summary and Reported by; the ticket has no description, no comments and no Confluence link, so nothing says what commitment or gap makes it a must-have"
+  ]
+ },
+ {
+  "id": "p12",
+  "key": "EP-56915",
+  "fields": {
+   "why": {
+    "value": "Paid Vinexposium request: let organisers mark custom category filters as required, so users and exhibitors must pick at least one.",
+    "source": "EP-56915 comment 2026-09-11 by Ajay Singh; Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters"
+   },
+   "rationale": {
+    "value": "Organisers want to mark custom category filters as required, so users and exhibitors must choose at least one category from each such filter when setting activity, interest or product categories. It is a paid client request, so the brief is being confirmed with the client before the build starts. The rule also applies to categories saved earlier, and the category limit is raised automatically when there are more required filters than the limit allows, so users cannot reach a dead end.",
+    "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters; EP-56915 comment 2026-09-11 by Ajay Singh"
+   },
+   "impact": {
+    "value": "Organisers get at least one category from every required filter on user and exhibitor records. It covers seven Add category popups: user and exhibitor profile activity/interest categories, products, brands, exhibitor events, news and groups. The admin Categories page gains an Optional/Required filter type and some layout clean-up. The backend will not enforce the rule, so categories set through the admin panel, import, the API or the mobile app are not checked.",
+    "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters; EP-56915 comments 2026-09-22 by Konstantin Shein and 2026-09-23 by Vladyslav Dziubenko"
+   },
+   "notes": {
+    "value": "28 Sep: brief sent to the client; build waits for the client's final approval. 23 Sep: QA raised 13 open spec questions and estimated about 5 + 2 days (web only; mobile needs a separate task). 22 Sep: FE about 4d, BE about 3-4d. Jira due 13 Oct.",
+    "source": "EP-56915 comments 2026-09-28 by Konstantin Shein and Shubham Goswami, 2026-09-23 by Vladyslav Dziubenko, 2026-09-22 by Konstantin Shein; jiraColumns.due"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "Vinexposium"
+   ],
+   "pipedrive": "5368",
+   "named": [
+    {
+     "client": "(client not named; paid request)",
+     "quote": "will share it with client as it is paid request will cc both of us and get confirmation on what we are building before build starts",
+     "source": "EP-56915 comment 2026-09-11 by Ajay Singh"
+    },
+    {
+     "client": "(client not named)",
+     "quote": "I have sent the brief to the client, waiting for approval",
+     "source": "EP-56915 comment 2026-09-28 by Shubham Goswami"
+    }
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters",
+    "title": "Required Custom Category Filters",
+    "read": true,
+    "note": "Names no client"
+   }
+  ],
+  "gaps": []
+ },
+ {
+  "id": "p13",
+  "key": "EP-57014",
+  "fields": {
+   "why": {
+    "value": "DLG: turn the session Week View into a 3-column Multi-day View that hides empty days and time slots and loads days in chunks.",
+    "source": "EP-57014 Reported by; Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2118254608/Multi-day+Session+Calendar+View+Enhancements+for+Attendee+Experience"
+   },
+   "deps": {
+    "value": "Needs the backend API in EP-57107 (split from this story, Exhibitor team, Oleksii Tur): a new days-with-sessions endpoint and a day-range calendar endpoint. The backend change was breaking and left the calendar broken on alpha until this frontend reached rc on 23 Sep, so releases had to be agreed with the frontend developer. Parent epic EP-57118. Description split: FE 4d (Zakablukov), BE 3d (Tur), QA 3d (Khromei).",
+    "source": "EP-57014 description; EP-57014 comment 2026-09-07 by Oleksandr Zakablukov; EP-57014 links; EP-57107 comment 2026-09-16 by Oleksandr Zakablukov"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "named": [
+    {
+     "client": "DLG",
+     "quote": "Design: https://calendar-view-proto.vercel.app/dlg-g3",
+     "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2118254608/Multi-day+Session+Calendar+View+Enhancements+for+Attendee+Experience"
+    }
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/x/EABCfg",
+    "title": "Multi-day Session Calendar View Enhancements for Attendee Experience",
+    "read": true,
+    "note": "Tiny link resolves to page 2118254608; status Discovery, Effort M"
+   }
+  ],
+  "gaps": []
+ }
+]

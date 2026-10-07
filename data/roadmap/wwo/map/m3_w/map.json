@@ -1,0 +1,540 @@
+[
+ {
+  "id": "meet-auto-cancellation",
+  "kind": "improved",
+  "kindWhy": "Stories add cancellation triggers to existing status and category changes ('Inactive status cancels all scheduled Sessions and Meetings')",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:208",
+   "09_meetings_and_matchmaking:209"
+  ],
+  "buildsOnWhy": "Code cancels meetings on deactivation and on a move to a non-meeting category"
+ },
+ {
+  "id": "meet-confirmation-location-rules",
+  "kind": "improved",
+  "kindWhy": "'Auto confirmation of meetings | Participant Category Level' plus location option changes extend existing settings",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:138",
+   "09_meetings_and_matchmaking:203",
+   "09_meetings_and_matchmaking:136"
+  ],
+  "buildsOnWhy": "Auto-confirm settings and meeting location options"
+ },
+ {
+  "id": "meet-cards-improvements",
+  "kind": "improved",
+  "kindWhy": "'Meeting cards title', 'MM cards improvement', grouping of existing contact sharing settings",
+  "buildsOn": [
+   "08_networking_and_interactions:101",
+   "09_meetings_and_matchmaking:127"
+  ],
+  "buildsOnWhy": "Meeting cards in My Schedule and self-managed meetings"
+ },
+ {
+  "id": "meet-request-improvements-2023q2",
+  "kind": "improved",
+  "kindWhy": "Adds a file option, filter retention and a 20-min step to the existing request flow",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:168",
+   "09_meetings_and_matchmaking:137",
+   "09_meetings_and_matchmaking:127"
+  ],
+  "buildsOnWhy": "File attachment on requests and meeting duration settings"
+ },
+ {
+  "id": "meet-rescheduling-controls",
+  "kind": "improved",
+  "kindWhy": "'Apply minor improvements to the meeting rescheduling process', 'Hide Reschedule button option'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:171",
+   "09_meetings_and_matchmaking:127"
+  ],
+  "buildsOnWhy": "Disallow-reschedule setting and self-managed reschedule"
+ },
+ {
+  "id": "meet-speaker-schedule-blocking",
+  "kind": "improved",
+  "kindWhy": "'Block schedule for Speakers and Moderators', 'Blocking schedule booking improvement' extend slot blocking",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:132",
+   "09_meetings_and_matchmaking:127"
+  ],
+  "buildsOnWhy": "Exhibitor events and meeting booking availability"
+ },
+ {
+  "id": "meet-blocked-time",
+  "kind": "improved",
+  "kindWhy": "'blocked time unification', 'Visual Representation | Blocked Times' rework existing blocked time",
+  "buildsOn": [
+   "08_networking_and_interactions:169",
+   "08_networking_and_interactions:101"
+  ],
+  "buildsOnWhy": "Blocked time as a schedule item in My Schedule"
+ },
+ {
+  "id": "meet-calendar-sync-improvements",
+  "kind": "improved",
+  "kindWhy": "'Change structure of the Title of Outlook calendar card', 'Google Calendar sync improvements'",
+  "buildsOn": [
+   "08_networking_and_interactions:148",
+   "09_meetings_and_matchmaking:221"
+  ],
+  "buildsOnWhy": "External calendar sync via .ics"
+ },
+ {
+  "id": "meet-hosted-buyer-teams",
+  "kind": "improved",
+  "kindWhy": "'Change in Team Member Approval Process for Hosted Buyer Using Clients' plus a default category setting",
+  "buildsOn": [
+   "18_hosted_buyer_management:55",
+   "18_hosted_buyer_management:59"
+  ],
+  "buildsOnWhy": "Hosted buyer categories and buyer acceptance management"
+ },
+ {
+  "id": "meet-badge-scan-completion",
+  "kind": "improved",
+  "kindWhy": "'All Meetings Tracking', 'Autocomplete improvement for Exhibitors without team members'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:139",
+   "09_meetings_and_matchmaking:140"
+  ],
+  "buildsOnWhy": "Auto-complete via badge scan and meeting exports"
+ },
+ {
+  "id": "meet-meeting-ratings",
+  "kind": "improved",
+  "kindWhy": "'Request For New Email Template/Custom Meeting Template', 'Rename Appointment Rate Meeting' on existing ratings",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:134",
+   "09_meetings_and_matchmaking:189",
+   "09_meetings_and_matchmaking:190"
+  ],
+  "buildsOnWhy": "Meeting ratings, rating modes and WhatsApp/SMS channels"
+ },
+ {
+  "id": "meet-new-meeting-request-flow",
+  "kind": "improved",
+  "kindWhy": "'Meeting creation/edit steps improvement' reworks the existing request flow",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:166",
+   "09_meetings_and_matchmaking:127"
+  ],
+  "buildsOnWhy": "New vs old request flow toggled per event"
+ },
+ {
+  "id": "meet-schedule-calendar-view",
+  "kind": "improved",
+  "kindWhy": "'Schedule overview (New Calendar Schedule view)' redesigns the existing schedule pages",
+  "buildsOn": [
+   "08_networking_and_interactions:101",
+   "08_networking_and_interactions:145"
+  ],
+  "buildsOnWhy": "My Schedule personal calendar and its grid"
+ },
+ {
+  "id": "meet-reassign-team-members",
+  "kind": "new",
+  "kindWhy": "'Reasigning team members (Web)' introduces a Reassign members button",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:127"
+  ],
+  "buildsOnWhy": "Self-managed meetings include reassign"
+ },
+ {
+  "id": "meet-schedule-downloads",
+  "kind": "improved",
+  "kindWhy": "'Download My Schedule in xls format' adds XLS alongside the existing PDF",
+  "buildsOn": [
+   "08_networking_and_interactions:147"
+  ],
+  "buildsOnWhy": "XLS schedule download"
+ },
+ {
+  "id": "meet-favourites-dashboard",
+  "kind": "new",
+  "kindWhy": "'User Favorites Dashboard' launches a new admin dashboard",
+  "buildsOn": [
+   "08_networking_and_interactions:175",
+   "08_networking_and_interactions:98"
+  ],
+  "buildsOnWhy": "Favourites dashboard with notes and admin attribution; favourites"
+ },
+ {
+  "id": "meet-schedule-limits-2023q4",
+  "kind": "improved",
+  "kindWhy": "'Improve logic of date selector', 'Export My Agenda pdf file changes', 'Remove 0 as unlimited'",
+  "buildsOn": [
+   "08_networking_and_interactions:101",
+   "09_meetings_and_matchmaking:225"
+  ],
+  "buildsOnWhy": "My Schedule and meeting limits"
+ },
+ {
+  "id": "meet-prefilled-requests",
+  "kind": "improved",
+  "kindWhy": "'Prefilled meeting info (WEB)' adds saved defaults to the new request flow",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:166"
+  ],
+  "buildsOnWhy": "New meeting request flow"
+ },
+ {
+  "id": "formats-meeting-availability-filter",
+  "kind": "improved",
+  "kindWhy": "'Ability for buyers to ... filter exhibitors who have used up their allotment' adds a filter to existing lists",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:225",
+   "08_networking_and_interactions:104"
+  ],
+  "buildsOnWhy": "Meeting limits in organiser networking controls"
+ },
+ {
+  "id": "formats-minimum-meeting-reminders",
+  "kind": "new",
+  "kindWhy": "'Ability to setup auto email reminders when a meeting minimal requirement has not been reached'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:192",
+   "09_meetings_and_matchmaking:191",
+   "18_hosted_buyer_management:123"
+  ],
+  "buildsOnWhy": "Required-confirmed-meeting threshold and reminders"
+ },
+ {
+  "id": "meet-limits-auto-confirm",
+  "kind": "improved",
+  "kindWhy": "'Meeting auto confirm should work with Category settings', 'Error Mechanism: Meetings, Messages Limits'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:138",
+   "09_meetings_and_matchmaking:203",
+   "09_meetings_and_matchmaking:225"
+  ],
+  "buildsOnWhy": "Auto-confirm and meeting limits"
+ },
+ {
+  "id": "meet-schedule-while-booking",
+  "kind": "improved",
+  "kindWhy": "'My/Team schedule drawer in meeting request page', 'Viewing Daily Schedule on Meeting Creation Page'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:166",
+   "09_meetings_and_matchmaking:195"
+  ],
+  "buildsOnWhy": "New request flow and pause-after-meeting buffer"
+ },
+ {
+  "id": "formats-speed-networking",
+  "kind": "new",
+  "kindWhy": "Stories are 'Speed Networking ... (MVP)' across setup, matching, notifications and display",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:129",
+   "08_networking_and_interactions:102",
+   "09_meetings_and_matchmaking:177"
+  ],
+  "buildsOnWhy": "Speed Networking module and AI pairing"
+ },
+ {
+  "id": "meet-recommended-sorting",
+  "kind": "new",
+  "kindWhy": "'Matchmaking Sorting on all marketplace and delegates pages' introduces recommended sorting",
+  "buildsOn": [
+   "08_networking_and_interactions:176"
+  ],
+  "buildsOnWhy": "Matchmaking sorting on marketplace pages (EP-27225)"
+ },
+ {
+  "id": "formats-opt-in-speed-networking",
+  "kind": "new",
+  "kindWhy": "A full 'Opt-In Speed Networking' story set: organiser setup, pre-registration, matching, schedules",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:176",
+   "09_meetings_and_matchmaking:129",
+   "08_networking_and_interactions:102"
+  ],
+  "buildsOnWhy": "SN opt-in with relevance marks"
+ },
+ {
+  "id": "formats-round-tables",
+  "kind": "new",
+  "kindWhy": "First 'Round tables' story set: admin session creation, topics, tables, frontend listing",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:131",
+   "09_meetings_and_matchmaking:186"
+  ],
+  "buildsOnWhy": "Round Tables and their report"
+ },
+ {
+  "id": "formats-speed-networking-checkin",
+  "kind": "improved",
+  "kindWhy": "Adds 'Participant Check-in' and voting-button and timing tweaks to existing speed networking",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:175",
+   "09_meetings_and_matchmaking:129"
+  ],
+  "buildsOnWhy": "SN walk-in badge scan pool"
+ },
+ {
+  "id": "meet-blocked-time-team-schedule",
+  "kind": "improved",
+  "kindWhy": "'Blocked Time - Show Only Event Dates', 'Search Functionality for Team Schedule Management'",
+  "buildsOn": [
+   "08_networking_and_interactions:169",
+   "08_networking_and_interactions:101"
+  ],
+  "buildsOnWhy": "Blocked time schedule items and schedules"
+ },
+ {
+  "id": "meet-exhibitor-recommendations",
+  "kind": "improved",
+  "kindWhy": "'Add Exhibitor recommendations pop-up to all pages' extends an existing pop-up",
+  "buildsOn": [
+   "08_networking_and_interactions:96",
+   "08_networking_and_interactions:137"
+  ],
+  "buildsOnWhy": "Related exhibitor recommendations pop-up"
+ },
+ {
+  "id": "meet-automatic-calendar-sync",
+  "kind": "new",
+  "kindWhy": "'Automated Calendar Sync for Meetings & Sessions' adds background sync",
+  "buildsOn": [
+   "08_networking_and_interactions:148"
+  ],
+  "buildsOnWhy": "External calendar sync via .ics"
+ },
+ {
+  "id": "meet-real-time-matchmaking",
+  "kind": "improved",
+  "kindWhy": "'Re-wiring Matchmaking Page' re-platforms the existing page",
+  "buildsOn": [
+   "08_networking_and_interactions:89",
+   "08_networking_and_interactions:90",
+   "08_networking_and_interactions:91"
+  ],
+  "buildsOnWhy": "Matchmaking pipeline status, OFF lambda and toggle lock"
+ },
+ {
+  "id": "meet-wizard-profile-2025q1",
+  "kind": "improved",
+  "kindWhy": "'Fake email label in meeting wizard', 'Improve logic of limits display on the frontend'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:225"
+  ],
+  "buildsOnWhy": "Meeting limits display"
+ },
+ {
+  "id": "meet-meet-button-availability",
+  "kind": "improved",
+  "kindWhy": "'Hide Meet Button for Exhibitors Without Available Team Members' changes existing button behaviour",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:218",
+   "09_meetings_and_matchmaking:158"
+  ],
+  "buildsOnWhy": "Meeting permission flow and connection settings"
+ },
+ {
+  "id": "meet-ratings-in-app",
+  "kind": "improved",
+  "kindWhy": "'Meeting Rating Button - Meetings Page' adds an app entry point to existing ratings",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:134",
+   "09_meetings_and_matchmaking:189"
+  ],
+  "buildsOnWhy": "Meeting ratings"
+ },
+ {
+  "id": "formats-opt-in-general-use",
+  "kind": "improved",
+  "kindWhy": "'MVP Opt-in Speed Networking project adjustments'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:176",
+   "09_meetings_and_matchmaking:177"
+  ],
+  "buildsOnWhy": "SN opt-in relevance marks and AI pairing"
+ },
+ {
+  "id": "meet-ai-meeting-notes",
+  "kind": "new",
+  "kindWhy": "'AI Meeting Note Taker - Stage 1' is a first release",
+  "buildsOn": [],
+  "buildsOnWhy": "Only claim on this (MTT EP-47872) says it was not delivered, so none"
+ },
+ {
+  "id": "meet-admin-wizard-2025q3",
+  "kind": "improved",
+  "kindWhy": "'Improvements in Meeting Wizard & Exhibitor Profile (Admin Panel)'",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers the admin meeting wizard itself"
+ },
+ {
+  "id": "formats-meeting-programmes",
+  "kind": "new",
+  "kindWhy": "First 'MP || FE' story set: matches list, relevance actions, timeline, confirmation list",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:130",
+   "09_meetings_and_matchmaking:179",
+   "09_meetings_and_matchmaking:178"
+  ],
+  "buildsOnWhy": "Meeting Program, SR/R relevance and timeline phases"
+ },
+ {
+  "id": "formats-round-table-confirmation",
+  "kind": "improved",
+  "kindWhy": "'Confirmation Process', 'Reasignment to another Topic', 'Additional Round tables improvements'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:131",
+   "09_meetings_and_matchmaking:186"
+  ],
+  "buildsOnWhy": "Round Tables"
+ },
+ {
+  "id": "meet-remaining-meetings",
+  "kind": "improved",
+  "kindWhy": "'Auto Confirm Meetings and Meeting limits Cap function'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:138",
+   "09_meetings_and_matchmaking:225"
+  ],
+  "buildsOnWhy": "Auto-confirm and meeting limits"
+ },
+ {
+  "id": "formats-meeting-programme-admin",
+  "kind": "new",
+  "kindWhy": "First 'MP || ... (Admin panel)' story set: programme page, roles, pre-registered list, schedule, tables",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:130",
+   "09_meetings_and_matchmaking:184",
+   "09_meetings_and_matchmaking:223"
+  ],
+  "buildsOnWhy": "Meeting Program, manual final schedule, MP reports"
+ },
+ {
+  "id": "formats-meeting-programmes-app",
+  "kind": "improved",
+  "kindWhy": "'MP || App part' brings the existing programme to the app",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:130"
+  ],
+  "buildsOnWhy": "Meeting Program"
+ },
+ {
+  "id": "formats-round-table-numbering",
+  "kind": "improved",
+  "kindWhy": "'Round tables. Table numbers across all topics'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:131"
+  ],
+  "buildsOnWhy": "Round Tables"
+ },
+ {
+  "id": "meet-matchmaking-booking-2026q1",
+  "kind": "improved",
+  "kindWhy": "'Matchmaking Improvements. Precise Matchmaking', 'Timepicker. Scroll Hint'",
+  "buildsOn": [
+   "08_networking_and_interactions:87",
+   "08_networking_and_interactions:88"
+  ],
+  "buildsOnWhy": "Category-based matchmaking scoring"
+ },
+ {
+  "id": "formats-meeting-programme-attendance",
+  "kind": "improved",
+  "kindWhy": "'MP || FE Meeting Completion via QR & Badge Scan', 'No Show', 'Change meeting rating trigger'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:139",
+   "09_meetings_and_matchmaking:130"
+  ],
+  "buildsOnWhy": "Auto-complete via badge scan; Meeting Program"
+ },
+ {
+  "id": "formats-meeting-programme-improvements",
+  "kind": "improved",
+  "kindWhy": "'Split Voting Phase', 'Combine Meeting Blocks', 'Early access for Exhibitors', 'Sorting options'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:130",
+   "09_meetings_and_matchmaking:178",
+   "09_meetings_and_matchmaking:183"
+  ],
+  "buildsOnWhy": "Meeting Program, timeline phases, sponsored limits"
+ },
+ {
+  "id": "formats-round-table-seating",
+  "kind": "improved",
+  "kindWhy": "'Allow to add users to the table after the final schedule', 'Add setting to define the tables limit'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:131"
+  ],
+  "buildsOnWhy": "Round Tables"
+ },
+ {
+  "id": "formats-speed-networking-push",
+  "kind": "improved",
+  "kindWhy": "'Set up push notifications for Speed Networking 2 in iOS and Android'",
+  "buildsOn": [
+   "08_networking_and_interactions:103",
+   "09_meetings_and_matchmaking:176"
+  ],
+  "buildsOnWhy": "Networking push notifications; opt-in SN"
+ },
+ {
+  "id": "meet-personalised-meeting-notes",
+  "kind": "new",
+  "kindWhy": "'Personalized Meeting Notes (Core)' launches private notes; AI notes items are tweaks",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim covers private meeting notes or AI notes as shipped"
+ },
+ {
+  "id": "meet-meeting-setup-2026q2",
+  "kind": "improved",
+  "kindWhy": "'Select All Child Categories When Parent is Selected', 'Table meeting setup and meeting cards improvements in app'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:128"
+  ],
+  "buildsOnWhy": "Concierge zones and tables"
+ },
+ {
+  "id": "formats-meeting-formats-admin",
+  "kind": "improved",
+  "kindWhy": "'Restructure Module Management for Meeting Format', 'Centralised Management'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:141",
+   "09_meetings_and_matchmaking:132"
+  ],
+  "buildsOnWhy": "May-2026 Meeting Formats regrouping; exhibitor events"
+ },
+ {
+  "id": "formats-smarter-meeting-generation",
+  "kind": "improved",
+  "kindWhy": "'Make more uniform distribution', 'Expand non-mutual likes into mutual likes', 'Generate additional pairs'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:177",
+   "09_meetings_and_matchmaking:130",
+   "09_meetings_and_matchmaking:180"
+  ],
+  "buildsOnWhy": "SN AI pairing, Meeting Program, mutual-pair eligibility"
+ },
+ {
+  "id": "meet-ai-notes-add-on",
+  "kind": "improved",
+  "kindWhy": "'Move AI Meeting Notetaker configuration to Lead Capture Pro as an add-on'",
+  "buildsOn": [],
+  "buildsOnWhy": "No confirmed claim for AI notes (MTT claim says not delivered)"
+ },
+ {
+  "id": "meet-meeting-management-2026q3",
+  "kind": "improved",
+  "kindWhy": "'Bulk respond: remove full-team prefetch...', 'Backend endpoint with Restrict meetings setting'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:127"
+  ],
+  "buildsOnWhy": "Self-managed meetings"
+ },
+ {
+  "id": "formats-round-table-waitlist",
+  "kind": "improved",
+  "kindWhy": "'Improve waitlist replacement to auto-detect available candidates'",
+  "buildsOn": [
+   "09_meetings_and_matchmaking:131"
+  ],
+  "buildsOnWhy": "Round Tables"
+ }
+]

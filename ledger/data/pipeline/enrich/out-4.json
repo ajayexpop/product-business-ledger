@@ -1,0 +1,213 @@
+[
+ {
+  "id": "p21",
+  "key": "EP-29630",
+  "fields": {
+   "why": {
+    "value": "Admins need a tabbed permissions page so permissions for a large number of categories and roles are clear and easy to manage.",
+    "source": "EP-29630 description (Initial request: 'This will make it easier to manage a large number of categories')"
+   },
+   "notes": {
+    "value": "Open, due 2026-12-31, no original estimate, 12.15 days already logged. 2026-07-27 Konstantin Shein: requirements and design need to be actualised (agreed with Oleksandr Parashchuk). 2026-09-28 Ajay Singh: tentative start and due dates must always be filled.",
+    "source": "EP-29630 comment 2026-07-27 by Konstantin Shein; EP-29630 comment 2026-09-28 by Ajay Singh; EP-29630 jiraColumns (status, due, spentDays, origDays)"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": null,
+   "named": []
+  },
+  "pages": [],
+  "gaps": [
+   "No Confluence links in the description or comments; the only links are two Figma design links (not fetched, not needed for these fields) and Polaris items ADP-318 and PBV11-382 (not Confluence pages).",
+   "No client is named in the description or comments; the ledger rationale 'a lot of clients' is not backed by a Jira source.",
+   "No explicit estimate in any source (origDays null); ledger estimate left as is."
+  ]
+ },
+ {
+  "id": "p22",
+  "key": "EP-55779",
+  "fields": {
+   "why": {
+    "value": "IMEX-reported: move all Marketplace listing searches from keyword search to AI search with consistent semantic ranking.",
+    "source": "EP-55779 description; EP-55779 Reported by IMEX, Pipedrive 26874"
+   },
+   "notes": {
+    "value": "Epic Ready to start, 3.45 days logged. Spike EP-55778 Done (original estimate 2 days, due 2026-08-25); its outcome is RFC-0010 (published 2026-09-23, status Draft, decision pending), which chooses a per-event, per-entity admin switch between ElasticSearch and AI search, with no fallback on AI failure (team discussion 2026-09-22). 2026-09-22 Oleksii Tur asked what the fallback should be if the AI endpoint returns nothing. First listing story EP-55996 (Exhibitors list) is Open, no estimate. Rollout phases P0 to P4 in the RFC; Exhibitors first, then one entity per change.",
+    "source": "children of EP-55779 (EP-55778, EP-55996); EP-55778 comments 2026-09-21 and 2026-09-23 by Volodymyr Borisenko, 2026-09-23 by Konstantin Shein; EP-55779 comment 2026-09-22 by Oleksii Tur; Confluence https://expoplatform.atlassian.net/wiki/spaces/engineering/pages/2172026890/RFC-0010+Per-entity+search+engine+switch+ElasticSearch+DS+AI+Search+for+Marketplace+listings"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "IMEX"
+   ],
+   "pipedrive": "26874",
+   "named": []
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/engineering/pages/2172026890/RFC-0010+Per-entity+search+engine+switch+ElasticSearch+DS+AI+Search+for+Marketplace+listings",
+    "title": "RFC-0010: Per-entity search engine switch (ElasticSearch ↔ DS AI Search) for Marketplace listings",
+    "read": true,
+    "note": "Linked from child EP-55778 comment 2026-09-23, not from the epic itself. Draft; decision log pending; lists open risks RK-1 to RK-6 and questions Q1 to Q8."
+   },
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2042789928/Exhibitors+List+on+Marketplace+Web+Functional+Reference+for+the+Search+Engine+Swap",
+    "title": "Exhibitors List on Marketplace (Web) — Functional Reference for the Search Engine Swap",
+    "read": true,
+    "note": "Linked from child EP-55996 description. QA functional reference for the Exhibitors list swap; no client named."
+   }
+  ],
+  "gaps": [
+   "No Confluence link in the epic's own description or comments; the two pages were reached through child issues.",
+   "Neither page nor any comment names IMEX or any client; client evidence is Reported by and Pipedrive only.",
+   "Estimate not filled (not missing): aggOrigDays 2 is only the spike EP-55778 (57,600 seconds); EP-55996 has no estimate."
+  ]
+ },
+ {
+  "id": "p23",
+  "key": "EP-57914",
+  "fields": {
+   "why": {
+    "value": "IMEX-reported: Products is one of the Marketplace listings the AI search switch (EP-55779) moves from keyword search to AI search.",
+    "source": "EP-57914 Reported by IMEX, Pipedrive 26874; EP-55779 description (names Products)"
+   },
+   "notes": {
+    "value": "Epic Open as of 2026-09-28: no child issues, no comments, no estimate, no due date. Description is only a link to Polaris idea PBV11-492.",
+    "source": "EP-57914 jiraColumns; children of EP-57914 (none returned)"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "IMEX"
+   ],
+   "pipedrive": "26874",
+   "named": []
+  },
+  "pages": [],
+  "gaps": [
+   "Description contains only a Polaris (Jira Product Discovery) link, PBV11-492, not a Confluence page; not fetched.",
+   "The link to EP-55779 is by scope (EP-55779 description lists Products); EP-57914 is not a child of EP-55779 in Jira.",
+   "No client named in text; evidence is Reported by and Pipedrive only."
+  ]
+ },
+ {
+  "id": "p24",
+  "key": "EP-57918",
+  "fields": {
+   "why": {
+    "value": "Sessions is one of the Marketplace listings the AI search switch (EP-55779) moves from keyword search to AI search.",
+    "source": "EP-55779 description (names Sessions); EP-57918 summary"
+   },
+   "notes": {
+    "value": "Epic Open as of 2026-09-28: no child issues, no comments, no estimate, no due date. Description is only a link to Polaris idea PBV11-493.",
+    "source": "EP-57918 jiraColumns; children of EP-57918 (none returned)"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": null,
+   "named": []
+  },
+  "pages": [],
+  "gaps": [
+   "Description contains only a Polaris link, PBV11-493, not a Confluence page; not fetched.",
+   "EP-55779 names Sessions but not 'Exhibitor events' explicitly ('and others'); EP-57918 is not a child of EP-55779 in Jira.",
+   "Reported by INTERNAL and no Pipedrive id; the ledger rationale 'contracted with IMEX' is not backed by EP-57918 itself (its sibling EP-57914 and EP-55779 are IMEX-reported)."
+  ]
+ },
+ {
+  "id": "p25",
+  "key": "EP-57482",
+  "fields": {
+   "why": {
+    "value": "Lets organisers sell Lead Capture Pro and AI Notetaker per team member, not only for the whole exhibitor team, for flexible offers.",
+    "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2158428161/Lead+Capture+Pro+Per-Team-Member+Access+Purchase (Background)"
+   },
+   "notes": {
+    "value": "Epic Open as of 2026-09-28, no estimate. Specification page last modified 17 Sep 2026. Only child is EP-57483 'Discovery and Designs', created 2026-09-17, Ready to start, no estimate or due date. No comments on the epic or child.",
+    "source": "children of EP-57482 (EP-57483); Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2158428161/Lead+Capture+Pro+Per-Team-Member+Access+Purchase"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": null,
+   "named": []
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2158428161/Lead+Capture+Pro+Per-Team-Member+Access+Purchase",
+    "title": "Lead Capture Pro — Per-Team-Member Access Purchase",
+    "read": true,
+    "note": "Full specification: admin event setup (whole team / per member / both, prices, migration), purchase page, irreversible exhibitor assignment, organiser toggles, override logic with category/personal settings (EP-50122), app sync. Builds on EP-40864. No client named."
+   }
+  ],
+  "gaps": [
+   "No client named in the page or tickets.",
+   "No estimate in any source."
+  ]
+ },
+ {
+  "id": "p26",
+  "key": "",
+  "fields": {
+   "why": {
+    "value": "ExpoPlatform has no group registration: a team of ten must register and pay ten times, or our staff key the order in by hand.",
+    "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal (The short version)"
+   },
+   "impact": {
+    "value": "Buyers pay once for many passes (one transaction, one VAT invoice) and assign places later; each claimant completes the normal registration form, so exhibitors and matchmaking get real named attendees; organiser staff stop keying and maintaining group orders by hand.",
+    "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal (How it works; Where ExpoPlatform would be ahead)"
+   },
+   "deps": {
+    "value": "Needs an engineering estimate on one data model change: a ticket (slot) that exists without an attendee profile. Blocked by two commercial decisions (how volume bands combine with early bird and discount codes; what happens when a refund drops an order below a band) and a decision on whether slots are claimable before an invoice is paid. Touches 16 modules (basket quantity, ticketing per-order cap, discounts, emails, Open API, kiosks must refuse unassigned slots). Registration and payment were split across two teams in EP-27117.",
+    "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal (Two commercial decisions; Things that will bite; Open questions; Module by module); EP-27117 comment 2024-03-19 by Evgen Polivach"
+   },
+   "notes": {
+    "value": "Proposal page 'Group Registration: concept and proposal' (last modified 14 Sep 2026) is status 'Concept, not built' and asks for a go/no-go decision, with a clickable prototype and 3 proposed phases. Older Feature Request EP-27117 'Group Registration' (created 2024-03-08) is still 'Incoming request'; last comment 2024-03-19: Team B to build registration, Team A payment; its estimate table is empty apart from 1 PM day for Team B.",
+    "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal; EP-27117 description and comment 2024-03-19 by Evgen Polivach"
+   }
+  },
+  "client": {
+   "reportedBy": [],
+   "pipedrive": null,
+   "named": []
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal",
+    "title": "Group Registration: concept and proposal",
+    "read": true,
+    "note": "Personal space of Kavinder Rawal (ledger owner is 'Kavi'; possibly the same person, not assumed). Concept, not built; model B 'buy now, assign later'; phasing; open questions. No client named."
+   }
+  ],
+  "candidates": [
+   {
+    "type": "confluence",
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal",
+    "title": "Group Registration: concept and proposal",
+    "why": "Best match: title and scope are group registration; author Kavinder Rawal; last modified 14 Sep 2026; status Concept, not built."
+   },
+   {
+    "type": "jira",
+    "key": "EP-27117",
+    "url": "https://expoplatform.atlassian.net/browse/EP-27117",
+    "title": "Group Registration",
+    "why": "Feature Request, status Incoming request, created 2024-03-08, reporter Oleksandr Parashchuk, labels Team_B, internal, mig-awaiting-details. Describes a separate group registration page (names, email, job title, company; shared tickets and sessions; buyer pays for all). Earlier and narrower (roster entered upfront) than the Confluence proposal, which recommends 'buy now, assign later'."
+   }
+  ],
+  "gaps": [
+   "No Jira ticket on the ledger item; fields are drawn from the best-candidate page and EP-27117 and are not confirmed to be the same item.",
+   "No client named anywhere; ledger rationale 'Requests from multiple clients' is not backed by these sources (EP-27117 is labelled 'internal').",
+   "No estimate: EP-27117 estimate table is empty apart from 1 PM day; the page asks for an engineering estimate.",
+   "Team and month not stated for the current work (EP-27117 2024 comment names Team B and Team A only); not missing fields, left alone.",
+   "Other Jira hits for the search were unrelated (checkbox-group and registration-form defects, EP-56907, EP-49962, EP-38308, EP-28401, EP-27911, EP-27910, EP-26821); the broad text search on Confluence returned unrelated pages (payments table, trainings, roadmap whiteboards, Hyve pages, integrations)."
+  ]
+ }
+]

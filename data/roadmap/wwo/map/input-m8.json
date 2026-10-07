@@ -1,0 +1,2352 @@
+{
+"features": [
+{
+"id": "platform-passwordless-login",
+"theme": "platform",
+"q": "2023-Q1",
+"title": "Passwordless login",
+"benefit": "Let attendees sign in with a one-time code sent by email instead of a password.",
+"what": "Organisers can switch on one-time password login per event. Users get an emailed code valid for three minutes with a short resend cooldown, the password reset prompt is hidden, and Android users can paste the code.",
+"detail": "Organisers switch on one-time password login per event. Users receive a code valid for three minutes with a short resend cooldown, the password reset window is hidden when codes are in use, and Android users can paste the code.",
+"stories": [
+"Passwordless logination",
+"Hide Password reset window when OTP is turned on",
+"OTP Android: allow entering password code by copypasting"
+]
+},
+{
+"id": "platform-participant-email-warnings",
+"theme": "platform",
+"q": "2023-Q1",
+"title": "Participant email warnings",
+"benefit": "Spot participants with generated, missing or undeliverable email addresses directly in the admin panel.",
+"what": "The admin participants list and meeting wizard mark accounts that use a generated placeholder email, have no email, or have an email domain that cannot receive mail, with the error named beside the warning.",
+"detail": "The participants list and meeting wizard mark accounts that use a generated placeholder email, have no email, or have an email domain that cannot receive mail, with the error named next to the warning.",
+"stories": [
+"*DWTC* Indication of Fake Email",
+"Indication of Email errors in admin panel"
+]
+},
+{
+"id": "platform-profile-and-page-access-2023q1",
+"theme": "platform",
+"q": "2023-Q1",
+"title": "Profile and page access improvements",
+"benefit": "Search options in profile select fields and control public file page access with the sign-in setting.",
+"what": "Country, city, region, nationality and custom select fields in profiles have live search, including multi-select. Access to public file pages follows the exhibitor sign-in access setting instead of the content preview toggle.",
+"detail": "Country, city, region, nationality and custom select fields gain live search, including multi-select. Access to public file pages now follows the exhibitor sign-in access setting rather than the content preview toggle.",
+"stories": [
+"Add search function to data fields",
+"Detach public pages from content preview | Require Login Setting"
+]
+},
+{
+"id": "platform-module-management",
+"theme": "platform",
+"q": "2023-Q2",
+"title": "Full module management",
+"benefit": "Switch every admin panel section and sub-section on or off to match each event.",
+"what": "Global and event module management were restructured so every admin menu tab and sub-tab can be switched on or off, with a separate networking and matchmaking section. Analytics tabs redirect correctly when a module is off.",
+"detail": "Global and event module management were restructured so every admin menu tab and sub-tab can be toggled, including a separate networking and matchmaking section. Analytics tabs redirect correctly when a module is turned off.",
+"stories": [
+"Module management improvement",
+"Make redirects on tabs in analytics (/admin/stat/general) when permissions in module managment is turned off"
+]
+},
+{
+"id": "platform-admin-action-log",
+"theme": "platform",
+"q": "2023-Q2",
+"title": "Admin action log",
+"benefit": "Search, filter and export a full history of actions taken in the admin panel.",
+"what": "A new admin action log lists actions taken in the admin panel, with event, date, controller and action filters, search within request content and XLS export. Actions in the newer admin panel are recorded too.",
+"detail": "A new admin action log offers event, date, controller and action filters, search within request content and XLS export, and records newer admin panel actions.",
+"stories": [
+"Admin logs. Add logs from clickhouse to admin panel",
+"Admin logs. Add new admin panel actions in admin logs"
+]
+},
+{
+"id": "platform-arabic-language",
+"theme": "platform",
+"q": "2023-Q2",
+"title": "Arabic language option",
+"benefit": "Offer Arabic as a platform language for your event.",
+"what": "Arabic is available as a platform language for events, shown as AR in the language list.",
+"detail": "Arabic is available as a platform language, shown as AR in the language list.",
+"stories": [
+"Arabic language option"
+]
+},
+{
+"id": "platform-assigned-admins",
+"theme": "platform",
+"q": "2023-Q2",
+"title": "Assigned admins for accounts",
+"benefit": "Assign a responsible admin to each exhibitor or participant and filter lists by them.",
+"what": "The admin exhibitor and participant lists have an assigned admin column, an assignment pop-up, and filtering and sorting by assigned admin. Assignments are also available through the API and export.",
+"detail": "The admin exhibitor and participant lists gain an assigned admin column, an assignment pop-up, and filtering and sorting by assigned admin.",
+"stories": [
+"Assigning Visitor/Exhibitor to Admin team"
+]
+},
+{
+"id": "platform-admin-panel-guidance",
+"theme": "platform",
+"q": "2023-Q2",
+"title": "Clearer admin panel settings",
+"benefit": "Understand admin settings more easily with clearer names, tooltips and introductory text.",
+"what": "Several confusing admin settings were renamed, tooltips were added across admin modules, selected pages open with a short intro explaining their purpose, and fields with errors are highlighted in exhibitor category settings.",
+"detail": "Several confusing settings were renamed, tooltips were added across admin modules, selected pages show a short intro explaining their purpose, and fields with errors are highlighted in exhibitor category settings.",
+"stories": [
+"Renaming settings in the Admin Panel",
+"Adding Tool Tips in the Admin Panel",
+"Add intro copy to some Admin Portal pages",
+"Add fields with errors highlighting in exhibitors categories settings"
+]
+},
+{
+"id": "platform-inactive-account-activation",
+"theme": "platform",
+"q": "2023-Q2",
+"title": "Easier account activation",
+"benefit": "Help users with inactive accounts activate them straight from the login screen on web and app.",
+"what": "Inactive users see one clear activation message on web and in the iOS and Android apps, with a resend activation link action, including for one-time password login. The activation notice takes priority over a wrong-password error.",
+"detail": "Inactive users see one clear activation message across web and the iOS and Android apps, with a resend activation link action, including for one-time password login. The activation notice takes priority over a wrong-password error.",
+"stories": [
+"Correct naming of errors for inactive users (Web)",
+"Correct naming of errors for inactive users (App)",
+"Resend Activation Email for Inactive users in App",
+"Improvement in the flow of Sending activation email at user level : WEB",
+"\"Resend activation link\" for OTP"
+]
+},
+{
+"id": "platform-search-performance-2023",
+"theme": "platform",
+"q": "2023-Q2",
+"title": "Faster search indexing and listings",
+"benefit": "Get search results and marketplace listings up to date and loading faster.",
+"what": "Search indexing after event cloning waits for the clone to finish, whole-event indexing runs in bulk, marketplace exhibitor list requests were reorganised, and participant company, job title and news author were added to search.",
+"detail": "Search indexing after event cloning waits until the clone has finished, whole-event indexing runs in bulk, exhibitor list requests on the marketplace page were reorganised, and participant company, job title and news author were added to search.",
+"stories": [
+"Optimization of sync with elastic after event clone",
+"Change sync of the whole event to bulk of Elasticsearch",
+"Marketplace page requests optimization: re-organize request for Exhibitors in list-view.",
+"Include additional indexes"
+]
+},
+{
+"id": "platform-registration-spam-protection",
+"theme": "platform",
+"q": "2023-Q2",
+"title": "Spam protection for exhibitor sign-up",
+"benefit": "Protect exhibitor registration from spam submissions.",
+"what": "Frontend exhibitor registration includes a mandatory reCAPTCHA step.",
+"detail": "Frontend exhibitor registration includes a mandatory reCAPTCHA step.",
+"stories": [
+"The exhibitor registration reCapthca "
+]
+},
+{
+"id": "platform-admin-mfa",
+"theme": "platform",
+"q": "2023-Q3",
+"title": "Multi-factor authentication for admins",
+"benefit": "Require admins to sign in with a password plus an authenticator app code.",
+"what": "Admin accounts have an MFA tab to enable authenticator-app login for admins, exclude chosen admins, and send MFA setup emails one at a time or in bulk.",
+"detail": "Admin accounts gain an MFA tab to enable authenticator-app login, exclude chosen admins and send MFA setup emails.",
+"stories": [
+"MFA | Admins"
+]
+},
+{
+"id": "platform-sso-sign-in-2023",
+"theme": "platform",
+"q": "2023-Q3",
+"title": "Smoother SSO sign-in",
+"benefit": "Let SAML single sign-on users sign in within the same tab and see a custom error page if they are not registered.",
+"what": "The web login pop-up for SAML single sign-on is replaced by in-tab sign-in that returns users to where they started. Organisers can design a website page to show SSO users who are not found on the event.",
+"detail": "The web login pop-up for SAML SSO is replaced by in-tab sign-in that returns users to where they started. Organisers can design a website page to show SSO users who are not found on the event.",
+"stories": [
+"Customize entire error page for non existing records which try to login via SAML SSO   - configure through web builder",
+"Remove log in pop up  - Web Only"
+]
+},
+{
+"id": "platform-module-permission-alignment",
+"theme": "platform",
+"q": "2023-Q4",
+"title": "Aligned module and permission settings",
+"benefit": "Keep meeting and messaging permissions consistent with the modules switched on for an event.",
+"what": "Meeting and message permissions moved from module management into the permission matrix, with a general messages switch, and the matrix is disabled when a module is off.",
+"detail": "The relationship between module management and the permission matrix for meetings and messages was improved.",
+"stories": [
+"Improve relations between Module Management and Permission Matrix for meetings and messages"
+]
+},
+{
+"id": "platform-floor-plan-performance",
+"theme": "platform",
+"q": "2023-Q4",
+"title": "Floor plan and filter optimisation",
+"benefit": "Integrated floor plans are cached, and the filters used by the mobile apps put less load on the database.",
+"what": "Integrated floor plans are cached and optimised, and the filters service used by the mobile apps was moved to the newer filters with queued search syncing.",
+"detail": "Integrated floor plans are cached and optimised, and the filters service was optimised.",
+"stories": [
+"Cache for integrated Floorplan ",
+"Optimisation of the api/filters",
+"FloorPlan optimization"
+]
+},
+{
+"id": "platform-loading-indicators",
+"theme": "platform",
+"q": "2023-Q4",
+"title": "Loading indicators on listings",
+"benefit": "See clear loading feedback while listing pages and session dates load.",
+"what": "Listing pages such as marketplace, sessions, delegates, events and exhibitor lists show a loader while content loads, and the sessions page shows a loader when switching to another date.",
+"detail": "Listing pages show loaders while content loads, and the sessions page shows a loader when switching to another date.",
+"stories": [
+"Add loaders to listing pages",
+"Add a loader to the session page when we click on a new date"
+]
+},
+{
+"id": "platform-badge-scan-login",
+"theme": "platform",
+"q": "2023-Q4",
+"title": "Login by badge scan",
+"benefit": "Let app users sign in by scanning their event badge.",
+"what": "Badge-scan login in the mobile app can be switched on per event, limited to chosen categories and shown with a configurable login button. It works with one-time password login and activates the account.",
+"detail": "Badge-scan login in the mobile app can be switched on per event, limited to chosen categories and shown with a configurable login button. It works with one-time password login and activates the account.",
+"stories": [
+"Login via badge scan"
+]
+},
+{
+"id": "platform-gdpr-account-deletion",
+"theme": "platform",
+"q": "2023-Q4",
+"title": "Self-service account deletion",
+"benefit": "Let users choose events and request deletion of their account data from one page.",
+"what": "A single event selection page lists the events a verified user belongs to, so they can select events and delete their account and data from them.",
+"detail": "A single event selection page lists the events a verified user belongs to, so they can select events and delete their account and data.",
+"stories": [
+"Create an Event selection page for GDPR politics to delete accounts"
+]
+},
+{
+"id": "platform-otp-login-improvement",
+"theme": "platform",
+"q": "2023-Q4",
+"title": "Simpler one-time password login",
+"benefit": "Let users on public events request a one-time login code whatever their account status.",
+"what": "On public events, a one-time code is emailed on request whatever the account status, and inactive users become active once they sign in with it.",
+"detail": "On public events, a one-time code is emailed on request whatever the account status, and inactive users become active once they log in.",
+"stories": [
+"OTP improvement"
+]
+},
+{
+"id": "platform-admin-workflow-2024q1",
+"theme": "platform",
+"q": "2024-Q1",
+"title": "Admin workflow improvements",
+"benefit": "Open a user’s profile as them, keep list filters between visits and find session settings more easily.",
+"what": "A customer service action in the exhibitor and visitor lists signs an admin in as that user in a new tab. Filters and search persist per admin on sponsor, participant, exhibitor and session lists, and session settings are regrouped by area.",
+"detail": "A customer service action in the exhibitor and visitor lists logs an admin in as that user in a new tab. Filters and search persist per admin on sponsor, participant, exhibitor and session lists, and the sessions configuration page is regrouped by area.",
+"stories": [
+"Adding a customer service button to “...” actions in exhibitor/ visitor list",
+"Persistent Filter and Search Behavior for Visitor, Exhibitor, Sponsor, and Session lists",
+"Regroup the structure of Config page of Sessions in Admin panel"
+]
+},
+{
+"id": "platform-local-time-setting",
+"theme": "platform",
+"q": "2024-Q1",
+"title": "Event-time-only display",
+"benefit": "Choose to show only event time, without local time, across the web and app.",
+"what": "An event setting, off by default, shows only event time, without the user's local time, for meetings, sessions, exhibitor events and blocked times on every web and app page.",
+"detail": "When the setting is on, meetings, sessions, exhibitor events and blocked times show only event time on every frontend page.",
+"stories": [
+"No local time option (Web)"
+]
+},
+{
+"id": "platform-reliable-exports",
+"theme": "platform",
+"q": "2024-Q1",
+"title": "More reliable exports",
+"benefit": "Download exports that recover automatically from temporary glitches instead of hanging.",
+"what": "Exports run on a status-controlled process that reruns an incompletely processed batch up to three times, and the exhibitor manual export runs as a queued job with all details included in the file.",
+"detail": "Exports run on a status-controlled process that reruns an incompletely processed batch up to three times, and the exhibitor manual export runs as a queued job with all details included in the file.",
+"stories": [
+"re work exports to new schema with statuses ",
+"Exhibitor Manual export rework"
+]
+},
+{
+"id": "platform-security-hardening-2024q1",
+"theme": "platform",
+"q": "2024-Q1",
+"title": "Security hardening across web and apps",
+"benefit": "Benefit from fixes to security findings across the website, admin panel, server and mobile apps.",
+"what": "Issues identified in a security assessment were fixed in the website, admin panel and server, and in the Android and iOS apps.",
+"detail": "Issues identified in a security assessment were fixed in the frontend, admin panel and server, and in the Android and iOS apps.",
+"stories": [
+"Web secure fixes",
+"Applications secure fixes"
+]
+},
+{
+"id": "platform-admin-colours",
+"theme": "platform",
+"q": "2024-Q2",
+"title": "Admin panel colour update",
+"benefit": "Work in an admin panel with updated primary and secondary colours.",
+"what": "The primary and secondary colours of the admin panel were changed.",
+"detail": "The primary and secondary colours of the admin panel were changed.",
+"stories": [
+"Admin panel primary/secondary colors changes"
+]
+},
+{
+"id": "platform-saml-return-to-page",
+"theme": "platform",
+"q": "2024-Q2",
+"title": "Return to page after SSO",
+"benefit": "Send single sign-on users back to the page they originally requested after they authenticate.",
+"what": "A SAML setting returns single sign-on users to the page they originally requested after they authenticate, instead of the event homepage. Other events keep their current behaviour.",
+"detail": "A SAML setting returns users to their intended page after authentication instead of the event homepage.",
+"stories": [
+"IMEX - SAML User is always directed to Event homepage and not intended page invoking the process"
+]
+},
+{
+"id": "platform-admin-panel-languages",
+"theme": "platform",
+"q": "2024-Q3",
+"title": "Admin panel language choice",
+"benefit": "Choose the admin panel language on the login page and keep it between visits.",
+"what": "The new admin panel has a language selector on the login page, opens in the language chosen last time, and shows a loader instead of a loading message while event data loads.",
+"detail": "The new admin panel adds a language selector on the login page, remembers the chosen language, and shows a loader instead of a loading message while event data loads.",
+"stories": [
+"[adminv2] Add language selector on the login page ",
+"[adminv2] Choose language from storage on init",
+"Replace 'Loading event data' with Loader in admin panel"
+]
+},
+{
+"id": "platform-consent-gated-videos",
+"theme": "platform",
+"q": "2024-Q3",
+"title": "Consent for embedded videos",
+"benefit": "Block embedded videos on exhibitor profiles until the visitor gives consent.",
+"what": "An optional setting, off by default, keeps embedded videos on exhibitor profiles blocked until the user consents. One consent unlocks videos across the service.",
+"detail": "An optional setting, off by default, keeps embedded videos on exhibitor profiles blocked until the user consents.",
+"stories": [
+"Block <iframe> video until consent is given - Videos in EXH profile"
+]
+},
+{
+"id": "platform-account-switcher",
+"theme": "platform",
+"q": "2024-Q3",
+"title": "Easier account switching",
+"benefit": "Switch between your own, team member, parent and child company accounts from the top menu.",
+"what": "The web account switcher is a dropdown available from the top-right menu and from the name on the profile page, with scrolling when there are more than five accounts.",
+"detail": "The web account switcher is a dropdown available from the top-right menu and from the name on the profile page, with scrolling when there are more than five accounts.",
+"stories": [
+"Enhancing Account Switcher Visibility and Accessibility"
+]
+},
+{
+"id": "platform-otp-whatsapp-sms",
+"theme": "platform",
+"q": "2024-Q4",
+"title": "Login codes by WhatsApp and SMS",
+"benefit": "Send one-time login codes by WhatsApp and SMS as well as email.",
+"what": "One-time login codes can be sent by WhatsApp and SMS as well as email. Each channel has its own toggle, and users receive codes through every enabled channel. SMS uses custom text and WhatsApp a preset template.",
+"detail": "Each channel has its own toggle and users receive codes through every enabled channel. SMS uses custom text and WhatsApp a preset template.",
+"stories": [
+"OTP login workflow with Whatsapp/SMS"
+]
+},
+{
+"id": "platform-admin-panel-2024q4",
+"theme": "platform",
+"q": "2024-Q4",
+"title": "Admin panel improvements",
+"benefit": "Work in a tidier admin panel with fewer redundant settings and clear empty states.",
+"what": "Redundant settings left from the old interface were removed, admin tables show an empty state, and the retired hospitality module, table section tax fields and exhibitor manual payment setting are hidden.",
+"detail": "Redundant settings were removed, admin tables show empty states, and the retired hospitality module, table section tax fields and exhibitor manual payment setting are hidden.",
+"stories": [
+"Remove redundant settings from the admin panel",
+"Create empty state for the tables in admin panel",
+"Hide module Hospitality, Exhibitor info (manual), Taxes field for tables and Enable payment in Global settings"
+]
+},
+{
+"id": "platform-australia-hosting",
+"theme": "platform",
+"q": "2024-Q4",
+"title": "Australian cloud region",
+"benefit": "Platform queues, data tables and log groups are set up in an Australian cloud region.",
+"what": "Cloud infrastructure, including queues, data tables and log groups, was set up in an Australian region.",
+"detail": "Cloud resources, including queues, data tables and log groups, were set up in an Australian region.",
+"stories": [
+"Create aws resources on australia"
+]
+},
+{
+"id": "platform-performance-2024q4",
+"theme": "platform",
+"q": "2024-Q4",
+"title": "Faster pages and admin lists",
+"benefit": "Load sponsor pages, search widgets and admin meeting lists more quickly.",
+"what": "Database connection pooling was added, account attributes and event configuration are retrieved and cached more efficiently, and admin table meeting lists, sponsor pages and exhibitor, product and brand search widgets were optimised.",
+"detail": "Database connection pooling was added in production, account attributes and event configuration are retrieved and cached more efficiently, and admin table meeting lists, sponsor pages and exhibitor, product and brand search widgets were optimised.",
+"stories": [
+"PG bouncer for production server",
+"Optimization of Account Attribute Retrieval",
+"Optimize requests https://api-gitexplus.expoplatform.com/admin/appointments/tableMeetingsList",
+"Implement caching of expo_config when using it from backend",
+"Optimization of front-end widgets related to search (exhibitors, products, brands)",
+"Optimization of random card output in these widgets",
+"The Sponsor page is loading slowly "
+]
+},
+{
+"id": "platform-security-hardening-2024q4",
+"theme": "platform",
+"q": "2024-Q4",
+"title": "Security hardening",
+"benefit": "Benefit from stronger protection of account activation and badge scanning.",
+"what": "Activation codes are generated with the account identifier included, and the app's badge scanning endpoint requires a secure signed token.",
+"detail": "Activation codes are generated with the account identifier included, and the badge scanning endpoint requires a secure token.",
+"stories": [
+"Add account_id to activation_code hash generation",
+"Add secure token to scanBadge endpoint"
+]
+},
+{
+"id": "platform-sign-in-profile-2024q4",
+"theme": "platform",
+"q": "2024-Q4",
+"title": "Sign-in and profile refinements",
+"benefit": "See clearer profile titles and error codes, and let admins sign in as users on the new frontend.",
+"what": "The profile edit page title reflects the account type, the frontend shows error codes, the sign-up prompt is hidden when registration is off, and admins can log in as a user on the new frontend by token.",
+"detail": "The profile edit page title reflects the account type, the frontend shows error codes, the sign-up prompt is hidden in the login window when registration is off, and admins can log in as a user on the new frontend by token.",
+"stories": [
+"Dynamic Edit Profile Labels",
+"Remove Not a member? Sign up. line",
+"Add error codes to front-end",
+"Add ability to use custom service on the newFront (login by token)"
+]
+},
+{
+"id": "platform-buttons-validation-2025q1",
+"theme": "platform",
+"q": "2025-Q1",
+"title": "Clearer buttons and messages",
+"benefit": "See consistent primary save buttons and clearer validation messages.",
+"what": "Save and similar buttons across the frontend use the primary button style, fixed-colour green buttons were corrected, and the error shown when an entry has too few characters was reworded.",
+"detail": "Save and similar buttons use the primary button style, and the error shown when an entry has too few characters was reworded.",
+"stories": [
+"Update the Save and similar buttons to the Primary type",
+"Change text of error if there not enough symbols "
+]
+},
+{
+"id": "platform-country-city-data",
+"theme": "platform",
+"q": "2025-Q1",
+"title": "Up-to-date country and city data",
+"benefit": "Use country, city and region names and translations that refresh automatically every month.",
+"what": "The country manager imports country, city and region names and translations from an external reference service and updates them automatically every month. Admin edits to names and translations are kept.",
+"detail": "The country manager now imports country, city and region names and translations from an external reference service, with monthly automatic updates.",
+"stories": [
+"Switching Country Manager to external API Service"
+]
+},
+{
+"id": "platform-attendee-onboarding",
+"theme": "platform",
+"q": "2025-Q2",
+"title": "Attendee onboarding",
+"benefit": "Guide attendees to pick their interests on first login so recommendations are personalised from the start.",
+"what": "Organisers set up a multilingual onboarding pop-up with live preview, texts, category groups, mandatory or optional completion and reappearance timing. It runs on web and app, and users are told when recommendations update.",
+"detail": "Organisers configure a multilingual onboarding pop-up with live preview, texts, category groups, mandatory or optional completion and reappearance timing. It runs on web and app, and users are notified when their recommendations page is updated.",
+"stories": [
+"Onboarding Experience - Admin Panel & Web & App API",
+"Onboarding Experience - App Part",
+"Notification for Onboarding process"
+]
+},
+{
+"id": "platform-custom-labels",
+"theme": "platform",
+"q": "2025-Q2",
+"title": "Custom labels",
+"benefit": "Rename page and section labels in each language across web and app.",
+"what": "A content settings page lets organisers edit page and section labels per language, with all and modified-only views, applied on web and app, including the cancel registration and delete account pop-ups.",
+"detail": "A content settings page lets organisers edit labels per language, with all and modified-only views, including labels in the cancel registration and delete account pop-ups.",
+"stories": [
+"Custom Label changes",
+"Cancel Registration and Delete My Account Globally labels customization in the pop-ups"
+]
+},
+{
+"id": "platform-admin-panel-2025q2",
+"theme": "platform",
+"q": "2025-Q2",
+"title": "Admin panel improvements",
+"benefit": "See the event time zone in the admin panel and keep settings consistent between admin panels.",
+"what": "The admin panel shows the saved event time zone next to the event city setting, and settings changed in the previous admin panel now apply in the new one.",
+"detail": "The admin panel shows the selected event time zone, and settings made in the previous admin panel apply in the new one.",
+"stories": [
+"Add timezone view in the admin panel to show selected TZ",
+"Settings in old admin panel to apply in new admin pael "
+]
+},
+{
+"id": "platform-landing-page-after-login",
+"theme": "platform",
+"q": "2025-Q2",
+"title": "Landing page after login",
+"benefit": "Choose which page exhibitors, participants and team members land on after they log in.",
+"what": "The page opened on login for exhibitors, participants and team members can be a custom internal URL, and the redirect is handled on the server. Required fields and onboarding still come first.",
+"detail": "The page opened on login can be a custom internal URL, and the redirect is handled on the server.",
+"stories": [
+"Make redirect after login on the server to the selected page",
+"Extend Page Opened on Login Functionality"
+]
+},
+{
+"id": "platform-performance-security-2025q2",
+"theme": "platform",
+"q": "2025-Q2",
+"title": "Performance and security improvements",
+"benefit": "Long option lists load on demand, and app visitor requests carry fewer parameters for the database to check.",
+"what": "Additional database indexes were added, multi-select fields with many options load on demand, and token and identifier parameters were removed from app visitor requests.",
+"detail": "Additional database indexes were added, multi-select fields with many options load on demand, and token and identifier parameters were removed from app visitor requests.",
+"stories": [
+"Postgresql IndexPack04",
+"[Expo-react-components]: optimization for MultiSelect with a lof of options (virtualization, load on scroll, load on search ... ) ",
+"Remove token and id from request"
+]
+},
+{
+"id": "platform-admin-safeguards-2025q3",
+"theme": "platform",
+"q": "2025-Q3",
+"title": "Admin panel safeguards",
+"benefit": "Avoid accidental changes with warnings on category changes and stronger validation.",
+"what": "Admins confirm participant category changes after a warning that they may affect access, visibility and matchmaking. Region values are validated when saved, and the save and cancel bar has a blurred background.",
+"detail": "Admins confirm participant category changes after a warning that they may affect access, visibility and matchmaking. Region values are validated, and the save and cancel bar has a blurred background.",
+"stories": [
+"Warning for Participant Category Change in Admin Panel",
+"Add region validation to backend",
+"Add blure for bottom save/cancel bar"
+]
+},
+{
+"id": "platform-editor-admin-2025q4",
+"theme": "platform",
+"q": "2025-Q4",
+"title": "Editor and admin panel tidy-ups",
+"benefit": "Clear formatting from text in one click and work without the maintenance banner.",
+"what": "The text editor has a remove styling button, and the outdated maintenance warning was removed from the admin panels.",
+"detail": "The text editor has a remove styling button, and the maintenance warning was removed from the admin panels.",
+"stories": [
+"Add \"remove styling\" button for TextEditor",
+"Hide the Maintenance notification"
+]
+},
+{
+"id": "platform-performance-2025q4",
+"theme": "platform",
+"q": "2025-Q4",
+"title": "Fewer app requests, lighter search",
+"benefit": "The app sends fewer calls to the server and delegate search returns lighter responses.",
+"what": "The apps send fewer requests for recommendations, filters and onboarding settings, delegate search responses are lighter, and location lookup data is cached.",
+"detail": "The app sends fewer requests to the server, delegate search responses are lighter, and location data is cached.",
+"stories": [
+"Add caching of data from geoapify.com",
+"Reduce number of requests from app to server",
+"Optimize response data for delegate search"
+]
+},
+{
+"id": "platform-security-hardening-2025q4",
+"theme": "platform",
+"q": "2025-Q4",
+"title": "Protection against script injection",
+"benefit": "Benefit from protection against cross-site scripting where HTML content is allowed.",
+"what": "Cross-site scripting issues were fixed in places where HTML content is supported.",
+"detail": "Cross-site scripting issues were fixed in places where HTML content is supported.",
+"stories": [
+"XSS in places where HTML should work"
+]
+},
+{
+"id": "platform-locale-dates-translations",
+"theme": "platform",
+"q": "2026-Q1",
+"title": "Locale-aware dates and translations",
+"benefit": "Show dates in the format of each user’s language, with more complete translations.",
+"what": "Date formats follow each user's language, missing translation keys and languages such as Icelandic were added to the frontend, and missing or wrong German system translations were corrected.",
+"detail": "Date formats follow the locale, and missing languages and system translations were added.",
+"stories": [
+"Date formats depend on locale",
+"[portalUI] Add missed keys and languages to the project (IS)",
+"Translation: please apply the missing system translations"
+]
+},
+{
+"id": "platform-sign-in-options-2026q1",
+"theme": "platform",
+"q": "2026-Q1",
+"title": "More sign-in options",
+"benefit": "Offer both single sign-on and standard login, including a second external login option in the app.",
+"what": "The sign-in window offers SAML single sign-on or standard login, the mobile app can show a configurable second external login button, and sign-in buttons have a hover colour.",
+"detail": "The sign-in modal offers SAML single sign-on or standard login, the mobile app can show a configurable second external login button, and sign-in buttons gain a hover colour.",
+"stories": [
+"Separate login buttons",
+"Adding additional login option on mobile app",
+"Make hover color for buttons for sign in page"
+]
+},
+{
+"id": "platform-profile-completion",
+"theme": "platform",
+"q": "2026-Q1",
+"title": "Profile completion tracking",
+"benefit": "See each participant’s profile completion in the admin panel with a more accurate score.",
+"what": "Profile completion counts only fields a participant can see and edit, weighted equally, and the admin participants list has a sortable profile completion column with a recalculate button.",
+"detail": "The profile completion calculation was updated, and the admin participants list shows each participant’s completion status.",
+"stories": [
+"Participant Profile Completion Calculation Update",
+"Admin panel. Profile completition in Participants list"
+]
+},
+{
+"id": "platform-admin-save-cloning",
+"theme": "platform",
+"q": "2026-Q1",
+"title": "Stay on page when saving",
+"benefit": "Save changes in the admin panel without losing your place, and see a warning while an event is cloning.",
+"what": "Saving or applying changes in exhibitor manual vendors, marketing and the mobile app builder keeps organisers on the same page. A persistent banner across admin pages warns not to edit an event while it is being cloned.",
+"detail": "Saving or applying changes in key admin modules keeps organisers on the same page. A persistent banner across admin pages warns not to edit an event while it is being cloned.",
+"stories": [
+"[BE] Admin Panel: Organizer can click save/apply changes to Event configuration without page redirection so that work across entities is uninterrupted",
+"Client Manager: Show persistent banner in Admin Panel during event cloning to prevent changes"
+]
+},
+{
+"id": "platform-admin-navigation-pagination",
+"theme": "platform",
+"q": "2026-Q2",
+"title": "Admin panel navigation and pagination",
+"benefit": "Move through admin lists consistently and return to the page you were on.",
+"what": "Pagination is standardised across admin lists and remembers each user's page, page size and sorting on return. Sponsorship is a top-level menu item and module, and the colour picker rejects invalid values.",
+"detail": "Pagination is standardised across admin listings and remembers your position as you navigate. The sponsorship section moved as part of a navigation restructure, and the colour picker rejects invalid values.",
+"stories": [
+"Implementing Universal Pagination Memory in Admin Panel for User Experience Enhancement - Required List ONLY",
+"Standardising Pagination in the Admin Panel for Consistency and User Experience",
+"Implementing Universal Pagination Memory in Admin Panel for User Experience Enhancement - Good To Have List ONLY",
+"Admin panel rearangement. Move Sponsorship",
+"add validation to color picker"
+]
+},
+{
+"id": "platform-performance-2026q2",
+"theme": "platform",
+"q": "2026-Q2",
+"title": "Lighter requests and loading feedback",
+"benefit": "Pages send fewer unnecessary requests, and profile download buttons show when a file is on its way.",
+"what": "Empty banner placements are no longer requested on every navigation, unnecessary sign-in checks and database connections were removed, and file download buttons in the user menu show a loader.",
+"detail": "Empty banner placements are no longer requested repeatedly, unnecessary sign-in checks and database connections were cut, and file download buttons in the user profile show a loader.",
+"stories": [
+"Remove duplicated requests for banners, in case they are not added at all",
+"Reduce db_route connection usage in expoplatform-ws-ValidateUser Lambda",
+"[next14] turn off request to /auth when token in nulll",
+"[portalUI] add loader to the buttons with downloading files in the user profile"
+]
+},
+{
+"id": "platform-security-hardening-2026q2",
+"theme": "platform",
+"q": "2026-Q2",
+"title": "Security hardening",
+"benefit": "Benefit from protection against email flooding and tighter API error handling.",
+"what": "The resend endpoint is rate limited per IP with temporary blocking, and the schedule note API no longer exposes internal server details in errors and enforces authorisation.",
+"detail": "The resend endpoint is rate limited per IP with temporary blocking, and the schedule note API no longer exposes internal server details in errors and enforces authorisation.",
+"stories": [
+"Add rate limiting to /api/v1/resend endpoint",
+"Meet API Standards for api/v1/schedule/note"
+]
+},
+{
+"id": "platform-performance-2026q3",
+"theme": "platform",
+"q": "2026-Q3",
+"title": "Faster web pages",
+"benefit": "Load web pages and images faster with less data transferred.",
+"what": "The portal requests resized WebP images instead of original uploads, the web app manifest is cached instead of refetched on every page change, and frontend bundles and builds were optimised.",
+"detail": "The portal requests resized WebP images instead of originals, the web app manifest is cached instead of refetched on every navigation, and frontend bundles and builds were optimised.",
+"stories": [
+"request sized WebP variants instead of original images across portal-ui",
+"manifest.webmanifest is re-fetched on every App Router navigation (max-age=0, no ETag)",
+"replace barrel imports with deep imports for MUI and expo-react-components",
+"Optimization next14"
+]
+},
+{
+"id": "platform-private-favourites",
+"theme": "platform",
+"q": "2026-Q3",
+"title": "Private favourites for opted-out users",
+"benefit": "Let attendees who opt out of networking favourite exhibitors, people and products privately.",
+"what": "Users who opt out of networking can favourite and unfavourite exhibitors, visitors, speakers and products on web and in the app. Their favourites stay private, never count as leads and never identify them.",
+"detail": "Opted-out users can favourite and unfavourite exhibitors, visitors, speakers and products on web and in the app, with the action kept private so they are not exposed as leads.",
+"stories": [
+"Enhancing Privacy for Opted-Out Users: Favouriting Features and GDPR Compliance",
+"Mobile app: allow opted-out users to favourite exhibitors, visitors and products"
+]
+},
+{
+"id": "platform-admin-redesign",
+"theme": "platform",
+"q": "2026-Q3",
+"title": "Redesigned admin panel pages",
+"benefit": "Work in a cleaner, modern admin panel on the most used pages, with nothing to relearn.",
+"what": "The event setup, categories setup, event list, exhibitor list, participants list and sessions list pages were restyled to a new modern design, with no change to how they work.",
+"detail": "Event setup, categories setup, event list, exhibitor list, participants list and sessions list pages were restyled to a new design with no change to how they work.",
+"stories": [
+"[Admin Redesign] Event Setup Page",
+"[Admin Redesign] Categories Setup Page (Networking & Matchmaking)",
+"[Admin Redesign] Exhibitor List Page",
+"[Admin Redesign] Participants List Page",
+"[Admin Redesign] Sessions List Page",
+"[Admin Redesign] Event list"
+]
+},
+{
+"id": "platform-selective-cloning",
+"theme": "platform",
+"q": "2026-Q3",
+"title": "Selective event cloning",
+"benefit": "Choose whether sponsors, news, sessions, local categories and floor plan carry over when you clone an event.",
+"what": "The clone dialog offers separate checkboxes for sponsors, news, sessions, local categories and floor plan, with a confirmation summary, so only selected content is copied.",
+"detail": "The clone dialog offers separate checkboxes for sponsors, news, sessions, local categories and floor plan.",
+"stories": [
+"Extend Event Cloning to Support Selective Cloning of Sponsors, News, Sessions, Local Categories, and Floor Plan"
+]
+},
+{
+"id": "platform-auth-settings-2026q3",
+"theme": "platform",
+"q": "2026-Q3",
+"title": "Separate sign-in settings by profile",
+"benefit": "Configure one-time password sign-in separately for company and individual profiles.",
+"what": "One-time password sign-in can be set separately for company and individual profiles per event through a single email-first login form, and admin accounts have a phone field for use in emails.",
+"detail": "Organisers set one-time password authentication independently for company and individual profiles per event, and admin accounts gain a phone field.",
+"stories": [
+"Independent OTP Authentication Configuration for Company and Individual Profiles in Events",
+"Phone field for Admins"
+]
+},
+{
+"id": "platform-trusted-embed-domains",
+"theme": "platform",
+"q": "2026-Q3",
+"title": "Trusted embed domains",
+"benefit": "Embed authenticated content such as on-demand sessions on approved partner sites.",
+"what": "A security settings section in event setup lets organisers add and remove trusted external domains, so authenticated content such as on-demand sessions plays when embedded on those sites.",
+"detail": "A security settings section lets organisers whitelist trusted external domains so authenticated content plays when embedded there.",
+"stories": [
+"Whitelist Trusted Embed Domains for Authenticated Iframe Content"
+]
+}
+],
+"claims": [
+{
+"id": "00b_identity_and_authorization:1194",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Create / clone / delete events — SA only, Event Admin \"unless granted\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1195",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Configure event settings — Event Admin \"if Event Setup granted\"; Read Only = read only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1196",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Create / manage admin accounts — \"if Accounts granted\"; Read Only = read only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1197",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Set module permissions — SA ✅ / Event Admin \"if Accounts granted\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "00b_identity_and_authorization:1198",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Configure MFA — SA ✅ / Event Admin \"if granted in MFA tab\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1199",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Manage admin account tags — SA ✅ / others ❌ unless Tags granted",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1200",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Import data",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1201",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Export data — \"✅ if Data Read Only\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1202",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Manage webhooks — \"if Data granted\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1203",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Global database (view/edit); Read Only = read only",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1204",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Global categories management",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1205",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Build mobile apps — SA ✅ / \"if App Builder granted\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "00b_identity_and_authorization:1206",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "View admin logs",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1207",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Best Practices link — SA only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1208",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Access admin panel — Attendee/Exhibitor/Speaker ❌",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1209",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Callout: Event Admin bounded by Admin Account Tags; no tags ⇒ all events",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1210",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Role \"Data Manager\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "00b_identity_and_authorization:1211",
+"product": "Identity and authorization",
+"section": "B2 · Admin / Platform Core (doc lines 1615–1633)",
+"claim": "Role \"Event Admin (Read Only)\" as a distinct role",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1219",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Configure Global Settings — SA/Organiser only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1220",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Add/Edit/Delete manual sections — SA/Organiser only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1221",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "View exhibitor submissions dashboard",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1222",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Export exhibitor manual data",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1223",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Manage vendors",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1224",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "View manual sections — all roles incl. Regular TM",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1225",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Submit manual sections — Admin TM ✅, Regular TM ❌",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1226",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Make purchases (equipment / lead capture) — Admin TM ✅, Regular TM ❌",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1227",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Add/edit team members — Regular TM ❌",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1228",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Request service badges",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1229",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Edit exhibitor profile (in manual / profile tab)",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1230",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Edit child exhibitor profiles (parent admin TM)",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1231",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Receive email notifications — all roles",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1232",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Cancel exhibitor order — SA/Organiser only",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1233",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Enable/disable Firebird SSO — SA/Organiser only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1234",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Role \"Vendor — email recipient only, no portal login\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1235",
+"product": "Identity and authorization",
+"section": "D1 · Exhibitor Portal (doc lines 11575–11590)",
+"claim": "Role \"Organiser\" as distinct from \"Super Admin\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "00b_identity_and_authorization:1243",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Enable / disable meeting module — SA ✅, Organizer ❌",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "00b_identity_and_authorization:1244",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Configure all meeting format settings — SA/Organizer",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1245",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Create meetings via Meeting Wizard — Exhibitor \"if granted\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1246",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Send self-managed meeting requests — all signed-in roles, Guest ❌",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1247",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Confirm / decline received requests",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1248",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Cancel any meeting — SA/Organizer any; others \"own only\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1249",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Reassign team members — Exhibitor \"if enabled\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1250",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Configure Permission Matrix — SA/Organizer",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1251",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Toggle Connection Settings — own; exhibitor may manage TMs \"if enabled\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1252",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "View real-time dashboard — Exhibitor \"own team\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1253",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Export meeting reports — SA/Organizer only",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "00b_identity_and_authorization:1254",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Submit meeting ratings — SA/Organizer ❌",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1255",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Approve Exhibitor Events — SA/Organizer",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1256",
+"product": "Identity and authorization",
+"section": "C4 · Meetings & Matchmaking (doc lines 8098–8110)",
+"claim": "Permission-flow step \"Networking Opt-In satisfied?\" (doc line 8085)",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1264",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Create/edit/delete Agents — Organizer/SA",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1265",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Manage Buyer Categories",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1266",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Manage Benefits and Documents",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1267",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Configure Automated Filters",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "00b_identity_and_authorization:1268",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Buyers Management (admin)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1269",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Document Dashboard",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1270",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Batch Accept / Batch Resend",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "00b_identity_and_authorization:1271",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Enable/disable HB module — SA ✅, Organizer ❌",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "00b_identity_and_authorization:1272",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Agent: view own buyer portfolio",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1273",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Agent: import buyers via XLS",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1274",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Hosted Buyer: complete own benefit documents",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1275",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Hosted Buyer: Print Badge when threshold met",
+"verdict": "PARTIAL"
+},
+{
+"id": "00b_identity_and_authorization:1276",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Exhibitor / TM: browse Buyers List (frontend)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1277",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Exhibitor / TM: send meeting requests to buyers",
+"verdict": "CONFIRMED"
+},
+{
+"id": "00b_identity_and_authorization:1278",
+"product": "Identity and authorization",
+"section": "D6 · Hosted Buyer Management (doc lines 15256–15269)",
+"claim": "Role \"Agent\" as a portal role",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:106",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Searchable client list of every environment",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "01_client_manager:107",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Search across Name, Domain, Backend Path",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:108",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Access client's admin panel via Backend Path / Actions arrow",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:109",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Jump to client frontend via Domain link",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:110",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Enable / disable frontend per event",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "01_client_manager:111",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Client Status (on/off) governing all client credentials",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:112",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Delete client (restricted)",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:113",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "View mobile apps + app build pipeline",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:114",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Client language assignment",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:115",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Global Module Management (frontend & backend entitlements, access modes)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:116",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Employee Login to manager panel with MFA",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "01_client_manager:118",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "\"Per-event content/configuration … Client Manager only launches into it\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:119",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "\"Building the mobile app itself (handled by the external build script)\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:120",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "\"Any organiser-/exhibitor-/attendee-facing capability\" excluded",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "01_client_manager:121",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "\"Billing/invoicing of the client … outside the platform\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:123",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "MFA mandatory for employee login (EP-11695)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "01_client_manager:124",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "\"SuperAdmin operator\" role gates Global MM",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:125",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Global MM reached from `/admin/exhibitions/list` via a \"Module Management\" button",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "01_client_manager:126",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "\"Max Nos / Shurik hold the most destructive controls\"; two named gatekeepers",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:128",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Create-build sends request to external build script",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "01_client_manager:129",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Build status/version returned via webhook; version columns populate on success",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:130",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Five build statuses: Not published → In queue → Creating → Build created / Error",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "01_client_manager:131",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Button disabled until success/error webhook (BR-8)",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:132",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Apps pop-up lists apps \"in preparation\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:133",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Two tabs: Modules Managing + Settings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:134",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Frontend table + Backend table",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:135",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Access-control modes per page: Open access vs Sign-in only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:136",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Grouped controls (Registration → visitor/exhibitor; Exhibitors/Participants/Buyers/Team Members)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:137",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Disabling a global removes the per-event toggle (BR-6)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:138",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Global disable wins over per-event enable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:139",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Edit → Save → clear cache",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:140",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Languages enabled here appear in Frontend Languages selector at `/admin/general/edit`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:141",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Language list: EN, US, DE, FR, ES, ES(lat), IT, RU, KZ, SV, TR, TR_ALT, NL, THA, JA, ZH, IS, KO, TW, VN, PL, AR, PT, FI",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:142",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "BR-7: language must be enabled for client and Multilanguage enabled in MM",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:144",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "BR-1: only ExpoPlatform staff may access Client Manager",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "01_client_manager:145",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "BR-3: Status off inactivates all credentials & the client",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:146",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "BR-3: \"Two states only — on / off\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "01_client_manager:147",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "BR-5: delete requires approval + Jira ticket, only Max Nos",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "01_client_manager:148",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "BR-9: language assignment restricted to Max Nos / Shurik",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "01_client_manager:150",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "`CLIENT { name, domain, backend_path, status, active_customer }`",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:151",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "`bool active_customer` / \"Show Active Customers Only\" filter",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "01_client_manager:152",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "`MOBILE_APP { platform, current_version }`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:153",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "`APP_BUILD { status, version }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "01_client_manager:154",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "`MODULE_ENTITLEMENT { frontend_modules, backend_modules, access }`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:156",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Permission matrix rows for Global MM (SuperAdmin ✅, TAM ❌)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:157",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "All other matrix rows (status / delete / language)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "01_client_manager:159",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Build webhook is \"webhook-authenticated\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "01_client_manager:160",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Google Authenticator (TOTP) integration",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:162",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "`/admin/manage` = Global Module Management",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:163",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "`/admin/general/edit` = Frontend Languages selector",
+"verdict": "CONFIRMED"
+},
+{
+"id": "01_client_manager:164",
+"product": "Client Manager",
+"section": "Feature reconciliation",
+"claim": "Access-control mode set \"in Module Management (per page)\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:120",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Event portfolio: create, search, clone, view (list/calendar), approve",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:121",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Per-event settings: name, dates, location/timezone, external URL, email domain, frontend language, country management",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:122",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Mobile app management: builder access, create single/multi-event, metadata, delete",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:123",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Admin account management incl. per-module Full/ReadOnly/NoAccess",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:124",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "MFA with Google/Microsoft Authenticator, batch email",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:125",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Admin Account Tags — event-scoped access control",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:126",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Admin Log Info — full audit trail, filterable, exportable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:127",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Global database — participants, exhibitors, global categories",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:128",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Data import: Participants, Exhibitors, Products, Exhibitor Manual, Sessions, News",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:129",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Data export: standard + custom reports, field selection",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:130",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Webhooks on registration/cancellation/status/session-booking",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:131",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Global vs. local fields architecture",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:132",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Global Search across all admin pages (EP-3122, in progress)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:133",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Pagination standardisation across admin lists",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:134",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Best Practices link (Super Admin only, EP-15563)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:135",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Included",
+"claim": "Tool tips + renamed settings (EP-15966/15967)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:141",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Excluded (an excluded item found in code is CONTRADICTED)",
+"claim": "Client environment provisioning — Client Manager only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:142",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Excluded (an excluded item found in code is CONTRADICTED)",
+"claim": "Global Module Management entitlements — Client Manager / EP staff only",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:143",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Excluded (an excluded item found in code is CONTRADICTED)",
+"claim": "Per-event frontend website building — Website Builder product",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:144",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Excluded (an excluded item found in code is CONTRADICTED)",
+"claim": "Registration form design / online registration",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:145",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Excluded (an excluded item found in code is CONTRADICTED)",
+"claim": "Matchmaking / networking / meetings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:146",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Excluded (an excluded item found in code is CONTRADICTED)",
+"claim": "Analytics dashboards beyond raw export",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:147",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Excluded (an excluded item found in code is CONTRADICTED)",
+"claim": "Mobile app store publication — TAM/developer via Jira",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:148",
+"product": "Admin / Platform Core",
+"section": "§2 Scope — Excluded (an excluded item found in code is CONTRADICTED)",
+"claim": "Billing and invoicing — external",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:154",
+"product": "Admin / Platform Core",
+"section": "§3 User Roles",
+"claim": "Super Admin — all events, no restrictions",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:155",
+"product": "Admin / Platform Core",
+"section": "§3 User Roles",
+"claim": "Event Admin Full / Read Only / No Access",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:156",
+"product": "Admin / Platform Core",
+"section": "§3 User Roles",
+"claim": "TAM (EP staff) — approves events, publishes apps",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:157",
+"product": "Admin / Platform Core",
+"section": "§3 User Roles",
+"claim": "Data Manager",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "02_admin_platform_core:158",
+"product": "Admin / Platform Core",
+"section": "§3 User Roles",
+"claim": "Attendee/Speaker/Exhibitor/Sponsor cannot log in to admin",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:159",
+"product": "Admin / Platform Core",
+"section": "§3 User Roles",
+"claim": "Admin Tag filtering: no tags ⇒ all events",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:160",
+"product": "Admin / Platform Core",
+"section": "§3 User Roles",
+"claim": "Multi-tag = union",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:166",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Admin native email/password login",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:167",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Reset-password template at `/admin/users/emails/reset_password_admin`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:168",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Reset template variables `{NAME}{LAST_NAME}{RESET_LINK}{LOGIN}{PASSWORD}`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:169",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "MFA: per-user secret, batch send, event-selection filter",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:170",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Event list at `/admin/exhibitions/list`, two tabs Current / All",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:171",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "List columns Logo, Name, Event ID, Event Tags, City, Country, Start, End, Type, Attached to, Actions",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:172",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Calendar view, month/year, Today button",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:173",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Search applies to event name and event tags",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:174",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Event creation at `/admin/general/new?m=t`; required name, country, city",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:175",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "New event enters pending-approval state",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:176",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Pending event is not configurable until approved",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:177",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Approval by \"internal ExpoPlatform approvers managed by the TAM\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:178",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "\"Wait 5 minutes after creation; frontend 403\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "02_admin_platform_core:179",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Event cloning: pop-up with exhibitor/product/session opt-ins",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:180",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "\"Sessions: cloned in full with no opt-out\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:181",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Clone is synchronous / immediate",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:182",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Per-event: Country+City set timezone",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:183",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Per-event: Email domain",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "02_admin_platform_core:184",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Per-event: External URL",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:185",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Frontend languages: AR, NL, EN, FI, FR, DE, IS, IT, PL, PT, RU, ES, ES_LAT, TR, THA, VT",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:186",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Country management",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:187",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Fake email generation ON ⇒ new account on conflict; OFF ⇒ update",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:188",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "App builder at `admin/appbuilder/list`; single/multi-event; tags; in-app-update; title/icon/splash/description",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:189",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "App deletion in builder does not remove from stores",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:190",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Admin account creation, two paths (cross-event vs event-specific)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:191",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "\"Events Access dropdown\" on the account form",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "02_admin_platform_core:192",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "\"Receive System Notifications\" checkbox",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "02_admin_platform_core:193",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Admin Categories are informational, no access effect",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:194",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Event Tags created from the events list, appear under Tags → Event Tags",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:195",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "\"Admin Tags in Admin Panel → Tags is non-functional\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:196",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Admin Log Info is ClickHouse-backed (EP-15209)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:197",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Log Info filters: events, date range, username, search body, controllers, action; exportable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:198",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Global participants list columns: Avatar, Name, Company Name, Session",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:199",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Global participants search by Name, Surname, or Email",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:200",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Participants list data blocks (Total Number / Active / Registered)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "02_admin_platform_core:201",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Quick actions: Delete Globally, Deactivate, Export Profile, Add New",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:202",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Profile Completion Indicator based on photo/job title/interests/company/consent",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:203",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "EP-11654 job title in participants list",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:204",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "EP-23019 Customer Service button in \"…\" list actions",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:205",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "EP-23021 persistent filter/search on return to list",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:206",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Global categories: create main/sub, bulk import XLS, export, content language",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:207",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Global Search: universal bar on every admin page",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:208",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Global Search will cover \"suppliers, white papers, brochures\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "02_admin_platform_core:209",
+"product": "Admin / Platform Core",
+"section": "§4 Feature Inventory",
+"claim": "Best Practices button next to Module Management, Super Admin only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:215",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-1 valid personal email/password per login",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:216",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-2 MFA required when enabled; SA can disable per user",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:217",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-3 new events require approval before functional",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:218",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-4 name/country/city required",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:219",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-5 changing country/city shifts session/meeting times",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:220",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-6 admin tags restrict event visibility; no tags = all",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:221",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-7 Full/ReadOnly/NoAccess per module per admin",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:222",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-7 \"Super Admin has no restrictions\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:223",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-8 import without record ID creates new; with ID updates",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:224",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-9 fake email generation semantics",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:225",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-10 global fields shared across events",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:226",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-11 local fields per-event",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:227",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-12 global delete irreversible",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:228",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-13 builder delete ≠ store removal",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:229",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-14 language needs client enablement AND a Module Management multilanguage toggle",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:230",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-15 Best Practices Super Admin only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:231",
+"product": "Admin / Platform Core",
+"section": "§7 Business Rules",
+"claim": "BR-16 persistent filter state; full reload resets",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:237",
+"product": "Admin / Platform Core",
+"section": "§10 Integrations · §11 Notifications · §12 Reporting",
+"claim": "Webhooks: JSON payload, HTTPS POST",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:238",
+"product": "Admin / Platform Core",
+"section": "§10 Integrations · §11 Notifications · §12 Reporting",
+"claim": "Webhooks: no built-in retry",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:239",
+"product": "Admin / Platform Core",
+"section": "§10 Integrations · §11 Notifications · §12 Reporting",
+"claim": "Webhook failure handling",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:240",
+"product": "Admin / Platform Core",
+"section": "§10 Integrations · §11 Notifications · §12 Reporting",
+"claim": "Webhook triggers (6 listed)",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:241",
+"product": "Admin / Platform Core",
+"section": "§10 Integrations · §11 Notifications · §12 Reporting",
+"claim": "Aditus/InfoSalons integration (EP-40301)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:242",
+"product": "Admin / Platform Core",
+"section": "§10 Integrations · §11 Notifications · §12 Reporting",
+"claim": "GenesisWorld (EP-41867): API key, username, password, URL, resync",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:243",
+"product": "Admin / Platform Core",
+"section": "§10 Integrations · §11 Notifications · §12 Reporting",
+"claim": "Doc lists 2 native CRM/registration integrations",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "02_admin_platform_core:244",
+"product": "Admin / Platform Core",
+"section": "§10 Integrations · §11 Notifications · §12 Reporting",
+"claim": "Admin password reset email",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:245",
+"product": "Admin / Platform Core",
+"section": "§10 Integrations · §11 Notifications · §12 Reporting",
+"claim": "§12 report catalogue (15 rows)",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:246",
+"product": "Admin / Platform Core",
+"section": "§10 Integrations · §11 Notifications · §12 Reporting",
+"claim": "§14 \"custom report builder available for Visitors only\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:272",
+"product": "Admin / Platform Core",
+"section": "The ERD (doc lines 1477–1548) against real tables",
+"claim": "`CLIENT_ENVIRONMENT`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:274",
+"product": "Admin / Platform Core",
+"section": "The ERD (doc lines 1477–1548) against real tables",
+"claim": "`EVENT_SETTINGS` (1:1 with EVENT)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:275",
+"product": "Admin / Platform Core",
+"section": "The ERD (doc lines 1477–1548) against real tables",
+"claim": "`ADMIN_ACCOUNT`",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:276",
+"product": "Admin / Platform Core",
+"section": "The ERD (doc lines 1477–1548) against real tables",
+"claim": "`ADMIN_PERMISSION`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:277",
+"product": "Admin / Platform Core",
+"section": "The ERD (doc lines 1477–1548) against real tables",
+"claim": "`ADMIN_TAG` / `EVENT_TAG`",
+"verdict": "PARTIAL"
+},
+{
+"id": "02_admin_platform_core:278",
+"product": "Admin / Platform Core",
+"section": "The ERD (doc lines 1477–1548) against real tables",
+"claim": "`MOBILE_APP`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "02_admin_platform_core:280",
+"product": "Admin / Platform Core",
+"section": "The ERD (doc lines 1477–1548) against real tables",
+"claim": "`GLOBAL_CATEGORY`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "02_admin_platform_core:281",
+"product": "Admin / Platform Core",
+"section": "The ERD (doc lines 1477–1548) against real tables",
+"claim": "`GLOBAL_PARTICIPANT` / `GLOBAL_EXHIBITOR`",
+"verdict": "PARTIAL"
+}
+]
+}

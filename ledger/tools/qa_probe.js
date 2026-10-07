@@ -76,6 +76,8 @@
       if ($('#find') && !$('#find').hidden) { $('#find [data-findclose]').click(); await W(80); }
       if ($('#ob-card')) { $('#ob-card [data-obtend]').click(); await W(60); }
       if ($('#ob-guide')) { $('#ob-guide [data-obclose]').click(); await W(60); }
+      if ($('#fb-in')) { $('#fb-in .x').click(); await W(60); }
+      if ($('#bt-m')) { const c = $('#bt-m [data-btclose]'); if (c) c.click(); else btClose(); await W(80); }
     }
   }
   async function tab(t) { const b = $('.tab[data-tab="' + t + '"]'); if (b) { b.click(); await W(350); } }
@@ -100,16 +102,81 @@
   }
   const setVal = (sel, v) => { const el = $(sel); if (!el) return false; el.value = v; el.dispatchEvent(new Event('input', {bubbles: true})); el.dispatchEvent(new Event('change', {bubbles: true})); return true; };
 
-  const AJ = window.__QA_AS !== 'other'; R.notes.push('viewer: ' + (AJ ? 'Ajay' : 'someone else') + (window.EP_ACCESS ? ', page access check present' : ''));
+  const AJ = window.__QA_AS !== 'other';
+  const keysOf = pre => Object.keys(window.__QA_STORE).filter(k => k.startsWith(pre));
+  async function pickClient(id) { const i = $('#' + id + '-in'); if (!i) return; i.click(); setVal('#' + id + '-in', ''); await W(150); const o = $('#bt-m [data-btcpadd^="' + id + '|"]:not([data-btcpadd$="|Platform"])'); if (o) { o.click(); await W(200); } }
+  async function betaProbe() {
+    const NOMCP = window.__QA_AS === 'nomcp';
+    check('beta: open'); if (!$('#bt-m .bt-beta')) R.issues.push({step: 'beta', kind: 'beta-tag-missing'});
+    if (!BT.test) { $('#bt-test').click(); await W(300); } if (!/Test mode is on/.test($('#bt-m').textContent)) R.issues.push({step: 'beta', kind: 'test-bar-missing'});
+    await dmLoad(); await W(200);
+    // 1. quick share that joins a need already asked for
+    await pickClient('shc'); if (!BT.s.clients.length) R.issues.push({step: 'beta', kind: 'client-picker'});
+    setVal('#bt-raw', 'Exhibitors want visitors to be able to sort the marketplace so the newest products show first'); $('#bt-m [data-btfill]').click(); await W(900); check('beta: filled');
+    if (!/newest/.test(($('#bt-what') || {}).value || '')) R.issues.push({step: 'beta', kind: 'fill-did-not-fill'});
+    if (!$('#bt-m .bt-cite')) R.issues.push({step: 'beta', kind: 'no-source-chips'});
+    const pickA = $('#bt-m [data-btpick^="a:"]'); if (!pickA) R.issues.push({step: 'beta', kind: 'no-need-match'});
+    else { pickA.click(); await W(200); const nV = keysOf('ledger-voices/').length;
+      $('#bt-m [data-btgo]').click(); await W(900); check('beta: tidy'); if ($('#bt-m [data-bttidy]')) { $('#bt-m [data-bttidy$="|mine"]').click(); await W(100); }
+      if ($('#bt-m [data-btgo]')) { $('#bt-m [data-btgo]').click(); await W(900); }
+      if (!vis($('#bt-m .bt-done'))) R.issues.push({step: 'beta', kind: 'share-not-saved'}); else check('beta: joined');
+      if (keysOf('ledger-voices/').length !== nV + 1) R.issues.push({step: 'beta', kind: 'voice-not-written'});
+      else { const v = window.__QA_STORE[keysOf('ledger-voices/').pop()]; if (!v.test || v.kind !== 'join' || !v.sig) R.issues.push({step: 'beta', kind: 'voice-shape', text: JSON.stringify(v).slice(0, 120)}); }
+      if ($('#bt-ans')) { setVal('#bt-ans', 'Web and app'); $('#bt-m [data-btans]').click(); await W(500); if (!/Added, thank you/.test($('#bt-m').textContent)) R.issues.push({step: 'beta', kind: 'answer-not-saved'}); }
+      $('#bt-m [data-btnew]').click(); await W(300); }
+    // 2. quick share as a new work item (test)
+    await pickClient('shc'); setVal('#bt-raw', 'Organisers want an estimate of each attendee travel carbon footprint shown on their event dashboard'); $('#bt-m [data-btfill]').click(); await W(900);
+    const none = $('#bt-m [data-btpick="none"]'); if (none) { none.click(); await W(150); }
+    if (!BT.s.area) { const a = $('#bt-area'); if (a && a.options.length > 1) { a.value = a.options[1].value; a.dispatchEvent(new Event('change', {bubbles: true})); } }
+    const nL = keysOf('ledger/LE-TEST-').length; $('#bt-m [data-btgo]').click(); await W(900); if ($('#bt-m [data-btgo]')) { $('#bt-m [data-btgo]').click(); await W(1200); }
+    const newIds = keysOf('ledger/LE-TEST-'); if (newIds.length !== nL + 1) R.issues.push({step: 'beta', kind: 'item-not-written', text: ($('#bt-foot') || {}).textContent});
+    else { const it = window.__QA_STORE[newIds[newIds.length - 1]]; if (!it.test || !it.v.beta || it.status !== 'submitted' || !it.v.title || !it.v.productArea) R.issues.push({step: 'beta', kind: 'item-shape', text: JSON.stringify(it).slice(0, 160)}); check('beta: logged'); }
+    if (keysOf('config/ledger-seq').length && window.__QA_STORE['config/ledger-seq'] && /TEST/.test(window.__QA_STORE['config/ledger-seq'].lastId || '')) R.issues.push({step: 'beta', kind: 'test-used-a-number'});
+    // 3. from a call recording
+    $('#bt-m [data-btnew]').click(); await W(300); $('#bt-m [data-btsrc="call"]').click(); await W(200); setVal('#bt-url', 'https://fathom.video/share/qa'); $('#bt-m [data-btfetch]').click(); await W(1500); check('beta: call');
+    if (NOMCP) { if (!vis($('#bt-m .bt-note.bad'))) R.issues.push({step: 'beta', kind: 'no-connector-message-missing'}); }
+    else { if (!vis($('#bt-m .bt-call'))) R.issues.push({step: 'beta', kind: 'call-not-read'}); if (!$('#bt-m .bt-cite.call')) R.issues.push({step: 'beta', kind: 'call-cite-missing'}); }
+    // 4. the full review, from step 1 to a logged item with the value handed to sales
+    $('#bt-m [data-btmode="drop"]').click(); await W(300); check('beta: review step 1');
+    if (!BT.d.clients.length) await pickClient('drc'); if (!BT.d.what) setVal('#bd-what', 'Exhibitors want visitors to sort the marketplace so the newest products show first');
+    $('#bt-m [data-btnav="next"]').click(); await W(500); check('beta: review step 2');
+    const lk = $('#bt-m [data-btlink]'); if (!lk) R.issues.push({step: 'beta', kind: 'review-no-matches'}); else { lk.click(); await W(200); }
+    const dec = $('#bt-m [data-btdecide="builds"]'); if (dec && BT.d.links.length) { dec.click(); await W(150); } else if ($('#bt-m [data-btdecide="new"]')) { $('#bt-m [data-btdecide="new"]').click(); await W(150); }
+    $('#bt-m [data-btnav="next"]').click(); await W(400); check('beta: review step 3');
+    $('#bt-m [data-btai]').click(); await W(900); check('beta: draft'); if (!$('#bt-m .bt-air')) R.issues.push({step: 'beta', kind: 'draft-missing'});
+    const acc = $('#bt-m [data-btaccept]'); if (acc) { acc.click(); await W(150); }
+    if (!BT.d.draft.why || BT.d.draft.why.length < 8) setVal('#bd-dwhy', 'Visitors scroll the whole list and miss the newest products.');
+    $('#bt-m [data-btnav="next"]').click(); await W(400); check('beta: review step 4');
+    const ar = $('#bd-area'); if (ar && ar.options.length > 1) { ar.value = ar.options[1].value; ar.dispatchEvent(new Event('change', {bubbles: true})); }
+    const sq = $('#bd-sq'); if (sq) { sq.focus(); setVal('#bd-sq', 'Chris'); await W(500); const sb = $('#bt-m [data-btsales]'); if (sb) { sb.click(); await W(300); } else R.issues.push({step: 'beta', kind: 'sales-search-empty'}); }
+    const n2 = keysOf('ledger/LE-TEST-').length;
+    $('#bt-m [data-btnav="next"]').click(); await W(900); if ($('#bt-m [data-btdtidy]')) { $('#bt-m [data-btnav="next"]').click(); await W(1200); }
+    const ids2 = keysOf('ledger/LE-TEST-'); if (ids2.length !== n2 + 1) R.issues.push({step: 'beta', kind: 'review-item-not-written', text: ($('#bt-foot') || {}).textContent + ' | ' + JSON.stringify({step: BT.d.step, dec: BT.d.decision, links: BT.d.links, area: BT.d.area, w: BT.d.draft.what.length, y: BT.d.draft.why.length, sales: BT.d.sales, tidy: !!BT.d.tidy, saving: BT.d.saving})});
+    else { const it = window.__QA_STORE[ids2[ids2.length - 1]]; if (!((it.v.handoff || {}).lever || {}).to) R.issues.push({step: 'beta', kind: 'value-not-handed-to-sales'}); if (!(it.v.beta.links || []).length) R.issues.push({step: 'beta', kind: 'links-not-saved'}); check('beta: review logged'); }
+    // 5. the item: the Beta section, link more, then test items drop out when test mode goes off
+    const op = $('#bt-m [data-btopenitem]'); if (op) { op.click(); await W(900); if (!vis($('#modal .bt-entry'))) R.issues.push({step: 'beta', kind: 'entry-section-missing'}); else check('beta: item');
+      const lq = $('#modal .bt-lq'); if (lq) { setVal('#modal .bt-lq', 'marketplace newest products sort'); await W(600); const l2 = $('#modal [data-btilink]'); if (l2) { l2.click(); await W(900); check('beta: linked more'); } }
+      await closeAll(); } else R.issues.push({step: 'beta', kind: 'open-item-missing'});
+    await closeAll();
+    btSetTest(false); await W(300); if (FE.rows.some(r => r.test)) R.issues.push({step: 'beta', kind: 'test-items-counted'}); if (/LE-TEST-/.test(($('#fl-host') || {}).textContent || '')) R.issues.push({step: 'beta', kind: 'test-items-shown'});
+    btSetTest(true); await W(200);
+    if (!hsAll().some(x => x.src === 'beta')) R.issues.push({step: 'beta', kind: 'history-missing-beta'});
+    // clear the tests from the lab
+    showTab('refresh'); await W(300); HS.sub = 'beta'; hsShow(); await W(200);
+    const del = $('#bt-lab [data-btlab="del"]'); if (!del) R.issues.push({step: 'beta lab', kind: 'delete-missing'}); else { del.click(); await W(150); $('#bt-lab [data-btlab="delyes"]').click(); await W(900);
+      if (keysOf('ledger/LE-TEST-').length || keysOf('ledger-voices/').some(k => window.__QA_STORE[k].test)) R.issues.push({step: 'beta lab', kind: 'tests-not-deleted'}); else check('beta lab: cleared'); }
+    btSetTest(false); HS.sub = 'refresh'; hsShow(); showTab('pipeline'); await W(300); feSetView('fl'); await W(200);
+  } R.notes.push('viewer: ' + (AJ ? 'Ajay' : 'someone else') + (window.EP_ACCESS ? ', page access check present' : ''));
   async function tourWalk(label) {
     for (let k = 0; k < 12; k++) {
       const card = $('#ob-card'), spot = $('#ob-spot'); if (!card) break;
-      const c = card.getBoundingClientRect(), sp = spot ? spot.getBoundingClientRect() : null;
+      // measure against the target itself: the spotlight's CSS transition does not advance under headless virtual time
+      const tg = OB.tour && document.querySelector(OB.tour.steps[OB.tour.i][0]), c = card.getBoundingClientRect(), sp = tg ? tg.getBoundingClientRect() : spot ? spot.getBoundingClientRect() : null;
       if (c.left < 0 || c.top < 0 || c.right > innerWidth || c.bottom > innerHeight) issue({step: label + ' ' + (k + 1), kind: 'tour-card-off-screen'});
       if (!sp || !sp.width || !sp.height) issue({step: label + ' ' + (k + 1), kind: 'tour-target-missing'});
       else if (c.left < sp.right - 2 && sp.left < c.right - 2 && c.top < sp.bottom - 2 && sp.top < c.bottom - 2 && sp.height < innerHeight * 0.6) issue({step: label + ' ' + (k + 1), kind: 'tour-card-covers-target', text: card.querySelector('h4').textContent});
       check(label + ' step ' + (k + 1));
-      const before = sig(); card.querySelector('[data-obtnext]').click(); await W(260); if (sig() === before) R.clicks.none.push(label + ' next ' + k); else R.clicks.ok++;
+      const before = sig(); card.querySelector('[data-obtnext]').click(); await W(450); // the spotlight moves for 0.25 s if (sig() === before) R.clicks.none.push(label + ' next ' + k); else R.clicks.ok++;
     }
   }
   await W(1500); const g = $('#gate-go'); if (g) { g.click(); await W(400); }
@@ -158,6 +225,69 @@
   await clicks('#tl .cell.has', 6, 'timeline cell');
   await clicks('#tl .tvn', 2, 'timeline client name');
   $('#t-sort [data-v="tier"]').click(); await W(250); await clicks('#tl [data-tlband]', 3, 'timeline tier band', {keep: true}); check('timeline tier bands'); $('#t-sort [data-v="show"]').click(); await W(250);
+  // FEEDBACK: the reply notice, sending Happy / Sad / Want, privacy for everyone else, and Ajay's inbox and roadmap
+  { const AJ = window.__QA_AS !== 'other', PRIV = 'QA-PRIVATE';
+    await closeAll(); await tab('overview'); await W(300);
+    if (!vis($('#fb-open'))) R.issues.push({step: 'feedback', kind: 'feedback-button-missing'});
+    if (vis($('#fb-nudge'))) { check('feedback reply notice'); await clicks('#fb-nudge [data-fbread]', 1, 'feedback: read the reply', {keep: true}); if (!vis($('#ob-guide .fb-reply'))) R.issues.push({step: 'feedback', kind: 'reply-not-shown'}); await closeAll(); }
+    else R.issues.push({step: 'feedback', kind: 'reply-notice-missing'});
+    if (!AJ && vis($('#fb-badge'))) R.issues.push({step: 'feedback', kind: 'unread-badge-not-cleared'});
+    await clicks('#ob-pill', 1, 'guide: open (feedback)', {keep: true});
+    await clicks('#ob-guide [data-obpane="tours"][aria-selected="false"]', 1, 'guide: tours', {keep: true, optional: true});
+    await clicks('#ob-guide [data-obpane="fb"]', 1, 'guide: feedback', {keep: true});
+    await clicks('#ob-guide [data-fbmood]', 3, 'feedback: mood', {keep: true, fresh: true});
+    await clicks('#ob-guide [data-fbw]', 1, 'feedback: weight', {keep: true});
+    setVal('#fb-text', 'The Guide is really handy on calls'); await W(100);
+    await clicks('#ob-guide [data-fbsend]', 1, 'feedback: send', {keep: true, wait: 500});
+    if (!vis($('#ob-guide .fb-thanks'))) R.issues.push({step: 'feedback', kind: 'not-sent', text: (($('#ob-guide .ob-err') || {}).textContent || '')});
+    if ($$('#ob-guide .fb-item').length < 2) R.issues.push({step: 'feedback', kind: 'own-list-missing', text: String($$('#ob-guide .fb-item').length)});
+    const saved = Object.keys(window.__QA_STORE || {}).filter(k => /^feedback\/u_test0+\/items\//.test(k) && k !== 'feedback/u_test0000000000000000000/items/fqa0');
+    if (saved.length !== 1) R.issues.push({step: 'feedback', kind: 'not-stored', text: String(saved.length)});
+    await clicks('#ob-guide [data-fbmore]', 1, 'feedback: send more', {keep: true});
+    if (AJ !== !!$('#ob-guide [data-fbinbox]')) R.issues.push({step: 'feedback', kind: AJ ? 'inbox-link-missing' : 'inbox-link-shown-to-others'});
+    await closeAll();
+    if (!AJ) {
+      $('#fb-open').click(); await W(300);
+      if ($('#fb-in')) R.issues.push({step: 'feedback', kind: 'inbox-opened-for-others'});
+      if (!vis($('#ob-guide [data-fbmood]'))) R.issues.push({step: 'feedback', kind: 'header-button-no-form'});
+      { const tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let n, hit = null;
+        while ((n = tw.nextNode())) if (n.nodeValue.includes(PRIV) && !n.parentElement.closest('script,style')) { hit = n.parentElement; break; }
+        if (hit) R.issues.push({step: 'feedback', kind: 'others-feedback-visible', el: desc(hit)}); }
+      if (JSON.stringify(FB.inbox.items).includes(PRIV) || JSON.stringify(FB.mine).includes(PRIV)) R.issues.push({step: 'feedback', kind: 'others-feedback-loaded'});
+      check('feedback as someone else'); await closeAll();
+      R.notes.push('feedback: sent, own list, reply notice; nobody else\'s feedback visible');
+    } else {
+      if (!vis($('#fb-badge'))) R.issues.push({step: 'feedback', kind: 'inbox-badge-missing'});
+      await clicks('#fb-open', 1, 'feedback inbox', {keep: true, wait: 400});
+      if (!vis($('#fb-in .fb-box'))) R.issues.push({step: 'feedback', kind: 'inbox-missing'});
+      if (!($('#fb-in') || {}).textContent || !$('#fb-in').textContent.includes(PRIV)) R.issues.push({step: 'feedback', kind: 'colleague-feedback-missing'});
+      await clicks('#fb-in [data-fbfm]', 4, 'inbox: mood filter', {keep: true, fresh: true});
+      await clicks('#fb-in [data-fbfm=""]', 1, 'inbox: all moods', {keep: true, optional: true});
+      setVal('#fb-fs', 'all'); await W(200); check('inbox: all statuses');
+      setVal('#fb-fq', 'zoom'); await W(200); check('inbox: search'); if ($$('#fb-in .fb-row').length !== 1) R.issues.push({step: 'feedback', kind: 'search', text: String($$('#fb-in .fb-row').length)});
+      setVal('#fb-fq', ''); await W(200);
+      const row = $$('#fb-in [data-fbrow]').find(b => b.textContent.includes(PRIV)); if (row) { row.click(); await W(250); R.clicks.ok++; } check('inbox: open a note');
+      await clicks('#fb-in [data-fbst="planned"]', 1, 'inbox: status planned', {keep: true, wait: 400});
+      if (!String(($('#fb-rt') || {}).value || '').includes('planned')) R.issues.push({step: 'feedback', kind: 'reply-not-drafted'});
+      setVal('#fb-th', 'Timeline zoom'); await clicks('#fb-in [data-fbthsave]', 1, 'inbox: save theme', {keep: true, wait: 400});
+      await clicks('#fb-in [data-fbreply]', 1, 'inbox: send reply', {keep: true, wait: 400});
+      const rep = (window.__QA_STORE || {})['feedback/u_chris00000000000000000000/replies/fqa1'] || {};
+      if (rep.status !== 'planned' || rep.theme !== 'Timeline zoom' || !(rep.msgs || []).length) R.issues.push({step: 'feedback', kind: 'reply-not-stored', text: JSON.stringify(rep).slice(0, 120)});
+      if (!vis($('#fb-in .fb-thread'))) R.issues.push({step: 'feedback', kind: 'thread-missing'});
+      await clicks('#fb-in [data-fbview="road"]', 1, 'inbox: roadmap', {keep: true});
+      if ($$('#fb-in .fb-card').length < 2) R.issues.push({step: 'feedback', kind: 'roadmap-cards', text: String($$('#fb-in .fb-card').length)});
+      await clicks('#fb-in .fb-card[data-fbth]', 1, 'roadmap: theme card', {keep: true});
+      await clicks('#fb-in [data-fbth=""]', 1, 'inbox: clear theme', {keep: true, optional: true});
+      await clicks('#fb-in [data-fbview="road"]', 1, 'inbox: roadmap again', {keep: true});
+      await clicks('#fb-in .fb-card[data-fbgo]', 1, 'roadmap: single note', {keep: true, optional: true});
+      await clicks('#fb-in [data-fbinx].x', 1, 'inbox: close', {keep: true});
+      await clicks('#ob-pill', 1, 'guide: open (you)', {keep: true}); await clicks('#ob-guide [data-obpane="me"]', 1, 'guide: you', {keep: true});
+      await clicks('#ob-guide [data-fbinbox]', 1, 'guide: feedback inbox', {keep: true, wait: 300}); if (!vis($('#fb-in .fb-box'))) R.issues.push({step: 'feedback', kind: 'inbox-from-profile'});
+      document.dispatchEvent(new KeyboardEvent('keydown', {key: 'Escape', bubbles: true})); await W(150); if ($('#fb-in')) R.issues.push({step: 'feedback', kind: 'escape-does-not-close'});
+      await closeAll();
+      R.notes.push('feedback: sent, own list, reply notice; inbox, filters, status, theme, reply, roadmap');
+    }
+  }
   // ONBOARDING: a tab nudge, the Guide and My clients
   await tab('bugs'); await W(450);
   if (!vis($('#ob-nudge'))) { R.issues.push({step: 'nudge', kind: 'nudge-missing'}); try { R.notes.push('onboarding state: ' + JSON.stringify({ready: OB.ready, skipped: OB.prefs.skipped, welcomed: OB.prefs.welcomed, tours: OB.prefs.tours, nudged: OB.prefs.nudged, tour: !!OB.tour, steps: obSteps('bugs').length, cur: obCurTab()})); } catch (e) { R.notes.push('state: ' + e.message); } }
@@ -195,14 +325,27 @@
   await clicks('#fl-host [data-feopen]', 1, 'work item (for its walkthrough button)', {keep: true});
   await clicks('#modal-foot [data-fewalk]', 1, 'walkthrough from a work item', {keep: true});
   await clicks('#modal-foot [data-feflow2]', 1, 'whole flow from the walkthrough', {keep: true}); await closeAll();
-  await clicks('#fl-new', 1, 'log a new work item', {keep: true, wait: 900});
+  // logging a new work item: Settings viewers get Beta (Claude), everyone else the placeholder card
+  await clicks('#fl-new', 1, 'log a new work item', {keep: true, wait: 700});
+  if (EP_ACCESS.how) {
+    if (!vis($('#bt-m'))) R.issues.push({step: 'beta', kind: 'beta-did-not-open'});
+    if (vis($('#modal .fe-skill'))) R.issues.push({step: 'beta', kind: 'placeholder-shown-to-settings-viewer'});
+    try { await betaProbe(); } catch (err) { R.errors.push({step: 'beta', msg: String(err && err.message || err)}); }
+    await clicks('#fl-new', 1, 'log again (classic form)', {keep: true, wait: 600});
+    if ($('#bt-m [data-btold]')) { $('#bt-m [data-btold]').click(); await W(900); R.clicks.ok++; } else { R.issues.push({step: 'beta', kind: 'classic-form-link-missing'}); await closeAll(); }
+  } else {
+    if (!vis($('#modal .fe-skill'))) R.issues.push({step: 'log', kind: 'skill-placeholder-missing'});
+    if ($('#modal [data-feold]')) R.issues.push({step: 'log', kind: 'old-form-link-shown-to-others'});
+    if ($('#bt-m')) R.issues.push({step: 'log', kind: 'beta-shown-to-others'});
+    await closeAll();
+  }
   if ($('.fe-m')) { setVal('#fe-title', 'Alphabetical sort on exhibitor marketplace listings'); setVal('#fe-problem', 'Visitors cannot sort the exhibitor marketplace listing alphabetically so they scroll the whole list before the show.'); await W(300);
     setVal('#fe-dq', 'sort exhibitors alphabetically on the marketplace'); await W(500); check('form search');
     await clicks('.fe-m input[data-f="lever"]', 4, 'form lever', {keep: true});
     await clicks('.fe-m [data-dmmore]', 1, 'form show all', {keep: true, optional: true});
     await closeAll(); }
   // log with only the five fields, hand one "before signing" field to a colleague, then fill it in from the item
-  await clicks('#fl-new', 1, 'log again (hand-off)', {keep: true, wait: 900});
+  await clicks('#fl-new', 1, 'log again (hand-off)', {keep: true, wait: 500}); if ($('#bt-m [data-btold]')) { $('#bt-m [data-btold]').click(); await W(900); } else await closeAll();
   if ($('.fe-m')) {
     $('.fe-m [data-fediscard]') && $('.fe-m [data-fediscard]').click(); await W(300);
     setVal('#fe-title', 'Offline badge scanning for lead retrieval'); setVal('#fe-problem', 'Exhibitors lose badge scans on show floors with no signal, so leads are missing after the event and they cannot follow up.');
@@ -228,31 +371,85 @@
   if (!AJ) try {
     await clicks('#rq-switch [data-v="fl"]', 1, 'feature ledger (days check)', {keep: true, optional: true});
     if ($$('#fl-host .fe-stage .small').some(e => /\bdays?\b/.test(e.textContent))) R.issues.push({step: 'feature ledger', kind: 'day-count-shown-to-others'});
-    // someone other than Ajay: the Must-have ledger shows the countdown, the How it works tabs are gone, the editor links land on the lock
-    await clicks('#rq-switch [data-v="pp"]', 1, 'must-have ledger (locked)', {keep: true}); check('must-have lock');
-    if (!vis($('#pp-host .ep-lock'))) R.issues.push({step: 'must-have lock', kind: 'lock-missing'});
-    if ($('#pp-host table.pp, #pp-host .pp-tl')) R.issues.push({step: 'must-have lock', kind: 'ledger-visible-to-others'});
-    const s1 = $('#ep-cd [data-cd="s"]').textContent; await W(1300); if ($('#ep-cd [data-cd="s"]').textContent === s1) R.issues.push({step: 'countdown', kind: 'countdown-not-ticking'});
-    const hh = +$('#ep-cd [data-cd="h"]').textContent; if (!(hh >= 0 && hh <= 60)) R.issues.push({step: 'countdown', kind: 'countdown-hours-out-of-range', text: String(hh)});
-    await clicks('#pp-host [data-eplockgo="walk"]', 1, 'lock: walkthrough'); await clicks('#rq-switch [data-v="pp"]', 1, 'must-have ledger again', {keep: true});
-    await clicks('#pp-host [data-eplockgo="fl"]', 1, 'lock: feature ledger', {keep: true});
+    // someone other than Ajay: the Must-have ledger is open (since 30 Sep 2026), the Settings tabs are not
+    await clicks('#rq-switch [data-v="pp"]', 1, 'must-have ledger (others)', {keep: true, wait: 500}); check('must-have for others');
+    if ($('#pp-host .ep-lock')) R.issues.push({step: 'must-have', kind: 'still-locked'});
+    if (!vis($('#pp-host .pp-board'))) R.issues.push({step: 'must-have', kind: 'board-not-shown-to-others'});
+    await clicks('#pp-host .pp-bc', 2, 'must-have card (others)', {fresh: true});
+    await clicks('#rq-switch [data-v="fl"]', 1, 'feature ledger (others)', {keep: true});
     if (vis($('#tg-how')) || vis($('.tab[data-tab="logic"]')) || vis($('.tab[data-tab="method"]'))) R.issues.push({step: 'tabs', kind: 'how-it-works-visible-to-others'});
     showTab('refresh'); await W(200); if (vis($('#panel-refresh'))) R.issues.push({step: 'tabs', kind: 'data-refresh-open-to-others'});
+    // a How it works viewer (EP_HOW_IDS): the three tabs open, the Must-have ledger stays locked, the feedback inbox stays Ajay's
+    if (!EP_HOW_IDS.includes('u_0KCjQDtQxEOgVhmNzuV5SQ')) R.issues.push({step: 'how access', kind: 'bartosz-not-listed'});
+    EP_ACCESS.how = true; applyAccess(); await W(150);
+    if (!vis($('#tg-how'))) R.issues.push({step: 'how access', kind: 'how-tabs-hidden'});
+    for (const t of ['logic', 'method', 'refresh']) { showTab(t); await W(250); if (!vis($('#panel-' + t))) R.issues.push({step: 'how access', kind: 'tab-not-open', text: t}); else check('how access: ' + t); }
+    if (!vis($('#rf-host .rf-tab'))) R.issues.push({step: 'how access', kind: 'data-refresh-empty'});
+    await clicks('#sl-sub [data-slsub="history"]', 1, 'how access: history', {keep: true, wait: 500}); if (!$$('#hs-host .hs-row').length) R.issues.push({step: 'how access', kind: 'history-empty'});
+    await clicks('#sl-sub [data-slsub="refresh"]', 1, 'how access: data refresh', {keep: true});
+    // a Settings viewer logs with Beta
+    showTab('pipeline'); await W(200); feSetView('fl'); await W(200); $('#fl-new').click(); await W(600); if (!vis($('#bt-m'))) R.issues.push({step: 'how access', kind: 'beta-not-open-for-settings-viewer'}); await closeAll();
+    showTab('refresh'); await W(200); $('#sl-sub [data-slsub="beta"]').click(); await W(300); if (!vis($('#bt-lab .bt-lab'))) R.issues.push({step: 'how access', kind: 'beta-lab-missing'}); else check('how access: beta lab');
+    $('#sl-sub [data-slsub="refresh"]').click(); await W(200);
+    if (vis($('#fb-in'))) R.issues.push({step: 'how access', kind: 'feedback-inbox-opened'});
+    EP_ACCESS.how = false; applyAccess(); showTab('overview'); await W(200);
+    if (vis($('#tg-how'))) R.issues.push({step: 'how access', kind: 'how-tabs-not-hidden-again'});
     location.hash = 'rules'; showTab('logic'); await W(300); if (vis($('#panel-logic')) || vis($('#panel-method'))) R.issues.push({step: 'tabs', kind: 'rules-open-to-others'}); check('rules refused');
 
   } catch (err) { R.errors.push({step: 'locked view', msg: String(err && err.message || err)}); }
-  if (AJ) { await clicks('#rq-switch [data-v="pp"]', 1, 'must-have ledger', {keep: true}); check('requests must-have grid');
+  try { await tab('pipeline'); await clicks('#rq-switch [data-v="pp"]', 1, 'must-have ledger', {keep: true}); check('requests must-have board');
+  // the Board (default): cards open the item, every grouping, the attention line filters and clears
+  if (!vis($('#pp-host .pp-board'))) R.issues.push({step: 'must-have', kind: 'board-not-default'});
+  if ($$('#pp-host .pp-bc').length < 20) R.issues.push({step: 'must-have', kind: 'board-cards', text: String($$('#pp-host .pp-bc').length)});
+  $$('#pp-host .pp-bc').forEach(c => { if (c.scrollWidth > c.clientWidth + 2) issue({step: 'board', kind: 'card-overflow', el: desc(c)}); });
+  await clicks('#pp-host .pp-bc', 3, 'board card', {fresh: true});
+  for (const g of ['driver', 'team', 'status', 'month']) { await clicks('#pp-bgroup [data-v="' + g + '"]', 1, 'board by ' + g, {keep: true}); $$('#pp-host .pp-bc').forEach(c => { if (c.scrollWidth > c.clientWidth + 2) issue({step: 'board ' + g, kind: 'card-overflow', el: desc(c)}); }); }
+  const nAll = $$('#pp-host .pp-bc').length;
+  await clicks('#pp-host .pp-att-c', 1, 'attention: filter', {keep: true});
+  if ($$('#pp-host .pp-bc').length >= nAll) R.issues.push({step: 'must-have', kind: 'attention-did-not-filter'});
+  await clicks('#pp-host .pp-att-x', 1, 'attention: show everything', {keep: true});
+  if ($$('#pp-host .pp-bc').length !== nAll) R.issues.push({step: 'must-have', kind: 'attention-did-not-clear'});
+  const more = $('#pp-host .pp-more'); if (more) { more.open = true; await W(150); check('board effort charts'); }
+  await clicks('#pp-view [data-v="grid"]', 1, 'requests grid view', {keep: true}); check('requests must-have grid');
   for (let z = 1; z <= 5; z++) { for (let k = 0; k < 5; k++) { const b = $('[data-ppz="-1"]'); if (b && !b.disabled) { b.click(); await W(60); } } for (let k = 1; k < z; k++) { $('[data-ppz="1"]').click(); await W(60); } await W(200); check('requests grid zoom ' + z); }
   await clicks('.pp-tl [data-ppedit]', 3, 'requests grid item', {fresh: true});
   await clicks('#pp-view [data-v="table"]', 1, 'requests table', {keep: true}); check('requests table');
-  await clicks('#pp-view [data-v="grid"]', 1, 'requests grid', {keep: true});
-  await clicks('#pp-hist', 1, 'requests change log'); }
+  await clicks('#pp-view [data-v="board"]', 1, 'requests board', {keep: true});
+  await clicks('#pp-hist', 1, 'requests change log'); } catch (err) { R.errors.push({step: 'must-have ledger', msg: String(err && err.message || err)}); await closeAll(); }
   await clicks('#rq-switch [data-v="fl"]', 1, 'feature ledger', {keep: true});
+  // SYNC & LOGS: the renamed tab, its two sub-tabs, and History (Ajay only)
+  if (AJ) { await tab('refresh'); await W(300);
+    if (!/Sync/.test(($('.tab[data-tab="refresh"]') || {}).textContent || '')) R.issues.push({step: 'sync & logs', kind: 'tab-not-renamed'});
+    if (!vis($('#rf-host .rf-tab'))) R.issues.push({step: 'sync & logs', kind: 'data-refresh-missing'});
+    await clicks('#sl-sub [data-slsub="history"]', 1, 'sync & logs: history', {keep: true, wait: 700}); check('history');
+    const nH = $$('#hs-host .hs-row').length; if (nH < 5) R.issues.push({step: 'history', kind: 'history-rows', text: String(nH)});
+    const txt = ($('#hs-host') || {}).textContent || '';
+    if (!/signed in/.test(txt)) R.issues.push({step: 'history', kind: 'activity-missing'});
+    await clicks('#hs-host [data-hsspan]', 4, 'history: period', {keep: true, fresh: true});
+    await clicks('#hs-host [data-hssrc]', 6, 'history: source', {keep: true, fresh: true, after: async () => { const b = $('#hs-host [data-hssrc][aria-pressed="true"]'); if (b) { b.click(); await W(150); } }});
+    setVal('#hs-q', 'must'); await W(400); check('history search'); setVal('#hs-q', ''); await W(400);
+    await clicks('#hs-host [data-hsopen^="pp:"]', 1, 'history: open a must-have item', {optional: true});
+    await clicks('#sl-sub [data-slsub="beta"]', 1, 'sync & logs: beta lab', {keep: true, wait: 400}); check('beta lab');
+    if (!vis($('#bt-lab .bt-lab'))) R.issues.push({step: 'beta lab', kind: 'lab-missing'});
+    await clicks('#bt-lab [data-btlab="check"]', 1, 'beta lab: check Claude', {keep: true, wait: 600});
+    if (!/Claude works here/.test(($('#bt-lab') || {}).textContent || '')) R.issues.push({step: 'beta lab', kind: 'ai-check-failed'});
+    await clicks('#bt-lab [data-btscen="new"]', 1, 'beta lab: run a case', {keep: true, wait: 1200}); if (!vis($('#bt-m'))) R.issues.push({step: 'beta lab', kind: 'case-did-not-open'}); check('beta case'); await closeAll();
+    await clicks('#bt-lab details.bt-ailog summary', 1, 'beta lab: AI log', {keep: true, optional: true});
+    await clicks('#sl-sub [data-slsub="refresh"]', 1, 'sync & logs: data refresh', {keep: true});
+    if (!vis($('#rf-host .rf-tab'))) R.issues.push({step: 'sync & logs', kind: 'data-refresh-not-back'}); }
+  else { if (vis($('.tab[data-tab="refresh"]'))) R.issues.push({step: 'sync & logs', kind: 'visible-to-others'});
+    try { hsShow(); } catch (e) {} if ($$('#hs-host .hs-row').length) R.issues.push({step: 'history', kind: 'history-shown-to-others'});
+    if (JSON.stringify(HS.act).includes('u_chris')) R.issues.push({step: 'history', kind: 'others-activity-loaded'}); }
   // DEMAND
   await tab('demand'); await W(2500); check('demand');
   for (let z = 1; z <= 5; z++) { for (let k = 0; k < 5; k++) { const b = $('[data-dmz="-1"]'); if (b && !b.disabled) { b.click(); await W(120); } } for (let k = 1; k < z; k++) { $('[data-dmz="1"]').click(); await W(120); } check('demand zoom ' + z); }
   await clicks('.dm-hc:not(:disabled)', 3, 'demand heat cell', {keep: true, fresh: true, after: async () => { $('#dm-clear') && $('#dm-clear').click(); await W(200); $('#dm-view [data-v="rank"]').click(); await W(200); }});
-  await clicks('.dm-rr', 3, 'demand ranked need');
+  // the signal: the explanation adds up, and a need's pop-up shows its own sum
+  { const d = $('.dm-sighow'); if (!d) R.issues.push({step: 'demand', kind: 'signal-explainer-missing'}); else { d.querySelector('summary').click(); await W(150); check('demand signal explained');
+      const ex = $('.dm-sigex .dm-eq'), top = $('.dm-rr .dm-sig'); if (ex && top && ex.textContent.replace(/\D/g, '') !== top.textContent.replace(/\D/g, '')) R.issues.push({step: 'demand', kind: 'signal-example-mismatch', text: ex.textContent + ' vs ' + top.textContent});
+      d.querySelector('summary').click(); await W(100); } }
+  await clicks('.dm-rr', 3, 'demand ranked need', {after: async () => {}});
+  { const r = $('.dm-rr'); if (r) { r.click(); await W(300); if (!vis($('#modal .dm-sigsum'))) R.issues.push({step: 'demand', kind: 'need-signal-breakdown-missing'}); await closeAll(); } }
   $('#dm-view [data-v="needs"]').click(); await W(300); check('demand needs');
   await clicks('[data-dmsort]', 5, 'demand needs sort', {keep: true, fresh: true});
   await clicks('table.dm-tab tr.r', 3, 'demand needs row', {fresh: true});

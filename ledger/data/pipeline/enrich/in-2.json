@@ -1,0 +1,544 @@
+[
+ {
+  "id": "p08",
+  "key": "EP-57107",
+  "current": {
+   "area": "Sessions",
+   "deps": "",
+   "driver": "",
+   "estimate": "5d",
+   "feature": "[API] Multi-day Session Calendar View Enhancements",
+   "impact": "Platform & Attendees: eliminates rendering lag and multiple round trips during multi-day calendar navigation. Engineering & QA: clean OpenAPI contract with standardized envelope and server-side timezone boundary resolution.",
+   "key": "EP-57107",
+   "month": "2026-09",
+   "notes": "",
+   "owner": "Kavi",
+   "priority": "Strategic",
+   "rationale": "Re-architects session search endpoints (/sessionsCalendarView and /sessionsDates) to replace inefficient single-day/week queries with an inclusive, bounded date-range (dayFrom..dayTo up to 31 days) and a single unpaginated date picker fetch.",
+   "status": "Ready for Release",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps",
+   "notes"
+  ],
+  "jira": {
+   "summary": "[API] Multi-day Session Calendar View Enhancements",
+   "description": "## What this story does\n\nThe session calendar rendered one day or one calendar week at a time, and the day picker was a side effect of a full sessions search. This story replaces both:\n\n* `POST /api/v1/search/sessionsCalendarView` now takes an inclusive day **range** instead of `view` + `day`.\n* `POST /api/v1/search/sessionsDates` is new: the days that hold sessions, with per-day counts, in one unpaginated request.\n\nImplementation: <custom data-type=\"smartlink\" data-id=\"id-0\">https://expoplatform.atlassian.net/browse/EP-57263#icft=EP-57263</custom> (merged to alpha 15 Sep, PR 5089). Testing: <custom data-type=\"smartlink\" data-id=\"id-1\">https://expoplatform.atlassian.net/browse/EP-57264#icft=EP-57264</custom>. Contract first written on <custom data-type=\"smartlink\" data-id=\"id-2\">https://expoplatform.atlassian.net/browse/EP-57262#icft=EP-57262</custom> and reproduced below, which is the version that supersedes it — including the three corrections made with FE on 14 Sep and the spec fixes that followed QA review.\n\nThe live spec is at `https://<event-host>/apidocs/v1/openapi.json` on the **frontend** host. It is generated, never committed, and the backend host does not serve these paths.\n\n---\n\n# API contract\n\n### POST /api/v1/search/sessionsCalendarView\n\nReturns the sessions of one calendar window in a single response — no pagination, lightweight session items. The frontend names the window by its bounds; the event timezone and the exact second-level boundaries are resolved server-side.\n\n### Request\n\nHeaders:\n\n* `Content-Type: application/json`\n* `x-auth-token` — optional. The route itself is reachable by a guest; whether a guest gets an answer depends on the event's sessions module (see _Errors_).\n* `x-lang` — optional, translation language.\n\nBody. Each filter answers to several spellings; all spellings listed on one row reach the same filter.\n\n| **Field**  | **Type**  | **Required**  | **Description**  |\n| --- | --- | --- | --- |\n| `dayFrom`  | string, `d-m-Y`  | **yes**  | First day of the window, inclusive, read in the event timezone. Example `05-10-2026`.  |\n| `dayTo`  | string, `d-m-Y`  | **yes**  | Last day of the window, inclusive, read in the event timezone. A pair given in reverse order is straightened, not rejected.  |\n| `query` / `q`  | string or null  | no  | Search by session title.  |\n| `event_type` / `etype`  | id list  | no  | Session type ids.  |\n| `event_category` / `ecategory`  | id list  | no  | Event category ids.  |\n| `category` / `selectedCat`  | id list  | no  | Category (track) ids.  |\n| `business_area` / `businessArea`  | id list  | no  | Business-area (product-group) ids.  |\n| `includeEventsInSessions` / `include_events_in_sessions`  | id list  | no  | Event ids to include among the sessions.  |\n| `filter_1` .. `filter_5`  | id list  | no  | The per-event session filters an admin turns on.  |\n\n**\"id list\" means any of:** a JSON array `[301, 302]`, a string joined by `|`, `,` or `;` (`\"301|302\"`), or a single id (`301` or `\"301\"`). All three reach the search the same way. An explicit `[]` clears the filter. A non-numeric element is rejected, in every shape.\n\n**Only one delimiter acts, and which one is fixed.** The parser tries `,`, then `;`, then `|`, and splits on the first of those it finds anywhere in the value — the precedence belongs to the parser, not to the string. Whatever is left stays inside the tokens. `\"1,2|3\"` splits on the comma into `1` and `2|3`, and the second is not a number, so it answers 400 naming `selectedCat.1`. `\"1|2,3\"` splits on the comma as well — not on the earlier `|` — into `1|2` and `3`, so the same body answers 400 naming `selectedCat.0`. Either delimiter on its own is fine; mixing them in one value is the error.\n\n| **value**  | **result**  |\n| --- | --- |\n| `[301, 302]`  | ok  |\n| {{\"301 | 302\"}} / `\"301,302\"` / `\"301;302\"`  | ok  |\n| `301` or `\"301\"`  | ok — a single id  |\n| `[]`  | ok — clears the filter  |\n| {{\"301 | abc\"}}  | 400 — non-numeric token  |\n| {{\"1,2 | 3\"}}  | 400 — mixed delimiters, {{2 | 3}} is not a number  |\n| {{\"1 | 2,3\"}}  | 400 — the comma still wins, so {{1 | 2}} is the bad token (`selectedCat.0`)  |\n\n`eventType` and `eventCategory` are **not** accepted: the search factory resolves the canonical key and its legacy alias only, so those two camelCase spellings never reached a filter.\n\n`custom-filter-<id>` and `cfilters` are **not** accepted either, and never had any effect on a sessions search: the first reaches the sector filters (products, brands, exhibitors), the second the account-attribute filter (exhibitors) — no sessions reader registers either. An earlier version of this comment listed `custom-filter-<id>`; that was wrong.\n\nAny key not in this table is **dropped before validation** and never reaches the search — it is not an error, and it has no effect.\n\n```json\n{\n  \"dayFrom\": \"05-10-2026\",\n  \"dayTo\": \"11-10-2026\",\n  \"q\": \"keynote\",\n  \"etype\": [12, 15],\n  \"selectedCat\": [301],\n  \"business_area\": []\n}\n```\n\n### Validation\n\n* `dayFrom` and `dayTo` are required. Absent, `null` or empty answers 400.\n* Both must be an **existing** date in `d-m-Y`. A wrong format (`2026-10-05`, `5/10/2026`) and a non-existent day (`31-02-2026`) are both rejected — the date is not rolled over to 3 March.\n* The string `\"0\"` is rejected as a bound, not silently treated as absent.\n* `dayTo` before `dayFrom` is **not** an error: the pair is straightened and the window is resolved from the earlier to the later day.\n* Identical bounds are valid and mean a one-day window.\n* The window may span **at most 31 days**, both bounds included. A wider one is rejected on `dayTo`.\n* Text filters accept a string or `null`. Id-list filters accept an array of positive integers; an explicit `[]` is valid and means \"filter cleared\".\n* Errors are reported **per field**, one message per field — a body that gets both bounds wrong hears about both in one round trip, and each bound reports only its first failure.\n\nErrors:\n\n| **Status**  | **When**  | **Body**  |\n| --- | --- | --- |\n| 400  | A bound is missing or malformed, or a filter is of the wrong shape.  | Per-field validation errors.  |\n| 401  | The event's sessions module requires signing in and the caller is a guest.  | Standard error envelope.  |\n| 403  | The event's sessions module is off.  | Standard error envelope.  |\n\n`errors` is an **array of objects**, each with `message` and `field` — not a map keyed by field name. An earlier version of this contract showed a map; that was wrong, and these are the messages the endpoint actually returns (captured on alpha):\n\n```json\n{\n  \"code\": 400,\n  \"errors\": [\n    { \"message\": \"dayFrom is required\", \"field\": \"dayFrom\" },\n    { \"message\": \"dayTo is required\", \"field\": \"dayTo\" }\n  ],\n  \"lang\": \"en\",\n  \"c.lang\": \"en\",\n  \"data\": null\n}\n```\n\n| **Case**  | **message**  | **field**  |\n| --- | --- | --- |\n| Bound absent, `null` or empty  | `dayFrom is required`  | `dayFrom`  |\n| Wrong format, non-existent day (`31-02-2026`), or the string `\"0\"`  | `Only date strings in format \"d-m-Y\" are available. Field: dayFrom`  | `dayFrom`  |\n| Window wider than 31 days  | `dayFrom and dayTo must name a window of at most 31 days`  | `dayTo`  |\n| Id list with a non-numeric token  | `Only integers greater than 0 are available. Field: selectedCat.1`  | `selectedCat`  |\n\nNote the last row: the **position** of the offending token is named inside `message` (`selectedCat.1`), while `field` carries the plain field name.\n\n### Response envelope\n\nBoth endpoints answer inside the platform envelope, so the tables below describe what sits under `data`:\n\n```json\n{\"code\": 200, \"errors\": null, \"lang\": \"en\", \"c.lang\": \"en\", \"data\": { }}\n```\n\n### Response\n\n| **Field**  | **Type**  | **Null?**  | **Description**  |\n| --- | --- | --- | --- |\n| `data.from`  | int  | no  | Resolved window start, Unix timestamp — midnight of the **earlier** requested day in the event timezone. Because the pair is straightened, this is not necessarily `dayFrom`.  |\n| `data.to`  | int  | no  | Resolved window end, Unix timestamp — the last second of the **later** requested day in the event timezone.  |\n| `data.total`  | int  | no  | Number of sessions in the window. Not a page count — the window is returned whole.  |\n| `data.list[]`  | object\\[\\]  | no  | The sessions. Empty array when the window holds none.  |\n| `data.list[].id`  | int  | yes  | Session id.  |\n| `data.list[].title`  | string  | yes  |  |\n| `data.list[].start`  | int  | **no**  | Session start, Unix timestamp. The window filter compares against it, and a null never falls inside a range.  |\n| `data.list[].end`  | int  | **no**  | Session end, Unix timestamp.  |\n| `data.list[].location`  | string  | yes  | Human-readable location.  |\n| `data.list[].track`  | object  | no  | {{{}}} when the session has no track; otherwise `id` (int), `title` (string), `color` (string).  |\n| `data.list[].speakers[]`  | object\\[\\]  | no  | Empty array when the session has no speakers.  |\n| `data.list[].speakers[].id`  | int  | no  | Account id.  |\n| `data.list[].speakers[].firstName`  | string  | yes  |  |\n| `data.list[].speakers[].lastName`  | string  | yes  |  |\n| `data.list[].speakers[].photoURL`  | string  | yes  |  |\n| `data.list[].speakers[].position`  | string  | yes  |  |\n| `data.list[].speakers[].companyName`  | string  | no  | Empty string when unknown — not null.  |\n| `data.list[].isScheduled`  | bool  | no  | True when the session is in the caller's personal planner. Always `false` for a guest.  |\n\n```json\n{\n  \"data\": {\n    \"from\": 1759611600,\n    \"to\": 1760216399,\n    \"total\": 2,\n    \"list\": [\n      {\n        \"id\": 884501,\n        \"title\": \"Opening keynote\",\n        \"start\": 1759654800,\n        \"end\": 1759658400,\n        \"location\": \"Hall A, Main stage\",\n        \"track\": { \"id\": 301, \"title\": \"Strategy\", \"color\": \"#1B7F79\" },\n        \"speakers\": [\n          {\n            \"id\": 5512233,\n            \"firstName\": \"Dana\",\n            \"lastName\": \"Whitfield\",\n            \"photoURL\": \"https://cdn.example.com/p/5512233.jpg\",\n            \"position\": \"Head of Platform\",\n            \"companyName\": \"Northwind Logistics\"\n          }\n        ],\n        \"isScheduled\": true\n      },\n      {\n        \"id\": 884507,\n        \"title\": \"Workshop: sourcing at scale\",\n        \"start\": 1759669200,\n        \"end\": 1759676400,\n        \"location\": \"Room 2.14\",\n        \"track\": {},\n        \"speakers\": [],\n        \"isScheduled\": false\n      }\n    ]\n  }\n}\n```\n\n### Ordering\n\n`data.list` comes back ordered `start ASC`, then title in the request language, then `id` — the order <custom data-type=\"smartlink\" data-id=\"id-3\">https://expoplatform.atlassian.net/browse/EP-54343#icft=EP-54343</custom> documented, unchanged. It is produced in SQL; the client cannot ask for another one, because `sort` is not a declared key and is dropped like any other.\n\n**A title search replaces that order.** When `q` is sent to an event with Elasticsearch enabled and the query matches at least one session, relevance is put in front, and since the relevance term is distinct per row the three keys above never get to break a tie — in practice the window comes back in relevance order, not chronological.\n\nSo: the documented order holds whenever `q` is absent, empty, whitespace-only or the string `\"0\"` (all four read as \"no query at all\"), and whenever the event has Elasticsearch turned off. It does not hold for a title search on an Elasticsearch event. **If the grid needs chronological order, sort client-side whenever you send** `q` — the response does not say which of the two orders it carries.\n\n`sessionsDates` is unaffected: the day list is always ascending by date, whatever `q` is. What `q` changes there is the counts, not the order.\n\n**Known limitation, tracked separately:** a title search that Elasticsearch cannot serve is not reported to the caller. Depending on which way it fails the answer is either the whole window with `q` silently ignored, or an empty one indistinguishable from an honest \"nothing matched\"; a search matching more than 5 000 sessions across the event is silently truncated before the day window is applied. Treat a `q` result as best-effort rather than as a guarantee that the term was honoured.\n\n### Two timestamp conventions on one screen — read this before comparing anything\n\nThe day picker and the grid do not measure time the same way, and mixing them is the one mistake this pair of endpoints invites:\n\n| **Value**  | **Scale**  |\n| --- | --- |\n| `sessionsDates` → `dates[].date`  | A day label (`Y-m-d`) bucketed in the **event** timezone.  |\n| `sessionsDates` → `dates[].time`  | Noon of that label in the **API server's** timezone. A legacy identity key, kept because `/search/sessions` has always emitted exactly this value and clients store it.  |\n| `sessionsCalendarView` → `from` / `to`  | Real instants — midnight and the last second of the window, in the **event** timezone.  |\n| `sessionsCalendarView` → `list[].start` / `end`  | Real instants, stored as-is. The window filter compares against these.  |\n\n`from`, `to`, `start` and `end` are one scale. `time` is not on it.\n\n**Do not:**\n\n* feed `time` into `dayFrom`/`dayTo` — those take a `d-m-Y` string and a timestamp answers 400;\n* compare `time` against `from`/`to` or against `list[].start`;\n* build a day's bounds as `time ± 12h`. That is wrong by the difference between the event zone and the server zone for **any** non-zero difference, not only large ones: on a UTC server with a Tokyo event the naive window runs 09:00 local to 09:00 the next day, losing the first nine hours of the day and swallowing nine of the next.\n\n**Do:** use the `date` string as the day's identity, reformatted from `Y-m-d` to `d-m-Y`, to request a window. If you need to bucket instants locally, take the event timezone from `POST /api/v1/exhibition` (`timezone`, `offset`) rather than inferring it from `time`.\n\nThere is also a rendering trap in `time` itself: formatted in a zone far enough from the server's, it lands on a different calendar day than its own `date` — at or beyond twelve hours ahead, the next day. For a UTC server that is every event from +12:00 eastward (Fiji, Kamchatka, Auckland in NZDT, Chatham, Apia, Kiritimati). This is why `time` is an identity key and not a date.\n\n**The server timezone is not fixed anywhere in our codebase** — it is whatever the API hosts' PHP configuration leaves in place. Do not assume UTC and do not assume the event zone.\n\n### Backward compatibility\n\n**Breaking.** A client on the previous contract must change:\n\n* `view` is gone. It is no longer a recognised key — it is dropped silently, so sending it has no effect and draws no error of its own.\n* `day` is gone on this endpoint, on the same terms.\n* `dayFrom` and `dayTo` are now **required, with no defaults**. A body that names no days — including an old body that named only `view` — answers 400 on the two missing bounds rather than defaulting to today or to the current week.\n* A week is now asked for as a range the client names itself: `dayFrom` = Monday, `dayTo` = Sunday.\n\nUnchanged: the response shape, all filter keys and their spellings, the auth and module gating, and the fact that the window is returned whole without pagination.\n\nThe day picker that used to be built from the `dates` key of `POST /api/v1/search/sessions` has its own endpoint now — see the separate comment on `POST /api/v1/search/sessionsDates`. That `dates` key still exists and is unchanged.\n\n---\n\n### POST /api/v1/search/sessionsDates\n\nReturns every day of the event that holds at least one session under the given filters, with a per-day count. Counted in the database over the whole event and never paginated, so the calendar's day picker can be built from one request.\n\n### Request\n\nHeaders:\n\n* `Content-Type: application/json`\n* `x-auth-token` — optional. The route itself is reachable by a guest; whether a guest gets an answer depends on the event's sessions module (see _Errors_).\n* `x-lang` — optional, translation language.\n\nBody. The body is handed to the same sessions filter DTO as `POST /api/v1/search/sessions`, so **any** filter that endpoint reads is honoured here too. The ones the calendar sends:\n\n| **Field**  | **Type**  | **Required**  | **Description**  |\n| --- | --- | --- | --- |\n| `query` / `q`  | string  | no  | Search by session title. Narrows the day list the same way it narrows the sessions.  |\n| `event_type` / `etype`  | id list  | no  | Session type ids.  |\n| `event_category` / `ecategory`  | id list  | no  | Event category ids.  |\n| `category` / `selectedCat`  | id list  | no  | Category (track) ids.  |\n| `business_area` / `businessArea`  | id list  | no  | Business-area (product-group) ids.  |\n| `includeEventsInSessions` / `include_events_in_sessions`  | id list  | no  | Event ids to include among the sessions.  |\n| `filter_1` .. `filter_5`  | id list  | no  | The per-event session filters an admin turns on.  |\n\n**Exactly the same body as** `sessionsCalendarView`**, minus the bounds** — same keys, same shapes, same rules, same per-field 400. \"id list\" means a JSON array, a string joined by `|`, `,` or `;`, or a single id.\n\nAn empty body is valid and means \"every day of the event that holds a session\".\n\n**Two filters are dropped on purpose**, whatever the caller sends:\n\n* `day` — a day picker that listed only the day already chosen would be useless.\n* `range` — dropped for symmetry with `day`; the two travel together everywhere else.\n\n```json\n{\n  \"q\": \"keynote\",\n  \"etype\": [12, 15],\n  \"selectedCat\": [301]\n}\n```\n\n### Validation\n\nThe body is validated before anything reads it, on the same terms as `sessionsCalendarView`: a filter of the wrong shape answers 400 with the offending field named, one message per field, and keys the endpoint does not declare are dropped rather than applied.\n\n`day` and `range` are among the keys it does not declare, so sending either does nothing — a picker narrowed to the day already chosen would list only that day.\n\nErrors: the same envelope and the same `errors` array of `{message, field`} objects as the calendar endpoint above.\n\n| **Status**  | **When**  |\n| --- | --- |\n| 400  | A filter is of the wrong shape. Per-field errors.  |\n| 401  | The event's sessions module requires signing in and the caller is a guest.  |\n| 403  | The event's sessions module is off.  |\n\n**There is no 500.** An earlier version of this contract, and the spec generated from it, listed `500 \"The dates query failed\"`. The endpoint cannot answer it: when the search resolves to something that is not a sessions reader, the service reports the mistake to us and returns an **empty day list**, on the grounds that a picker with no days keeps the calendar usable while a 500 does not. So an empty `dates` array means either \"no day holds a session under these filters\" or, rarely, \"we got it wrong and are looking at it\" — never an error the caller can act on.\n\n### Response\n\nThe payload is returned under `data`, in the same envelope as above.\n\n| **Field**  | **Type**  | **Null?**  | **Description**  |\n| --- | --- | --- | --- |\n| `data.dates[]`  | object\\[\\]  | no  | The days that hold sessions, in **ascending date order**. Empty array when no day does.  |\n| `data.dates[].time`  | int  | no  | Noon of that day as a Unix timestamp. The frontend uses it as the day's identity in the picker.  |\n| `data.dates[].date`  | string, `Y-m-d`  | no  | The day itself, bucketed in the **event** timezone.  |\n| `data.dates[].count`  | int  | no  | How many sessions fall on that day under the requested filters.  |\n\nNotes on the values:\n\n* A session is filed under the local day the attendee sees it on — a session at 23:30 local belongs to that local day, not to the next one in UTC.\n* A session whose start is missing or zero is **skipped**, not grouped into a day of its own. Such rows are therefore absent from `dates` and from the counts.\n* `time` is noon rather than midnight so a day keeps its identity when the browser converts it in a timezone up to twelve hours away from the event's. It is that date at noon in the **server** timezone — deliberately the same value the `dates` key of `/search/sessions` has always emitted, so a frontend that stored the old value keeps matching.\n\n```json\n{\n  \"data\": {\n    \"dates\": [\n      { \"time\": 1759831200, \"date\": \"2026-10-07\", \"count\": 312 },\n      { \"time\": 1759917600, \"date\": \"2026-10-08\", \"count\": 288 },\n      { \"time\": 1760004000, \"date\": \"2026-10-09\", \"count\": 97 }\n    ]\n  }\n}\n```\n\n### Backward compatibility\n\n**Additive — nothing is removed.** This endpoint takes over the job of the `dates` key that `POST /api/v1/search/sessions` returns as a side effect.\n\n* The item shape is identical: the same `{time, date, count`} triple, the same noon convention, the same ascending order. A client can switch to this endpoint without touching its parser or its stored day identities.\n* The `dates` key of `/search/sessions` is **unchanged and still returned**. Nothing breaks by not switching; switching it to the same aggregate is a separate change.\n* The difference is what it costs: the old key is assembled by running the whole sessions search a second time with no limit and bucketing every row in PHP, which on the heaviest production event carries 3 472 rows across to report a few dozen dates.\n\n### Scope of this ticket\n\nDocumented here and in the sibling comment: the two endpoints that were actually built — `sessionsCalendarView` (changed) and `sessionsDates` (new). The third item in the acceptance criteria, the optional compact sessions-by-IDs endpoint, **was not implemented**, so there is no contract to document for it.\n\nOne wording note for the record: the AC describes the calendar endpoint as \"accepting an array of days\". It accepts a **range** — `dayFrom` and `dayTo`, both inclusive — not a list of individual days. For a contiguous calendar window the two are equivalent; a non-contiguous selection of days is not expressible in the current contract.\n\n---\n\n## Original request (kept for the record)\n\nThis is the story text as it was written before the contract was settled. Where the two disagree, the contract above is what shipped: the calendar takes a day **range** rather than an array of days, and the compact sessions-by-IDs endpoint was not built because speakers stay in the calendar response.\n\n> 1. **New endpoint — list of days that have sessions**\n> \n> We need a separate request that returns the list of days on which sessions exist. Right now this information is only obtainable as a side effect of the sessions search request below — it should be its own dedicated endpoint.\n>\n> ```\n> curl --url 'https://rcep56839rc.expoplatform.net/api/v1/search/sessions' \\\n>   -H 'content-type: application/json' \\\n>   -H 'x-application: 3' \\\n>   -H 'x-lang: en' \\\n>   --data-raw '{\"page\":1,\"day\":\"14-11-2025\"}'\n> ```\n>\n> 1. **Change the existing calendar-view endpoint — accept an array of days**\n> \n> Instead of the current \"week view + single selected day\", the frontend will send an array of days. The `sessionsCalendarView` endpoint needs to accept that array and return the calendar data for all requested days.\n>\n> ```\n> curl --url 'https://rcep56839rc.expoplatform.net/api/v1/search/sessionsCalendarView' \\\n>   -H 'content-type: application/json' \\\n>   -H 'x-application: 3' \\\n>   -H 'x-lang: en' \\\n>   --data-raw '{\"view\":\"week\",\"day\":\"14-11-2025\"}'\n> ```\n>\n> Change: replace `{\"view\":\"week\",\"day\":\"14-11-2025\"`} with an array of days (e.g. `{\"days\":[\"14-11-2025\",\"15-11-2025\", ...]`}).\n>\n> 1. **Compact sessions-by-IDs endpoint — conditional**\n> \n> If we keep speakers in the previous request, no additional request is needed. But if speakers are removed from it, we need a separate endpoint to fetch compact session data by an array of session IDs.",
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": null,
+   "labels": [],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Vladyslav Dziubenko",
+     "created": "2026-09-14T14:24:39.795+0100",
+     "body": "QA requirement + documentation review before testing starts.\n\n<custom data-type=\"mention\" data-id=\"id-0\">@Oleksii Tur</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Oleksandr Zakablukov</custom> <custom data-type=\"mention\" data-id=\"id-2\">@Evgen Polivach</custom> <custom data-type=\"mention\" data-id=\"id-3\">@Konstantin Shein</custom>\n\n### What exists\n\nThe full contract for both endpoints is published in two comments on EP-57262 (request fields, validation, 400/401/403/500, response tables with types and nullability, JSON examples, backward-compatibility notes). That is testable material.\n\nWhere it lives is the problem: EP-57262 is COMPLETE, so the contract sits in comments of a closed sub-task; neither this story nor EP-57263 links to it; there is no Confluence page for it (a CQL search across Confluence for `sessionsCalendarView` returns one unrelated personal page); and the sub-task was closed without an FE reply to the request to review the contract.\n\nThis story's own Description is three pasted curl commands — no acceptance criteria, no error scenarios, no boundaries. The AC custom fields still hold the \"1 ... 2 ... 3 ...\" placeholders.\n\n---\n\n### Questions for backend <custom data-type=\"mention\" data-id=\"id-4\">@Oleksii Tur</custom>\n\n1. Is Swagger updated for `sessionsDates` and for the new `sessionsCalendarView` body? On EP-54343 Swagger was declared the source of truth and linked in the ticket; nothing similar here.\n2. Is the branch already merged to alpha, or should testing run on a branch env? The PR is still open.\n3. Sort order of the calendar response — still start ASC then title ASC as documented on EP-54343? The new contract does not mention ordering, and multi-day grid rendering depends on it.\n4. Window size ceiling: is there a maximum number of days, and does the EP-54343 rule still hold (no hard cap, warning logged above 500 sessions)? The window is now arbitrary in length and returned whole.\n5. Sessions with a missing or zero start are skipped in the day list. What does the calendar grid do with such a session?\n6. `time` in the day list is noon in the **server** timezone while `date` is bucketed in the **event** timezone. What happens when the two differ?\n7. The two endpoints filter differently — the calendar view drops unrecognised keys before validation, the day list passes the body to the shared sessions filter DTO and drops only day/range. Can the per-day counts disagree with what the grid actually returns for the same filters?\n8. Do the per-day counts respect access rules — hidden sessions, or sessions limited to certain ticket types?\n9. Which endpoint does the mobile app call for the session calendar? Not verified on our side. If it is this one, view and day are gone and the bounds are now required — what happens to app versions already in the stores?\n\n### Questions for frontend <custom data-type=\"mention\" data-id=\"id-5\">@Oleksandr Zakablukov</custom>\n\n10. Please confirm the contract published on EP-57262 — the sub-task was closed without a reply.\n11. Empty days are hidden (spec AC3), so the three visible columns can be non-contiguous (e.g. 5, 7 and 9 October). dayFrom/dayTo is a contiguous range, so the empty days in between are fetched too. Acceptable, or does the contract need an explicit list of days?\n12. Do speakers stay in the calendar response? Item 3 of this ticket (compact sessions-by-IDs) is conditional on that and was not implemented.\n\n### Ticket text and documentation\n\n13. EP-57263 AC still says \"accept an array of days\" and \"add the compact sessions-by-IDs endpoint\" — the implementation is a range and the third endpoint was not built. Who aligns the text with the contract?\n14. EP-57264 (QA) AC says the same: \"multiple-day payloads\" and \"the optional compact sessions-by-IDs flow\". Needs rewriting to the range, and the non-existent flow removed.\n15. Should the contract move into this story's Description or onto a Confluence page? Right now it is only reachable through comments on a closed sub-task.\n16. The 12 existing API test cases from EP-55597 were written against view: day|week; TC-REQ-2.2 and TC-REQ-5.2 call view \"week\" directly and cannot pass once view is removed. Rewrite, retire, or treat as a regression?\n\nAlso worth adding: links from this story to the product spec and to epic EP-57118 — today it only carries the \"split from EP-57014\" link.\n\nSame failure mode as EP-55558 (scheduled vs shipped isScheduled), where the ticket text and the shipped contract stayed contradictory through release. Cheaper to fix the text now."
+    },
+    {
+     "author": "Oleksii Tur",
+     "created": "2026-09-16T09:08:40.832+0100",
+     "body": "can be tested on alpha expected contracts in comments of task 57262"
+    },
+    {
+     "author": "Konstantin Shein",
+     "created": "2026-09-16T09:22:15.983+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksii Tur</custom> , <custom data-type=\"mention\" data-id=\"id-1\">@Oleksandr Zakablukov</custom> please review and reply the questions above"
+    },
+    {
+     "author": "Oleksii Tur",
+     "created": "2026-09-16T10:25:11.918+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Vladyslav Dziubenko</custom> every point checked against the code on the branch, against the merged state, and against running alpha. Answers first, then what you found that is real.\n\n### Three statements no longer hold\n\n* **\"The PR is still open.\"** PR 5089 (<custom data-type=\"smartlink\" data-id=\"id-1\">https://expoplatform.atlassian.net/browse/EP-57107#icft=EP-57107</custom> → alpha) was merged 15 Sep 14:54 as `b3c95e857ec7`. Your comment is from 14 Sep, when it was open. Alpha carries it: all 40 changed files md5-match the committed blob on the **active slot** and on the **cron base**. Test on alpha.\n* **\"The sub-task was closed without an FE reply.\"** Oleksandr Zakablukov replied on <custom data-type=\"smartlink\" data-id=\"id-2\">https://expoplatform.atlassian.net/browse/EP-57262#icft=EP-57262</custom> on 14 Sep at **11:32**, three hours before your comment. He read both contracts, raised three questions, and all three are answered in that thread (12:13, 12:25, 13:13). One of them caught a regression we had shipped — the new per-field validation rejected the pipe-joined id string (`\"1|2\"` → 400) that the platform has always accepted; fixed in `b18773369a5`. He also closed the speakers question himself: speakers stay, so the compact sessions-by-IDs endpoint is not needed. That is why it was not built.\n* **\"Neither this story nor EP-57263 links to it.\"** <custom data-type=\"smartlink\" data-id=\"id-3\">https://expoplatform.atlassian.net/browse/EP-57262#icft=EP-57262</custom> and <custom data-type=\"smartlink\" data-id=\"id-4\">https://expoplatform.atlassian.net/browse/EP-57263#icft=EP-57263</custom> are **sub-tasks of this story**. They sit in the Sub-tasks panel of <custom data-type=\"smartlink\" data-id=\"id-5\">https://expoplatform.atlassian.net/browse/EP-57107#icft=EP-57107</custom>, not in another ticket that needs a link. Your Confluence point stands separately — there is no page.\n\n### Where Swagger is, and why it could not be checked from the repo\n\nThe spec is never committed: `frontend/public/apidocs/v1/openapi.json` is gitignored and generated on the host. It is also served from the **frontend** host, not the backend one:\n\n| **URL** | **Has these endpoints** |\n| --- | --- |\n| `https://alpha2.expoplatform.net/apidocs/v1/openapi.json` | yes |\n| `https://api-alpha2.expoplatform.net/apidocs/v1/openapi.json` | no — and never will; these are frontend API v1 routes |\n\nVerified live on alpha: 481 paths, both endpoints present, `required: [dayFrom, dayTo]`, `view` and `day` gone, response schemas present including `speakers` and `isScheduled`.\n\n### The nine questions\n\n| **#** | **Question** | **Answer** |\n| --- | --- | --- |\n| 1 | Is Swagger updated? | Yes, and regenerated on alpha. Five mismatches remain — listed below. |\n| 2 | Merged, or branch env? | Merged to alpha 15 Sep, fully deployed. Test on alpha. |\n| 3 | Sort order still start ASC then title ASC? | In SQL: `start ASC, search_name ASC, id ASC` — unchanged from <custom data-type=\"smartlink\" data-id=\"id-6\">https://expoplatform.atlassian.net/browse/EP-54343#icft=EP-54343</custom>. **One exception the old contract did not have to state:** when `q` is sent on an event with Elasticsearch sync on, relevance ordering is prepended. So the documented order holds for every request without a title search. |\n| 4 | Window size ceiling? | **31 days**, hard — a wider window is a 400 naming `dayTo`. No cap on the number of sessions (`withoutLimit()`); the >500-session alert is intact. Note the direction: on `bug_fix` the widest window was **7 days** (`view: week`) and no request shape could exceed it. The branch raised the reach \\~4.4x rather than restricting something previously free. |\n| 5 | What does the grid do with a missing/zero start? | Nothing to do — the calendar does not bucket by day at all. It returns a flat `list` plus the window's `from`/`to`; the grid layout is the client's. A row with a NULL or 0 start fails the SQL `BETWEEN` window predicate, so it is neither drawn nor an error. |\n| 6 | `time` in server tz vs `date` in event tz? | **You are right.** `date` is bucketed in Postgres in the event timezone; `time` is `Carbon::parse($date.' 12:00:00')` with no timezone argument, so it resolves in the server zone. And it is wider than you wrote: the same screen carries two conventions — `time` is server-zone noon while the grid's `from`/`to` are true event-zone instants. |\n| 7 | Can the per-day counts disagree with the grid? | No, and the premise does not hold at HEAD. Both endpoints drop unrecognised keys through the **same** inherited `keepKnownKeys()` allow-list and the same validator, then the same filter map. The only key-level difference is `dayFrom`/`dayTo`, and those never enter the filter array — they become the window. The picker is handed `$requestData->toArray()`, never the raw body. |\n| 8 | Do the counts respect access rules? | Yes, structurally. The count is not a second query: `fetchDatesWithCounts()` runs the same preparation as the listing, then **clones the reader's own filtered builder** and swaps only the SELECT list. Every predicate — `active`, `status = APPROVED`, `hidden`, the visibility disjunction, ticket-category restrictions — comes from one shared filter map. No predicate can be applied to one path and not the other. |\n| 9 | Which endpoint does the mobile app call? | Not these, as far as this repository can tell. A repo-wide grep for both names returns only the frontend controller, `ApiSecurity.php` and three api-front tests. The mobile session listing that does exist is `GET /api/session/list` in `backend/`, and this branch touches no file under `backend/` at all. I cannot settle it beyond that — the native client source is not here. Asked Oleksandr Parashchuk in a comment below: our reading is that the app's session calendar is the same frontend in a web view, in which case the client arrives with the frontend deploy rather than baked into a store build, and the old-version worry does not arise. On BC: an old body of `{\"view\":\"week\",\"day\":\"14-11-2025\"`} now answers 400 with two errors, `dayFrom is required` and `dayTo is required` (verified live on alpha). |\n\n### What you found that is real — eight defects, all mine\n\n| **#** | **Defect** | **Where** |\n| --- | --- | --- |\n| 1 | **Response envelope is undocumented.** Both 200s point straight at the payload schema, so the spec promises a bare `{from, to, total, list`}. The endpoints actually emit the BaseResponse envelope `{code, errors, lang, data`} — every other frontend v1 endpoint documents it with `allOf`. A generated client reads the wrong level. | both @OA blocks |\n| 2 | **The 31-day cap was missing from Swagger.** The contract comment on <custom data-type=\"smartlink\" data-id=\"id-7\">https://expoplatform.atlassian.net/browse/EP-57262#icft=EP-57262</custom> does state it (\"at most 31 days, both bounds included\"), so the spec was the one place it was absent — and the place you would read first. Now stated on the endpoint, on the 400, and on `dayTo`. | swagger calendarView |\n| 3 | `custom_id`**/**`except_id` **are promised and silently dropped.** The sessionsDates description says they are honoured; the request DTO's allow-list does not carry them. | swagger sessionsDates |\n| 4 | **The 500s are documented backwards** between the two blocks — sessionsDates documents one it cannot throw, calendarView throws one it does not document. The calendar RequestBody is also not marked `required=true` although an empty body 400s. | both blocks |\n| 5 | `start`**/**`end` **are** `nullable: true` **in the spec**, while the contract I gave FE says both are always numbers and the nullable should be dropped. The spec and the contract disagree. | `SearchSessionCalendarItemResource` |\n| 6 | **A test docblock states the opposite of the behaviour** — \"the day list is built before any per-session visibility is applied\". Visibility is applied before the aggregate. Wrong comment, right code. | `SessionsDatesCest.php:214-217` |\n| 7 | **Visibility parity is not pinned by any test** on either endpoint — the property from answer 8 above holds by construction, and nothing would catch it breaking. | both Cests |\n| 8 | **An id list accepts a JSON object.** `selectedCat: {\"a\":1163`} is read as `[1163]` — the only shape check sits inside the string-splitting branch, which arrays never enter. Inherited from `AnyArray`, so it affects id lists on **all** search endpoints, not just these two. | `PositiveIntegersList.php:42` |\n\nFixing 1-7 now; 8 is wider than this ticket and gets its own.\n\n### Ticket text — right on all four\n\n* <custom data-type=\"smartlink\" data-id=\"id-8\">https://expoplatform.atlassian.net/browse/EP-57263#icft=EP-57263</custom> AC says \"accept an array of days\" and \"add the compact sessions-by-IDs endpoint\". The shipped shape is a day **range**, and the third endpoint was dropped on FE's own call. I will align it.\n* <custom data-type=\"smartlink\" data-id=\"id-9\">https://expoplatform.atlassian.net/browse/EP-57264#icft=EP-57264</custom> AC repeats both. Same fix.\n* This story's AC fields still hold the `1 ...2 ...3 ...` placeholders. Mine to fill.\n* The contract belongs in this story's Description rather than in comments on a sub-task. I will move it and link the epic.\n\nOn the <custom data-type=\"smartlink\" data-id=\"id-10\">https://expoplatform.atlassian.net/browse/EP-55597#icft=EP-55597</custom> test cases: TC-REQ-2.1, 2.2, 5.1 and 5.2 are written against the day/week views and cannot pass once `view` is gone. They are not a regression — they pin a contract that was deliberately replaced. Rewrite them against `dayFrom`/`dayTo`; the rest of the twelve are unaffected.\n\n_Edited: item 2 first claimed the 31-day cap was absent from the contract comments as well. It is in them; only Swagger was missing it. My search for it was faulty, not the contract._\n\n---\n\n_Commented · a.tur@expoplatform.com_  \n`claude-opus-5[1m]`"
+    },
+    {
+     "author": "Oleksii Tur",
+     "created": "2026-09-16T11:02:52.564+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Parashchuk</custom> one question on the mobile side of this story — the only one from the QA review above I cannot answer from the code.\n\n### What was asked\n\n`sessionsCalendarView` changed shape on this story: `view` and `day` are gone, and `dayFrom`/`dayTo` are now required. QA asked which endpoint the mobile app calls for the session calendar, and what happens to app versions already published in the stores.\n\n### What the repository says\n\n* Neither `sessionsCalendarView` nor `sessionsDates` is referenced anywhere outside the frontend API v1 controller and its api-front tests — a repo-wide grep returns five files, all frontend.\n* The mobile session listing that does exist here is `GET /api/session/list` in `backend/`, and this branch touches no file under `backend/` at all.\n* So nothing built for the native API was changed. What I cannot see from here is the web side of the app.\n\n### The question\n\nOur reading is that the mobile session calendar is **the same frontend in a web view**, not a native screen. If that is right, it calls these two endpoints — but the client is served from our frontend at run time rather than compiled into a store build, so a shipped app version picks up the new request shape together with the frontend deploy and there is no old-version problem to solve.\n\nCan you confirm that? Specifically:\n\n* Is the session calendar in the app a web view onto our frontend, or a native screen with its own API calls?\n* If it is a web view — is the frontend it loads always the deployed one, or is any of it bundled into the app?\n* If any native screen does call `sessionsCalendarView` directly, it needs `dayFrom`/`dayTo`: an old body of `{\"view\":\"week\",\"day\":\"14-11-2025\"`} now answers 400 naming both missing bounds.\n\nThe full contract is in the Description of this story.\n\n---\n\n_Commented · a.tur@expoplatform.com_  \n`claude-opus-5[1m]`"
+    },
+    {
+     "author": "Oleksii Tur",
+     "created": "2026-09-16T11:15:54.536+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Zakablukov</custom> the mobile question above is probably yours rather than Oleksandr Parashchuk's — it is about which frontend the app renders, not about a native client.\n\nShort version: QA asked what happens to app versions already in the stores now that `view` and `day` are gone and `dayFrom`/`dayTo` are required. Our reading is that the session calendar in the app is **the same frontend in a web view**, served at run time rather than bundled into a store build — in which case it picks up the new request shape with the frontend deploy and there is no old-version problem at all.\n\nIf that is right, just say so and the question is closed. If any part of the mobile view is pinned to a bundled frontend build, that is the part that would still send the old body and get a 400 naming both bounds.\n\n---\n\n_Commented · a.tur@expoplatform.com_  \n`claude-opus-5[1m]`"
+    },
+    {
+     "author": "Roman Kubashevych",
+     "created": "2026-09-16T12:34:30.020+0100",
+     "body": "QA review before testing — seven open items. Test cases are published: https://qa-service.expoplatform.com/expoplatform/test-suites/visitor/sessions/session-calendar-api (75 requirements / 154 cases), tracked on EP-57391.\n\nRead-only checks on alpha found the endpoints behave as the Description says — the 31-day cap rejects a 32-day window on `dayTo`, a reversed pair straightens, `\"0\"` and `31-02-2026` are both refused, mixed delimiters answer 400 naming `selectedCat.1`, `day` and `range` are dropped by sessionsDates, and an old `{\"view\":\"week\",\"day\":\"14-11-2025\"}` body answers 400 on both bounds. What follows is what did not match, and what nobody has answered yet.\n\n**The error body is not the shape the contract shows.** The Description documents `{\"errors\": {\"dayFrom\": \"dayFrom is required\"}}`. The endpoint returns `{\"errors\": [{\"message\": \"dayFrom is required\", \"field\": \"dayFrom\"}]}`, and a malformed date reads `Only date strings in format \"d-m-Y\" are available. Field: dayFrom` rather than the documented wording. The behaviour is right — one message per field, both bad bounds in one round trip. Which of the two do we correct?\n\n**Five spec gaps are still served.** As of 13:18 today, `alpha2.expoplatform.net/apidocs/v1/openapi.json` still shows all of these: no response envelope on either 200, `start`/`end` typed nullable, no mention of the 31-day cap, the 500s the wrong way round with the calendar RequestBody not marked required, and `custom_id`/`except_id` promised on sessionsDates but absent from every declared property. Are the fixes queued behind a deploy, or not written yet?\n\n**Does sessionsDates answer 500?** The Description lists 400/401/403. The contract comment on EP-57262 and the served spec both also carry 500 \"The dates query failed\".\n\n**Sort order with a title search.** The documented order is `start ASC, search_name ASC, id ASC`, and relevance ordering is prepended when `q` is sent on an Elasticsearch-synced event. Should the documented order hold for every request, or is the exception the contract?\n\n**The two timezone conventions.** `time` is noon in the server zone, `date` and the calendar's `from`/`to` are event-zone. On any event whose timezone is not the server's, a client comparing a picker day against the window lands on the wrong day. Keeping `time` as-is is deliberate — should the mismatch be documented for clients?\n\n**The test stand is gone.** `ep57107alphaalpha.expoplatform.net` does not answer — two attempts, 21 s each. The EP-57286 fixture is what the performance numbers were measured on, so nothing about the 0.45 speaker ratio or the 2 000-session shape can be re-checked, and the old stand topped out at 800 sessions in any case. Who provisions a replacement?\n\n**Mobile is still unanswered.** The question from this morning about whether the app's session calendar is a web view has no reply yet, so the breaking change has no confirmed consumer list.\n\nOne more for the record: EP-57367 is live on both of these endpoints — `selectedCat: {\"a\":1163}` answers 200 and is read as `[1163]`. It is out of scope here and recorded as a known defect, so a green run on this story should not be read as the id-list validation being sound.\n\nThe first four block a test case from asserting either side, so a ruling on those unblocks the code phase."
+    },
+    {
+     "author": "Oleksandr Zakablukov",
+     "created": "2026-09-16T13:12:38.324+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Konstantin Shein</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Evgen Polivach</custom> <custom data-type=\"mention\" data-id=\"id-2\">@Oleksii Tur</custom> The related frontend task will be on rc only on September 23. All pushes to alpha, rc, and prod must occur only after agreement with the frontend developer, because the endpoint changed and the frontend was not adapted to those changes. Currently session calendar view is broken on alpha. "
+    },
+    {
+     "author": "Oleksandr Zakablukov",
+     "created": "2026-09-16T15:42:06.628+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksii Tur</custom> Mobile team does not use this endpoint."
+    },
+    {
+     "author": "Oleksii Tur",
+     "created": "2026-09-16T15:47:38.417+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Zakablukov</custom> it is already on alpha((("
+    },
+    {
+     "author": "Oleksandr Parashchuk",
+     "created": "2026-09-16T16:25:17.228+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksii Tur</custom> Perhaps <custom data-type=\"mention\" data-id=\"id-1\">@Kavinder Rawal</custom> or <custom data-type=\"mention\" data-id=\"id-2\">@Taimoor Zulfiqar</custom> can help you with this one"
+    },
+    {
+     "author": "Oleksii Tur",
+     "created": "2026-09-16T19:12:37.155+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Vladyslav Dziubenko</custom> rulings on all seven, and the contract in the Description is updated where it was wrong. Taking the four blockers first.\n\n### 1. The error body — the contract was wrong, not the endpoint\n\nYou are right, and it is worse than a shape mismatch: the message text in that example was invented. `errors` is an array of `{message, field`} objects, and the wording for a bad date is the validator's own. The Description now carries the real shapes, captured on alpha rather than written from memory:\n\n| **Case**  | **message**  | **field**  |\n| --- | --- | --- |\n| Bound absent, `null` or empty  | `dayFrom is required`  | `dayFrom`  |\n| Wrong format, non-existent day, or the string `\"0\"`  | `Only date strings in format \"d-m-Y\" are available. Field: dayFrom`  | `dayFrom`  |\n| Window wider than 31 days  | `dayFrom and dayTo must name a window of at most 31 days`  | `dayTo`  |\n| Id list with a non-numeric token  | `Only integers greater than 0 are available. Field: selectedCat.1`  | `selectedCat`  |\n\nThe endpoint keeps its shape. It is the platform envelope every frontend v1 endpoint answers with, and changing it to match one document would break every client that reads `errors[].field`. Note the last row for your cases: the offending token's position is inside `message` (`selectedCat.1`) while `field` carries the plain name.\n\n### 2. The five spec gaps — written, not deployed\n\nAll five are fixed and sitting in PR 5124, opened this morning against alpha, not yet merged: the response envelope on both 200s, the 31-day cap, `custom_id`/`except_id` removed from the sessionsDates description, the 500s put the right way round with the calendar body marked required, and `start`/`end` no longer typed nullable. What you read at 13:18 is the spec generated from the merged commit — it will change when 5124 lands. Nothing there is unwritten.\n\n### 3. sessionsDates does not answer 500\n\nIt cannot. When the search resolves to something that is not a sessions reader, the service reports the mistake to us and returns an **empty day list** — a picker with no days keeps the calendar usable, a 500 does not. The Description is the current contract and lists 400/401/403; the comment on <custom data-type=\"smartlink\" data-id=\"id-1\">https://expoplatform.atlassian.net/browse/EP-57262#icft=EP-57262</custom> and the spec you read are both snapshots taken before that was corrected, and the spec catches up with 5124.\n\nRead an empty `dates` array as \"no day holds a session under these filters\" — or, rarely, \"we got it wrong and are looking at it\". Never as an error you can act on.\n\n### 4. Sort order — the exception is the contract\n\nDocumented now, in a new **Ordering** section. The ruling: `start ASC`, title, `id` holds whenever `q` is absent, empty, whitespace-only or the string `\"0\"` — all four read as no query at all — and whenever the event has Elasticsearch off. A title search on an Elasticsearch event puts relevance in front, and because the relevance term is distinct per row the three documented keys never get to break a tie: the window comes back in relevance order.\n\nMaking the documented order hold for every request would mean turning relevance off for title search, i.e. breaking the search to make the grid predictable. So the exception is the contract, and the client rule is in the Description: **if the grid needs chronological order, sort client-side whenever you send** `q` — the response does not tell you which of the two orders you got.\n\n`sessionsDates` is unaffected: always ascending by date, whatever `q` is. `q` changes the counts there, not the order.\n\nFor your cases, one thing worth knowing while writing them: a `q` Elasticsearch cannot serve is not reported. Depending on the failure you get either the whole window with `q` ignored, or an empty one indistinguishable from an honest \"nothing matched\", and a term matching more than 5 000 sessions event-wide is truncated before the day window is applied. That is a defect, not a contract — I am filing it separately, the same way as <custom data-type=\"smartlink\" data-id=\"id-2\">https://expoplatform.atlassian.net/browse/EP-57367#icft=EP-57367</custom>. Until it is fixed, a `q` case that asserts \"these sessions and no others\" can pass for the wrong reason.\n\n### 5. The two timezone conventions — documented, not changed\n\nDocumented in a new section of the Description, with an explicit do-not list. The short of it:\n\n* `date` is an event-zone day label; `time` is noon of that label in the **API server's** zone; `from`/`to`/`start`/`end` are real instants in the event zone. `time` is the only value not on that scale.\n* `time` stays as it is. It is the same value `/search/sessions` has always emitted, clients store it as the day's identity, and changing it would break them for a cosmetic gain.\n* What a client must not do: feed `time` into `dayFrom`/`dayTo` (400 — those take `d-m-Y`), compare it against `from`/`to`, or build a day's bounds as `time ± 12h`. The last one is wrong by the event-to-server offset for **any** non-zero difference: on a UTC server with a Tokyo event the naive window runs 09:00 local to 09:00 next day, losing nine hours of the day and swallowing nine of the next.\n* Use `date`, reformatted `Y-m-d` → `d-m-Y`, to request a window; take the event zone from `POST /api/v1/exhibition` if you need to bucket locally.\n\nOne thing I could not settle and the contract says so rather than guessing: the server timezone is not fixed anywhere in our codebase — no `date.timezone`, no `date_default_timezone_set` on this path. It is whatever the API hosts' PHP configuration leaves in place. If you want a concrete value for the test cases it has to be read off the hosts.\n\n### 6. The stand — gone, and it was not the right one anyway\n\n`ep57107alphaalpha` does not answer for me either — worth one detail: its DNS record is still there and still points at `3.254.116.217`, so this is a host that stopped answering rather than an environment that was torn down cleanly. Worth separating two things it was used for: the <custom data-type=\"smartlink\" data-id=\"id-3\">https://expoplatform.atlassian.net/browse/EP-57286#icft=EP-57286</custom> numbers, and any functional re-run.\n\nFor functional testing alpha is enough, and that is where the code is. For performance it never was: the stand topped out at 800 sessions, and alpha itself holds at most 176 visible API sessions on any event I could find — the production shape this story is about (3 472 sessions on the heaviest event, across a whole week) does not exist on either. So a replacement stand is worth provisioning only if we want the 2 000-session fixture back; re-running the 0.45 speaker ratio against 800 rows would not tell us much. I will raise the provisioning request — it is not something this story can do for itself.\n\n### 7. Mobile — answered, and the answer is no\n\nConfirmed with the mobile side since this morning: the app does not call either endpoint. That closes the breaking-change question — the consumer list is the frontend, and nothing else.\n\n### On <custom data-type=\"smartlink\" data-id=\"id-4\">https://expoplatform.atlassian.net/browse/EP-57367#icft=EP-57367</custom>\n\nAgreed, and thank you for stating it that way. It is live on both endpoints, it is out of scope here, and a green run on this story says nothing about the id-list validation being sound. It is filed against the whole search surface for exactly that reason.\n\n---\n\n_Commented · a.tur@expoplatform.com_  \n`claude-opus-5[1m]`"
+    },
+    {
+     "author": "Oleksii Tur",
+     "created": "2026-09-17T07:23:11.536+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Roman Kubashevych</custom> a correction to my long comment above, on one section — and sorry for the mention on it, which went to <custom data-type=\"mention\" data-id=\"id-1\">@Vladyslav Dziubenko</custom> rather than to you.\n\n### Item 2 was wrong, but not the way I first said\n\nIt said the five spec fixes were \"sitting in PR 5124 ... not yet merged\". Merged it was — at 11:47, 47 minutes before your review went up; I wrote that from the state I remembered when the PR was opened instead of from the PR.\n\nWhat I do not get to conclude from that is that you were looking at the new spec. A merge is not a deploy. At 13:18 you read the **deployed** document and it was still the old one, exactly as you reported — that observation was right and my \"it will change when 5124 lands\" was wrong only about the reason. Alpha picked the new one up some time between your read and this morning.\n\nChecked live at 07:23 today against `https://alpha2.expoplatform.net/apidocs/v1/openapi.json` — all five are served now:\n\n| **Fix**  | **What alpha's published spec says today**  |\n| --- | --- |\n| Envelope on both 200s  | `allOf: [BaseResponse, {data}]` on `sessionsCalendarView` and on `sessionsDates`  |\n| 31-day cap  | stated on the endpoint — \"may span at most 31 days; a wider one answers 400 naming `dayTo`\"  |\n| `custom_id` / `except_id`  | no longer mentioned anywhere in the sessionsDates description  |\n| The two 500s  | `sessionsDates` declares 200/400/401/403 and no 500; the calendar declares the one it does throw  |\n| `start` / `end`  | neither typed nullable; each description names what the promise rests on  |\n\n### What the correction does not change\n\n5124 carried three files — two of them `@OA` annotations, one an api-front test. No endpoint behaviour moved. The runtime your read-only checks exercised is the runtime the Description describes; what changed since you looked is the document alone.\n\nThe rulings in the rest of that comment stand as written.\n\n_Edited: this comment first said the spec you read at 13:18 already carried the five fixes. It did not — the deploy trailed the merge, and your reading was correct. Corrected above._\n\n---\n\n_Commented · a.tur@expoplatform.com_  \n`claude-opus-5[1m]`"
+    },
+    {
+     "author": "Roman Kubashevych",
+     "created": "2026-09-17T08:13:59.783+0100",
+     "body": "## ⚠ QA complete — no failures found, with gaps\n\nQA has finished its round on this story. **154 test cases, no failure at any stage** — code review, API testing and the walk round all came back clean against PR 5089. No bug is filed against this implementation.\n\nTwo things this does **not** claim:\n\n* **15 cases were never executed** — 4 performance (the EP-57286 stand `ep57107alphaalpha` is unreachable), 3 planner, 3 timezone (need an event ≥12h from UTC), 2 null-start, 1 ES-sync, 2 others.\n* **Nothing is human-verified.** Every case was executed by the QA agent. No case in the suite carries a human-confirmed verdict.\n\nFour documentation corrections are owed (none is a product defect) — the most substantive is **JD-15 in this ticket's Description**: the id-list delimiter rule is written positionally, but the build applies a fixed `,` `;` `|` precedence, matching the pre-existing search parser. The code is right; the Description needs the fix.\n\n**20 open items are carried forward.** The one worth a decision before release: there is still **no confirmed consumer inventory for this breaking change** — the mobile question raised on 16 Sep is unanswered.\n\nFull results, per-case verdicts and the open-items ledger: **EP-57391** · QA Service run `6c033a3b-158b-42a9-876b-077cccc52cbe`."
+    },
+    {
+     "author": "Oleksii Tur",
+     "created": "2026-09-17T09:04:46.281+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Roman Kubashevych</custom> JD-15 is fixed in the Description — you were right, and the wording was mine.\n\nIt said \"the first of `|`, `,` or `;` that occurs in the string is the separator\", which reads positionally. The parser tries `,`, then `;`, then `|` and splits on the first of those it finds anywhere in the value (`Requests.php:38-43`), so the precedence is the parser's, not the string's. My example happened to be one where the two readings agree, which is why it survived review.\n\nChecked on `cee2026-alpha2` before rewriting it, and the distinguishing case is the one worth adding to a test:\n\n| **Body**  | **Answer**  |\n| --- | --- |\n| {{\"selectedCat\": \"1,2 | 3\"}}  | 400 — `selectedCat.1`, the bad token is {{2 | 3}}  |\n| {{\"selectedCat\": \"1 | 2,3\"}}  | 400 — `selectedCat.0`, the bad token is {{1 | 2}}  |\n\nThe second one is the proof: a positional rule would have split on the earlier `|` and blamed token 1, not token 0. Both rows are now in the Description, with the rule restated.\n\nOn the other three: TC-REQ-20.1, TC-REQ-70.1 and TC-REQ-2.2 are case text rather than contract, so they are yours to amend — nothing on our side disagrees with your readings.\n\nTwo notes on the release decision, since the story is now on me:\n\n* **The consumer inventory is less open than the ledger says.** The mobile question was answered here on 16 Sep — \"Mobile team does not use this endpoint\". What is genuinely unresolved is the frontend: it reaches rc only on 23 Sep, and pushes to alpha/rc/prod were asked to be agreed with the frontend developer first. That is a release gate, not a QA gap.\n* **The four performance cases will stay blocked.** The <custom data-type=\"smartlink\" data-id=\"id-1\">https://expoplatform.atlassian.net/browse/EP-57286#icft=EP-57286</custom> stand is gone and nobody has been named to provision a replacement; the old one topped out at 800 sessions, below the shape those numbers were measured on.\n\n---\n\n_Commented · a.tur@expoplatform.com_  \n`claude-opus-5[1m]`"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-17T09:34:40.742+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Parashchuk</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Oleksii Tur</custom> Its a native screen. I’m not sure which API endpoint the app is using - <custom data-type=\"mention\" data-id=\"id-2\">@Oleksandr Yelfutin</custom> can you mention here which API endpoint we are using for session calendar view?"
+    },
+    {
+     "author": "Oleksandr Yelfutin",
+     "created": "2026-09-17T09:37:56.619+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom> the Android application doesn’t use any api (front or back-end) calls directly for sessions calendar view"
+    },
+    {
+     "author": "Oleksii Tur",
+     "created": "2026-09-17T10:02:56.592+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Taimoor Zulfiqar</custom> thank you — and that reopens something I closed too early. Thirty minutes ago I told <custom data-type=\"mention\" data-id=\"id-1\">@Roman Kubashevych</custom> the mobile question was settled on 16 Sep by \"Mobile team does not use this endpoint\". Your answer says the screen is native, so that reading was mine to correct, not his.\n\nWhere it stands now:\n\n| **Client**  | **Answer**  | **Source**  |\n| --- | --- | --- |\n| Android  | does not call any API directly for the session calendar view  | <custom data-type=\"mention\" data-id=\"id-2\">@Oleksandr Yelfutin</custom>, above  |\n| iOS  | **unanswered**  | —  |\n| Web frontend  | calls both endpoints; adapted version reaches rc on 23 Sep  | <custom data-type=\"smartlink\" data-id=\"id-3\">https://expoplatform.atlassian.net/browse/EP-57107#icft=EP-57107</custom>  |\n\nSo the one open question is iOS: does it reach `POST /api/v1/search/sessionsCalendarView` or `POST /api/v1/search/sessionsDates`, directly or through anything that forwards to them?\n\nWhy it matters for a shipped build: on this story `view` and `day` were removed and `dayFrom`/`dayTo` became required, so a client still sending the old body gets 400 naming both bounds rather than a degraded result. If iOS is in the same position as Android — no direct call — the breaking change has no store-build consumer and the inventory is closed. If it does call them, we need the version range before this is released.\n\n---\n\n_Commented · a.tur@expoplatform.com_  \n`claude-opus-5[1m]`"
+    },
+    {
+     "author": "Taimoor Zulfiqar",
+     "created": "2026-09-17T10:20:52.457+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksii Tur</custom>iOS also has native screen so I don't think it uses an API"
+    }
+   ],
+   "links": [
+    "Work item split: EP-57014",
+    "Relates: EP-57118",
+    "Relates: EP-57367",
+    "Relates: EP-57413",
+    "Relates: EP-57425",
+    "Relates: EP-57427"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 5,
+   "assignee": "Oleksii Tur",
+   "canon": "Done",
+   "due": "2026-09-22",
+   "origDays": 5,
+   "priority": "High",
+   "resolved": "2026-09-23",
+   "spentDays": 7.59,
+   "status": "Done",
+   "summary": "[API] Multi-day Session Calendar View Enhancements",
+   "team": "Exhibitor team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p09",
+  "key": "EP-57297",
+  "current": {
+   "area": "API",
+   "deps": "Multi-team EPIC, where Data Science, Exhibitors team and API Team are required to complete the work",
+   "driver": "26874",
+   "estimate": "Integrations Team: BE 3d / QA: 2d",
+   "feature": "accountsInteractions: sync_ts cursor field to fix incremental-sync data loss",
+   "impact": "Clients and 3rd parties that need to retrieve interactions and analytics from ExpoPlatform via the API. Currently a major blocker for IMEX.",
+   "key": "EP-57297",
+   "month": "2026-09",
+   "notes": "Rough estimations from the Integrations Team. Data Science and Exhibitors Team estimations are required",
+   "owner": "Pedro + Alex",
+   "priority": "Customer",
+   "rationale": "Rework on the Interactions and Accounts Interactions API, adding a Synchronization Timestamp in both ClickHouse and API to allow for delta filtering.",
+   "status": "In Progress",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why"
+  ],
+  "jira": {
+   "summary": "accountsInteractions: sync_ts cursor field to fix incremental-sync data loss",
+   "description": "Replaces event-time (`time`) windowed incremental sync on `/api/v2/statistics/accountsInteractions` with a processing-time cursor, to fix confirmed data loss (EP-56148, EP-55987, EP-53963 — \\~3.1% of exhibitor-favorite interactions missing from HTTP 200 responses, driven by IMEX escalation).\n\nFull architecture proposal: [https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2144600068/DS+Proposal+Architecture+sync_ts+cursor+field+for+accountsInteractions](https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2144600068/DS+Proposal+Architecture+sync_ts+cursor+field+for+accountsInteractions) \n\nParent request: REQ-2026-088 — [https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2116354050/REQ-2026-088+Add+synctimestamp+to+accountsInteractions+API+Endpoint](https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2116354050/REQ-2026-088+Add+synctimestamp+to+accountsInteractions+API+Endpoint) \n\n**Scope split:**\n\n* Data Science: ClickHouse schema change, ingestion lambda updates, stable row-id, latency measurement\n* Exhibitor:  Extend the Report (cursor param, safe watermark, dedup), plus separately investigating the `getTotal()` under-reporting hypothesis from EP-56148 (unrelated bug, tracked here for visibility only — not blocked by this epic)\n* Integration: API contract (validate and pass the new param)\n\nFlagged by Pedro Goncalves as high priority for Integration given IMEX relevance; bulk of implementation work sits with DS.",
+   "reportedBy": [
+    "IMEX"
+   ],
+   "pipedrive": "26874",
+   "labels": [],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Konstantin Shein",
+     "created": "2026-09-17T08:20:38.068+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Maksym Kysunko</custom> , please also do the same for sponsor Interactions "
+    },
+    {
+     "author": "Olena Dubnytska",
+     "created": "2026-09-17T13:04:11.259+0100",
+     "body": "ACCEPTANCE CRITERIA:  \n  \n1\\. 2 parameters (filters) added to the API endpoint so IMEX team can use this new field as a filter.\n\n* Synch time from\n* Synch time to  \n\n2. The response of the API has the new field Sync time, so IMEX team can review data  \n    \n  FYI <custom data-type=\"mention\" data-id=\"id-0\">@Pedro Goncalves</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Konstantin Shein</custom> \n\n"
+    },
+    {
+     "author": "Miljan Sucur",
+     "created": "2026-09-18T14:04:46.229+0100",
+     "body": "**Investigation report: accountsInteractions / sponsorInteractions — how it works today, the problems, and how we fix them**\n\nI went through the whole flow (code + real data on staging). Here's what's going on, in plain terms, with what each team needs to do.\n\n---\n\n## How it works today\n\nWhen someone favourites/views/scans something, the record travels: **our app → DynamoDB → a Data Science job copies it into ClickHouse → our API reads it back.**\n\nTwo things matter:\n\n* **Nothing removes repeats.** Every single click is saved as a separate record and returned as-is. The API gives back a raw list of events, not a clean summary.\n* **The Data Science copy step is a black box to us** — we can't see if it cleans anything. DS needs to tell us.\n\n## The problems we found\n\n**1. Duplicates are huge.** On staging, the same person doing the same thing on the same item is stored as **up to \\~175 records**. So \"one person viewed one sponsor\" can come back as \\~175 rows in the API. An older version of this feature used to merge these; the current one doesn't.\n\n**2. The favourite example.** If a user does favourite → unfavourite → favourite, the API returns **2 favourites**. It never tells you the simple answer everyone actually wants — \"is it favourited right now?\" (which is 1). **Nobody has defined what the right answer should be — that's a business call, not a technical one.**\n\n**3. Pagination is unreliable.** Asking for the same page twice can return different rows, and records can appear twice or get skipped between pages. This is the root of why the client sees missing/inconsistent data.\n\n**4. The record counts can be wrong** (the total shown, or the sync stopping early) — the issue already reported in EP-56148.\n\n---\n\n## How we propose to fix each\n\n**Duplicates — needs a business decision first.** There are three sensible options for what the API should return; we can build any of them:\n\n* **A)** every event (what it does now),\n* **B)** the current state — one clean row per person+item (e.g. \"currently favourited\"), which is what most reporting wants,\n* **C)** the same events but with exact duplicates removed.\n\n👉 **Product needs to choose (it can differ per action).** If a decision takes time, we can safely ship **C** now (removes only exact duplicates, loses nothing) and move to **B** later.\n\n**Pagination — mostly on us, but needs one thing from DS.** To make paging reliable (same page = same rows, nothing skipped or repeated), the data needs a **stable, unique order**. Today it doesn't have one. The clean fix is to order by the new sync-timestamp plus a **unique row ID** — and DS is already planning to add both. Once we have them, we switch the API to \"give me everything since the last record I saw\" instead of \"give me page 5\", which is reliable and also stops records being missed.\n\n👉 **We need DS to add the sync-timestamp and a unique row ID to the two data tables.**\n\n**Counts and filtering — we can fix now, no dependencies.** We can correct the wrong totals, stop the sync from ending early, and tidy the filters. This is pure back-end work we can start immediately.\n\n---\n\n## Who does what\n\n| What | Who | Status |\n| --- | --- | --- |\n| Decide what the API should return (events vs current state vs de-duplicated) | **Product** | 🔴 **Blocking — need this to define \"correct\"** |\n| Confirm whether the Data Science copy step cleans data; add the sync-timestamp + unique row ID to both tables | **Data Science** | 🔴 **Blocking the reliable-pagination fix** |\n| Fix wrong counts + tidy filters | **Back-end** | 🟢 Can start now |\n| Build the de-duplication once Product decides | **Back-end** | 🔴 Waiting on Product |\n| Build reliable pagination once DS adds the ID | **Back-end** | 🔴 Waiting on DS |\n| Create the sponsor version of the pagination ticket (only accounts exists today) | **PM** | 🟡 Small process step |\n\n**Already done:** the sync-timestamp is now returned by both reports (EP-57430, EP-57428). Useful groundwork, but on its own it does **not** fix duplicates or pagination.\n\n---\n\n## Bottom line\n\nJust adding a timestamp will not solve the client's need. The real fix is three parts: **Product** defines what the result should be, **DS** adds a unique row ID + the timestamp to the tables (and tells us what their copy step does), and **Back-end** builds the clean, reliably-paged result on top. We can start improving counts and filters right away in parallel.\n\n**To unblock us, we need answers to:**\n\n1. **(Product)** For each action (favourite, view, scan, message, meeting): should the API return every event, the current state, or one row per person+item?\n2. **(Product)** favourite → unfavourite → favourite: should the API show 2 (events) or 1 (current state)?\n3. **(DS)** Does your copy step remove duplicates, and can you add a unique row ID + the sync-timestamp to both tables?\n\n"
+    },
+    {
+     "author": "Miljan Sucur",
+     "created": "2026-09-18T14:26:58.376+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Konstantin Shein</custom> <custom data-type=\"emoji\" data-id=\"id-1\">:point_up:</custom> "
+    },
+    {
+     "author": "Konstantin Shein",
+     "created": "2026-09-22T12:44:53.976+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Maksym Kysunko</custom> , could you please review the research summary, do you agree on the findings and the next steps that are needed on DS side?"
+    },
+    {
+     "author": "Konstantin Shein",
+     "created": "2026-09-23T12:01:19.519+0100",
+     "body": "Next steps:\n\n* API\n\n    * add the `sync_ts` param (optional) <custom data-type=\"smartlink\" data-id=\"id-0\">https://expoplatform.atlassian.net/browse/EP-57304</custom>  <custom data-type=\"mention\" data-id=\"id-1\">@Yevhen Yachmenov</custom> \n    * add **hash** of all params (including the `row_id`), \n    \n* Report: \n\n    * in addition to `sync_ts`, add the `row_id`( row_id > $row_id, or less based on the order param filter), <custom data-type=\"mention\" data-id=\"id-2\">@Miljan Sucur</custom> \n    * later, not in this story, think about the option to introduce **hash**, on the report side, investigate the use cases, define the behaviour\n    \n* DS:\n\n    * in addition to `sync_ts` introduce the the unique ID (sequence) - need investigation <custom data-type=\"mention\" data-id=\"id-3\">@Maksym Kysunko</custom> <custom data-type=\"smartlink\" data-id=\"id-4\">https://expoplatform.atlassian.net/browse/EP-57709</custom> \n    \n\n‌\n\ncc <custom data-type=\"mention\" data-id=\"id-5\">@Pedro Goncalves</custom> "
+    }
+   ],
+   "links": [
+    "Relates: EP-57673",
+    "Polaris work item link: PBV11-489"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 4,
+   "assignee": null,
+   "canon": "In Progress",
+   "due": null,
+   "origDays": null,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 3.44,
+   "status": "In Progress",
+   "summary": "accountsInteractions: sync_ts cursor field to fix incremental-sync data loss",
+   "team": null,
+   "teamField": "customfield_10001",
+   "type": "Epic"
+  }
+ },
+ {
+  "id": "p10",
+  "key": "EP-57221",
+  "current": {
+   "area": "Global Search",
+   "deps": "Was done as hotfix in tight deadlines, testing continues after the release",
+   "driver": "26874",
+   "estimate": "4d",
+   "feature": "Global Search. Blocks, Labels, Order and Availability Control",
+   "impact": "Important for IMEX decision on whether they will use Global Search for their target event",
+   "key": "EP-57221",
+   "month": "2026-09",
+   "notes": "Labels edit for Search selector moved to Translation manager and TAMs were notified about that",
+   "owner": "Alex",
+   "priority": "Customer",
+   "rationale": "Critical for IMEX",
+   "status": "Done",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why"
+  ],
+  "jira": {
+   "summary": "Global Search. Blocks, Labels, Order and Availability Control",
+   "description": "[https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2137915393/Global+Search.+Blocks+Labels+Order+and+Availability+Control](https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2137915393/Global+Search.+Blocks+Labels+Order+and+Availability+Control) ",
+   "reportedBy": [
+    "IMEX"
+   ],
+   "pipedrive": "26874",
+   "labels": [
+    "mig-in-preparation"
+   ],
+   "parent": "EP-44808",
+   "comments": [
+    {
+     "author": "Konstantin Shein",
+     "created": "2026-09-11T13:35:54.566+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Parashchuk</custom>, the key point is that the “**Header** → Search” setting will control the entire Global Search **page**. (header should not control page)\n\n* The same header search selector labels will appear on all pages, not only Global Search.\n* Better to use separate translation keys for `nav menu items` and `results block labels` (distinct from header).\n* Should the “Header → Search” setting also control which elements in the search API response are visible?\n\n"
+    },
+    {
+     "author": "Ivan Tymoshenko",
+     "created": "2026-09-14T17:00:35.615+0100",
+     "body": "Global Search category selector is missing in non-English locales. The header config is stored per language (FE fetches /api/v1/exhibition with x-lang).  \n  \n<custom data-type=\"mention\" data-id=\"id-0\">@Konstantin Shein</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Volodymyr Borisenko</custom> Looks like we need to change the BE side for the Website builder as well, we need to save search selector for each language, not for EN only."
+    },
+    {
+     "author": "Ivan Tymoshenko",
+     "created": "2026-09-16T14:58:06.673+0100",
+     "body": "Front-end deployed to the alpha  \n  \nCC: <custom data-type=\"mention\" data-id=\"id-0\">@Konstantin Shein</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Vladyslav Dziubenko</custom> <custom data-type=\"mention\" data-id=\"id-2\">@Roman Kubashevych</custom> "
+    },
+    {
+     "author": "Ivan Tymoshenko",
+     "created": "2026-09-16T16:06:37.759+0100",
+     "body": "Also to the rc and production"
+    },
+    {
+     "author": "Roman Kubashevych",
+     "created": "2026-09-17T07:52:51.011+0100",
+     "body": "## QA questions from test-design grooming \n\nWorking through the acceptance criteria to build the test cases, six things need a decision before the results can be judged pass or fail, plus one wording correction. <custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Parashchuk</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Oleksii Tur</custom> \n\n### Questions\n\n* **Translation Manager scope.** The acceptance criteria ask for four label families to be editable — selector options, quick links, navigation menu items and results block labels. As delivered, the tab bar and the block titles still share one key family, and EP-57241 records the split as a follow-up on this story. Should this story be accepted as is, or does that count as unfinished?\n* **Does switching a category off hide it from the API too?** The search API still returns a category that is switched off in Website Builder — only the page hides it. Konstantin raised this on 11 Sep and it was not answered. Should switching a category off also remove it from the API response?\n* **Non-English locales.** The category selector missing in non-English locales was reported on 14 Sep, with a note that the backend needs to store the selector per language. Is that part of this story or a separate one?\n* **Translation service import.** Have the 12 new header-search label keys been imported into the translation service yet? Until they are, an organizer cannot edit those labels.\n* **Existing custom labels.** For events that renamed their selector options: should those names be carried into Translation Manager, or is every event resetting to the standard English wording the intended outcome?\n* **Buyers has an extra condition.** There is one more condition in the code than the availability table describes — an exhibitor can hide the Buyers section in their own profile settings, and that hides it in Global Search too. Is that intended, and should the table say so?\n\n### Contradiction\n\n* The Delegates table says a logged-in Exhibitor has no additional condition. The agreed answer of 15 Sep is that this means the exhibitor **owner** — an exhibitor's team members are participants and do follow the \"Hide attendee list\" rule. The table still says \"Exhibitor\" unqualified; worth correcting so it is unambiguous next time.\n\nTest cases are being written either way; these answers decide which results count as defects."
+    },
+    {
+     "author": "Oleksandr Parashchuk",
+     "created": "2026-09-17T08:35:46.047+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Roman Kubashevych</custom>   \n1.There was no direct requirement for separate edit. Universal one is fine for that case.  \n2\\. Ideally yes but its not a blocker and can be fixed after release  \n3\\. this is not fully clear please elaborate more and show an example  \n4\\. <custom data-type=\"mention\" data-id=\"id-1\">@Ivan Tymoshenko</custom> can you please help to answer this one?  \n5\\. TAMs (especially IMEX) were already warned that they need to reapply customisation of labels in Translation manager (in case if they use customisation for this selector).  \n6\\. Yes that is correct behaviour. This was missed in the brief, will add it.  \n7\\. Exhibitor always means exhibitor company. And team members means team members. Behaviour for both roles are described in the story."
+    },
+    {
+     "author": "Ivan Tymoshenko",
+     "created": "2026-09-17T09:57:09.285+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Roman Kubashevych</custom>  \n4\\. Yes — they were added to the TM for the English locale, so the client can edit or translate them."
+    },
+    {
+     "author": "Roman Kubashevych",
+     "created": "2026-09-17T16:51:00.092+0100",
+     "body": "✅ **QA passed** — automated review and a manual walk, both complete. No failures.\n\n59 checks: 48 settled by the automated round, 44 confirmed by hand, 0 failures, 6 that this environment could not test. Full results and the open questions are on the QA sub-task EP-57429; the per-case record is QA Service run `59e780a7-6def-4fad-99b3-9ffd20e1cfb0`.\n\nWorth knowing here:\n\n* The defect this story was raised for is **fixed and confirmed by hand** — a participant whose attendee list is shown now sees Delegates.\n* The disputed Delegates rule is settled by observation, both directions: the exhibitor **owner** is exempt from the attendee-list rule, a **team member** is not. The acceptance-criteria table's unqualified \"Logged-in Exhibitor\" is worth correcting to say so.\n* Category ordering drives all four surfaces, which settles the long-standing question about admin order versus a fixed order — in favour of the admin's.\n* The `availableModules` contract change works, and was verified on the rendered page, which is the only place it is visible. Anyone else still reading `index/exhibition` for a signed-in viewer will silently get the guest's shorter list.\n\nTwo questions remain open and are **not** blockers for this story: whether per-language storage of the search configuration belongs here or to a follow-up, and what the translation layer's cache TTL is — an organizer's label edit had not reached the site nearly two hours later."
+    }
+   ],
+   "links": [
+    "Problem/Incident: EP-57156",
+    "Problem/Incident: EP-57157",
+    "Problem/Incident: EP-57158",
+    "Problem/Incident: EP-56422",
+    "Polaris work item link: PBV11-488"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 3,
+   "assignee": "Ivan Tymoshenko",
+   "canon": "Done",
+   "due": "2026-09-17",
+   "origDays": 3,
+   "priority": "Urgent",
+   "resolved": "2026-09-17",
+   "spentDays": 4.72,
+   "status": "Done",
+   "summary": "Global Search. Blocks, Labels, Order and Availability Control",
+   "team": "Exhibitor team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p11",
+  "key": "EP-57511",
+  "current": {
+   "area": "Sessions",
+   "deps": "New reported issues on Global Search may delay delivery",
+   "driver": "81808",
+   "estimate": "16d",
+   "feature": "New filters for Sessions and Exhibitor events",
+   "impact": "DLG expects to have this feature",
+   "key": "EP-57511",
+   "month": "2026-10",
+   "notes": "Targeted release date is 14th Oct",
+   "owner": "Alex",
+   "priority": "Customer",
+   "rationale": "DLG commitment",
+   "status": "Planned",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why"
+  ],
+  "jira": {
+   "summary": "New filters for Sessions and Exhibitor events",
+   "description": null,
+   "reportedBy": [
+    "DLG",
+    "HINTE"
+   ],
+   "pipedrive": "81808, 44404",
+   "labels": [],
+   "parent": null,
+   "comments": [],
+   "links": [
+    "Polaris work item link: PBV11-479"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 15,
+   "assignee": null,
+   "canon": "Planned",
+   "due": null,
+   "origDays": null,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 2.15,
+   "status": "Open",
+   "summary": "New filters for Sessions and Exhibitor events",
+   "team": "Exhibitor team",
+   "teamField": "customfield_10001",
+   "type": "Epic"
+  }
+ },
+ {
+  "id": "p12",
+  "key": "EP-56915",
+  "current": {
+   "area": "Networking",
+   "deps": "Can be delayed till end of October because of overloaded pipeline",
+   "driver": "",
+   "estimate": "16d",
+   "feature": "Required (Important) Custom Category Filters in popup",
+   "impact": "",
+   "key": "EP-56915",
+   "month": "2026-10",
+   "notes": "",
+   "owner": "Alex",
+   "priority": "Customer",
+   "rationale": "",
+   "status": "Planned",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "rationale",
+   "impact",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Required (Important) Custom Category Filters in popup",
+   "description": "[https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters](https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters) ",
+   "reportedBy": [
+    "Vinexposium"
+   ],
+   "pipedrive": "5368",
+   "labels": [
+    "mig-in-preparation"
+   ],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Ajay Singh",
+     "created": "2026-09-11T14:38:23.038+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Parashchuk</custom> Is the story all prepared?  \n  \n<custom data-type=\"mention\" data-id=\"id-1\">@Shubham Goswami</custom> will share it with client as it is paid request will cc both of us and get confirmation on what we are building before build starts"
+    },
+    {
+     "author": "Konstantin Shein",
+     "created": "2026-09-22T13:34:44.379+0100",
+     "body": "**Estimates**: \n\n* FE: \n\n    * 2d, need to finalise the Category Search behaviour <custom data-type=\"mention\" data-id=\"id-0\">@Ivan Tymoshenko</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Oleksandr Parashchuk</custom> \n    * \\~2d, Adjust the UI for Admin Panel\n    \n* BE: \\~3-4d\n\n    * “Required” are mostly “Important” categories in a specific popup, **should not be validate** by BE\n    * Category in “My Filters” in admin will get this new parameter Important/Optional\n    * The existing APIs for “My Filters need to be adjusted to store and send data to FE\n    \n* QA: ??,  all existing bugs need to be registered before the implementation !\n\n"
+    },
+    {
+     "author": "Vladyslav Dziubenko",
+     "created": "2026-09-23T16:41:55.205+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Parashchuk</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Konstantin Shein</custom> hi! I reviewed the spec, the prototype and Figma before testing. A few questions below — the answers change the expected results in the test cases.\n\n**QA estimate:** \\~5 + 2 days. 5 days of testing (web only: admin panel + frontend, all 7 surfaces) + 2 days to create the test cases in QA Service, review them and implement the automated tests. Mobile app needs a separate task. Testing may grow by \\~0.5 day depending on the answer to the limits question (#5).\n\n#### Source of truth\n\n1. The EP-56916 description differs from the Confluence spec (5 surfaces instead of 7, ON/OFF toggle instead of Optional/Required, filter highlight instead of a red banner). Can we update it, or leave only the link to the Confluence page?\n\n#### Popup behaviour\n\n2. Pressing Save again with several empty required filters: the spec says it moves to the next one, but the prototype always returns to the first empty one, and in Figma Save looks disabled in the error state. Which is correct?\n3. When does the \"Required\" group appear during search? The spec AC says as soon as something is typed; the prototype and Iryna's comment show it only after Save.\n4. When all required filters are filled while the search is still typed: Iryna's note says filled filters get a checkmark and the whole group disappears together. In the prototype there are no checkmarks and the group and red banner stay until the next Save. The spec doesn't say. What should happen?\n\n#### Limits\n\n5. Which limit applies on each surface? The admin panel has 4 (product, brand, activity for exhibitor, activity for visitor). The prototype uses the visitor activity limit for user Interest and the exhibitor activity limit for exhibitor events; there is no separate limit for Interest, News or Groups. Please list the limit per surface in the spec.\n6. Is the raised limit only for the open popup, or is it saved? If the server checks the maximum, saving above the old limit may fail (see EP-57473).\n7. A user already has the limit filled from optional filters (e.g. 10 of 10), then one filter becomes required. The limit isn't raised (1 required < 10), all categories in the required filter are disabled, and the banner doesn't say a category has to be removed first. What should the user see?\n\n#### Category tree\n\n8. How is a required filter satisfied when it contains only parent categories and \"Selectable parent category\" is off? Nothing can be selected, so the popup can't be saved.\n9. The same category can be in two filters (the admin prototype allows it). Does selecting it satisfy both required filters?\n10. What if all categories of a required filter are removed from the event's local tree or hidden? The filter is empty but still required, so the popup can never be saved.\n\n#### Outside the popup\n\n11. The backend won't check this rule, so categories set from the admin panel, import, API or the mobile app will be saved without the required filters. Is that acceptable?\n12. Is the Required type copied when custom filters are cloned to another event (EP-48393)?\n13. Some events have the category limit enforced by custom JS (EP-56840). Such a script may block choosing above the old limit, so the raised limit won't work. Who checks these events before release?\n\nPlease reply with the question number. Thanks!"
+    },
+    {
+     "author": "Konstantin Shein",
+     "created": "2026-09-28T10:50:10.179+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Parashchuk</custom> , need to get the final approval from client"
+    },
+    {
+     "author": "Shubham Goswami",
+     "created": "2026-09-28T11:26:30.027+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Konstantin Shein</custom> Hi, I have sent the brief to the client, waiting for approval, I will let you know! thanks! "
+    }
+   ],
+   "links": [
+    "Polaris work item link: PBV11-426"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 0,
+   "assignee": "Oleksandr Parashchuk",
+   "canon": "In Progress",
+   "due": "2026-10-13",
+   "origDays": 0,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 4.34,
+   "status": "In Progress",
+   "summary": "Required (Important) Custom Category Filters in popup",
+   "team": "Exhibitor team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p13",
+  "key": "EP-57014",
+  "current": {
+   "area": "Sessions",
+   "deps": "",
+   "driver": "",
+   "estimate": "10d",
+   "feature": "Multi-day Session Calendar View Enhancements",
+   "impact": "Attendees: fast, frictionless browsing between days with clear visual cues showing which dates have scheduled content. Organizers: higher session discovery and agenda engagement across multi-day schedules.",
+   "key": "EP-57014",
+   "month": "2026-09",
+   "notes": "Deployed under parent EP-57118; FE by Oleksandr Zakablukov, QA by Olena Khromei.",
+   "owner": "Kavi",
+   "priority": "Customer",
+   "rationale": "Essential navigation improvement for multi-day events. Provides an intuitive horizontal date strip with active session day indicators and ensures attendee date selections persist across page navigations.",
+   "status": "In Progress",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "deps"
+  ],
+  "jira": {
+   "summary": "Multi-day Session Calendar View Enhancements",
+   "description": "‌\n\n[https://expoplatform.atlassian.net/wiki/x/EABCfg](https://expoplatform.atlassian.net/wiki/x/EABCfg)FE - 4 days Zakablukov\n\nBE - 3 days Tur (Exhibitor team) \n\nQA - 3 days Khromei ",
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "labels": [
+    "DoDUserStory"
+   ],
+   "parent": "EP-57118",
+   "comments": [
+    {
+     "author": "Oleksandr Zakablukov",
+     "created": "2026-09-07T16:12:21.689+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksii Tur</custom> <custom data-type=\"mention\" data-id=\"id-1\">@Evgen Polivach</custom>   \n  \nWe need a separate request for the list of days where sessions exist, actually it is a part of this request   \n\n```shell\ncurl --url '\nhttps://rcep56839rc.expoplatform.net\n/api/v1/search/sessions\n' \\\n  -H 'accept: */*' \\\n  -H 'accept-language: ru,en-US;q=0.9,en;q=0.8,de;q=0.7,ar;q=0.6,ru-RU;q=0.5,la;q=0.4,da;q=0.3,uk;q=0.2' \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -b 'cookie_consent=false; i18n=en; customCss=on; customJS=on; customMeta=on; PHPSESSID=luk5v7a5vn3lls0abdtin31fbb; _gcl_au=1.1.1618825522.1788790573; _ga=GA1.1.375689523.1788790574; CHECKED_PHPSESSID=luk5v7a5vn3lls0abdtin31fbb; _ga_WNJRM576QQ=GS2.1.s1788790573$o1$g1$t1788791995$j22$l0$h1331129975; _dd_s=logs=1&id=acc81d32-de21-42ae-bdba-1f8f7d6735c1&created=1788790572019&expire=1788792980935' \\\n  -H 'origin: https://rcep56839rc.expoplatform.net' \\\n  -H 'pragma: no-cache' \\\n  -H 'priority: u=1, i' \\\n  -H 'referer: \nhttps://rcep56839rc.expoplatform.net/sessions?page=sessions&day=1763161200\n' \\\n  -H 'sec-ch-ua: \"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Google Chrome\";v=\"152\"' \\\n  -H 'sec-ch-ua-mobile: ?0' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  -H 'sec-fetch-dest: empty' \\\n  -H 'sec-fetch-mode: cors' \\\n  -H 'sec-fetch-site: same-origin' \\\n  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/\n152.0.0.0\n Safari/537.36' \\\n  -H 'x-application: 3' \\\n  -H 'x-lang: en' \\\n  -H 'x-real-origin;' \\\n  -H 'x-real-refer: \nhttps://www.google.com/\n' \\\n  --data-raw '{\"page\":1,\"day\":\"14-11-2025\"}'\n```\n\n2. Then we need to change existed one. Instead of week view and selected day, frontend will send an array of days   \n\n    ```shell\n    curl --url '\n    https://rcep56839rc.expoplatform.net/api/v1/search/sessionsCalendarView\n    ' \\\n      -H 'accept: */*' \\\n      -H 'accept-language: ru,en-US;q=0.9,en;q=0.8,de;q=0.7,ar;q=0.6,ru-RU;q=0.5,la;q=0.4,da;q=0.3,uk;q=0.2' \\\n      -H 'cache-control: no-cache' \\\n      -H 'content-type: application/json' \\\n      -b 'cookie_consent=false; i18n=en; customCss=on; customJS=on; customMeta=on; PHPSESSID=luk5v7a5vn3lls0abdtin31fbb; _gcl_au=1.1.1618825522.1788790573; _ga=GA1.1.375689523.1788790574; CHECKED_PHPSESSID=luk5v7a5vn3lls0abdtin31fbb; _ga_WNJRM576QQ=GS2.1.s1788790573$o1$g1$t1788792082$j60$l0$h1331129975; _dd_s=logs=1&id=acc81d32-de21-42ae-bdba-1f8f7d6735c1&created=1788790572019&expire=1788793237563' \\\n      -H 'origin: https://rcep56839rc.expoplatform.net' \\\n      -H 'pragma: no-cache' \\\n      -H 'priority: u=1, i' \\\n      -H 'referer: \n    https://rcep56839rc.expoplatform.net/sessions?page=sessions&day=1763074800\n    ' \\\n      -H 'sec-ch-ua: \"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Google Chrome\";v=\"152\"' \\\n      -H 'sec-ch-ua-mobile: ?0' \\\n      -H 'sec-ch-ua-platform: \"macOS\"' \\\n      -H 'sec-fetch-dest: empty' \\\n      -H 'sec-fetch-mode: cors' \\\n      -H 'sec-fetch-site: same-origin' \\\n      -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36' \\\n      -H 'x-application: 3' \\\n      -H 'x-lang: en' \\\n      -H 'x-real-origin;' \\\n      -H 'x-real-refer: /sessions?page=sessions&day=1763161200' \\\n      --data-raw '{\"view\":\"week\",\"day\":\"14-11-2025\"}'\n    ```\n3. In case we keep speakers in previous request we do not need additional request, but in case we remove it we need a separate request to get compact sessions data by array of session ids. \n\n"
+    }
+   ],
+   "links": [
+    "Polaris work item link: PBV11-477",
+    "Work item split: EP-57107"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 10,
+   "assignee": "Evgen Polivach",
+   "canon": "Ready for Release",
+   "due": "2026-09-23",
+   "origDays": 10,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 3.47,
+   "status": "Ready for release",
+   "summary": "Multi-day Session Calendar View Enhancements",
+   "team": "Visitor team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ }
+]

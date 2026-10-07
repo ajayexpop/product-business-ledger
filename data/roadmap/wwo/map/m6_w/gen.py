@@ -1,0 +1,68 @@
+import json
+O='04_onsite_and_kiosks:';L='15_lead_intelligence:';F='16_floor_plan:'
+rows=[
+("onsite-interactive-floor-plans-launch","new","First 'Mobile app for Floor Plan' and a 'New Floorplan' with admin stand drawing",[F+'118',F+'192',F+'193'],"Stand uniqueness and hide booth/exhibitor names and hide stand, as the floor plan has them today"),
+("onsite-badge-builder-controls","improved","Adds rotation, aligning, duplication, margins and resize to existing Badge builder fields",[O+'170',O+'105',O+'258'],"Per-field rotation/margins/alignment, field positioning and the Visitor Switch Category badge variable"),
+("onsite-qr-code-pdf-export","unclear","'Export QR Codes in pdf format': cannot tell if it is a new export or a new format of an existing one",[L+'130'],"Existing QR code exports (visitor personal QR, company/product/content QR)"),
+("analytics-report-columns-2023","improved","'Add the notes ... in Excel export', 'Add Session Id column' to existing reports",[],"No claim covers the exhibitor export or favourited sessions report"),
+("onsite-external-code-scanning","improved","'Ability to scan external QR and Barcodes' in the existing Check-In app, app and kiosk",[O+'137',O+'244',O+'278'],"External QR/barcode scanning in kiosk, external codes via import/API, non-EP barcodes in Scanned Code"),
+("onsite-expofp-stand-linking","improved","'Redirection ExpoFP Floorplan': adds a linking setting to existing stand links",[F+'157',F+'198'],"ExpoFP integration and the external floor plan URL"),
+("onsite-kiosk-improvements","improved","'Search Improvements for Kiosk', 'conditional logic in the Kiosk Builder Registration'",[O+'119',O+'295',O+'120'],"Kiosk conditional logic (config) and name/email check-in search"),
+("analytics-new-analytics","improved","Stories are '(New Analytics) ... fixes' and 'Change default date range', fixing an existing New Analytics",[],"No claim covers the general analytics dashboard"),
+("analytics-export-progress","improved","'Cancel button for exports', 'percentage indication', 'Check-in export: optimize database query'",[O+'189',O+'191'],"Exports on the SQS queue and the check-in report export"),
+("analytics-mobile-app-stats","new","'Mobile analytics MVP: Get the total logins ... per app'",[],"No claim covers mobile app analytics"),
+("onsite-android-scanning-no-google","improved","'Opensource scanner | Non google play devices' extends existing scanning to more devices",[],"Only matching claim (Zxing scanner, 04:251) is NOT-IN-CODE"),
+("onsite-live-location-expofp","new","'ExpoFP - Crowdconnected Integration': a new location integration",[F+'161',F+'199',F+'172'],"CrowdConnected integration, its config keys and location push"),
+("analytics-custom-checkin-reports","improved","'Including column Scanned code in the check-in report', '2 check-in reports' change the check-in report",[O+'130',O+'131',O+'278'],"Check-in report unique per event/day, customisable columns, co-located and Scanned Code"),
+("analytics-dashboard-improvements-2023","improved","'Favorites Dashboard - Optimize data load time', 'Pining interactions header'",[],"No claim covers the favourites or visitor/exhibitor dashboards"),
+("onsite-floor-plan-improvements-2023","improved","'FloorPlan improvement', remove arrows, 'No results' for quick filters on the existing floor plan",[F+'151'],"Front-end floor plan view and search"),
+("analytics-login-source","improved","'Additional column to Visitors/Exhibitors login'",[],"No claim covers the login report"),
+("onsite-meeting-location-floor-plan","improved","'Interactive location on meeting cards in app' adds a link to existing meeting cards",[],"No claim covers meeting-card locations"),
+("analytics-checkin-analytics-refresh","improved","'Check-in Analytics refresh' of analytics, check-in list and zones pages, 'Design changes'",[O+'190',O+'272',O+'188'],"Check-in analytics, check-ins/outs by hour/day, check-in list"),
+("analytics-mobile-analytics-page","unclear","Only 'Mobile analytics page'; cannot tell if new or a rework of the base stats page",[],"No claim covers mobile app analytics"),
+("analytics-meetings-tab","unclear","Only '(New Analytics UI) Meetings'",[],"No claim covers meeting analytics"),
+("analytics-standard-report","unclear","Only 'Standard Report generation'",[L+'203'],"Standard Report via /admin/data"),
+("onsite-invisual-integration","new","'InVisual Floor Plan Integration': a new integration",[F+'159',F+'197'],"InVisual deep links/bookmarks and its configuration"),
+("onsite-badge-printing-improvements","improved","'BULK PRINT BADGES - REFACTORING', 'Print badge statistics capture', edit error text",[O+'108',O+'176',O+'157'],"Bulk/individual badge printing and exhibitor team badge printing"),
+("onsite-checkin-app-zones","improved","'Check-in app improvement'",[O+'184',O+'126',O+'125'],"Check-in app zone/in-out flow, session check-in, scanned list"),
+("onsite-expofp-app-redesign","improved","'Redesign of expoFP UI elements'",[F+'151',F+'161'],"Front-end floor plan search/wayfinding and CrowdConnected location"),
+("analytics-export-additions-2024","improved","'News Export', add activation timestamp and parent exhibitor columns to existing exports",[],"No claim covers these exports"),
+("analytics-report-time-zones","improved","'Change the time format' of existing export/import links",[],"No claim covers export time stamps"),
+("analytics-session-report-additions","improved","'Improve Sessions report with security concern info', 'Add info for Exhibitor event info'",[],"No claim covers the sessions report"),
+("analytics-team-schedule-export","improved","'Column for Attendee Names - Team Schedule Export'",[],"No claim covers the team schedule export"),
+("analytics-marketplace-supply-demand","improved","'Include category to the Supply&Demand graph', display all categories",[],"No claim covers the supply and demand graph"),
+("analytics-login-checkin-exports-2025","improved","'Exclude Customer Service Logins', 'Enhancing Check-in List Export with Session Information'",[O+'188',O+'191'],"Check-in list and its export"),
+("onsite-ticket-validation-checkin","improved","'(Part 2) Usage of check-in app in Ticketing' extends the existing check-in app",[O+'184',O+'121'],"Check-in app scan flow and attendance tracking"),
+("onsite-floor-plan-display-2025","improved","'Order of Exhibitor filters ... mirrored on Floorplan', 'Change floor plan mini header'",[],"Only floor plan filter claim (16:123) is NOT-IN-CODE"),
+("onsite-gps-ips-positioning","improved","'GPS Android Implementation' as on iOS, 'Toggle for IPS / GPS Config'",[F+'159',F+'161',F+'199'],"InVisual and CrowdConnected integrations and CrowdConnected config"),
+("onsite-badge-templates-redesign","improved","'Badges | Redesign of templating and output'",[O+'286',O+'104',O+'110'],"Print/digital badge templates, badge builder, pre-print via profile"),
+("analytics-total-meetings-graph","improved","'Logic of displaying of how the Total meetings graph'",[],"No claim covers meeting analytics"),
+("onsite-stand-bookmarking","new","'Bookmarking Stands on Floor Plan - Stage 1'",[],"Bookmark claims (16:140, 16:150, 16:171) are CONTRADICTED or NOT-IN-CODE"),
+("onsite-live-badge-ring","new","'Display a Moving Colored Ring Around Badge QR Codes'",[O+'172'],"Digital badge configuration (colour-ring claims 04:109/173/288 are CONTRADICTED)"),
+("onsite-category-at-checkin","improved","'Participant category display in Check-in app', category in KIOSK, logout button",[O+'125',O+'309'],"Check-in app scanned list and category shown for walk-ins"),
+("analytics-meeting-programme-reports","new","'Reports for Meeting Program': a first report for meeting programmes",[],"No claim covers meeting programme reports"),
+("onsite-expofp-hall-stands","improved","'ExpoFP - New stand format in our applications'",[F+'157'],"ExpoFP stand number exchange"),
+("analytics-programme-roundtable-reports","improved","'Meeting Program report ... tab extension' (plus a 'Round tables report')",[],"No claim covers meeting programme or round table reports"),
+("onsite-offline-expofp","improved","'Full Offline Support - ExpoFP' adds offline to existing ExpoFP plans",[],"No claim covers floor plan offline use"),
+("onsite-bookmark-favourites-sync","improved","'Bi-directional Sync Between Favorites and Floorplan Bookmarks' links two existing features",[],"Bookmark claims are CONTRADICTED or NOT-IN-CODE"),
+("onsite-checkin-qr-2026","improved","'Add a new simplified QR Code type', 'Add limitation to Zone filter in Check-in List'",[O+'132',O+'287',O+'188'],"Default/External ID switch, QR source per category, check-in list filters"),
+("onsite-aditus-badge-errors","improved","'Error Handling - Custom Badge Page'",[],"No claim covers Aditus custom badges"),
+("analytics-export-additions-2026","improved","Adds 'External QR', 'is_new' and profile completion columns to existing exports",[],"No claim covers these exports"),
+("analytics-programme-report-additions-2026","improved","'All meetings tab. Add extra column', 'Meeting Ratings in All Meetings Tab'",[],"No claim covers meeting programme reports"),
+("onsite-ocr-badge-scanning","new","'OCR Badge Scanning'",[L+'93'],"Mobile badge scanning (lead scanning)"),
+("onsite-floor-plan-management-2026","improved","'Adding sorting and multi-select to internal floorplan', hidden hall fix",[F+'191',F+'122'],"Hide hall on front-end and hidden halls invisible to end users"),
+("analytics-event-reporting-dashboards","new","'Development <first> dashboard', dashboards 'embedded as a new sub-section'",[],"No claim covers event reporting dashboards"),
+("analytics-colocated-checkins","improved","'Organizer can compare Check-ins across co-located Events ... in Total Check-In / Check-Out graph'",[O+'272',O+'278'],"Total check-ins/outs graph and co-located check-in data"),
+("analytics-faster-exports","improved","'bySession export rework', 'N+1 query loop in By Booking report'",[],"No claim covers these reports"),
+("analytics-ga4-support","improved","'Restoring Google Analytics Support: Enhancements for GA4'",[],"No claim covers Google Analytics"),
+("analytics-meeting-outcome-columns","improved","'Enhancing Meetings report ... Adding ... Columns'",[],"No claim covers the meetings report"),
+("analytics-sponsorship-engagement-reporting","new","'New SponsorAccountsInteractionsReport', 'Sponsorships Deep Dive' dashboard",[],"No claim covers sponsor performance reporting"),
+]
+out=[dict(id=a,kind=b,kindWhy=c,buildsOn=d,buildsOnWhy=e) for a,b,c,d,e in rows]
+json.dump(out,open('map.json','w'),indent=1,ensure_ascii=False)
+inp=json.load(open('../input-m6.json'))
+fid=[f['id'] for f in inp['features']];cid={c['id'] for c in inp['claims']}
+assert [o['id'] for o in out]==fid, set(fid)^{o['id'] for o in out}
+assert all(o['kind'] in('new','improved','unclear') for o in out)
+assert all(b in cid for o in out for b in o['buildsOn']) and all(len(o['buildsOn'])<=3 for o in out)
+from collections import Counter;print(Counter(o['kind'] for o in out));print('empty',sum(not o['buildsOn'] for o in out))

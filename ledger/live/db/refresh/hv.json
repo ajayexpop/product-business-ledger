@@ -1,6 +1,7 @@
 {
   "lastBy": "u_odCcEgwJ2lNM84eM7e5ykg",
-  "lastRun": "2026-09-28T03:04:41Z",
+  "lastRun": "2026-09-28T12:11:13Z",
+  "note": "",
   "recs": {
     "HV-114": {
       "k": "HV-114",
@@ -22,6 +23,13 @@
       "st": "Done",
       "t": "Story",
       "up": "2026-09-21T16:46:59.317+0100"
+    },
+    "HV-128": {
+      "k": "HV-128",
+      "s": "[Backend] Meeting Program. Users Availability Report",
+      "st": "Done",
+      "t": "Story",
+      "up": "2026-09-28T07:46:40.921+0100"
     },
     "HV-131": {
       "k": "HV-131",
@@ -56,7 +64,7 @@
       "s": "Roundtable Allocation & Admin",
       "st": "In Progress",
       "t": "Epic",
-      "up": "2026-09-25T15:44:36.029+0100"
+      "up": "2026-09-28T11:17:15.998+0100"
     },
     "HV-15": {
       "k": "HV-15",
@@ -84,7 +92,7 @@
       "s": "MP. Exhibitor control over team members actions. Confirmation stage",
       "st": "Open",
       "t": "Epic",
-      "up": "2026-09-25T12:27:38.436+0100"
+      "up": "2026-09-28T12:09:14.351+0100"
     },
     "HV-178": {
       "k": "HV-178",
@@ -113,6 +121,13 @@
       "st": "Ready for release",
       "t": "Story",
       "up": "2026-09-24T08:38:59.446+0100"
+    },
+    "HV-264": {
+      "k": "HV-264",
+      "s": "[Backend] Admin Display Filters: MP Team Users and MP Team Exhibitors tabs render no filters at all",
+      "st": "Done",
+      "t": "Bug",
+      "up": "2026-09-28T10:00:37.068+0100"
     },
     "HV-279": {
       "k": "HV-279",
@@ -147,7 +162,7 @@
       "s": "[Backend] MP Exhibitor control over team members actions (Confirmation Stage)",
       "st": "In testing",
       "t": "Story",
-      "up": "2026-09-24T12:42:12.366+0100"
+      "up": "2026-09-28T08:47:01.472+0100"
     },
     "HV-304": {
       "k": "HV-304",
@@ -175,7 +190,7 @@
       "s": "[Backend] MP. Meetings program maintenance (Domain relocation)",
       "st": "In Progress",
       "t": "Story",
-      "up": "2026-09-21T08:33:57.201+0100"
+      "up": "2026-09-28T08:49:57.313+0100"
     },
     "HV-417": {
       "k": "HV-417",
@@ -189,7 +204,7 @@
       "s": "No-show / \"did not attend\" status has no single source of truth — three disagreeing write paths, one causing a boolean/string type-coercion flip",
       "st": "In testing",
       "t": "Bug",
-      "up": "2026-09-25T14:58:11.545+0100"
+      "up": "2026-09-28T12:38:08.392+0100"
     },
     "HV-487": {
       "k": "HV-487",
@@ -306,16 +321,23 @@
     "HV-568": {
       "k": "HV-568",
       "s": "Update Groceryshop app on iOS to the latest version",
-      "st": "In Progress",
+      "st": "Done",
       "t": "Sub-task",
-      "up": "2026-09-21T06:11:21.840+0100"
+      "up": "2026-09-28T08:25:57.105+0100"
+    },
+    "HV-571": {
+      "k": "HV-571",
+      "s": "Integrate platform with round-tables-service similar-topics changes (HV-137) — /schedule/ and /replace/",
+      "st": "Done",
+      "t": "Task",
+      "up": "2026-09-28T12:37:17.798+0100"
     },
     "HV-576": {
       "k": "HV-576",
       "s": "Meeting program. Team members management improvements",
       "st": "In Progress",
       "t": "Sub-task",
-      "up": "2026-09-25T08:35:40.669+0100"
+      "up": "2026-09-28T12:56:47.243+0100"
     },
     "HV-588": {
       "k": "HV-588",
@@ -336,7 +358,7 @@
       "s": "Table generation seats fewer attendees as the session grows, sometimes none, and reports success either way",
       "st": "Rejected",
       "t": "Defect",
-      "up": "2026-09-25T15:44:22.610+0100"
+      "up": "2026-09-28T11:13:01.858+0100"
     },
     "HV-596": {
       "k": "HV-596",
@@ -365,6 +387,13 @@
       "st": "Rejected",
       "t": "Defect",
       "up": "2026-09-21T08:23:48.391+0100"
+    },
+    "HV-600": {
+      "k": "HV-600",
+      "s": "Platform discards skipped_applications reasons and treats a zero-seated schedule as success — organiser sees \"Unassigned\" with no cause, is_table_generation_passed=true with data: []",
+      "st": "Ready for testing",
+      "t": "Defect",
+      "up": "2026-09-28T12:41:55.295+0100"
     },
     "HV-601": {
       "k": "HV-601",
@@ -455,7 +484,7 @@
       "s": "Team confirmation list and Bulk confirm preview take 20–50 s for \"All team members\" (200 members, 364 meetings); list is requested twice on page load",
       "st": "In Progress",
       "t": "Defect",
-      "up": "2026-09-25T13:37:31.373+0100"
+      "up": "2026-09-28T12:52:44.890+0100"
     },
     "HV-621": {
       "k": "HV-621",
@@ -485,6 +514,34 @@
       "t": "Defect",
       "up": "2026-09-25T15:42:00.169+0100"
     },
+    "HV-628": {
+      "k": "HV-628",
+      "s": "[MP] Final schedule double-books a participant — admin-created meeting and a generated meeting in the same slot",
+      "st": "Open",
+      "t": "Bug",
+      "up": "2026-09-28T10:45:31.170+0100"
+    },
+    "HV-629": {
+      "k": "HV-629",
+      "s": "[MP] Table placement puts two confirmed meetings at the same table in the same slot — admin-created meeting and a generated meeting",
+      "st": "Open",
+      "t": "Bug",
+      "up": "2026-09-28T10:45:27.244+0100"
+    },
+    "HV-631": {
+      "k": "HV-631",
+      "s": "Migrate master's round-tables generation flow off the Lambda-based path onto the round-tables-service HTTP flow (align with alpha)",
+      "st": "Open",
+      "t": "Task",
+      "up": "2026-09-28T11:09:29.463+0100"
+    },
+    "HV-632": {
+      "k": "HV-632",
+      "s": "[MP] Table QR link /qrCodes/complete opens the front \"404 Page not found\" — the scan never reaches QrCodesController, so the QR no-show path cannot run",
+      "st": "Open",
+      "t": "Bug",
+      "up": "2026-09-28T12:39:49.522+0100"
+    },
     "HV-88": {
       "k": "HV-88",
       "s": "[Frontend] Optional Confirmation, single generation and timeline adjustments",
@@ -501,6 +558,14 @@
       "manual": false,
       "seen": 70,
       "since": "2026-09-21"
+    },
+    {
+      "at": "2026-09-28T12:11:13Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 17,
+      "manual": true,
+      "seen": 17,
+      "since": "-11h"
     }
   ]
 }

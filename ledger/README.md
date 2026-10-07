@@ -13,10 +13,11 @@ This folder holds the whole project. Open it in Claude Code and read `CLAUDE.md`
 | Overview | A greeting with what changed since your last visit, what needs attention, the next 8 weeks of shows, the event radar, team pressure |
 | Clients | Every client with health, problems and promises; Client 360 for each |
 | Timeline | Client by month: shows, delivery, bugs, incidents; zoom, ranges, filters, clickable month chart |
-| Requests | The Feature ledger (log a work item, its flow, sample walkthrough, hand-offs) and the Must-have ledger (Ajay only for now) |
+| Requests | The Feature ledger (work items, their flow, sample walkthrough, hand-offs; logging new items with Claude is in Beta for the Settings viewers) and the Must-have ledger |
 | Demand | The Product Demand Map with instant and AI search |
 | Delivery, Bugs, Incidents | What is built and being built; open client bugs; production incidents |
-| Rules, Method & sources, Data refresh | How it works: private to Ajay |
+| Rules, Method & sources, Sync & logs | Settings: Ajay and Bartosz |
+| Feedback (header button) | Everyone: Happy / Sad / Want notes to Ajay, with replies. Ajay: the Feedback inbox and Roadmap |
 
 Everyone gets onboarding (a welcome card, a tour for every tab, one-time hints) and the Guide (tours, glossary, Ask, personal settings such as My clients).
 
@@ -32,6 +33,7 @@ Everyone gets onboarding (a welcome card, a tour for every tab, one-time hints) 
 | The rules (every threshold and weight) | `live/logic.json` |
 | The flow read | `live/flow.json` |
 | The shared database (must-have items, column settings, Jira refresh, data-refresh pulls, visits, work items) | `live/db/<collection>/<doc>.json` |
+| Feedback (private to Ajay) and its roadmap | `live/db/feedback/`, `docs/feedback-roadmap.md` (`tools/feedback.py build`) |
 | What is published right now | `live/index.html`, `live/MANIFEST.json` |
 
 All of it is JSON. `live/db` is refreshed from the published ledger at the start of every change (update cycle step 1).
@@ -47,6 +49,7 @@ python3 tools/demand.py build      # rebuild the demand map from ../intel and ..
 python3 tools/events.py build      # rebuild events from data/events/raw
 python3 tools/stories.py check     # the story cache
 python3 tools/product_areas.py check
+python3 tools/feedback.py build    # the feedback roadmap from live/db/feedback
 ```
 
 ## Documents

@@ -1,0 +1,144 @@
+{
+  "createdAt": "2026-09-28",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "driver": "Jira Reported by INTERNAL; no client named: a new selling option for every organiser",
+      "notes": "children of EP-57482 (EP-57483); Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2158428161/Lead+Capture+Pro+Per-Team-Member+Access+Purchase",
+      "why": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2158428161/Lead+Capture+Pro+Per-Team-Member+Access+Purchase (Background)"
+    },
+    "gaps": [
+      "No client named in the page or tickets.",
+      "No estimate in any source."
+    ],
+    "pages": [
+      {
+        "note": "Full specification: admin event setup (whole team / per member / both, prices, migration), purchase page, irreversible exhibitor assignment, organiser toggles, override logic with category/personal settings (EP-50122), app sync. Builds on EP-40864. No client named.",
+        "read": true,
+        "title": "Lead Capture Pro — Per-Team-Member Access Purchase",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2158428161/Lead+Capture+Pro+Per-Team-Member+Access+Purchase"
+      }
+    ]
+  },
+  "h": {
+    "hb260928conf-area": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "area",
+      "from": "Lead intelligence",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "Lead Intelligence"
+    },
+    "hb260928conf-month": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "month",
+      "from": "November-December 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise) ; a range counts at its last month, the promise date",
+      "to": "2026-12"
+    },
+    "hb260928confadd": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 2026-09-28."
+    },
+    "hb260928enr-driver": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Jira Reported by INTERNAL; no client named: a new selling option for every organiser",
+      "to": "Platform"
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from children of EP-57482 (EP-57483); Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2158428161/Lead+Capture+Pro+Per-Team-Member+Access+Purchase",
+      "to": "Epic Open as of 2026-09-28, no estimate. Specification page last modified 17 Sep 2026. Only child is EP-57483 'Discovery and Designs', created 2026-09-17, Ready to start, no estimate or due date. No comments on the epic or child."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2158428161/Lead+Capture+Pro+Per-Team-Member+Access+Purchase (Background)",
+      "to": "Lets organisers sell Lead Capture Pro and AI Notetaker per team member, not only for the whole exhibitor team, for flexible offers."
+    }
+  },
+  "j": {
+    "aggOrigDays": null,
+    "assignee": null,
+    "canon": "Planned",
+    "due": null,
+    "origDays": null,
+    "priority": "Medium",
+    "resolved": null,
+    "spentDays": null,
+    "status": "Open",
+    "summary": "Lead Capture Pro — Per-Team-Member Access Purchase",
+    "team": "Exhibitor team",
+    "teamField": "customfield_10001",
+    "type": "Epic"
+  },
+  "jAt": "2026-09-28T19:00:00Z",
+  "migrated": {
+    "at": "2026-09-28",
+    "schema": 2
+  },
+  "n": {
+    "days": null,
+    "daysKind": "none"
+  },
+  "order": 190,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "Jira Reported by INTERNAL; no client named: a new selling option for every organiser",
+      "by": "Claude",
+      "field": "Jira",
+      "name": "Platform",
+      "quote": "Jira Reported by INTERNAL; no client named: a new selling option for every organiser",
+      "value": "Platform"
+    }
+  },
+  "raw": {
+    "area": "Lead intelligence",
+    "month": "November-December 2026",
+    "status": "Planned"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-28",
+  "v": {
+    "area": "Lead Intelligence",
+    "deps": "Needs crossteam collaboration",
+    "driver": "Platform",
+    "estimate": "To be estimated after prototyping is done",
+    "feature": "Lead Capture Pro — Per-Team-Member Access Purchase",
+    "impact": "Allows to sell access to Lead Capture and AI notetaker both per team and for specific team members",
+    "key": "EP-57482",
+    "month": "2026-12",
+    "notes": "Epic Open as of 2026-09-28, no estimate. Specification page last modified 17 Sep 2026. Only child is EP-57483 'Discovery and Designs', created 2026-09-17, Ready to start, no estimate or due date. No comments on the epic or child.",
+    "owner": "Alex",
+    "priority": "Revenue",
+    "rationale": "Unlocks new selling options for LCPro",
+    "status": "Planned",
+    "team": "",
+    "why": "Lets organisers sell Lead Capture Pro and AI Notetaker per team member, not only for the whole exhibitor team, for flexible offers."
+  }
+}

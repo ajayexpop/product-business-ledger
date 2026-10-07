@@ -1,0 +1,197 @@
+{
+  "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "deps": "EP-57015 comment 2026-09-14 by Oleksandr Zakablukov | EP-57098 comment 2026-09-14 by Oleksandr Zakablukov | Jira links | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2119106569/Redesigned+Session+Cards+in+Calendar+View+for+Enhanced+Attendee+Experience+with+Overflow+Indicator",
+      "driver": "Jira Reported by DLG, Pipedrive 81808",
+      "why": "EP-57015 Reported by DLG | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2119106569/Redesigned+Session+Cards+in+Calendar+View+for+Enhanced+Attendee+Experience+with+Overflow+Indicator"
+    },
+    "gaps": [],
+    "pages": [
+      {
+        "note": "Resolves to page 2119106569, last modified 23 Sep 2026",
+        "read": true,
+        "title": "Redesigned Session Cards in Calendar View for Enhanced Attendee Experience with Overflow Indicator",
+        "url": "https://expoplatform.atlassian.net/wiki/x/CQBPfg"
+      }
+    ]
+  },
+  "flags": {
+    "drift": true,
+    "dueSoon": true,
+    "noEstimate": false,
+    "noJira": false,
+    "overEstimate": false,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-area": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "area",
+      "from": "Session",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "Sessions"
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "September 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-09"
+    },
+    "h0imp-status": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "status",
+      "from": "In progress (Targeting Release on 30 Sep 2026)",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "In Progress"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "h0mig-rationale": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "migrate",
+      "note": "the old Why, word for word",
+      "to": "Solves visual clutter when multiple overlapping or parallel sessions occur in the same time slot. Replaces cramped, illegible cards with a clean card design and a dedicated \"+X more\" overflow drawer."
+    },
+    "h0mig-why": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "why",
+      "from": "Solves visual clutter when multiple overlapping or parallel sessions occur in the same time slot. Replaces cramped, illegible cards with a clean card design and a dedicated \"+X more\" overflow drawer.",
+      "k": "migrate",
+      "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
+      "to": ""
+    },
+    "hb260928enr-deps": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "deps",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57015 comment 2026-09-14 by Oleksandr Zakablukov | EP-57098 comment 2026-09-14 by Oleksandr Zakablukov | Jira links | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2119106569/Redesigned+Session+Cards+in+Calendar+View+for+Enhanced+Attendee+Experience+with+Overflow+Indicator",
+      "to": "Child of EP-57118; relates to EP-57603. Shares one session card component with the All Day banner (EP-57098), so both specifications must agree (title line count aligned to 3 lines on 14 Sep). Built to the approved DLG G3 prototype (calendar-view-proto.vercel.app/dlg-g3). Risk: if the two story pages drift apart again, QA tests against contradictory criteria."
+    },
+    "hb260928enr-driver": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Jira Reported by DLG, Pipedrive 81808",
+      "to": "81808"
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57015 Reported by DLG | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2119106569/Redesigned+Session+Cards+in+Calendar+View+for+Enhanced+Attendee+Experience+with+Overflow+Indicator",
+      "to": "For DLG: crowded time slots cram sessions into illegible cards; show at most 2 cards (4 in Day View) and a '+N' badge."
+    },
+    "hb260928jira-status": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "status",
+      "from": "In Progress",
+      "k": "edit",
+      "note": "Status now follows Jira: Ready for release (owner, 28 Sep 2026: the ledger must match every board)",
+      "to": "Ready for Release"
+    }
+  },
+  "j": {
+    "aggOrigDays": 6,
+    "assignee": "Evgen Polivach",
+    "canon": "Ready for Release",
+    "due": "2026-09-23",
+    "origDays": 6,
+    "priority": "Medium",
+    "resolved": null,
+    "spentDays": 1.46,
+    "status": "Ready for release",
+    "summary": "Redesigned Session Cards in Calendar View for Enhanced Attendee Experience with Overflow Indicator",
+    "team": "Visitor team",
+    "teamField": "customfield_10001",
+    "type": "Story"
+  },
+  "jAt": "2026-09-28T19:00:00Z",
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": 7,
+    "daysKind": "point"
+  },
+  "order": 210,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "Jira Reported by DLG, Pipedrive 81808",
+      "by": "Claude",
+      "field": "Jira",
+      "name": "81808",
+      "quote": "Jira Reported by DLG, Pipedrive 81808",
+      "value": "81808"
+    }
+  },
+  "raw": {
+    "area": "Session",
+    "month": "September 2026",
+    "status": "In progress (Targeting Release on 30 Sep 2026)"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-28",
+  "v": {
+    "area": "Sessions",
+    "deps": "Child of EP-57118; relates to EP-57603. Shares one session card component with the All Day banner (EP-57098), so both specifications must agree (title line count aligned to 3 lines on 14 Sep). Built to the approved DLG G3 prototype (calendar-view-proto.vercel.app/dlg-g3). Risk: if the two story pages drift apart again, QA tests against contradictory criteria.",
+    "driver": "81808",
+    "estimate": "7d",
+    "feature": "Redesigned Session Cards in Calendar View with Overflow Indicator",
+    "impact": "Attendees: instant readability for packed time slots with one-click access to all concurrent sessions. Organizers & Speakers: eliminates hidden or compressed sessions, giving equal visibility to all tracks.",
+    "key": "EP-57015",
+    "month": "2026-09",
+    "notes": "Deployed under parent EP-57118; FE by Oleksandr Zakablukov, QA by Olena Khromei.",
+    "owner": "Kavi",
+    "priority": "Customer",
+    "rationale": "Solves visual clutter when multiple overlapping or parallel sessions occur in the same time slot. Replaces cramped, illegible cards with a clean card design and a dedicated \"+X more\" overflow drawer.",
+    "status": "Ready for Release",
+    "team": "",
+    "why": "For DLG: crowded time slots cram sessions into illegible cards; show at most 2 cards (4 in Day View) and a '+N' badge."
+  }
+}

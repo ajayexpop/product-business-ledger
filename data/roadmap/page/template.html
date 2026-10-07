@@ -31,6 +31,7 @@
   --shadow-3:0 30px 80px rgba(4,17,103,.22);
   --scrim:rgba(4,17,103,.32);
   --logo-colour:block; --logo-white:none;
+  --tA:#DDF5E6; --tA-i:#0B5B2E; --tB:#DCF2F3; --tB-i:#05595C; --tC:#FFF1CC; --tC-i:#6B4A00; --tS:#E3ECFF; --tS-i:#23408F; --tW:#FDE2E0; --tW-i:#8A1C12;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -47,6 +48,7 @@
     --shadow-1:0 1px 2px rgba(0,0,0,.3); --shadow-2:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.28);
     --shadow-3:0 30px 80px rgba(0,0,0,.55); --scrim:rgba(1,4,18,.6);
     --logo-colour:none; --logo-white:block;
+    --tA:#0F3321; --tA-i:#7FE0A8; --tB:#0E2D34; --tB-i:#6FDDE1; --tC:#2E2410; --tC-i:#FFD27A; --tS:#16224A; --tS-i:#A9BCFF; --tW:#3A1414; --tW-i:#FF9C92;
   }
 }
 :root[data-theme="dark"]{
@@ -63,6 +65,7 @@
   --shadow-1:0 1px 2px rgba(0,0,0,.3); --shadow-2:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.28);
   --shadow-3:0 30px 80px rgba(0,0,0,.55); --scrim:rgba(1,4,18,.6);
   --logo-colour:none; --logo-white:block;
+  --tA:#0F3321; --tA-i:#7FE0A8; --tB:#0E2D34; --tB-i:#6FDDE1; --tC:#2E2410; --tC-i:#FFD27A; --tS:#16224A; --tS-i:#A9BCFF; --tW:#3A1414; --tW-i:#FF9C92;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -237,8 +240,8 @@ table.lanes{border-collapse:separate;border-spacing:0;min-width:1560px;width:100
 .lanes-note{font-size:var(--t-sm);color:var(--ink-3);margin:var(--s3) var(--s1) 0}
 
 /* sheet */
-.scrim{position:fixed;inset:0;background:var(--scrim);z-index:30;backdrop-filter:blur(2px)}
-.sheet{position:fixed;z-index:31;top:var(--s3);right:var(--s3);bottom:var(--s3);width:min(520px,calc(100% - 24px));background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--shadow-3);display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden}
+.scrim{position:fixed;inset:0;background:var(--scrim);z-index:31;backdrop-filter:blur(2px)}
+.sheet{position:fixed;z-index:33;top:var(--s3);right:var(--s3);bottom:var(--s3);width:min(520px,calc(100% - 24px));background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--shadow-3);display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden}
 .sheet .band{height:6px;background:var(--c)}
 .sheet .inner{overflow:auto;padding:var(--s5) var(--s6) var(--s5);display:grid;gap:var(--s4);align-content:start}
 .sheet h3{font-size:clamp(22px,2.5vw,28px);line-height:1.18;padding-right:var(--s7)}
@@ -294,8 +297,17 @@ table.lanes{border-collapse:separate;border-spacing:0;min-width:1560px;width:100
 .src a,.exl a{color:var(--accent);font-weight:650;font-variant-numeric:tabular-nums;text-decoration:none;white-space:nowrap}
 .src a:hover,.exl a:hover{text-decoration:underline}
 .src .d,.exl .d{color:var(--ink-3);font-size:11.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
-.tier{font-size:10px;font-weight:700;padding:1px 6px;border-radius:999px;background:var(--cl);color:var(--cl-ink);margin-left:6px}
-.tier.W{background:#FDE2E0;color:#8A1C12}
+.tier{font-size:10px;font-weight:700;padding:1px 6px;border-radius:999px;background:var(--cl);color:var(--cl-ink);margin-left:6px;white-space:nowrap}
+.tier.A{background:var(--tA);color:var(--tA-i)} .tier.B{background:var(--tB);color:var(--tB-i)} .tier.C{background:var(--tC);color:var(--tC-i)} .tier.S{background:var(--tS);color:var(--tS-i)} .tier.W{background:var(--tW);color:var(--tW-i)}
+.tier.big{font-size:11.5px;padding:2px 10px;margin:0}
+.evl{display:grid;gap:var(--s3);border-top:1px solid var(--line);padding-top:var(--s3)}
+.evs{display:grid;gap:6px;padding:var(--s3) var(--s4);border-radius:var(--r-md);background:var(--surface-2);font-size:var(--t-sm)}
+.evs .h{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+.evs .h a{font-weight:700;color:var(--accent);text-decoration:none}
+.evs .h span{color:var(--ink)}
+.evs .m{font-size:var(--t-xs);color:var(--ink-3)}
+.evs .r{color:var(--ink)}
+.evs blockquote{margin:0;padding-left:var(--s3);border-left:2px solid var(--line-2);color:var(--ink-2);font-size:12.5px;overflow-wrap:anywhere}
 .exsec{display:grid;gap:var(--s3);margin-top:var(--s7);padding:var(--s6);border-radius:var(--r-xl);border:1px solid var(--line);background:var(--surface)}
 .exsec h2{font-size:var(--t-2xl)}
 .exsec > p{color:var(--ink-2);max-width:75ch}
@@ -308,6 +320,175 @@ footer{background:var(--surface);border-top:1px solid var(--line);color:var(--in
 footer .wrap{padding-block:var(--s6);display:flex;flex-wrap:wrap;gap:var(--s3) var(--s6);justify-content:space-between;align-items:center;font-size:var(--t-sm)}
 footer b{color:var(--head);letter-spacing:.14em;font-size:var(--t-xs)}
 
+/* internal: persona bar, Ask the roadmap, Platform today */
+.persona{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s3);padding:var(--s3) var(--s3) var(--s3) var(--s5);border-radius:999px;background:var(--surface);border:1px solid var(--line-2);box-shadow:var(--shadow-2);max-width:880px;font-size:var(--t-lg);color:var(--ink)}
+.persona label{font-weight:600;color:var(--ink-2)}
+.persona input,.persona select{font:inherit;font-size:var(--t-md);padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);min-width:0}
+.persona input{width:min(260px,100%)}
+.persona .go{margin-left:auto;display:inline-flex;align-items:center;gap:var(--s2);border:0;border-radius:999px;padding:10px 18px;background:var(--head);color:var(--surface);font-weight:700;font-size:var(--t-sm)}
+.persona .go:disabled{opacity:.5;cursor:default}
+.persona-note{font-size:var(--t-xs);color:var(--ink-3)}
+.clientbar{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center;font-size:var(--t-sm)}
+.clientbar b{color:var(--head)}
+.clientbar button{border:1px solid var(--line-2);background:var(--surface);border-radius:999px;padding:3px 10px;font-size:var(--t-xs);font-weight:600}
+.askfab{position:fixed;right:var(--s5);bottom:calc(var(--s5) + env(safe-area-inset-bottom,0px));z-index:25;display:inline-flex;align-items:center;gap:var(--s2);border:0;border-radius:999px;padding:12px 18px;background:var(--head);color:var(--surface);font-weight:700;font-size:var(--t-sm);box-shadow:var(--shadow-3)}
+.askfab small{font-weight:700;font-size:10px;letter-spacing:.08em;padding:2px 7px;border-radius:999px;background:var(--yellow);color:var(--navy)}
+.ask{position:fixed;z-index:32;top:var(--s3);right:var(--s3);bottom:var(--s3);width:min(560px,calc(100% - 24px));background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--shadow-3);display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden}
+.ask header{padding:var(--s4) var(--s5);border-bottom:1px solid var(--line);display:grid;gap:6px}
+.ask header .row1{display:flex;align-items:center;gap:var(--s3)}
+.ask header h3{font-size:var(--t-lg)}
+.ask header .newchat{margin-left:auto;white-space:nowrap;border:1px solid var(--line-2);background:var(--surface);border-radius:999px;padding:4px 12px;font-size:var(--t-xs);font-weight:600;color:var(--ink)}
+.ask header .x{border:0;background:var(--surface-2);width:34px;height:34px;border-radius:50%;font-size:18px;color:var(--ink)}
+.ask header p{font-size:var(--t-xs);color:var(--ink-3)}
+.ask .log{overflow:auto;padding:var(--s4) var(--s5);display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s4);align-content:start}
+.ask .log > *,.ask .a > *{min-width:0}
+.ask .u{justify-self:end;max-width:85%;background:var(--accent-soft);color:var(--ink);padding:var(--s2) var(--s4);border-radius:var(--r-lg) var(--r-lg) 4px var(--r-lg);font-size:var(--t-sm)}
+.ask .a{display:grid;gap:var(--s3)}
+.ask .blk{display:grid;gap:6px;padding:var(--s3) var(--s4);border-radius:var(--r-md);border:1px solid var(--line);background:var(--surface)}
+.ask .blk p{font-size:14px;line-height:1.55;color:var(--ink)}
+.ask .cites{display:flex;flex-wrap:wrap;gap:6px;min-width:0}
+.ask .cite{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);background:var(--surface);border-radius:var(--r-sm);padding:4px 10px;font-size:12px;font-weight:600;color:var(--ink);text-align:left;max-width:100%;min-width:0}
+.ask .cite span.t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.ask .cite .vd,.ask .cite .kind{flex:none;font-size:9.5px;padding:1px 6px}
+.ask .cite::after{content:'›';flex:none;color:var(--accent);font-weight:800}
+.ask .blk{min-width:0;overflow:hidden}
+.ask button.st{border:0;cursor:pointer}
+.ask button.st::after{content:'ⓘ';font-size:11px;opacity:.8}
+.ask .stx{font-size:12.5px;color:var(--ink-2);background:var(--surface-2);border-radius:var(--r-sm);padding:var(--s2) var(--s3)}
+@media (min-width:1100px){ body.asking .sheet{right:calc(min(560px,100% - 24px) + 24px);width:min(480px,calc(100% - 620px))} body.asking .scrim{right:calc(min(560px,100% - 24px) + 12px)} }
+.ask .cite:hover{border-color:var(--head)}
+.ask .prog{font-size:var(--t-xs);color:var(--ink-3);display:grid;gap:2px}
+.ask .warn{font-size:var(--t-xs);color:var(--why)}
+.ask .fu{display:flex;flex-wrap:wrap;gap:6px}
+.ask .fu button{border:1px dashed var(--line-2);background:transparent;border-radius:999px;padding:4px 12px;font-size:var(--t-xs);color:var(--accent);font-weight:600}
+.ask form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--s2);padding:var(--s3) var(--s4);border-top:1px solid var(--line)}
+.ask textarea{font:inherit;font-size:var(--t-sm);resize:none;height:44px;padding:10px 14px;border-radius:var(--r-md);border:1px solid var(--line-2);background:var(--surface);color:var(--ink)}
+.ask form button{border:0;border-radius:var(--r-md);padding:0 18px;background:var(--head);color:var(--surface);font-weight:700}
+.ask .starters{display:grid;gap:6px}
+.ask .starters button{text-align:left;border:1px solid var(--line);background:var(--surface-2);border-radius:var(--r-md);padding:var(--s2) var(--s3);font-size:var(--t-sm);color:var(--ink)}
+.st{display:inline-flex;align-items:center;gap:6px;justify-self:start;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:2px 9px;border-radius:999px}
+.st.new{background:var(--tA);color:var(--tA-i)} .st.improved{background:var(--tB);color:var(--tB-i)} .st.platform{background:var(--tS);color:var(--tS-i)}
+.st.partial{background:var(--tC);color:var(--tC-i)} .st.not-built{background:var(--tW);color:var(--tW-i)} .st.in-dev{background:var(--next-chip);color:var(--navy)}
+.st.asked{background:var(--why-soft);color:var(--why)} .st.client{background:var(--cl-soft);color:var(--head)} .st.not-found{background:var(--surface-3);color:var(--ink-2)}
+.vd{font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.vd.CONFIRMED,.vd.CODE-ONLY{background:var(--tA);color:var(--tA-i)} .vd.PARTIAL{background:var(--tC);color:var(--tC-i)} .vd.CONTRADICTED,.vd.NOT-IN-CODE{background:var(--tW);color:var(--tW-i)} .vd.UNKNOWN{background:var(--surface-3);color:var(--ink-2)}
+.plat{display:grid;gap:var(--s5)}
+.plat-top{display:grid;gap:var(--s3)}
+.plat-top p{color:var(--ink-2);max-width:80ch}
+.plat-tools{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--s3)}
+.pcard{display:grid;gap:var(--s2);text-align:left;padding:var(--s4) var(--s5);border-radius:var(--r-lg);border:1px solid var(--line);background:var(--surface);color:inherit}
+.pcard:hover{border-color:var(--head);box-shadow:var(--shadow-2)}
+.pcard h3{font-size:var(--t-md)}
+.pcard .bar2{display:flex;height:6px;border-radius:999px;overflow:hidden;background:var(--surface-3)}
+.pcard .bar2 i{display:block}
+.pcard small{font-size:var(--t-xs);color:var(--ink-3)}
+.clist{list-style:none;margin:0;padding:0;display:grid}
+.clist li{border-top:1px solid var(--line)}
+.clist button{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:var(--s3);align-items:baseline;width:100%;text-align:left;border:0;background:transparent;padding:var(--s3) var(--s1);color:var(--ink)}
+.clist button:hover{background:var(--surface)}
+.clist .sec{font-size:var(--t-xs);color:var(--ink-3);display:block}
+.clist .rmn{font-size:var(--t-xs);color:var(--accent);white-space:nowrap}
+.kind{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border-radius:999px}
+.kind.new{background:var(--tA);color:var(--tA-i)} .kind.improved{background:var(--tB);color:var(--tB-i)}
+.bo{display:grid;gap:6px;border-top:1px solid var(--line);padding-top:var(--s3)}
+.bo button{display:grid;grid-template-columns:auto minmax(0,1fr);gap:var(--s2);align-items:baseline;text-align:left;border:1px solid var(--line);background:var(--surface-2);border-radius:var(--r-md);padding:var(--s2) var(--s3);font-size:var(--t-sm);color:var(--ink)}
+@media (max-width:760px){ .ask header p{display:none} .ask header h3{font-size:var(--t-md)} .ask textarea{height:52px} .persona{border-radius:var(--r-lg);font-size:var(--t-md)} .persona .go{margin-left:0;width:100%;justify-content:center} .ask{top:auto;left:var(--s2);right:var(--s2);bottom:var(--s2);width:auto;height:88vh} .askfab{right:var(--s4);bottom:var(--s4)} }
+
+.pdfdlg{position:fixed;z-index:34;left:50%;top:50%;transform:translate(-50%,-50%);width:min(620px,calc(100% - 24px));max-height:calc(100% - 24px);display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--shadow-3);overflow:hidden}
+.pdfdlg header{display:flex;align-items:center;justify-content:space-between;padding:var(--s4) var(--s5);border-bottom:1px solid var(--line)}
+.pdfdlg header h3{font-size:var(--t-xl)}
+.pdfdlg header .x{border:0;background:var(--surface-2);width:34px;height:34px;border-radius:50%;font-size:18px;color:var(--ink)}
+.pdfdlg .pbody{overflow:auto;padding:var(--s4) var(--s5);display:grid;gap:var(--s4)}
+.pdfdlg .prow{display:flex;justify-content:space-between;align-items:center}
+.pdfdlg .plinks button{border:0;background:none;color:var(--accent);font-weight:600;font-size:var(--t-sm);padding:0 0 0 var(--s3)}
+.pdfdlg .pthemes{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px var(--s4)}
+.pdfdlg .pthemes .brk{grid-column:1/-1;height:1px;background:var(--line);margin-block:2px}
+.pdfdlg .pchk{display:flex;align-items:center;gap:var(--s2);font-size:var(--t-sm);color:var(--ink)}
+.pdfdlg .prow2{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);align-items:center;font-size:var(--t-sm);color:var(--ink)}
+.pdfdlg select{font:inherit;padding:6px 10px;border-radius:var(--r-sm);border:1px solid var(--line-2);background:var(--surface);color:var(--ink);max-width:100%}
+.pdfdlg .pc{display:inline-flex;align-items:center;gap:var(--s2)}
+.pdfdlg .pmsg{font-size:var(--t-sm);color:var(--ink-2);min-height:1.2em}
+.pdfdlg footer{display:flex;justify-content:flex-end;gap:var(--s2);padding:var(--s3) var(--s5);border-top:1px solid var(--line)}
+.pdfdlg footer button{border-radius:999px;padding:8px 18px;font-weight:700;font-size:var(--t-sm)}
+.pdfdlg .ghost{border:1px solid var(--line-2);background:var(--surface);color:var(--ink)}
+.pdfdlg .go{border:0;background:var(--head);color:var(--surface)}
+.pdfdlg .go:disabled{opacity:.5}
+.toggle.pdfb::before{display:none}
+.fbtn{display:inline-flex;align-items:center;gap:var(--s2);padding:7px 14px;border-radius:999px;border:1px solid var(--head);background:var(--surface);color:var(--head);font-weight:700;font-size:var(--t-sm)}
+.fbtn svg{width:15px;height:15px}
+.fbtn[aria-expanded="true"],.fbtn.on{background:var(--head);color:var(--surface)}
+.fcount{min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--yellow);color:var(--navy);font-size:11px;font-weight:800;display:inline-grid;place-items:center}
+.gchips{display:flex;gap:6px;flex-wrap:wrap}
+.row2{min-height:30px}
+.gchip{padding:4px 11px!important;font-size:12.5px!important}
+.gchip{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:var(--t-sm);font-weight:500;color:var(--ink)}
+.gchip:hover{border-color:var(--line-2)}
+.gchip[aria-pressed="true"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,var(--surface));font-weight:650}
+.activef{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:var(--t-xs)}
+.activef .lbl{color:var(--ink-3);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-right:2px}
+.achip{display:inline-flex;align-items:center;gap:6px;padding:3px 6px 3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--ink);font-weight:600;font-size:12px;border:1px solid transparent}
+.achip button{border:0;background:transparent;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;color:var(--ink-2);font-size:14px;line-height:1;padding:0}
+.achip button:hover{background:var(--surface);color:var(--ink)}
+.activef .clr{border:0;background:none;color:var(--accent);font-weight:700;font-size:12px;padding:3px 6px}
+.fpanel{position:absolute;left:var(--s5);top:calc(100% + 6px);z-index:12;width:min(760px,calc(100% - 48px));max-height:min(70vh,640px);display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-3);overflow:hidden}
+.bar .wrap{position:relative}
+.fp-head{display:flex;align-items:center;gap:var(--s3);padding:var(--s3) var(--s5);border-bottom:1px solid var(--line)}
+.fp-head b{font-family:var(--display);color:var(--head);font-size:var(--t-lg)}
+.fp-n{font-size:var(--t-xs);color:var(--ink-3);font-weight:600}
+.fp-x{margin-left:auto;border:0;background:var(--surface-2);width:32px;height:32px;border-radius:50%;font-size:18px;color:var(--ink)}
+.fp-body{overflow:auto;padding:var(--s4) var(--s5);display:grid;gap:var(--s5)}
+.fsec{display:grid;gap:var(--s2)}
+.fsec h4{font-family:var(--body);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:800;display:flex;justify-content:space-between}
+.fsec h4 button{border:0;background:none;color:var(--accent);font-weight:700;font-size:11px;letter-spacing:0;text-transform:none}
+.fgrp{display:grid;gap:4px;padding:var(--s2) 0;border-top:1px solid var(--line)}
+.fgrp:first-of-type{border-top:0}
+.fopts{display:grid;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));gap:2px var(--s4)}
+.fopt{display:flex;align-items:center;gap:var(--s2);padding:5px var(--s2);border-radius:var(--r-sm);font-size:var(--t-sm);color:var(--ink);cursor:pointer}
+.fopt:hover{background:var(--surface-2)}
+.fopt input{accent-color:var(--head);width:15px;height:15px;flex:none}
+.fopt .n{margin-left:auto;font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.fopt.zero{opacity:.45}
+.fopt.gh{font-weight:700;color:var(--head)}
+.fpills{display:flex;flex-wrap:wrap;gap:6px}
+.fpill{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface);font-size:var(--t-sm);font-weight:600;color:var(--ink)}
+.fpill[aria-pressed="true"]{background:var(--head);border-color:var(--head);color:var(--surface)}
+.fpill .n{font-size:11px;opacity:.75;font-variant-numeric:tabular-nums}
+.fp-foot{display:flex;justify-content:space-between;gap:var(--s2);padding:var(--s3) var(--s5);border-top:1px solid var(--line)}
+.fp-foot button{border-radius:999px;padding:8px 18px;font-weight:700;font-size:var(--t-sm)}
+.fp-foot .ghost{border:1px solid var(--line-2);background:var(--surface);color:var(--ink)}
+.fp-foot .go{border:0;background:var(--head);color:var(--surface)}
+body.fopen .askfab{display:none}
+@media (max-width:760px){ .gchips{display:none} .row2 .spacer{display:none} .fpanel{position:fixed;left:var(--s2);right:var(--s2);bottom:var(--s2);top:auto;width:auto;max-height:82vh;z-index:34} }
+.tourbtn{border:1px solid var(--line-2);background:var(--surface);color:var(--head);border-radius:999px;padding:6px 14px;font-size:var(--t-sm);font-weight:700}
+.tourbtn:hover{border-color:var(--head)}
+.tshade{position:fixed;inset:0;z-index:40;background:var(--scrim)}
+.tspot{position:fixed;z-index:41;border-radius:var(--r-md);box-shadow:0 0 0 3px var(--yellow),0 0 0 9999px rgba(4,17,103,.45);pointer-events:none;transition:all .25s cubic-bezier(.2,.8,.2,1)}
+.welcome{position:fixed;z-index:42;left:50%;top:50%;transform:translate(-50%,-50%);width:min(680px,calc(100% - 24px));max-height:calc(100% - 24px);overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--shadow-3);padding:var(--s6);display:grid;gap:var(--s5)}
+.welcome .w-top{display:grid;gap:var(--s2)}
+.welcome h2{font-size:clamp(22px,3vw,30px)}
+.welcome p{color:var(--ink-2)}
+.wroles{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:var(--s3)}
+.wrole{display:grid;gap:2px;text-align:left;padding:var(--s3) var(--s4);border-radius:var(--r-md);border:1.5px solid var(--line);background:var(--surface);color:var(--ink)}
+.wrole b{font-family:var(--display);color:var(--head);font-size:var(--t-md)}
+.wrole small{font-size:var(--t-xs);color:var(--ink-3)}
+.wrole:hover{border-color:var(--line-2)}
+.wrole[aria-pressed="true"]{border-color:var(--head);background:var(--accent-soft)}
+.wcl{display:grid;gap:6px;font-size:var(--t-sm);color:var(--ink-2);font-weight:600}
+.wcl input{font:inherit;font-weight:400;padding:9px 14px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);max-width:360px}
+.w-foot,.c-foot{display:flex;justify-content:flex-end;gap:var(--s2);align-items:center}
+.w-foot button,.c-foot button{border-radius:999px;padding:8px 18px;font-weight:700;font-size:var(--t-sm)}
+.welcome .ghost,.coach .ghost{border:1px solid var(--line-2);background:var(--surface);color:var(--ink)}
+.welcome .go,.coach .go{border:0;background:var(--head);color:var(--surface)}
+.welcome .go:disabled,.coach .ghost:disabled{opacity:.45;cursor:default}
+.coach{position:fixed;z-index:43;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-3);padding:var(--s4) var(--s5);display:grid;gap:var(--s2)}
+.coach .c-step{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--accent)}
+.coach h3{font-size:var(--t-lg)}
+.coach p{font-size:var(--t-sm);color:var(--ink-2)}
+.coach .c-act{justify-self:start;border:1px dashed var(--head);background:var(--accent-soft);color:var(--head);border-radius:999px;padding:5px 12px;font-weight:700;font-size:var(--t-xs)}
+.coach .c-foot span{flex:1}
+.coach .c-skip{border:0;background:none;color:var(--ink-3);padding:8px 4px;font-weight:600}
+@media (max-width:760px){ .tourbtn{padding:6px 10px} .welcome{padding:var(--s5)} }
 @media (max-width:980px){ .wwo.row3{grid-template-columns:minmax(0,1fr)} }
 @media (max-width:760px){
   .wrap{padding-inline:var(--s4)}
@@ -341,6 +522,7 @@ footer b{color:var(--head);letter-spacing:.14em;font-size:var(--t-xs)}
   <div><img class="logo c" src="__LOGO_COLOUR__" alt="ExpoPlatform"><img class="logo w" src="__LOGO_WHITE__" alt="ExpoPlatform"></div>
   <div class="top-r">
     <div class="tag">Smart Events · Product journey</div>
+    <button type="button" class="tourbtn" id="tourBtn" hidden>✦ Guide</button>
     <button type="button" class="themebtn" id="themeBtn" aria-pressed="false" aria-label="Dark mode"><span class="sw" aria-hidden="true"></span><span class="tx">Dark mode</span></button>
   </div>
 </div></header>
@@ -355,6 +537,12 @@ footer b{color:var(--head);letter-spacing:.14em;font-size:var(--t-xs)}
       <span><i class="dot" style="--c:var(--why)"></i><b>Why</b> it was needed</span>
       <span><i class="dot" style="--c:var(--out)"></i><b>Outcome</b> for you and your participants</span>
     </div>
+    <form class="persona" id="persona" hidden autocomplete="off">
+      <label for="pClient">I work at</label><input id="pClient" list="clientList" placeholder="Choose a client"><datalist id="clientList"></datalist>
+      <label for="pRole">as</label><select id="pRole"><option>an Account Manager</option><option>Sales</option><option>Customer Success</option><option>Product</option><option>Leadership</option><option>Support</option></select>
+      <button type="submit" class="go" id="pGo">✦ Build my briefing</button>
+    </form>
+    <p class="persona-note" id="personaNote" hidden>Choosing a client filters the page to what we built with them. The briefing is written by AI from this page's data only, with every line linked to its source.</p>
   </div>
   <div class="strip" aria-label="Every feature we shipped, by quarter">
     <div class="strip-head"><b>Every dot is a feature we shipped. Select a quarter to read it.</b><div class="legend" id="legend"></div></div>
@@ -368,23 +556,28 @@ footer b{color:var(--head);letter-spacing:.14em;font-size:var(--t-xs)}
     <div class="seg" role="group" aria-label="View">
       <button type="button" id="vTimeline" aria-pressed="true">Timeline</button>
       <button type="button" id="vLanes" aria-pressed="false">Theme lanes</button>
+      <button type="button" id="vPlatform" aria-pressed="false" hidden>Platform today</button>
     </div>
+    <button type="button" class="fbtn" id="fOpen" aria-expanded="false" aria-controls="fPanel"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.5h12M4.5 8h7M7 12.5h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>Filters<span class="fcount" id="fCount" hidden></span></button>
     <span class="spacer"></span>
     <input type="search" class="search" id="q" placeholder="Search features, Jira keys or story titles" aria-label="Search" hidden>
-    <button type="button" class="toggle" id="fClient" aria-pressed="false" hidden></button>
-    <button type="button" class="toggle" id="fHead" aria-pressed="false">Headlines only</button>
-    <button type="button" class="toggle" id="fAI" aria-pressed="false">AI</button>
-    <button type="button" class="toggle" id="fMobile" aria-pressed="false">In the app</button>
-    <span class="count" id="count" aria-live="polite"></span>
+    <button type="button" class="toggle pdfb" id="pdfBtn" hidden>⤓ Roadmap PDF</button>
   </div>
-  <div class="chips" id="themeChips" role="group" aria-label="Filter by theme"></div>
-  <div class="chips" id="whoChips" role="group" aria-label="Filter by who it helps"></div>
+  <div class="row row2"><div class="gchips" id="groupChips" role="group" aria-label="Quick product groups"></div><span class="spacer"></span><span class="count" id="count" aria-live="polite"></span></div>
+  <div class="activef" id="activeF" hidden></div>
+  <div class="clientbar" id="clientBar" hidden></div>
+  <div class="fpanel" id="fPanel" hidden role="dialog" aria-label="Filters">
+    <div class="fp-head"><b>Filters</b><span class="fp-n" id="fpN"></span><button type="button" class="fp-x" id="fClose" aria-label="Close filters">×</button></div>
+    <div class="fp-body" id="fpBody"></div>
+    <div class="fp-foot"><button type="button" class="ghost" id="fClear">Clear all</button><button type="button" class="go" id="fDone">Show results</button></div>
+  </div>
 </div></div>
 
 <main class="wrap">
   <section class="clientsec" id="forclient" hidden></section>
   <div id="timeline"></div>
   <div id="lanes" hidden></div>
+  <div id="platform" class="plat" hidden></div>
   <section class="horizon" id="next" aria-labelledby="nextH"></section>
   <section class="exsec" id="excluded" hidden></section>
 </main>
@@ -394,7 +587,46 @@ footer b{color:var(--head);letter-spacing:.14em;font-size:var(--t-xs)}
   <div id="footNote"></div>
 </div></footer>
 
+<button type="button" class="askfab" id="askFab" hidden>✦ Ask the roadmap <small>BETA</small></button>
+<aside class="ask" id="ask" hidden aria-label="Ask the roadmap">
+  <header><div class="row1"><h3>Ask the roadmap</h3><span class="st in-dev">Beta</span><button type="button" class="newchat" id="askClear">New chat</button><button type="button" class="x" id="askClose" aria-label="Close">×</button></div>
+    <p>Answers come only from this page: the roadmap (what changed since 2023), the verified platform baseline (what the platform does today, checked against the code), client links and open requests. Every line links to its source; anything unbacked is removed. Uses your Claude account.</p></header>
+  <div class="log" id="askLog">
+    <div class="starters" id="askStarters">
+      <button type="button">Can exhibitors upload products and brochures?</button>
+      <button type="button">What did we change in lead capture since 2024?</button>
+      <button type="button">Do we support offline badge scanning?</button>
+      <button type="button">What have customers asked for in meetings that we have not built?</button>
+    </div>
+  </div>
+  <form id="askForm"><textarea id="askIn" placeholder="Ask about any feature, client or change" aria-label="Your question"></textarea><button type="submit" id="askSend">Ask</button><button type="button" id="askStop" hidden>Stop</button></form>
+</aside>
 <div class="scrim" id="scrim" hidden></div>
+<div class="tshade" id="tourShade" hidden></div>
+<div class="tspot" id="tourSpot" hidden></div>
+<div class="welcome" id="welcome" hidden role="dialog" aria-modal="true" aria-labelledby="wH">
+  <div class="w-top"><div class="eyebrow">Welcome</div><h2 id="wH">What brings you to the product journey?</h2><p>Pick your role and we will show you around the parts that matter to you. It takes a minute, and you can replay it from the Guide button.</p></div>
+  <div class="wroles" id="wRoles"></div>
+  <label class="wcl">Working with a particular client? <input id="wClient" list="wClientList" placeholder="Optional: choose a client"><datalist id="wClientList"></datalist></label>
+  <div class="w-foot"><button type="button" class="ghost" id="wSkip">Skip for now</button><button type="button" class="go" id="wStart" disabled>Show me around</button></div>
+</div>
+<div class="coach" id="coach" hidden role="dialog" aria-live="polite" aria-labelledby="cTitle">
+  <div class="c-step" id="cStep"></div><h3 id="cTitle"></h3><p id="cBody"></p>
+  <button type="button" class="c-act" id="cAct" hidden></button>
+  <div class="c-foot"><button type="button" class="c-skip" id="cSkip">End tour</button><span></span><button type="button" class="ghost" id="cBack">Back</button><button type="button" class="go" id="cNext">Next</button></div>
+</div>
+<div class="pdfdlg" id="pdfDlg" hidden role="dialog" aria-modal="true" aria-labelledby="pdfH">
+  <header><h3 id="pdfH">Roadmap PDF</h3><button type="button" class="x" id="pdfClose" aria-label="Close">×</button></header>
+  <div class="pbody">
+    <div class="prow"><b>Products</b><span class="plinks"><button type="button" id="pdfAll">All</button><button type="button" id="pdfNone">None</button></span></div>
+    <div class="pthemes" id="pdfThemes"></div>
+    <div class="prow2"><label>From <select id="pdfFrom"></select></label><label>to <select id="pdfTo"></select></label><label class="pc"><input type="checkbox" id="pdfNext" checked> Include coming next</label></div>
+    <div class="prow2"><label>Audience <select id="pdfAud"><option value="customer">Customer-safe (no Jira keys or client names)</option><option value="internal">Internal (Jira keys, clients, New/Improved)</option></select></label></div>
+    <div class="prow2" id="pdfPlatRow" hidden><label class="pc"><input type="checkbox" id="pdfPlat" checked> Add "Platform today" from the verified code study</label></div>
+    <p class="pmsg" id="pdfMsg" aria-live="polite"></p>
+  </div>
+  <footer><button type="button" class="ghost" id="pdfCancel">Cancel</button><button type="button" class="go" id="pdfGo">Build PDF</button></footer>
+</div>
 <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="pTitle">
   <div class="band"></div>
   <div class="inner" id="pInner">
@@ -433,7 +665,7 @@ const DATA = __DATA__;
   syncTheme();
 
   const first = DATA.years[0].year;
-  $('#heroEyebrow').textContent = (CL ? CL.name + ' · ' : '') + 'Product journey · ' + first + ' to today';
+  $('#heroEyebrow').textContent = (CL && !IN ? CL.name + ' · ' : '') + 'Product journey · ' + first + ' to today';
   $('#heroTitle').textContent = DATA.copy.heroTitle;
   $('#heroLede').textContent = DATA.copy.heroLede;
   $('#footNote').textContent = DATA.copy.footNote;
@@ -462,43 +694,105 @@ const DATA = __DATA__;
 
   // chapter links
   const ch = $('#chapters');
-  if (CL) { const a = el('a', 'for', '<b>' + esc(CL.name) + '</b><small>Built with you</small>'); a.href = '#forclient'; ch.append(a); }
+  if (CL) { const a = el('a', 'for', '<b>' + esc(CL.name) + '</b><small>' + (IN ? 'Evidence' : 'Built with you') + '</small>'); a.href = '#forclient'; ch.append(a); }
   DATA.years.forEach(y => { const a = el('a', null, '<b>' + y.year + '</b><small>' + esc(y.label) + '</small>'); a.href = '#y' + y.year; ch.append(a); });
   if (DATA.next.length) { const a = el('a', null, '<b>Next</b><small>In development</small>'); a.href = '#next'; ch.append(a); }
   if (IN) { const a = el('a', null, '<b>Left out</b><small>Excluded stories</small>'); a.href = '#excluded'; ch.append(a); }
   ch.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { if (a.hash.startsWith('#y') && state.view !== 'timeline') { state.view = 'timeline'; render(); save(); } }));
 
-  // filters
-  const chips = $('#themeChips');
-  chips.append(el('span', 'lbl', 'Theme'));
-  const allChip = el('button', 'tchip', 'All'); allChip.type = 'button';
-  allChip.onclick = () => { state.theme = null; render(); }; chips.append(allChip);
-  let prevG = null;
-  DATA.themes.forEach(t => {
-    const b = el('button', 'tchip' + (prevG && prevG !== t.color ? ' sep' : ''), '<span class="dot" style="--c:var(' + t.color + ')"></span>' + esc(t.short)); b.title = t.name;
-    prevG = t.color; b.type = 'button'; b.dataset.t = t.id; b.style.setProperty('--c', 'var(' + t.color + ')');
-    b.onclick = () => { state.theme = state.theme === t.id ? null : t.id; render(); };
-    chips.append(b);
-  });
-  const wc = $('#whoChips');
+  // filters: one panel of multi-select facets (products, who it helps, years, highlights) with live counts,
+  // quick product-group chips in the bar, and removable chips for everything that is on
+  const F = {themes: new Set(), whos: new Set(), years: new Set(), kinds: new Set(), head: false, ai: false, mobile: false, client: false};
+  const GRP = GROUPS.map(([v, n]) => ({v, n, ids: DATA.themes.filter(t => t.color === v).map(t => t.id)}));
+  const YEARS = DATA.years.map(y => y.year);
   const whoUsed = WHO.filter(w => DATA.items.some(h => (h.who || []).includes(w)));
-  wc.append(el('span', 'lbl', 'Helps'));
-  const allWho = el('button', 'tchip', 'Everyone'); allWho.type = 'button'; allWho.onclick = () => { state.who = null; render(); }; wc.append(allWho);
-  whoUsed.forEach(w => { const b = el('button', 'tchip', esc(w)); b.type = 'button'; b.dataset.w = w; b.onclick = () => { state.who = state.who === w ? null : w; render(); }; wc.append(b); });
-  [['#fHead','head'],['#fAI','ai'],['#fMobile','mobile']].forEach(([id, k]) => $(id).onclick = () => { state[k] = !state[k]; render(); });
+  const FLAGS = [['head', 'Headlines only', h => h.level === 'headline'], ['ai', 'AI features', h => (h.tags || []).includes('AI')], ['mobile', 'In the app', h => (h.tags || []).includes('Mobile')]].concat(CL ? [['client', 'Requested by ' + CL.name, h => h.client]] : []);
+  const KINDS = IN ? [['new', 'New capabilities'], ['improved', 'Improvements']] : [];
+  const nFilters = () => F.themes.size + F.whos.size + F.years.size + F.kinds.size + FLAGS.filter(f => F[f[0]]).length;
+  function openFilters(){ document.body.classList.add('fopen'); $('#fPanel').hidden = false; $('#fOpen').setAttribute('aria-expanded', 'true'); const i = $('#fpBody input,#fpBody button'); if (i) i.focus(); }
+  function closeFilters(){ if ($('#fPanel').hidden) return; document.body.classList.remove('fopen'); $('#fPanel').hidden = true; $('#fOpen').setAttribute('aria-expanded', 'false'); $('#fOpen').focus(); }
+  $('#fOpen').onclick = () => $('#fPanel').hidden ? openFilters() : closeFilters();
+  $('#fClose').onclick = closeFilters; $('#fDone').onclick = closeFilters;
+  $('#fClear').onclick = () => clearAll();
+  document.addEventListener('click', e => { if (!$('#fPanel').hidden && e.target.isConnected && !e.target.closest('#fPanel,#fOpen')) closeFilters(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#fPanel').hidden) { closeFilters(); e.stopPropagation(); } }, true);
+  const toggleSet = (set, v) => { set.has(v) ? set.delete(v) : set.add(v); render(); };
+  function renderFilters(){
+    const cnt = (skip, test) => DATA.items.filter(h => passX(h, skip) && test(h)).length;
+    const body = $('#fpBody'); const keepScroll = body.scrollTop; body.innerHTML = '';
+    // products, by group
+    const sp = el('div', 'fsec', '<h4>Products<button type="button" data-clr="themes">Clear</button></h4>');
+    GRP.forEach(g => {
+      const box = el('div', 'fgrp');
+      const all = g.ids.every(i => F.themes.has(i));
+      const gh = el('label', 'fopt gh', '<input type="checkbox"' + (all ? ' checked' : '') + '><span class="dot" style="--c:var(' + g.v + ')"></span>' + esc(g.n));
+      gh.querySelector('input').onchange = () => { g.ids.forEach(i => all ? F.themes.delete(i) : F.themes.add(i)); render(); };
+      box.append(gh);
+      const opts = el('div', 'fopts');
+      g.ids.forEach(id => { const n = cnt('theme', h => h.theme === id);
+        const l = el('label', 'fopt' + (n ? '' : ' zero'), '<input type="checkbox" data-f="theme" value="' + id + '"' + (F.themes.has(id) ? ' checked' : '') + '>' + esc(TH[id].name) + '<span class="n">' + n + '</span>');
+        l.querySelector('input').onchange = () => toggleSet(F.themes, id); opts.append(l); });
+      box.append(opts); sp.append(box);
+    });
+    // who it helps
+    const sw = el('div', 'fsec', '<h4>Who it helps<button type="button" data-clr="whos">Clear</button></h4>'); const wp = el('div', 'fpills');
+    whoUsed.forEach(w => { const n = cnt('who', h => (h.who || []).includes(w)); const b = el('button', 'fpill', esc(w) + '<span class="n">' + n + '</span>'); b.type = 'button'; b.dataset.f = 'who'; b.setAttribute('aria-pressed', String(F.whos.has(w))); b.onclick = () => toggleSet(F.whos, w); wp.append(b); });
+    sw.append(wp);
+    // years
+    const sy = el('div', 'fsec', '<h4>Year shipped<button type="button" data-clr="years">Clear</button></h4>'); const yp = el('div', 'fpills');
+    YEARS.forEach(y => { const n = cnt('year', h => h.q.startsWith(y)); const b = el('button', 'fpill', y + '<span class="n">' + n + '</span>'); b.type = 'button'; b.dataset.f = 'year'; b.setAttribute('aria-pressed', String(F.years.has(y))); b.onclick = () => toggleSet(F.years, y); yp.append(b); });
+    sy.append(yp);
+    // highlights and (internal) kind
+    const sh = el('div', 'fsec', '<h4>Highlights</h4>'); const hp = el('div', 'fpills');
+    FLAGS.forEach(([k, lab, test]) => { const n = cnt(null, h => test(h)); const b = el('button', 'fpill', esc(lab) + '<span class="n">' + n + '</span>'); b.type = 'button'; b.dataset.f = 'flag'; b.setAttribute('aria-pressed', String(F[k])); b.onclick = () => { F[k] = !F[k]; render(); }; hp.append(b); });
+    KINDS.forEach(([k, lab]) => { const n = cnt('kind', h => h.kind === k); const b = el('button', 'fpill', esc(lab) + '<span class="n">' + n + '</span>'); b.type = 'button'; b.dataset.f = 'kind'; b.setAttribute('aria-pressed', String(F.kinds.has(k))); b.onclick = () => toggleSet(F.kinds, k); hp.append(b); });
+    sh.append(hp);
+    body.append(sp, sw, sy, sh); body.scrollTop = keepScroll;
+    body.querySelectorAll('[data-clr]').forEach(b => b.onclick = () => { F[b.dataset.clr].clear(); render(); });
+    // bar: count badge, group quick chips, active chips
+    const n = nFilters(); $('#fCount').hidden = !n; $('#fCount').textContent = n; $('#fOpen').classList.toggle('on', !!n);
+    const gc = $('#groupChips'); gc.innerHTML = '';
+    GRP.forEach(g => { const on = g.ids.every(i => F.themes.has(i)) && F.themes.size === g.ids.length; const b = el('button', 'gchip', '<span class="dot" style="--c:var(' + g.v + ')"></span>' + esc(g.n)); b.type = 'button'; b.style.setProperty('--c', 'var(' + g.v + ')'); b.setAttribute('aria-pressed', String(on)); b.title = 'Show only ' + g.n.toLowerCase();
+      b.onclick = () => { F.themes.clear(); if (!on) g.ids.forEach(i => F.themes.add(i)); render(); }; gc.append(b); });
+    const af = $('#activeF'); af.innerHTML = '';
+    const chip = (label, off) => { const c = el('span', 'achip', esc(label)); const x = el('button', null, '×'); x.type = 'button'; x.setAttribute('aria-label', 'Remove ' + label); x.onclick = off; c.append(x); af.append(c); };
+    const grpFull = GRP.filter(g => g.ids.every(i => F.themes.has(i)));
+    grpFull.forEach(g => chip(g.n, () => { g.ids.forEach(i => F.themes.delete(i)); render(); }));
+    [...F.themes].filter(i => !grpFull.some(g => g.ids.includes(i))).forEach(i => chip(TH[i].name, () => toggleSet(F.themes, i)));
+    F.whos.forEach(w => chip('Helps ' + w, () => toggleSet(F.whos, w)));
+    [...F.years].sort().forEach(y => chip(y, () => toggleSet(F.years, y)));
+    FLAGS.forEach(([k, lab]) => { if (F[k]) chip(lab, () => { F[k] = false; render(); }); });
+    F.kinds.forEach(k => chip(KINDS.find(x => x[0] === k)[1], () => toggleSet(F.kinds, k)));
+    if (state.q) chip('Search: ' + state.q, () => { state.q = ''; $('#q').value = ''; render(); });
+    if (af.children.length) { af.prepend(el('span', 'lbl', 'Showing')); const c = el('button', 'clr', 'Clear all'); c.type = 'button'; c.onclick = clearAll; af.append(c); }
+    af.hidden = !af.children.length;
+  }
   $('#vTimeline').onclick = () => { state.view = 'timeline'; render(); save(); };
   $('#vLanes').onclick = () => { state.view = 'lanes'; render(); save(); };
+  $('#vPlatform').onclick = () => { state.view = 'platform'; render(); };
   function save(){ try { localStorage.setItem('ep-journey', JSON.stringify({view: state.view})); } catch(e) {} }
-  function clearAll(){ Object.assign(state, {theme:null, who:null, head:false, ai:false, mobile:false, client:false, q:''}); const q = $('#q'); if (q) q.value = ''; render(); }
+  function clearAll(){ ['themes', 'whos', 'years', 'kinds'].forEach(k => F[k].clear()); FLAGS.forEach(f => F[f[0]] = false); state.q = ''; const q = $('#q'); if (q) q.value = ''; render(); }
 
   const text = h => [h.title, h.benefit, h.what, h.why, h.outcome, h.detail].join(' ');
   const qm = h => !state.q || (text(h) + ' ' + (h.src || []).map(x => x.k + ' ' + x.s).join(' ')).toLowerCase().includes(state.q);
-  const tagOk = h => (!state.ai || (h.tags || []).includes('AI')) && (!state.mobile || (h.tags || []).includes('Mobile')) && (!state.who || (h.who || []).includes(state.who));
-  const pass = h => qm(h) && tagOk(h) && (!state.client || h.client) && (!state.theme || h.theme === state.theme) && (!state.head || h.level === 'headline');
+  const themeOk = h => !F.themes.size || F.themes.has(h.theme);
+  const whoOk = h => !F.whos.size || (h.who || []).some(w => F.whos.has(w));
+  const yearOk = h => !F.years.size || (h.q && F.years.has(h.q.slice(0, 4)));
+  const kindOk = h => !F.kinds.size || F.kinds.has(h.kind);
+  const flagOk = h => FLAGS.every(([k, , test]) => !F[k] || test(h));
+  const tagOk = h => whoOk(h) && (!F.ai || (h.tags || []).includes('AI')) && (!F.mobile || (h.tags || []).includes('Mobile'));
+  function passX(h, skip){ return qm(h) && (!state.cl || CLSET.has(h.id)) && (skip === 'theme' || themeOk(h)) && (skip === 'who' || whoOk(h)) && (skip === 'year' || yearOk(h)) && (skip === 'kind' || kindOk(h)) && flagOk(h); }
+  const pass = h => passX(h);
   const badges = h => (CL && h.client ? '<span class="badge cl">Requested by ' + esc(CL.name) + '</span>' : '') + ((h.tags || []).includes('AI') ? '<span class="badge ai">AI</span>' : '') + ((h.tags || []).includes('Mobile') ? '<span class="badge">In the app</span>' : '');
   const TN = {A:'DLG: named as asking',B:'DLG: DLG case in ticket',C:'DLG: Reported-by only',S:'DLG: shared with others',W:'DLG: not a DLG request'};
   const srcList = (h, title) => !IN || !h.src || !h.src.length ? '' : '<div class="src"><div class="srch">' + (title || 'Jira sources') + ' · ' + h.src.length + '</div><ul>' +
     h.src.map(x => '<li><a href="' + IN.jira + x.k + '" target="_blank" rel="noopener">' + x.k + '</a><span>' + esc(x.s) + (x.dlg ? '<span class="tier ' + x.dlg + '" title="' + TN[x.dlg] + '">DLG ' + x.dlg + '</span>' : '') + '</span><span class="d">' + esc(x.d || x.st || '') + '</span></li>').join('') + '</ul></div>';
+  const tierB = i => IN && i.tier ? '<span class="tier big ' + i.tier + '" title="' + esc(i.tierText) + '">' + i.tier + ' · ' + esc(i.tierText) + '</span>' : '';
+  const evList = h => !IN || !h.ev ? '' : '<div class="evl"><div class="srch">Where it says this was for DLG · strongest ' + h.tier + '</div>' + h.ev.map(x =>
+    '<div class="evs"><div class="h"><a href="' + IN.jira + x.k + '" target="_blank" rel="noopener">' + x.k + '</a><span>' + esc(x.s) + '</span><span class="tier ' + x.t + '">' + x.t + ' · ' + esc(x.tt) + '</span></div>' +
+    '<div class="r">' + esc(x.why || 'No evidence note') + '</div>' +
+    '<div class="m">Reported-by field: ' + esc(x.rep || 'empty') + ' · Created by ' + esc(x.by || '?') + ' on ' + esc(x.d || '?') + (x.lab ? ' · Labels: ' + esc(x.lab) : '') + ' · ' + esc(x.st || '') + '</div>' +
+    (x.q || []).map(q => '<blockquote>' + esc(q) + '</blockquote>').join('') + '</div>').join('') + '</div>';
   const themeLbl = t => '<span class="tl"><span class="dot" style="--c:' + col(t) + '"></span>' + esc(TH[t].name) + '</span>';
   const whoRow = h => (h.who && h.who.length) ? '<div class="who">' + h.who.map(w => '<span>' + esc(w) + '</span>').join('') + '</div>' : '';
   const wwoHTML = (h, cls) => !(h.what || h.why || h.outcome) ? '' : '<div class="wwo ' + (cls || '') + '">' +
@@ -566,7 +860,7 @@ const DATA = __DATA__;
     qs.forEach(q => h1 += '<th>' + qName(q) + '</th>');
     t.innerHTML = '<thead>' + h1 + '</tr></thead>';
     const tb = el('tbody'); let n = 0;
-    DATA.themes.filter(th => !state.theme || th.id === state.theme).forEach(th => {
+    DATA.themes.filter(th => !F.themes.size || F.themes.has(th.id)).forEach(th => {
       const tr = el('tr');
       tr.innerHTML = '<th class="tname" scope="row">' + themeLbl(th.id) + '</th>';
       qs.forEach(q => {
@@ -597,27 +891,29 @@ const DATA = __DATA__;
   let lastBtn = null, cur = null, curList = [];
   function openSheet(h, nx, btn, list){
     if (btn) lastBtn = btn;
-    cur = h; curList = list || (nx ? DATA.next.filter(x => (!state.theme || x.theme === state.theme) && tagOk(x)) : seq);
+    cur = h; curList = list || (nx ? DATA.next.filter(x => themeOk(x) && tagOk(x)) : seq);
     $('#sheet').style.setProperty('--c', col(h.theme));
     $('#pMeta').innerHTML = themeLbl(h.theme) + '<span class="when">' + (nx ? 'In development' : h.q ? qName(h.q) + ' ' + h.q.slice(0, 4) : '') + '</span>' + (h.level === 'headline' && !nx ? '<span class="badge">Headline</span>' : '') + badges(h);
     $('#pTitle').textContent = h.title; $('#pBenefit').textContent = h.benefit;
     $('#pWWO').outerHTML = '<div class="wwo" id="pWWO">' + wwoHTML(h).replace(/^<div class="wwo ">|<\/div>$/g, '') + '</div>';
     $('#pWho').innerHTML = h.who && h.who.length ? '<div class="whohead">Who it helps</div>' + whoRow(h) : '';
     $('#pWho').style.display = h.who && h.who.length ? 'grid' : ''; $('#pWho').style.gap = '6px';
-    $('#pSrc').innerHTML = (IN && (h.basis || h.evidence) ? '<div class="ev">' + (h.basis === 'implied' ? '<span class="badge imp">Why is implied</span> ' : '<b>Why is stated in the stories.</b> ') + esc(h.evidence || '') + '</div>' : '') + srcList(h, nx ? 'Jira work in progress' : 'Jira sources');
+    $('#pSrc').innerHTML = evList(h) + (IN && (h.basis || h.evidence) ? '<div class="ev">' + (h.basis === 'implied' ? '<span class="badge imp">Why is implied</span> ' : '<b>Why is stated in the stories.</b> ') + esc(h.evidence || '') + '</div>' : '') + srcList(h, nx ? 'Jira work in progress' : 'Jira sources');
     const i = curList.indexOf(h);
     $('#pPrev').disabled = i <= 0; $('#pNext').disabled = i < 0 || i >= curList.length - 1;
     $('#pPos').textContent = i >= 0 ? (i + 1) + ' of ' + curList.length : '';
     $('#pInner').scrollTop = 0;
+    if (IN) enrichSheet(h);
     const was = $('#sheet').hidden;
     $('#sheet').hidden = false; $('#scrim').hidden = false;
     if (was) $('#pClose').focus();
   }
-  function step(dlt){ const i = curList.indexOf(cur); const n = curList[i + dlt]; if (n) openSheet(n, !n.q || n.q === 'next', null, curList); }
+  function step(dlt){ const i = curList.indexOf(cur); const n = curList[i + dlt]; if (!n) return; if (n.verdict) openClaim(n, null, curList); else openSheet(n, !n.q || n.q === 'next', null, curList); }
   function closeSheet(){ $('#sheet').hidden = true; $('#scrim').hidden = true; if (lastBtn && document.contains(lastBtn)) lastBtn.focus(); }
-  $('#pClose').onclick = closeSheet; $('#scrim').onclick = closeSheet;
+  $('#pClose').onclick = closeSheet; $('#scrim').onclick = () => { if (!$('#pdfDlg').hidden) { $('#pdfDlg').hidden = true; if (!$('#sheet').hidden) return; } closeSheet(); };
   $('#pPrev').onclick = () => step(-1); $('#pNext').onclick = () => step(1);
   document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && $('#pdfDlg') && !$('#pdfDlg').hidden) { $('#pdfDlg').hidden = true; if ($('#sheet').hidden) $('#scrim').hidden = true; return; }
     if ($('#sheet').hidden) return;
     if (e.key === 'Escape') closeSheet();
     else if (e.key === 'ArrowLeft') step(-1); else if (e.key === 'ArrowRight') step(1);
@@ -631,8 +927,8 @@ const DATA = __DATA__;
   function next(){
     const s = $('#next'); s.innerHTML = '';
     if (!DATA.next.length) { s.hidden = true; return; }
-    const list = DATA.next.filter(n => (!state.theme || n.theme === state.theme) && tagOk(n) && qm(n));
-    s.hidden = !list.length && !!(state.theme || state.who || state.ai || state.mobile);
+    const list = DATA.next.filter(n => themeOk(n) && tagOk(n) && qm(n));
+    s.hidden = !list.length && !!nFilters();
     s.append(el('header', null, '<div class="eyebrow">On the horizon</div><h2 id="nextH">Coming next</h2><p>' + esc(DATA.copy.nextLede) + '</p>'));
     const g = el('div', 'ngrid');
     list.forEach(n => {
@@ -647,12 +943,12 @@ const DATA = __DATA__;
     s.hidden = false; s.innerHTML = '';
     s.append(el('header', null, '<div class="eyebrow">' + esc(CL.eyebrow) + '</div><h2>' + esc(CL.title) + '</h2><p>' + esc(CL.intro) + '</p>'));
     const years = [...new Set(CL.items.map(i => i.q.slice(0, 4)))].sort();
-    const shown = CL.items.filter(i => (!state.theme || i.theme === state.theme) && (!state.who || (i.who || []).includes(state.who)));
+    const shown = CL.items.filter(i => themeOk(i) && whoOk(i) && yearOk(i));
     years.forEach(y => {
       const row = el('div', 'cyear'); row.append(el('b', null, y));
       const g = el('div', 'cgrid');
       shown.filter(i => i.q.startsWith(y)).forEach(i => {
-        const c = el('button', 'ccard', '<div class="meta">' + themeLbl(i.theme) + '<span class="when">' + qName(i.q) + ' ' + y + '</span></div><h3>' + esc(i.title) + '</h3><p>' + esc(i.benefit) + '</p>' + (i.outcome ? '<p class="why1"><b>Outcome</b>' + esc(i.outcome) + '</p>' : ''));
+        const c = el('button', 'ccard', '<div class="meta">' + themeLbl(i.theme) + '<span class="when">' + qName(i.q) + ' ' + y + '</span>' + tierB(i) + '</div><h3>' + esc(i.title) + '</h3><p>' + esc(i.benefit) + '</p>' + (i.outcome ? '<p class="why1"><b>Outcome</b>' + esc(i.outcome) + '</p>' : ''));
         c.type = 'button'; c.onclick = () => openSheet(i, false, c, shown); g.append(c);
       });
       if (g.children.length) { row.append(g); s.append(row); }
@@ -660,7 +956,7 @@ const DATA = __DATA__;
     if (CL.next.length) {
       const n = el('div', 'cnext', '<span class="status">In development</span><h3>' + esc(CL.nextTitle) + '</h3>');
       const g = el('div', 'cgrid');
-      CL.next.forEach(i => { const c = el('button', 'ccard', '<div class="meta">' + themeLbl(i.theme) + '</div><h3>' + esc(i.title) + '</h3><p>' + esc(i.benefit) + '</p>' + (i.outcome ? '<p class="why1"><b>Outcome</b>' + esc(i.outcome) + '</p>' : ''));
+      CL.next.forEach(i => { const c = el('button', 'ccard', '<div class="meta">' + themeLbl(i.theme) + tierB(i) + '</div><h3>' + esc(i.title) + '</h3><p>' + esc(i.benefit) + '</p>' + (i.outcome ? '<p class="why1"><b>Outcome</b>' + esc(i.outcome) + '</p>' : ''));
         c.type = 'button'; c.onclick = () => openSheet(i, true, c, CL.next); g.append(c); });
       n.append(g); s.append(n);
     }
@@ -669,7 +965,7 @@ const DATA = __DATA__;
   const RN = {bugfix:'Stories that fixed or restored behaviour (Story type, not Jira Bugs)', test:'Tests, QA and CI', internal:'Internal tooling, chores and removals', refactor:'Rewrites and migrations with no visible change', thin:'Too little detail to tell what was delivered'};
   function excluded(){
     const s = $('#excluded'); if (!IN) return; s.hidden = false; s.innerHTML = '';
-    const rows = DATA.excluded.filter(x => (!state.theme || x.theme === state.theme) && (!state.q || (x.k + ' ' + x.s).toLowerCase().includes(state.q)));
+    const rows = DATA.excluded.filter(x => themeOk(x) && (!state.q || (x.k + ' ' + x.s).toLowerCase().includes(state.q)));
     s.append(el('h2', null, 'Left off the roadmap'));
     s.append(el('p', null, 'Story-type tickets finished in the same period that were judged not customer-facing, grouped by reason. Jira Bugs, Tasks, Sub-tasks and Epics are not part of this roadmap at all. Theme filter and search apply. Open a group to review it.'));
     if (DATA.removed && DATA.removed.length) {
@@ -685,27 +981,469 @@ const DATA = __DATA__;
       dd.append(ul); s.append(dd);
     });
   }
-  if (CL) { const b = $('#fClient'); b.hidden = false; b.textContent = 'Requested by ' + CL.name; b.onclick = () => { state.client = !state.client; render(); }; }
   if (IN) { const q = $('#q'); q.hidden = false; let t; q.oninput = () => { clearTimeout(t); t = setTimeout(() => { state.q = q.value.trim().toLowerCase(); render(); }, 200); }; }
 
   function render(){
     seq = [];
     if (IN) excluded();
-    $('#fClient').setAttribute('aria-pressed', String(state.client));
     if (CL) client();
-    allChip.setAttribute('aria-pressed', String(!state.theme));
-    chips.querySelectorAll('[data-t]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.t === state.theme)));
-    allWho.setAttribute('aria-pressed', String(!state.who));
-    wc.querySelectorAll('[data-w]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.w === state.who)));
-    $('#fHead').setAttribute('aria-pressed', String(state.head)); $('#fAI').setAttribute('aria-pressed', String(state.ai)); $('#fMobile').setAttribute('aria-pressed', String(state.mobile));
-    $('#vTimeline').setAttribute('aria-pressed', String(state.view === 'timeline')); $('#vLanes').setAttribute('aria-pressed', String(state.view === 'lanes'));
-    $('#timeline').hidden = state.view !== 'timeline'; $('#lanes').hidden = state.view !== 'lanes';
-    $('#fHead').hidden = state.view === 'lanes';
+    renderFilters();
+    $('#vTimeline').setAttribute('aria-pressed', String(state.view === 'timeline')); $('#vLanes').setAttribute('aria-pressed', String(state.view === 'lanes')); $('#vPlatform').setAttribute('aria-pressed', String(state.view === 'platform'));
+    $('#timeline').hidden = state.view !== 'timeline'; $('#lanes').hidden = state.view !== 'lanes'; $('#platform').hidden = state.view !== 'platform';
+    $('#fOpen').hidden = $('#groupChips').hidden = state.view === 'platform'; if (state.view === 'platform') { $('#activeF').hidden = true; $('#fPanel').hidden = true; } $('#forclient').hidden = !CL || state.view === 'platform'; $('#next').style.display = state.view === 'platform' ? 'none' : '';
+    if (state.view === 'platform') { platform(); $('#count').textContent = ''; $('#excluded').hidden = true; return; }
     const n = state.view === 'timeline' ? timeline() : lanes();
-    const filtered = state.theme || state.who || state.head || state.ai || state.mobile || state.client || state.q;
-    $('#count').textContent = filtered ? n + ' shown' : '';
+    const filtered = state.cl || nFilters() || state.q;
+    $('#count').textContent = filtered ? n + ' of ' + DATA.items.length + ' features' : DATA.items.length + ' features';
     next();
   }
+  /* ---------- internal: companion data, platform today, persona, Ask the roadmap ---------- */
+  let ASK = null, askLoading = null;
+  const ITEM = {}; DATA.items.forEach(h => ITEM[h.id] = h); DATA.next.forEach(n => ITEM[n.id] = n);
+  const CLAIM = {}, DEM = {}, CLI = {}, STORY = {};
+  DATA.items.forEach(h => (h.src || []).forEach(x => STORY[x.k] = {k: x.k, s: x.s, rm: h.id, d: x.d}));
+  function loadAsk(){
+    if (ASK) return Promise.resolve(ASK);
+    if (!askLoading) askLoading = fetch('ask.json').then(r => { if (!r.ok) throw new Error('ask.json ' + r.status); return r.json(); }).then(d => {
+      ASK = d; d.baseline.claims.forEach(c => CLAIM[c.id] = c); d.demand.forEach(x => DEM[x.id] = x);
+      d.clients.forEach(c => { CLI[c.name] = c; c.stories.forEach(s => { if (!STORY[s.k]) STORY[s.k] = s; }); });
+      return d;
+    });
+    return askLoading;
+  }
+  // --- text search (no AI): token overlap with light stemming and synonyms, fields weighted ---
+  const STOP = new Set('a an the and or of to for in on at by with from is are be can we do does did our us it this that what which how when who have has any all about into as not no yes there their them you your i me my'.split(' '));
+  const SYN = {meeting:['appointment','schedule'],appointment:['meeting'],export:['download','report'],download:['export'],attendee:['visitor','participant','delegate'],visitor:['attendee','participant'],participant:['attendee','visitor','account'],exhibitor:['supplier','company'],badge:['ticket','qr'],lead:['scan','leads'],scan:['lead','scanner'],app:['mobile','ios','android'],mobile:['app'],login:['sign','signin','authentication','otp'],floorplan:['floor','map','stand'],floor:['floorplan'],sponsor:['sponsorship','banner'],session:['agenda','speaker','programme'],agenda:['session'],email:['notification','campaign'],notification:['email','push'],payment:['basket','checkout','invoice','ticketing'],registration:['register','form','signup'],ai:['recommendation','matchmaking','assistant'],matchmaking:['recommendation','ai'],chat:['message','messaging'],message:['chat']};
+  const stem = w => { w = w.replace(/[^a-z0-9]/g, ''); if (w.length > 4) { w = w.replace(/ies$/, 'y'); if (/(ss|x|ch|sh)es$/.test(w)) w = w.slice(0, -2); else if (/[^s]s$/.test(w)) w = w.slice(0, -1); if (w.length > 5) w = w.replace(/(ing|ed)$/, ''); } return w; };
+  const toks = q => String(q || '').toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 1 && !STOP.has(w));
+  // query -> groups of stems (each word plus its synonyms); a doc must cover most groups; rarer words weigh more
+  function qgroups(q){ return toks(q).map(w => { const g = new Set([stem(w)]); g.orig = stem(w); (SYN[w] || SYN[stem(w)] || []).forEach(x => g.add(stem(x))); return g; }); }
+  const IDX = new Map();
+  function index(key, docs, fieldsOf){
+    if (IDX.has(key)) return IDX.get(key);
+    const rows = docs.map(d => ({d, f: fieldsOf(d).map(([t, w]) => [new Set(toks(t).map(stem)), w])}));
+    const df = new Map(); rows.forEach(r => { const all = new Set(); r.f.forEach(([ws]) => ws.forEach(x => all.add(x))); all.forEach(x => df.set(x, (df.get(x) || 0) + 1)); });
+    const res = {rows, df, n: rows.length}; IDX.set(key, res); return res;
+  }
+  function rank(ix, q, n){
+    const gs = qgroups(q); if (!gs.length) return [];
+    const idf = x => Math.log(1 + ix.n / (1 + (ix.df.get(x) || 0)));
+    const need = gs.length >= 3 ? Math.ceil(gs.length * 0.6) : gs.length >= 2 ? 2 : 1;
+    const out = [], weak = [];
+    for (const r of ix.rows) {
+      let sc = 0, hit = 0;
+      for (const g of gs) { let best = 0; for (const x of g) for (const [ws, w] of r.f) if (ws.has(x)) best = Math.max(best, w * idf(x)); if (best) { hit++; sc += best; } }
+      if (hit >= need) out.push([r.d, sc * hit / gs.length]);
+      else if (hit && gs.length === 2 && hit === 1) { let rare = false; for (const g of gs) for (const x of [g.orig]) if ((ix.df.get(x) || 0) > 0 && ix.df.get(x) < ix.n * 0.015) for (const [ws] of r.f) if (ws.has(x)) rare = true; if (rare) weak.push([r.d, sc * hit / gs.length]); }
+    }
+    out.sort((a, b) => b[1] - a[1]); if (out.length < n) out.push(...weak.sort((a, b) => b[1] - a[1]).slice(0, n - out.length));
+    return out.slice(0, n).map(x => x[0]);
+  }
+  const whenOf = h => h.q && h.q !== 'next' ? qName(h.q) + ' ' + h.q.slice(0, 4) : 'In development';
+  const searchRoadmap = (q, n) => rank(index('rm', [...DATA.items, ...DATA.next], h => [[h.title, 6], [h.benefit, 3], [h.what, 2], [h.why, 1], [h.outcome, 1], [h.detail, 1], [(h.src || []).map(x => x.s).join(' '), 1]]), q, n || 10);
+  const searchPlatform = (q, n) => rank(index('pf', ASK.baseline.claims, c => [[c.claim, 5], [c.section, 2], [c.product, 2], [c.evidence, 0.7], [c.note, 0.7]]), q, n || 10);
+  const searchDemand = (q, n) => rank(index('dm', ASK.demand, d => [[d.name, 5], [d.what, 2], [d.why, 1], [d.product, 1]]), q, n || 8);
+  function findClient(name){
+    const t = String(name || '').toLowerCase().trim(); if (!t) return null;
+    return ASK.clients.find(c => c.name.toLowerCase() === t) || ASK.clients.find(c => c.name.toLowerCase().includes(t)) || ASK.clients.find(c => t.includes(c.name.toLowerCase().split(' ')[0]));
+  }
+  const clientsOf = id => ASK ? ASK.clients.filter(c => c.rm.includes(id) || c.nx.includes(id)).map(c => c.name) : [];
+
+  // --- Platform today view ---
+  const VC = {CONFIRMED:'var(--tA-i)', 'CODE-ONLY':'var(--tS-i)', PARTIAL:'var(--tC-i)', CONTRADICTED:'var(--tW-i)', 'NOT-IN-CODE':'var(--ink-3)', UNKNOWN:'var(--line-2)'};
+  const VT = {CONFIRMED:'In the code', 'CODE-ONLY':'In the code, undocumented', PARTIAL:'Partly: see evidence', CONTRADICTED:'Code differs from the docs', 'NOT-IN-CODE':'Documented, not built', UNKNOWN:'Not settled'};
+  const plat = {file: null, q: '', v: null};
+  async function platform(){
+    const root = $('#platform'); root.innerHTML = '<p class="empty">Loading the platform baseline…</p>';
+    try { await loadAsk(); } catch (e) { root.innerHTML = '<p class="empty">The platform baseline could not be loaded.</p>'; return 0; }
+    root.innerHTML = '';
+    const top = el('div', 'plat-top', '<div class="eyebrow">Platform today · verified baseline</div><h2 style="font-size:var(--t-3xl)">What the platform does, checked against the code</h2><p>Every claim below comes from the knowledge base\'s code reconciliation study (' + esc(ASK.baseline.snapshot) + '). It is the current platform, including things built before 2023. The roadmap shows what changed since 2023; a claim with roadmap links was touched by those changes.</p>');
+    root.append(top);
+    const tools = el('div', 'plat-tools');
+    const qi = el('input', 'search'); qi.type = 'search'; qi.id = 'platQ'; qi.placeholder = 'Search the platform baseline'; qi.value = plat.q; qi.setAttribute('aria-label', 'Search the platform baseline');
+    let t; qi.oninput = () => { clearTimeout(t); t = setTimeout(() => { plat.q = qi.value.trim(); platform(); setTimeout(() => { const n = $('#platQ'); if (n) { n.focus(); n.setSelectionRange(n.value.length, n.value.length); } }, 0); }, 250); };
+    tools.append(qi);
+    Object.keys(VT).filter(v => v !== 'UNKNOWN').forEach(v => { const b = el('button', 'tchip', '<span class="vd ' + v + '">' + v + '</span>'); b.type = 'button'; b.setAttribute('aria-pressed', String(plat.v === v)); b.title = VT[v]; b.onclick = () => { plat.v = plat.v === v ? null : v; platform(); }; tools.append(b); });
+    root.append(tools);
+    let claims = ASK.baseline.claims.filter(c => !plat.v || c.verdict === plat.v);
+    if (plat.q) { const hits = new Set(searchPlatform(plat.q, 400).map(c => c.id)); claims = claims.filter(c => hits.has(c.id)); }
+    if (!plat.file && !plat.q) {
+      const g = el('div', 'pgrid');
+      ASK.baseline.products.forEach(p => {
+        const cs = claims.filter(c => c.file === p.file); if (!cs.length) return;
+        const cnt = {}; cs.forEach(c => cnt[c.verdict] = (cnt[c.verdict] || 0) + 1);
+        const rmN = cs.filter(c => c.rm && c.rm.length).length;
+        const b = el('button', 'pcard', '<h3>' + esc(p.title) + '</h3><div class="bar2">' + Object.keys(VC).map(v => cnt[v] ? '<i style="flex:' + cnt[v] + ';background:' + VC[v] + '"></i>' : '').join('') + '</div><small>' + cs.length + ' claims · ' + (cnt.CONFIRMED || 0) + ' confirmed' + (rmN ? ' · ' + rmN + ' changed since 2023' : '') + '</small>');
+        b.type = 'button'; b.onclick = () => { plat.file = p.file; platform(); root.scrollIntoView({block: 'start'}); }; g.append(b);
+      });
+      root.append(g); return claims.length;
+    }
+    if (plat.file) { const back = el('button', 'tchip', '← All areas'); back.type = 'button'; back.onclick = () => { plat.file = null; platform(); }; tools.prepend(back); claims = claims.filter(c => c.file === plat.file); root.append(el('h3', null, esc((ASK.baseline.products.find(p => p.file === plat.file) || {}).title || ''))); }
+    const ul = el('ul', 'clist');
+    claims.slice(0, 400).forEach(c => { const li = el('li'); const b = el('button', null, '<span class="vd ' + c.verdict + '">' + c.verdict + '</span><span>' + esc(clip(c.claim, 220)) + '<span class="sec">' + esc(c.product) + ' · ' + esc(c.section) + '</span></span>' + (c.rm && c.rm.length ? '<span class="rmn">' + c.rm.length + ' roadmap</span>' : '<span></span>'));
+      b.type = 'button'; b.onclick = () => openClaim(c, b, claims); li.append(b); ul.append(li); });
+    root.append(ul);
+    if (!claims.length) root.append(el('p', 'empty', 'No claims match. Try other words.'));
+    return claims.length;
+  }
+  function openClaim(c, btn, list){
+    lastBtn = btn || lastBtn; cur = c; curList = list || [c];
+    $('#sheet').style.setProperty('--c', 'var(--head)');
+    $('#pMeta').innerHTML = '<span class="tl">' + esc(c.product) + '</span><span class="vd ' + c.verdict + '">' + c.verdict + '</span>';
+    $('#pTitle').textContent = clip(c.claim, 400);
+    $('#pBenefit').textContent = VT[c.verdict] + (c.section ? ' · ' + c.section : '');
+    $('#pWWO').innerHTML = (c.evidence ? '<div class="w what"><h4>' + (c.verdict === 'CONFIRMED' ? 'Code evidence' : 'What the code actually does') + '</h4><p>' + esc(c.evidence) + '</p></div>' : '') + (c.note ? '<div class="w why"><h4>Note</h4><p>' + esc(c.note) + '</p></div>' : '');
+    $('#pWho').innerHTML = c.rm && c.rm.length ? '<div class="bo"><div class="srch">Changed on the roadmap since 2023</div>' + c.rm.filter(i => ITEM[i]).map(i => '<button type="button" data-rm="' + i + '"><span class="kind ' + (ITEM[i].kind || '') + '">' + whenOf(ITEM[i]) + '</span><span>' + esc(ITEM[i].title) + '</span></button>').join('') + '</div>' : '';
+    $('#pWho').querySelectorAll('[data-rm]').forEach(b => b.onclick = () => openSheet(ITEM[b.dataset.rm], ITEM[b.dataset.rm].q === 'next', b));
+    $('#pSrc').innerHTML = '<div class="ev"><b>Source:</b> ExpoPlatform knowledge base, kb/legacy/platform/init/kb/' + esc(c.file) + ':' + c.line + '. Verified as of the study\'s code snapshot (' + esc(ASK.baseline.snapshot) + '); behaviour may have changed since.</div>';
+    const i = curList.indexOf(c); $('#pPrev').disabled = i <= 0; $('#pNext').disabled = i < 0 || i >= curList.length - 1; $('#pPos').textContent = i >= 0 ? (i + 1) + ' of ' + curList.length : '';
+    $('#pInner').scrollTop = 0; const was = $('#sheet').hidden; $('#sheet').hidden = false; $('#scrim').hidden = false; if (was) $('#pClose').focus();
+  }
+  async function enrichSheet(h){
+    if (!IN || !h || !ITEM[h.id]) return;
+    try { await loadAsk(); } catch (e) { return; }
+    if (cur !== h) return;
+    const cl = clientsOf(h.id);
+    const bo = (h.buildsOn || []).map(i => CLAIM[i]).filter(Boolean);
+    let html = '';
+    if (h.kind === 'new' || h.kind === 'improved') html += '<div class="ev"><span class="kind ' + h.kind + '">' + (h.kind === 'new' ? 'New capability' : 'Improvement to an existing capability') + '</span> ' + esc(h.kindWhy || '') + ' <em style="color:var(--ink-3)">(AI-classified from the stories, not yet reviewed)</em></div>';
+    if (bo.length) html += '<div class="bo"><div class="srch">Builds on (platform today)</div>' + bo.map(c => '<button type="button" data-cl="' + esc(c.id) + '"><span class="vd ' + c.verdict + '">' + c.verdict + '</span><span>' + esc(clip(c.claim, 160)) + '</span></button>').join('') + '</div>';
+    if (cl.length) html += '<div class="ev"><b>Clients on these stories:</b> ' + cl.map(esc).join(', ') + '</div>';
+    const box = el('div'); box.innerHTML = html; $('#pSrc').prepend(box);
+    box.querySelectorAll('[data-cl]').forEach(b => b.onclick = () => openClaim(CLAIM[b.dataset.cl], b));
+  }
+
+  // --- persona bar: pick a client (filters the page, no AI) and build a briefing (AI) ---
+  state.cl = null; let CLSET = new Set();
+  function setClient(c){
+    state.cl = c ? c.name : null; CLSET = new Set(c ? [...c.rm, ...c.nx] : []);
+    const bar = $('#clientBar');
+    bar.hidden = !c;
+    if (c) { bar.innerHTML = '<span>Showing what we built with <b>' + esc(c.name) + '</b>' + (c.tier ? ' (Tier ' + c.tier + ')' : '') + ': ' + c.rm.length + ' shipped features, ' + c.nx.length + ' in development, ' + c.dm.length + ' open requests.</span>'; const x = el('button', null, 'Show everything'); x.type = 'button'; x.onclick = () => { $('#pClient').value = ''; setClient(null); }; bar.append(x); }
+    if (state.view === 'platform') state.view = 'timeline';
+    render();
+  }
+  function persona(){
+    const f = $('#persona'); if (!IN || !f) return;
+    f.hidden = false; $('#personaNote').hidden = false;
+    loadAsk().then(d => { $('#clientList').innerHTML = d.clients.map(c => '<option value="' + esc(c.name) + '">' + (c.tier ? 'Tier ' + c.tier : '') + '</option>').join(''); }).catch(() => {});
+    $('#pClient').onchange = () => { if (!ASK) return; const c = findClient($('#pClient').value); if (c) { $('#pClient').value = c.name; setClient(c); } };
+    f.onsubmit = async e => { e.preventDefault(); await loadAsk(); const c = findClient($('#pClient').value); if (!c) { $('#personaNote').textContent = 'Pick a client from the list.'; return; }
+      $('#pClient').value = c.name; setClient(c); const role = $('#pRole').value;
+      openAsk(); ask('Build my briefing. I work with ' + c.name + ' as ' + role + '.', {client: c.name, role}); };
+  }
+
+  // --- Ask the roadmap (sample capability) ---
+  let sampleFn = null, busy = null, turns = [];
+  const ST = {'new':'New since 2023', improved:'Improved since 2023', platform:'Part of the platform', partial:'Partly in the platform', 'not-built':'Documented, not built', 'in-dev':'In development', asked:'Asked for, not built', client:'For this client', 'not-found':'Not found'};
+  const RULES = () => 'You are "Ask the roadmap", a beta assistant inside ExpoPlatform\'s internal Product Journey page. Staff ask about the product. Answer ONLY from the page tools; never from your own knowledge of ExpoPlatform or other products.\n\n' +
+    'Sources behind the tools:\n1. Roadmap: features shipped Jan 2023 to Sep 2026 (each has a quarter, and a kind: new capability or improvement), plus in-development items. It covers only what CHANGED since 2023.\n' +
+    '2. Platform baseline: claims from the knowledge base\'s code reconciliation study (' + (ASK ? ASK.baseline.snapshot : 'Sep 2026 snapshot') + '). Verdicts: CONFIRMED = the code does this; CODE-ONLY = the code does this though the docs never said so; PARTIAL = partly, and the evidence says what it really does; CONTRADICTED = the code does something different (the evidence says what); NOT-IN-CODE = documented but never built. This covers the WHOLE current platform, including things built before 2023.\n' +
+    '3. Clients: which clients each story was built for, and their open requests.\n4. Open requests: what customers asked for that is not built (demand clusters).\n\n' +
+    'Method: for any "do we have / can the platform / did we build" question, ALWAYS call search_roadmap AND search_platform, and try at least two phrasings or synonyms before concluding nothing exists. Something missing from the roadmap may still be part of the platform: check the baseline. Open items with get_roadmap_item when you need their detail. Use search_requests when asked what customers want or when nothing is built. Use client_overview for anything about a client.\n\n' +
+    'Rules: Never say "we don\'t have this" or "this doesn\'t exist". If neither source has it, use status not-found and say it was not found in the roadmap or the verified baseline, and that the product team can confirm. PARTIAL: state what the evidence says the code does. CONTRADICTED or NOT-IN-CODE: say the docs describe it but the code does not (or does it differently). Quote quarters exactly as the tools give them. No numbers, dates, clients or behaviour that are not in tool results. No promises about the future beyond in-development items. British English, plain and short.\n\n' +
+    'Reply with ONLY one JSON object: {"blocks":[{"status":"new|improved|platform|partial|not-built|in-dev|asked|client|not-found","text":"1-3 sentences","cites":["ids exactly as the tools returned them"]}],"followups":["up to 3 short follow-up questions"]}. 2 to 6 blocks. Every block except not-found must cite at least one id a tool returned in this conversation.';
+  const TOOLS = prog => [
+    {name: 'search_roadmap', description: 'Search roadmap features shipped since 2023 and in-development items. Returns up to 10 {id, title, when, kind, theme, benefit}. Try several phrasings.', inputSchema: {type: 'object', properties: {query: {type: 'string'}}, required: ['query']},
+      execute: i => { prog('Searching the roadmap for "' + i.query + '"'); return searchRoadmap(i.query, 10).map(h => ({id: h.id, title: h.title, when: whenOf(h), kind: h.kind || (h.q === 'next' ? 'in development' : null), theme: TH[h.theme].name, benefit: h.benefit})); }},
+    {name: 'get_roadmap_item', description: 'Full detail of one roadmap item by id: what, why, outcome, who it helps, the Jira stories, the clients on those stories, and the platform-baseline claims it builds on.', inputSchema: {type: 'object', properties: {id: {type: 'string'}}, required: ['id']},
+      execute: i => { const h = ITEM[String(i.id)]; if (!h) throw new Error('No roadmap item with id ' + i.id); prog('Reading "' + h.title + '"'); return {id: h.id, title: h.title, when: whenOf(h), kind: h.kind || null, kindWhy: h.kindWhy || null, benefit: h.benefit, what: h.what, why: h.why, outcome: h.outcome, who: h.who, stories: (h.src || []).slice(0, 10).map(x => ({id: x.k, title: x.s, done: x.d || x.st})), clients: clientsOf(h.id), buildsOn: (h.buildsOn || []).map(c => CLAIM[c]).filter(Boolean).map(c => ({id: c.id, claim: c.claim, verdict: c.verdict}))}; }},
+    {name: 'search_platform', description: 'Search the verified platform baseline (the whole current platform, from the code reconciliation study). Returns up to 10 {id, area, section, claim, verdict, evidence}. Try several phrasings.', inputSchema: {type: 'object', properties: {query: {type: 'string'}}, required: ['query']},
+      execute: i => { prog('Searching the platform baseline for "' + i.query + '"'); return searchPlatform(i.query, 10).map(c => ({id: c.id, area: c.product, section: c.section, claim: c.claim, verdict: c.verdict, evidence: (c.evidence || '').slice(0, 260), changedOnRoadmap: (c.rm || []).slice(0, 4)})); }},
+    {name: 'search_requests', description: 'Search open customer requests (demand clusters, not built or partly built). Returns up to 8 {id, name, what, product, requests, askedBy (client names with tiers), builtOverlap}.', inputSchema: {type: 'object', properties: {query: {type: 'string'}}, required: ['query']},
+      execute: i => { prog('Searching open requests for "' + i.query + '"'); return searchDemand(i.query, 8).map(d => ({id: d.id, name: d.name, what: d.what, product: d.product, requests: d.n, askedBy: d.cust.slice(0, 8).map(c => c.n + (c.t ? ' (Tier ' + c.t + ')' : '')), builtOverlap: d.built})); }},
+    {name: 'client_overview', description: 'Everything held for one client: tier, roadmap features built with their stories, in-development items, other in-progress stories, and their open requests. Pass the client name.', inputSchema: {type: 'object', properties: {client: {type: 'string'}}, required: ['client']},
+      execute: i => { const c = findClient(i.client); if (!c) throw new Error('No client matching ' + i.client + '. Known clients include: ' + ASK.clients.slice(0, 15).map(x => x.name).join(', ')); prog('Reading the account for ' + c.name);
+        return {client: c.name, tier: c.tier, builtWithThem: c.rm.filter(x => ITEM[x]).map(x => ({id: x, title: ITEM[x].title, when: whenOf(ITEM[x]), kind: ITEM[x].kind || null})).slice(0, 40), inDevelopment: c.nx.filter(x => ITEM[x]).map(x => ({id: x, title: ITEM[x].title})),
+          otherOpenStories: c.stories.filter(s => !s.rm && s.stage !== 'Done').slice(0, 12).map(s => ({id: s.k, title: s.s, stage: s.stage})), openRequests: c.dm.slice(0, 12).map(x => DEM[x]).filter(Boolean).map(d => ({id: d.id, name: d.name}))}; }},
+  ];
+  const STX = {'new': 'A roadmap feature shipped since January 2023 that launched a capability the platform did not have before.',
+    improved: 'A roadmap feature shipped since January 2023 that changed or extended something the platform already had.',
+    platform: 'Part of the platform today: the knowledge base\'s code study confirms the code does this (Sep 2026 snapshot). It may predate the roadmap.',
+    partial: 'Partly in the platform: the code study found it only partly as documented. The source says what the code really does.',
+    'not-built': 'Documented but not built as described: the code study found the code does not do this, or does it differently.',
+    'in-dev': 'In development: work in progress with no fixed date. Scope may change.',
+    asked: 'Asked for by customers but not built: an open request on the Product Demand Map.',
+    client: 'Tied to this client: the Jira stories behind it name them.',
+    'not-found': 'Not found in the roadmap or the verified baseline. That does not mean the platform lacks it: the product team can confirm.'};
+  const clip = (t, n) => { t = String(t || '').replace(/[`*]/g, '').replace(/\s+/g, ' ').trim(); return t.length > n ? t.slice(0, n - 1) + '…' : t; };
+  function citeChip(id){ const k = kindOfCite(id);
+    if (k === 'rm') { const h = ITEM[id]; return '<span class="kind ' + (h.q === 'next' ? '' : h.kind || '') + '">' + esc(whenOf(h)) + '</span><span class="t">' + esc(clip(h.title, 60)) + '</span>'; }
+    if (k === 'pf') { const c = CLAIM[id]; return '<span class="vd ' + c.verdict + '">' + c.verdict + '</span><span class="t">' + esc(clip(c.claim, 60)) + '</span>'; }
+    if (k === 'dm') return '<span class="kind">Request</span><span class="t">' + esc(clip(DEM[id].name, 60)) + '</span>';
+    return '<span class="kind">' + esc(id) + '</span><span class="t">' + esc(clip(STORY[id] && STORY[id].s, 50)) + '</span>'; }
+  const kindOfCite = id => ITEM[id] ? 'rm' : CLAIM[id] ? 'pf' : DEM[id] ? 'dm' : STORY[id] ? 'st' : null;
+  const citeLabel = id => { const k = kindOfCite(id); return k === 'rm' ? ITEM[id].title + ' · ' + whenOf(ITEM[id]) : k === 'pf' ? CLAIM[id].verdict + ' · ' + clip(CLAIM[id].claim, 300) : k === 'dm' ? 'Request · ' + DEM[id].name : k === 'st' ? id + ' · ' + (STORY[id].s || '') : id; };
+  function openCite(id, b){ const k = kindOfCite(id); if (k === 'rm') openSheet(ITEM[id], ITEM[id].q === 'next', b); else if (k === 'pf') openClaim(CLAIM[id], b); else if (k === 'dm') openDemand(DEM[id], b); else if (k === 'st') window.open(IN.jira + id, '_blank', 'noopener'); }
+  function openDemand(d, btn){
+    lastBtn = btn; cur = d; curList = [d];
+    $('#sheet').style.setProperty('--c', 'var(--why)');
+    $('#pMeta').innerHTML = '<span class="st asked">Asked for, not built</span><span class="tl">' + esc(d.product || '') + '</span>';
+    $('#pTitle').textContent = d.name; $('#pBenefit').textContent = d.what || '';
+    $('#pWWO').innerHTML = d.why ? '<div class="w why"><h4>Why they ask</h4><p>' + esc(d.why) + '</p></div>' : '';
+    $('#pWho').innerHTML = '<div class="ev"><b>Asked by:</b> ' + d.cust.map(c => esc(c.n) + (c.t ? ' (Tier ' + c.t + ')' : '')).join(', ') + ' · ' + d.n + ' request(s). <b>Built overlap:</b> ' + esc(d.built || 'none recorded') + '</div>';
+    $('#pSrc').innerHTML = '<div class="ev">From the Product Demand Map (open EP feature requests, open stories and intake pages).</div>';
+    $('#pPrev').disabled = true; $('#pNext').disabled = true; $('#pPos').textContent = '';
+    $('#sheet').hidden = false; $('#scrim').hidden = false; $('#pClose').focus();
+  }
+  function openAsk(){ $('#ask').hidden = false; $('#askFab').hidden = true; document.body.classList.add('asking'); setTimeout(() => $('#askIn').focus(), 0); }
+  function closeAsk(){ $('#ask').hidden = true; $('#askFab').hidden = false; document.body.classList.remove('asking'); }
+  function render_answer(box, res, seen){
+    box.innerHTML = '';
+    const blocks = Array.isArray(res && res.blocks) ? res.blocks : [];
+    let dropped = 0;
+    blocks.forEach(b => {
+      const status = ST[b.status] ? b.status : null;
+      const cites = (Array.isArray(b.cites) ? b.cites : []).map(String).filter(id => seen.has(id) && kindOfCite(id));
+      const need = {'new':'rm', improved:'rm', 'in-dev':'rm', platform:'pf', partial:'pf', 'not-built':'pf', asked:'dm'}[status];
+      // the label follows the source, not the model: verdict of the first cited claim, kind of the first cited roadmap item
+      const pf1 = cites.find(id => kindOfCite(id) === 'pf'), rm1 = cites.find(id => kindOfCite(id) === 'rm');
+      let fixed = status;
+      const RANKV = {CONFIRMED: 0, 'CODE-ONLY': 0, PARTIAL: 1, CONTRADICTED: 2, 'NOT-IN-CODE': 2, UNKNOWN: 3};
+      const best = cites.filter(id => kindOfCite(id) === 'pf').map(id => CLAIM[id].verdict).sort((x, y) => RANKV[x] - RANKV[y])[0];
+      if (['platform', 'partial', 'not-built'].includes(status) && best) fixed = {CONFIRMED: 'platform', 'CODE-ONLY': 'platform', PARTIAL: 'partial', CONTRADICTED: 'not-built', 'NOT-IN-CODE': 'not-built'}[best] || status;
+      if (['new', 'improved', 'in-dev'].includes(status) && rm1) fixed = ITEM[rm1].q === 'next' ? 'in-dev' : ITEM[rm1].kind === 'new' ? 'new' : ITEM[rm1].kind === 'improved' ? 'improved' : status;
+      if (fixed !== status) { b.status = fixed; }
+      const ok = fixed && b.text && (status === 'not-found' || (cites.length && (status === 'client' || !need || cites.some(id => kindOfCite(id) === need || (status === 'in-dev' && kindOfCite(id) === 'st')))));
+      if (!ok) { dropped++; return; }
+      const d = el('div', 'blk');
+      const sb = el('button', 'st ' + fixed, ST[fixed]); sb.type = 'button'; sb.setAttribute('aria-expanded', 'false'); sb.title = 'What this label means';
+      const sx = el('p', 'stx', esc(STX[fixed]) + (cites.length ? ' Source' + (cites.length > 1 ? 's' : '') + ': select one below to open it.' : ''));
+      sx.hidden = true; sb.onclick = () => { sx.hidden = !sx.hidden; sb.setAttribute('aria-expanded', String(!sx.hidden)); };
+      d.append(sb, sx, el('p', null, esc(b.text)));
+      if (cites.length) { const cs = el('div', 'cites'); cites.forEach(id => { const c = el('button', 'cite', citeChip(id)); c.type = 'button'; c.title = citeLabel(id); c.onclick = () => openCite(id, c); cs.append(c); }); d.append(cs); }
+      box.append(d);
+    });
+    if (!box.children.length) box.append(el('div', 'blk', '<span class="st not-found">Not found</span><p>I could not give an answer backed by the roadmap or the verified platform baseline. That does not mean the platform lacks it: please check with the product team.</p>'));
+    if (dropped) box.append(el('p', 'warn', dropped + ' statement' + (dropped > 1 ? 's were' : ' was') + ' removed because ' + (dropped > 1 ? 'they were' : 'it was') + ' not backed by a source.'));
+    const fu = (res && Array.isArray(res.followups) ? res.followups : []).slice(0, 3).filter(x => typeof x === 'string' && x.trim());
+    if (fu.length) { const f = el('div', 'fu'); fu.forEach(q => { const b = el('button', null, esc(q)); b.type = 'button'; b.onclick = () => ask(q); f.append(b); }); box.append(f); }
+  }
+  async function ask(q, brief){
+    q = String(q || '').trim(); if (!q || busy) return;
+    const log = $('#askLog'); $('#askStarters').hidden = true;
+    log.append(el('div', 'u', esc(q)));
+    const a = el('div', 'a'); const pr = el('div', 'prog', '<span>Thinking…</span>'); a.append(pr); log.append(a); log.scrollTop = log.scrollHeight;
+    const prog = m => { pr.append(el('span', null, '· ' + esc(m))); log.scrollTop = log.scrollHeight; };
+    try { await loadAsk(); } catch (e) { a.innerHTML = '<p class="warn">The roadmap data could not be loaded.</p>'; return; }
+    const seen = new Set();
+    const tools = TOOLS(prog).map(t => ({...t, execute: async (i, ctx) => { const r = await t.execute(i, ctx); JSON.stringify(r).replace(/"id":"([^"]+)"/g, (m, id) => { seen.add(id); return m; }); if (Array.isArray(r)) r.forEach(x => x && x.id && seen.add(x.id)); return r; }}));
+    const task = brief ? 'Build a briefing for someone working with the client "' + brief.client + '" as ' + brief.role + '. Call client_overview first, then get_roadmap_item for up to 6 items most relevant to that role. Blocks: what we built with them (status client, new or improved), what is in development for them (in-dev), their open requests (asked), and one block on what matters most for a ' + brief.role + ' (e.g. Sales: what to pitch; Customer Success: what to help them adopt; Account Manager: renewal talking points; Product: gaps and requests; Leadership: the headline). Cite every item.' : q;
+    turns.push({role: 'user', content: task});
+    busy = new AbortController(); $('#askStop').hidden = false; $('#askSend').hidden = true;
+    try {
+      const res = await sampleFn.json([{role: 'user', content: RULES()}, ...turns.slice(-6)], {tools, signal: busy.signal, modelTier: 'default'});
+      render_answer(a, res, seen);
+      turns.push({role: 'assistant', content: JSON.stringify(res).slice(0, 4000)});
+    } catch (e) {
+      turns.pop();
+      const code = e && e.code;
+      const msg = {cancelled: 'Stopped.', rate_limited: 'Too many questions at once or your usage limit is reached. Try again in a little while.', session_expired: 'Please sign in to Claude again, then retry.', invalid_json: 'The answer came back in the wrong shape. Try asking again.', refused: 'Claude declined this question. Try rephrasing it.', prompt_too_large: 'The conversation got too long. Clear it and ask again.'}[code] || 'Something went wrong. Try again.';
+      a.innerHTML = '<p class="warn">' + msg + '</p>';
+      if (['not_granted', 'sampling_disabled', 'not_declared', 'capability_disabled', 'capability_removed', 'tools_unavailable'].includes(code)) { a.innerHTML = '<p class="warn">AI answers are not available in this view. Everything else on the page still works.</p>'; $('#askForm').hidden = true; }
+    } finally { busy = null; $('#askStop').hidden = true; $('#askSend').hidden = false; log.scrollTop = log.scrollHeight; }
+  }
+  async function initAsk(){
+    if (!IN) return;
+    persona();
+    $('#vPlatform').hidden = false;
+    if (typeof window.__QA_TOOLS === 'function') window.__QA_TOOLS(TOOLS(() => {}), loadAsk);
+    try { sampleFn = window.claude && window.claude.use ? await window.claude.use('sample') : null; } catch (e) { sampleFn = null; }
+    if (!sampleFn) { $('#pGo').hidden = true; $('#personaNote').textContent = 'Pick a client to see what we built with them. AI briefings need a Claude viewer.'; return; }
+    try { const lim = await sampleFn.limits(); if (!lim.tools) { $('#pGo').hidden = true; return; } } catch (e) {}
+    $('#askFab').hidden = false;
+    $('#askFab').onclick = openAsk; $('#askClose').onclick = closeAsk;
+    $('#askForm').onsubmit = e => { e.preventDefault(); const v = $('#askIn').value; $('#askIn').value = ''; ask(v); };
+    $('#askIn').onkeydown = e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); $('#askForm').requestSubmit(); } };
+    $('#askStop').onclick = () => busy && busy.abort();
+    $('#askClear').onclick = () => { turns = []; $('#askLog').querySelectorAll('.u,.a').forEach(x => x.remove()); $('#askStarters').hidden = false; };
+    $('#askStarters').querySelectorAll('button').forEach(b => b.onclick = () => ask(b.textContent));
+  }
+
+  /* ---------- Roadmap PDF for chosen products (internal page; saved through the downloads capability) ---------- */
+  let dlFn = null;
+  const $$ = sel => [...document.querySelectorAll(sel)];
+  const loadPdfLib = () => new Promise((res, rej) => { if (window.jspdf) return res(window.jspdf); const sc = document.createElement('script'); sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'; sc.onload = () => res(window.jspdf); sc.onerror = () => rej(new Error('PDF library did not load')); document.head.append(sc); });
+  const pdfSafe = t => String(t == null ? '' : t).replace(/[`*]/g, '').replace(/[→⇒]/g, '->').replace(/[←]/g, '<-').replace(/[≥]/g, '>=').replace(/[≤]/g, '<=').replace(/[×]/g, 'x').replace(/[^\x20-\x7E\xA0-\xFF‘’“”–—•…€™]/g, '').replace(/\s+/g, ' ').trim();
+  const hex = v => { const m = getComputedStyle(document.documentElement).getPropertyValue(v).trim(); return m || '#041167'; };
+  function pdfDialog(){
+    const d = $('#pdfDlg'); const tl = $('#pdfThemes'); tl.innerHTML = '';
+    let prevG = null;
+    DATA.themes.forEach(t => { if (prevG && prevG !== t.color) tl.append(el('span', 'brk')); prevG = t.color;
+      const l = el('label', 'pchk', '<input type="checkbox" value="' + t.id + '"' + (F.themes.has(t.id) ? ' checked' : '') + '><span class="dot" style="--c:var(' + t.color + ')"></span>' + esc(t.name)); tl.append(l); });
+    const ys = DATA.years.map(y => y.year);
+    $('#pdfFrom').innerHTML = ys.map(y => '<option' + (y === ys[0] ? ' selected' : '') + '>' + y + '</option>').join('');
+    $('#pdfTo').innerHTML = ys.map(y => '<option' + (y === ys[ys.length - 1] ? ' selected' : '') + '>' + y + '</option>').join('');
+    $('#pdfMsg').textContent = ''; d.hidden = false; $('#scrim').hidden = false; tl.querySelector('input').focus();
+  }
+  function closePdf(){ $('#pdfDlg').hidden = true; if ($('#sheet').hidden) $('#scrim').hidden = true; }
+  async function buildPdf(){
+    const ids = [...$$('#pdfThemes input:checked')].map(i => i.value);
+    const msg = $('#pdfMsg');
+    if (!ids.length) { msg.textContent = 'Choose at least one product.'; return; }
+    const from = +$('#pdfFrom').value, to = +$('#pdfTo').value;
+    if (from > to) { msg.textContent = 'The start year is after the end year.'; return; }
+    const safe = $('#pdfAud').value === 'customer', withNext = $('#pdfNext').checked, withPlat = !safe && $('#pdfPlat').checked;
+    msg.textContent = 'Building the PDF…'; $('#pdfGo').disabled = true;
+    try {
+      const {jsPDF} = await loadPdfLib();
+      if (withPlat) await loadAsk();
+      const doc = new jsPDF({unit: 'mm', format: 'a4'});
+      const W = 210, H = 297, M = 18, CW = W - 2 * M;
+      const NAVY = '#041167', INK = '#0B1233', MUT = '#5F6A8A', LINE = '#DCE3EF';
+      const GCOL = {'--g-exp': '#0B93E6', '--g-net': '#0FA3A8', '--g-exh': '#E09F00', '--g-plat': '#5A5FE6'};
+      let y = M;
+      const setC = c => doc.setTextColor(c), font = (w, sz) => { doc.setFont('helvetica', w); doc.setFontSize(sz); };
+      const lines = (t, w, sz, wt) => { font(wt || 'normal', sz); return doc.splitTextToSize(pdfSafe(t), w); };
+      const need = h => { if (y + h > H - 18) { doc.addPage(); y = M + 4; } };
+      const para = (t, opts) => { const o = Object.assign({sz: 9.5, wt: 'normal', c: INK, w: CW, x: M, lh: 4.4, gap: 1.5}, opts || {}); const ls = lines(t, o.w, o.sz, o.wt); need(ls.length * o.lh + o.gap); setC(o.c); font(o.wt, o.sz); ls.forEach(l => { doc.text(l, o.x, y + 3.2); y += o.lh; }); y += o.gap; };
+      // cover
+      doc.setFillColor(NAVY); doc.rect(0, 0, W, 92, 'F');
+      const logo = document.querySelector('img.logo.w'); try { if (logo) doc.addImage(logo.src, 'PNG', M, 16, 40, 20); } catch (e) {}
+      setC('#FFFFFF'); font('bold', 30); doc.text('Product roadmap', M, 58);
+      font('normal', 12); setC('#C9D6F2'); doc.text(pdfSafe(from === to ? String(from) : from + ' to ' + to) + (withNext ? ' · with what is coming next' : ''), M, 70);
+      y = 108; setC(NAVY); font('bold', 13); doc.text('Products in this roadmap', M, y); y += 8;
+      ids.forEach(id => { const t = TH[id]; doc.setFillColor(GCOL[t.color] || NAVY); doc.circle(M + 1.6, y - 1.2, 1.6, 'F'); setC(INK); font('normal', 11); doc.text(pdfSafe(t.name), M + 6, y); y += 7; });
+      y += 6; para('Each feature shows what we built, why it was needed and the outcome for organisers, exhibitors and attendees. Every entry is drawn from the delivered work behind it.' + (safe ? '' : ' Internal edition: includes Jira references and client names. Do not share outside ExpoPlatform.'), {c: MUT, sz: 10, lh: 5});
+      font('normal', 9); setC(MUT); doc.text('Prepared ' + new Date().toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric'}), M, H - 20);
+      // sections
+      for (const id of ids) {
+        const t = TH[id], col = GCOL[t.color] || NAVY;
+        doc.addPage(); y = M;
+        doc.setFillColor(col); doc.rect(M, y, 4, 12, 'F'); setC(NAVY); font('bold', 20); doc.text(pdfSafe(t.name), M + 8, y + 9); y += 20;
+        const items = DATA.items.filter(h => h.theme === id && +h.q.slice(0, 4) >= from && +h.q.slice(0, 4) <= to);
+        if (!items.length) para('No features delivered in this period.', {c: MUT});
+        let yr = null;
+        for (const h of items) {
+          if (h.q.slice(0, 4) !== yr) { yr = h.q.slice(0, 4); need(16); y += 2; setC(col); font('bold', 14); doc.text(yr, M, y + 5); doc.setDrawColor(LINE); doc.line(M + 14, y + 3.6, W - M, y + 3.6); y += 10; }
+          const blocks = [['WHAT', h.what, '#025FA3'], ['WHY', h.why, '#8A5300'], ['OUTCOME', h.outcome, '#05676B']].filter(b => b[1]);
+          const est = 16 + lines(h.title, CW, 12, 'bold').length * 5.2 + lines(h.benefit, CW, 9.5).length * 4.4 + blocks.reduce((a, b) => a + lines(b[1], CW - 22, 9).length * 4.2 + 1.2, 0) + (!safe ? 8 : 0);
+          need(Math.min(est, H - 40));
+          setC(MUT); font('bold', 8.5); doc.text(qName(h.q) + ' ' + yr + (h.level === 'headline' ? '  ·  HEADLINE' : '') + (!safe && h.kind ? '  ·  ' + (h.kind === 'new' ? 'NEW CAPABILITY' : 'IMPROVEMENT') : ''), M, y + 3); y += 5;
+          para(h.title, {sz: 12, wt: 'bold', c: NAVY, lh: 5.2, gap: 1});
+          para(h.benefit, {sz: 9.5, c: INK, gap: 1.5});
+          for (const [lab, txt, c] of blocks) { const ls = lines(txt, CW - 22, 9); need(ls.length * 4.2 + 2); setC(c); font('bold', 7.5); doc.text(lab, M, y + 3); setC(INK); font('normal', 9); ls.forEach(l => { doc.text(l, M + 22, y + 3); y += 4.2; }); y += 1.2; }
+          if (!safe && h.src && h.src.length) para('Jira: ' + h.src.map(x => x.k).join(', ') + (clientsOf(h.id).length ? '  ·  Clients: ' + clientsOf(h.id).join(', ') : ''), {sz: 7.5, c: MUT, lh: 3.6});
+          y += 3;
+        }
+        if (withNext) { const nx = DATA.next.filter(n => n.theme === id); if (nx.length) { need(18); y += 3; setC(col); font('bold', 13); doc.text('Coming next', M, y + 5); y += 9; para('In development, no fixed dates. Scope may change.', {sz: 8.5, c: MUT}); nx.forEach(n => { para(n.title, {sz: 11, wt: 'bold', c: NAVY, gap: 0.5}); para(n.benefit, {sz: 9.5}); }); } }
+        if (withPlat) {
+          const cl = [...new Set(items.flatMap(h => h.buildsOn || []))].map(i => CLAIM[i]).filter(c => c && (c.verdict === 'CONFIRMED' || c.verdict === 'CODE-ONLY' || c.verdict === 'PARTIAL'));
+          if (cl.length) { need(18); y += 3; setC(col); font('bold', 13); doc.text('Platform today (verified in the code)', M, y + 5); y += 9; para('From the knowledge base code study, ' + ASK.baseline.snapshot + '.', {sz: 8, c: MUT}); cl.forEach(c => para('• ' + clip(c.claim, 200) + (c.verdict === 'PARTIAL' ? ' (partly: see the knowledge base)' : ''), {sz: 9, gap: 0.6})); }
+        }
+      }
+      const n = doc.getNumberOfPages();
+      for (let i = 2; i <= n; i++) { doc.setPage(i); font('normal', 8); setC(MUT); doc.text('ExpoPlatform · Product roadmap' + (safe ? '' : ' · Internal, do not share'), M, H - 9); doc.text(i + ' / ' + n, W - M, H - 9, {align: 'right'}); }
+      const blob = doc.output('blob');
+      const name = 'ExpoPlatform roadmap ' + (ids.length === 1 ? TH[ids[0]].short + ' ' : '') + (from === to ? from : from + '-' + to) + (safe ? '' : ' internal') + '.pdf';
+      if (!dlFn) throw {code: 'unavailable'};
+      await dlFn.save({filename: name, data: blob});
+      msg.textContent = 'Saved ' + name + '.';
+      if (window.__QA_PDF) window.__QA_PDF(blob, n);
+    } catch (e) {
+      msg.textContent = {declined: 'Download cancelled.', rate_limited: 'A download prompt is already open.', unavailable: 'Downloads are not available in this view.'}[e && e.code] || ('The PDF could not be built. ' + (e && e.message ? e.message : ''));
+    } finally { $('#pdfGo').disabled = false; }
+  }
+  async function initPdf(){
+    if (!IN) return;
+    try { dlFn = window.claude && window.claude.use ? await window.claude.use('downloads') : null; } catch (e) { dlFn = null; }
+    if (!dlFn) return;
+    $('#pdfBtn').hidden = false; $('#pdfBtn').onclick = pdfDialog;
+    $('#pdfClose').onclick = closePdf; $('#pdfCancel').onclick = closePdf; $('#pdfGo').onclick = buildPdf;
+    $('#pdfAud').onchange = () => { $('#pdfPlatRow').hidden = $('#pdfAud').value === 'customer'; };
+    $('#pdfAll').onclick = () => $$('#pdfThemes input').forEach(i => i.checked = true);
+    $('#pdfNone').onclick = () => $$('#pdfThemes input').forEach(i => i.checked = false);
+  }
+
+  /* ---------- onboarding: a welcome that asks your role, then a spotlight tour tailored to it (internal page) ---------- */
+  const ROLES = {
+    am: {name: 'Account Manager', persona: 'an Account Manager', ask: 'What have we built for this client, and what is in development for them?', steps: ['persona', 'card', 'ask', 'pdf', 'filters', 'platform']},
+    sales: {name: 'Sales', persona: 'Sales', ask: 'What have we launched in lead capture that I can show a prospect?', steps: ['strip', 'ask', 'platform', 'pdf', 'filters', 'card']},
+    cs: {name: 'Customer Success', persona: 'Customer Success', ask: 'What changed in meetings this year that a client should start using?', steps: ['persona', 'ask', 'filters', 'card', 'platform']},
+    product: {name: 'Product', persona: 'Product', ask: 'What have customers asked for in meetings that we have not built?', steps: ['platform', 'card', 'filters', 'ask', 'excluded', 'search']},
+    lead: {name: 'Leadership', persona: 'Leadership', ask: 'What were the biggest launches in 2025?', steps: ['strip', 'chapters', 'ask', 'pdf', 'filters']},
+    support: {name: 'Support', persona: 'Support', ask: 'Do we support offline badge scanning?', steps: ['platform', 'ask', 'search', 'filters', 'card']},
+  };
+  const STEPS = {
+    strip: {sel: '.strip', t: 'Three and a half years at a glance', b: 'Every dot is a feature we shipped, coloured by product group. Select a quarter to jump to it.'},
+    chapters: {sel: '#chapters', t: 'Read it by year', b: 'Each year opens with a short review, then its quarters. Headline launches come first in every quarter.'},
+    filters: {sel: '#fOpen', t: 'Narrow it down', b: 'Pick products, who a feature helps, years and highlights. Every option shows how many features it leaves, and whatever is on appears as a chip you can remove.', act: 'Open filters', go: () => { openFilters(); }},
+    card: {sel: '#timeline .card.lead', t: 'Open any feature', b: 'Each feature has What we built, Why and the Outcome, who it helps, whether it was new or an improvement, the platform capability it builds on, its Jira stories and the clients behind them.'},
+    persona: {sel: '#persona', t: 'Start from a client', b: 'Choose a client and the whole page filters to what we built with them. Build my briefing asks the AI for a briefing for your role, with every line linked to its source.'},
+    ask: {sel: '#askFab', t: 'Ask the roadmap', b: 'Ask in plain words. Answers come only from this page, each line labelled (New, Improved, Part of the platform, Not found…) and linked to its source.', act: 'Try a question', go: r => { openAsk(); $('#askIn').value = ROLES[r].ask; $('#askIn').focus(); }},
+    platform: {sel: '#vPlatform', t: 'Platform today', b: 'What the platform does now, checked against the code, including everything built before 2023. Use it to answer "do we have X?" before saying no.'},
+    pdf: {sel: '#pdfBtn', t: 'Share a roadmap PDF', b: 'Pick products and years and download a PDF. Customer-safe by default: no Jira keys or client names.'},
+    excluded: {sel: '#chapters a[href="#excluded"]', t: 'What was left off', b: 'Every story judged not customer-facing, grouped by reason, with Jira links. Useful when checking the roadmap is complete.'},
+    search: {sel: '#q', t: 'Search everything', b: 'Search features, Jira keys and story titles. It works with the filters and in both views.'},
+  };
+  let tour = null;
+  const tourSave = v => { try { localStorage.setItem('ep-journey-tour', JSON.stringify(v)); } catch (e) {} };
+  const tourLoad = () => { try { return JSON.parse(localStorage.getItem('ep-journey-tour') || 'null'); } catch (e) { return null; } };
+  function welcome(){
+    const w = $('#welcome'); w.hidden = false; $('#tourShade').hidden = false;
+    const g = $('#wRoles'); g.innerHTML = '';
+    Object.entries(ROLES).forEach(([k, r]) => { const b = el('button', 'wrole', '<b>' + esc(r.name) + '</b><small>' + esc(ROLE_HINT[k]) + '</small>'); b.type = 'button'; b.dataset.r = k; b.setAttribute('aria-pressed', 'false');
+      b.onclick = () => { g.querySelectorAll('.wrole').forEach(x => x.setAttribute('aria-pressed', String(x === b))); $('#wStart').disabled = false; $('#wStart').dataset.r = k; }; g.append(b); });
+    $('#wStart').disabled = true;
+    loadAsk().then(d => { $('#wClientList').innerHTML = d.clients.map(c => '<option value="' + esc(c.name) + '">').join(''); }).catch(() => {});
+    setTimeout(() => { const f = g.querySelector('button'); if (f) f.focus(); }, 0);
+  }
+  const ROLE_HINT = {am: 'Accounts, renewals and briefings', sales: 'What to show prospects', cs: 'What clients should adopt', product: 'Coverage, gaps and demand', lead: 'The headline story', support: 'Does the platform do X?'};
+  function endWelcome(){ $('#welcome').hidden = true; }
+  async function startTour(role){
+    endWelcome();
+    const r = ROLES[role]; $('#pRole').value = r.persona;
+    const cn = $('#wClient').value.trim();
+    if (cn) { await loadAsk(); const c = findClient(cn); if (c) { $('#pClient').value = c.name; setClient(c); } }
+    const steps = r.steps.map(k => ({k, ...STEPS[k]})).filter(st => { const e = $(st.sel); return e && !e.hidden && e.getClientRects().length; });
+    tour = {role, steps, i: 0}; tourSave({role, done: false});
+    showStep();
+  }
+  function showStep(){
+    if (!tour) return;
+    const st = tour.steps[tour.i]; const e = $(st.sel);
+    if (!e || !e.getClientRects().length) return nextStep(1);
+    closeFilters();
+    e.scrollIntoView({block: 'center', behavior: 'instant'});
+    const r = e.getBoundingClientRect(), pad = 8;
+    const sp = $('#tourSpot'); sp.hidden = false; $('#tourShade').hidden = true;
+    Object.assign(sp.style, {left: (r.left - pad) + 'px', top: (r.top - pad) + 'px', width: (r.width + 2 * pad) + 'px', height: (Math.min(r.height, innerHeight - 24) + 2 * pad) + 'px'});
+    const c = $('#coach'); c.hidden = false;
+    $('#cStep').textContent = 'Step ' + (tour.i + 1) + ' of ' + tour.steps.length + ' · for ' + ROLES[tour.role].name;
+    $('#cTitle').textContent = st.t; $('#cBody').textContent = st.b;
+    $('#cAct').hidden = !st.act;
+    if (st.act) { const role = tour.role; $('#cAct').textContent = st.act; $('#cAct').onclick = () => { finishTour(); st.go(role); }; }
+    $('#cBack').disabled = tour.i === 0; $('#cNext').textContent = tour.i === tour.steps.length - 1 ? 'Finish' : 'Next';
+    const cw = Math.min(360, innerWidth - 24); c.style.width = cw + 'px';
+    const chh = c.offsetHeight;
+    let top = r.bottom + 14; if (top + chh > innerHeight - 12) top = r.top - chh - 14;
+    if (top < 12 || innerWidth < 600) top = innerHeight - chh - 12;
+    top = Math.max(12, Math.min(top, innerHeight - chh - 12));
+    const left = innerWidth < 600 ? 12 : Math.min(Math.max(12, r.left), innerWidth - cw - 12);
+    Object.assign(c.style, {left: left + 'px', top: top + 'px'});
+    $('#cNext').focus({preventScroll: true});
+  }
+  function nextStep(d){ if (!tour) return; tour.i += d; if (tour.i >= tour.steps.length) return finishTour(); if (tour.i < 0) tour.i = 0; showStep(); }
+  function finishTour(){ if (tour) tourSave({role: tour.role, done: true}); tour = null; $('#coach').hidden = true; $('#tourSpot').hidden = true; $('#tourShade').hidden = true; }
+  function skipWelcome(){ endWelcome(); $('#tourShade').hidden = true; tourSave({role: null, done: true}); }
+  function initTour(){
+    if (!IN) return;
+    $('#tourBtn').hidden = false; $('#tourBtn').onclick = () => { finishTour(); welcome(); };
+    $('#wSkip').onclick = skipWelcome; $('#wStart').onclick = () => startTour($('#wStart').dataset.r);
+    $('#cNext').onclick = () => nextStep(1); $('#cBack').onclick = () => nextStep(-1); $('#cSkip').onclick = finishTour;
+    document.addEventListener('keydown', e => {
+      if (!$('#welcome').hidden && e.key === 'Escape') { skipWelcome(); return; }
+      if (!tour) return;
+      if (e.key === 'Escape') finishTour(); else if (e.key === 'ArrowRight') nextStep(1); else if (e.key === 'ArrowLeft') nextStep(-1);
+    });
+    addEventListener('resize', () => { if (tour) showStep(); });
+    const saved = tourLoad();
+    if (!saved) setTimeout(welcome, 400);
+  }
+
   render();
+  initAsk();
+  initPdf();
+  initTour();
 })();
 </script>

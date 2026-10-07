@@ -1,0 +1,2792 @@
+{
+"features": [
+{
+"id": "onsite-interactive-floor-plans-launch",
+"theme": "onsite",
+"q": "2023-Q1",
+"title": "Interactive floor plans",
+"benefit": "Give attendees a new interactive floor plan on web and app, with exhibitor names on stands and one-click links from exhibitor cards.",
+"what": "Admins draw and delete stands, show exhibitor names and stand labels that scale with zoom, hide stands or labels, and add sponsor banners. Stand locations across web and app open the stand on the plan.",
+"detail": "Admins draw and delete stands, show exhibitor names and stand labels that scale with zoom, hide stands or labels, and add sponsor banners at the top or side. Stand locations across the platform open the stand on the plan, the apps use the new floor plan, and hall and stand names are checked for duplicates on import.",
+"stories": [
+"Mobile app for Floor Plan (web view only)",
+"Floorplan Admin Panel - Ability to Draw/Delete Stands",
+"Floorplan Admin Panel - add Exhibitor name & Stand label + Hide Stand mode",
+"New Floorplan - indication for hyperlinks (location)",
+"New Floorplan - new type of banner view ",
+"Verify stands and halls uniqueness during import from excel the halls and stand numbers"
+]
+},
+{
+"id": "onsite-badge-builder-controls",
+"theme": "onsite",
+"q": "2023-Q1",
+"title": "Badge builder layout controls",
+"benefit": "Lay out printed badges precisely, with per-field alignment, margins, rotation, duplication and resizable codes.",
+"what": "Every badge builder field, including QR codes, can be aligned, given left and right margins, rotated 180 degrees and duplicated. QR codes and barcodes resize, the category field moves, and badge codes can go in the category-switch email.",
+"detail": "Every field in the badge builder, including QR codes, can be aligned left, centre or right, given left and right margins, rotated 180 degrees and duplicated; QR codes and barcodes can be resized and the category field moved. Badge links and codes can also be added to the category-switch registration email.",
+"stories": [
+"Fields rotation for 180 degrees in Badge builder",
+"Fields aligning in Badge builder",
+"Fields duplication in Badge builder",
+"Category field movable on Badge builder",
+"Fields Margin Left and Right in Badge builder",
+"QR code and Barcode resize in Badge builder",
+"Add Badges Variable in \"Visitor Switch Category\" Template"
+]
+},
+{
+"id": "onsite-qr-code-pdf-export",
+"theme": "onsite",
+"q": "2023-Q1",
+"title": "QR code PDF export",
+"benefit": "Export participants’ and exhibitors’ QR codes as a printable PDF, filtered by category and status.",
+"what": "Organisers export QR codes for participants and exhibitors as a PDF, filtered by category and status. It is generated in the background with one large QR code per page and the holder's details, including external codes.",
+"detail": "Organisers generate a PDF in the background with one large QR code per page alongside the holder’s details, including external codes.",
+"stories": [
+"EMEA: Export QR Codes in pdf format - Participants & Exhibitor Companies"
+]
+},
+{
+"id": "analytics-report-columns-2023",
+"theme": "analytics",
+"q": "2023-Q1",
+"title": "Report column additions",
+"benefit": "Include exhibitor notes and session IDs in exports and reports.",
+"what": "The Exhibitors export can include the notes kept on each exhibitor profile, and the favourited sessions report and its export show each session's ID.",
+"detail": "The Exhibitors export can include the notes from each exhibitor profile, and the favourited sessions report and its export show each session’s ID.",
+"stories": [
+"Need Possibility to add the 'notes' present in exhibitor profile in BO in Excel export file",
+"EMEA_ Add Session Id column for Favorited Session Report in Sessions "
+]
+},
+{
+"id": "onsite-external-code-scanning",
+"theme": "onsite",
+"q": "2023-Q2",
+"title": "External QR and barcode scanning",
+"benefit": "Scan external QR codes, barcodes and co-located event badges at check-in, in the app and at kiosks.",
+"what": "The check-in app scans external QR codes, barcodes and co-located event badges, saving unknown codes instead of rejecting them. The mobile app can scan and store any code, and kiosks check in people with external codes.",
+"detail": "Unknown codes are saved rather than rejected, and the check-in list report shows each scanned code and, where recognised, its event. An optional setting lets the mobile app scan and store any code, and kiosks check in participants whose external codes came from an integration or the API.",
+"stories": [
+"External Barcode and QR code",
+"ExpoPlatform's Check-In app: Ability to scan external QR and Barcodes and capture the unique code number in reports",
+"Need ability to scan QR & Barcodes in the App that are not related to Expoplatform data without breaking the App.",
+"External QR/Barcodes scan in Kiosk",
+"External QR codes for checkin app"
+]
+},
+{
+"id": "onsite-expofp-stand-linking",
+"theme": "onsite",
+"q": "2023-Q2",
+"title": "ExpoFP floor plan linking",
+"benefit": "Send attendees from any stand link on web or app straight to the right stand on an ExpoFP floor plan.",
+"what": "Organisers choose dynamic linking to an ExpoFP floor plan, a static URL or no link. Stand links on marketplace, exhibitor, product, session, schedule and recommendation pages, and in the apps, follow the setting.",
+"detail": "Organisers choose dynamic linking, a static URL or no link. Stand links on marketplace, exhibitor, product, session, exhibitor event, schedule and recommendation pages, and on app profiles and lists, follow the setting.",
+"stories": [
+"Redirection ExpoFP Floorplan",
+"Redirection links ExpoFP Floorplan",
+"Mobile redirection ExpoFP Floorplan"
+]
+},
+{
+"id": "onsite-kiosk-improvements",
+"theme": "onsite",
+"q": "2023-Q2",
+"title": "Kiosk check-in improvements",
+"benefit": "Help visitors find themselves faster and register for the right event at self-service kiosks.",
+"what": "Kiosk search by name or email returns every matching participant, loaded in batches. The kiosk registration form supports the same conditional logic as the web registration form builder.",
+"detail": "Kiosk search by name or email now returns every matching participant, loaded in batches. The kiosk registration form supports the same conditional logic as the web registration form builder.",
+"stories": [
+"Search Improvements for Kiosk module: Onsite Solutions",
+"Ability to use conditional logic in the Kiosk Builder Registration pipeline"
+]
+},
+{
+"id": "analytics-new-analytics",
+"theme": "analytics",
+"q": "2023-Q2",
+"title": "New analytics",
+"benefit": "Track registrations, content performance and activity in a new analytics dashboard.",
+"what": "A new analytics dashboard shows participants, exhibitors, content and actions, and online participants by country and interest, with sign-ups over time by category, country and interest and performance for each content type.",
+"detail": "Dashboard widgets show participants, exhibitors, content and actions, plus online participants by country and interest. Registration widgets break down sign-ups over time by category, country and interest, and content widgets cover news, sessions, on-demand, webinars and downloads. Pages open on a range a month either side of the event.",
+"stories": [
+"(New Analytics) Content fixes",
+"(New Analytics) Dashboard fixes",
+"(New Analytics) Registration fixes",
+"Change default date range for New Analytics"
+]
+},
+{
+"id": "analytics-export-progress",
+"theme": "analytics",
+"q": "2023-Q2",
+"title": "Export progress and cancellation",
+"benefit": "Follow the progress of exports and cancel them when needed.",
+"what": "Exports show a percentage progress indicator and a cancel button, and a clear status while the Excel file is being generated. The check-in export runs on a lighter database query.",
+"detail": "Exports show a percentage progress indicator and a cancel button, and a clear status while the file is being generated. The check-in export uses far fewer database queries.",
+"stories": [
+"Cancel button for exports",
+"Add process percentage indication for exports",
+"Set informer \"excel generation...\" instead of \"in progress 100%\" if uploading data to excel in progress",
+"Check-in export: optimize database query"
+]
+},
+{
+"id": "analytics-mobile-app-stats",
+"theme": "analytics",
+"q": "2023-Q2",
+"title": "Mobile app analytics",
+"benefit": "See how attendees use the mobile app, including logins and unique users per app.",
+"what": "A mobile app logins report lists each iOS and Android login with profile fields and supports unique login counts. An App data tab in analytics shows page views, unique badge scans and unique logins per platform.",
+"detail": "A mobile app logins report lists each login on iOS and Android with profile fields, supporting unique login counts. An App data tab in analytics shows page views, unique badge scans and unique logins per platform.",
+"stories": [
+"Mobile analytics MVP: Get the total logins and the total unique logged in users per app",
+"Unique logins for the report",
+"Mobile app base stats page"
+]
+},
+{
+"id": "onsite-android-scanning-no-google",
+"theme": "onsite",
+"q": "2023-Q3",
+"title": "Badge scanning on more Android devices",
+"benefit": "Scan badges in the Android app on devices without Google Play services, such as Huawei phones.",
+"what": "The Android app uses an alternative barcode scanner on devices without Google Play services, such as Huawei phones, so badge scanning works on them too.",
+"detail": "The Android app uses an alternative barcode scanner on devices that lack Google Play services, so badge scanning works on them too.",
+"stories": [
+"Opensource scanner | Non google play devices"
+]
+},
+{
+"id": "onsite-live-location-expofp",
+"theme": "onsite",
+"q": "2023-Q3",
+"title": "Live location on ExpoFP floor plans",
+"benefit": "Show app users their own position as a blue dot on ExpoFP floor plans, powered by Crowd Connected.",
+"what": "The mobile apps use Crowd Connected as the location provider for ExpoFP floor plans, asking for foreground, background and reminder location permission.",
+"detail": "The mobile apps use Crowd Connected as the location provider for ExpoFP floor plans, with foreground, background and reminder permission prompts.",
+"stories": [
+"ExpoFP - Crowdconnected Integration"
+]
+},
+{
+"id": "analytics-custom-checkin-reports",
+"theme": "analytics",
+"q": "2023-Q3",
+"title": "Custom check-in reports",
+"benefit": "Export check-in reports with the columns you choose and see first-time versus repeat scans.",
+"what": "Organisers choose system and custom fields for the check-in report and export unique check-ins per event or per day, including co-located show badges and external codes, with the scanned code shown.",
+"detail": "Organisers pick system and custom fields for the check-in report and can export unique check-ins per event or per day, including co-located show badges and external codes, with the scanned code shown.",
+"stories": [
+"Custom Check-in reports exportable in ExpoPlatform",
+"Including column Scanned code in the check-in report ",
+"2 check-in reports - with the unique check-in per event and per day",
+"Indentifying the uniqueness of check-in for non-EP users "
+]
+},
+{
+"id": "analytics-dashboard-improvements-2023",
+"theme": "analytics",
+"q": "2023-Q3",
+"title": "Dashboard improvements",
+"benefit": "Load the favourites dashboard faster and keep table headers in view.",
+"what": "The favourites dashboard reads pre-calculated data refreshed every 30 minutes, with an Update button and last-update time. The interactions table header in visitor and exhibitor dashboards stays fixed while scrolling.",
+"detail": "The favourites dashboard uses pre-calculated data refreshed every 30 minutes, with an Update button and last-update time. The interactions table header in visitor and exhibitor dashboards stays fixed while scrolling.",
+"stories": [
+"Favorites Dashboard - Optimize data load time",
+"Pining interactions header in Visitor and Exhibitor Dashboards"
+]
+},
+{
+"id": "onsite-floor-plan-improvements-2023",
+"theme": "onsite",
+"q": "2023-Q4",
+"title": "Floor plan improvements",
+"benefit": "Navigate the floor plan more easily, with clearer filters, a list of visited stands and direct links to sessions.",
+"what": "The floor plan view was improved. Hall arrows are hidden for single-hall events, the Visited quick filter lists visited stands, quick filters show a no-results message, and sessions on a stand open their profile.",
+"detail": "The floor plan view was improved; unneeded hall arrows are hidden for single-hall events; the Visited quick filter lists visited stands; quick filters show a no-results message; and sessions or events on a stand open their public profile.",
+"stories": [
+"[floorplan] remove unnecessary arrows to go back if we have only one hall",
+"[Portal-UI] FloorPlan improvement",
+"Floor plan| After clicking on the session/event from the session list ( on stand) - public profile of this session/ event must be opened  ",
+"Floorplan| Quick filters \"Visited\" - need add the drawer with names of visited stands ( same logic as for any other filter) ",
+"Floor plan| \"No results\" info for quick filters "
+]
+},
+{
+"id": "analytics-login-source",
+"theme": "analytics",
+"q": "2023-Q4",
+"title": "Login source in login reports",
+"benefit": "See whether each login came from the web or the iOS or Android app.",
+"what": "The visitor and exhibitor login report export has a login source column showing, for every login attempt, whether it came from the web or the iOS or Android app.",
+"detail": "The visitor and exhibitor login report export has a login source column for every login attempt.",
+"stories": [
+"Additional column to Visitors/Exhibitors login "
+]
+},
+{
+"id": "onsite-meeting-location-floor-plan",
+"theme": "onsite",
+"q": "2024-Q1",
+"title": "Meeting locations on the floor plan",
+"benefit": "Tap a meeting’s location in the app to open the floor plan at that spot.",
+"what": "Meeting cards in the app make the location clickable in any meeting status, opening the internal, MapsPeople or ExpoFP floor plan focused on the meeting place.",
+"detail": "Meeting cards in the app make the location clickable in any meeting status, opening internal, MapsPeople or ExpoFP floor plans focused on the meeting place.",
+"stories": [
+"Interactive location on meeting cards in app"
+]
+},
+{
+"id": "analytics-checkin-analytics-refresh",
+"theme": "analytics",
+"q": "2024-Q1",
+"title": "Check-in analytics refresh",
+"benefit": "Follow check-ins and check-outs by day, hour and zone in redesigned check-in analytics.",
+"what": "A new page charts registrations before and after the event opens and check-ins and check-outs by day or hour, with user and zone filters. The check-in list shows each day's first and last scans, and zones sync with the floor plan.",
+"detail": "A new analytics page charts registrations before and after the event starts and check-ins and check-outs by day or hour, with user and zone filters. The check-in list shows each participant’s first and last check-in and check-out per day, and the zones page manages zones synced with the floor plan.",
+"stories": [
+"Check-in Analytics refresh. Analytics page",
+"Check-in Analytics refresh. Checkin list page",
+"Chech-in Analytics refresh. Checkin Zones page",
+"Check-in module | Design changes"
+]
+},
+{
+"id": "analytics-mobile-analytics-page",
+"theme": "analytics",
+"q": "2024-Q1",
+"title": "Mobile analytics page",
+"benefit": "Chart mobile app logins, page views, favourites, meetings and badge scans over time.",
+"what": "The mobile analytics page charts app logins, page views, favourites, meetings and badge scans as daily, weekly or monthly graphs, filtered by user group, platform and page, with iOS and Android totals.",
+"detail": "The mobile analytics page shows daily, weekly or monthly graphs, filtered by user group, platform and page.",
+"stories": [
+"Mobile analytics page"
+]
+},
+{
+"id": "analytics-meetings-tab",
+"theme": "analytics",
+"q": "2024-Q1",
+"title": "Meetings analytics",
+"benefit": "Analyse meeting activity across web and app in the new analytics module.",
+"what": "A Meetings tab in analytics, with event, segment and date filters, shows requested meetings by status, online and offline counts, average meeting length, time spent in online meetings and where requests came from.",
+"detail": "A Meetings tab with event, segment and date filters shows requested meetings by status, online and offline counts, average meeting length and time spent in online meetings.",
+"stories": [
+"(New Analytics UI) Meetings"
+]
+},
+{
+"id": "analytics-standard-report",
+"theme": "analytics",
+"q": "2024-Q1",
+"title": "Standard report",
+"benefit": "Generate a standard event report from the admin Data page.",
+"what": "Admins generate the standard event report from the Data page in the same way as other reports.",
+"detail": "Admins generate the standard report from the Data page in the same way as other reports.",
+"stories": [
+"Standard Report generation"
+]
+},
+{
+"id": "onsite-invisual-integration",
+"theme": "onsite",
+"q": "2024-Q2",
+"title": "InVisual floor plan integration",
+"benefit": "Use InVisual floor plans natively on web and app, linked to exhibitors, sessions and favourites.",
+"what": "Admins configure InVisual in settings. Users open the InVisual map from exhibitor, session and event locations, scan venue QR codes into the app or web view, and keep favourites in sync.",
+"detail": "Admins configure InVisual in settings. Users open the map from exhibitor, session and event locations, scan venue QR codes into the app or web view, and keep favourites in sync.",
+"stories": [
+"InVisual Floor Plan Integration"
+]
+},
+{
+"id": "onsite-badge-printing-improvements",
+"theme": "onsite",
+"q": "2024-Q2",
+"title": "Badge printing improvements",
+"benefit": "Print badges in bulk from the participants page and track badge printing.",
+"what": "Batch badge printing on the participants page works with or without filters and builds the file in the background. Badge prints are recorded, and exhibitors without badges see where to print them.",
+"detail": "The batch print tool works with or without filters: organisers confirm the badge count, a file is generated in the background and a download button appears when ready. Badge print statistics are captured, and exhibitors without badges see a clear message pointing them to where badges are printed.",
+"stories": [
+"Print badge statistics capture",
+"BULK PRINT BADGES - REFACTORING",
+"Edit Error Message Text on Print Badge direct link"
+]
+},
+{
+"id": "onsite-checkin-app-zones",
+"theme": "onsite",
+"q": "2024-Q2",
+"title": "Check-in app zones and actions",
+"benefit": "Choose the zone, action and session before scanning in the check-in app, with alerts for duplicate scans.",
+"what": "Check-in app staff pick check-in, check-out or session scanning and the zone before they start. Session scans need the item in the attendee's schedule, a short cooldown stops double scans and repeat same-day scans are flagged.",
+"detail": "Staff pick check-in, check-out or session scanning and the zone before they start. Session scans require the item in the attendee’s schedule, a short cooldown avoids accidental double scans, and repeat same-day scans are flagged.",
+"stories": [
+"Check-in app improvement"
+]
+},
+{
+"id": "onsite-expofp-app-redesign",
+"theme": "onsite",
+"q": "2024-Q2",
+"title": "Redesigned ExpoFP floor plans in-app",
+"benefit": "Search for a booth and get directions on ExpoFP floor plans in the app, with a redesigned layout.",
+"what": "Search results, stand details, get-directions and route panels on ExpoFP floor plans were redesigned on Android and iOS. Users pick a start point from their location with Crowd Connected or on the map, swap points and see the route.",
+"detail": "Search results, stand details, get-directions and route panels were redesigned on Android and iOS. Users choose a start point from their current location with Crowd Connected or on the map, swap points and see the route.",
+"stories": [
+"Redesign of expoFP UI elements"
+]
+},
+{
+"id": "analytics-export-additions-2024",
+"theme": "analytics",
+"q": "2024-Q2",
+"title": "Export additions",
+"benefit": "Export news articles and get more detail in user and meeting exports.",
+"what": "A News export lists articles with author, tags, visibility and exhibitor. The user export shows when each account was activated, and the meetings export shows the parent exhibitor of child-exhibitor participants.",
+"detail": "A News export lists articles with author, tags, visibility and exhibitor. The user export shows when each account was activated, and the meetings export shows the parent exhibitor of child-exhibitor participants.",
+"stories": [
+"News Export",
+"Add the timestamp of account activation in the exports",
+"To add the \"parent exhibitor name\" column to the \"meeting-reports\""
+]
+},
+{
+"id": "analytics-report-time-zones",
+"theme": "analytics",
+"q": "2024-Q3",
+"title": "Report times in event time zone",
+"benefit": "See when each report was generated in the event’s own time zone.",
+"what": "Export, import and statistics download links across the admin panel show when the file was generated in the event time zone, with the zone named.",
+"detail": "Export, import and statistics download links across the admin panel show the generation time in the event time zone, with the zone named.",
+"stories": [
+"Change the time format"
+]
+},
+{
+"id": "analytics-session-report-additions",
+"theme": "analytics",
+"q": "2024-Q3",
+"title": "Session report additions",
+"benefit": "See exhibitor event status, content reports and edit dates in the sessions export.",
+"what": "The sessions export shows each exhibitor event's status, including rejection for security concerns, how often it was reported as offensive, and when the exhibitor created and last edited it.",
+"detail": "The sessions export shows each exhibitor event’s status, including rejection for security concerns, how often it was reported as offensive, and when the exhibitor created and last edited it.",
+"stories": [
+"Improve Sessions report with security concern info",
+"Add info for Exhibitor event info"
+]
+},
+{
+"id": "analytics-team-schedule-export",
+"theme": "analytics",
+"q": "2024-Q4",
+"title": "Attendee names in team schedule export",
+"benefit": "See who is attending your team’s events in the team schedule export.",
+"what": "The team schedule export lists attendee names for events the team moderates or speaks at, and parent exhibitors also see their child companies' events.",
+"detail": "The team schedule export lists attendee names for events the team moderates or speaks at; parent exhibitors also see their child companies’ events.",
+"stories": [
+"Column for Attendee Names - Team Schedule Export"
+]
+},
+{
+"id": "analytics-marketplace-supply-demand",
+"theme": "analytics",
+"q": "2024-Q4",
+"title": "Supply and demand graph improvements",
+"benefit": "Read marketplace supply and demand by category more easily.",
+"what": "The supply and demand graph tooltip names the product category above participant interest, suppliers and products, and categories that share the same values are listed clearly in one tooltip.",
+"detail": "The supply and demand graph tooltip names the product category, and categories that share the same values are listed clearly in one tooltip.",
+"stories": [
+"Include category to the Supply&Demand graph",
+"Supply and demand graph | Display all categories by the same values"
+]
+},
+{
+"id": "analytics-login-checkin-exports-2025",
+"theme": "analytics",
+"q": "2025-Q1",
+"title": "Login and check-in export improvements",
+"benefit": "Separate customer service logins and see session details in check-in exports.",
+"what": "The login data report lists customer service logins separately from web logins, and the check-in list export can show the session ID and name for session, exhibitor event and round table check-ins.",
+"detail": "The login data report lists customer service logins separately from web logins, and the check-in list export can show the session ID and name for session, exhibitor event and round table check-ins.",
+"stories": [
+"Exclude Customer Service Logins from \"Attendee/Exhibitor Login Data\" Report",
+"Enhancing Check-in List Export with Session Information"
+]
+},
+{
+"id": "onsite-ticket-validation-checkin",
+"theme": "onsite",
+"q": "2025-Q2",
+"title": "Ticket validation at check-in",
+"benefit": "Validate attendees’ tickets when their badge is scanned in the check-in app.",
+"what": "On each badge scan the check-in app checks that a ticket is held, valid for the date, not expired and valid for the zone, and shows messages such as 'No ticket found' or 'Wrong check-in zone'. No checks run when ticketing is off.",
+"detail": "On each scan the app checks that a ticket is held, valid for the date, not expired and valid for the check-in zone, and shows clear messages such as “No ticket found” or “Wrong check-in zone”. No checks run when ticketing is off.",
+"stories": [
+"(Part 2) Usage of check-in app in Ticketing"
+]
+},
+{
+"id": "onsite-floor-plan-display-2025",
+"theme": "onsite",
+"q": "2025-Q2",
+"title": "Floor plan display improvements",
+"benefit": "Keep the floor plan consistent with the rest of the event website.",
+"what": "A Floorplan tab in display filters lets admins order, rename, switch on or off and restrict floor plan filters. The floor plan uses the standard website builder header instead of its own mini header.",
+"detail": "Exhibitor filters on the floor plan page follow the order set in display filters, and the floor plan uses the standard website builder header instead of its own mini header.",
+"stories": [
+"Order of Exhibitor filters in Display filters should be mirrored on Floorplan page",
+"Change floor plan mini header on the standart one from the websitebuilder"
+]
+},
+{
+"id": "onsite-gps-ips-positioning",
+"theme": "onsite",
+"q": "2025-Q2",
+"title": "GPS and indoor positioning options",
+"benefit": "Show attendees their live GPS position on floor plans on Android as on iOS, and choose GPS, indoor positioning or both.",
+"what": "Android app users see their GPS position on InVisual floor plans, with permission prompts, as on iOS. For ExpoFP with Crowd Connected, organisers choose indoor positioning only, GPS only or both in general settings.",
+"detail": "Android app users see their GPS position on InVisual floor plans, with permission prompts. For ExpoFP with Crowd Connected, organisers choose IPS only, GPS only or IPS plus GPS in general settings.",
+"stories": [
+"GPS Android Implementation - Invisual Floorplan",
+"Toggle for IPS / GPS Config - ExpoFP"
+]
+},
+{
+"id": "onsite-badge-templates-redesign",
+"theme": "onsite",
+"q": "2025-Q2",
+"title": "Redesigned badge templates",
+"benefit": "Create badges with a redesigned templating and output process.",
+"what": "All badge templates were reworked so a badge looks the same when printed from the admin panel, previewed in the badge builder or printed from a profile.",
+"detail": "Badge templating and badge output were redesigned.",
+"stories": [
+"Badges | Redesign of templating and output"
+]
+},
+{
+"id": "analytics-total-meetings-graph",
+"theme": "analytics",
+"q": "2025-Q2",
+"title": "Total meetings graph update",
+"benefit": "See meeting totals displayed with updated logic in meeting analytics.",
+"what": "The Total meetings graph in meeting analytics counts every part of the graph by the same date.",
+"detail": "The display logic of the Total meetings graph was updated.",
+"stories": [
+"Logic of displaying of how the Total meetings graph"
+]
+},
+{
+"id": "onsite-stand-bookmarking",
+"theme": "onsite",
+"q": "2025-Q3",
+"title": "Stand bookmarking on floor plans",
+"benefit": "Bookmark stands, sessions, events and custom locations on the ExpoFP floor plan in the app.",
+"what": "App users bookmark exhibitor stands, sessions, events and custom locations on the ExpoFP floor plan, with a confirmation message, and revisit them from a bookmarks list in the floor plan header.",
+"detail": "App users bookmark a location with a confirmation message and revisit their bookmarks from a list in the floor plan header.",
+"stories": [
+"Bookmarking Stands on Floor Plan - Stage 1"
+]
+},
+{
+"id": "onsite-live-badge-ring",
+"theme": "onsite",
+"q": "2025-Q3",
+"title": "Animated ring on live digital badges",
+"benefit": "Help staff spot screenshots of badges and check attendee category at a glance.",
+"what": "Live digital badges can show a moving ring around the QR code in the attendee's category colour, switched on per event.",
+"detail": "Live digital badges can show a moving ring around the QR code in the attendee’s category colour, switched on per event.",
+"stories": [
+"Display a Moving Colored Ring Around Badge QR Codes"
+]
+},
+{
+"id": "onsite-category-at-checkin",
+"theme": "onsite",
+"q": "2025-Q3",
+"title": "Attendee category at check-in",
+"benefit": "See each attendee’s category when checking them in, in the check-in app and at kiosks.",
+"what": "The check-in app shows the participant category after a scan and in the manual-add and scanned lists, and kiosks show the visitor category next to names. The logout button is easier to find and asks for confirmation.",
+"detail": "The check-in app shows the participant category after a scan and in the manual-add and scanned lists, and kiosks show the visitor category next to names. The app’s logout button is easier to find and asks for confirmation.",
+"stories": [
+"Check-in App | Logout Button",
+"Participant category display in Check-in app",
+"Can we please display the visitor Category in KIOSK module besides Visitor names"
+]
+},
+{
+"id": "analytics-meeting-programme-reports",
+"theme": "analytics",
+"q": "2025-Q3",
+"title": "Meeting programme reports",
+"benefit": "Download a full report of a meeting programme’s relevance actions, acceptances and meetings.",
+"what": "A Generate XLS Report button on meeting programme details produces a multi-tab, timestamped report with per-attendee counts of generated, accepted, rejected and confirmed meetings, sponsored and free.",
+"detail": "A Generate XLS Report button on meeting programme details produces a multi-tab, timestamped report with per-attendee counts of generated, accepted, rejected and confirmed meetings, sponsored and free.",
+"stories": [
+"MP || Reports for Meeting Program"
+]
+},
+{
+"id": "onsite-expofp-hall-stands",
+"theme": "onsite",
+"q": "2025-Q4",
+"title": "ExpoFP stands with hall numbers",
+"benefit": "Link exhibitors to ExpoFP stands whether stand numbers include the hall or not.",
+"what": "The apps follow ExpoFP's 'Map with Hall' setting, matching stands as hall plus stand, for example 'Halle 3.0 G61', or stand only, 'G61'.",
+"detail": "The apps follow ExpoFP’s “Map with Hall” setting, matching stands as hall plus stand (for example “Halle 3.0 G61”) or stand only (“G61”).",
+"stories": [
+"ExpoFP - New stand format in our applications"
+]
+},
+{
+"id": "analytics-programme-roundtable-reports",
+"theme": "analytics",
+"q": "2025-Q4",
+"title": "Programme and round table reports",
+"benefit": "Get more detail in meeting programme reports and export round table assignments.",
+"what": "The meeting programme report adds each exhibitor's sponsored meeting limit and a relevance tab covering all user types. Each round table session has an export listing assigned attendees with topic and table number.",
+"detail": "The meeting programme report adds each exhibitor’s sponsored meeting limit and a relevance tab covering all user types. Each round table session has an export listing assigned attendees with topic and table number.",
+"stories": [
+"Meeting Program report. Relevance Actions per Exhibitor tab extension",
+"Meeting Program report . Relevance per Buyer&Participant tab extension",
+"Round tables report"
+]
+},
+{
+"id": "onsite-offline-expofp",
+"theme": "onsite",
+"q": "2026-Q1",
+"title": "Offline ExpoFP floor plans",
+"benefit": "Use ExpoFP floor plans in the app without an internet connection.",
+"what": "The mobile apps download ExpoFP floor plan data for full offline use, so plans work without an internet connection.",
+"detail": "The mobile apps provide full offline support for ExpoFP floor plans.",
+"stories": [
+"Full Offline Support - ExpoFP"
+]
+},
+{
+"id": "onsite-bookmark-favourites-sync",
+"theme": "onsite",
+"q": "2026-Q1",
+"title": "Bookmarks synced with favourites",
+"benefit": "Keep favourites and floor plan bookmarks in step automatically.",
+"what": "Favourite exhibitors and bookmarked stands on the ExpoFP floor plan sync in both directions, so an item saved in one place appears in the other.",
+"detail": "Favourites and floor plan bookmarks now sync in both directions, so an item saved in one place appears in the other.",
+"stories": [
+"Bi-directional Sync Between Favorites and Floorplan Bookmarks"
+]
+},
+{
+"id": "onsite-checkin-qr-2026",
+"theme": "onsite",
+"q": "2026-Q1",
+"title": "Check-in and QR code improvements",
+"benefit": "Use a simplified participant QR code and a refined zone filter in the check-in list.",
+"what": "Admins can choose a new 'Simplified Participant QR' code type that holds only the attendee ID, and the zone filter in the admin check-in list and check-in analytics has limits on the options it loads.",
+"detail": "Admins can choose a new “Simplified Participant QR” code type, and the zone filter in the admin check-in list has new limits.",
+"stories": [
+"Add a new simplified QR Code type to the admin panel: \"Simplified Participant QR\"",
+"[admin panel] Add limitation to Zone filter in Check-in List "
+]
+},
+{
+"id": "onsite-aditus-badge-errors",
+"theme": "onsite",
+"q": "2026-Q1",
+"title": "Clearer custom badge errors with Aditus",
+"benefit": "Tell attendees what to do when their Aditus custom badge cannot be shown.",
+"what": "When an Aditus custom badge cannot be shown, users go to a clear error page for no-connection and no-information cases, in English and German, instead of falling back to the standard badge.",
+"detail": "Instead of silently falling back to the standard badge, users are taken to a clear error page for no-connection and no-information cases, available in English and German.",
+"stories": [
+"Error Handling - Custom Badge Page"
+]
+},
+{
+"id": "analytics-export-additions-2026",
+"theme": "analytics",
+"q": "2026-Q1",
+"title": "Export additions",
+"benefit": "Analyse profile completion and new exhibitors in your own reporting tools.",
+"what": "Participant exports include each profile's completion value, the exhibitor export shows whether each exhibitor is marked new, and the team member export includes external QR codes.",
+"detail": "Participant exports include profile completion, the exhibitor export shows whether each exhibitor is new, and the team member export includes external QR codes.",
+"stories": [
+"Team Member Export File - Addition of a new column \"External QR\"",
+"Adding a column for \"is_new\" field to the exhibitor export file",
+"Profile Completion Column in Export Reports (Participants)"
+]
+},
+{
+"id": "analytics-programme-report-additions-2026",
+"theme": "analytics",
+"q": "2026-Q1",
+"title": "Meeting programme report additions",
+"benefit": "See how each meeting was generated and how it was rated in the programme report.",
+"what": "The All meetings tab of the meeting programme report shows how each meeting was generated, from the first or second matching run or added by the organiser, and the rating it received.",
+"detail": "The All meetings tab of the meeting programme report shows how each meeting was generated and the rating it received.",
+"stories": [
+"Meeting program. Report. All meetings tab. Add extra column about meeting generation",
+"Meeting Program Report — Meeting Ratings in All Meetings Tab"
+]
+},
+{
+"id": "onsite-ocr-badge-scanning",
+"theme": "onsite",
+"q": "2026-Q2",
+"title": "OCR badge scanning",
+"benefit": "Capture badge details by reading the printed text with OCR when scanning.",
+"what": "The mobile app can scan a badge by reading its printed name, company and job title with OCR for a set badge format, matching records on the device first and then on the server, and showing up to five matches.",
+"detail": "Badge scanning can use optical character recognition to read badges.",
+"stories": [
+"OCR Badge Scanning"
+]
+},
+{
+"id": "onsite-floor-plan-management-2026",
+"theme": "onsite",
+"q": "2026-Q2",
+"title": "Floor plan management improvements",
+"benefit": "Manage halls and stands on large internal floor plans faster.",
+"what": "Halls and stands on the internal floor plan can be sorted in natural order and selected, including select all, for bulk deletion. Stands in a hidden hall no longer open from an exhibitor's card.",
+"detail": "Halls and stands can be sorted in natural order and deleted in bulk with multi-select, and stands in a hidden hall no longer open from an exhibitor’s card.",
+"stories": [
+"Adding sorting and multi-select to internal floorplan",
+"Floor plan|It possible open hidden hall from exhibitors card "
+]
+},
+{
+"id": "analytics-event-reporting-dashboards",
+"theme": "analytics",
+"q": "2026-Q2",
+"title": "Automated event reporting dashboards",
+"benefit": "Track exhibitors, attendees, app adoption, meetings, sessions and products in ready-made dashboards in Analytics.",
+"what": "A new section in Analytics holds ready-made dashboards for exhibitors, attendees, platform performance, mobile app downloads and adoption, meetings and messaging, top sessions and session types, and product categories and listings.",
+"detail": "New dashboards sit in their own Analytics section: exhibitor analytics, attendee analytics, platform performance, mobile app downloads and adoption, meetings and messaging, top sessions and session types, and product categories and listings, with KPI cards, trends, filtering and drill-down.",
+"stories": [
+"Development <first> dashboard - for demo to Informa",
+"[Dashboard] Exhibitor Analytics — Count, Completion, Login, Engagement & Profile Performance (R2-R5, R15)",
+"[Dashboard] Attendee Analytics — Count, Profile Completion & Engagement (R6, R7)",
+"[Dashboard] Platform Performance — Logins, Active Users, Favourites, Page Visits & Engagement (R8-R11, R16)",
+"[Dashboard] Mobile App — Downloads, Logins, Adoption & App Page Visits (R12)",
+"[Dashboard] Connections Deep Dive — Meetings & Messaging Analytics (R13, R14)",
+"[Dashboard] Sessions Deep Dive — Top Sessions & Session Types (R17)",
+"[Dashboard] Products Deep Dive — Categories, Top Products & Listing Metrics (R18)",
+"[Dashboard] [Splited: 4 dashboards] [Attendee Analytics, Connections Deep Dive, Logins, Session Duration] UX/UI new Event Reporting dashboards are embedded as a new sub-section under the existing Analytics module",
+"[Dashboard] [/Splitted : Part 2] UX/UI new Event Reporting dashboards are embedded as a new sub-section under the existing Analytics module"
+]
+},
+{
+"id": "analytics-colocated-checkins",
+"theme": "analytics",
+"q": "2026-Q2",
+"title": "Co-located event check-in comparison",
+"benefit": "Compare check-ins across co-located events and see attendees who cross over.",
+"what": "The total check-in and check-out graph compares co-located events and shows crossover check-ins, filterable by badge origin.",
+"detail": "The total check-in and check-out graph compares co-located events and shows crossover check-ins, filterable by badge origin.",
+"stories": [
+"Attendance: Organizer can compare Check-ins across co-located Events and view Crossover Check-ins in Total Check-In / Check-Out graph"
+]
+},
+{
+"id": "analytics-faster-exports",
+"theme": "analytics",
+"q": "2026-Q2",
+"title": "Faster report exports",
+"benefit": "Download session and booking reports faster and more reliably on large events.",
+"what": "The by-session export was reworked to run in the background more reliably, and the by-booking report loads each page with a fixed set of queries, however many orders the event has.",
+"detail": "The by-session export was reworked to run in the background more reliably, and the by-booking report loads each page with a fixed set of queries.",
+"stories": [
+"bySession export rework",
+"N+1 query loop in By Booking report (SessionOrdersRepository)"
+]
+},
+{
+"id": "analytics-ga4-support",
+"theme": "analytics",
+"q": "2026-Q2",
+"title": "Google Analytics 4 support",
+"benefit": "Track event website traffic with Google Analytics 4.",
+"what": "GA4 tracking works again on event websites. The Google Analytics ID field in the admin panel checks the GA4 format and has placeholder and help text, and leaving it empty turns tracking off.",
+"detail": "GA4 tracking works again on event websites, and the Google Analytics ID field in the admin panel validates the GA4 format, with placeholder and help text; leaving it empty turns tracking off.",
+"stories": [
+"Restoring Google Analytics Support: Enhancements for GA4 Integration and Validation",
+"Google Analytics field front-end validation"
+]
+},
+{
+"id": "analytics-meeting-outcome-columns",
+"theme": "analytics",
+"q": "2026-Q2",
+"title": "Meeting outcome columns in reports",
+"benefit": "See whether meetings took place and how likely they are to lead to business.",
+"what": "The meetings report and the custom meeting wizard report include business transaction likelihood and meeting did not take place columns, for every rated meeting.",
+"detail": "The meetings report and custom meeting wizard report include business transaction likelihood and meeting did not take place columns.",
+"stories": [
+"Enhancing Meetings report and Custom Meeting Wizard Report: Adding Business Transaction Likelihood and Meeting Did Not Take Place Columns"
+]
+},
+{
+"id": "analytics-sponsorship-engagement-reporting",
+"theme": "analytics",
+"q": "2026-Q3",
+"title": "Sponsorship and engagement reporting",
+"benefit": "Measure sponsor performance by asset in a sponsorships dashboard.",
+"what": "A sponsorships dashboard shows views, clicks and click-through rate per sponsor and asset, with sponsor KPI cards, backed by a new sponsor interactions report.",
+"detail": "A sponsorships dashboard shows views, clicks and click-through rate per sponsor and asset, backed by a new sponsor interactions report, and existing dashboard graphs were refined.",
+"stories": [
+"[Dashboard] Sponsorships Deep Dive — Sponsor Performance by Asset (R21)",
+"[Statistics Reports] New SponsorAccountsInteractionsReport — paginated sponsor interaction rows from sponsor_statistics",
+"Address Informa Analytics Display Feedback #2 (graph-level fixes & additions)",
+"[DS part]Create daily report to be shared with Hyve"
+]
+}
+],
+"claims": [
+{
+"id": "04_onsite_and_kiosks:104",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Badges Builder — physical + digital designers",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:105",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Drag-and-drop field positioning, live preview",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:106",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Custom fields for badges (select-type reg answers)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:107",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Badge variables for emails (4 variables)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:108",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Bulk and individual badge printing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:109",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Digital badge with branded colour ring around QR",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:110",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Pre-print badge via online profile",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:111",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Download badge to print (CTRL+P / PDF save)",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:112",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Kiosk Builder at `Onsite > Kiosk > Kiosk Builder`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:113",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Kiosk Builder covers 9 named screens",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:114",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Kiosk Mode at `https://front-url/onsite/index`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:115",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Idle-reset timer",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:116",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Print badge via kiosk",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:117",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Print badge without confirmation",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:118",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Onsite registration pipeline (walk-in)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:119",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Conditional logic in kiosk registration (EP-14036)",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:120",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Check-in methods: Bar/QR, Name/Email, Reg code",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:121",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Attendance tracking via Check-in App",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:122",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Check-in App sign-in with admin credentials",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:123",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Check-in zones — floorplan-linked or custom",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:124",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Colour-coded cards with check-in + session counts",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:125",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Check-in App scanning in/out + scanned list",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:126",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Session check-in",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:127",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Easy Entrance session check-in",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:128",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Check-in List data record",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:129",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Check-in Analytics (6 chart areas)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:130",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Check-in Report — unique-per-event / unique-per-day",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:131",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Report: customisable columns, co-located, conditional custom fields",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:132",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Default or External ID switch",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:133",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Supported formats ITF, Code128, Code39, EAN-13",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:134",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Visit G2 / GES external badge + scanner + lead sync",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:135",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Login via badge scan",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:136",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "Storing history of QR codes (EP-10400)",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:137",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Included",
+"claim": "External QR/barcode scan in Kiosk",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:143",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Facial Recognition check-in — \"not usable\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:144",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "\"Register via kiosk\" legacy page — \"not usable\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:145",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Service badges for exhibitors — out of scope",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:146",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Online meeting reminder emails — separate product",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:147",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Badge scanning for lead capture — separate product",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:148",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Mobile App Builder digital-badge font — separate product",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:149",
+"product": "Onsite & Kiosks",
+"section": "§2 Scope — Excluded (an excluded item found in code is `CONTRADICTED`)",
+"claim": "Billing/payment for onsite registration — separate product",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:155",
+"product": "Onsite & Kiosks",
+"section": "§3 User Roles",
+"claim": "Super Admin ≠ Admin (Organiser) on integration settings",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:156",
+"product": "Onsite & Kiosks",
+"section": "§3 User Roles",
+"claim": "Onsite Staff / Zone Admin as a role",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:157",
+"product": "Onsite & Kiosks",
+"section": "§3 User Roles",
+"claim": "Exhibitor prints own team-member badges",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:158",
+"product": "Onsite & Kiosks",
+"section": "§3 User Roles",
+"claim": "Badges exist only for participants and team members",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:159",
+"product": "Onsite & Kiosks",
+"section": "§3 User Roles",
+"claim": "Speaker badge printing subject to Module Management",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:160",
+"product": "Onsite & Kiosks",
+"section": "§3 User Roles",
+"claim": "Kiosk access is unauthenticated",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:161",
+"product": "Onsite & Kiosks",
+"section": "§3 User Roles",
+"claim": "Sponsor role printed at Visitor priority",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:162",
+"product": "Onsite & Kiosks",
+"section": "§3 User Roles",
+"claim": "TM badges only for participant and TM categories",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:168",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Print Badge Configuration",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:169",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "System fields list matches doc (Photo, Name, Company, Country, City, Category, DOB, Post Code, Website, Telephone)",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:170",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Per-field colour, size, family, B/I/U, rotation, margins, alignment",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:171",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Icons, Lanyard Hole, Hide Border",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:172",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Digital Badge Configuration",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:173",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Color Ring",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:174",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Custom fields = select-type only, comma-joined, file/HTML5 excluded",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:175",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Badge Variables for Emails",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:176",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Bulk/individual print + multi-role priority",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:178",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Pre-print via profile; multi-role dropdown",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:179",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Default/External ID, formats, kiosk recognition",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:180",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "QR string must be text not URL",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:181",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Kiosk Builder, 9 screens, Settings panel",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:182",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Print Badge Without Confirmation, both scenarios",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:183",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Onsite Registration Pipeline",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:184",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Check-in App: zone → camera → scan object → in/out",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:185",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "\"Scan object: Faces (3rd-party facial recognition; PIN required)\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:186",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Check-in Zones, fixed display order",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:187",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Session Check-in + Easy Entrance + SN time window",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:188",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Check-in List: columns, pinned name, 96/page, filters, export",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:189",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Export moved to SQS (EP-1106)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:190",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Check-in Analytics — 4 chart areas + filters + event timezone",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:191",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Check-in Report at `Data → Import/Export → Check-in List`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:192",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Visit G2 external badge + scanner + lead sync",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:193",
+"product": "Onsite & Kiosks",
+"section": "§4 Feature Inventory",
+"claim": "Login via Badge Scan (+ deep link, EP-1233)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:218",
+"product": "Onsite & Kiosks",
+"section": "§8 Data Model — the ERD",
+"claim": "`BADGE` entity per participant per role",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:219",
+"product": "Onsite & Kiosks",
+"section": "§8 Data Model — the ERD",
+"claim": "`BADGE_TEMPLATE { type, category, qr_source, json fields, json layout }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:220",
+"product": "Onsite & Kiosks",
+"section": "§8 Data Model — the ERD",
+"claim": "`PARTICIPANT { external_qr_code, external_badge_url, external_scanner_url }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:221",
+"product": "Onsite & Kiosks",
+"section": "§8 Data Model — the ERD",
+"claim": "`CHECKIN_RECORD { participant_id, zone_id, session_id, timestamp, action, recognition, recognised }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:222",
+"product": "Onsite & Kiosks",
+"section": "§8 Data Model — the ERD",
+"claim": "`QR_CODE_HISTORY` table",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:223",
+"product": "Onsite & Kiosks",
+"section": "§8 Data Model — the ERD",
+"claim": "`KIOSK_CONFIG` table",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:224",
+"product": "Onsite & Kiosks",
+"section": "§8 Data Model — the ERD",
+"claim": "`CHECKIN_ZONE { name, type, floor_plan_ref, is_session_zone }`",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:233",
+"product": "Onsite & Kiosks",
+"section": "§9 Permissions Matrix",
+"claim": "Super Admin-only capabilities (\"Enable external QR / Visit G2\")",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:234",
+"product": "Onsite & Kiosks",
+"section": "§9 Permissions Matrix",
+"claim": "Onsite Staff row (scan yes, analytics no)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:235",
+"product": "Onsite & Kiosks",
+"section": "§9 Permissions Matrix",
+"claim": "Attendee \"use kiosk to self-check-in\" as a permission",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:241",
+"product": "Onsite & Kiosks",
+"section": "§10 Integrations",
+"claim": "Badge printers (hardware), \"PDF sent to printer driver\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:242",
+"product": "Onsite & Kiosks",
+"section": "§10 Integrations",
+"claim": "Visit G2 / GES (n200) vendor API",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:243",
+"product": "Onsite & Kiosks",
+"section": "§10 Integrations",
+"claim": "\"Sync scanned leads\" toggle",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:244",
+"product": "Onsite & Kiosks",
+"section": "§10 Integrations",
+"claim": "External QR/barcode via import/API",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:245",
+"product": "Onsite & Kiosks",
+"section": "§10 Integrations",
+"claim": "EP Registration system",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:246",
+"product": "Onsite & Kiosks",
+"section": "§10 Integrations",
+"claim": "Mobile App (digital badge, scan login, Visit badge)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:247",
+"product": "Onsite & Kiosks",
+"section": "§10 Integrations",
+"claim": "Check-in App (staff)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:248",
+"product": "Onsite & Kiosks",
+"section": "§10 Integrations",
+"claim": "Floor Plan module",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:249",
+"product": "Onsite & Kiosks",
+"section": "§10 Integrations",
+"claim": "SQS export queue",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:250",
+"product": "Onsite & Kiosks",
+"section": "§10 Integrations",
+"claim": "DWTC All Meetings Tracking (EP-15159)",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:251",
+"product": "Onsite & Kiosks",
+"section": "§10 Integrations",
+"claim": "Zxing open-source scanner (EP-15213)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:257",
+"product": "Onsite & Kiosks",
+"section": "§11 Notifications",
+"claim": "Badge variables in registration confirmation",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:258",
+"product": "Onsite & Kiosks",
+"section": "§11 Notifications",
+"claim": "Badge variable in Visitor Switch Category (EP-11106)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:259",
+"product": "Onsite & Kiosks",
+"section": "§11 Notifications",
+"claim": "Badge variable in Hosted Buyer Accept (EP-8170)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:260",
+"product": "Onsite & Kiosks",
+"section": "§11 Notifications",
+"claim": "Badge variable in Buyer Accept (EP-15823)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:261",
+"product": "Onsite & Kiosks",
+"section": "§11 Notifications",
+"claim": "Onsite meeting reminder, 15 min before (EP-2245)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:262",
+"product": "Onsite & Kiosks",
+"section": "§11 Notifications",
+"claim": "Kiosk \"Event is disabled\" message",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:263",
+"product": "Onsite & Kiosks",
+"section": "§11 Notifications",
+"claim": "Check-in App error: not-found vs offline (EP-8616)",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:264",
+"product": "Onsite & Kiosks",
+"section": "§11 Notifications",
+"claim": "Badge scan login success/failure (EP-19419)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:265",
+"product": "Onsite & Kiosks",
+"section": "§11 Notifications",
+"claim": "\"No email when a badge is ready or printed\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:271",
+"product": "Onsite & Kiosks",
+"section": "§12 Reporting & Analytics",
+"claim": "Pre/post-event registrations pie",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:272",
+"product": "Onsite & Kiosks",
+"section": "§12 Reporting & Analytics",
+"claim": "Total check-ins/outs bar, hourly/daily",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:273",
+"product": "Onsite & Kiosks",
+"section": "§12 Reporting & Analytics",
+"claim": "Registration vs Check-in pie",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:274",
+"product": "Onsite & Kiosks",
+"section": "§12 Reporting & Analytics",
+"claim": "Heatmap by zone",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:275",
+"product": "Onsite & Kiosks",
+"section": "§12 Reporting & Analytics",
+"claim": "Top Zones ranked, top 5 + increments",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:276",
+"product": "Onsite & Kiosks",
+"section": "§12 Reporting & Analytics",
+"claim": "No direct export from any chart",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:277",
+"product": "Onsite & Kiosks",
+"section": "§12 Reporting & Analytics",
+"claim": "Export: Unique per Event / per Day, column selector",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:278",
+"product": "Onsite & Kiosks",
+"section": "§12 Reporting & Analytics",
+"claim": "Co-located data included, non-EP barcodes in Scanned Code",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:279",
+"product": "Onsite & Kiosks",
+"section": "§12 Reporting & Analytics",
+"claim": "File-upload / HTML5 custom fields excluded",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:285",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Badge module on/off per participant type",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:286",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Print / Digital badge template",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:287",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "QR/Barcode source per category",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:288",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Color Ring",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "04_onsite_and_kiosks:289",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "\"Do not hide in badges\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:290",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Badge variables in emails",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:291",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Kiosk mode toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:292",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Check-in methods enable/disable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:293",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Print badge without confirmation",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:294",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Idle-reset timer",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:295",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Conditional logic on kiosk registration form",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:296",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Check-in Zones",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:297",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Easy Entrance at `Management → Sessions → Config`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:298",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Badge Scan Login for App",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:299",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Visit integration settings — Super Admin",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:300",
+"product": "Onsite & Kiosks",
+"section": "§13 Configuration Guide",
+"claim": "Check-in App API URL",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "04_onsite_and_kiosks:306",
+"product": "Onsite & Kiosks",
+"section": "§14 Edge Cases (sampled)",
+"claim": "Multi-role: bulk/kiosk use priority; individual shows selector",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:307",
+"product": "Onsite & Kiosks",
+"section": "§14 Edge Cases (sampled)",
+"claim": "Scan of a deleted account → unrecognised, stored and synced (EP-21095)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:308",
+"product": "Onsite & Kiosks",
+"section": "§14 Edge Cases (sampled)",
+"claim": "Same badge at multiple kiosks → separate records",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:309",
+"product": "Onsite & Kiosks",
+"section": "§14 Edge Cases (sampled)",
+"claim": "Duplicate-name walk-in → category shown",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:310",
+"product": "Onsite & Kiosks",
+"section": "§14 Edge Cases (sampled)",
+"claim": "External QR in wrong format → badge renders without the code",
+"verdict": "PARTIAL"
+},
+{
+"id": "04_onsite_and_kiosks:311",
+"product": "Onsite & Kiosks",
+"section": "§14 Edge Cases (sampled)",
+"claim": "Category changed after template design → empty/blank badge",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:312",
+"product": "Onsite & Kiosks",
+"section": "§14 Edge Cases (sampled)",
+"claim": "Two admins editing a badge template → last save wins",
+"verdict": "CONFIRMED"
+},
+{
+"id": "04_onsite_and_kiosks:313",
+"product": "Onsite & Kiosks",
+"section": "§14 Edge Cases (sampled)",
+"claim": "Kiosk active after event close",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:88",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Basic organiser configuration — which interactions count as leads, privacy rules, scanning settings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:89",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Lead Capture Access Management — free vs paid, per-team-member toggles, Manual and LC Pro purchase flows",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:90",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Lead Question Builder (Organiser) — standard questions, enable/disable additional, category limits",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:91",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Lead Question Builder (Exhibitors) — toggle standard, create additional, order, publish",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:92",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Leads Dashboard — interactions + sponsor tabs + QR scans",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:93",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Lead Scanning — mobile badge scan, rating, category, questions, notes, products, autosave, offline",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:94",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Non-badge QR codes — company, product, content, visitor; deep links; access control",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:95",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Leads Export — exhibitor, Scanned Me, organiser-triggered, custom question and registration columns, dedup",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:96",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Lead Capture Pro — Stripe self-service, base package + add-ons, auto scan-button activation, redirect",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:102",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Session check-in analytics (Onsite & Check-in product)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:103",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Meeting scheduling engine",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:104",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Registration pipeline and badge printing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:105",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "\"Billing and invoicing outside Stripe-managed LC Pro transactions\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:106",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Attendee-facing networking not tied to lead capture",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:107",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "\"Raw CRM integrations beyond the Excel export (custom integrations are per-client professional services)\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:113",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Contact Sharing is at `Networking & Matchmaking → Contact Sharing`; settings stored at event level",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:114",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Lead toggles: meeting, favourited profile, viewed profile, favourited product, favourited session, on-demand watch, content download, QR scan, booked exhibitor event",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:115",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Badge scans are always leads — no toggle required\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:116",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Data sharing: hide private globally + per action type; include all meeting statuses; on-demand seconds; meeting rating notes",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:117",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Scanning settings: scanned-me list, exhibitor logo, category/role, colocated, any code, repeated scans",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:118",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Changes affect future leads only; no retroactive re-evaluation",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:119",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Access: (1) Manual global free toggle, (2) per-team-member in admin",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:120",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Field types: text, radio, checkbox, date, select (organiser) / 6 types incl. multiselect, checkbox group (exhibitor)",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:121",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Include in lead export file\" per question",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:122",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Must click Publish for changes to go live\"; unpublished questions labelled New and invisible in the app",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:123",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Question order in the Summary panel controls the order in the form\" (drag-and-drop)",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:124",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Leads Dashboard tabs (6) and table display rules",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:125",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Lead capture page: Rating 1-5, Participant Type (Potential Client / Partner / Supplier / Other), Questions, Notes, Products",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:126",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"All data autosaves on navigation away\" (EP autosave)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "15_lead_intelligence:127",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"If offline, data saved locally and synced on reconnect\"; Force Sync (EP-23400)",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:128",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Colocated scanning",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:129",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Allow any code scan",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:130",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Visitor Personal QR — in Visitor Export\"; company/product/content QR exports",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:131",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Non-badge QR scans do NOT appear in Scanned Me\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:132",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Works correctly for future events only; past events are not synced\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "15_lead_intelligence:133",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "LC Pro: base package + custom questions + product QR add-ons",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:134",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "LC Pro pricing configured on a page under Event Setup",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:135",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Add-ons cannot be purchased without the base package\"",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "15_lead_intelligence:136",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Stripe enabled automatically when LC Pro is on\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:137",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Upon purchase, scan button enabled in mobile app; profile menu updated\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:138",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Automatic redirect for unpurchased exhibitors tapping Scan Badge\"; participants never redirected",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "15_lead_intelligence:139",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Organiser sees purchase list in admin\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:140",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Export file schema (common + exhibitor-only + custom question + registration field columns)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:141",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Reason\" column",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:142",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Dedup: only first occurrence, except favourited sessions and booked events",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:143",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"As of May 2026 meeting appointments generate a single lead regardless of team member count\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:144",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Event cloning: interaction info stays in the original event",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:169",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "Organiser configures everything; exhibitor cannot",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:170",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "\"ExpoPlatform Staff (SuperAdmin)\" configures Stripe, taxes, invoicing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:171",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "Exhibitor cannot view other exhibitors' leads",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:172",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "Team member scans; visitor gets basic save only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:173",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "Sponsor sees sponsor tabs only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:174",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "Role × capability table",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:180",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "Mobile app — scanning, form, offline sync",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:181",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "EP backend API resolves badge QR, persists leads",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:182",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "Stripe for LC Pro; \"token never stored by EP\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:183",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "Email delivery of export files",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:184",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "Data Import/Export admin exports",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:185",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "Registration pipeline \"Show in leads export\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:192",
+"product": "Lead Intelligence",
+"section": "§11 Notifications",
+"claim": "Leads / Scanned Me export by email with .xlsx attachment",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:193",
+"product": "Lead Intelligence",
+"section": "§11 Notifications",
+"claim": "Stripe receipt + Stripe invoice with EP branding",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:194",
+"product": "Lead Intelligence",
+"section": "§11 Notifications",
+"claim": "Three in-app scanning messages",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:200",
+"product": "Lead Intelligence",
+"section": "§12 Reporting",
+"claim": "6 dashboard reports",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:201",
+"product": "Lead Intelligence",
+"section": "§12 Reporting",
+"claim": "Exhibitor leads file, Scanned Me file",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:202",
+"product": "Lead Intelligence",
+"section": "§12 Reporting",
+"claim": "Exhibitors/Visitors Scanned Report, QR Scan Report",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:203",
+"product": "Lead Intelligence",
+"section": "§12 Reporting",
+"claim": "Standard Report (EP-23957) via `/admin/data`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:204",
+"product": "Lead Intelligence",
+"section": "§12 Reporting",
+"claim": "Check-in analytics cluster",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:212",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Custom Lead Questions module toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:213",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Use Standard / Additional Questions",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:214",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Category-level question limits",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:215",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Lead Capture global free toggle",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "15_lead_intelligence:216",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Lead Capture per team member",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:217",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "LC Pro module enable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:218",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "LC Pro pricing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:219",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Download Leads toggle (module + category)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:220",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Contact Sharing — all three groups",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:221",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "QR Codes enable",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:222",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Application Universal Links",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:223",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Show in leads export (registration field)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:224",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Include in lead export file (custom question)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:225",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Meeting Rating Notes",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:226",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Scanned Me List",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:227",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Show Repeated Badge Scans",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:238",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`CONTACT_SHARING_CONFIG` (12 boolean attributes)",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:239",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`LEAD_RECORD` (`reason, rating, participant_type, notes, is_new, contacted, scan_time, event_name, scanned_code`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:240",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`LEAD_QUESTION` (`text, type, is_standard, include_in_export, published, display_order`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:241",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`LEAD_ANSWER`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:242",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`LEAD_CAPTURE_ACCESS` (`enabled`, `source enum`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:244",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`QR_CODE` / `QR_SCAN` tables",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:245",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`TEAM_MEMBER`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:99",
+"product": "Floor Plan",
+"section": "§2 Product Scope — Excluded (per F44, treated as claims to verify)",
+"claim": "\"Visioglobe and MapsPeople integrations (EP-1126 and EP-1285 are delivered but documented separately)\" (`:13221`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:100",
+"product": "Floor Plan",
+"section": "§2 Product Scope — Excluded (per F44, treated as claims to verify)",
+"claim": "\"Physical floor plan design / CAD authoring is external\" (`:13216`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:101",
+"product": "Floor Plan",
+"section": "§2 Product Scope — Excluded (per F44, treated as claims to verify)",
+"claim": "\"3D modelling or AR/VR venue walkthroughs\" excluded (`:13222`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:102",
+"product": "Floor Plan",
+"section": "§2 Product Scope — Excluded (per F44, treated as claims to verify)",
+"claim": "\"General analytics dashboards covered by Organiser Analytics\" (`:13220`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:108",
+"product": "Floor Plan",
+"section": "§3 User Roles (`:13226-13236`)",
+"claim": "Seven distinct floor plan roles with differentiated capability sets",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "16_floor_plan:109",
+"product": "Floor Plan",
+"section": "§3 User Roles (`:13226-13236`)",
+"claim": "\"Super Admin: enable/disable floor plan module globally\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:110",
+"product": "Floor Plan",
+"section": "§3 User Roles (`:13226-13236`)",
+"claim": "\"Organizer cannot modify another organiser's event floor plan\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:111",
+"product": "Floor Plan",
+"section": "§3 User Roles (`:13226-13236`)",
+"claim": "\"Hide on Front-End toggle per hall and per stand\" (`:13236`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:117",
+"product": "Floor Plan",
+"section": "§7 Business Rules Engine (`:13724-13736`)",
+"claim": "Only one floor plan integration active at a time; \"UI should enforce this\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:118",
+"product": "Floor Plan",
+"section": "§7 Business Rules Engine (`:13724-13736`)",
+"claim": "Stand names must be unique within a hall",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:119",
+"product": "Floor Plan",
+"section": "§7 Business Rules Engine (`:13724-13736`)",
+"claim": "Hall names must be unique within an event",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:120",
+"product": "Floor Plan",
+"section": "§7 Business Rules Engine (`:13724-13736`)",
+"claim": "Exhibitor data sync to ExpoFP fires on every CRUD",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:121",
+"product": "Floor Plan",
+"section": "§7 Business Rules Engine (`:13724-13736`)",
+"claim": "Event cloning: ExpoFP integration must be re-initialised on the clone",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:122",
+"product": "Floor Plan",
+"section": "§7 Business Rules Engine (`:13724-13736`)",
+"claim": "Hidden halls/stands invisible to all end users",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:123",
+"product": "Floor Plan",
+"section": "§7 Business Rules Engine (`:13724-13736`)",
+"claim": "Quick filters clear default filters and vice versa",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "16_floor_plan:124",
+"product": "Floor Plan",
+"section": "§7 Business Rules Engine (`:13724-13736`)",
+"claim": "CrowdConnected requires ExpoFP as rendering surface",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "16_floor_plan:125",
+"product": "Floor Plan",
+"section": "§7 Business Rules Engine (`:13724-13736`)",
+"claim": "Sessions cannot be searched by session name on the floor plan",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:126",
+"product": "Floor Plan",
+"section": "§7 Business Rules Engine (`:13724-13736`)",
+"claim": "Speed networking requires Conference Hall AND Check-in Zone flags",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:127",
+"product": "Floor Plan",
+"section": "§7 Business Rules Engine (`:13724-13736`)",
+"claim": "DXF save overwrites concurrent design-tool changes; \"the tool is not synchronous\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:135",
+"product": "Floor Plan",
+"section": "§8 Data Model (`:13740-13831`)",
+"claim": "`STAND { hall_id, name, shape_type, geometry, fill_colour, stroke_colour, stroke_width, is_conference_room, is_checkin_zone, is_lounge, hide_on_frontend }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:136",
+"product": "Floor Plan",
+"section": "§8 Data Model (`:13740-13831`)",
+"claim": "`HALL { id, event_id, name, image_url, hide_on_frontend, hide_all_booth_names, hide_all_exhibitor_names, working_date_from, working_date_to, working_hours, is_conference_hall, is_checkin_zone }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:137",
+"product": "Floor Plan",
+"section": "§8 Data Model (`:13740-13831`)",
+"claim": "`EVENT { has_general_plan, general_plan_image_url, floorplan_mode }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:138",
+"product": "Floor Plan",
+"section": "§8 Data Model (`:13740-13831`)",
+"claim": "`EXHIBITOR { stand_number, transmit_to_expofp }`",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:139",
+"product": "Floor Plan",
+"section": "§8 Data Model (`:13740-13831`)",
+"claim": "`FLOOR_PLAN_INTEGRATION { event_id, type, config_json, enabled }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:140",
+"product": "Floor Plan",
+"section": "§8 Data Model (`:13740-13831`)",
+"claim": "`BOOKMARK { stand_id, device_id, user_id }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:142",
+"product": "Floor Plan",
+"section": "§8 Data Model (`:13740-13831`)",
+"claim": "Stand Allocation state diagram (`Available/Reserved/Assigned/Hidden`, `:13816-13831`)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "16_floor_plan:148",
+"product": "Floor Plan",
+"section": "§9 Permissions Matrix (`:13835-13871`)",
+"claim": "17-row Role × Capability matrix (Super Admin / Organizer / Exhibitor / Attendee / Speaker)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "16_floor_plan:149",
+"product": "Floor Plan",
+"section": "§9 Permissions Matrix (`:13835-13871`)",
+"claim": "\"Enable/disable Floor Plan module: Super Admin only\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:150",
+"product": "Floor Plan",
+"section": "§9 Permissions Matrix (`:13835-13871`)",
+"claim": "\"Bookmark stands: Attendee = Yes, all others = No\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "16_floor_plan:151",
+"product": "Floor Plan",
+"section": "§9 Permissions Matrix (`:13835-13871`)",
+"claim": "Frontend view / search / wayfinding available to all roles",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:157",
+"product": "Floor Plan",
+"section": "§10 Integrations (`:13875-13882`)",
+"claim": "ExpoFP — outbound Exhibitor Name/Stand ID/Order ID/Description/Logo/Category; inbound Stand Number via `onDetails`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:158",
+"product": "Floor Plan",
+"section": "§10 Integrations (`:13875-13882`)",
+"claim": "ExpoFP — \"no automatic retry specified\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:159",
+"product": "Floor Plan",
+"section": "§10 Integrations (`:13875-13882`)",
+"claim": "InVisual — \"EP → Invisual deep-link params; Invisual → EP bookmark events\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:160",
+"product": "Floor Plan",
+"section": "§10 Integrations (`:13875-13882`)",
+"claim": "External Floorplan — generic iframe",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:161",
+"product": "Floor Plan",
+"section": "§10 Integrations (`:13875-13882`)",
+"claim": "CrowdConnected — \"EP → SDK User ID alias; CrowdConnected → EP backend location + push triggers\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:162",
+"product": "Floor Plan",
+"section": "§10 Integrations (`:13875-13882`)",
+"claim": "DXF File (AutoCAD) — inbound closed polygons → geometry + names",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:163",
+"product": "Floor Plan",
+"section": "§10 Integrations (`:13875-13882`)",
+"claim": "S3 CDN (JS bundle)",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:164",
+"product": "Floor Plan",
+"section": "§10 Integrations (`:13875-13882`)",
+"claim": "Missing from the doc's integration table",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "16_floor_plan:170",
+"product": "Floor Plan",
+"section": "§11 Notifications (`:13886-13896`)",
+"claim": "\"No email or SMS notifications generated by the Floor Plan module\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:171",
+"product": "Floor Plan",
+"section": "§11 Notifications (`:13886-13896`)",
+"claim": "Bookmark confirmed (in-app mobile), stand save confirmation, DXF import result, exhibitor untagged warning",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "16_floor_plan:172",
+"product": "Floor Plan",
+"section": "§11 Notifications (`:13886-13896`)",
+"claim": "Location-based push via CrowdConnected → EP backend (not Firebase)",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:178",
+"product": "Floor Plan",
+"section": "§12 Reporting and Analytics (`:13902-13912`)",
+"claim": "Stand visit counts",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:179",
+"product": "Floor Plan",
+"section": "§12 Reporting and Analytics (`:13902-13912`)",
+"claim": "Wayfinding usage / search query volume / quick filter usage",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "16_floor_plan:180",
+"product": "Floor Plan",
+"section": "§12 Reporting and Analytics (`:13902-13912`)",
+"claim": "CrowdConnected movement data",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "16_floor_plan:181",
+"product": "Floor Plan",
+"section": "§12 Reporting and Analytics (`:13902-13912`)",
+"claim": "ExpoFP stand interaction",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "16_floor_plan:182",
+"product": "Floor Plan",
+"section": "§12 Reporting and Analytics (`:13902-13912`)",
+"claim": "Floor plan banner impressions/clicks",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "16_floor_plan:188",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "Floor Plan module enable/disable",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:189",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "Single vs Multiple Halls + General Plan",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:190",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "Hall working dates / working hours",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:191",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "Hide Hall on Front-End",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:192",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "Hide all booth names / Hide all exhibitor names",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:193",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "Stand hide on front-end",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:194",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "Stand type flags",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:195",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "ExpoFP settings at \"Admin → Event Setup → General → Settings\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:196",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "Transmit exhibitor data to ExpoFP, per exhibitor",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:197",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "Invisual: floor plan link, deep link pattern, JSON room ids, zip archive",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:198",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "External floor plan URL",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:199",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "CrowdConnected App Key / Token / Secret / Mode",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:200",
+"product": "Floor Plan",
+"section": "§13 Configuration Guide (`:13918-13940`)",
+"claim": "Missing from the doc's config table",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "16_floor_plan:206",
+"product": "Floor Plan",
+"section": "§14 Edge Cases (`:13944-13982`) — selected",
+"claim": "\"If WebGL is not supported, a fallback (canvas 2D or message) should be displayed\" (`:13630`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "16_floor_plan:207",
+"product": "Floor Plan",
+"section": "§14 Edge Cases (`:13944-13982`) — selected",
+"claim": "\"Hall image deleted while stands exist: geometry retained\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:208",
+"product": "Floor Plan",
+"section": "§14 Edge Cases (`:13944-13982`) — selected",
+"claim": "\"Two organisers editing the same hall: last-save-wins, no conflict detection\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:209",
+"product": "Floor Plan",
+"section": "§14 Edge Cases (`:13944-13982`) — selected",
+"claim": "\"Attendee viewing while organiser hides a hall: unaffected until reload\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "16_floor_plan:210",
+"product": "Floor Plan",
+"section": "§14 Edge Cases (`:13944-13982`) — selected",
+"claim": "\"Only one integration should be enabled at a time; multiple = undefined behaviour\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "16_floor_plan:211",
+"product": "Floor Plan",
+"section": "§14 Edge Cases (`:13944-13982`) — selected",
+"claim": "\"Exhibitor attempts to access admin floor plan editor: redirected to login or access-denied\"",
+"verdict": "NOT-IN-CODE"
+}
+]
+}

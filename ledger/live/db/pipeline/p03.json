@@ -1,5 +1,24 @@
 {
   "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "deps": "EP-57332 description; links (Gantt End to End: EP-52201, EP-57330, EP-57291); EP-52201 comment 2026-09-21 by Przemysław Wrzeszcz",
+      "notes": "EP-57332 comment 2026-09-22 by CI CD; jiraColumns; EP-57330 comment 2026-09-17 by Taimoor Zulfiqar",
+      "why": "EP-57332 description; Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view"
+    },
+    "gaps": [],
+    "pages": [
+      {
+        "note": "Web specification (status Discovery, effort estimate M, platform Web); names DLG Agritechnica and the DLG G3 prototype.",
+        "read": true,
+        "title": "All Day Session in calendar view",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view"
+      }
+    ]
+  },
   "flags": {
     "drift": true,
     "dueSoon": false,
@@ -63,6 +82,46 @@
       "k": "migrate",
       "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
       "to": ""
+    },
+    "hb260928enr-deps": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "deps",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57332 description; links (Gantt End to End: EP-52201, EP-57330, EP-57291); EP-52201 comment 2026-09-21 by Przemysław Wrzeszcz",
+      "to": "Mobile calendar view EP-52201 (no-results state, overlap layout); grid range story EP-57330 (all-day sessions excluded from the range); web specification EP-57098 and its Confluence page; linked with EP-57291. Risk: part of the 14 Oct DLG mobile delivery, which EP-52201 comments already describe as tight."
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57332 comment 2026-09-22 by CI CD; jiraColumns; EP-57330 comment 2026-09-17 by Taimoor Zulfiqar",
+      "to": "22 Sep: Android release-candidate build 1.81.2 (11862) uploaded for testing; no other status comment. Jira In Progress, due 14 Oct. 17 Sep (on EP-57330): PO amended this story so a day whose sessions are all all-day renders the 09:00-18:00 grid."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57332 description; Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view",
+      "to": "For DLG: day-long sessions (6 hours or more) crowd the mobile calendar grid; this brings the web All Day banner to the app."
+    },
+    "hb260928jira-status": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "status",
+      "from": "Planned",
+      "k": "edit",
+      "note": "Status now follows Jira: In Progress (owner, 28 Sep 2026: the ledger must match every board)",
+      "to": "In Progress"
     }
   },
   "j": {
@@ -80,6 +139,7 @@
     "teamField": "customfield_10001",
     "type": "Story"
   },
+  "jAt": "2026-09-29T20:06:26Z",
   "migrated": {
     "at": "2026-09-22",
     "schema": 2
@@ -106,22 +166,22 @@
     "status": "Planned"
   },
   "source": "confluence-2155872263",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-28",
   "v": {
     "area": "Legacy mobile app",
-    "deps": "",
+    "deps": "Mobile calendar view EP-52201 (no-results state, overlap layout); grid range story EP-57330 (all-day sessions excluded from the range); web specification EP-57098 and its Confluence page; linked with EP-57291. Risk: part of the 14 Oct DLG mobile delivery, which EP-52201 comments already describe as tight.",
     "driver": "81808",
     "estimate": "Dev: 2.5 d Android | 2.5 d iOS | 5.0 d Total. QA: 2.2 d Android | 2.2 d iOS | 4.4 d Total. Total: 9.4 person-days",
     "feature": "Session Calendar View - All Day Sessions with fixed 44px +N button (Mobile)",
     "impact": "DLG expects to have this feature",
     "key": "EP-57332",
     "month": "2026-10",
-    "notes": "",
+    "notes": "22 Sep: Android release-candidate build 1.81.2 (11862) uploaded for testing; no other status comment. Jira In Progress, due 14 Oct. 17 Sep (on EP-57330): PO amended this story so a day whose sessions are all all-day renders the 09:00-18:00 grid.",
     "owner": "Taimoor",
     "priority": "Customer",
     "rationale": "DLG commitment",
-    "status": "Planned",
+    "status": "In Progress",
     "team": "",
-    "why": ""
+    "why": "For DLG: day-long sessions (6 hours or more) crowd the mobile calendar grid; this brings the web All Day banner to the app."
   }
 }

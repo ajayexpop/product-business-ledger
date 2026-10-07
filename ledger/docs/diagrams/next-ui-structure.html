@@ -1,0 +1,330 @@
+<meta charset="utf-8">
+<title>Ledger Rewire Map</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: four stacked figures, each one claim about the planned rewire; quiet console neutrals, one accent for what changes. */
+:root{
+  --bg:#F7F8F7; --surface:#FFFFFF; --ink:#1C2430; --ink2:#46505E; --muted:#6B7686;
+  --line:#D8DEE3; --move:#C2410C; --keep:#8B96A3;
+  --sans:"IBM Plex Sans",-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#14181D; --surface:#1C222A; --ink:#E8ECF0; --ink2:#B7C0CB; --muted:#8B96A3;
+  --line:#39434E; --move:#F08C4E; --keep:#77828E; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#14181D; --surface:#1C222A; --ink:#E8ECF0; --ink2:#B7C0CB; --muted:#8B96A3;
+  --line:#39434E; --move:#F08C4E; --keep:#77828E; color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);margin:0;font-size:15px;line-height:1.5}
+.wrap{max-width:1040px;margin:0 auto;padding-block:28px 60px;padding-inline:20px}
+h1{font-size:22px;margin:0 0 4px;text-wrap:balance}
+.sub{color:var(--muted);font-size:13.5px;max-width:75ch;margin:0 0 8px}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:12.5px;color:var(--ink2);margin:14px 0 6px}
+.legend svg{vertical-align:-2px}
+figure{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:22px 0 0;padding:18px 18px 10px;min-width:0}
+figure svg{display:block;max-width:100%;height:auto;color:var(--ink)}
+figcaption{color:var(--muted);font-size:13px;padding:10px 4px 6px;max-width:90ch}
+figcaption b{color:var(--ink2)}
+footer{color:var(--muted);font-size:12.5px;margin-top:26px;max-width:90ch}
+/* svg text roles */
+.t{font:600 13px var(--sans);fill:var(--ink)}
+.s{font:400 11px var(--sans);fill:var(--ink2)}
+.m{font:400 11px var(--sans);fill:var(--muted)}
+.al{font:500 11px var(--sans);fill:var(--ink2)}
+.alm{font:500 11px var(--sans);fill:var(--move)}
+.grp{font:600 10.5px var(--sans);fill:var(--muted);letter-spacing:.08em}
+.tag{font:700 9.5px var(--sans);letter-spacing:.06em}
+.box{fill:var(--surface);stroke:var(--line);rx:8}
+.boxk{fill:none;stroke:var(--line);stroke-dasharray:4 3;rx:8}
+.sm{fill:var(--bg);stroke:var(--line);rx:5}
+.ln{stroke:var(--keep);stroke-width:1.5;fill:none}
+.lnd{stroke:var(--keep);stroke-width:1.5;fill:none;stroke-dasharray:5 4}
+.mv{stroke:var(--move);stroke-width:2;fill:none}
+</style>
+
+<div class="wrap">
+<h1>Ledger Rewire Map</h1>
+<p class="sub">The planned restructure of the Internal Product Business Ledger, drawn for review. Planning only — the live ledger is unchanged. Full plan: <code>ledger/docs/planning-the-next-part-of-ui-ux.md</code>.</p>
+<div class="legend">
+  <span><svg width="34" height="10" viewBox="0 0 34 10"><line x1="0" y1="5" x2="30" y2="5" style="stroke:var(--move);stroke-width:2"/><polygon points="30,1.5 34,5 30,8.5" style="fill:var(--move)"/></svg> changes (moves, merges, folds in)</span>
+  <span><svg width="34" height="10" viewBox="0 0 34 10"><line x1="0" y1="5" x2="30" y2="5" style="stroke:var(--keep);stroke-width:1.5;stroke-dasharray:5 4"/><polygon points="30,1.5 34,5 30,8.5" style="fill:var(--keep)"/></svg> stays as it is</span>
+</div>
+
+<!-- shared arrowheads -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--keep)"/></marker>
+  <marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--move)"/></marker>
+</defs></svg>
+
+<!-- ============ FIGURE 1: the tab remap ============ -->
+<figure>
+<svg viewBox="0 0 960 548" role="img" aria-label="Eleven current tabs map onto Home plus five: Overview splits into Home and Quality; Timeline folds into Clients; Delivery folds into Work; Bugs and Incidents merge into Quality; Demand and the Ajay-only tabs stay.">
+  <text class="grp" x="40" y="30">TODAY · 11 TABS</text>
+  <text class="grp" x="640" y="30">PLANNED · HOME + 5</text>
+
+  <!-- left: today -->
+  <rect class="box" x="40" y="44" width="230" height="76"/>
+  <text class="t" x="52" y="62">Overview</text>
+  <rect class="sm" x="52" y="70" width="206" height="19"/>
+  <text class="s" x="58" y="83">radar · next 8 weeks · attention</text>
+  <rect class="sm" x="52" y="93" width="206" height="19"/>
+  <text class="s" x="58" y="106">team pressure · oldest bugs</text>
+
+  <rect class="box" x="40" y="132" width="230" height="32"/><text class="t" x="52" y="152">Clients</text>
+  <rect class="box" x="40" y="172" width="230" height="32"/><text class="t" x="52" y="192">Timeline</text>
+
+  <rect class="box" x="40" y="234" width="230" height="32"/><text class="t" x="52" y="254">Requests</text>
+  <rect class="box" x="40" y="274" width="230" height="32"/><text class="t" x="52" y="294">Demand</text>
+  <rect class="box" x="40" y="314" width="230" height="32"/><text class="t" x="52" y="334">Delivery</text>
+  <rect class="box" x="40" y="354" width="230" height="32"/><text class="t" x="52" y="374">Bugs</text>
+  <rect class="box" x="40" y="394" width="230" height="32"/><text class="t" x="52" y="414">Incidents</text>
+
+  <rect class="box" x="40" y="478" width="230" height="40"/>
+  <text class="t" x="52" y="495">How it works</text>
+  <text class="s" x="52" y="510">Rules · Method &amp; sources · Sync &amp; logs</text>
+
+  <!-- right: planned -->
+  <rect class="box" x="640" y="44" width="280" height="76"/>
+  <text class="t" x="652" y="63">Home</text>
+  <text class="s" x="652" y="81">lenses: Product · Sales · Ops·CS · Engineering</text>
+  <text class="s" x="652" y="97">3–4 tiles + top-5 rows, all deep-linked</text>
+  <text class="m" x="652" y="112">no revenue figures on the Leadership lens</text>
+
+  <rect class="box" x="640" y="150" width="280" height="52"/>
+  <text class="t" x="652" y="169">Clients</text>
+  <text class="s" x="652" y="187">Table | Timeline · derived health · expert cols</text>
+
+  <rect class="box" x="640" y="228" width="280" height="52"/>
+  <text class="t" x="652" y="247">Work</text>
+  <text class="s" x="652" y="265">Asks in flow | Must-have | Built &amp; shipped</text>
+
+  <rect class="box" x="640" y="306" width="280" height="40"/>
+  <text class="t" x="652" y="323">Demand</text>
+  <text class="s" x="652" y="338">unchanged — the strongest surface</text>
+
+  <rect class="box" x="640" y="372" width="280" height="52"/>
+  <text class="t" x="652" y="391">Quality</text>
+  <text class="s" x="652" y="409">Open bugs | Incidents | Pressure before shows</text>
+
+  <rect class="box" x="640" y="478" width="280" height="40"/>
+  <text class="t" x="652" y="495">How it works</text>
+  <text class="s" x="652" y="510">Ajay-only · unchanged</text>
+
+  <!-- arrows -->
+  <line class="mv" x1="270" y1="80" x2="636" y2="72" marker-end="url(#am)"/>
+  <text class="alm" x="300" y="66">becomes the Ops·CS lens of Home</text>
+
+  <path class="mv" d="M270,103 H560 V396 H636" marker-end="url(#am)"/>
+  <text class="alm" x="300" y="120">team pressure + oldest bugs move to Quality</text>
+
+  <line class="lnd" x1="270" y1="148" x2="636" y2="166" marker-end="url(#ak)"/>
+  <text class="al" x="380" y="150">stays · loses PlanHat circle</text>
+
+  <line class="mv" x1="270" y1="188" x2="636" y2="188" marker-end="url(#am)"/>
+  <text class="alm" x="380" y="182">folds in as a view</text>
+
+  <line class="lnd" x1="270" y1="250" x2="636" y2="246" marker-end="url(#ak)"/>
+  <text class="al" x="400" y="240">stays</text>
+
+  <line class="lnd" x1="270" y1="290" x2="636" y2="324" marker-end="url(#ak)"/>
+  <text class="al" x="548" y="334">unchanged</text>
+
+  <line class="mv" x1="270" y1="330" x2="636" y2="268" marker-end="url(#am)"/>
+  <text class="alm" x="284" y="344">folds in as a view</text>
+
+  <line class="mv" x1="270" y1="370" x2="636" y2="386" marker-end="url(#am)"/>
+  <text class="alm" x="420" y="368">merges</text>
+
+  <line class="mv" x1="270" y1="410" x2="636" y2="402" marker-end="url(#am)"/>
+  <text class="alm" x="420" y="422">merges</text>
+
+  <line class="lnd" x1="270" y1="498" x2="636" y2="498" marker-end="url(#ak)"/>
+  <text class="al" x="420" y="492">unchanged</text>
+</svg>
+<figcaption><b>Figure 1 — the tab remap.</b> Eleven tabs become Home + five. Only Overview is taken apart: its radar half becomes the Ops·CS lens of Home, its engineering half (team pressure, oldest bugs) moves to Quality. Timeline and Delivery stop being top-level peers and become views inside Clients and Work. Nothing is deleted — everything lands somewhere.</figcaption>
+</figure>
+
+<!-- ============ FIGURE 2: Home lenses ============ -->
+<figure>
+<svg viewBox="0 0 960 412" role="img" aria-label="Each Home lens is built from existing blocks, and each tile deep-links into a tab pre-filtered: Product into Demand and Work, Sales into Clients, Demand and Work, Ops into Clients, Engineering into Quality.">
+  <text class="grp" x="40" y="30">HOME — ONE LENS PER ROLE (a view, not a permission)</text>
+  <text class="grp" x="740" y="30">LANDS IN</text>
+
+  <rect class="box" x="40" y="46" width="430" height="62"/>
+  <text class="t" x="52" y="66">Product</text>
+  <text class="s" x="52" y="84">top demand signals · must-have load by month</text>
+  <text class="s" x="52" y="99">delivery in flight</text>
+
+  <rect class="box" x="40" y="126" width="430" height="62"/>
+  <text class="t" x="52" y="146">Sales</text>
+  <text class="s" x="52" y="164">renewals + countdowns · tier-1 asks</text>
+  <text class="s" x="52" y="179">client-driven must-haves</text>
+
+  <rect class="box" x="40" y="206" width="430" height="62"/>
+  <text class="t" x="52" y="226">Ops · CS</text>
+  <text class="s" x="52" y="244">event radar · what needs attention · my clients</text>
+  <text class="s" x="52" y="259">= today’s Overview left column, unchanged</text>
+
+  <rect class="box" x="40" y="286" width="430" height="62"/>
+  <text class="t" x="52" y="306">Engineering</text>
+  <text class="s" x="52" y="324">team pressure · oldest urgent/high bugs</text>
+  <text class="s" x="52" y="339">open incidents</text>
+
+  <rect class="boxk" x="40" y="366" width="430" height="34"/>
+  <text class="s" x="52" y="387">Leadership = Product-shaped, big numbers only, no £ figures</text>
+
+  <!-- destinations -->
+  <rect class="box" x="740" y="46" width="180" height="38"/><text class="t" x="752" y="70">Demand</text>
+  <rect class="box" x="740" y="112" width="180" height="38"/><text class="t" x="752" y="136">Work</text>
+  <rect class="box" x="740" y="178" width="180" height="52"/><text class="t" x="752" y="198">Clients</text><text class="s" x="752" y="216">row → Client 360</text>
+  <rect class="box" x="740" y="300" width="180" height="38"/><text class="t" x="752" y="324">Quality</text>
+
+  <!-- arrows: every tile deep-links, pre-filtered -->
+  <line class="ln" x1="470" y1="64" x2="736" y2="62" marker-end="url(#ak)"/>
+  <line class="ln" x1="470" y1="92" x2="736" y2="124" marker-end="url(#ak)"/>
+  <line class="ln" x1="470" y1="144" x2="736" y2="72" marker-end="url(#ak)"/>
+  <line class="ln" x1="470" y1="160" x2="736" y2="196" marker-end="url(#ak)"/>
+  <line class="ln" x1="470" y1="176" x2="736" y2="138" marker-end="url(#ak)"/>
+  <line class="ln" x1="470" y1="237" x2="736" y2="212" marker-end="url(#ak)"/>
+  <line class="ln" x1="470" y1="317" x2="736" y2="319" marker-end="url(#ak)"/>
+  <text class="al" x="540" y="278">every arrow = a tile’s deep link,</text>
+  <text class="al" x="540" y="293">lands pre-filtered to that tile’s count</text>
+</svg>
+<figcaption><b>Figure 2 — the Home lenses.</b> Every block already exists on some tab today; Home only composes them per role. The lens is picked from the role the onboarding already stores, with a visible switcher — a view, not a permission (the permission matrix stays deferred). A tile is never a dead number: it opens its tab filtered to exactly what it counts.</figcaption>
+</figure>
+
+<!-- ============ FIGURE 3: intake pipeline ============ -->
+<figure>
+<svg viewBox="0 0 1000 400" role="img" aria-label="A TAM drop of one to three lines enters from the ledger page or Claude chat, is grounded by AI against three evidence sources under an evidence-or-empty rule, drafted with a duplicate verdict and at most three questions, confirmed by the TAM, valued by sales only, then written into the ledger with history.">
+  <text class="grp" x="40" y="26">INTAKE — SPLIT THE FORM’S THREE JOBS: CAPTURE (TAM) · GROUNDING (AI) · VALUE (HUMAN)</text>
+
+  <!-- evidence sources -->
+  <rect class="sm" x="270" y="44" width="200" height="36"/>
+  <text class="s" x="280" y="59">KB · platform today</text><text class="m" x="280" y="73">expoplatform-current-platform, verdicts</text>
+  <rect class="sm" x="490" y="44" width="150" height="36"/>
+  <text class="s" x="500" y="59">Built-stories index</text><text class="m" x="500" y="73">roadmap + 558 built</text>
+  <rect class="sm" x="660" y="44" width="150" height="36"/>
+  <text class="s" x="670" y="59">Demand map</text><text class="m" x="670" y="73">1,122 needs, dupes</text>
+
+  <line class="ln" x1="370" y1="80" x2="390" y2="136" marker-end="url(#ak)"/>
+  <line class="ln" x1="540" y1="80" x2="440" y2="136" marker-end="url(#ak)"/>
+  <line class="ln" x1="700" y1="80" x2="470" y2="136" marker-end="url(#ak)"/>
+  <text class="m" x="520" y="112">cites, or leaves the field blank</text>
+
+  <!-- doors -->
+  <rect class="box" x="40" y="118" width="190" height="40"/>
+  <text class="s" x="52" y="135">Drop in the ledger</text><text class="m" x="52" y="150">Requests tab · sample capability</text>
+  <rect class="box" x="40" y="168" width="190" height="40"/>
+  <text class="s" x="52" y="185">Drop in Claude chat</text><text class="m" x="52" y="200">same skill · transcripts OK</text>
+  <text class="m" x="44" y="112">TAM · ~30 seconds</text>
+
+  <line class="ln" x1="230" y1="138" x2="286" y2="158" marker-end="url(#ak)"/>
+  <line class="ln" x1="230" y1="188" x2="286" y2="172" marker-end="url(#ak)"/>
+  <text class="al" x="200" y="230">1–3 lines + client</text>
+
+  <!-- grounding -->
+  <rect class="box" x="290" y="140" width="190" height="66"/>
+  <text class="tag" x="302" y="156" style="fill:var(--move)">AI · FEATURE-INTAKE SKILL</text>
+  <text class="s" x="302" y="172">grounding pass</text>
+  <text class="m" x="302" y="187">evidence or empty —</text>
+  <text class="m" x="302" y="200">every filled field cited</text>
+
+  <line class="ln" x1="480" y1="173" x2="536" y2="173" marker-end="url(#ak)"/>
+
+  <!-- draft/verdict -->
+  <rect class="box" x="540" y="140" width="180" height="66"/>
+  <text class="tag" x="552" y="156" style="fill:var(--move)">AI</text>
+  <text class="s" x="552" y="172">draft what / why / outcome</text>
+  <text class="m" x="552" y="187">verdict: duplicate ·</text>
+  <text class="m" x="552" y="200">extends · new — ≤3 questions</text>
+
+  <line class="ln" x1="720" y1="173" x2="776" y2="173" marker-end="url(#ak)"/>
+
+  <!-- TAM confirm -->
+  <rect class="box" x="780" y="140" width="180" height="66"/>
+  <text class="tag" x="792" y="156" style="fill:var(--keep)">HUMAN · TAM</text>
+  <text class="s" x="792" y="172">confirm or edit the draft</text>
+  <text class="m" x="792" y="187">~2 minutes</text>
+
+  <path class="ln" d="M870,206 V268 H726" marker-end="url(#ak)"/>
+  <text class="al" x="760" y="252">hand-off</text>
+
+  <!-- value -->
+  <rect class="box" x="540" y="238" width="182" height="66"/>
+  <text class="tag" x="552" y="254" style="fill:var(--keep)">HUMAN · SALES</text>
+  <text class="s" x="552" y="270">value: lever · £ figure · funded</text>
+  <text class="m" x="552" y="285">never AI-filled; AI may only</text>
+  <text class="m" x="552" y="298">suggest which lever fits</text>
+
+  <line class="ln" x1="540" y1="271" x2="486" y2="271" marker-end="url(#ak)"/>
+  <text class="al" x="418" y="258">sign · write</text>
+  <text class="al" x="418" y="272">with history</text>
+
+  <!-- ledger item -->
+  <rect class="box" x="290" y="238" width="192" height="66" style="stroke:var(--move)"/>
+  <text class="t" x="302" y="258">Logged work item</text>
+  <text class="s" x="302" y="275">evidence attached</text>
+  <text class="m" x="302" y="290">completeness meter shows gaps</text>
+
+  <text class="m" x="40" y="380">One engine, two doors. The chat door writes back into the same ledger database — there is never a second list. The question set = Ilaria’s field list with importance ratings (her action item, 29 Sep).</text>
+</svg>
+<figcaption><b>Figure 3 — intake replaces the 20-field form.</b> The TAM keeps only capture: what / why / outcome + client. Grounding is AI under the evidence-or-empty rule, composing three existing evidence assets — it fills nothing it cannot cite. Value is entered by a named human, always. The item lands in the same feature ledger, with the existing completeness meter showing what is still missing instead of a wall of required fields up front.</figcaption>
+</figure>
+
+<!-- ============ FIGURE 4: drawers and deep links ============ -->
+<figure>
+<svg viewBox="0 0 1000 330" role="img" aria-label="Every entity has one canonical drawer with a copy-link anchor: rows and cards across tabs open the Client 360, item drawer or need drawer, and the drawers cross-link each other, closing today's dead ends.">
+  <text class="grp" x="40" y="26">EVERY SURFACE OPENS IT</text>
+  <text class="grp" x="420" y="26">ONE DRAWER PER ENTITY</text>
+  <text class="grp" x="690" y="26">DEAD ENDS, CLOSED</text>
+
+  <rect class="sm" x="40" y="44" width="240" height="32"/><text class="s" x="52" y="64">Clients row · radar card · Home tile</text>
+  <rect class="sm" x="40" y="86" width="240" height="32"/><text class="s" x="52" y="106">Quality bug row · must-have driver</text>
+  <rect class="sm" x="40" y="150" width="240" height="32"/><text class="s" x="52" y="170">Work board card · ladder segment</text>
+  <rect class="sm" x="40" y="236" width="240" height="32"/><text class="s" x="52" y="256">Demand ranked row · 360 “asks”</text>
+
+  <line class="ln" x1="280" y1="60" x2="416" y2="72" marker-end="url(#ak)"/>
+  <line class="ln" x1="280" y1="102" x2="416" y2="86" marker-end="url(#ak)"/>
+  <line class="ln" x1="280" y1="166" x2="416" y2="172" marker-end="url(#ak)"/>
+  <line class="ln" x1="280" y1="252" x2="416" y2="262" marker-end="url(#ak)"/>
+
+  <rect class="box" x="420" y="44" width="230" height="64"/>
+  <text class="t" x="432" y="64">Client 360</text>
+  <text class="m" x="432" y="82">#client-hyve-group-plc</text>
+  <text class="s" x="432" y="98">Copy link on the drawer</text>
+
+  <rect class="box" x="420" y="134" width="230" height="64"/>
+  <text class="t" x="432" y="154">Item drawer</text>
+  <text class="m" x="432" y="172">#item-le-2026-0001</text>
+  <text class="s" x="432" y="188">work item · must-have · story</text>
+
+  <rect class="box" x="420" y="224" width="230" height="64"/>
+  <text class="t" x="432" y="244">Need drawer</text>
+  <text class="m" x="432" y="262">#need-cl-marketplace-sort</text>
+  <text class="s" x="432" y="278">what / why / outcome · customers</text>
+
+  <!-- cross links as typed edges, right panel -->
+  <rect class="sm" x="690" y="48" width="112" height="28"/><text class="s" x="700" y="66">Client 360</text>
+  <line class="mv" x1="802" y1="62" x2="866" y2="62" marker-end="url(#am)"/>
+  <text class="alm" x="808" y="52">its asks</text>
+  <rect class="sm" x="870" y="48" width="118" height="28"/><text class="s" x="880" y="66">Need drawer</text>
+
+  <rect class="sm" x="690" y="128" width="112" height="28"/><text class="s" x="700" y="146">Need drawer</text>
+  <line class="mv" x1="802" y1="142" x2="866" y2="142" marker-end="url(#am)"/>
+  <text class="alm" x="793" y="132">each customer</text>
+  <rect class="sm" x="870" y="128" width="118" height="28"/><text class="s" x="880" y="146">Client 360</text>
+
+  <rect class="sm" x="690" y="208" width="112" height="28"/><text class="s" x="700" y="226">Client 360</text>
+  <line class="mv" x1="802" y1="222" x2="866" y2="222" marker-end="url(#am)"/>
+  <text class="alm" x="796" y="212">its promises</text>
+  <rect class="sm" x="870" y="208" width="118" height="28"/><text class="s" x="880" y="226">Item drawer</text>
+
+  <text class="m" x="690" y="286">a need reaches every customer’s 360;</text>
+  <text class="m" x="690" y="301">a 360 reaches its asks and promises</text>
+</svg>
+<figcaption><b>Figure 4 — everything linkable.</b> One canonical drawer per entity, each with a stable anchor and a Copy link button, so any state worth discussing pastes as one link. The accent arrows are today’s dead ends being closed: a 360 reaches the client’s asks and promises, a need reaches every customer’s 360. QA gains two checks: <b>no dead number</b> (every stat clicks somewhere) and <b>link round-trip</b> (every anchor lands right when opened fresh).</figcaption>
+</figure>
+
+<footer>Planning diagram, 29 Sep 2026 · companion to <code>ledger/docs/planning-the-next-part-of-ui-ux.md</code> · the live ledger (WS7mJG…) is untouched by this page. Migration order: Quality → Clients+Timeline → Home lenses → Work → grammar &amp; links → intake short form → intake skill → retire PlanHat pull.</footer>
+</div>

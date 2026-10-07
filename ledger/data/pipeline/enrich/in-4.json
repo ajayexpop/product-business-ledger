@@ -1,0 +1,331 @@
+[
+ {
+  "id": "p21",
+  "key": "EP-29630",
+  "current": {
+   "month": "2026-11",
+   "area": "Networking",
+   "owner": "Alex",
+   "key": "EP-29630",
+   "feature": "Permission Matrix - Upgrade UI",
+   "rationale": "A lot of clients feel significant strain managing permissions",
+   "impact": "Makes permission settings easy and clear to use",
+   "priority": "Operational",
+   "deps": "Can be taken after contracted items are done",
+   "status": "Planned",
+   "estimate": "To be estimated after prototyping is done",
+   "notes": "",
+   "driver": "",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Permission Matrix - Upgrade UI",
+   "description": "# Initial request\n\n* Consider using a tab system to allow administrators to configure different categories (Delegate, Exhibitor, Moderator, etc.) This will make it easier to manage a large number of categories.\n* The user interface should provide a clear indication of the default settings (all categories will have networking options switched on by default).\n* The system should allow administrators to easily switch between ‘Save Changes’ and individual category configuration. ‘Save Changes’ should apply the configuration for that specific tab only.\n\n# Tech brief\n\nNeed to rework the “Manage Permissions“ page in the admin panel at /admin/permissionRelations.\n\n### Design\n\n<custom data-type=\"smartlink\" data-id=\"id-0\">https://www.figma.com/design/MHjUtJtDXZSpSQi4FDw8eI/Admin-Panel---New-UI?node-id=44344-96720</custom> – Design  \n<custom data-type=\"smartlink\" data-id=\"id-1\">https://www.figma.com/design/MHjUtJtDXZSpSQi4FDw8eI/Admin-Panel---New-UI?node-id=47528-25084&t=2K3DttEeqKOBblqV-4</custom> – Adaptation\n\n## Manage permissions page\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=e2af65b8-c1ab-4ad5-9030-a9ac7aa98ce3&&collection=&height=1536&occurrenceKey=null&width=2702&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\nNeed to rework the “Manage permissions“ page in the admin panel at /admin/permissionRelations.\n\n### Page description\n\nThis block displays is the upper part of the page container.\n\n**Title:** Manage Permissions  \n**Description:** On this page, you can configure permissions for different categories and roles. Select a category from the left column to adjust its settings. Use the toggles to enable or disable actions for the selected category relative to other categories.\n\n### Troubleshooting info block\n\nCan be opened using the button in the top right corner of the page container. \n\nOn the button hover, a tooltip “Troubleshooting“ appears.\n\nOn the button click, the button should disapear and a block with the text advices should appear:\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=bca621de-f895-4cf4-a0e2-4de5fcb16111&&collection=&height=300&occurrenceKey=null&width=1248&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n### Left sidebar\n\nIn the Left sidebar there is a Search field and list of user categories and roles. \n\n#### Roles and categories\n\nAll they are divided in groups:\n\n* Participant categories – contains all participant categories including Default category, listed in the same order as on the categories management page.\n* Exhibitor categories – contains all exhibitor categories including Default category, listed in the same order as on the categories management page.\n* Roles – Contain Speaker, Moderator, Team Member, Buyer.\n* Other – For now contains only “Guest“\n\nEach item should work as a tab. Switch between these items leads to scroll of the content in the manage block (main container).\n\nWhen scrolling this block, the search bar and category section title (Participant Categories, Exhibitor Categories, Roles, Other) should be sticky to the scroll (applicable for new admin only).\n\n#### Actions\n\nOn the item hover, the three-dots menu button should appear. On click, a dropdown menu with options of the bulk actions appear. Picking of any option will cause a bulk change of respective permissions. To apply them need to make approval in the pop-up. After action is performed, the menu item changes to oposite (Block → Allow or Allow → Block).\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=b51a9af2-b79e-45c0-87b5-16da45e2c925&&collection=&height=423&occurrenceKey=null&width=1444&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\n#### Search\n\nSearch by category and role names. \n\nSearch should be applied after input of any character with the standard debounce.\n\nSearch results are shown….. to be added after design specifies this.\n\nWhen no results found, the respective placeholder will be shown.\n\n### Manage block (Main container)\n\nUpper part of this block contains title and text description:\n\n**Title:** `Category or Role name, depends on an active tab`  \n**Description:** On this page, you can configure what actions are allowed or disallowed for the chosen category\n\nWhen the active tab belongs to a Roles (Speaker, Moderator, Team Member, Buyer) an additional message will be displayed:  \n\"To ensure that permissions function properly for different roles, please also configure the associated categories. Please note that a role permission supersedes a category permission.\"\n\n![](blob:https://media.staging.atl-paas.net/?type=file&localId=null&id=b20ffa53-6666-4fbb-aafd-0f43ee239ca1&&collection=&height=405&occurrenceKey=null&width=864&__contextId=null&__displayType=null&__external=false&__fileMimeType=null&__fileName=null&__fileSize=null&__mediaTraceId=null&url=null)\nBelow this, there is a table with categories and roles, and toggles that allow to control permissions: Initiate meetings, Send messages, View profile.\n\nAfter any toggle in the Manage block is being switched on/off,  changes should be applied (no save button) and the success message should appear.\n\nWhen scrolling the Manage block, the table header should be sticky to the scroll so that it remains visible until all content is scrolled through, ensuring that the actions labeled in the header are visible (applicable for new admin only).\n\n### The logic\n\nIn left sidebar user picks whose permissions to be managed.   \nIn main containter user manages permissions.\n\nWhen the “Initiate Meetings“ toggle is disabled for the category, this means that user of selected in the sidebar category can’t initiate meetings with the category.  \nWhen the “Send Message“ toggle is disabled for the category, this means that user of selected in the sidebar category can’t initiate chats with the category. They can chat in existing chats.  \nWhen the “View Profile“ toggle is disabled for the category, this means that user of selected in the sidebar category can’t see cards of users of the category and can’t visit their profiles. \n\nIf a permission is allowed for at least one of the user’s roles or categories then it will be allowed for all of them.\n\nAfter deploy all setting on the prod should remain.",
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": null,
+   "labels": [
+    "Team_C",
+    "mig-in-preparation"
+   ],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Konstantin Shein",
+     "created": "2026-07-27T10:28:00.989+0100",
+     "body": "as discussed with <custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Parashchuk</custom>, the requirements and design need to be actualised. "
+    },
+    {
+     "author": "Ajay Singh",
+     "created": "2026-09-28T01:22:07.678+0100",
+     "body": "Please always fill tentative start and due dates. All fields must always have data."
+    }
+   ],
+   "links": [
+    "Polaris work item link: ADP-318",
+    "Polaris work item link: PBV11-382"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": null,
+   "assignee": "Ajay Singh",
+   "canon": "Planned",
+   "due": "2026-12-31",
+   "origDays": null,
+   "priority": "High",
+   "resolved": null,
+   "spentDays": 12.15,
+   "status": "Open",
+   "summary": "Permission Matrix - Upgrade UI",
+   "team": "Exhibitor team",
+   "teamField": "customfield_10001",
+   "type": "Story"
+  }
+ },
+ {
+  "id": "p22",
+  "key": "EP-55779",
+  "current": {
+   "month": "2026-11",
+   "area": "Search",
+   "owner": "Alex",
+   "key": "EP-55779",
+   "feature": "Switch AI Search for Marketplace",
+   "rationale": "Next step of AI Search transition (contracted with IMEX)",
+   "impact": "Unlocks improved search for Exhibitors list",
+   "priority": "Customer",
+   "deps": "Next Step of AI search transition",
+   "status": "Discovery",
+   "estimate": "Unclear, requires to finish investigation to provide clear estimates. Presumably 1st list transition may take longer and the following should proceed faster",
+   "notes": "",
+   "driver": "26874",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Switch AI Search for Marketplace",
+   "description": "Switch all marketplace entity pages (Exhibitors, Products, Sessions, Speakers, Sponsors, Agenda, Documents, and others) from keyword-based search to AI-powered search with consistent semantic matching, relevance ranking, and unified behaviour.",
+   "reportedBy": [
+    "IMEX"
+   ],
+   "pipedrive": "26874",
+   "labels": [],
+   "parent": null,
+   "comments": [
+    {
+     "author": "Oleksii Tur",
+     "created": "2026-09-22T14:24:23.097+0100",
+     "body": "<custom data-type=\"mention\" data-id=\"id-0\">@Oleksandr Parashchuk</custom>  What must be the fallback  if we are not receiving data from DS endpoint. currently on elastic we have fallback search result from full text search on db (postgress). Do we need the same behavour or give empty result?\n\n "
+    }
+   ],
+   "links": [
+    "Polaris work item link: PBV11-452"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": 2,
+   "assignee": null,
+   "canon": "Planned",
+   "due": null,
+   "origDays": null,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": 3.45,
+   "status": "Ready to start",
+   "summary": "Switch AI Search for Marketplace",
+   "team": "Exhibitor team",
+   "teamField": "customfield_10001",
+   "type": "Epic"
+  }
+ },
+ {
+  "id": "p23",
+  "key": "EP-57914",
+  "current": {
+   "month": "2026-11",
+   "area": "Search",
+   "owner": "Alex",
+   "key": "EP-57914",
+   "feature": "AI Search for Products list on Marketplace",
+   "rationale": "Next step of AI Search transition (contracted with IMEX)",
+   "impact": "Unlocks improved search for Products list",
+   "priority": "Customer",
+   "deps": "Next Step of AI search transition",
+   "status": "Planned",
+   "estimate": "To be estimated",
+   "notes": "",
+   "driver": "26874",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "notes"
+  ],
+  "jira": {
+   "summary": "AI Search for Products list on Marketplace",
+   "description": "[https://expoplatform.atlassian.net/jira/polaris/projects/PBV11/ideas/view/6001cf83-fed0-48d2-953c-a9fa4b2ccb31?selectedIssue=PBV11-492](https://expoplatform.atlassian.net/jira/polaris/projects/PBV11/ideas/view/6001cf83-fed0-48d2-953c-a9fa4b2ccb31?selectedIssue=PBV11-492)",
+   "reportedBy": [
+    "IMEX"
+   ],
+   "pipedrive": "26874",
+   "labels": [],
+   "parent": null,
+   "comments": [],
+   "links": [
+    "Polaris work item link: PBV11-492"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": null,
+   "assignee": null,
+   "canon": "Planned",
+   "due": null,
+   "origDays": null,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": null,
+   "status": "Open",
+   "summary": "AI Search for Products list on Marketplace",
+   "team": "Exhibitor team",
+   "teamField": "customfield_10001",
+   "type": "Epic"
+  }
+ },
+ {
+  "id": "p24",
+  "key": "EP-57918",
+  "current": {
+   "month": "2026-12",
+   "area": "Search",
+   "owner": "Alex",
+   "key": "EP-57918",
+   "feature": "AI Search for Sessions and Exhibitor events",
+   "rationale": "Next step of AI Search transition (contracted with IMEX)",
+   "impact": "Unlocks improved search for Sessions and Exhibitor events",
+   "priority": "Customer",
+   "deps": "Next Step of AI search transition",
+   "status": "Planned",
+   "estimate": "To be estimated",
+   "notes": "",
+   "driver": "26874",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "notes"
+  ],
+  "jira": {
+   "summary": "AI Search for Sessions and Exhibitor events",
+   "description": "[https://expoplatform.atlassian.net/jira/polaris/projects/PBV11/ideas/view/6001cf83-fed0-48d2-953c-a9fa4b2ccb31?selectedIssue=PBV11-493](https://expoplatform.atlassian.net/jira/polaris/projects/PBV11/ideas/view/6001cf83-fed0-48d2-953c-a9fa4b2ccb31?selectedIssue=PBV11-493)",
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": null,
+   "labels": [],
+   "parent": null,
+   "comments": [],
+   "links": [
+    "Polaris work item link: PBV11-493"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": null,
+   "assignee": null,
+   "canon": "Planned",
+   "due": null,
+   "origDays": null,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": null,
+   "status": "Open",
+   "summary": "AI Search for Sessions and Exhibitor events",
+   "team": "Exhibitor team",
+   "teamField": "customfield_10001",
+   "type": "Epic"
+  }
+ },
+ {
+  "id": "p25",
+  "key": "EP-57482",
+  "current": {
+   "month": "2026-12",
+   "area": "Lead Intelligence",
+   "owner": "Alex",
+   "key": "EP-57482",
+   "feature": "Lead Capture Pro — Per-Team-Member Access Purchase",
+   "rationale": "Unlocks new selling options for LCPro",
+   "impact": "Allows to sell access to Lead Capture and AI notetaker both per team and for specific team members",
+   "priority": "Revenue",
+   "deps": "Needs crossteam collaboration",
+   "status": "Planned",
+   "estimate": "To be estimated after prototyping is done",
+   "notes": "",
+   "driver": "",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "notes"
+  ],
+  "jira": {
+   "summary": "Lead Capture Pro — Per-Team-Member Access Purchase",
+   "description": "[https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2158428161/Lead+Capture+Pro+Per-Team-Member+Access+Purchase](https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2158428161/Lead+Capture+Pro+Per-Team-Member+Access+Purchase) ",
+   "reportedBy": [
+    "INTERNAL"
+   ],
+   "pipedrive": null,
+   "labels": [],
+   "parent": null,
+   "comments": [],
+   "links": [
+    "Polaris work item link: PBV11-432"
+   ]
+  },
+  "jiraColumns": {
+   "aggOrigDays": null,
+   "assignee": null,
+   "canon": "Planned",
+   "due": null,
+   "origDays": null,
+   "priority": "Medium",
+   "resolved": null,
+   "spentDays": null,
+   "status": "Open",
+   "summary": "Lead Capture Pro — Per-Team-Member Access Purchase",
+   "team": "Exhibitor team",
+   "teamField": "customfield_10001",
+   "type": "Epic"
+  }
+ },
+ {
+  "id": "p26",
+  "key": "",
+  "current": {
+   "month": "",
+   "area": "Registration",
+   "owner": "Kavi",
+   "key": "",
+   "feature": "Group Registration",
+   "rationale": "Requests from multple clients",
+   "impact": "",
+   "priority": "Strategic",
+   "deps": "",
+   "status": "Discovery",
+   "estimate": "TBD",
+   "notes": "",
+   "driver": "",
+   "team": "",
+   "why": ""
+  },
+  "missing": [
+   "why",
+   "impact",
+   "deps",
+   "notes"
+  ],
+  "jira": {
+   "summary": null,
+   "description": null,
+   "reportedBy": [],
+   "pipedrive": null,
+   "labels": null,
+   "parent": null,
+   "comments": [],
+   "links": []
+  },
+  "jiraColumns": null
+ }
+]

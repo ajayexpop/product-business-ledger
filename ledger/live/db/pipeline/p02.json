@@ -1,5 +1,20 @@
 {
   "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "deps": "EP-52201 description; EP-52201 comment 2026-09-21 by Przemysław Wrzeszcz; links (Gantt End to End: EP-57291, EP-57332)",
+      "why": "EP-52201 description; Jira Reported by DLG, Pipedrive 81808"
+    },
+    "gaps": [
+      "estimate: Jira original estimate is 0 and no comment gives one",
+      "client: no client named in description or comments beyond Jira Reported by",
+      "pages: no Confluence links in description or comments"
+    ],
+    "pages": []
+  },
   "flags": {
     "drift": false,
     "dueSoon": false,
@@ -63,23 +78,44 @@
       "k": "migrate",
       "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
       "to": ""
+    },
+    "hb260928enr-deps": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "deps",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-52201 description; EP-52201 comment 2026-09-21 by Przemysław Wrzeszcz; links (Gantt End to End: EP-57291, EP-57332)",
+      "to": "Web setting for the default view (EP-55021). Both QA sub-tasks (EP-55568, EP-55578) still in progress; 21 defects raised 2-21 Sep, 13 on iOS, with iOS capacity reduced. Proposed release blockers: EP-57117, EP-57575, EP-57565; EP-57548 (sponsored banner scale) needs a PO decision; EP-57309 (session card design) proposed to split out. No fixVersion defines the 14 Oct release scope. Follow-on stories EP-57330, EP-57332 and EP-57291 build on this. Risk: the 14 Oct build is only 'tight but achievable' if blockers are cut to three."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-52201 description; Jira Reported by DLG, Pipedrive 81808",
+      "to": "Committed to DLG (the reporter): attendees and exhibitors need a mobile calendar view to browse sessions by day and time slot."
     }
   },
   "j": {
-    "aggOrigDays": null,
+    "aggOrigDays": 0,
     "assignee": "Przemysław Wrzeszcz",
     "canon": "In Testing",
     "due": "2026-10-14",
-    "origDays": null,
+    "origDays": 0,
     "priority": "Urgent",
     "resolved": null,
-    "spentDays": 36.77,
+    "spentDays": 42.02,
     "status": "In testing",
     "summary": "Session Calendar View - Mobile",
     "team": "Mobile team",
     "teamField": "customfield_10001",
     "type": "Story"
   },
+  "jAt": "2026-09-30T11:34:54Z",
   "migrated": {
     "at": "2026-09-22",
     "schema": 2
@@ -106,10 +142,10 @@
     "status": "In Testing"
   },
   "source": "confluence-2155872263",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-28",
   "v": {
     "area": "Legacy mobile app",
-    "deps": "",
+    "deps": "Web setting for the default view (EP-55021). Both QA sub-tasks (EP-55568, EP-55578) still in progress; 21 defects raised 2-21 Sep, 13 on iOS, with iOS capacity reduced. Proposed release blockers: EP-57117, EP-57575, EP-57565; EP-57548 (sponsored banner scale) needs a PO decision; EP-57309 (session card design) proposed to split out. No fixVersion defines the 14 Oct release scope. Follow-on stories EP-57330, EP-57332 and EP-57291 build on this. Risk: the 14 Oct build is only 'tight but achievable' if blockers are cut to three.",
     "driver": "81808",
     "estimate": "",
     "feature": "Session Calendar View - Mobile",
@@ -122,6 +158,6 @@
     "rationale": "DLG commitment",
     "status": "In Testing",
     "team": "",
-    "why": ""
+    "why": "Committed to DLG (the reporter): attendees and exhibitors need a mobile calendar view to browse sessions by day and time slot."
   }
 }

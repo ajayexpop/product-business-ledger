@@ -1,5 +1,22 @@
 {
   "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "driver": "Jira Reported by BeautyIstanbul, Pipedrive 11798",
+      "estimate": "jiraColumns.aggOrigDays = 8 (note: the 8 Sep comment says stories 1-5 are still to be sized once the integration model is chosen)",
+      "impact": "EP-55900 description (user story and acceptance criteria); EP-55900 comment 2026-09-08 by Oleksiy Leshchenko",
+      "notes": "EP-55900 comments 2026-09-08 by Oleksiy Leshchenko and Taimoor Zulfiqar; jiraColumns",
+      "why": "EP-55900 description; EP-55900 comment 2026-09-08 by Oleksiy Leshchenko; Jira Reported by BeautyIstanbul"
+    },
+    "gaps": [
+      "client: no client named in description or comments beyond Jira Reported by (description says 'Organizer running events with Turkish card payments')",
+      "pages: no Confluence links (only Iyzico developer documentation)"
+    ],
+    "pages": []
+  },
   "flags": {
     "drift": false,
     "dueSoon": false,
@@ -33,40 +50,136 @@
       "by": "claude",
       "k": "migrate",
       "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "hb260928conf-key": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "key",
+      "from": "",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 2026-09-28.",
+      "to": "EP-55900"
+    },
+    "hb260928conf-rationale": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 2026-09-28.",
+      "to": "Needed specifically for Turkish clients to allow them to use a replacement for ParamPOS"
+    },
+    "hb260928enr-driver": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Jira Reported by BeautyIstanbul, Pipedrive 11798",
+      "to": "11798"
+    },
+    "hb260928enr-estimate": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "estimate",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from jiraColumns.aggOrigDays = 8 (note: the 8 Sep comment says stories 1-5 are still to be sized once the integration model is chosen)",
+      "to": "8d (Jira original estimate)"
+    },
+    "hb260928enr-impact": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "impact",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-55900 description (user story and acceptance criteria); EP-55900 comment 2026-09-08 by Oleksiy Leshchenko",
+      "to": "Organisers of events taking Turkish card payments and their registrants: card payment at checkout is restored through Iyzico, with registrants marked paid and transaction records created as for Stripe and PayPal, and a clear error when payment fails."
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-55900 comments 2026-09-08 by Oleksiy Leshchenko and Taimoor Zulfiqar; jiraColumns",
+      "to": "8 Sep: preliminary investigation done, no code written; recommends Iyzico's hosted Checkout Form. PO agreed to the Checkout Form, keep existing installment logic, and leave technical design to developers. Merchant account, sandbox and webhook signing still to be requested. Jira Open."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-55900 description; EP-55900 comment 2026-09-08 by Oleksiy Leshchenko; Jira Reported by BeautyIstanbul",
+      "to": "ParamPOS can no longer process payments, so Turkish-market events (reported by Beauty Istanbul) have lost card payments."
     }
   },
-  "j": null,
+  "j": {
+    "aggOrigDays": 8,
+    "assignee": "Mariia Ivanova",
+    "canon": "Planned",
+    "due": null,
+    "origDays": null,
+    "priority": "Medium",
+    "resolved": null,
+    "spentDays": 0.91,
+    "status": "Open",
+    "summary": "Replace ParamPOS with Iyzico",
+    "team": "Organizer team",
+    "teamField": "customfield_10001",
+    "type": "Story"
+  },
+  "jAt": "2026-09-28T19:00:00Z",
   "migrated": {
     "at": "2026-09-22",
     "schema": 2
   },
   "n": {
-    "days": null,
-    "daysKind": "none"
+    "days": 8,
+    "daysKind": "point"
   },
   "order": 70,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "Jira Reported by BeautyIstanbul, Pipedrive 11798",
+      "by": "Claude",
+      "field": "Jira",
+      "name": "11798",
+      "quote": "Jira Reported by BeautyIstanbul, Pipedrive 11798",
+      "value": "11798"
+    }
+  },
   "raw": {
     "area": "Registration",
     "month": "October 2026",
     "status": "Planned"
   },
   "source": "confluence-2155872263",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-28",
   "v": {
     "area": "Registration",
     "deps": "Payment refactoring needs to be completed first",
-    "driver": "",
-    "estimate": "",
+    "driver": "11798",
+    "estimate": "8d (Jira original estimate)",
     "feature": "Replace ParamPOS with Iyzico",
-    "impact": "",
-    "key": "",
+    "impact": "Organisers of events taking Turkish card payments and their registrants: card payment at checkout is restored through Iyzico, with registrants marked paid and transaction records created as for Stripe and PayPal, and a clear error when payment fails.",
+    "key": "EP-55900",
     "month": "2026-10",
-    "notes": "",
+    "notes": "8 Sep: preliminary investigation done, no code written; recommends Iyzico's hosted Checkout Form. PO agreed to the Checkout Form, keep existing installment logic, and leave technical design to developers. Merchant account, sandbox and webhook signing still to be requested. Jira Open.",
     "owner": "Taimoor",
     "priority": "Customer",
-    "rationale": "",
+    "rationale": "Needed specifically for Turkish clients to allow them to use a replacement for ParamPOS",
     "status": "Planned",
     "team": "",
-    "why": ""
+    "why": "ParamPOS can no longer process payments, so Turkish-market events (reported by Beauty Istanbul) have lost card payments."
   }
 }

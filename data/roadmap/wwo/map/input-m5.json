@@ -1,0 +1,3337 @@
+{
+"features": [
+{
+"id": "exhib-parent-child-launch",
+"theme": "exhib",
+"q": "2023-Q1",
+"title": "Parent and child exhibitors",
+"benefit": "Parent exhibitors can manage their own child companies directly from the event website.",
+"what": "Parent exhibitors have a 'My child exhibitors' page on the event website where they search for, add or create child exhibitors. Organisers switch it on and set which category new children receive.",
+"detail": "A new 'My child exhibitors' page lets parent exhibitors search for, add or create child exhibitors. Organisers switch it on and set category rules, and new children receive login details by email, or automatically generated logins where single sign-on is used.",
+"stories": [
+"Parent-Child management on Frontend v.1"
+]
+},
+{
+"id": "exhib-content-limits",
+"theme": "exhib",
+"q": "2023-Q1",
+"title": "Exhibitor content limits",
+"benefit": "Set how much marketing content and news text each exhibitor category or exhibitor can publish.",
+"what": "Organisers set marketing content limits on each exhibitor, description length limits for marketing files and article length limits for news per category (0 for unlimited). Uploads show a spinner.",
+"detail": "Organisers set marketing content limits per exhibitor, description length limits for marketing files and article length limits for news per category (0 for unlimited). Long descriptions expand with a More button, and uploads show a progress spinner.",
+"stories": [
+"Add load indication for Marketing Content",
+"Marketing content limit on individual level",
+"NA: Marketing content description to be extended to 3000 characters",
+"Allow selection of number of characters for the news description "
+]
+},
+{
+"id": "exhib-marketplace-2023q1",
+"theme": "exhib",
+"q": "2023-Q1",
+"title": "Marketplace and profile improvements",
+"benefit": "Tailor how the marketplace, cards and category pickers behave for your event.",
+"what": "Organisers set the default number of marketplace items per page, can show zip codes on exhibitor and product cards, and choose whether ticking a category ticks its sub-categories. Brands link to their full product list.",
+"detail": "Organisers set the default number of marketplace items per page, can show zip codes on exhibitor and product cards, and choose whether ticking a category also ticks its sub-categories. Brands with many products link to a full, paginated product list.",
+"stories": [
+"Need possibility to display 24 items on the catalogue page instead of 12 by default",
+"Zip Code Field | Exhibitor & Product Card",
+"Show all products attached to one brand",
+"EMEA: Remove product category auto selection"
+]
+},
+{
+"id": "exhib-sponsor-banners-category",
+"theme": "exhib",
+"q": "2023-Q1",
+"title": "Sponsor banners and category-level sponsorship",
+"benefit": "Place sponsor banners on profile pages and set sponsorship for a whole exhibitor category at once.",
+"what": "One or two rotating sponsor banners can appear on every My profile page, set per device. Exhibitor categories gain 'Is sponsor', 'Show in search list' and 'Show sponsor pop-up' toggles for all their exhibitors.",
+"detail": "One or two rotating sponsor banners can appear on every My profile page, set per device. Exhibitor categories gain 'Is sponsor', 'Show in search list' and 'Show sponsor pop-up' toggles that apply to all their exhibitors, including through import and the API, without overwriting manual settings.",
+"stories": [
+"Sponsor banners in profile",
+"Featured exhibitors to be configurable at Exhibitor Category level",
+"Sponsor Pop Up - Category Level Config"
+]
+},
+{
+"id": "exhib-sponsored-sessions-profile",
+"theme": "exhib",
+"q": "2023-Q1",
+"title": "Sponsored sessions on exhibitor profiles",
+"benefit": "Show the sessions an exhibitor sponsors on its profile and let sponsors see who booked or attended them.",
+"what": "Exhibitor profiles show a Sponsored sessions block when the exhibitor sponsors sessions. The sponsor's dashboard adds 'Booked a session' and 'Attended session' columns for online, onsite and on-demand attendance.",
+"detail": "Exhibitor profiles show a Sponsored sessions block automatically when the exhibitor sponsors sessions. The sponsor's dashboard adds 'Booked a session' and 'Attended session' columns covering online, onsite and on-demand attendance.",
+"stories": [
+"EMEA: Sponsored Session Should be Visible on Company Profile",
+"Include session interactions in the  dashboard of exhibitor who is sponsoring it",
+"EMEA_ Enhancement is viewing All sponsored session under exhibitor profile on frontend"
+]
+},
+{
+"id": "exhib-setup-2023q2",
+"theme": "exhib",
+"q": "2023-Q2",
+"title": "Exhibitor setup improvements",
+"benefit": "Give uncategorised exhibitors sensible defaults and control product limits and manual navigation.",
+"what": "Each new event has a Default exhibitor category for exhibitors without one. Organisers can block new products once the active-product limit is reached and set the default products tab. Manual section links open their own section.",
+"detail": "Each new event gets a Default exhibitor category whose settings and limits apply to uncategorised exhibitors. Organisers can block adding products once the active-product limit is reached and set the default products tab, and each exhibitor manual link now opens its own section.",
+"stories": [
+"Exhibitor default category ",
+"Forbid exhibitors to add active products for those who are not allowed & let them arrive on Active products by default in the company profile.",
+"Exhibitor Manual sections need to have the possibility to being divided by their links "
+]
+},
+{
+"id": "exhib-performance-2023q2",
+"theme": "exhib",
+"q": "2023-Q2",
+"title": "Marketplace and import efficiency",
+"benefit": "The marketplace page runs fewer queries, and product imports update search once at the end.",
+"what": "Duplicate queries were removed from the marketplace page. Product search indexing runs once at the end of an import, and exhibitors and products are re-indexed only when a searchable field changes.",
+"detail": "Duplicate queries were removed from the marketplace page. Product search indexing now runs once at the end of an import, and exhibitors and products are re-indexed only when a searchable field changes.",
+"stories": [
+"Sync to Elasticsearch only in the end of importing products",
+"Check only updated fields of Product while sync to Elasticsearch",
+"Remove duplicated queries from Marketplace page"
+]
+},
+{
+"id": "exhib-colocated-scans",
+"theme": "exhib",
+"q": "2023-Q2",
+"title": "Lead scanning across co-located events",
+"benefit": "Scan the badges of attendees from co-located events and jump straight to their profiles.",
+"what": "With a contact-sharing setting on, the app saves badge scans of people from co-located events in the same database, labelled 'other event', and scan reports gain an event name column. Names on the scan screen open profiles.",
+"detail": "With a new contact-sharing setting on, the app saves scans from other events in the same database with an 'other event' label, and scan reports gain an event name column. After a scan, tapping a person's name or a team member's company opens their profile.",
+"stories": [
+"Change Code to scan QR codes for colocated events ",
+"EMEA: Lead capture page - company name & person name clickable to lead the person to company profile/personal profile"
+]
+},
+{
+"id": "exhib-leads-meetings-events",
+"theme": "exhib",
+"q": "2023-Q2",
+"title": "Leads from meetings and exhibitor events",
+"benefit": "Turn exhibitor event bookings and meetings of any status into leads.",
+"what": "Exhibitors holding their own events see bookings in the Interactions dashboard and, if enabled, as leads in Download leads. A setting includes pending, incoming, confirmed and cancelled meetings in leads files.",
+"detail": "Exhibitors holding their own events see bookings in the Interactions dashboard and, if enabled, as leads in Download leads, with private details optionally hidden. A new setting includes pending, incoming, confirmed and cancelled meetings in leads files without duplicates.",
+"stories": [
+"Exhibitor events. Interactions and Leads generation",
+"Leads Download to Include - All Meeting Requests"
+]
+},
+{
+"id": "exhib-rich-text",
+"theme": "exhib",
+"q": "2023-Q2",
+"title": "Rich text for profiles and news",
+"benefit": "Format company descriptions and news articles with headings, lists, images and links.",
+"what": "The full text editor is available for 'About the company' in the exhibitor profile editor and for exhibitor news, with headings, bold, italic, underline, lists, alignment, quotes, photos and links.",
+"detail": "The full text editor is available for 'About the company' in the exhibitor profile editor and for exhibitor news, with headings, bold, italic, underline, lists, alignment, quotes, photos and links.",
+"stories": [
+"Text Editor",
+"Text Editor - Exhibitor News"
+]
+},
+{
+"id": "exhib-sponsor-layout-2023q2",
+"theme": "exhib",
+"q": "2023-Q2",
+"title": "Sponsor banner and card layout",
+"benefit": "Sponsor banners no longer fill the first screen on tablets and phones, and sponsor rows hold six cards.",
+"what": "On tablets and phones, marketplace sponsor banners and the product finder sit in a compact block above the filters. Sponsor and sponsored product cards show six in a row, and the products page says Sponsored Products.",
+"detail": "On smaller screens, marketplace sponsor banners and the product finder sit in a compact block above the filters. Sponsor and sponsored product cards are laid out six in a row.",
+"stories": [
+"*Improvement* In Sponsor Banner for Mobile and Tablet View",
+"Sponsors and sponsored products cards are 6 in a raw"
+]
+},
+{
+"id": "exhib-custom-lead-questions",
+"theme": "exhib",
+"q": "2023-Q3",
+"title": "Custom lead capture questions",
+"benefit": "Exhibitors add their own questions to the lead capture form so their team records what matters to them.",
+"what": "Exhibitor admins create custom lead capture questions for their team, with text, select, multiselect, radio and checkbox types. Answers appear in the leads report, and organisers can open them from the admin exhibitor profile.",
+"detail": "Exhibitor admins create custom lead questions for their team members, with text, select, multiselect, radio and checkbox types, and answers appear in the leads report. Organisers can open an exhibitor's questions from its admin profile, and duplicate scans are filtered out.",
+"stories": [
+"EMEA. Custom Questions stage2. Additional questions",
+"EMEA: Ability for Company profile to add Custom questions for its team members in the Lead capture form, via a pool of Questions",
+"EMEA. Custom Questions two new features",
+"Filter all duplicated of scans ",
+"Android|Lead scan| Need remove redirection on user profile after tapping on user name "
+]
+},
+{
+"id": "exhib-custom-listings",
+"theme": "exhib",
+"q": "2023-Q3",
+"title": "Custom table listings",
+"benefit": "Show exhibitors and delegates as a configurable table of the fields you choose.",
+"what": "The exhibitor and delegate lists have an optional table view, with an admin builder for choosing and ordering fields. Tables use event branding, show full names on hover and open a pop-up with all categories.",
+"detail": "An optional table view for the exhibitor and delegate lists, with an admin builder for choosing and ordering fields. Tables use event branding, show full names on hover and open a pop-up with all of an exhibitor's categories.",
+"stories": [
+"*DWTC* Option to have Custom Listing",
+"Custom listing additional features"
+]
+},
+{
+"id": "exhib-sponsor-section",
+"theme": "exhib",
+"q": "2023-Q3",
+"title": "Dedicated sponsor section in the marketplace",
+"benefit": "Sponsors get their own highlighted section above exhibitors on the web and in the app.",
+"what": "Sponsors appear in their own framed section of cards above the exhibitor list, as an auto-scrolling carousel or static rows. The app shows a sponsors block on exhibitor and product lists, and card clicks count in sponsor statistics.",
+"detail": "Sponsors appear in a separate framed section of cards above the exhibitor list, as an auto-scrolling carousel or static rows. The app gains a sponsors block on exhibitor and product lists, and clicks now count in sponsor statistics.",
+"stories": [
+"Move Sponsors to the separate section ",
+"Choosing the way sponsors displayed",
+"Sponsors block for exhibitor and product list in app.",
+"Sponsor exhibitors/products optimization for apps",
+"The clicks should be counted in the sponsor stats"
+]
+},
+{
+"id": "exhib-overview-report",
+"theme": "exhib",
+"q": "2023-Q3",
+"title": "Exhibitor overview report",
+"benefit": "Exhibitors download one report covering their company and all child companies.",
+"what": "An Exhibitor Overview spreadsheet in the exhibitor profile menu lists views, products, content, chats, meetings and badge scans for the exhibitor and each of its child exhibitors across the event.",
+"detail": "An Exhibitor Overview spreadsheet in the profile menu lists views, products, content, chats, meetings and badge scans for the exhibitor and each child exhibitor across the event.",
+"stories": [
+"Download detailed report (parent+child)"
+]
+},
+{
+"id": "exhib-team-interaction",
+"theme": "exhib",
+"q": "2023-Q3",
+"title": "Team member interaction controls",
+"benefit": "Exhibitors decide which team members can take meetings and chat, on the web and in the app.",
+"what": "Exhibitors, and optionally parent exhibitors, switch meetings and chats on or off for each team member. The app hides blocked actions and explains why, and the settings appear in the team members export and the public API.",
+"detail": "Exhibitors, and optionally parent exhibitors, switch meetings and chats on or off per team member. The app hides blocked actions and explains why, and the settings are included in the team members export and the public API.",
+"stories": [
+"Exhibitor to define if team members can interact (WEB)",
+"Extract interaction settings in xls file for Organizer",
+"Exhibitor to define if team members can interact (App)"
+]
+},
+{
+"id": "exhib-manual-translation",
+"theme": "exhib",
+"q": "2023-Q4",
+"title": "Exhibitor manual translation",
+"benefit": "Publish the exhibitor manual in every language your event supports.",
+"what": "Every exhibitor manual section, including section names, can be switched between the platform languages and translated in the admin panel, as registration already allowed.",
+"detail": "Every exhibitor manual section, including section names, can be switched between platform languages and translated in the admin panel, as already possible for registration.",
+"stories": [
+"Translation tool for Exhibitor Manual"
+]
+},
+{
+"id": "exhib-sponsor-mgmt-2023q4",
+"theme": "exhib",
+"q": "2023-Q4",
+"title": "Sponsor management improvements",
+"benefit": "Find sponsors quickly in the admin panel and let visitors act on sponsor cards.",
+"what": "Admins search sponsors and filter them by sponsor category on the sponsors page. Sponsor and sponsored product cards on the marketplace show location and meeting and message buttons on hover.",
+"detail": "Admins search sponsors and filter them by sponsor category. Sponsor and sponsored product cards on the marketplace show location and meeting and message buttons on hover, and these interactions count in sponsor reports.",
+"stories": [
+"Search and filter for sponsor categories on the sponsors page ",
+"Buttons for Sponsor cards on Marketplace"
+]
+},
+{
+"id": "exhib-exports-2024q1",
+"theme": "exhib",
+"q": "2024-Q1",
+"title": "Leads and sponsor export improvements",
+"benefit": "Leads and sponsor exports carry more context about each interaction.",
+"what": "Leads exports add exhibitor event date and time and, if enabled, meeting rating notes. The exhibitor export field list was updated, and sponsor statistics exports use a clearer layout and count only sponsors shown on screen.",
+"detail": "Leads exports add exhibitor event date and time and, if enabled, meeting rating notes. The exhibitor export's custom field list was updated, and sponsor statistics exports use a clearer layout and count only sponsors actually shown on screen.",
+"stories": [
+"Leads Export: Exhibitor Event - Date / Time",
+"Inclusion of 'Meeting Rating Notes' in Leads Export",
+"Exhibitor export: change custom fields list",
+"Look of the sponsors and sponsored products stats in export file",
+"Sponsors stats should count only the sponsors that we have on the screen"
+]
+},
+{
+"id": "exhib-leads-2024q2",
+"theme": "exhib",
+"q": "2024-Q2",
+"title": "Lead download and badge matching",
+"benefit": "Download leads in the background and get full details even for badges the scanner did not recognise.",
+"what": "Download leads is a button on the profile that builds the file in the background with a timestamped link. Unrecognised badge scans are matched to the event database, and organisers set who has lead capture.",
+"detail": "Download leads moved to a button on the profile, generating the file in the background with a timestamped link. Unrecognised badge scans are matched against the event database and filled in with the attendee's details, and organisers can set who gets lead capture.",
+"stories": [
+"Download leads improvements",
+"User Data in Scanned List & Exports | Unrecognized Badge Scans",
+"Lead capture availability settings"
+]
+},
+{
+"id": "exhib-settings-2024q2",
+"theme": "exhib",
+"q": "2024-Q2",
+"title": "Product and exhibitor setting improvements",
+"benefit": "Require key product details, show custom fields on product pages and rename sponsor sections.",
+"what": "Organisers can make product images and descriptions mandatory and rename the sponsor sections on exhibitor and product lists. Product pages show custom field data, and manual deadlines can be changed with a confirmation.",
+"detail": "Organisers can make product images and descriptions mandatory and rename the sponsor sections on exhibitor and product lists, and product pages show custom field data. Exhibitor manual deadlines can be changed with confirmation and without exhibitors resubmitting.",
+"stories": [
+"Product Description and Product Image Mandatory",
+"Need display on Product page data from custom field ",
+"Rename the sponsor block name in the app ",
+"RNG  - Changing deadlines of Exhibitor Manual or remove tasks when expired / toggle off when closed without deleting data. ( as people submit after the data and it is un usable)."
+]
+},
+{
+"id": "exhib-invite-stats",
+"theme": "exhib",
+"q": "2024-Q2",
+"title": "Visitor invitation statistics",
+"benefit": "See how many visitors each exhibitor's invitations bring in.",
+"what": "Visitor registrations from exhibitor invitations are attributed to the inviting exhibitor. Admins get a statistics tab with status counts, top exhibitors, filters, search and Excel export, and exhibitors see their own figures.",
+"detail": "Invite registrations are attributed to exhibitors. Admins get a statistics tab with status counts, top exhibitors, filters, search and Excel export, and exhibitors see their own invitation funnel in their profile.",
+"stories": [
+"Invite Visitors - Statistics"
+]
+},
+{
+"id": "exhib-exhibitor-account",
+"theme": "exhib",
+"q": "2024-Q3",
+"title": "Redesigned exhibitor account",
+"benefit": "Manage an exhibitor's details, settings, team, security, sponsorship and stands from one redesigned admin account.",
+"what": "The admin exhibitor account has pages for registration info, settings, team members, security, sponsorship, floor plan and analytics against the event average, plus a refreshed interaction dashboard and extra profile fields.",
+"detail": "The admin exhibitor account has new pages for registration info, settings, team members, security, sponsorship, floor plan and analytics against the event average, plus a refreshed interaction dashboard. Profiles show registration URL, external ID and tags, and the password can be left empty to keep the current one.",
+"stories": [
+"Exhibitor Account. Header and footer",
+"Exhibitor Account. Registration Info",
+"Exhibitor Account. Security page",
+"Exhibitor Account. Settings page",
+"Exhibitor Account. Sponsorship page",
+"Exhibitor Account. Team members page",
+"Exhibitor Account. Floorplan page",
+"Exhibitor Account. Analytics dashboard",
+"Leader Dashboard",
+"Additional System Fields - Exhibitor Admin Profile",
+"Make password not required for new Exhibitor profile"
+]
+},
+{
+"id": "exhib-parent-child-auto",
+"theme": "exhib",
+"q": "2024-Q3",
+"title": "Automatic parent and child assignment",
+"benefit": "Link exhibitors that share an email address as parent and child companies automatically.",
+"what": "A general setting runs a script that makes the first exhibitor with a shared email address the parent and later ones its children, and shows when it last ran. The API and import stop an exhibitor being its own parent or child.",
+"detail": "A general setting runs a script that makes the first exhibitor with a shared email the parent and later ones its children, showing the last run. Checks in the API and import stop an exhibitor being set as its own parent or child.",
+"stories": [
+"Parent/Child - Exhibitor Assignment",
+"Add checks to API, import, etc., so parent exhbitor can't be set as a child (and vice versa) for himself"
+]
+},
+{
+"id": "exhib-event-cloning",
+"theme": "exhib",
+"q": "2024-Q3",
+"title": "Clone products and brands with events",
+"benefit": "Carry exhibitors' active products and brands into a cloned event.",
+"what": "Event cloning can carry over only active products, and can copy brands with their exhibitors, products, logo, categories, description, social links and translations. Interaction data such as favourites is not copied.",
+"detail": "Event cloning can keep only active products, and can copy brands with their exhibitors, products, logo, categories, description, social links and translations. Interaction data such as favourites is not copied.",
+"stories": [
+"Option to clone products with \"Active Status\"",
+"Option to clone Brands"
+]
+},
+{
+"id": "exhib-lead-download-controls",
+"theme": "exhib",
+"q": "2024-Q3",
+"title": "Lead download controls",
+"benefit": "Choose which exhibitor categories or exhibitors can download leads.",
+"what": "Download leads can be switched on or off per exhibitor category or per exhibitor, which also applies to their team members on the web and in the app. Contact-sharing settings now name exhibitor events and sponsored sessions.",
+"detail": "Download leads can be switched on or off per exhibitor category or individual exhibitor, including their team members on web and app. Contact-sharing settings were renamed to name exhibitor events and sponsored sessions clearly.",
+"stories": [
+"Download leads feature on Exhibitor Category level and Individual exhibitor level",
+"Renaming setting under Contact Sharing",
+"Renaming setting under Contact Sharing"
+]
+},
+{
+"id": "exhib-profile-2024q3",
+"theme": "exhib",
+"q": "2024-Q3",
+"title": "Product category and profile improvements",
+"benefit": "Limit product categories to an exhibitor's activities, and apps take exhibitor social links from the profile.",
+"what": "A setting limits the product categories exhibitors can choose to their own activity categories. The iOS and Android apps take an exhibitor's social links from its own profile data.",
+"detail": "A setting restricts product categories to an exhibitor's own activity categories. The iOS and Android apps take exhibitor social links from the exhibitor's own profile data.",
+"stories": [
+"Extend logic of adding of Product categories",
+"iOS/ Use social link for EXH account from exh object ( profilenew request) ",
+"Android/ Use social link for EXH account from exh object ( profilenew request)"
+]
+},
+{
+"id": "exhib-lead-question-levels",
+"theme": "exhib",
+"q": "2024-Q4",
+"title": "Lead questions by category and exhibitor",
+"benefit": "Set lead capture questions globally, per exhibitor category or per exhibitor.",
+"what": "Lead capture questions can be managed at global, exhibitor category and individual exhibitor level. Standard questions can be switched on per category, custom questions are now called Additional, and global switches govern lower levels.",
+"detail": "Lead question logic was improved so questions can be managed at global, category and individual exhibitor level.",
+"stories": [
+"Improve Lead Questions logic on global, category and exhibitor levels"
+]
+},
+{
+"id": "exhib-marketplace-2024q4",
+"theme": "exhib",
+"q": "2024-Q4",
+"title": "Marketplace view and category order",
+"benefit": "Choose the default marketplace view and the order of category filters.",
+"what": "Organisers set the default marketplace view to cards, list or short list, and drag and drop category filters into order. The order applies to category pickers on the web and in the app.",
+"detail": "Organisers set the default marketplace view to cards, list or short list, and drag and drop category filters into order, which applies to category pickers on web and in the app.",
+"stories": [
+"(exhibitor profile) - MRO Events - option to set up a default view on exhibitor marketplace page",
+"To amend the order of product category on front end for both web & app"
+]
+},
+{
+"id": "exhib-sponsor-banners-2024q4",
+"theme": "exhib",
+"q": "2024-Q4",
+"title": "Sponsor banner controls",
+"benefit": "Make sponsor banners display-only, and load marketplace sponsors in batches.",
+"what": "A 'Disable links' toggle for each web and app banner location makes sponsor banners unclickable, with no redirect and no click statistics. Marketplace sponsors load in batches of 12 instead of all at once.",
+"detail": "A 'Disable links' toggle for each web and app banner location makes banners unclickable, with no redirect or click statistics. Marketplace sponsors now load from the server in batches of 12, with the display unchanged.",
+"stories": [
+"Unclickable Banners",
+"Display the sponsors with the pagination"
+]
+},
+{
+"id": "exhib-parent-child-app",
+"theme": "exhib",
+"q": "2025-Q1",
+"title": "Parent and child companies in app",
+"benefit": "Show parent and child companies in the mobile app, with your own labels in every language.",
+"what": "The apps mark parent and child companies, add a Pavilions tab with child counts and a head office or child filter, and sort children A to Z. Organisers rename these labels per language, and parent cards show country and city.",
+"detail": "The apps mark parent and child companies, add a Pavilions tab with child counts and a head office or child filter, and sort children alphabetically. Organisers rename the parent, child, pavilion and head office labels per language, and marketplace cards show country and city for parent exhibitors.",
+"stories": [
+"Parent / Child - App",
+"Settings to define labels for Parent-Child (Frontend)",
+"Settings to define labels for Parent-Child (App)",
+"Sort child exhibitors in the alphabetical accending order (A-z) in the frontend and mobile app endpoints",
+"Admin panel/ Sponsors/ Update field name from \"App exhibitor list\" to \"App exhibitor/pavilion  list\"",
+"iOS/Parent-child/ Translations - update horizontal exhibitor card view ",
+"Display country names on Parent Exhibitor in Marketplace "
+]
+},
+{
+"id": "exhib-profile-2025q1",
+"theme": "exhib",
+"q": "2025-Q1",
+"title": "Exhibitor and sponsor profile improvements",
+"benefit": "Show the sessions a company speaks at or sponsors in the app, and validate embedded video code.",
+"what": "App exhibitor profiles add 'Sessions we speak at' and 'Sponsored sessions' blocks that follow visibility rules. Embedded video code is validated on profiles, products, groups and feeds, and sponsor profiles have a back button.",
+"detail": "App exhibitor profiles add 'Sessions we speak at' and 'Sponsored sessions' blocks that respect visibility rules. Embedded video fields on profiles, products and groups are validated, and sponsor profiles gain a back button.",
+"stories": [
+"Sponsored sessions & Sessions We Speak At Block in Profiles",
+"Add validation to the Embedded code video field in Exhibitor profile",
+"Add validation to the Embedded code video field on Product page, in Groups, etc. AND add scroll if needed",
+"Remove tab header from sponsor profile and add back button"
+]
+},
+{
+"id": "exhib-manual-2025q1",
+"theme": "exhib",
+"q": "2025-Q1",
+"title": "Exhibitor manual improvements",
+"benefit": "Enforce badge limits and save the exhibitor profile with the manual's Submit button.",
+"what": "In the exhibitor manual, the Add button is disabled with an explanation once the badge limit is reached, the Submit button saves and submits the exhibitor profile, and unused payment fields are hidden in table sections.",
+"detail": "The Add button is disabled with an explanation once the badge limit is reached, the exhibitor profile is saved and submitted with the Submit button, and unused payment fields are hidden in table sections.",
+"stories": [
+"Improved Badge Limit Logic in Exhibitor Manuals",
+"Save and submit Exhibitor profile on the \"Submit\" button click in Exhibitor Manual",
+"Hide the fields from the Table section in manual"
+]
+},
+{
+"id": "exhib-category-search",
+"theme": "exhib",
+"q": "2025-Q2",
+"title": "Smarter category selection and search",
+"benefit": "Find the right category quickly, even in long, nested category lists.",
+"what": "A redesigned category picker offers a two-panel view by custom filter with direct search. Category filters with many items can show a search field on marketplace, delegate and news pages, with matches shown with their parents and children.",
+"detail": "A redesigned category picker offers a two-panel view by custom filter with direct search. Category filters with many items can show a search field across marketplace, delegate and news pages, and results show matching categories with their parents and children.",
+"stories": [
+"Category Selection Process",
+"Search bar option for Categories",
+"Hierarchical search results display for Categories"
+]
+},
+{
+"id": "exhib-lead-scan-2025q2",
+"theme": "exhib",
+"q": "2025-Q2",
+"title": "Lead scanning improvements",
+"benefit": "Sync offline scans on demand and see clearer scan reasons in reports.",
+"what": "A 'Force scans sync' button in the app settings, with a Help link from the scans list, sends locally edited scans, notes and ratings to the server. The reason for scans of any code is labelled more clearly in reports.",
+"detail": "A 'Force scans sync' button in app settings sends locally edited scans, notes and ratings to the server so they appear in the leads file. The reason for scanning is labelled more clearly in reports.",
+"stories": [
+"Force scanned list sync",
+"Change name of the Reason for Scannyng of any code -- make it more obvious in the report"
+]
+},
+{
+"id": "exhib-parent-child-2025q2",
+"theme": "exhib",
+"q": "2025-Q2",
+"title": "Parent and child display controls",
+"benefit": "Choose whether child companies are shown and show parent locations in the app.",
+"what": "A 'Do not indicate child companies' setting hides child relations on the web and in the apps. App cards and profiles show country and city for parent exhibitors and pavilions, and automatic assignment can run daily with an emailed report.",
+"detail": "A 'Do not indicate child companies' setting hides child relations on web and in the apps. App cards and profiles show country and city for parent exhibitors and pavilions, and the automatic assignment can run daily with an emailed report.",
+"stories": [
+"Control if Child companies indication is present (WEB)",
+"Control if Child companies indication is present (APP)",
+"Add country / city information - Parent Exhibitors",
+"FBM - Parent/Child script Enhancements 2025"
+]
+},
+{
+"id": "exhib-team-news-2025q2",
+"theme": "exhib",
+"q": "2025-Q2",
+"title": "Team member and news settings",
+"benefit": "Decide which team member fields are required and crop news headers to the ratio shown on the site.",
+"what": "Organisers control whether telephone and job title are required when team members are added, using the registration form's field settings. The news header cropper in the admin panel uses the 1:5 ratio shown on the site.",
+"detail": "Organisers control whether telephone and job title are required when adding team members, and the news header image cropper uses a new ratio.",
+"stories": [
+"Control if Telephone and Job Title fields in the add TM form are required",
+"News header image | Change the cropper ratio to 1/5"
+]
+},
+{
+"id": "exhib-lead-capture-pro",
+"theme": "exhib",
+"q": "2025-Q3",
+"title": "Lead Capture Pro",
+"benefit": "Sell lead capture to exhibitors as a paid package for their whole team.",
+"what": "Organisers configure paid lead capture packages and how they are presented, and track payments and revenue. Exhibitors buy access for their whole team, and in the app the Scan Badges page shows only for those who have bought it.",
+"detail": "Organisers configure paid lead capture packages and their presentation, and track payments and revenue. Exhibitors buy access for their team, and in the app the Scan Badges page is shown only to exhibitors who have purchased it.",
+"stories": [
+"Lead Capture Journey",
+"Lead Capture Pro logic for App",
+"[portalUI] close ability to buylead-capture-pro for unauthorized user",
+"Lead Capture Pro logination improvement"
+]
+},
+{
+"id": "exhib-manual-discounts",
+"theme": "exhib",
+"q": "2025-Q3",
+"title": "Discount codes in the exhibitor manual",
+"benefit": "Offer exhibitors discount codes on equipment ordered through the exhibitor manual.",
+"what": "Discount codes apply to items in the exhibitor manual's Equipment section, targeted by exhibitor category and item. Exhibitors and team members apply codes in the basket, and admins see and export discount usage.",
+"detail": "Discount codes apply to items in the Equipment section, targeted by exhibitor category and item. Exhibitors and team members apply codes in the basket, and admins see and export discount usage.",
+"stories": [
+"Discount Functionality for Exhibitor Manuals"
+]
+},
+{
+"id": "exhib-dashboard-banners-2025q3",
+"theme": "exhib",
+"q": "2025-Q3",
+"title": "Exhibitor dashboard and sponsor banner improvements",
+"benefit": "Top performers show all-time results, and banners without links behave consistently in the app.",
+"what": "The exhibitor dashboard's Top Performers block always shows all-time results, with no date selector. On iOS and Android, tapping a sponsored banner that has no website link opens the linked exhibitor's profile.",
+"detail": "The exhibitor dashboard's Top Performers block always shows all-time data. On iOS and Android, tapping a sponsored banner that has no website link behaves consistently.",
+"stories": [
+"exhibitor dashboard remove weeks and days filter and set years by default",
+"Android/ Update  banner tap behavior for Sponsored Banners without website link",
+"iOS/ Update  banner tap behavior for Sponsored Banners without website link"
+]
+},
+{
+"id": "exhib-attend-stand",
+"theme": "exhib",
+"q": "2026-Q1",
+"title": "Attend a stand",
+"benefit": "Attendees mark the stands they plan to visit and when, and exhibitors see who intends to come.",
+"what": "After favouriting an exhibitor, users can say they plan to visit its stand and when, and exhibitors see who intends to come. List views are also available in the app, set up in the app builder.",
+"detail": "After favouriting an exhibitor, attendees can say they plan to visit its stand and when, and exhibitors see who intends to come. Organisers switch it on per participant category, and list views are available in the app.",
+"stories": [
+"Attend a stand",
+"Attend a Stand. App listing using vebview."
+]
+},
+{
+"id": "exhib-profile-2026q1",
+"theme": "exhib",
+"q": "2026-Q1",
+"title": "Category filter cloning and profile loading",
+"benefit": "Reuse product category filters within an event and see when team members are still loading.",
+"what": "Organisers can clone product category custom filters within an event instead of rebuilding them. The team members section of public exhibitor profiles shows a loader while it fills.",
+"detail": "Organisers can clone product category custom filters within an event instead of rebuilding them, and the team members section of public exhibitor profiles shows a loader.",
+"stories": [
+"[BE]Networking: Event Organizer can clone Product Category custom filters within an Event so that they don’t have to recreate them manually for each new Event",
+"Need add some loader in \"Team members\" ( contacts) section on exhibitor public profile page "
+]
+},
+{
+"id": "exhib-lead-app-2026q1",
+"theme": "exhib",
+"q": "2026-Q1",
+"title": "Lead capture app improvements",
+"benefit": "Lead details are saved automatically if an exhibitor leaves the form or loses connection.",
+"what": "The app's lead capture form saves automatically when an exhibitor leaves it, closes the app or loses connection, then syncs. Exhibitors without Lead Capture Pro are sent to its purchase page, and custom questions are tidier.",
+"detail": "The lead capture form autosaves when an exhibitor leaves it, closes the app or loses connection, then syncs. The Scan Badges page follows Lead Capture Pro access rules, and the custom questions page in the exhibitor profile is clearer.",
+"stories": [
+"Autosave on Lead Capture Form",
+" Logic for Scan Badges Page - Lead Capture Pro",
+"Custom Questions Page UI Improvements (Exhibitor Profile)"
+]
+},
+{
+"id": "exhib-lcp-access",
+"theme": "exhib",
+"q": "2026-Q2",
+"title": "Lead Capture Pro access control",
+"benefit": "Grant lead capture, product QR codes and AI notes by exhibitor category or individual exhibitor.",
+"what": "Organisers switch lead capture, product QR codes and AI meeting notes on per exhibitor category or per exhibitor, in one Lead Capture Pro settings block. Features already granted show as purchased on the purchase page.",
+"detail": "Organisers enable lead capture, product QR codes and AI meeting notes per exhibitor category or per exhibitor from one consolidated settings area. The purchase page marks features already granted as purchased, and standard questions have a configurable default state.",
+"stories": [
+"Lead Capture Access Control by Exhibitor Category",
+"Lead Capture: Exhibitor-Level Granular Control",
+"Product QR Codes: Category-Level Access Control",
+"Product QR Codes: Exhibitor-Level Access Control",
+"Lead Capture Pro — Settings Consolidation",
+"AI Notetaker Access Control (by Exhibitor Category)",
+"AI Notes — Per-Exhibitor / Per-Category Control",
+"Additional logic for LC, Custom Questions and Product QR",
+"Removal of Global Settings related to Lead Capture Pro and Adjustments to QR Codes Export in Admin Panel",
+"Standard Questions Default State Configuration"
+]
+},
+{
+"id": "exhib-permissions-2026q2",
+"theme": "exhib",
+"q": "2026-Q2",
+"title": "Exhibitor permissions and team rules",
+"benefit": "Product visibility follows the exhibitor's restrictions, and team logins stay unique.",
+"what": "Products follow their exhibitor's visibility and message and meeting restrictions on the web and in the apps. Adding a team member checks for a duplicate login rather than a duplicate email, and Google+ is removed from brand links.",
+"detail": "Products inherit their exhibitor's visibility and message and meeting restrictions on web and mobile. Team member creation rules were updated with login uniqueness checks, and Google+ was removed from brand social links.",
+"stories": [
+"Extend Exhibitor Permissions to Products",
+"Update on Team Member Creation Rules for Exhibitors and Login Uniqueness Validation",
+"Removal of Google+ from Brand Creation Social Media Links"
+]
+},
+{
+"id": "exhib-lead-2026q2",
+"theme": "exhib",
+"q": "2026-Q2",
+"title": "Lead capture improvements",
+"benefit": "Protect attendee privacy at the stand and see richer lead details.",
+"what": "A setting shows attendee emails in the app only after their badge is scanned. Scanned visitor QR leads include team members, meeting leads go to the team members present, notes allow 500 characters and dashboards show companies.",
+"detail": "Attendee emails can be shown only after a badge scan. Scanned visitor QR codes include team members, lead contribution counts meeting appointments, notes have a character limit, and interaction dashboards show each participant's company.",
+"stories": [
+"Changing badge display logic",
+"Scanned Visitor QR includs also team members",
+"Update Lead Contribution Logic for Exhibitors Based on Meeting Appointments",
+"Lead capture notes field. Character limitation",
+"Display  Company Name in Interaction Dashboards "
+]
+},
+{
+"id": "exhib-multilingual-manual",
+"theme": "exhib",
+"q": "2026-Q2",
+"title": "Multilingual exhibitor manual documents",
+"benefit": "Give exhibitors the exhibitor manual document in their own language.",
+"what": "Organisers upload a separate file for each event language within one exhibitor manual document entry, and in Online Exhibitor Services exhibitors see only the file for their selected language.",
+"detail": "Organisers upload a separate file for each event language within one exhibitor manual entry, and exhibitors see only the file for their selected language.",
+"stories": [
+"Exhibitor Tools: Organizer can upload Exhibitor Manual documents per Event language",
+"Online Exhibitor Services-Frontend Experience / BE tbd after EP-49295"
+]
+},
+{
+"id": "exhib-sponsor-visibility",
+"theme": "exhib",
+"q": "2026-Q2",
+"title": "Random sponsor order and visibility",
+"benefit": "Rotate sponsors fairly and make sure sponsor names always show.",
+"what": "Sponsors and sponsored products can be shown in random order on the web and in the app, or by matchmaking score. The legacy view shows up to 150 sponsors, and sponsor names always appear on session cards and pages.",
+"detail": "Sponsors and sponsored products can be shown in random order on web and in the app, or by matchmaking score in the app. The legacy view shows up to 150 sponsors, sponsor names always appear on session cards and pages, and the custom sponsor limit has a tooltip.",
+"stories": [
+"Random sorting for Sponsors and Sponsored products",
+"Random sorting for sponsors in app",
+"Increasing Sponsor Limit to 150 for legacy view",
+"Session: Always display Sponsor Name on Session cards and pages",
+"Add the tooltip for the Custom Sponsor limit field"
+]
+},
+{
+"id": "exhib-insights-portal",
+"theme": "exhib",
+"q": "2026-Q3",
+"title": "Exhibitor insights portal",
+"benefit": "Exhibitors see the results of their event participation in one place.",
+"what": "The first page of the exhibitor insights portal shows leads captured, meetings held, profile views, message reply rate, best single day and a comparison with peers, all from the event's own data.",
+"detail": "The first insights page shows leads captured, meetings held, profile views, message reply rate, best single day and benchmarking against peers, based on real event data.",
+"stories": [
+"Story 2: Page 01 — Celebrate your wins"
+]
+},
+{
+"id": "exhib-lcp-profile",
+"theme": "exhib",
+"q": "2026-Q3",
+"title": "Lead Capture Pro per team member",
+"benefit": "Turn lead capture and AI meeting notes on for individual team members, with unlimited questions for buyers.",
+"what": "The app applies lead capture and AI meeting notes access separately for each exhibitor owner and team member. Exhibitors who buy custom questions get unlimited standard and additional lead questions, with standard ones on.",
+"detail": "The app applies lead capture and AI meeting notes access per exhibitor owner and team member. Exhibitors who buy custom questions get unlimited standard and additional lead questions.",
+"stories": [
+"Create Lead Capture Pro settings config for profile level",
+"Lead Capture Pro – Full Access to Custom Questions"
+]
+},
+{
+"id": "exhib-profile-2026q3",
+"theme": "exhib",
+"q": "2026-Q3",
+"title": "Region filters and brand import",
+"benefit": "Filter listings by region and keep exhibitors' brands when they join new events.",
+"what": "An optional Region filter under Country narrows exhibitor, product, brand, pavilion, delegate, speaker and buyer listings on the web. Exhibitor import and the global database attach existing brands, and logos can be allowed per category.",
+"detail": "An optional Region filter nested under Country narrows exhibitor and participant listings on web. Exhibitor import and adding from the global database attach an exhibitor's existing brands, and exhibitor settings include a logo option.",
+"stories": [
+"Region filters",
+"Enhancing Exhibitor Import to Attach Brands Across Events",
+"Logo option as an exhibitor settings"
+]
+},
+{
+"id": "exhib-search-sponsors",
+"theme": "exhib",
+"q": "2026-Q3",
+"title": "Sponsored placements in global search",
+"benefit": "Sell sponsored banners, exhibitors and products on the global search page.",
+"what": "Global search shows one or two sponsorship banners plus rotating sponsored exhibitor and sponsored product blocks, with the organiser's labels and colours. Sponsor cards show location, tags and products, and multiple stands read clearly.",
+"detail": "Global search shows a sponsorship banner plus rotating sponsored exhibitor and sponsored product blocks with configurable labels and colours. Sponsor cards now show location, tags and products, and exhibitors with several stands display them clearly.",
+"stories": [
+"Global Search. Sponsorship banner",
+"Global Search. Sponsored Exhibitors",
+"Global Search. Sponsored Products",
+"Add MultiStandLocation component and migrate sponsors to ExhibitorCard"
+]
+}
+],
+"claims": [
+{
+"id": "13_exhibitor_portal:76",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor Manual — configurable multi-section portal",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:77",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Sections: Documents, Service Badges, Table Form, Equipment, Lead Capture, Team Members, Edit Profile, Summary + unlimited custom",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:78",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Section management: add, rename, clone, enable/disable, delete, reorder, group",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:79",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Global Settings (11 named settings)",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:80",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Vendors — add/manage, attach to sections, email on submit",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:81",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor View for Organisers — monitoring + filters + service-badge report + export",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:82",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Email Notifications to exhibitors, TMs, organisers, vendors",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:83",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Firebird SSO",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:84",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Space Types — configurable statuses + arrival/dismantling dates",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:85",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Translation — per-section language tool",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:86",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor Account (New UI) — dashboard, products, sponsorship, exhibitor events",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:87",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Parent-Child exhibitor relationships",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:88",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "API v2 for exhibitors",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:89",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor exports — Manual, Scanned Contacts, Pending Exhibitors, Login Data — all SQS-backed",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:90",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Included",
+"claim": "Klipso, A2Z, Reach5, ASP integrations",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:96",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Visitor/attendee registration and profiles",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:97",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Organiser Analytics — \"Supplier Overview is read-only analytics, not a portal feature\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:98",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Payment gateway configuration",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:99",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "App Builder / mobile publishing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:100",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Raw email sender / Email Campaigns",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:101",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Badge print design — \"Service Badge section merely links to it\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:102",
+"product": "Exhibitor Portal",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Floor plan editing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:108",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Global Settings is one page governing manual-wide behaviour",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:109",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "\"Enable Payment (requires `admin/payments/integration` credentials); system blocks activation if missing\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:110",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "\"Lead Capture — Enable for All (Free)\" in Global Settings",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "13_exhibitor_portal:111",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Copy Settings from another event",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:112",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Deadline warning: Frequency > Days ⇒ no emails; Frequency = 0 ⇒ no emails",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:113",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Available section modules: Documents, Badges, Table, Booking, Equipment",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:114",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Default sections (Profile Info, Team Members, Summary) pre-created, cannot be deleted",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:115",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "\"Renaming a section deletes all previously entered exhibitor data. No undo.\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:116",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "\"Delete Section: destroys all exhibitor data and removes from the manual export\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:117",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Clone Section creates `{Name} (copy)`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:118",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Set Deadlines saved via Ajax, no Save button",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:119",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Set Conditions — restrict by exhibitor category and/or Space Status",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:120",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Information Frame — CKEditor, supports 14 template variables",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:121",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Documents section — organiser uploads, exhibitor re-uploads response",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:122",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "\"Row cannot be saved without an uploaded document file\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:123",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Document uploads are not per-language; only Document Name localised",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:124",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Service badges: no QR code, no platform profile, distinct from Team Members",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:125",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Service badge quantity limited by sqm",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:126",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Badge Name (Print Version) links to Registration → Badges",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:127",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Equipment: code, colours, name (54 char), dimensions, price, limit, description",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:128",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "\"Tax configured per-equipment\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:129",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Stock enforced by Limit; system prevents over-ordering",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:130",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Lead Capture section: Service Tax, Price, Per Exhibitor / Per Team Member",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:131",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "\"After purchase, team member's checkmark auto-selected in admin\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:132",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Manual Summary — non-deletable, Submit All, hideable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:133",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Summary has no translation tool",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:134",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Team Members section — limit from Global Settings, sqm-based, ignore-limit option",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:135",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "\"Module Team Members in `admin/general/modules` does NOT affect this section\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:136",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Edit Profile section synchronises instantly with the profile tab",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:137",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Vendor always shown as selected; exhibitor cannot deselect",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:138",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Vendor module disabled ⇒ Vendors page disappears but selector remains",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:139",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Exhibitor View columns: Logo, Company, Manual Submit, Space type, Exhibit/Material Arrival, Dismantling, Stand Size",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:140",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Cancel Order",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:141",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Notifications: both Global toggle AND template must be enabled",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:142",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "EP-1121 extended deadline notifications to team members",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:143",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Firebird: Client Secret Key must not be exposed client-side",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:144",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "`{space_type}` has no translation support",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:145",
+"product": "Exhibitor Portal",
+"section": "§4 Feature Inventory",
+"claim": "Team-member names translated in `admin/visitors?a=a`",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "13_exhibitor_portal:151",
+"product": "Exhibitor Portal",
+"section": "§9 Permissions",
+"claim": "Super Admin has full access to any client's configuration",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:152",
+"product": "Exhibitor Portal",
+"section": "§9 Permissions",
+"claim": "Organiser scoped to own events; cannot access other clients",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:153",
+"product": "Exhibitor Portal",
+"section": "§9 Permissions",
+"claim": "\"Lead Admin Team Member — access to Manual Settings if given permission\" / \"you don't have access to this module\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:154",
+"product": "Exhibitor Portal",
+"section": "§9 Permissions",
+"claim": "Admin Team Member can submit and purchase; Regular cannot",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:155",
+"product": "Exhibitor Portal",
+"section": "§9 Permissions",
+"claim": "Vendor has no login",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:156",
+"product": "Exhibitor Portal",
+"section": "§9 Permissions",
+"claim": "Role × Capability table (16 rows)",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:162",
+"product": "Exhibitor Portal",
+"section": "§10 Integrations",
+"claim": "A2Z APIs — pull exhibitor list, stand data",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:163",
+"product": "Exhibitor Portal",
+"section": "§10 Integrations",
+"claim": "Klipso bidirectional, `cp_email` + `username`",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:164",
+"product": "Exhibitor Portal",
+"section": "§10 Integrations",
+"claim": "Reach5 SSO — OAuth 2.0 auth code",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:165",
+"product": "Exhibitor Portal",
+"section": "§10 Integrations",
+"claim": "Firebird SSO — SSO ID, client secret, redirect",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:166",
+"product": "Exhibitor Portal",
+"section": "§10 Integrations",
+"claim": "ASP — sessions, filtering, speakers",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:167",
+"product": "Exhibitor Portal",
+"section": "§10 Integrations",
+"claim": "ExpoFP redirect",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:168",
+"product": "Exhibitor Portal",
+"section": "§10 Integrations",
+"claim": "API v2 — \"API key / OAuth token\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:169",
+"product": "Exhibitor Portal",
+"section": "§10 Integrations",
+"claim": "Email Service — \"SMTP with platform credentials\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:170",
+"product": "Exhibitor Portal",
+"section": "§10 Integrations",
+"claim": "Payment Integration via `admin/payments/integration`",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:176",
+"product": "Exhibitor Portal",
+"section": "§11 Notifications",
+"claim": "16 email triggers across exhibitor / TM / organiser / vendor",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:177",
+"product": "Exhibitor Portal",
+"section": "§11 Notifications",
+"claim": "Template variables Deadline / Vendor Name / Exhibitor Name / Section Name / Order Content / Summary Page Content / Profile Info / Team Members Info",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:178",
+"product": "Exhibitor Portal",
+"section": "§11 Notifications",
+"claim": "`team_member_role` variable (EP-2832)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "13_exhibitor_portal:179",
+"product": "Exhibitor Portal",
+"section": "§11 Notifications",
+"claim": "\"No SMS or in-app push for the Exhibitor Manual\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:180",
+"product": "Exhibitor Portal",
+"section": "§11 Notifications",
+"claim": "Marketing content download email (EP-8951)",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:186",
+"product": "Exhibitor Portal",
+"section": "§12 Reporting",
+"claim": "Submission View with search + section-status filter",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:187",
+"product": "Exhibitor Portal",
+"section": "§12 Reporting",
+"claim": "Manual / Scanned Contacts / Pending Exhibitors / Login Data exports, SQS",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:188",
+"product": "Exhibitor Portal",
+"section": "§12 Reporting",
+"claim": "QR Codes PDF Export (EP-8049)",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:189",
+"product": "Exhibitor Portal",
+"section": "§12 Reporting",
+"claim": "Exhibitor Notes Export (EP-11592)",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:190",
+"product": "Exhibitor Portal",
+"section": "§12 Reporting",
+"claim": "Supplier Overview / Exhibitor Interactions / API Statistics v2",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:196",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Disable Submit Button on Summary",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:197",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Enable Payment",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:198",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Allow Edit Exhibitor Profile After Deadline",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:199",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Allow Edit Exhibitor Team Members After Deadline",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:200",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Service Tax Slug",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:201",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Allow Edit Manual Page After Deadline",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:202",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Allow Edit Manual Page After Submit",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:203",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Space Statuses",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:204",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Lead Capture — Enable for All (Free)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "13_exhibitor_portal:205",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Email notification toggles",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:206",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Deadline warning days / frequency",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:207",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Copy Settings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:208",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Team Member Allowance / Ignore Limit",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:209",
+"product": "Exhibitor Portal",
+"section": "§13 Configuration Guide — key-by-key",
+"claim": "Firebird SSO (7 fields listed)",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:221",
+"product": "Exhibitor Portal",
+"section": "Data model",
+"claim": "`EXHIBITOR` with `company_name, domain, category_id, space_type, exhibit_arrival, material_arrival, dismantling, stand_size_sqm, notes, external_id, external_qr, zip_code, is_featured, parent_id`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:222",
+"product": "Exhibitor Portal",
+"section": "Data model",
+"claim": "`EXHIBITOR_MANUAL` (one row per event holding all Global Settings flags)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:223",
+"product": "Exhibitor Portal",
+"section": "Data model",
+"claim": "`MANUAL_SECTION` (`manual_id, is_enabled, position, group_id, deadline datetime, is_required, is_deletable, information_frame`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:224",
+"product": "Exhibitor Portal",
+"section": "Data model",
+"claim": "`SECTION_GROUP` table",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:225",
+"product": "Exhibitor Portal",
+"section": "Data model",
+"claim": "`VENDOR` (`event_id, name, phone, email, address`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "13_exhibitor_portal:226",
+"product": "Exhibitor Portal",
+"section": "Data model",
+"claim": "`SECTION_VENDOR` (`section_id, vendor_id`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:227",
+"product": "Exhibitor Portal",
+"section": "Data model",
+"claim": "`EQUIPMENT_ITEM` with `tax_rate`",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:228",
+"product": "Exhibitor Portal",
+"section": "Data model",
+"claim": "`SERVICE_BADGE` with `submitted`",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:229",
+"product": "Exhibitor Portal",
+"section": "Data model",
+"claim": "`TEAM_MEMBER` (`exhibitor_id, first_name, last_name, email, role, is_admin, lead_capture_purchased, participant_category`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "13_exhibitor_portal:230",
+"product": "Exhibitor Portal",
+"section": "Data model",
+"claim": "`SECTION_SUBMISSION` with `is_cancelled`",
+"verdict": "PARTIAL"
+},
+{
+"id": "13_exhibitor_portal:231",
+"product": "Exhibitor Portal",
+"section": "Data model",
+"claim": "`SPACE_STATUS` table (`event_id, name, slug`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:76",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor List (web + app), card / list / short-list / custom-table views",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:77",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor Profile page — banner, logo, description, video, categories, TMs, products, brands, news, MC, sessions, floor plan",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:78",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Product List / Profile — slider, categories, WYSIWYG, video, MC, sample request (RFS), matchmaking info",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:79",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Brand List / Profile — logo, description, categories, social links, associated exhibitors",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:80",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "News pages, news export for organisers",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:81",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Marketing Content — per exhibitor and per product, track filtering, optional public page, login-required download",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:82",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Search & filters — keyword, ElasticSearch, AI natural language, system + custom filters, shareable links",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:83",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Pagination default or endless scroll; 12 or 24 per page",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:84",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Sponsor visibility — sponsored blocks, banners top + left, pop-ups, sponsored products",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:85",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Parent-Child — public indication, filter, hide child indication",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:86",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor categories & permissions — 15 named entitlements",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:87",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Per-exhibitor settings — custom overrides",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:88",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor registration form — multi-tab, custom fields, \"Use as filter\", \"Show in exhibitor card\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:89",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor Product Form — custom fields, launch label, required image/description/MC",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:90",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Matchmaking sorting on marketplace",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:91",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "PDF directory download (rebuilds every 30 min)",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:92",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Leads Dashboard — exhibitor-facing, incl. sponsor tabs",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:93",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Included",
+"claim": "Exhibitor Profile Analytics (organiser admin) — 10 widgets",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:99",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Exhibitor Manual",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:100",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Onsite badge printing / kiosk check-in",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:101",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Payment processing for exhibitor packages",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:102",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Delegate / attendee directory",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:103",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Session / programme agenda",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:104",
+"product": "Exhibitor Marketplace",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "\"Mobile app build pipeline (Client Manager product)\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:110",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Exhibitor list at `/newfront/marketplace/exhibitors`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:111",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Sponsored block name configurable, max 60 chars",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:112",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Interaction buttons hidden on own card; Meet hidden if no TM available",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:113",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Default alphabetical sort unless matchmaking sorting on",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:114",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "\"If ElasticSearch is unavailable, regular search continues\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:115",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "ElasticSearch field priority multipliers are organiser-configurable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:116",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "\"Category multiplier 3 > Description 2 > Name 0\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:117",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Multipliers apply to pavilions too",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "14_exhibitor_marketplace:118",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "AI search: ≤500 results",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:119",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "AI search: English only",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:120",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "AI search: mutually exclusive with ElasticSearch",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:121",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "AI search: web only, Exhibitors tab only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:122",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Filters configured at `/admin/displayFilters/list/exhibitors`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:123",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Filter config storage",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:124",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Custom filters from registration fields with \"Use as filter\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:125",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "System filters: New, Hall, Exhibitor categories, Product categories, Countries, Tags, Head Office/Child, Meeting availability",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:126",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Categories for brands limited per exhibitor, not by category (Referencing block)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:127",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Product Active / Inactive / Sponsored",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:128",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Deactivation clears Product TM, Sample event, Sponsorship fields (EP-26427)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:129",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Active product limit; \"Forbid adding active products\" (EP-10479); \"Allow to create when limit reached\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:130",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Sponsored products require entitlement; limit is Custom-only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:131",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Sample ribbon overrides Launch",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:132",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Duplicate email creates a new exhibitor account",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:133",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Child cross-event import deletes products and TMs",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:134",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "\"Do not indicate Child companies\" toggle",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:135",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Parent/child custom labels, multilingual (EP-37234/37278)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:136",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Meeting lead attribution changed May 2026",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:137",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Logo placeholder colour assigned randomly and persists",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "14_exhibitor_marketplace:138",
+"product": "Exhibitor Marketplace",
+"section": "§4 Feature Inventory",
+"claim": "Profile \"since date\" set at first creation, stable across editions",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:144",
+"product": "Exhibitor Marketplace",
+"section": "§9 Permissions",
+"claim": "Access modes: open browse vs sign-in-only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:145",
+"product": "Exhibitor Marketplace",
+"section": "§9 Permissions",
+"claim": "Admin TM edits company profile; Regular TM cannot unless autologin",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:146",
+"product": "Exhibitor Marketplace",
+"section": "§9 Permissions",
+"claim": "Organiser cannot change Global Module Management (SuperAdmin only)",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:147",
+"product": "Exhibitor Marketplace",
+"section": "§9 Permissions",
+"claim": "Role × Capability table (19 rows)",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:153",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "Exhibitor Portal (frontend) supplies all marketplace data",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:154",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "`/api/v2/product/set` with `status`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:155",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "Sponsorship module",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:156",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "ElasticSearch service",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:157",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "AI Search service",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:158",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "ExpoFP floor plan",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:159",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "Matchmaking algorithm",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:160",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "Favorites Dashboard attribution via shareable filter link",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:161",
+"product": "Exhibitor Marketplace",
+"section": "§10 Integrations",
+"claim": "Registration emails, \"SMTP\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:167",
+"product": "Exhibitor Marketplace",
+"section": "§11 Notifications",
+"claim": "Pre-registration, approval/password, child-created, activation-link emails",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:168",
+"product": "Exhibitor Marketplace",
+"section": "§11 Notifications",
+"claim": "\"The Exhibitor Marketplace does not have its own push or SMS layer\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:174",
+"product": "Exhibitor Marketplace",
+"section": "§12 Reporting",
+"claim": "Marketplace total numbers (EP-1066)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:175",
+"product": "Exhibitor Marketplace",
+"section": "§12 Reporting",
+"claim": "10 per-exhibitor widgets",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:176",
+"product": "Exhibitor Marketplace",
+"section": "§12 Reporting",
+"claim": "Exhibitor Leads Dashboard tabs",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:177",
+"product": "Exhibitor Marketplace",
+"section": "§12 Reporting",
+"claim": "News Export (EP-55)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "14_exhibitor_marketplace:178",
+"product": "Exhibitor Marketplace",
+"section": "§12 Reporting",
+"claim": "\"2-year lookback\", \"only active exhibitors in averages\", \"deleted objects remove stats\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:186",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Exhibitor category settings (all tiers)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:187",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Per-exhibitor custom restrictions",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:188",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Display Filters — Exhibitors / Products",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:189",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "ElasticSearch field weights",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:190",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "PDF exhibitor list download + date window",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:191",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Allow to create products when limit reached / Forbid active products",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:192",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Marketing Content Tracks",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:193",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Module Management — Brands / AI Search",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:194",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Module Management — Parent-Child",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "14_exhibitor_marketplace:195",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Content public page / preview+download requires login",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:196",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "PDF exhibitor list download window",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:197",
+"product": "Exhibitor Marketplace",
+"section": "§13 Configuration Guide",
+"claim": "Default exhibitor logo, logo placeholder",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "14_exhibitor_marketplace:203",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"RFP and RFS are always category-controlled with no custom override\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:204",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"Restricted access\" and \"showroom\" are category settings",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "14_exhibitor_marketplace:205",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"Online/onsite meeting limits always inherit from Category, cannot be Custom\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:206",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"Parent-child and Allow-customize-room are Custom-only\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:207",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"Session sponsorships configured inside sessions, not Sponsors\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:208",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "\"When the event ends the marketplace remains browsable; no archiving\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:209",
+"product": "Exhibitor Marketplace",
+"section": "§14 Edge cases — the notable ones",
+"claim": "Deleted exhibitors remove all associated statistics",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:219",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`EXHIBITOR` (`company_name, slug, status, category_id, parent_exhibitor_id, is_new, is_sponsored, logo_url, banner_url, description, created_at`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:220",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`EXHIBITOR_CATEGORY` (12 attributes)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:221",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`TEAM_MEMBER` table",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:222",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`PRODUCT` (`status, is_sponsored, is_launch, sample_available, assigned_tm_id`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:223",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`BRAND` (shared entity)",
+"verdict": "PARTIAL"
+},
+{
+"id": "14_exhibitor_marketplace:224",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`EXHIBITOR_BRAND`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:225",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`MARKETING_CONTENT` (`owner_id, owner_type, track_id`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:226",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`MC_TRACK`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "14_exhibitor_marketplace:227",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`FILTER_CONFIG` table",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "14_exhibitor_marketplace:228",
+"product": "Exhibitor Marketplace",
+"section": "Data model",
+"claim": "`INTERACTION` table",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:88",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Basic organiser configuration — which interactions count as leads, privacy rules, scanning settings",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:89",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Lead Capture Access Management — free vs paid, per-team-member toggles, Manual and LC Pro purchase flows",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:90",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Lead Question Builder (Organiser) — standard questions, enable/disable additional, category limits",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:91",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Lead Question Builder (Exhibitors) — toggle standard, create additional, order, publish",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:92",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Leads Dashboard — interactions + sponsor tabs + QR scans",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:93",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Lead Scanning — mobile badge scan, rating, category, questions, notes, products, autosave, offline",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:94",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Non-badge QR codes — company, product, content, visitor; deep links; access control",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:95",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Leads Export — exhibitor, Scanned Me, organiser-triggered, custom question and registration columns, dedup",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:96",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Included",
+"claim": "Lead Capture Pro — Stripe self-service, base package + add-ons, auto scan-button activation, redirect",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:102",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Session check-in analytics (Onsite & Check-in product)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:103",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Meeting scheduling engine",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:104",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Registration pipeline and badge printing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:105",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "\"Billing and invoicing outside Stripe-managed LC Pro transactions\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:106",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "Attendee-facing networking not tied to lead capture",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:107",
+"product": "Lead Intelligence",
+"section": "§2 Scope — Excluded (verified per F44)",
+"claim": "\"Raw CRM integrations beyond the Excel export (custom integrations are per-client professional services)\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:113",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Contact Sharing is at `Networking & Matchmaking → Contact Sharing`; settings stored at event level",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:114",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Lead toggles: meeting, favourited profile, viewed profile, favourited product, favourited session, on-demand watch, content download, QR scan, booked exhibitor event",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:115",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Badge scans are always leads — no toggle required\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:116",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Data sharing: hide private globally + per action type; include all meeting statuses; on-demand seconds; meeting rating notes",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:117",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Scanning settings: scanned-me list, exhibitor logo, category/role, colocated, any code, repeated scans",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:118",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Changes affect future leads only; no retroactive re-evaluation",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:119",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Access: (1) Manual global free toggle, (2) per-team-member in admin",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:120",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Field types: text, radio, checkbox, date, select (organiser) / 6 types incl. multiselect, checkbox group (exhibitor)",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:121",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Include in lead export file\" per question",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:122",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Must click Publish for changes to go live\"; unpublished questions labelled New and invisible in the app",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:123",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Question order in the Summary panel controls the order in the form\" (drag-and-drop)",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:124",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Leads Dashboard tabs (6) and table display rules",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:125",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Lead capture page: Rating 1-5, Participant Type (Potential Client / Partner / Supplier / Other), Questions, Notes, Products",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:126",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"All data autosaves on navigation away\" (EP autosave)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "15_lead_intelligence:127",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"If offline, data saved locally and synced on reconnect\"; Force Sync (EP-23400)",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:128",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Colocated scanning",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:129",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Allow any code scan",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:130",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Visitor Personal QR — in Visitor Export\"; company/product/content QR exports",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:131",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Non-badge QR scans do NOT appear in Scanned Me\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:132",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Works correctly for future events only; past events are not synced\"",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "15_lead_intelligence:133",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "LC Pro: base package + custom questions + product QR add-ons",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:134",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "LC Pro pricing configured on a page under Event Setup",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:135",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Add-ons cannot be purchased without the base package\"",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "15_lead_intelligence:136",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Stripe enabled automatically when LC Pro is on\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:137",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Upon purchase, scan button enabled in mobile app; profile menu updated\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:138",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Automatic redirect for unpurchased exhibitors tapping Scan Badge\"; participants never redirected",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "15_lead_intelligence:139",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Organiser sees purchase list in admin\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:140",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Export file schema (common + exhibitor-only + custom question + registration field columns)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:141",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"Reason\" column",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:142",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Dedup: only first occurrence, except favourited sessions and booked events",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:143",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "\"As of May 2026 meeting appointments generate a single lead regardless of team member count\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:144",
+"product": "Lead Intelligence",
+"section": "§4 Feature Inventory",
+"claim": "Event cloning: interaction info stays in the original event",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:169",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "Organiser configures everything; exhibitor cannot",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:170",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "\"ExpoPlatform Staff (SuperAdmin)\" configures Stripe, taxes, invoicing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:171",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "Exhibitor cannot view other exhibitors' leads",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:172",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "Team member scans; visitor gets basic save only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:173",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "Sponsor sees sponsor tabs only",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:174",
+"product": "Lead Intelligence",
+"section": "§9 Permissions",
+"claim": "Role × capability table",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:180",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "Mobile app — scanning, form, offline sync",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:181",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "EP backend API resolves badge QR, persists leads",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:182",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "Stripe for LC Pro; \"token never stored by EP\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:183",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "Email delivery of export files",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:184",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "Data Import/Export admin exports",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:185",
+"product": "Lead Intelligence",
+"section": "§10 Integrations",
+"claim": "Registration pipeline \"Show in leads export\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:192",
+"product": "Lead Intelligence",
+"section": "§11 Notifications",
+"claim": "Leads / Scanned Me export by email with .xlsx attachment",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:193",
+"product": "Lead Intelligence",
+"section": "§11 Notifications",
+"claim": "Stripe receipt + Stripe invoice with EP branding",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:194",
+"product": "Lead Intelligence",
+"section": "§11 Notifications",
+"claim": "Three in-app scanning messages",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:200",
+"product": "Lead Intelligence",
+"section": "§12 Reporting",
+"claim": "6 dashboard reports",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:201",
+"product": "Lead Intelligence",
+"section": "§12 Reporting",
+"claim": "Exhibitor leads file, Scanned Me file",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:202",
+"product": "Lead Intelligence",
+"section": "§12 Reporting",
+"claim": "Exhibitors/Visitors Scanned Report, QR Scan Report",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:203",
+"product": "Lead Intelligence",
+"section": "§12 Reporting",
+"claim": "Standard Report (EP-23957) via `/admin/data`",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:204",
+"product": "Lead Intelligence",
+"section": "§12 Reporting",
+"claim": "Check-in analytics cluster",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:212",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Custom Lead Questions module toggle",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:213",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Use Standard / Additional Questions",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:214",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Category-level question limits",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:215",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Lead Capture global free toggle",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "15_lead_intelligence:216",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Lead Capture per team member",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:217",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "LC Pro module enable",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:218",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "LC Pro pricing",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:219",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Download Leads toggle (module + category)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:220",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Contact Sharing — all three groups",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:221",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "QR Codes enable",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:222",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Application Universal Links",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:223",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Show in leads export (registration field)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:224",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Include in lead export file (custom question)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:225",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Meeting Rating Notes",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:226",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Scanned Me List",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:227",
+"product": "Lead Intelligence",
+"section": "§13 Configuration Guide",
+"claim": "Show Repeated Badge Scans",
+"verdict": "CONFIRMED"
+},
+{
+"id": "15_lead_intelligence:238",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`CONTACT_SHARING_CONFIG` (12 boolean attributes)",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:239",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`LEAD_RECORD` (`reason, rating, participant_type, notes, is_new, contacted, scan_time, event_name, scanned_code`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:240",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`LEAD_QUESTION` (`text, type, is_standard, include_in_export, published, display_order`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:241",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`LEAD_ANSWER`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:242",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`LEAD_CAPTURE_ACCESS` (`enabled`, `source enum`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "15_lead_intelligence:244",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`QR_CODE` / `QR_SCAN` tables",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "15_lead_intelligence:245",
+"product": "Lead Intelligence",
+"section": "Data model",
+"claim": "`TEAM_MEMBER`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "17_sponsorship:61",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Sponsor record management: standalone sponsors + convert exhibitor to sponsor; logo, website, details, sponsorship type (`:14064`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:62",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Sponsor categories used in website builder blocks (`:14065`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:63",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Sponsored exhibitor designation (\"Is Sponsor\") at category and individual level (`:14066`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:64",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Banner ads on Exhibitors / Sessions / Delegates / Speakers / News / Floorplan, Top and Left positions (`:14067`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:65",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Sponsor pop-up on exhibitor profile with one CTA (`:14068`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:66",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Sponsored exhibitor placement on marketplace: slider or expanded view, custom display name, MM-aware ordering (`:14069`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:67",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Sponsored products section with per-sponsor and global limits (`:14070`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:68",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Additional video in exhibitor profile (`:14071`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:69",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Sponsor video in online session room with skip delay and MM rotation (`:14072`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:70",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Online room customisation (background + font colour) (`:14073`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:71",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Website header and background images (`:14075`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:72",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Sponsored session block on exhibitor profile (`:14076`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:73",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Session sponsorship: assign sponsor to individual sessions (`:14077`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:74",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Sponsorship statistics for organisers: banner, pop-up, search, product search, video with drill-down and export (`:14078`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:75",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Sponsorship statistics for exhibitors (frontend interactions dashboard) (`:14079`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:76",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Global Sponsor Limit on Marketplace: custom limit up to 100; default 4 shown with border (`:14080`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "17_sponsorship:77",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Included",
+"claim": "Sponsor display settings: expanded view toggle, custom block names, banner ad count per page (`:14081`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:83",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Excluded (per F44)",
+"claim": "\"Mobile-app-only sponsorship types … referenced but not documented here\" (`:14084`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:84",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Excluded (per F44)",
+"claim": "\"Third-party ad-server integrations (Google Ads, DFP)\" (`:14086`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:85",
+"product": "Sponsorship",
+"section": "§2 Product Scope — Excluded (per F44)",
+"claim": "\"Billing and invoicing for sponsorship packages handled outside the platform\" (`:14085`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:91",
+"product": "Sponsorship",
+"section": "§3 User Roles (`:14095-14106`)",
+"claim": "Eight roles with differentiated sponsorship access",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "17_sponsorship:92",
+"product": "Sponsorship",
+"section": "§3 User Roles (`:14095-14106`)",
+"claim": "\"Sponsored Exhibitor (frontend): upload pop-up content, images, room branding; view own stats\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:93",
+"product": "Sponsorship",
+"section": "§3 User Roles (`:14095-14106`)",
+"claim": "\"Super Admin: enable Sponsorship module globally\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:94",
+"product": "Sponsorship",
+"section": "§3 User Roles (`:14095-14106`)",
+"claim": "\"Session sponsorship is always configured inside session edit pages, not from Sponsors management\" (`:14106`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:100",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.1 \"Once elevated, the sponsor account is independent — changes in the exhibitor profile do not propagate\" (`:14117`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "17_sponsorship:101",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.2 \"Sponsor categories have no sub-settings (unlike exhibitor categories)\" (`:14136`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:102",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.2 \"Category surfaces in Supplier Overview analytics as a Sponsor Category column\" (`:14140`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:103",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.3 \"Individual level takes precedence over category level\" (`:14156`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:104",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.3 \"Matchmaking/Product Categories field is disabled on the sponsor profile; system uses the exhibitor's own\" (`:14160`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:105",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.4 \"Up to 100 in slider, up to 24 in expanded view (6×4)\" (`:14175`, `:14179`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "17_sponsorship:106",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.4 \"'Matchmaking sorting on Marketplace' toggle has no effect on sponsored exhibitors\" (`:14182`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:107",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.4 \"If 'Always use set priority' is ON, manual sort overrides MM\" (`:14182`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:108",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.5 \"Disable Link toggle prevents redirect and stops click tracking\" (`:14209`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:109",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.5 Banner dimension table (1107×100 / 530×100 / 275×275 etc.) (`:14197-14201`)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "17_sponsorship:110",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.5 \"Stats tracked only for system page banners, not custom page banners\" (`:14209`, `:14806`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:111",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.9 Video rotation: \"remove that sponsor from the pool; continue until 10 sponsors removed, then reset\" (`:14281`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:112",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.9 \"Skip delay default 0 seconds, max set by organiser\" (`:14278`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:113",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.9 \"Video: MP4/WebM only, ≤50 MB\" (`:14286`)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "17_sponsorship:114",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.12 \"Clicks are tracked, not actions\" (`:14342`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:115",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.12 Slider impression rule: \"views recorded only for sponsors visible as the user scrolls\" (`:14343`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:116",
+"product": "Sponsorship",
+"section": "§4 Feature Inventory — corrections beyond §2",
+"claim": "4.14 Additional video: category-level \"Do not allow\" overrides global \"Allow\" (`:14372`)",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:142",
+"product": "Sponsorship",
+"section": "§8 Data Model (`:14499-14560`)",
+"claim": "`SPONSOR { name, logo_url, website_url, company_details, sponsorship_type, mark_in_search_list, show_popup, show_in_product_search, sponsored_products_limit, priority }`",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:144",
+"product": "Sponsorship",
+"section": "§8 Data Model (`:14499-14560`)",
+"claim": "`SPONSOR_SETTINGS { custom_sponsor_limit, default_max_products, video_skip_delay_seconds, expanded_view, exhibitor_list_name, product_list_name }`",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "17_sponsorship:145",
+"product": "Sponsorship",
+"section": "§8 Data Model (`:14499-14560`)",
+"claim": "`SPONSOR_INTERACTION { placement_type, action, timestamp, attendee_id }`",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:146",
+"product": "Sponsorship",
+"section": "§8 Data Model (`:14499-14560`)",
+"claim": "`SPONSOR_VIDEO`",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:148",
+"product": "Sponsorship",
+"section": "§8 Data Model (`:14499-14560`)",
+"claim": "`SPONSOR_CATEGORY`",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:149",
+"product": "Sponsorship",
+"section": "§8 Data Model (`:14499-14560`)",
+"claim": "`ONLINE_ROOM_BRANDING`, `WEBSITE_HEADER_BG` as entities",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "17_sponsorship:150",
+"product": "Sponsorship",
+"section": "§8 Data Model (`:14499-14560`)",
+"claim": "Sponsorship placement lifecycle state diagram (`Configured → Active → Suppressed → Expired`) (`:14550-14560`)",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "17_sponsorship:158",
+"product": "Sponsorship",
+"section": "§9 Permissions Matrix (`:14597-14612`)",
+"claim": "14-row Role × Capability matrix",
+"verdict": "NOT-IN-CODE"
+},
+{
+"id": "17_sponsorship:159",
+"product": "Sponsorship",
+"section": "§9 Permissions Matrix (`:14597-14612`)",
+"claim": "\"Sponsored Exhibitor: upload pop-up content ✅ / Organiser ❌\" (`:14607`)",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "17_sponsorship:160",
+"product": "Sponsorship",
+"section": "§9 Permissions Matrix (`:14597-14612`)",
+"claim": "\"Configure online room background: Organiser ❌, Sponsored Exhibitor ✅\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:166",
+"product": "Sponsorship",
+"section": "§10 Integrations (`:14620-14627`)",
+"claim": "Exhibitor Marketplace",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:167",
+"product": "Sponsorship",
+"section": "§10 Integrations (`:14620-14627`)",
+"claim": "Matchmaking Engine ordering",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:168",
+"product": "Sponsorship",
+"section": "§10 Integrations (`:14620-14627`)",
+"claim": "Session Management",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:169",
+"product": "Sponsorship",
+"section": "§10 Integrations (`:14620-14627`)",
+"claim": "Website Builder",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:170",
+"product": "Sponsorship",
+"section": "§10 Integrations (`:14620-14627`)",
+"claim": "Statistics Engine — \"internal event bus; no PII in stat records\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "17_sponsorship:171",
+"product": "Sponsorship",
+"section": "§10 Integrations (`:14620-14627`)",
+"claim": "Cache Layer",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:172",
+"product": "Sponsorship",
+"section": "§10 Integrations (`:14620-14627`)",
+"claim": "Mobile App — \"subset of web features\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:173",
+"product": "Sponsorship",
+"section": "§10 Integrations (`:14620-14627`)",
+"claim": "Missing from the doc's table",
+"verdict": "CODE-ONLY"
+},
+{
+"id": "17_sponsorship:179",
+"product": "Sponsorship",
+"section": "§11 Notifications (`:14633-14638`)",
+"claim": "\"No email, SMS, push or in-app alerts triggered by the sponsorship system\"",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:180",
+"product": "Sponsorship",
+"section": "§11 Notifications (`:14633-14638`)",
+"claim": "Sponsored-products limit warning on the exhibitor frontend",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:181",
+"product": "Sponsorship",
+"section": "§11 Notifications (`:14633-14638`)",
+"claim": "External page visit warning before banner redirect",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:197",
+"product": "Sponsorship",
+"section": "§12 Reporting & Analytics (`:14644-14711`)",
+"claim": "\"CTR: (clicks/impressions) × 100%, calculated in export\" (`:14652`)",
+"verdict": "CONFIRMED"
+},
+{
+"id": "17_sponsorship:198",
+"product": "Sponsorship",
+"section": "§12 Reporting & Analytics (`:14644-14711`)",
+"claim": "12.6 Exhibitor-facing stat tabs, \"all tabs shown to all sponsors\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:199",
+"product": "Sponsorship",
+"section": "§12 Reporting & Analytics (`:14644-14711`)",
+"claim": "12.7 Supplier Overview \"Sponsor Category\" column",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:205",
+"product": "Sponsorship",
+"section": "§13 Configuration Guide (`:14719-14741`) — corrections only",
+"claim": "Custom Sponsor Limit \"cannot exceed 100; default 4\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "17_sponsorship:206",
+"product": "Sponsorship",
+"section": "§13 Configuration Guide (`:14719-14741`) — corrections only",
+"claim": "Expanded View \"ON = up to 24, 6 per row\"",
+"verdict": "PARTIAL"
+},
+{
+"id": "17_sponsorship:207",
+"product": "Sponsorship",
+"section": "§13 Configuration Guide (`:14719-14741`) — corrections only",
+"claim": "Disable Link \"per banner, Management → Sponsors → banner settings\"",
+"verdict": "CONTRADICTED"
+},
+{
+"id": "17_sponsorship:208",
+"product": "Sponsorship",
+"section": "§13 Configuration Guide (`:14719-14741`) — corrections only",
+"claim": "Missing from the doc's config table",
+"verdict": "CODE-ONLY"
+}
+]
+}

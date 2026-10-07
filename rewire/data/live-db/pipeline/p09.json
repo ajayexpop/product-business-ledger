@@ -1,0 +1,192 @@
+{
+  "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "why": "EP-57297 description; Confluence https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2144600068/DS+Proposal+Architecture+sync_ts+cursor+field+for+accountsInteractions; Confluence https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2116354050/REQ-2026-088+Add+synctimestamp+to+accountsInteractions+API+Endpoint"
+    },
+    "gaps": [],
+    "pages": [
+      {
+        "note": "",
+        "read": true,
+        "title": "[DS Proposal] Architecture: sync_ts cursor field for accountsInteractions",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2144600068/DS+Proposal+Architecture+sync_ts+cursor+field+for+accountsInteractions"
+      },
+      {
+        "note": "",
+        "read": true,
+        "title": "[REQ-2026-088] Add synctimestamp to accountsInteractions API Endpoint",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2116354050/REQ-2026-088+Add+synctimestamp+to+accountsInteractions+API+Endpoint"
+      }
+    ]
+  },
+  "flags": {
+    "drift": false,
+    "dueSoon": false,
+    "noEstimate": false,
+    "noJira": false,
+    "overEstimate": false,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "Sept 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-09"
+    },
+    "h0imp-status": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "status",
+      "from": "In progress",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "In Progress"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "h0mig-driver": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "migrate",
+      "note": "pre-filled: Impact names the client: \"Currently a major blocker for IMEX.\" (pp-driver-prefill)",
+      "to": "26874"
+    },
+    "h0mig-rationale": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "migrate",
+      "note": "the old Why, word for word",
+      "to": "Rework on the Interactions and Accounts Interactions API, adding a Synchronization Timestamp in both ClickHouse and API to allow for delta filtering."
+    },
+    "h0mig-why": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "why",
+      "from": "Rework on the Interactions and Accounts Interactions API, adding a Synchronization Timestamp in both ClickHouse and API to allow for delta filtering.",
+      "k": "migrate",
+      "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
+      "to": ""
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57297 description; Confluence https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2144600068/DS+Proposal+Architecture+sync_ts+cursor+field+for+accountsInteractions; Confluence https://expoplatform.atlassian.net/wiki/spaces/FIS/pages/2116354050/REQ-2026-088+Add+synctimestamp+to+accountsIntera",
+      "to": "IMEX escalation: about 3.1% of exhibitor-favourite interactions go missing from API incremental syncs, ahead of IMEX America, Oct 2026."
+    },
+    "hb260928jira-forShow": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "forShow",
+      "from": "",
+      "k": "edit",
+      "note": "For IMEX Frankfurt 2027 (18-20 May 2027), delivery this year: not overdue (owner, 28 Sep 2026)",
+      "to": "OP-17374"
+    },
+    "hb260928jira-notes": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "notes",
+      "from": "Rough estimations from the Integrations Team. Data Science and Exhibitors Team estimations are required",
+      "k": "edit",
+      "note": "owner, 28 Sep 2026",
+      "to": "Rough estimations from the Integrations Team. Data Science and Exhibitors Team estimations are required For IMEX Frankfurt 2027 (18-20 May 2027); delivery this year, so it is not overdue (owner, 28 Sep 2026)."
+    }
+  },
+  "j": {
+    "aggOrigDays": 6,
+    "assignee": "Pedro Goncalves",
+    "canon": "In Progress",
+    "due": null,
+    "origDays": null,
+    "priority": "Medium",
+    "resolved": null,
+    "spentDays": 3.44,
+    "status": "In progress",
+    "summary": "accountsInteractions: sync_ts cursor field to fix incremental-sync data loss",
+    "team": null,
+    "teamField": "customfield_10001",
+    "type": "Epic"
+  },
+  "jAt": "2026-09-29T15:59:39Z",
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": 5,
+    "daysKind": "point"
+  },
+  "order": 110,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-22",
+      "basis": "Impact names the client: \"Currently a major blocker for IMEX.\"",
+      "by": "Claude",
+      "field": "Impact",
+      "name": "IMEX",
+      "quote": "Currently a major blocker for IMEX.",
+      "value": "26874"
+    }
+  },
+  "raw": {
+    "area": "API",
+    "month": "Sept 2026",
+    "status": "In progress"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-28",
+  "v": {
+    "area": "API",
+    "deps": "Multi-team EPIC, where Data Science, Exhibitors team and API Team are required to complete the work",
+    "driver": "26874",
+    "estimate": "Integrations Team: BE 3d / QA: 2d",
+    "feature": "accountsInteractions: sync_ts cursor field to fix incremental-sync data loss",
+    "forShow": "OP-17374",
+    "impact": "Clients and 3rd parties that need to retrieve interactions and analytics from ExpoPlatform via the API. Currently a major blocker for IMEX.",
+    "key": "EP-57297",
+    "month": "2026-09",
+    "notes": "Rough estimations from the Integrations Team. Data Science and Exhibitors Team estimations are required For IMEX Frankfurt 2027 (18-20 May 2027); delivery this year, so it is not overdue (owner, 28 Sep 2026).",
+    "owner": "Pedro + Alex",
+    "priority": "Customer",
+    "rationale": "Rework on the Interactions and Accounts Interactions API, adding a Synchronization Timestamp in both ClickHouse and API to allow for delta filtering.",
+    "status": "In Progress",
+    "team": "",
+    "why": "IMEX escalation: about 3.1% of exhibitor-favourite interactions go missing from API incremental syncs, ahead of IMEX America, Oct 2026."
+  }
+}

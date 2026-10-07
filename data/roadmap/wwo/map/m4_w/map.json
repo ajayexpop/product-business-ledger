@@ -1,0 +1,464 @@
+[
+ {
+  "id": "sessions-exhibitor-events-launch",
+  "kind": "new",
+  "kindWhy": "Stories 'Main parts 1-3' plus IMEX additions build the exhibitor events feature set from scratch",
+  "buildsOn": [
+   "10_sessions_and_speakers:109",
+   "10_sessions_and_speakers:143"
+  ],
+  "buildsOnWhy": "Exhibitor events with approval workflow; exhibitors create and submit their own events from the frontend"
+ },
+ {
+  "id": "sessions-session-filter-improvements-2023q1",
+  "kind": "improved",
+  "kindWhy": "'Make tracks part of content session filters', 'Additional Standard Fields for Sessions', allow inactive speakers on frontend",
+  "buildsOn": [
+   "10_sessions_and_speakers:100",
+   "10_sessions_and_speakers:98",
+   "10_sessions_and_speakers:258"
+  ],
+  "buildsOnWhy": "Standard session filter fields, tracks taxonomy, inactive-speaker display setting"
+ },
+ {
+  "id": "sessions-exhibitor-event-controls",
+  "kind": "improved",
+  "kindWhy": "'Exhibitor events. Not editable after approval' and IMEX part 3 changes to existing exhibitor events",
+  "buildsOn": [
+   "10_sessions_and_speakers:262",
+   "10_sessions_and_speakers:161",
+   "10_sessions_and_speakers:144"
+  ],
+  "buildsOnWhy": "Not-editable-after-approval setting per type (verdicts PARTIAL)"
+ },
+ {
+  "id": "sessions-exhibitor-events-app-webview",
+  "kind": "improved",
+  "kindWhy": "'Exhibitor Events, new page for Mobile team' and public list 'using widget' bring existing exhibitor events into the apps",
+  "buildsOn": [
+   "10_sessions_and_speakers:109"
+  ],
+  "buildsOnWhy": "Existing exhibitor events capability, now listed in the apps"
+ },
+ {
+  "id": "sessions-session-import-schedule-download",
+  "kind": "improved",
+  "kindWhy": "'Add 5 filters for Sessions to the file import', 'Change wording for Export data', extra indexes",
+  "buildsOn": [
+   "10_sessions_and_speakers:110",
+   "10_sessions_and_speakers:100",
+   "10_sessions_and_speakers:116"
+  ],
+  "buildsOnWhy": "Session XLS import, the five filter fields, schedule page export"
+ },
+ {
+  "id": "sessions-session-speaker-management-2023q3",
+  "kind": "improved",
+  "kindWhy": "'HIDE ASK ANONYMOUSLY ON SESSION', speaker/moderator assignment vs blocked time, speakers list moved to menu item",
+  "buildsOn": [
+   "10_sessions_and_speakers:122",
+   "10_sessions_and_speakers:121",
+   "10_sessions_and_speakers:165"
+  ],
+  "buildsOnWhy": "Hide Ask Anonymously toggle and ignore-blocked-time / blocked-time conflict rules"
+ },
+ {
+  "id": "ai-global-search-launch",
+  "kind": "new",
+  "kindWhy": "'Global search (Stage 1)': a new search engine with multipliers, counters and category search",
+  "buildsOn": [
+   "14_exhibitor_marketplace:156",
+   "14_exhibitor_marketplace:115",
+   "10_sessions_and_speakers:118"
+  ],
+  "buildsOnWhy": "ElasticSearch service, organiser-set field multipliers, global search across sessions and speakers"
+ },
+ {
+  "id": "sessions-native-exhibitor-events-app",
+  "kind": "improved",
+  "kindWhy": "'Native public list of exhibitor events for app' replaces the web view; API and display improvements",
+  "buildsOn": [
+   "10_sessions_and_speakers:109"
+  ],
+  "buildsOnWhy": "Existing exhibitor events capability re-platformed natively in the apps"
+ },
+ {
+  "id": "sessions-multilingual-exhibitor-events",
+  "kind": "improved",
+  "kindWhy": "'Exhibitor Events : Multilanguage' adds language support to existing exhibitor events",
+  "buildsOn": [
+   "10_sessions_and_speakers:109"
+  ],
+  "buildsOnWhy": "Exhibitor events capability"
+ },
+ {
+  "id": "ai-search-refinements-2023q4",
+  "kind": "improved",
+  "kindWhy": "'Modify the search bar', add Country fields and speaker/exhibitor multipliers, ignore stop-words",
+  "buildsOn": [
+   "14_exhibitor_marketplace:156",
+   "14_exhibitor_marketplace:115",
+   "10_sessions_and_speakers:118"
+  ],
+  "buildsOnWhy": "ElasticSearch service, configurable multipliers, global search"
+ },
+ {
+  "id": "sessions-other-locations",
+  "kind": "improved",
+  "kindWhy": "'Improvement of Other location', 'Address for other location', predefined list of other locations",
+  "buildsOn": [
+   "10_sessions_and_speakers:256",
+   "10_sessions_and_speakers:257"
+  ],
+  "buildsOnWhy": "Allow Other Location and Allow Address settings"
+ },
+ {
+  "id": "sessions-schedule-improvements-2024q1",
+  "kind": "improved",
+  "kindWhy": "'Direct links checking', 'No local time option (App)', 'Session speakers in Exhibitor events'",
+  "buildsOn": [
+   "10_sessions_and_speakers:116"
+  ],
+  "buildsOnWhy": "Schedule page (My Schedule) that invite links open into"
+ },
+ {
+  "id": "ai-admin-ai-assistant",
+  "kind": "new",
+  "kindWhy": "'Chatbot based on Large Language Model in Admin Panel' introduces an admin assistant",
+  "buildsOn": [],
+  "buildsOnWhy": "No baseline claim covers an admin AI assistant"
+ },
+ {
+  "id": "ai-global-search-expansion",
+  "kind": "improved",
+  "kindWhy": "'Global search (Stage 2)' extends the engine to more sections; Elastic on by default",
+  "buildsOn": [
+   "10_sessions_and_speakers:118",
+   "14_exhibitor_marketplace:156",
+   "14_exhibitor_marketplace:115"
+  ],
+  "buildsOnWhy": "Global search, ElasticSearch service and multipliers"
+ },
+ {
+  "id": "ai-recommendation-display",
+  "kind": "improved",
+  "kindWhy": "'Default State of Show Recommendations as Open', Android recommended-section logic improvement",
+  "buildsOn": [
+   "10_sessions_and_speakers:119"
+  ],
+  "buildsOnWhy": "Session recommendations"
+ },
+ {
+  "id": "sessions-exhibitor-event-reporting",
+  "kind": "improved",
+  "kindWhy": "'Users report offensive content in Exhibitor events', 'New status for Exhibitor events' added to the existing workflow",
+  "buildsOn": [
+   "10_sessions_and_speakers:109"
+  ],
+  "buildsOnWhy": "Exhibitor event approval workflow gains a new status"
+ },
+ {
+  "id": "sessions-sessions-list-improvements-2024q2",
+  "kind": "improved",
+  "kindWhy": "'Include exhibitor events in sessions', 'Additional fields for Download Schedule in xls', 'Search in lists'",
+  "buildsOn": [
+   "10_sessions_and_speakers:101",
+   "10_sessions_and_speakers:116"
+  ],
+  "buildsOnWhy": "Sessions List page filters and schedule XLS download"
+ },
+ {
+  "id": "sessions-exhibitor-event-approval-workflow",
+  "kind": "improved",
+  "kindWhy": "'Autoapproval of Exhibitor Events', 'Allow Saving ... without approving / rejecting', security questions",
+  "buildsOn": [
+   "10_sessions_and_speakers:109",
+   "10_sessions_and_speakers:261",
+   "10_sessions_and_speakers:162"
+  ],
+  "buildsOnWhy": "Exhibitor event approval workflow and auto-approve by type"
+ },
+ {
+  "id": "sessions-clickable-custom-locations",
+  "kind": "improved",
+  "kindWhy": "'Hyperlinking custom locations' on web and app",
+  "buildsOn": [
+   "10_sessions_and_speakers:256"
+  ],
+  "buildsOnWhy": "Allow Other Location / Hyperlinking setting"
+ },
+ {
+  "id": "sessions-internal-notes-flags",
+  "kind": "improved",
+  "kindWhy": "'Add an option to add internal Notes in the sessions', 'Add a critical field on the sessions'",
+  "buildsOn": [
+   "10_sessions_and_speakers:95"
+  ],
+  "buildsOnWhy": "Session content management metadata"
+ },
+ {
+  "id": "sessions-schedule-list-view-app",
+  "kind": "improved",
+  "kindWhy": "'Schedule list view' adds a list layout to the existing app schedule",
+  "buildsOn": [
+   "10_sessions_and_speakers:116"
+  ],
+  "buildsOnWhy": "Schedule page with list/calendar views"
+ },
+ {
+  "id": "sessions-session-import-filtering-2024q3",
+  "kind": "improved",
+  "kindWhy": "'Multilingual Sessions/Events Import', attach speakers by external code, product categories as a session filter",
+  "buildsOn": [
+   "10_sessions_and_speakers:110"
+  ],
+  "buildsOnWhy": "Session XLS import"
+ },
+ {
+  "id": "ai-related-exhibitor-recommendations",
+  "kind": "improved",
+  "kindWhy": "'Enhanced Networking through Intelligent Exhibitor Recommendations', 'Exhibitor event in the Recommendations'",
+  "buildsOn": [],
+  "buildsOnWhy": "Baseline has only session recommendations; nothing for exhibitor recommendations after meeting requests"
+ },
+ {
+  "id": "sessions-session-ratings",
+  "kind": "new",
+  "kindWhy": "'Session Ratings' and 'Session Ratings in Mobile App' introduce rating of attended sessions",
+  "buildsOn": [
+   "10_sessions_and_speakers:111",
+   "10_sessions_and_speakers:242"
+  ],
+  "buildsOnWhy": "Export reports By Rating (verdict for 242 PARTIAL)"
+ },
+ {
+  "id": "sessions-session-scheduling-improvements-2024q4",
+  "kind": "improved",
+  "kindWhy": "'Warning for same time and location', 'Add validation of timezone', empty state",
+  "buildsOn": [
+   "10_sessions_and_speakers:95"
+  ],
+  "buildsOnWhy": "Session create/edit in content management"
+ },
+ {
+  "id": "ai-ai-exhibitor-search",
+  "kind": "new",
+  "kindWhy": "'Module AI search', 'Prompt Based Search using AI on Exhibitor List'",
+  "buildsOn": [
+   "14_exhibitor_marketplace:157",
+   "14_exhibitor_marketplace:121",
+   "14_exhibitor_marketplace:193"
+  ],
+  "buildsOnWhy": "AI Search service, web-only Exhibitors-tab scope, Module Management AI Search"
+ },
+ {
+  "id": "sessions-session-details-app-2025q1",
+  "kind": "improved",
+  "kindWhy": "'Display Full Location', 'On speakers list need display moderators also'",
+  "buildsOn": [
+   "10_sessions_and_speakers:103"
+  ],
+  "buildsOnWhy": "Speakers List"
+ },
+ {
+  "id": "ai-unified-recommendations",
+  "kind": "improved",
+  "kindWhy": "'Unified Recommendations Page', 'Recommendations Page Revamp'",
+  "buildsOn": [
+   "10_sessions_and_speakers:119"
+  ],
+  "buildsOnWhy": "Session recommendations on community homepage"
+ },
+ {
+  "id": "sessions-agenda-sharing-2025q2",
+  "kind": "improved",
+  "kindWhy": "'Send Agenda Improvement', child exhibitors on session card",
+  "buildsOn": [
+   "10_sessions_and_speakers:225",
+   "10_sessions_and_speakers:116"
+  ],
+  "buildsOnWhy": "Send Agenda (PARTIAL) on the schedule page"
+ },
+ {
+  "id": "sessions-custom-session-filters-app",
+  "kind": "improved",
+  "kindWhy": "'Session Custom Filters in the Mobile App', translation of custom filter items",
+  "buildsOn": [
+   "10_sessions_and_speakers:100",
+   "10_sessions_and_speakers:260"
+  ],
+  "buildsOnWhy": "Five custom session filter fields"
+ },
+ {
+  "id": "sessions-easy-session-check-in",
+  "kind": "improved",
+  "kindWhy": "'Easy Entrance for Sessions' adds an optional check-in setting",
+  "buildsOn": [
+   "10_sessions_and_speakers:120",
+   "10_sessions_and_speakers:255",
+   "10_sessions_and_speakers:206"
+  ],
+  "buildsOnWhy": "Easy Entrance check-in bypass and setting"
+ },
+ {
+  "id": "sessions-exhibitor-event-applications",
+  "kind": "new",
+  "kindWhy": "'Approval Process', 'Application page': attendee applications with deadlines are introduced for exhibitor events",
+  "buildsOn": [],
+  "buildsOnWhy": "Baseline exhibitor-event approval claims cover organiser approval of the event, not attendee applications"
+ },
+ {
+  "id": "sessions-session-attendee-management",
+  "kind": "improved",
+  "kindWhy": "'Moving Attendees and Favourited to separate tab', redirect after save",
+  "buildsOn": [
+   "10_sessions_and_speakers:95"
+  ],
+  "buildsOnWhy": "Session content management (edit page)"
+ },
+ {
+  "id": "sessions-speaker-profile-events-app",
+  "kind": "improved",
+  "kindWhy": "'Speaker / Moderator Profile - Events Block' adds a block to existing profiles",
+  "buildsOn": [
+   "10_sessions_and_speakers:103",
+   "10_sessions_and_speakers:109"
+  ],
+  "buildsOnWhy": "Speaker page and exhibitor events"
+ },
+ {
+  "id": "sessions-exhibitor-event-auto-approval",
+  "kind": "improved",
+  "kindWhy": "'New Autoapproval interface', 'Autoapproval mechanism', 'Remove rejection notifications' for the existing application process",
+  "buildsOn": [],
+  "buildsOnWhy": "Baseline auto-approval claims are per event type for event approval, not applications"
+ },
+ {
+  "id": "ai-mobile-search",
+  "kind": "improved",
+  "kindWhy": "'Expand Search to Include Descriptions - Mobile App', 'Prioritize Exhibitor Search Result Matches by Name'",
+  "buildsOn": [
+   "14_exhibitor_marketplace:82"
+  ],
+  "buildsOnWhy": "Marketplace keyword search and filters"
+ },
+ {
+  "id": "ai-ai-search-relevance",
+  "kind": "improved",
+  "kindWhy": "'Prioritizing name matches over description matches', alias handling, ranking hierarchy fixes",
+  "buildsOn": [
+   "14_exhibitor_marketplace:157",
+   "14_exhibitor_marketplace:82"
+  ],
+  "buildsOnWhy": "AI Search service and marketplace search"
+ },
+ {
+  "id": "sessions-external-session-registration",
+  "kind": "improved",
+  "kindWhy": "'Session: External registration URL for Register button'",
+  "buildsOn": [
+   "10_sessions_and_speakers:106"
+  ],
+  "buildsOnWhy": "Session registration page and Register gating"
+ },
+ {
+  "id": "sessions-now-upcoming-sessions-app",
+  "kind": "improved",
+  "kindWhy": "'Highlight Now & Upcoming Sessions - Mobile App'",
+  "buildsOn": [
+   "10_sessions_and_speakers:101"
+  ],
+  "buildsOnWhy": "Sessions List page"
+ },
+ {
+  "id": "sessions-session-cards-admin-filters-2026q2",
+  "kind": "improved",
+  "kindWhy": "'Add more Filters to ... Sessions Page on Admin Panel', add type and exhibitor name to detail card",
+  "buildsOn": [
+   "10_sessions_and_speakers:102",
+   "10_sessions_and_speakers:109"
+  ],
+  "buildsOnWhy": "Session page and exhibitor events"
+ },
+ {
+  "id": "ai-ai-event-assistant",
+  "kind": "new",
+  "kindWhy": "'Session and Agenda Queries' tool built into the first phase of the AI event assistant",
+  "buildsOn": [],
+  "buildsOnWhy": "No baseline claim covers an attendee AI assistant"
+ },
+ {
+  "id": "ai-ai-search-service",
+  "kind": "improved",
+  "kindWhy": "'Develop and deploy AI search exposed via API', index missing entities, pagination: rebuild and extension of AI search",
+  "buildsOn": [
+   "14_exhibitor_marketplace:157",
+   "14_exhibitor_marketplace:118"
+  ],
+  "buildsOnWhy": "AI Search service and its result cap"
+ },
+ {
+  "id": "ai-recommendation-service",
+  "kind": "improved",
+  "kindWhy": "'Implement ... Matching Score and providing recommendations via API', cold start and caching optimisations: a rebuilt service",
+  "buildsOn": [
+   "10_sessions_and_speakers:119"
+  ],
+  "buildsOnWhy": "Session recommendations (the service behind them)"
+ },
+ {
+  "id": "sessions-session-calendar-view",
+  "kind": "new",
+  "kindWhy": "'Add sessions calendar-view endpoint', 'Story 1 - Calendar Component': a new agenda calendar view",
+  "buildsOn": [
+   "10_sessions_and_speakers:101"
+  ],
+  "buildsOnWhy": "Sessions List page the calendar sits beside"
+ },
+ {
+  "id": "sessions-session-display-settings",
+  "kind": "improved",
+  "kindWhy": "'Default View Setting (List / Grid / Calendar)', 'Custom colors for tracks'",
+  "buildsOn": [
+   "10_sessions_and_speakers:101",
+   "10_sessions_and_speakers:98"
+  ],
+  "buildsOnWhy": "Sessions List list/grid and tracks taxonomy"
+ },
+ {
+  "id": "sessions-exhibitor-event-locations-2026q3",
+  "kind": "improved",
+  "kindWhy": "Floor plan location beyond assigned booth, translated 'Other locations', show events without team member",
+  "buildsOn": [
+   "10_sessions_and_speakers:109",
+   "10_sessions_and_speakers:256"
+  ],
+  "buildsOnWhy": "Exhibitor events and Allow Other Location"
+ },
+ {
+  "id": "ai-unified-global-search",
+  "kind": "improved",
+  "kindWhy": "'Improve current search field to be global', unified results page",
+  "buildsOn": [
+   "10_sessions_and_speakers:118",
+   "14_exhibitor_marketplace:82"
+  ],
+  "buildsOnWhy": "Global search and marketplace search"
+ },
+ {
+  "id": "ai-ai-search-categories",
+  "kind": "improved",
+  "kindWhy": "'Include Pavilions / Community Groups / On-Demand Sessions as a searchable category in AI Search'",
+  "buildsOn": [
+   "14_exhibitor_marketplace:157"
+  ],
+  "buildsOnWhy": "AI Search service"
+ },
+ {
+  "id": "ai-admin-assistant-redesign",
+  "kind": "improved",
+  "kindWhy": "'Front-end for chatbot' redesigns the existing admin assistant",
+  "buildsOn": [],
+  "buildsOnWhy": "No baseline claim covers the admin assistant"
+ }
+]

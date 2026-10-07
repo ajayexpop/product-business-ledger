@@ -1,5 +1,22 @@
 {
   "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "why": "EP-57221 Reported by; Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2137915393/Global+Search.+Blocks+Labels+Order+and+Availability+Control"
+    },
+    "gaps": [],
+    "pages": [
+      {
+        "note": "Names no client",
+        "read": true,
+        "title": "Global Search. Blocks, Labels, Order and Availability Control",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2137915393/Global+Search.+Blocks+Labels+Order+and+Availability+Control"
+      }
+    ]
+  },
   "flags": {
     "drift": false,
     "dueSoon": false,
@@ -63,6 +80,16 @@
       "k": "migrate",
       "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
       "to": ""
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57221 Reported by; Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2137915393/Global+Search.+Blocks+Labels+Order+and+Availability+Control",
+      "to": "Raised for IMEX: closes Global Search gaps left by EP-47675 (block order, labels, availability) and fixes Delegates not showing."
     }
   },
   "j": {
@@ -80,6 +107,7 @@
     "teamField": "customfield_10001",
     "type": "Story"
   },
+  "jAt": "2026-09-28T19:00:00Z",
   "migrated": {
     "at": "2026-09-22",
     "schema": 2
@@ -88,7 +116,7 @@
     "days": 4,
     "daysKind": "point"
   },
-  "order": 100,
+  "order": 120,
   "prefill": {
     "driver": {
       "at": "2026-09-22",
@@ -106,7 +134,7 @@
     "status": "Done"
   },
   "source": "confluence-2155872263",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-28",
   "v": {
     "area": "Global Search",
     "deps": "Was done as hotfix in tight deadlines, testing continues after the release",
@@ -122,6 +150,6 @@
     "rationale": "Critical for IMEX",
     "status": "Done",
     "team": "",
-    "why": ""
+    "why": "Raised for IMEX: closes Global Search gaps left by EP-47675 (block order, labels, availability) and fixes Delegates not showing."
   }
 }

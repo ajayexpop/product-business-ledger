@@ -1,0 +1,159 @@
+{
+  "createdAt": "2026-09-28",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "notes": "EP-57918 jiraColumns; children of EP-57918 (none returned)",
+      "why": "EP-55779 description (names Sessions); EP-57918 summary"
+    },
+    "gaps": [
+      "Description contains only a Polaris link, PBV11-493, not a Confluence page; not fetched.",
+      "EP-55779 names Sessions but not 'Exhibitor events' explicitly ('and others'); EP-57918 is not a child of EP-55779 in Jira.",
+      "Reported by INTERNAL and no Pipedrive id; the ledger rationale 'contracted with IMEX' is not backed by EP-57918 itself (its sibling EP-57914 and EP-55779 are IMEX-reported)."
+    ],
+    "pages": []
+  },
+  "h": {
+    "hb260928conf-driver": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "import",
+      "note": "pre-filled: Why it matters names the client: \"Next step of AI Search transition (contracted with IMEX)\" (pp-driver-prefill)",
+      "to": "26874"
+    },
+    "hb260928conf-month": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "month",
+      "from": "December 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-12"
+    },
+    "hb260928confadd": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 2026-09-28."
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57918 jiraColumns; children of EP-57918 (none returned)",
+      "to": "Epic Open as of 2026-09-28: no child issues, no comments, no estimate, no due date. Description is only a link to Polaris idea PBV11-493."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-55779 description (names Sessions); EP-57918 summary",
+      "to": "Sessions is one of the Marketplace listings the AI search switch (EP-55779) moves from keyword search to AI search."
+    },
+    "hb260928jira-forShow": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "forShow",
+      "from": "",
+      "k": "edit",
+      "note": "For IMEX Frankfurt 2027 (18-20 May 2027), delivery this year: not overdue (owner, 28 Sep 2026)",
+      "to": "OP-17374"
+    },
+    "hb260928jira-funded": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "funded",
+      "from": "",
+      "k": "edit",
+      "note": "Funded: the IMEX AI Search project is funded (owner, 28 Sep 2026)",
+      "to": "Yes"
+    },
+    "hb260928jira-notes": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "notes",
+      "from": "Epic Open as of 2026-09-28: no child issues, no comments, no estimate, no due date. Description is only a link to Polaris idea PBV11-493.",
+      "k": "edit",
+      "note": "owner, 28 Sep 2026",
+      "to": "Epic Open as of 2026-09-28: no child issues, no comments, no estimate, no due date. Description is only a link to Polaris idea PBV11-493. For IMEX Frankfurt 2027 (18-20 May 2027); delivery this year, so it is not overdue (owner, 28 Sep 2026)."
+    }
+  },
+  "j": {
+    "aggOrigDays": null,
+    "assignee": null,
+    "canon": "Planned",
+    "due": null,
+    "origDays": null,
+    "priority": "Medium",
+    "resolved": null,
+    "spentDays": null,
+    "status": "Open",
+    "summary": "AI Search for Sessions and Exhibitor events",
+    "team": "Exhibitor team",
+    "teamField": "customfield_10001",
+    "type": "Epic"
+  },
+  "jAt": "2026-09-28T19:00:00Z",
+  "migrated": {
+    "at": "2026-09-28",
+    "schema": 2
+  },
+  "n": {
+    "days": null,
+    "daysKind": "none"
+  },
+  "order": 180,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "Why it matters names the client: \"Next step of AI Search transition (contracted with IMEX)\"",
+      "by": "Claude",
+      "field": "Why it matters",
+      "name": "IMEX",
+      "quote": "Next step of AI Search transition (contracted with IMEX)",
+      "value": "26874"
+    }
+  },
+  "raw": {
+    "area": "Search",
+    "month": "December 2026",
+    "status": "Planned"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-28",
+  "v": {
+    "area": "Search",
+    "deps": "Next Step of AI search transition",
+    "driver": "26874",
+    "estimate": "To be estimated",
+    "feature": "AI Search for Sessions and Exhibitor events",
+    "forShow": "OP-17374",
+    "funded": "Yes",
+    "impact": "Unlocks improved search for Sessions and Exhibitor events",
+    "key": "EP-57918",
+    "month": "2026-12",
+    "notes": "Epic Open as of 2026-09-28: no child issues, no comments, no estimate, no due date. Description is only a link to Polaris idea PBV11-493. For IMEX Frankfurt 2027 (18-20 May 2027); delivery this year, so it is not overdue (owner, 28 Sep 2026).",
+    "owner": "Alex",
+    "priority": "Customer",
+    "rationale": "Next step of AI Search transition (contracted with IMEX)",
+    "status": "Planned",
+    "team": "",
+    "why": "Sessions is one of the Marketplace listings the AI search switch (EP-55779) moves from keyword search to AI search."
+  }
+}

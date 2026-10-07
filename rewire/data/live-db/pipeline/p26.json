@@ -1,0 +1,168 @@
+{
+  "createdAt": "2026-09-28",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [
+      {
+        "title": "Group Registration: concept and proposal",
+        "type": "confluence",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal",
+        "why": "Best match: title and scope are group registration; author Kavinder Rawal; last modified 14 Sep 2026; status Concept, not built."
+      },
+      {
+        "key": "EP-27117",
+        "title": "Group Registration",
+        "type": "jira",
+        "url": "https://expoplatform.atlassian.net/browse/EP-27117",
+        "why": "Feature Request, status Incoming request, created 2024-03-08, reporter Oleksandr Parashchuk, labels Team_B, internal, mig-awaiting-details. Describes a separate group registration page (names, email, job title, company; shared tickets and sessions; buyer pays for all). Earlier and narrower (roster entered upfront) than the Confluence proposal, which recommends 'buy now, assign later'."
+      }
+    ],
+    "fields": {
+      "deps": "Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal (Two commercial decisions; Things that will bite; Open questions; Module by module); EP-27117 comment 2024-03-19 by Evgen Polivach",
+      "driver": "No ticket; the Confluence ledger says \"Requests from multiple clients\" and names none",
+      "impact": "Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal (How it works; Where ExpoPlatform would be ahead)",
+      "notes": "Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal; EP-27117 description and comment 2024-03-19 by Evgen Polivach",
+      "why": "Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal (The short version)"
+    },
+    "gaps": [
+      "No Jira ticket on the ledger item; fields are drawn from the best-candidate page and EP-27117 and are not confirmed to be the same item.",
+      "No client named anywhere; ledger rationale 'Requests from multiple clients' is not backed by these sources (EP-27117 is labelled 'internal').",
+      "No estimate: EP-27117 estimate table is empty apart from 1 PM day; the page asks for an engineering estimate.",
+      "Team and month not stated for the current work (EP-27117 2024 comment names Team B and Team A only); not missing fields, left alone.",
+      "Other Jira hits for the search were unrelated (checkbox-group and registration-form defects, EP-56907, EP-49962, EP-38308, EP-28401, EP-27911, EP-27910, EP-26821); the broad text search on Confluence returned unrelated pages (payments table, trainings, roadmap whiteboards, Hyve pages, integrations)."
+    ],
+    "pages": [
+      {
+        "note": "Personal space of Kavinder Rawal (ledger owner is 'Kavi'; possibly the same person, not assumed). Concept, not built; model B 'buy now, assign later'; phasing; open questions. No client named.",
+        "read": true,
+        "title": "Group Registration: concept and proposal",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal"
+      }
+    ]
+  },
+  "h": {
+    "hb260928conf-month": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "month",
+      "from": "TBD",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": ""
+    },
+    "hb260928conf-status": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "status",
+      "from": "Discovery, discussion going on with Sales and TAMs to understand the requirement clearly",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "Discovery"
+    },
+    "hb260928confadd": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 2026-09-28."
+    },
+    "hb260928enr-deps": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "deps",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal (Two commercial decisions; Things that will bite; Open questions; Module by module); EP-27117 comment 2024-03-19 by Evgen Polivach",
+      "to": "Needs an engineering estimate on one data model change: a ticket (slot) that exists without an attendee profile. Blocked by two commercial decisions (how volume bands combine with early bird and discount codes; what happens when a refund drops an order below a band) and a decision on whether slots are claimable before an invoice is paid. Touches 16 modules (basket quantity, ticketing per-order cap, discounts, emails, Open API, kiosks must refuse unassigned slots). Registration and payment were split across two teams in EP-27117."
+    },
+    "hb260928enr-driver": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from No ticket; the Confluence ledger says \"Requests from multiple clients\" and names none",
+      "to": "Platform"
+    },
+    "hb260928enr-impact": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "impact",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal (How it works; Where ExpoPlatform would be ahead)",
+      "to": "Buyers pay once for many passes (one transaction, one VAT invoice) and assign places later; each claimant completes the normal registration form, so exhibitors and matchmaking get real named attendees; organiser staff stop keying and maintaining group orders by hand."
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal; EP-27117 description and comment 2024-03-19 by Evgen Polivach",
+      "to": "Proposal page 'Group Registration: concept and proposal' (last modified 14 Sep 2026) is status 'Concept, not built' and asks for a go/no-go decision, with a clickable prototype and 3 proposed phases. Older Feature Request EP-27117 'Group Registration' (created 2024-03-08) is still 'Incoming request'; last comment 2024-03-19: Team B to build registration, Team A payment; its estimate table is empty apart from 1 PM day for Team B."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Confluence https://expoplatform.atlassian.net/wiki/spaces/~5fa296e7c2e5390077b973be/pages/2138374153/Group+Registration+concept+and+proposal (The short version)",
+      "to": "ExpoPlatform has no group registration: a team of ten must register and pay ten times, or our staff key the order in by hand."
+    }
+  },
+  "j": null,
+  "migrated": {
+    "at": "2026-09-28",
+    "schema": 2
+  },
+  "n": {
+    "days": null,
+    "daysKind": "none"
+  },
+  "order": 260,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "No ticket; the Confluence ledger says \"Requests from multiple clients\" and names none",
+      "by": "Claude",
+      "field": "Jira",
+      "name": "Platform",
+      "quote": "No ticket; the Confluence ledger says \"Requests from multiple clients\" and names none",
+      "value": "Platform"
+    }
+  },
+  "raw": {
+    "area": "Registration",
+    "month": "TBD",
+    "status": "Discovery, discussion going on with Sales and TAMs to understand the requirement clearly"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-28",
+  "v": {
+    "area": "Registration",
+    "deps": "Needs an engineering estimate on one data model change: a ticket (slot) that exists without an attendee profile. Blocked by two commercial decisions (how volume bands combine with early bird and discount codes; what happens when a refund drops an order below a band) and a decision on whether slots are claimable before an invoice is paid. Touches 16 modules (basket quantity, ticketing per-order cap, discounts, emails, Open API, kiosks must refuse unassigned slots). Registration and payment were split across two teams in EP-27117.",
+    "driver": "Platform",
+    "estimate": "TBD",
+    "feature": "Group Registration",
+    "impact": "Buyers pay once for many passes (one transaction, one VAT invoice) and assign places later; each claimant completes the normal registration form, so exhibitors and matchmaking get real named attendees; organiser staff stop keying and maintaining group orders by hand.",
+    "key": "",
+    "month": "",
+    "notes": "Proposal page 'Group Registration: concept and proposal' (last modified 14 Sep 2026) is status 'Concept, not built' and asks for a go/no-go decision, with a clickable prototype and 3 proposed phases. Older Feature Request EP-27117 'Group Registration' (created 2024-03-08) is still 'Incoming request'; last comment 2024-03-19: Team B to build registration, Team A payment; its estimate table is empty apart from 1 PM day for Team B.",
+    "owner": "Kavi",
+    "priority": "Strategic",
+    "rationale": "Requests from multple clients",
+    "status": "Discovery",
+    "team": "",
+    "why": "ExpoPlatform has no group registration: a team of ten must register and pay ten times, or our staff key the order in by hand."
+  }
+}

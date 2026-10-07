@@ -1,0 +1,302 @@
+[
+ {
+  "id": "p14",
+  "key": "EP-57015",
+  "fields": {
+   "why": {
+    "value": "For DLG: crowded time slots cram sessions into illegible cards; show at most 2 cards (4 in Day View) and a '+N' badge.",
+    "source": "EP-57015 Reported by DLG | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2119106569/Redesigned+Session+Cards+in+Calendar+View+for+Enhanced+Attendee+Experience+with+Overflow+Indicator"
+   },
+   "deps": {
+    "value": "Child of EP-57118; relates to EP-57603. Shares one session card component with the All Day banner (EP-57098), so both specifications must agree (title line count aligned to 3 lines on 14 Sep). Built to the approved DLG G3 prototype (calendar-view-proto.vercel.app/dlg-g3). Risk: if the two story pages drift apart again, QA tests against contradictory criteria.",
+    "source": "EP-57015 comment 2026-09-14 by Oleksandr Zakablukov | EP-57098 comment 2026-09-14 by Oleksandr Zakablukov | Jira links | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2119106569/Redesigned+Session+Cards+in+Calendar+View+for+Enhanced+Attendee+Experience+with+Overflow+Indicator"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "named": [
+    {
+     "client": "DLG",
+     "quote": "Design: https://calendar-view-proto.vercel.app/dlg-g3",
+     "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2119106569/Redesigned+Session+Cards+in+Calendar+View+for+Enhanced+Attendee+Experience+with+Overflow+Indicator"
+    }
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/x/CQBPfg",
+    "title": "Redesigned Session Cards in Calendar View for Enhanced Attendee Experience with Overflow Indicator",
+    "read": true,
+    "note": "Resolves to page 2119106569, last modified 23 Sep 2026"
+   }
+  ],
+  "gaps": []
+ },
+ {
+  "id": "p15",
+  "key": "EP-57098",
+  "fields": {
+   "why": {
+    "value": "For DLG Agritechnica: 6-hour-plus sessions such as the daily Robotics Live Arena take a grid column and squeeze shorter sessions.",
+    "source": "EP-57098 Reported by DLG | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view (Background)"
+   },
+   "deps": {
+    "value": "Child of EP-57118. Shares the session card component with the time-grid card (EP-57015); decisions of 14 Sep fixed the threshold at 6 hours and titles at 3 lines, and the page was swept from 8 to 6 hours. Still open: whether on-demand sessions appear in the All Day banner ('decision pending separately'). Risk: a contradictory specification would mislead QA on 6 to 8 hour sessions.",
+    "source": "EP-57098 comments 2026-09-14 by Oleksandr Zakablukov and Kavinder Rawal | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view (Out of Scope)"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "named": [
+    {
+     "client": "DLG (Agritechnica)",
+     "quote": "In high-density events like DLG Agritechnica, sessions such as \"Robotics Live Arena: Daily Robotic Live Demonstration\" run from 09:00–18:00 on every event day.",
+     "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view"
+    },
+    {
+     "client": "DLG",
+     "quote": "The DLG G3 brand overrides it to 3",
+     "source": "EP-57098 comment 2026-09-14 by Oleksandr Zakablukov"
+    }
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/x/uoDQfg",
+    "title": "All Day Session in calendar view",
+    "read": true,
+    "note": "Resolves to page 2127593658, last modified 23 Sep 2026"
+   }
+  ],
+  "gaps": []
+ },
+ {
+  "id": "p16",
+  "key": "EP-57237",
+  "fields": {
+   "why": {
+    "value": "For DLG: the calendar drawer hardcodes 'By Track' and ignores the filter name the organiser set, which the rest of the event uses.",
+    "source": "EP-57237 Reported by DLG | EP-57237 description (Background / Context)"
+   },
+   "deps": {
+    "value": "Child of EP-57118. Relies on the existing Admin Panel > Sessions > Display Filters label and its localised variants, which the platform already respects elsewhere; no Admin Panel changes are in scope. Risk if delayed: clients who renamed Tracks keep seeing an inconsistent 'By Track' label.",
+    "source": "EP-57237 description (Background / Context, Out of Scope)"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "DLG"
+   ],
+   "pipedrive": "81808",
+   "named": []
+  },
+  "pages": [],
+  "gaps": [
+   "notes: the ticket has no comments, so nothing states current progress (Jira status is Ready for release, due 2026-09-23)",
+   "no Confluence link in the description; no client is named in the text beyond Reported by"
+  ]
+ },
+ {
+  "id": "p17",
+  "key": "EP-56170",
+  "fields": {
+   "why": {
+    "value": "German organisers (HINTE) say long Track, Tag and Type lists are hard to browse and asked for alphabetical order per language.",
+    "source": "EP-56170 Reported by HINTE | EP-56170 comment 2026-09-03 by Oleksandr Parashchuk (Background)"
+   },
+   "impact": {
+    "value": "Attendees on large and multi-language events find Track, Tag and Type filter options in alphabetical order for their own language on All Sessions, Round Tables, On-Demand and Marketplace Exhibitor Events, on web and in the mobile app. Organisers get an opt-in toggle (off by default); their manual order is kept and restored when it is switched off.",
+    "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2055929867/Alphabetical+Sorting+for+Filter+Items | EP-56170 comment 2026-09-11 by Kavinder Rawal | EP-56170 comment 2026-09-16 by Kavinder Rawal"
+   },
+   "notes": {
+    "value": "18 Sep: due on the release candidate on 7 Oct; App QA team to run the mobile smoke test then. 16 Sep: Confluence spec and Jira description updated (accent-sensitive collation, numeric sort, Round Tables in scope). Jira status: In testing.",
+    "source": "EP-56170 comment 2026-09-18 by Kavinder Rawal | EP-56170 comment 2026-09-16 by Kavinder Rawal | jiraColumns"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "HINTE"
+   ],
+   "pipedrive": null,
+   "named": [
+    {
+     "client": "German organisers (unnamed)",
+     "quote": "German organizers are concerned that it is difficult for users to browse options in Tracks, Types and Tags.",
+     "source": "EP-56170 comment 2026-09-03 by Oleksandr Parashchuk"
+    },
+    {
+     "client": "(none named)",
+     "quote": "especially for non-English/German events",
+     "source": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2055929867/Alphabetical+Sorting+for+Filter+Items"
+    }
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/x/CwCLeg",
+    "title": "Alphabetical Sorting for Filter Items",
+    "read": true,
+    "note": "Tiny link resolves to page 2055929867, last modified 18 Sep 2026; references REQ-2026-030-I"
+   },
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2055929867/Alphabetical+Sorting+for+Filter+Items",
+    "title": "Alphabetical Sorting for Filter Items",
+    "read": true,
+    "note": "Same page as the tiny link (linked in comment 2026-09-09)"
+   }
+  ],
+  "gaps": []
+ },
+ {
+  "id": "p18",
+  "key": "EP-48716",
+  "fields": {
+   "why": {
+    "value": "Asked by Vinexposium and internally: attendees miss meetings and unread messages; a digest email cuts no-shows and support tickets.",
+    "source": "EP-48716 Reported by INTERNAL, Vinexposium | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/1476886541/Email+digest (Background)"
+   },
+   "deps": {
+    "value": "Built as a new campaign type in the shared Campaigns module (agreed 16 Sep), so existing campaigns need a regression check. Email layouts from EP-52511; layout of the Booking Activity total and bar awaited from Nazar Melnyk; FE and MQA estimates still to be confirmed by Evgen Polivach; the admin send screen gets no design and is built to existing patterns. Meeting status change log only fills from release, so Booking Activity stays hidden at first. Covers exhibitors from EP-47533. The Confluence spec still describes the superseded design. Risk: the timeline cannot go to the client until the full estimate is locked.",
+    "source": "EP-48716 comments 2026-09-16, 2026-09-18, 2026-09-28 by Maryna Dovgal | EP-48716 comments 2026-09-16, 2026-09-27, 2026-09-28 by Kavinder Rawal | EP-48716 comment 2026-09-17 by Olena Khromei"
+   },
+   "notes": {
+    "value": "28 Sep: aggregate send statistics and ~21-22 backend days approved; 'turn it back on' button kept; admin screen to be built without design. Waiting on FE and MQA estimates (Evgen Polivach) and the Booking Activity card layout (Nazar Melnyk).",
+    "source": "EP-48716 comment 2026-09-28 by Kavinder Rawal | EP-48716 comment 2026-09-28 by Maryna Dovgal"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "INTERNAL",
+    "Vinexposium"
+   ],
+   "pipedrive": null,
+   "named": [
+    {
+     "client": "(client of EP-47533, not named here)",
+     "quote": "the client request in EP-47533 asked for the same digest to cover exhibitors as well",
+     "source": "EP-48716 comment 2026-09-15 by Olena Khromei"
+    },
+    {
+     "client": "(unnamed)",
+     "quote": "Before I take the new timeline to client",
+     "source": "EP-48716 comment 2026-09-28 by Kavinder Rawal"
+    }
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/1476886541/Email+digest",
+    "title": "Email digest",
+    "read": true,
+    "note": "Last modified 10 Apr 2026; describes the old template-in-Meetings design, superseded by the Campaigns approach (comments 16-28 Sep)"
+   }
+  ],
+  "gaps": [
+   "observation (not a missing field): current estimate 'BE - 18d' is out of date; 28 Sep comments put backend at ~21-22 days, FE and MQA unconfirmed; Jira description rough total 24-29 days"
+  ]
+ },
+ {
+  "id": "p19",
+  "key": "EP-56770",
+  "fields": {
+   "why": {
+    "value": "For FESPA Middle East (Apr 2027, Dubai, ~500 exhibitors): fixed row caps and one-file uploads force exhibitors to email organisers.",
+    "source": "EP-56770 description (Background) | Reported by FESPA"
+   },
+   "deps": {
+    "value": "Design completed and linked in the design subtask (16 Sep). Existing fixed-row and single-file forms and submissions must keep working with no data migration, and the organiser's view must show every added row and file. Risk if delayed: exhibitors keep sending data by email, outside structured collection.",
+    "source": "EP-56770 comment 2026-09-16 by Taimoor Zulfiqar | EP-56770 description (Background, Acceptance Criteria)"
+   },
+   "notes": {
+    "value": "16 Sep: design completed and linked in the design subtask. Jira status: Ready to start, due 8 Oct.",
+    "source": "EP-56770 comment 2026-09-16 by Taimoor Zulfiqar | jiraColumns"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "FESPA"
+   ],
+   "pipedrive": "44021",
+   "named": [
+    {
+     "client": "FESPA Middle East",
+     "quote": "Raised via FESPA Middle East (Apr 2027, Dubai, ~500 exhibitors) — REQ-2026-075.",
+     "source": "EP-56770 description"
+    }
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://claude.ai/artifact/JKKySdfGETG3NW2AKdX8Ag",
+    "title": "(claude.ai artifact, not Confluence)",
+    "read": false,
+    "note": "Linked in comment 2026-09-15 by Konstantin Shyrokov; not a Confluence page, not fetched"
+   }
+  ],
+  "gaps": [
+   "no Confluence link in the description or comments",
+   "deps: no other tickets or teams named as dependencies; filled from design status and backward-compatibility criteria only"
+  ]
+ },
+ {
+  "id": "p20",
+  "key": "EP-56742",
+  "fields": {
+   "why": {
+    "value": "For ACI Asia-Pacific & Middle East (RACE 2027): delegates paying by invoice see the 4.5% card surcharge on the invoice PDF.",
+    "source": "EP-56742 description | EP-56742 comment 2026-09-21 by Derar Toujgani"
+   },
+   "impact": {
+    "value": "Delegates who choose Invoice payment get an invoice with no Credit Card Surcharge and a total equal to the net amount; card payments and other taxes are unchanged. Event admins get a per-event setting, off by default, and order, transaction, dashboard and Payments report totals match the invoice.",
+    "source": "EP-56742 description (Observable outcome, Config)"
+   },
+   "priority": {
+    "value": "Customer",
+    "source": "EP-56742 description: 'Original request: EP-55785 (ACI Asia-Pacific & Middle East ...)'; Reported by ACI"
+   },
+   "deps": {
+    "value": "Blocking: Invoice payment is exhibitor-only today, so delegate support may be extra scope (asked 24 Sep); build path vs the Purchasing module rewrite (EP-56047 under epic EP-55566), which warns against a parallel invoice path; EP-55641 on hold on a related VAT question; per-tax vs event-level setting (surcharge set up as a custom tax, EP-38903); behaviour when the payment method changes. Needs written confirmation from ACI of the policy. Risk: early bird registration opened in September 2026 with no target date.",
+    "source": "EP-56742 description (Config, Open questions) | EP-56742 comment 2026-09-16 by Mariia Ivanova | EP-56742 comment 2026-09-24 by Taimoor Zulfiqar"
+   },
+   "notes": {
+    "value": "24 Sep: Taimoor Zulfiqar asked Derar Toujgani to check how ACI delegates reach Invoice payment, as it is exhibitor-only today. 21 Sep: sample invoice attached. Returned from refinement on 16 Sep; not yet estimated (Jira status Open).",
+    "source": "EP-56742 comment 2026-09-24 by Taimoor Zulfiqar | EP-56742 comment 2026-09-21 by Derar Toujgani | EP-56742 comment 2026-09-16 by Mariia Ivanova | jiraColumns"
+   }
+  },
+  "client": {
+   "reportedBy": [
+    "ACI"
+   ],
+   "pipedrive": "58938",
+   "named": [
+    {
+     "client": "ACI Asia-Pacific & Middle East",
+     "quote": "Original request: EP-55785 (ACI Asia-Pacific & Middle East, RACE 2027, 11–13 May 2027, Kuala Lumpur).",
+     "source": "EP-56742 description"
+    },
+    {
+     "client": "ACI",
+     "quote": "Written confirmation from ACI, on the ticket, that the surcharge applies to card payments only",
+     "source": "EP-56742 description"
+    },
+    {
+     "client": "ACI",
+     "quote": "pulling from Connie Wong's original 16 Aug 2026 email",
+     "source": "EP-56742 comment 2026-09-21 by Derar Toujgani"
+    }
+   ]
+  },
+  "pages": [],
+  "gaps": [
+   "estimate: no estimate in the ticket or comments; the team said on 16 Sep it cannot estimate as written, and Jira original estimate is empty",
+   "no Confluence link in the description or comments",
+   "ACI entity: the only specific entity named is 'ACI Asia-Pacific & Middle East' (event RACE 2027, Kuala Lumpur), in the description; comments say only 'ACI'"
+  ]
+ }
+]

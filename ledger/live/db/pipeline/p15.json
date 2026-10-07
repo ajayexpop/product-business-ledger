@@ -1,5 +1,24 @@
 {
   "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "deps": "EP-57098 comments 2026-09-14 by Oleksandr Zakablukov and Kavinder Rawal | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view (Out of Scope)",
+      "driver": "Jira Reported by DLG, Pipedrive 81808; the Confluence page names DLG Agritechnica",
+      "why": "EP-57098 Reported by DLG | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view (Background)"
+    },
+    "gaps": [],
+    "pages": [
+      {
+        "note": "Resolves to page 2127593658, last modified 23 Sep 2026",
+        "read": true,
+        "title": "All Day Session in calendar view",
+        "url": "https://expoplatform.atlassian.net/wiki/x/uoDQfg"
+      }
+    ]
+  },
   "flags": {
     "drift": true,
     "dueSoon": true,
@@ -73,23 +92,64 @@
       "k": "migrate",
       "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
       "to": ""
+    },
+    "hb260928enr-deps": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "deps",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57098 comments 2026-09-14 by Oleksandr Zakablukov and Kavinder Rawal | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view (Out of Scope)",
+      "to": "Child of EP-57118. Shares the session card component with the time-grid card (EP-57015); decisions of 14 Sep fixed the threshold at 6 hours and titles at 3 lines, and the page was swept from 8 to 6 hours. Still open: whether on-demand sessions appear in the All Day banner ('decision pending separately'). Risk: a contradictory specification would mislead QA on 6 to 8 hour sessions."
+    },
+    "hb260928enr-driver": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Jira Reported by DLG, Pipedrive 81808; the Confluence page names DLG Agritechnica",
+      "to": "81808"
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57098 Reported by DLG | Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2127593658/All+Day+Session+in+calendar+view (Background)",
+      "to": "For DLG Agritechnica: 6-hour-plus sessions such as the daily Robotics Live Arena take a grid column and squeeze shorter sessions."
+    },
+    "hb260928jira-status": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "status",
+      "from": "In Progress",
+      "k": "edit",
+      "note": "Status now follows Jira: Ready for release (owner, 28 Sep 2026: the ledger must match every board)",
+      "to": "Ready for Release"
     }
   },
   "j": {
-    "aggOrigDays": null,
+    "aggOrigDays": 5,
     "assignee": "Evgen Polivach",
-    "canon": "In Testing",
+    "canon": "Ready for Release",
     "due": "2026-09-23",
-    "origDays": null,
+    "origDays": 5,
     "priority": "Medium",
     "resolved": null,
-    "spentDays": null,
-    "status": "In testing",
+    "spentDays": 1.24,
+    "status": "Ready for release",
     "summary": "All Day Session in the calendar view",
     "team": "Visitor team",
     "teamField": "customfield_10001",
     "type": "Story"
   },
+  "jAt": "2026-09-28T19:00:00Z",
   "migrated": {
     "at": "2026-09-22",
     "schema": 2
@@ -98,18 +158,29 @@
     "days": 5,
     "daysKind": "point"
   },
-  "order": 150,
+  "order": 220,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "Jira Reported by DLG, Pipedrive 81808; the Confluence page names DLG Agritechnica",
+      "by": "Claude",
+      "field": "Jira",
+      "name": "81808",
+      "quote": "Jira Reported by DLG, Pipedrive 81808; the Confluence page names DLG Agritechnica",
+      "value": "81808"
+    }
+  },
   "raw": {
     "area": "Session",
     "month": "September 2026",
     "status": "In progress (Targeting Release on 30 Sep 2026)"
   },
   "source": "confluence-2155872263",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-28",
   "v": {
     "area": "Sessions",
-    "deps": "",
-    "driver": "",
+    "deps": "Child of EP-57118. Shares the session card component with the time-grid card (EP-57015); decisions of 14 Sep fixed the threshold at 6 hours and titles at 3 lines, and the page was swept from 8 to 6 hours. Still open: whether on-demand sessions appear in the All Day banner ('decision pending separately'). Risk: a contradictory specification would mislead QA on 6 to 8 hour sessions.",
+    "driver": "81808",
     "estimate": "5d",
     "feature": "All Day Session in the calendar view",
     "impact": "Attendees: clear distinction between ongoing all-day activities and time-specific presentations. Organizers: flexibility to schedule all-day events without disrupting standard speaker tracks.",
@@ -119,8 +190,8 @@
     "owner": "Kavi",
     "priority": "Customer",
     "rationale": "Multi-hour and full-day sessions (over 6 hours, such as exhibitions, hackathons or networking lounges) previously stretched across the entire vertical time grid, squishing normal 30-60 min sessions.",
-    "status": "In Progress",
+    "status": "Ready for Release",
     "team": "",
-    "why": ""
+    "why": "For DLG Agritechnica: 6-hour-plus sessions such as the daily Robotics Live Arena take a grid column and squeeze shorter sessions."
   }
 }

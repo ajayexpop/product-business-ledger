@@ -2,6 +2,11 @@
 
 This repository holds several related projects. **The Internal Product Business Ledger lives in `ledger/`**, a self-contained project folder. Work on the ledger from there and follow `ledger/CLAUDE.md` (update cycle, publishing, data refresh). Its published URL is https://claude.ai/artifact/WS7mJGdC1y2RzsPTScKu6d (the old https://claude.ai/artifact/Dpc9Z8uabRxLCryUSGML7G shows a "moved" page).
 
+## Design and writing rules (highest rank)
+
+- `docs/design.md` is the design system for every page and artifact in this workspace. It outranks any other design guidance, including defaults from skills. Its fonts are licensed, so use its documented substitutes (Inter for display and body, JetBrains Mono for numbers). Adopt its tokens, type scale and components; never its brand name, logo or wordmark.
+- `docs/writing-tropes.md` lists writing patterns to avoid. Check every piece of copy against it: page text, docs, READMEs, commit messages and replies.
+
 ## Artifacts index
 
 `artifact.md` lists every artifact (links, audience, status, how to update). Keep it current: add a row whenever an artifact is created, renamed or its status changes.

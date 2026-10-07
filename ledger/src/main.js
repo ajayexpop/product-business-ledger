@@ -268,12 +268,12 @@ function renderHvBar(){
   el.hidden=false;
   const nS=hvStories().length, nB=hvBugs().length, c=HV.counts;
   el.className='hvbar'+(hvExclude?' off':'');
-  const on=`<b>Hyve dedicated team is counted in.</b> ${nS} delivery items and ${nB} open bugs from the HV project are attributed to Hyve Group Plc by project membership, not by label.
+  const on=`<b>Hyve dedicated team is counted in.</b> The whole team is funded by Hyve, so every item it works on is funded. ${nS} delivery items and ${nB} open bugs from the HV project are attributed to Hyve Group Plc by project membership, not by label.
      No other client on this board has a dedicated team feeding it, so <b>Hyve is not like-for-like comparable with the other 48 rows</b> while this is on. Closed HV bugs (${c.bugsClosed}) and rejected items (${c.storiesRejected+c.bugsRejected}) are counted nowhere.`;
   const off=`<b>Hyve dedicated team is excluded.</b> Hyve Group Plc is shown on EP work only, so every client on this board is counted the same way. ${HV.stories.length} delivery items and ${HV.bugs.filter(b=>hvPreQ2||!b.pre).length} open bugs are hidden. This is the <b>hv-exclude</b> rule — save it on the Logic tab to make it the default for everyone who opens this page.`;
   const wasOpen=!!(el.querySelector('details')||{}).open;
   const body=(hvExclude?off:on).replace(/^<b>[^<]*<\/b>\s*/,'');
-  el.innerHTML=`<span class="dot"></span><details class="hvd"${wasOpen?' open':''}><summary><b>${hvExclude?'Hyve dedicated team is excluded':'Hyve dedicated team is counted in'}</b><span class="linkq">details</span></summary><div class="hvtx">${body}</div></details>`+
+  el.innerHTML=`<span class="dot"></span><details class="hvd"${wasOpen?' open':''}><summary><b>${hvExclude?'Hyve dedicated team is excluded':'Hyve dedicated team is counted in'}</b> <span class="hvtag" title="Every item the Hyve dedicated team works on is funded by Hyve (Ajay, 28 Sep 2026)">funded</span><span class="linkq">details</span></summary><div class="hvtx">${body}</div></details>`+
     `<button class="ibtn" id="hv-toggle" type="button">${hvExclude?'Include the team':'Exclude the team'}</button>`;
   document.getElementById('hv-toggle').addEventListener('click',()=>{
     const r=LOGIC.rules.find(x=>x.id==='hv-exclude');
@@ -284,14 +284,14 @@ function renderHvBar(){
 // ----- tabs
 function showTab(t){
   const AC=window.EP_ACCESS||{ajay:false,checked:false};
-  if((t==='logic'||t==='method'||t==='refresh')&&!AC.ajay){
+  if((t==='logic'||t==='method'||t==='refresh')&&!AC.how){
     if(!AC.checked){ AC.want=t; t='overview'; }
-    else { uiToast('Rules and Method & sources are private for now.'); return; } }
+    else { uiToast('Rules, Method & sources and Sync & logs are private for now.'); return; } }
   document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===t)));
   document.querySelectorAll('.panel').forEach(p=>p.hidden=(p.id!=='panel-'+t));
   fitDetail(); try{if(typeof ppFit==='function')ppFit()}catch(e){}
   try{ const a=Object.keys(TAB_ALIAS).find(k=>TAB_ALIAS[k]===t)||t; history.replaceState(null,'','#'+a); }catch(e){}
-  if(t==='refresh') try{ rfRender(); }catch(e){}
+  if(t==='refresh') try{ rfRender(); if(window.hsShow) window.hsShow(); }catch(e){}
   const tb=document.querySelector('.tab[aria-selected="true"]'); if(tb&&tb.scrollIntoView) try{tb.scrollIntoView({block:'nearest',inline:'nearest'})}catch(e){}
 }
 const TAB_ALIAS={clients:'ledger',requests:'pipeline',rules:'logic'};
@@ -430,7 +430,7 @@ function storyFull(s){
     <button class="sx-top" type="button" data-sxt aria-expanded="false">
       <span class="k">${esc(s.k)}</span>
       <span class="s">${esc(s.s)}
-        <span class="m">${s.hv?'<span class="hvtag">Hyve team</span>':''}<span class="th"><i style="background:${col}"></i>${esc(lensName(s.lens))}</span>${s.pp?`<span class="vpill" title="${esc(s.pdm)}">${esc(s.pp)}</span>`:''}<span>${esc(s.team||'no team')}</span>${s.cf==='Low'?'<span class="lowconf">low confidence</span>':''}</span>
+        <span class="m">${s.hv?'<span class="hvtag" title="Funded by Hyve">Hyve team · funded</span>':''}<span class="th"><i style="background:${col}"></i>${esc(lensName(s.lens))}</span>${s.pp?`<span class="vpill" title="${esc(s.pdm)}">${esc(s.pp)}</span>`:''}<span>${esc(s.team||'no team')}</span>${s.cf==='Low'?'<span class="lowconf">low confidence</span>':''}</span>
       </span>
       <span class="r">${s.sf==='Shipped'?esc(fmtMo(s.mo)):'<span class="status progress">In progress</span>'}<span class="cyc">${esc(cycText(s))}</span></span>
       <span class="arw">&rsaquo;</span>
@@ -467,7 +467,7 @@ function detailRow(a,L){
   L=L||ilLines(D.companies.map(agg));
   const bug=b=>`<div class="bug${b.affIds.includes(c.pd)&&!b.repIds.includes(c.pd)?' aff':''}">
     <div class="k"><a href="${jira(b.key)}" target="_blank" rel="noopener">${esc(b.key)}</a><br><span class="pr ${b.p}">${b.p}</span></div>
-    <div class="s">${esc(b.s)}${b.hv?' <span class="hvtag">HV</span>':''}<div class="m">${esc(b.team||'no team')}${b.ev?' · '+esc(b.ev):''}${b.affIds.includes(c.pd)&&!b.repIds.includes(c.pd)?' · affected only':''}</div></div>
+    <div class="s">${esc(b.s)}${b.hv?' <span class="hvtag" title="Hyve dedicated team, funded by Hyve">HV · funded</span>':''}<div class="m">${esc(b.team||'no team')}${b.ev?' · '+esc(b.ev):''}${b.affIds.includes(c.pd)&&!b.repIds.includes(c.pd)?' · affected only':''}</div></div>
     <div class="st">${esc(b.st)}<div class="m">${days(b.cr)}d old</div></div></div>`;
   const inc=i=>`<div class="bug"><div class="k"><a href="${jira(i.key)}" target="_blank" rel="noopener">${esc(i.key)}</a><br><span class="pr ${i.p}">${i.p}</span></div>
     <div class="s">${esc(i.s)}<div class="m">${esc(i.ev||'')}</div></div><div class="st">${esc(i.st)}<div class="m">${fmtDate(i.cr)}</div></div></div>`;
@@ -2183,51 +2183,28 @@ new MutationObserver(()=>{ if(TK_T) return; TK_T=requestAnimationFrame(()=>{ TK_
 const GATE={ok:false, uid:null, name:'', avatar:'', user:null, canWrite:null, done:false};
 window.GATE=GATE;
 
-// ===== Private for now (28 Sep 2026): the Must-have ledger and "How it works" (Rules, Method & sources) open only to Ajay =====
+// ===== Settings (was "How it works": Rules, Method & sources, Sync & logs) open only to Ajay and the Settings viewers. The Must-have ledger
+// was private too until its countdown ended; it opened to everyone on 30 Sep 2026 (owner) =====
 // Ajay (ajay@expoplatform.com) is recognised as the artifact's owner, or by a claude.ai account id listed in EP_AJAY_IDS
 // (the organisation does not share emails with pages, so the email itself cannot be checked). This hides the views; it is
 // not a vault: the page source and logic.json still carry the rules.
-const EP_AJAY_IDS=[], EP_OPENS_AT=Date.parse('2026-09-30T13:12:00Z'), EP_LOCK_FROM=EP_OPENS_AT-60*3600e3;
-var ACCESS={ajay:false, checked:false, want:null}; window.EP_ACCESS=ACCESS;
+const EP_AJAY_IDS=[];
+var ACCESS={ajay:false, how:false, checked:false, want:null}; window.EP_ACCESS=ACCESS;
+// who else sees the whole Settings section (was How it works) (Rules, Method & sources, Sync & logs), by claude.ai account id (the page cannot read
+// email addresses). 30 Sep 2026, owner: Bartosz (bartosz@expoplatform.com).
+const EP_HOW_IDS=['u_0KCjQDtQxEOgVhmNzuV5SQ'];
 function isPrivateTab(t){ return t==='logic'||t==='method'||t==='refresh'; }
 function applyAccess(){
   document.body.classList.toggle('ep-ajay',ACCESS.ajay);
-  const g=document.getElementById('tg-how'); if(g) g.hidden=!ACCESS.ajay;
+  const g=document.getElementById('tg-how'); if(g) g.hidden=!ACCESS.how;
   const cur=document.querySelector('.tab[aria-selected="true"]');
-  if(ACCESS.ajay&&ACCESS.want){ const w=ACCESS.want; ACCESS.want=null; showTab(w); }
-  else if(cur&&isPrivateTab(cur.dataset.tab)&&!ACCESS.ajay) showTab('overview');
+  if(ACCESS.how&&ACCESS.want){ const w=ACCESS.want; ACCESS.want=null; showTab(w); }
+  else if(cur&&isPrivateTab(cur.dataset.tab)&&!ACCESS.how) showTab('overview');
+  if(!ACCESS.how){ ['hs-host','rf-host','bt-lab'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=''; }); }
   ACCESS.want=null;
   try{ if(typeof ppRender==='function') ppRender(); }catch(e){}
 }
-function epLockHtml(){
-  return `<div class="ep-lock" role="region" aria-label="Must-have ledger, opening soon"><div class="ep-lock-glow" aria-hidden="true"></div><div class="ep-lock-in">
-    <div class="ep-lock-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="15.5" r="1.6" fill="currentColor"/></svg></div>
-    <div class="ep-lock-eyebrow">Must-have ledger · private preview</div>
-    <h2 id="ep-cd-h">Going live in</h2>
-    <div class="ep-cd" id="ep-cd"><div class="ep-cd-t"><b data-cd="h">60</b><span>hours</span></div><i>:</i><div class="ep-cd-t"><b data-cd="m">00</b><span>minutes</span></div><i>:</i><div class="ep-cd-t"><b data-cd="s">00</b><span>seconds</span></div></div>
-    <div class="ep-cd-bar" aria-hidden="true"><i id="ep-cd-fill"></i></div>
-    <div class="ep-cd-when" id="ep-cd-when"></div>
-    <p class="ep-lock-p">The Must-have ledger is getting its final polish. Its rules and logic are being signed off, and it opens to everyone the moment this clock reaches zero.</p>
-    <div class="ep-lock-acts"><button type="button" class="ibtn primary" data-eplockgo="fl">Open the Feature ledger</button><button type="button" class="ibtn ep-ghost" data-eplockgo="walk">&#9654; See how a work item moves</button></div>
-    <div class="ep-lock-fine">Need something from it before then? Ask Ajay.</div>
-    ${GATE.uid?`<details class="ep-lock-id"><summary>Are you Ajay on another account?</summary>Send this account id to be let in: <code>${esc(GATE.uid)}</code></details>`:''}</div></div>`;
-}
-function epTick(){
-  const cd=document.getElementById('ep-cd'); if(!cd) return;
-  const now=Date.now(), left=Math.max(0,EP_OPENS_AT-now), p2=n=>String(n).padStart(2,'0');
-  const h=Math.floor(left/3600e3), m=Math.floor(left%3600e3/60e3), sec=Math.floor(left%60e3/1e3);
-  const set=(k,v)=>{ const e=cd.querySelector('[data-cd="'+k+'"]'); if(e&&e.textContent!==v){ e.textContent=v; e.classList.remove('flip'); void e.offsetWidth; e.classList.add('flip'); } };
-  set('h',p2(h)); set('m',p2(m)); set('s',p2(sec));
-  const f=document.getElementById('ep-cd-fill'); if(f) f.style.width=Math.min(100,Math.max(0,(now-EP_LOCK_FROM)/(EP_OPENS_AT-EP_LOCK_FROM)*100)).toFixed(2)+'%';
-  const w=document.getElementById('ep-cd-when'), hd=document.getElementById('ep-cd-h');
-  let when=''; try{ when=new Date(EP_OPENS_AT).toLocaleString('en-GB',{weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',timeZoneName:'short'}); }catch(e){ when=new Date(EP_OPENS_AT).toUTCString(); }
-  if(w) w.textContent=left?'Opens '+when:'The clock has reached zero. Opening any moment now.';
-  if(hd&&!left) hd.textContent='Going live now';
-}
-setInterval(epTick,1000);
-window.epLockHtml=epLockHtml; window.epTick=epTick; window.showTab=showTab;
-document.addEventListener('click',e=>{ const b=e.target.closest('[data-eplockgo]'); if(!b) return;
-  if(b.dataset.eplockgo==='walk'&&typeof feOpenWalk==='function') feOpenWalk(); else if(typeof feSetView==='function') feSetView('fl'); });
+window.showTab=showTab; window.applyAccess=applyAccess; window.EP_HOW_IDS=EP_HOW_IDS;
 const TAB_ID=Math.random().toString(36).slice(2,8);
 function gateEl(tag,cls,text){ const e=document.createElement(tag); if(cls)e.className=cls; if(text!=null)e.textContent=text; return e; }
 async function gateBoot(){
@@ -2236,7 +2213,8 @@ async function gateBoot(){
   const u=await useCap('user'); GATE.user=u;
   if(u){
     try{ const me=await u.me(); GATE.uid=me.id||null; GATE.name=me.name||''; GATE.avatar=me.avatarUrl||'';
-      ACCESS.ajay=EP_AJAY_IDS.includes(GATE.uid); if(!ACCESS.ajay){ try{ ACCESS.ajay=!!(await u.isOwner()); }catch(e){} } }catch(e){}
+      ACCESS.ajay=EP_AJAY_IDS.includes(GATE.uid); if(!ACCESS.ajay){ try{ ACCESS.ajay=!!(await u.isOwner()); }catch(e){} }
+      ACCESS.how=ACCESS.ajay||EP_HOW_IDS.includes(GATE.uid); }catch(e){}
     try{ GATE.canWrite=await u.can('data.write'); }catch(e){ GATE.canWrite=null; }
   }
   ACCESS.checked=true; applyAccess();
@@ -2248,7 +2226,7 @@ async function gateBoot(){
     go.textContent='Continue as '+((GATE.name||'').split(' ')[0]||'yourself');
     fine.textContent = GATE.canWrite===false
       ? 'Your access to this page is view-only, so you can read everything but not log requests. Ask the owner for “Can interact” to log them.'
-      : 'Requests you add, change or remove are recorded under this name with the date and time. Your visit (who and when) is recorded for the ledger owner.';
+      : 'Requests you add, change or remove are recorded under this name with the date and time. Your visits and the sections you open are recorded for the ledger owner.';
   } else {
     who.appendChild(gateEl('span','gate-anon','We could not confirm who you are. You can read the ledger, but logging or changing a request needs you signed in to claude.ai with your ExpoPlatform account.'));
     go.textContent='Continue without signing in';
@@ -2392,7 +2370,7 @@ async function rfJql(jql, fields, lock, holder){
 async function rfPull(id, quiet){
   const src=RF_SRC.find(x=>x.id===id); if(!src) return;
   if(!src.live) return rfRequest(src);
-  if(src.ajayOnly&&!ACCESS.ajay) return;
+  if(src.ajayOnly&&!ACCESS.how) return;
   if(id==='ep'){ await runSync(true); rfRender(); return; }
   if(RF.running[id]) return;
   if(!GATE.ok||!SYNC.mcp||!SYNC.db){ if(!quiet) uiToast(!GATE.ok?'Sign in to pull.':'Connectors are not available in this view of the page.',{bad:true}); return; }
@@ -2422,9 +2400,9 @@ async function rfRequest(src){
   try{ await SYNC.db.doc('refresh-req/'+src.id).set({src:src.id, name:src.n, by:GATE.uid, at:iso, status:'open'}); uiToast('Asked for a pull of '+src.n+'. Claude picks it up in the next working session.'); }
   catch(e){ uiToast('Not sent ('+((e&&e.code)||'error')+').',{bad:true}); }
 }
-async function rfPullAll(){ for(const s of RF_SRC.filter(x=>x.live&&(!x.ajayOnly||ACCESS.ajay))) await rfPull(s.id); }
+async function rfPullAll(){ for(const s of RF_SRC.filter(x=>x.live&&(!x.ajayOnly||ACCESS.how))) await rfPull(s.id); }
 // the other in-page sources follow the EP refresh: whoever has the page open pulls them when they are due
-function rfMaybe(){ if(!GATE.ok||!SYNC.mcp||!SYNC.db||GATE.canWrite===false||!RF.booted) return; RF_SRC.filter(s=>s.live&&s.id!=='ep'&&(!s.ajayOnly||ACCESS.ajay)&&rfAge(s)>=s.target*3600e3&&!RF.running[s.id]&&!RF.err[s.id]).forEach(s=>rfPull(s.id,true)); }
+function rfMaybe(){ if(!GATE.ok||!SYNC.mcp||!SYNC.db||GATE.canWrite===false||!RF.booted) return; RF_SRC.filter(s=>s.live&&s.id!=='ep'&&(!s.ajayOnly||ACCESS.how)&&rfAge(s)>=s.target*3600e3&&!RF.running[s.id]&&!RF.err[s.id]).forEach(s=>rfPull(s.id,true)); }
 async function rfBoot(){
   const db=SYNC.db||await useCap('db'); if(!db) return;
   db.collection('refresh').onSnapshot(s=>{ const m={}; s.docs.forEach(d=>{ m[d.id]=d.data()||{}; });
@@ -2438,7 +2416,7 @@ async function rfVisit(){
     await ref.set({n:(o.n||0)+1, first:o.first||now, last:now}); }catch(e){}
 }
 function rfWatch(){
-  if(RF.subs||!ACCESS.ajay||!SYNC.db) return; RF.subs=true;
+  if(RF.subs||!ACCESS.how||!SYNC.db) return; RF.subs=true;
   SYNC.db.collection('visits').onSnapshot(s=>{ const m={}; s.docs.forEach(d=>{ m[d.id]=d.data()||{}; }); RF.visits=m; rfNames(); rfRender(); },()=>{});
   SYNC.db.collection('refresh-req').onSnapshot(s=>{ const m={}; s.docs.forEach(d=>{ m[d.id]=d.data()||{}; }); RF.reqs=m; rfRender(); },()=>{});
 }
@@ -2459,7 +2437,7 @@ function rfActivity(){
 }
 function rfWhen(t){ if(!t) return '—'; const d=new Date(t); return isNaN(d)?'—':d.toLocaleString('en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}); }
 function rfRender(){
-  const host=document.getElementById('rf-host'); if(!host||!ACCESS.ajay) return;
+  const host=document.getElementById('rf-host'); if(!host||!ACCESS.how) return;
   if(!document.getElementById('panel-refresh')||document.getElementById('panel-refresh').hidden) return;
   rfWatch();
   const st=RF_SRC.map(s=>({s, k:rfState(s)})), stale=st.filter(x=>x.k==='stale'), due=st.filter(x=>x.k==='due');
@@ -2483,7 +2461,7 @@ function rfRender(){
     <div class="card"><h3>What people put in</h3><div class="note">Work items logged and filled in, must-have edits, and data pulls, newest first.</div>
       ${acts.length?`<div class="rf-list">${acts.map(a=>`<div><b>${esc(rfName(a.by))}</b> ${esc(a.t)}<span class="small">${esc(rfWhen(a.at))}</span></div>`).join('')}</div>`:'<div class="small">Nothing yet.</div>'}</div></div>`;
 }
-document.addEventListener('click',e=>{ const b=e.target.closest('[data-rfpull],[data-rfreq],[data-rfall]'); if(!b||!ACCESS.ajay) return;
+document.addEventListener('click',e=>{ const b=e.target.closest('[data-rfpull],[data-rfreq],[data-rfall]'); if(!b||!ACCESS.how) return;
   if(b.dataset.rfpull) rfPull(b.dataset.rfpull); else if(b.dataset.rfreq) rfRequest(RF_SRC.find(s=>s.id===b.dataset.rfreq)); else rfPullAll(); });
 const bucketOf=k=>{ let h=0; for(const ch of String(k)) h=(h*31+ch.charCodeAt(0))>>>0; return 'b'+String(h%16).padStart(2,'0'); };
 
@@ -2664,6 +2642,7 @@ async function runSync(manual){
     const run=Object.assign({at:iso, by:GATE.uid, seen:got.length, kept:Object.keys(recs).length, since:since.replace(/"/g,''), manual:!!manual}, cnt);
     const runs=((st&&Array.isArray(st.runs))?st.runs:[]).concat([run]).slice(-30);
     await SYNC.db.doc('sync/state').set({lastRun:iso, lastBy:GATE.uid, baseline:SYNC_BASE, site:JIRA_SITE, everyHours:SYNC_H, runs});
+    try{ if(window.ppJiraRefresh) await window.ppJiraRefresh(SYNC.mcp); }catch(e){}
     if(manual) uiToast('Jira refreshed: '+syncRunText(run)+'.');
   }catch(e){
     SYNC.err={code:(e&&e.code)||'upstream_error', message:(e&&e.message)||''};
@@ -3031,6 +3010,8 @@ document.addEventListener('keydown',e=>{
 });
 
 // ----- the bridge between this ledger and the pipeline code below it (the CL bridge)
+// read-only views of the stores kept inside this block, for Sync & logs → History
+window.EP_LOGS={sync:()=>SYNC.state, rf:()=>({docs:RF.docs, reqs:RF.reqs, visits:RF.visits}), logic:()=>(LOGIC&&LOGIC.log)||[]};
 window.CL={
   LV:id=>LV(id), esc, shortName, fmtDate, fmtMo, days, asOf:D.asOf, eventsAsOf:TODAY_S,
   company:pd=>byId[pd]||null,
@@ -3038,6 +3019,7 @@ window.CL={
   teams:()=>(D.teams||[]).map(t=>t.key),
   nextShow:pd=>((byId[pd]||{}).nextEvent)||null,
   showsOf:pd=>EVENTS.filter(e=>e.pd===pd&&isShow(e)&&e.s),
+  allShows:()=>EVENTS.filter(e=>isShow(e)&&e.s),
   flowRow:k=>FLOWIX[k]||null,
   flowHtml:k=>flowMini(k),
   modal:openInfoModal,
@@ -3159,15 +3141,17 @@ const PP = {
   meta:null, rows:[], pop:null, ed:null, hm:null, flash:null,
   f:{month:'',team:'',driver:'',area:'',status:'',flag:'',q:''},
   group:'month', sort:{k:'',dir:1}, hidden:new Set(['impact','notes','rationale','team']),
-  view:'grid', names:{}, subs:[], zoom:(()=>{ try{ const z=+localStorage.getItem('ep-pp-zoom'); return z>=1&&z<=5?z:2; }catch(e){ return 2; } })()
+  view:'board', bgroup:'month', names:{}, subs:[], zoom:(()=>{ try{ const z=+localStorage.getItem('ep-pp-zoom'); return z>=1&&z<=5?z:2; }catch(e){ return 2; } })()
 };
 // the viewer's own view settings (pp-default-view): the grid unless they chose the table
 (function ppPrefs(){
-  const v=ppLS('ep-pp-view'); if(v==='grid'||v==='table') PP.view=v;
+  // the Board is the default since 28 Sep 2026 (the Month × team grid read too sparse); only a choice made since counts
+  const v=ppLS('ep-pp-view2'); if(v==='board'||v==='grid'||v==='table') PP.view=v;
+  const bg=ppLS('ep-pp-bgroup'); if(['month','driver','team','status'].includes(bg)) PP.bgroup=bg;
   const g=ppLS('ep-pp-group'); if(g!==null && ['month','team','driver','area',''].includes(g)) PP.group=g;
   try{ const h=JSON.parse(ppLS('ep-pp-hidden')||'null'); if(Array.isArray(h)) PP.hidden=new Set(h); }catch(e){}
 })();
-function ppSavePrefs(){ ppLS('ep-pp-view',PP.view); ppLS('ep-pp-group',PP.group); ppLS('ep-pp-hidden',JSON.stringify([...PP.hidden])); }
+function ppSavePrefs(){ ppLS('ep-pp-view2',PP.view); ppLS('ep-pp-bgroup',PP.bgroup); ppLS('ep-pp-group',PP.group); ppLS('ep-pp-hidden',JSON.stringify([...PP.hidden])); }
 // ---- spec v1 §2 and §3: team from the work, driver = who it is for, tier from the driver (rules pp-*)
 const CLB = () => window.CL || null;
 function ppTeam(r){
@@ -3190,8 +3174,8 @@ const ppEom = m => { const p=String(m||'').split('-').map(Number); return p.leng
 // promise-versus-show (rk-promise-broken): the month ends after the driver's next show starts
 function ppBroken(r){
   const d=ppDriver(r); if(!d.c) return null;
-  const cl=CLB(), n=cl?cl.nextShow(d.k):null; if(!n) return null;
-  const v=r.v||{}, j=r.j||{}; if(v.status==='Done'||j.canon==='Done') return null;
+  const n=ppShowFor(r); if(!n) return null;
+  const v=r.v||{}; if(ppStatus(r)==='Done') return null;
   const e=ppEom(v.month); if(!e) return null;
   return e>n.s ? n : null;
 }
@@ -3210,7 +3194,7 @@ const ppNow = () => new Date().toISOString().replace(/\.\d{3}Z$/,'Z');
 let PP_SEQ=0;
 const ppHid = () => 'h'+Date.now().toString(36)+(PP_SEQ++%1296).toString(36).padStart(2,'0')+Math.random().toString(36).slice(2,5);
 
-const PP_CANON = [['open','Planned'],['planned','Planned'],['discovery','Discovery'],
+const PP_CANON = [['open','Planned'],['planned','Planned'],['backlog','Planned'],['ready to start','Planned'],['to do','Planned'],['selected for development','Planned'],['discovery','Discovery'],['investigation','Discovery'],['in design','Discovery'],['in review','In Testing'],['code review','In Progress'],
   ['in progress','In Progress'],['in testing','In Testing'],['ready for release','Ready for Release'],
   ['ready for deploy','Ready for Release'],['done','Done'],['blocked','Blocked'],['at risk','At Risk']];
 function ppCanon(s){ const t=String(s||'').toLowerCase().trim();
@@ -3218,6 +3202,15 @@ function ppCanon(s){ const t=String(s||'').toLowerCase().trim();
   if(t.includes('discovery')) return 'Discovery';
   return String(s||'').trim(); }
 
+// Status follows Jira wherever the item has a ticket (28 Sep 2026, owner: "must reflect every board"): the board column is Jira's status
+// mapped to a column (ppCanon), and the label is Jira's own status name. The stated status only counts for items with no ticket.
+const ppStatus = r => { const j=r&&r.j; return j&&j.status?(j.canon||ppCanon(j.status)):((r&&r.v&&r.v.status)||'Planned'); };
+const ppStatusName = r => { const j=r&&r.j; return j&&j.status?j.status:((r&&r.v&&r.v.status)||'No status'); };
+// the show an item is for: its own target show when set (v.forShow, an OP key), else the driver's next show
+function ppShowFor(r){ const d=ppDriver(r), cl=CLB(); if(!d.c||!cl) return null; const k=String((r.v||{}).forShow||'').trim();
+  if(k){ const e=(cl.showsOf(d.k)||[]).find(x=>x.k===k); if(e) return {k:e.k,n:e.n,s:e.s,e:e.e||e.s,target:true}; }
+  const n=cl.nextShow(d.k); return n?Object.assign({},n,{target:false}):null; }
+const ppFunded = r => /^(yes|funded|part)/i.test(String((r&&r.v&&r.v.funded)||''));
 // Estimate text -> person-days. Mirrors the rule in the Logic tab (pp-estimate-parse).
 function ppDays(t){
   if(!t || !String(t).trim()) return {days:null, daysKind:'none'};
@@ -3238,8 +3231,9 @@ function ppFlags(r){
   const j=r.j, v=r.v||{}, n=r.n||{}, today=ppToday();
   const wk=new Date(Date.now()+7*864e5).toISOString().slice(0,10);
   return {
-    drift: !!(j && j.canon && j.canon!==v.status),
-    overdue: !!(j && j.due && j.due<today && j.canon!=='Done'),
+    drift: false,
+    overdue: !!(j && j.due && j.due<today && j.canon!=='Done' && !String(v.forShow||'').trim()),
+    funded: ppFunded(r),
     dueSoon: !!(j && j.due && j.due>=today && j.due<=wk && j.canon!=='Done'),
     shipped: !!(j && j.canon==='Done'),
     noEstimate: n.days==null,
@@ -3251,7 +3245,7 @@ function ppFlags(r){
     whyLong: String(v.why||'').length > ppWhyMax()
   };
 }
-const PPFLAG=[['brokenPromise','over','After the show'],['overdue','over','Overdue'],['drift','drift','Drift'],['shipped','ship','Shipped'],
+const PPFLAG=[['brokenPromise','over','After the show'],['overdue','over','Overdue'],['funded','ship','Funded'],['shipped','ship','Shipped'],
   ['dueSoon','soon','Due ≤7d'],['overEstimate','drift','Over estimate'],['noEstimate','noest','No estimate'],
   ['noDriver','noest','Driver not set'],['noTeam','noest','No team'],['whyLong','drift','Why over limit']];
 
@@ -3296,11 +3290,12 @@ function ppDayKey(at){ const s=String(at||''); if(s.length<=10) return s;
 function ppDayLabel(k){ const p=String(k).split('-').map(Number); if(p.length!==3||!p[0]) return k;
   const d=new Date(p[0],p[1]-1,p[2]); return d.toLocaleDateString(undefined,{weekday:'long'})+' '+p[2]+' '+PP_MONTHS[p[1]-1]+' '+p[0]; }
 const PP_FLD={feature:'Feature',key:'Jira',why:'Why',month:'Month',team:'Team',driver:'Driver',status:'Status',priority:'Priority',
-  area:'Area',owner:'Raised by',estimate:'Estimate',impact:'Impact',deps:'Dependencies / Risks',notes:'Notes',rationale:'Rationale'};
+  area:'Area',owner:'Raised by',estimate:'Estimate',forShow:'For show',funded:'Funded',impact:'Impact',deps:'Dependencies / Risks',notes:'Notes',rationale:'Rationale'};
 function ppFldLabel(k){ if(k==='team') return 'Team'; const c=ppCols().find(x=>x.key===k); return c?c.label:(PP_FLD[k]||k); }
 function ppFmtVal(k,v){
   const s=String(v??'').trim(); if(!s) return '';
   if(k==='month') return ppMo(s);
+  if(k==='forShow'){ const cl=CLB(); const e=cl&&(cl.allShows?cl.allShows():[]).find(x=>x.k===s); return e?e.n:s; }
   if(k==='driver'){ if(s==='Platform') return 'Platform';
     const cl=CLB(), c=cl?cl.company(s):null, labels=((ppCols().find(x=>x.key==='driver')||{}).optLabels)||{};
     return c?cl.shortName(c.name):(labels[s]||s); }
@@ -3502,7 +3497,7 @@ function ppFiltered(){
     if(f.team  && ppTeamName(r)!==f.team) return false;
     if(f.driver&& ppDriverName(r)!==f.driver) return false;
     if(f.area  && v.area!==f.area)  return false;
-    if(f.status&& v.status!==f.status) return false;
+    if(f.status&& ppStatus(r)!==f.status) return false;
     if(f.flag  && !fl[f.flag]) return false;
     if(q && !Object.values(v).some(x=>String(x||'').toLowerCase().includes(q))) return false;
     return true;
@@ -3529,6 +3524,7 @@ function ppSum(rows){ return rows.reduce((a,r)=>a+((r.n&&r.n.days)||0),0); }
 function ppGroupKey(r,g){
   if(g==='team') return ppTeamName(r);
   if(g==='driver') return ppDriverName(r);
+  if(g==='status') return ppStatus(r);
   return (r.v||{})[g]||'—';
 }
 // unassigned buckets sort last so the named groups read first
@@ -3544,7 +3540,6 @@ function ppBy(rows,key){
 // ---------- render ----------
 function ppRender(){
   const host=document.getElementById('pp-host'); if(!host) return;
-  if(!(window.EP_ACCESS||{}).ajay){ if(!host.querySelector('.ep-lock')){ host.innerHTML=window.epLockHtml?window.epLockHtml():''; if(window.epTick) window.epTick(); } return; }
   if(!PP.ready){ host.innerHTML='<div class="empty">Loading the pipeline ledger…</div>'; return; }
   if(!PP.db){
     host.innerHTML='<div class="pp-ro"><b>The shared pipeline database is not available in this view.</b> '+
@@ -3565,8 +3560,9 @@ function ppRender(){
   const keep=[...host.querySelectorAll('.tlwrap,.pp-wrap')].map(e=>[e.classList.contains('tlwrap')?'.tlwrap':'.pp-wrap',e.scrollTop,e.scrollLeft]);
   const rows=ppFiltered(), all=ppLive();
   host.innerHTML =
-    ppBanner() + ppStats(all) + ppDraftsHtml() + ppHead() + ppToolbar(rows,all) +
-    (PP.view==='grid' ? ppTL(rows,all) : ppGrid(rows)) + ppAlerts(all) + ppRollups(all);
+    ppBanner() + ppSummary(all) + ppDraftsHtml() + ppHead() + ppToolbar(rows,all) +
+    (PP.view==='board' ? ppBoard(rows,all) + '<details class="pp-more"'+(PP.moreOpen?' open':'')+'><summary>Effort by month, team and area</summary>'+ppRollups(all)+'</details>'
+      : (PP.view==='grid' ? ppTL(rows,all) : ppGrid(rows)) + ppAlerts(all) + ppRollups(all));
   keep.forEach(([sel,t,l])=>{ const e=host.querySelector(sel); if(e){ e.scrollTop=t; e.scrollLeft=l; } });
   ppBind(); ppDoFlash(host);
 }
@@ -3592,6 +3588,7 @@ function ppBanner(){
       'Month, Area and Status are normalised so the ledger can be totalled &mdash; the wording each owner originally used is kept on every item. '+
       '<b>Effort rolls up by team</b>, read from the Jira ticket; Raised by is whoever wrote the item down and enters no total (pp-team-unit). '+
       '<b>Driver</b> says who an item is for &mdash; a client or Platform &mdash; and gives it a tier (pp-driver). '+
+      'The <b>Board</b> shows every item as a card in its month (or by client, team or status), with each client&rsquo;s next show marked in its month; the line above it counts what needs attention and filters the board when clicked. '+
       'On the <b>Month × team</b> grid, click an item to open it, or <b>+ Add</b> in any cell to add one there with its month, team and driver filled in. '+
       'In the <b>Table</b>, click a cell to change it in place, or <b>Open</b> for the whole item. '+
       'Nothing in the item form is saved until you press Save. Removing an item keeps it, with its history, under <b>Removed</b>, where it can be restored (pp-history). '+
@@ -3603,22 +3600,23 @@ function ppBanner(){
         'Ask the owner for &ldquo;Can interact&rdquo; or higher to edit.</div>':'');
 }
 
-function ppStats(all){
-  const days=ppSum(all), mo=ppBy(all,'month');
-  const fl=all.map(ppFlags);
-  const c=k=>fl.filter(f=>f[k]).length;
-  const miss=c('noEstimate');
-  const t=(n,l,d,cls)=>'<div class="pp-stat'+(cls?' '+cls:'')+'"><div class="n">'+n+'</div><div class="l">'+l+'</div><div class="d">'+d+'</div></div>';
-  return '<div class="pp-stats">'+
-    t(all.length,'Must-have items',mo.map(([k,v])=>ppMo(k)+' '+v.n).join(' · ')||'—')+
-    t(ppD(days),'Committed effort', miss? miss+' of '+all.length+' carry no estimate':'every item estimated','mid')+
-    mo.slice(0,2).map(([k,v])=>t(ppD(v.d),ppMo(k)+' load',v.n+' items'+(v.miss?' · '+v.miss+' unestimated':''))).join('')+
-    t(c('drift'),'Stated status drifted','vs live Jira', c('drift')?'warn':'')+
-    t(c('overdue'),'Past their Jira due date', c('overdue')?all.filter((r,i)=>fl[i].overdue).map(r=>r.v.key).join(', '):'none', c('overdue')?'warn':'')+
-    t(c('shipped'),'Already shipped','still listed here', c('shipped')?'mid':'')+
-    t((all.length-c('noDriver'))+' / '+all.length,'Have a Driver', c('noDriver')? c('noDriver')+' badged Driver not set':'every item says who it is for', c('noDriver')?'mid':'')+
-    t(c('brokenPromise'),'Due after the show', c('brokenPromise')?all.filter((r,i)=>fl[i].brokenPromise).map(r=>r.v.key||r.v.feature).join(', '):'none among driven items', c('brokenPromise')?'warn':'')+
-    '</div>';
+// the summary: five figures and one line of what needs attention; each part of that line filters the view (28 Sep 2026)
+function ppSummary(all){
+  const fl=all.map(ppFlags), c=k=>fl.filter(f=>f[k]).length, miss=c('noEstimate'), mo=ppBy(all,'month');
+  const cur=ppToday().slice(0,7), nx=(()=>{ const [y,m]=cur.split('-').map(Number); return m===12?(y+1)+'-01':y+'-'+String(m+1).padStart(2,'0'); })();
+  const at=k=>(mo.find(([x])=>x===k)||[k,{d:0,n:0,miss:0}])[1];
+  const fig=(n,l,d,cls)=>'<div class="pp-fig'+(cls?' '+cls:'')+'"><b>'+n+'</b><span>'+l+'</span>'+(d?'<small>'+d+'</small>':'')+'</div>';
+  const load=k=>{ const x=at(k); return fig(ppD(x.d),ppMo(k)+' load',x.n+' item'+(x.n===1?'':'s')+(x.miss?' · '+x.miss+' unestimated':'')); };
+  const att=[['brokenPromise','bad','due after the client’s show'],['overdue','bad','past their Jira due date'],
+    ['noEstimate','mid','no estimate'],['noDriver','mid','no client set'],['noTeam','mid','no team'],['dueSoon','mid','due within a week'],['shipped','ok','shipped, still listed'],['funded','ok','funded']]
+    .map(([k,cls,l])=>[k,cls,l,c(k)]).filter(x=>x[3]);
+  const bp=c('brokenPromise');
+  return '<div class="pp-sum">'+fig(all.length,'must-have items',(()=>{ const ms=all.map(r=>(r.v||{}).month).filter(m=>/^\d{4}-\d{2}$/.test(m||'')).sort(); const nm=all.length-ms.length; return ms.length?ppMo(ms[0])+' to '+ppMo(ms[ms.length-1])+(nm?' · '+nm+' with no month':''):''; })())+
+    fig(ppD(ppSum(all)),'committed effort',miss?miss+' without an estimate':'every item estimated')+load(cur)+load(nx)+
+    fig(bp,'due after the client’s show',bp?'the client expects them before':'none',bp?'bad':'')+'</div>'+
+    (att.length?'<div class="pp-att" role="group" aria-label="Needs attention"><span class="pp-att-l">Needs attention</span>'+
+      att.map(([k,cls,l,n])=>'<button type="button" class="pp-att-c '+cls+'" data-ppflag="'+k+'" aria-pressed="'+(PP.f.flag===k)+'"><b>'+n+'</b> '+l+'</button>').join('')+
+      (PP.f.flag?'<button type="button" class="linkbtn pp-att-x" data-ppflag="">Show everything</button>':'')+'</div>':'');
 }
 
 // drafts: items with no Feature (the old Add button wrote blank rows straight away) — pp-draft
@@ -3641,12 +3639,13 @@ function ppHead(){
   const ro=ppRO(), rm=ppRemoved().length;
   return '<div class="pp-head">'+
     '<span class="seg pp-viewseg" id="pp-view" role="group" aria-label="View">'+
-      [['grid','Month × team'],['table','Table']].map(([k,l])=>'<button type="button" data-v="'+k+'" aria-pressed="'+(PP.view===k)+'">'+l+'</button>').join('')+
+      [['board','Board'],['grid','Month × team'],['table','Table']].map(([k,l])=>'<button type="button" data-v="'+k+'" aria-pressed="'+(PP.view===k)+'">'+l+'</button>').join('')+
     '</span>'+
     (ro?'':'<button class="pp-btn" id="pp-add" type="button">+ Log a request</button>')+
     '<button class="pp-btn ghost" id="pp-hist" type="button">Change log: who added, edited or removed what</button>'+
     (rm?'<button class="pp-btn ghost" id="pp-removed" type="button">Removed ('+rm+')</button>':'')+
     '<span class="pp-hint">'+(ro?'Open any item to read it and its history.'
+      : PP.view==='board'?'Click an item to open and edit it.'
       : PP.view==='grid'?'Click an item to open and edit it. <b>+ Add</b> in a cell adds one there.'
       :'Click a cell to change it in place, or <b>Open</b> for the whole item.')+'</span>'+
     '<span class="pp-saving" id="pp-saving" aria-live="polite"></span>'+
@@ -3704,10 +3703,11 @@ function ppToolbar(rows,all){
   const G={month:'Month',team:'Team',driver:'Driver',area:'Area','':'None'};
   return '<div class="toolbar pp-filters">'+
     opts('month',PP.f.month,'Month',ppMo)+opts('team',PP.f.team,'Team',null,ppTeamName)+opts('driver',PP.f.driver,'Driver',null,ppDriverName)+
-    opts('area',PP.f.area,'Area')+opts('status',PP.f.status,'Status')+flagSel+
+    opts('area',PP.f.area,'Area')+opts('status',PP.f.status,'Status',null,ppStatus)+flagSel+
     '<input type="search" id="pp-q" placeholder="Search the ledger" aria-label="Search the ledger" value="'+ppE(PP.f.q)+'">'+
     (ppAnyFilter()?'<button class="pp-btn ghost" id="pp-clear" type="button">Clear filters</button>':'')+
-    (PP.view==='grid'?'':'<label>Group <span class="seg" id="pp-group">'+
+    (PP.view==='board'?'<label>Columns by <span class="seg" id="pp-bgroup">'+[['month','Month'],['driver','Client'],['team','Team'],['status','Status']].map(([g,l])=>'<button type="button" data-v="'+g+'" aria-pressed="'+(PP.bgroup===g)+'">'+l+'</button>').join('')+'</span></label>':
+     PP.view==='grid'?'':'<label>Group <span class="seg" id="pp-group">'+
       Object.keys(G).map(g=>'<button type="button" data-v="'+g+'" aria-pressed="'+(PP.group===g)+'">'+G[g]+'</button>').join('')+
     '</span></label><button class="pp-btn ghost" id="pp-colbtn" type="button">Columns ▾</button>')+
     '<span class="count">'+rows.length+' of '+all.length+' · '+ppD(ppSum(rows))+'</span>'+
@@ -3719,6 +3719,8 @@ function ppCellHtml(r,c){
   const v=(r.v||{})[c.key];
   if(c.key==='key' && v) return '<a href="https://expoplatform.atlassian.net/browse/'+ppE(v)+'" target="_blank" rel="noopener">'+ppE(v)+'</a>';
   if(c.key==='month') return ppE(ppMo(v));
+  if(c.key==='forShow') return v?'<span class="pp-cv one">'+ppE(ppFmtVal('forShow',v))+'</span>':'<span class="pp-empty">next show</span>';
+  if(c.key==='status' && r.j && r.j.status) return '<span class="pp-cv one" title="Jira status">'+ppE(r.j.status)+'</span> <span class="pp-tag der">Jira</span>';
   if(c.key==='driver'){
     const d=ppDriver(r);
     if(!d.k) return '<span class="pp-tag noest">not set</span>';
@@ -3786,7 +3788,7 @@ function ppGrid(rows){
       }
     }
     h+='<tr class="r" data-pprow="'+r.id+'"><td><button class="pp-open" type="button" data-ppedit="'+r.id+'" aria-label="Open '+ppE(ppTitle(r))+'">Open</button></td>'+
-      cols.map(c=>'<td class="cell" data-ppcell="'+r.id+'|'+c.key+'"'+(ro?'':' title="Click to change"')+'>'+ppCellHtml(r,c)+'</td>').join('')+
+      cols.map(c=>(c.key==='status'&&r.j&&r.j.status)?'<td class="der">'+ppCellHtml(r,c)+'</td>':'<td class="cell" data-ppcell="'+r.id+'|'+c.key+'"'+(ro?'':' title="Click to change"')+'>'+ppCellHtml(r,c)+'</td>').join('')+
       der.map(d=>'<td class="der">'+ppDerHtml(r,d)+'</td>').join('')+
       (ro?'<td></td>':'<td><button class="pp-x" type="button" data-ppdel="'+r.id+'" title="Remove this item (it can be restored)" aria-label="Remove '+ppE(ppTitle(r))+'">×</button></td>')+'</tr>';
   });
@@ -3813,11 +3815,85 @@ function ppChip(r){
   else if(fl.overdue) tags.push('<span class="pp-tag over">overdue</span>');
   if(fl.drift) tags.push('<span class="pp-tag drift">Jira: '+ppE((r.j||{}).status||'')+'</span>');
   if(fl.shipped) tags.push('<span class="pp-tag ship">shipped</span>');
-  return '<button type="button" class="pp-chip '+(PP_ST[v.status]||'st-plan')+'" data-ppedit="'+r.id+'" title="'+ppE(ppTitle(r))+'">'+
+  if(ppFunded(r)) tags.push('<span class="pp-tag ship">funded</span>');
+  return '<button type="button" class="pp-chip '+(PP_ST[ppStatus(r)]||'st-plan')+'" data-ppedit="'+r.id+'" title="'+ppE(ppTitle(r))+'">'+
     '<span class="ck">'+(v.key?ppE(v.key):'<span class="nk">no ticket</span>')+'</span>'+
     '<span class="ct">'+ppE(v.feature)+'</span>'+
-    '<span class="cm"><span class="st">'+ppE(v.status||'no status')+'</span><span>'+(r.n&&r.n.days!=null?ppD(r.n.days):'no estimate')+'</span>'+tags.join('')+'</span>'+
+    '<span class="cm"><span class="st">'+ppE(ppStatusName(r))+'</span><span>'+(r.n&&r.n.days!=null?ppD(r.n.days):'no estimate')+'</span>'+tags.join('')+'</span>'+
   '</button>';
+}
+// ---- every must-have ticket re-read from Jira at each Jira refresh, so the ledger's status, due date, team and logged time match
+// every board. Jira columns only (no history, pp-jira-derived); run by whoever's view does the Jira refresh.
+async function ppJiraRefresh(mcp){
+  if(!PP.db||!mcp||ppRO()) return;
+  const rows=ppLive().filter(r=>/^EP-\d+$/.test(String((r.v||{}).key||'').trim())), keys=[...new Set(rows.map(r=>r.v.key.trim()))]; if(!keys.length) return;
+  const res=await mcp.callTool('Atlassian','searchJiraIssuesUsingJql',{cloudId:'expoplatform.atlassian.net', jql:'key in ('+keys.join(',')+')',
+    fields:['summary','status','issuetype','priority','assignee','duedate','timeoriginalestimate','aggregatetimeoriginalestimate','aggregatetimespent','resolutiondate','customfield_10001'], maxResults:100},{cache:false});
+  let p=res&&res.payload; if(typeof p==='string'){ try{ p=JSON.parse(p); }catch(e){ return; } }
+  const nodes=(p&&p.issues&&(Array.isArray(p.issues)?p.issues:p.issues.nodes))||[]; if(!nodes.length) return;
+  const d=x=>x==null?null:Math.round(x/28800*100)/100, by={};
+  nodes.forEach(n=>{ const f=n.fields||{}, st=unentPP((f.status||{}).name||'');
+    by[n.key]={aggOrigDays:d(f.aggregatetimeoriginalestimate), assignee:(f.assignee||{}).displayName||null, canon:ppCanon(st), due:f.duedate||null, origDays:d(f.timeoriginalestimate),
+      priority:(f.priority||{}).name||null, resolved:String(f.resolutiondate||'').slice(0,10)||null, spentDays:d(f.aggregatetimespent), status:st, summary:unentPP(f.summary||''),
+      team:(f.customfield_10001&&(f.customfield_10001.name||f.customfield_10001.title))||null, teamField:'customfield_10001', type:(f.issuetype||{}).name||null}; });
+  const at=new Date().toISOString().replace(/\.\d{3}Z$/,'Z');
+  for(const r of rows){ const j=by[r.v.key.trim()]; if(!j) continue; const old=r.j||{};
+    if(['status','due','team','spentDays','assignee','resolved','origDays','aggOrigDays','priority'].some(k=>String(old[k]??'')!==String(j[k]??''))){
+      try{ await PP.db.doc('pipeline/'+r.id).update({j, jAt:at}); }catch(e){} } }
+  try{ await PP.db.doc('config/pipeline').update({asOf:at.slice(0,10)}); }catch(e){}
+}
+const unentPP=x=>{ const t=String(x??''); if(!/&(#\d+|#x[0-9a-f]+|[a-z]+);/i.test(t)) return t; const el=document.createElement('textarea'); el.innerHTML=t; return el.value; };
+window.ppJiraRefresh=ppJiraRefresh;
+// ---- the Board (default since 28 Sep 2026): one column per month (or client, team, status), every item a small card
+const PP_ORDER=['In Progress','In Testing','Ready for Release','Discovery','Planned','Blocked','At Risk','Done'];
+function ppBCard(r,g){
+  const v=r.v||{}, fl=ppFlags(r), br=ppBroken(r), d=ppDriver(r), tm=ppTeam(r).t, tags=[];
+  if(br) tags.push('<span class="pp-tag over" title="'+ppE('Committed for '+ppMo(v.month)+'; '+d.label+'’s show starts '+br.s)+'">after '+ppE(d.label)+'’s show</span>');
+  else if(fl.overdue) tags.push('<span class="pp-tag over">overdue in Jira</span>');
+  if(fl.shipped) tags.push('<span class="pp-tag ship">shipped</span>');
+  if(fl.funded) tags.push('<span class="pp-tag ship" title="'+ppE((r.v||{}).funded)+'">funded</span>');
+  { const tg=ppShowFor(r); if(tg&&tg.target) tags.push('<span class="pp-tag soon" title="'+ppE(tg.n)+'">for '+ppE(tg.n)+'</span>'); }
+  const who=d.k?(d.k==='Platform'?'<span class="pp-bwho plat">Platform</span>':'<span class="pp-bwho">'+ppTierPill(d.tier)+'<span>'+ppE(d.label)+'</span></span>'):'<span class="pp-bwho none">No client set</span>';
+  return '<button type="button" class="pp-bc '+(PP_ST[ppStatus(r)]||'st-plan')+'" data-ppedit="'+r.id+'" title="'+ppE(ppTitle(r))+'">'+
+    '<span class="pp-bt"><span class="ck">'+(v.key?ppE(v.key):'<span class="nk">no ticket</span>')+'</span><span class="pp-bst" title="'+(r.j&&r.j.status?'Jira status':'Stated status (no Jira ticket)')+'">'+ppE(ppStatusName(r))+'</span></span>'+
+    '<span class="ct">'+ppE(v.feature)+'</span>'+
+    '<span class="pp-bm">'+(g==='driver'?'':who)+(g==='team'?'':'<span class="pp-bteam">'+ppE(tm||'No team')+'</span>')+(g==='month'?'':'<span>'+ppE(v.month?ppMo(v.month):'No month')+'</span>')+
+      '<span class="pp-bd'+(r.n&&r.n.days!=null?'':' none')+'">'+(r.n&&r.n.days!=null?ppD(r.n.days):'no estimate')+'</span></span>'+
+    (tags.length?'<span class="pp-btags">'+tags.join('')+'</span>':'')+'</button>';
+}
+function ppBoard(rows,all){
+  const ro=ppRO(), cl=CLB();
+  if(!all.length) return '<div class="pp-emptygrid"><b>No items on the ledger yet.</b>'+(ro?'':' <button class="pp-btn" type="button" data-ppnew="none||">+ Add the first item</button>')+'</div>';
+  if(!rows.length) return '<div class="pp-emptygrid">Nothing matches these filters. <button class="pp-btn ghost" type="button" id="pp-clear">Clear filters</button></div>';
+  const g=PP.bgroup, cur=ppToday().slice(0,7), okM=m=>/^\d{4}-\d{2}$/.test(m||'');
+  let cols=[];
+  if(g==='month'){
+    cols=ppMonths().map(m=>({k:m,label:ppMo(m),rows:rows.filter(r=>(r.v||{}).month===m)})).filter(c=>c.rows.length||c.k>=cur);
+    const nm=rows.filter(r=>!okM((r.v||{}).month)); if(nm.length) cols.push({k:'',label:'No month yet',rows:nm,note:'Timing not agreed'});
+  } else if(g==='status'){
+    cols=PP_ORDER.map(st=>({k:st,label:st,rows:rows.filter(r=>ppStatus(r)===st),st})).filter(c=>c.rows.length);
+    const other=rows.filter(r=>!PP_ORDER.includes(ppStatus(r))); if(other.length) cols.push({k:'?',label:'Other status',rows:other});
+  } else if(g==='driver'){
+    cols=ppBands(rows).map(b=>({k:b.k,label:b.k==='none'?'No client set':b.k==='plat'?'Platform':b.d.label,tier:b.d.tier,rows:b.rows,pd:b.d.c?b.d.k:null}));
+  } else {
+    const m=new Map(); rows.forEach(r=>{ const t=ppTeamName(r); if(!m.has(t)) m.set(t,[]); m.get(t).push(r); });
+    cols=[...m.entries()].sort((a,b)=>(a[0]==='No team')-(b[0]==='No team')||ppSum(b[1])-ppSum(a[1])).map(([t,rs])=>({k:t,label:t,rows:rs}));
+  }
+  const rank=r=>{ const f=ppFlags(r); return (ppBroken(r)?0:f.overdue?1:3)*100+Math.max(0,PP_ORDER.indexOf(ppStatus(r)))*10+(ppDriver(r).tier||9); };
+  const drivers=[]; { const seen=new Set(); all.forEach(r=>{ const d=ppDriver(r); if(d.c&&!seen.has(d.k)){ seen.add(d.k); drivers.push(d); } }); }
+  const day=s=>{ const p=String(s||'').split('-').map(Number); return p.length===3?p[2]+' '+PP_MONTHS[p[1]-1]:s; };
+  const html=cols.map(c=>{
+    const d=ppSum(c.rows), miss=c.rows.filter(r=>!r.n||r.n.days==null).length;
+    let shows='';
+    if(g==='month'&&c.k&&cl) shows=drivers.map(dr=>({dr,n:cl.nextShow(dr.k)})).filter(x=>x.n&&String(x.n.s).slice(0,7)===c.k).sort((a,b)=>String(a.n.s).localeCompare(String(b.n.s)))
+      .map(x=>'<div class="pp-bshow" title="'+ppE(x.n.n)+'"><i aria-hidden="true"></i><span><b>'+ppE(x.dr.label)+'</b> show '+ppE(day(x.n.s))+'</span></div>').join('');
+    if(g==='driver'&&c.pd&&cl){ const n=cl.nextShow(c.pd); if(n) shows='<div class="pp-bshow" title="'+ppE(n.n)+'"><i aria-hidden="true"></i><span>Next show '+ppE(day(n.s)+' '+String(n.s).slice(0,4))+'</span></div>'; }
+    return '<section class="pp-bcol'+(g==='month'&&c.k===cur?' now':'')+(c.st?' '+(PP_ST[c.st]||''):'')+'" aria-label="'+ppE(c.label)+'">'+
+      '<header><div class="pp-bh">'+(c.tier?ppTierPill(c.tier):'')+'<b>'+ppE(c.label)+'</b>'+(g==='month'&&c.k===cur?'<span class="pp-now">this month</span>':'')+'</div>'+
+      '<div class="pp-bsub">'+c.rows.length+' item'+(c.rows.length===1?'':'s')+' · <b>'+ppD(d)+'</b>'+(miss?' · '+miss+' unestimated':'')+(c.note?' · '+ppE(c.note):'')+'</div>'+shows+'</header>'+
+      '<div class="pp-bcards">'+(c.rows.slice().sort((a,b)=>rank(a)-rank(b)||(a.order||0)-(b.order||0)).map(r=>ppBCard(r,g)).join('')||'<div class="pp-bnone">Nothing committed</div>')+'</div></section>';
+  }).join('');
+  return '<div class="pp-boardwrap"><div class="pp-board" style="--cols:'+cols.length+'">'+html+'</div></div>';
 }
 function ppTL(rows,all){
   const months=ppMonths(), cl=CLB(), ro=ppRO();
@@ -3886,7 +3962,7 @@ function ppTL(rows,all){
 // ---------- the item form (pp-editor): one place to add, finish, change and remove an item ----------
 const PP_ED_SECTIONS=[
   {t:'Who it is for and what they need', keys:['driver','feature','why','impact']},
-  {t:'When and by whom', keys:['month','key','team','priority','area']},
+  {t:'When and by whom', keys:['month','forShow','key','team','priority','area','funded']},
   {t:'Status and detail', keys:['status','owner','estimate','deps','notes','rationale']}
 ];
 const PP_HELP={
@@ -3901,7 +3977,9 @@ const PP_HELP={
   driver:'Required. Who it is for: a client on the Planhat active list, or Platform. Tier and the next-show check come from it.',
   owner:'Optional: the person who asked for it, if not you. Who logged it is recorded automatically from your sign-in.',
   estimate:'Person-days: 5d, 3-5d, or Total: 12 person-days.',
-  rationale:'The long form of Why.'
+  rationale:'The long form of Why.',
+  forShow:'Optional: the show this is promised for, when it is not the client\u2019s next one. The after-the-show check and the overdue flag use it.',
+  funded:'Whether the client pays towards it: Yes, Part, or leave empty.'
 };
 const PP_WIDE={feature:1,why:1,impact:1,deps:1,notes:1,rationale:1};
 function ppMonthOpts(cur){
@@ -3964,10 +4042,14 @@ function ppEdField(c){
   } else if(k==='estimate'){
     input='<input id="'+id+'" data-f="estimate" value="'+ppE(val)+'" placeholder="e.g. 5d or 3-5d" autocomplete="off"'+dis+'>';
     extra='<div class="fh est" data-est>'+ppE(ppEstPreview(val))+'</div>'; help='';
+  } else if(k==='forShow'){
+    const cl=CLB(), drv=String((ed.v||{}).driver||(ed.row&&ed.row.v&&ed.row.v.driver)||''), shows=cl&&drv&&drv!=='Platform'?(cl.showsOf(drv)||[]).slice().sort((a,b)=>String(a.s).localeCompare(String(b.s))):[];
+    input='<select id="'+id+'" data-f="forShow"'+dis+'><option value="">The client\u2019s next show</option>'+shows.map(e=>'<option value="'+ppE(e.k)+'"'+(e.k===val?' selected':'')+'>'+ppE(e.n+' · '+cl.fmtDate(e.s))+'</option>').join('')+(val&&!shows.some(e=>e.k===val)?'<option value="'+ppE(val)+'" selected>'+ppE(val)+'</option>':'')+'</select>';
   } else if(k==='status'){
-    input='<select id="'+id+'" data-f="status"'+dis+'>'+ppOpts(c,val)+'</select>';
     const j=ed.row&&ed.row.j;
-    if(j&&j.status) extra='<div class="fh">Jira says <b>'+ppE(j.status)+'</b>'+(j.canon&&j.canon!==val?' <span class="pp-tag drift">differs</span>':'')+'</div>';
+    if(j&&j.status){ input='<select id="'+id+'" disabled aria-describedby="'+id+'-j"><option>'+ppE(j.status)+'</option></select>';
+      extra='<div class="fh" id="'+id+'-j">From Jira, refreshed with every Jira pull: the ledger always shows the ticket&rsquo;s own status. Change it in Jira.</div>'; help=''; }
+    else input='<select id="'+id+'" data-f="status"'+dis+'>'+ppOpts(c,val)+'</select>';
   } else if(c.type==='select'){
     input='<select id="'+id+'" data-f="'+ppE(k)+'"'+dis+'><option value="">—</option>'+ppOpts(c,val)+'</select>';
   } else if(c.type==='long'){
@@ -4037,9 +4119,11 @@ function ppItemHist(r){
 function ppSideInfo(r){
   const f=(lab,val)=>'<div class="pp-kv"><span class="k">'+lab+'</span><span class="v">'+val+'</span></div>';
   const j=r.j, fl=ppFlags(r), dr=ppDriver(r), tm=ppTeam(r), pf=(r.prefill||{}).driver, cl=CLB();
-  const ns=dr.c&&cl?cl.nextShow(dr.k):null, br=ppBroken(r);
+  const ns=ppShowFor(r), br=ppBroken(r);
   let h='<div class="seclabel">Who it is for, and who does it<span class="c">derived</span></div><div class="pp-kvs">'+
     f('Driver', dr.k ? ppE(dr.label)+(dr.tier?' '+ppTierPill(dr.tier):'')+(pf&&pf.value===String((r.v||{}).driver||'')?'<div class="pp-sub">Pre-filled by Claude on '+ppE(ppWhenDay(pf.at))+': '+ppE(pf.basis)+' (pp-driver-prefill).</div>':'') : '<span class="pp-tag noest">not set</span>')+
+    (ns&&ns.target?f('For show','<b>'+ppE(ns.n)+'</b> '+ppE(cl.fmtDate(ns.s))+' <span class="pp-tag soon">target</span><div class="pp-sub">Checked against this show, not the next one.</div>'):'')+
+    (ppFunded(r)?f('Funded','<span class="pp-tag ship">funded</span> '+ppE((r.v||{}).funded)):'')+
     f('Promise vs show', !dr.c ? '<span class="pp-empty">'+(dr.k==='Platform'?'platform work has no show':'needs a client Driver')+'</span>'
       : !ns ? '<span class="pp-empty">'+ppE(dr.label)+' has no dated show</span>'
       : (br ? '<span class="pp-tag over">broken</span> '+ppE(ppMo((r.v||{}).month))+' ends after '+ppE(ns.n)+' starts '+ppE(cl.fmtDate(ns.s))
@@ -4048,7 +4132,7 @@ function ppSideInfo(r){
     '</div>';
   if(j){
     h+='<div class="seclabel">From Jira<span class="c">refreshed '+ppE(PP.meta&&PP.meta.asOf?ppWhenDay(PP.meta.asOf):'—')+'</span></div><div class="pp-kvs">'+
-      f('Status',ppE(j.status)+(fl.drift?' <span class="pp-tag drift">ledger says '+ppE((r.v||{}).status)+'</span>':''))+
+      f('Status',ppE(j.status)+' <span class="pp-tag der">shown everywhere</span>')+
       f('Due',j.due?ppE(ppWhenDay(j.due))+(fl.overdue?' <span class="pp-tag over">overdue</span>':''):'<span class="pp-empty">none set</span>')+
       f('Logged',j.spentDays!=null?ppD(j.spentDays)+(fl.overEstimate?' <span class="pp-tag drift">over the estimate</span>':''):'<span class="pp-empty">none</span>')+
       f('Assignee',j.assignee?ppE(j.assignee):'<span class="pp-empty">unassigned</span>')+
@@ -4059,6 +4143,14 @@ function ppSideInfo(r){
   if(key && cl && cl.flowRow(key)) h+='<div class="seclabel">Flow, from the Jira changelog<span class="c">flow.json</span></div><div class="pp-flow">'+cl.flowHtml(key)+'</div>';
   const raw=r.raw||{}, orig=Object.keys(raw).filter(k=>raw[k]!=null&&String(raw[k])!==String((r.v||{})[k]||''));
   if(orig.length) h+='<div class="pp-sub" style="margin-top:10px">As first written on the Confluence page: '+orig.map(k=>ppE(ppFldLabel(k))+' “'+ppE(raw[k])+'”').join(', ')+'.</div>';
+  // where Claude's filled-in fields came from (28 Sep 2026): the ticket, its comments and the Confluence pages it links
+  const en=r.enrich; if(en&&(Object.keys(en.fields||{}).length||(en.pages||[]).length)){
+    const live=Object.entries(en.fields||{}).filter(([k])=>String((r.v||{})[k]||'').trim());
+    h+='<div class="seclabel">Where the details came from<span class="c">'+ppE(ppWhenDay(en.at))+'</span></div><div class="pp-src">'+
+      live.map(([k,src])=>'<div><b>'+ppE(ppFldLabel(k))+'</b> <span>'+ppE(src)+'</span></div>').join('')+
+      ((en.pages||[]).length?'<div class="pp-srcp"><b>Pages read</b> '+en.pages.map(pg=>'<a href="'+ppE(pg.url)+'" target="_blank" rel="noopener">'+ppE(pg.title||pg.url)+'</a>').join(' · ')+'</div>':'')+
+      ((en.gaps||[]).length?'<details class="pp-gaps"><summary>What the sources did not say ('+en.gaps.length+')</summary><ul>'+en.gaps.map(g=>'<li>'+ppE(g)+'</li>').join('')+'</ul></details>':'')+'</div>';
+  }
   return h;
 }
 function ppEdSideHtml(){
@@ -4146,7 +4238,6 @@ function ppEdState(){
   msg.classList.toggle('bad', !!(nErr && ed.showErr));
 }
 function ppOpenEditor(id,preset){
-  if(!(window.EP_ACCESS||{}).ajay){ if(window.showTab) window.showTab('pipeline'); if(typeof feSetView==='function') feSetView('pp'); return; }
   if(PP.ed) ppEdClose();
   uiToastHide();
   const r=id?PP.rows.find(x=>x.id===id):null;
@@ -4557,7 +4648,8 @@ function ppBind(){
     if((b=t.closest('[data-ppcol]'))){ ppColMenu(b); return; }
     if((b=t.closest('[data-ppsort]'))){ const k=b.dataset.ppsort;
       PP.sort = PP.sort.k===k ? {k, dir:-PP.sort.dir} : {k, dir:1}; ppRender(); return; }
-    if((b=t.closest('[data-ppflag]'))){ PP.f.flag=b.dataset.ppflag; ppRender(); ppToView(); return; }
+    if((b=t.closest('[data-ppflag]'))){ const v=b.dataset.ppflag; PP.f.flag=PP.f.flag===v?'':v; ppRender(); if(b.closest('.pp-alerts')) ppToView(); return; }
+    if((b=t.closest('#pp-bgroup button'))){ PP.bgroup=b.dataset.v; ppSavePrefs(); ppRender(); return; }
     if((b=t.closest('[data-ppfilter]'))){ const k=b.dataset.ppfilter;
       PP.f[k] = PP.f[k]===b.dataset.ppval ? '' : b.dataset.ppval; ppRender(); ppToView(); return; }
     if(t.closest('#pp-colbtn')){ ppColChooser(t.closest('#pp-colbtn')); return; }
@@ -4590,6 +4682,28 @@ const DM = {data:null, loading:null, err:null, idx:null, byItem:new Map(), byCl:
 const dmE = uiEsc;
 const DM_SRC={F:'Feature request',S:'Open story',I:'FIS intake'};
 const DM_TW={1:8,2:4,3:2,4:1};
+// the signal (intel/SPEC.md, Tier signal): Σ over the DISTINCT customers asking of their tier weight. Who is asking, not a priority score.
+const DM_SIG_TIP='Signal: each distinct customer asking adds its Sales Tier weight (T1 8 · T2 4 · T3 2 · T4 1; not on the ledger 0). Who is asking, not a priority score.';
+function dmSigParts(cus,max){ const named=cus.filter(x=>DM_TW[x.t]), rest=cus.length-named.length, show=named.slice(0,max||99);
+  const sum=named.reduce((a,x)=>a+DM_TW[x.t],0);
+  return {sum, html:(show.map(x=>`<span class="dm-sp">${dmE(x.n)} <span class="dm-spt t${x.t}">T${x.t} = ${DM_TW[x.t]}</span></span>`).join('<span class="dm-plus">+</span>')||'<span class="small">No customer on the ledger</span>')+
+    (named.length>show.length?`<span class="dm-plus">+</span><span class="small">${named.length-show.length} more</span>`:'')+`<span class="dm-eq">= ${sum}</span>`+
+    (rest?`<span class="small dm-sp0">${rest} customer${rest===1?'':'s'} not on the ledger add 0</span>`:'')}; }
+function dmSigHow(){
+  const top=DM.needs[0], filt=Object.values(DM.f).some(Boolean);
+  const ex=top?dmSigParts(top.cu,6):null;
+  return `<details class="about dm-sighow"${DM.sigOpen?' open':''}><summary><span class="ib" aria-hidden="true">i</span>What is the signal score, and how is it worked out?</summary><div class="dm-sigbody">
+    <p><b>The signal says who is asking for a need, weighted by how valuable they are.</b> Every distinct customer asking adds the weight of their Sales Tier (from Planhat); the need's signal is the total.</p>
+    <div class="dm-sigw">${[1,2,3,4].map(t=>`<span class="dm-sigwt"><span class="tierpill t${t<=2?t:''}">T${t}</span> adds <b>${DM_TW[t]}</b></span>`).join('')}<span class="dm-sigwt"><span class="tierpill na">—</span> not on the ledger adds <b>0</b></span></div>
+    <div class="small">Each tier counts double the one below, so one Tier 1 customer (8) weighs as much as two Tier 2s, four Tier 3s or eight Tier 4s.</div>
+    ${ex?`<div class="dm-sigex"><div class="small">Worked example: the top need${filt?' with your filters':''}, <b>${dmE(top.c.name)}</b></div><div class="dm-sigsum">${ex.html}</div></div>`:''}
+    <ul class="dm-sigl">
+      <li><b>A customer counts once per need</b>, however many tickets they raised for it; duplicates add tickets, not signal.</li>
+      <li><b>Ties</b> are broken by the number of tickets, then by name.</li>
+      <li><b>It follows your filters</b>: with a source, year or product filter on, only the matching tickets count, so a need's signal can drop.</li>
+      <li><b>It is not a priority score.</b> It ignores money, effort, urgency, how recent the asks are and whether the need is already built (the <i>Built today</i> column shows that). The priority score comes later with its own criteria.</li>
+    </ul></div></details>`;
+}
 const DM_BUILT={done:'Already built',part:'Partially built',none:'Nothing built'};
 const DM_STOP=new Set('a an and are as at be but by can for from has have how i if in into is it its of on or our so that the their them then there these they this to too us was we were what when where which who why will with would should could able allow allows need needs want wants add adding make using use new also only just more than via per each all any other some like get set see show'.split(' '));
 const dmTok=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').split(' ').filter(w=>w.length>1&&!DM_STOP.has(w)).map(w=>w.length>4?w.replace(/(ings|ing|ed|es|s)$/,''):w);
@@ -4719,6 +4833,7 @@ function dmDerive(){
   DM.needs=[];
   hit.forEach((rs,id)=>{ const c=DM.byCl.get(id), cu=new Map();
     rs.forEach(r=>(r.cu||[]).forEach(([n,t,pd])=>{ const e=cu.get(n)||{n,t,pd,k:0}; e.k++; cu.set(n,e); }));
+    if(!DM.f.src&&window.btVoiceCus) window.btVoiceCus(id).forEach(([n,t,pd])=>{ if(![...cu.values()].some(x=>x.n===n||(pd&&String(x.pd)===String(pd)))) cu.set(n,{n,t,pd,k:1,voice:true}); });
     const cus=[...cu.values()].sort((a,b)=>(a.t||9)-(b.t||9)||b.k-a.k||a.n.localeCompare(b.n)), ts=cus.map(x=>x.t).filter(Boolean);
     const tc={}; [1,2,3,4].forEach(t=>tc[t]=cus.filter(x=>x.t===t).length);
     DM.needs.push({c,rs,n:rs.length,dup:rs.filter(r=>r.role==='duplicate').length,cu:cus,tt:ts.length?Math.min(...ts):0,tc,
@@ -4759,7 +4874,7 @@ async function dmRender(){
     <div class="dm-vtop"><span class="seg" id="dm-view">${[['rank','Where Tier 1 is asking'],['needs','Needs'],['requests','Requests']].map(([k,l])=>`<button type="button" data-v="${k}" aria-pressed="${DM.view===k}">${l}</button>`).join('')}</span>
       ${f.q?`<span class="pp-tag soon">Raised in ${dmE(f.q)} <button type="button" class="linkbtn" data-dmq="${dmE(f.q)}">clear</button></span>`:''}
       <span class="zoomctl" role="group" aria-label="Zoom"><button type="button" class="ibtn" data-dmz="-1" aria-label="Zoom out"${DM.zoom<=1?' disabled':''}>&minus;</button><span>${['Smallest','Small','Medium','Large','Largest'][DM.zoom-1]}</span><button type="button" class="ibtn" data-dmz="1" aria-label="Zoom in"${DM.zoom>=5?' disabled':''}>+</button></span></div>
-    <div id="dm-view-host" data-zoom="${DM.zoom}">${DM.view==='rank'?dmRankHtml():DM.view==='needs'?dmNeedsHtml():dmReqHtml()}</div>`;
+    ${DM.view!=='req'?dmSigHow():''}<div id="dm-view-host" data-zoom="${DM.zoom}">${DM.view==='rank'?dmRankHtml():DM.view==='needs'?dmNeedsHtml():dmReqHtml()}</div>`;
   dmBindTab(host);
 }
 const fmtD=s=>{ try{ return new Date(s+'T00:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}); }catch(e){ return s; } };
@@ -4772,15 +4887,15 @@ function dmRankHtml(){
   return `<div class="dm-rank"><div class="card"><h3>Needs by product and the best tier asking</h3><div class="note">Each need counts once, at the best Sales Tier among its customers. Click a cell to filter.</div>
     <div class="dm-heat"><div class="dm-hr hd"><span></span>${cols.map(c=>`<span>${c==='Not in ledger'?'Not in ledger':c}</span>`).join('')}</div>
     ${rowsP.map(p=>`<div class="dm-hr"><span class="dm-hp">${dmE(p)}</span>${cols.map(c=>{const v=grid[p][c]||0; const tn=c[0]==='T'?c[1]:0; return `<button type="button" class="dm-hc" data-dmheat="${dmE(p)}|${c}" ${v?'':'disabled'} style="--a:${v/max};--c:${tn?'var(--tier'+tn+')':'var(--tier0)'}">${v||''}</button>`;}).join('')}</div>`).join('')}</div></div>
-    <div class="card"><h3>Where Tier 1 is asking</h3><div class="note">Ranked by tier signal: T1 8 · T2 4 · T3 2 · T4 1 per distinct customer, then tickets. No priority score yet.</div>
-    <ol class="dm-rl">${top.map(x=>`<li><button type="button" class="dm-rr" data-dmneed="${dmE(x.c.id)}"><span class="dm-rn">${x.rank}</span><span class="dm-rm"><b>${dmE(x.c.name)}</b><span class="small">${dmE(x.c.product)} · ${x.n} ticket${x.n===1?'':'s'}${x.dup?' · '+x.dup+' duplicate'+(x.dup===1?'':'s'):''} · ${x.cu.filter(c=>c.t===1).slice(0,3).map(c=>dmE(c.n)).join(', ')||'no Tier 1'}</span></span>${dmTierBars(x)}<span class="dm-b ${x.bs}">${DM_BUILT[x.bs]}</span><span class="dm-sig">${x.sig}</span></button></li>`).join('')||'<li class="empty">No need matches these filters.</li>'}</ol></div></div>`;
+    <div class="card"><h3>Where Tier 1 is asking</h3><div class="note">Ranked by signal: each distinct customer adds T1 8 · T2 4 · T3 2 · T4 1, then tickets break ties. Hover a number for how it adds up, or read <i>What is the signal score</i> above.</div>
+    <ol class="dm-rl">${top.map(x=>`<li><button type="button" class="dm-rr" data-dmneed="${dmE(x.c.id)}"><span class="dm-rn">${x.rank}</span><span class="dm-rm"><b>${dmE(x.c.name)}</b><span class="small">${dmE(x.c.product)} · ${x.n} ticket${x.n===1?'':'s'}${x.dup?' · '+x.dup+' duplicate'+(x.dup===1?'':'s'):''} · ${x.cu.filter(c=>c.t===1).slice(0,3).map(c=>dmE(c.n)).join(', ')||'no Tier 1'}</span></span>${dmTierBars(x)}<span class="dm-b ${x.bs}">${DM_BUILT[x.bs]}</span><span class="dm-sig" title="${dmE(x.cu.filter(c=>DM_TW[c.t]).map(c=>c.n+' T'+c.t+' '+DM_TW[c.t]).join(' + ')+' = '+x.sig)}">${x.sig}</span></button></li>`).join('')||'<li class="empty">No need matches these filters.</li>'}</ol></div></div>`;
 }
 function dmNeedsHtml(){
   const S=DM.sort, list=DM.needs.slice().sort((a,b)=>{ const k=S.k; const va=k==='rank'?a.rank:k==='n'?-a.n:k==='tier'?(a.tt||9):k==='sig'?-a.sig:k==='fis'?-a.fis:a.c.name.localeCompare(b.c.name); const vb=k==='rank'?b.rank:k==='n'?-b.n:k==='tier'?(b.tt||9):k==='sig'?-b.sig:k==='fis'?-b.fis:0; return (k==='name'?va:va-vb)*S.dir; });
   const per=25, pages=Math.max(1,Math.ceil(list.length/per)); DM.page=Math.min(DM.page,pages-1);
   const th=(k,l,cls)=>`<th class="${cls||''}"><button type="button" class="sortb" data-dmsort="${k}">${l}${S.k===k?(S.dir>0?' ↑':' ↓'):''}</button></th>`;
-  return `<div class="pp-wrap"><table class="pp dm-tab"><thead><tr>${th('rank','#','num')}${th('name','Need')}<th>Product</th>${th('n','Tickets','num')}<th>Customers</th>${th('tier','Top tier')}${th('sig','Signal','num')}<th>Built today</th>${th('fis','FIS best','num')}</tr></thead>
-    <tbody>${list.slice(DM.page*per,DM.page*per+per).map(x=>`<tr class="r" data-dmneed="${dmE(x.c.id)}"><td class="num">${x.rank}</td><td><b class="fe-t">${dmE(x.c.name)}</b><div class="small">${dmE(String(x.c.what).slice(0,140))}${String(x.c.what).length>140?'…':''}</div></td><td>${dmE(x.c.product)}</td><td class="num">${x.n}${x.dup?`<div class="small">${x.dup} dup</div>`:''}</td><td>${x.cu.slice(0,3).map(c=>dmTier(c.t)+' '+dmE(c.n)).join('<br>')}${x.cu.length>3?`<div class="small">+${x.cu.length-3} more</div>`:''}</td><td>${dmTier(x.tt)}</td><td class="num">${x.sig}</td><td><span class="dm-b ${x.bs}">${DM_BUILT[x.bs]}</span></td><td class="num">${x.fis>=0?x.fis:'—'}</td></tr>`).join('')||'<tr><td colspan="9" class="empty">No need matches these filters.</td></tr>'}</tbody></table></div>
+  return `<div class="pp-wrap"><table class="pp dm-tab"><thead><tr>${th('rank','#','num')}${th('name','Need')}<th>Product</th>${th('n','Tickets','num')}<th>Customers</th>${th('tier','Top tier')}${th('sig','<span title="'+DM_SIG_TIP+'">Signal ⓘ</span>','num')}<th>Built today</th>${th('fis','FIS best','num')}</tr></thead>
+    <tbody>${list.slice(DM.page*per,DM.page*per+per).map(x=>`<tr class="r" data-dmneed="${dmE(x.c.id)}"><td class="num">${x.rank}</td><td><b class="fe-t">${dmE(x.c.name)}</b><div class="small">${dmE(String(x.c.what).slice(0,140))}${String(x.c.what).length>140?'…':''}</div></td><td>${dmE(x.c.product)}</td><td class="num">${x.n}${x.dup?`<div class="small">${x.dup} dup</div>`:''}</td><td>${x.cu.slice(0,3).map(c=>dmTier(c.t)+' '+dmE(c.n)).join('<br>')}${x.cu.length>3?`<div class="small">+${x.cu.length-3} more</div>`:''}</td><td>${dmTier(x.tt)}</td><td class="num" title="${dmE(x.cu.filter(c=>DM_TW[c.t]).map(c=>c.n+' T'+c.t+' '+DM_TW[c.t]).join(' + ')+' = '+x.sig)}">${x.sig}</td><td><span class="dm-b ${x.bs}">${DM_BUILT[x.bs]}</span></td><td class="num">${x.fis>=0?x.fis:'—'}</td></tr>`).join('')||'<tr><td colspan="9" class="empty">No need matches these filters.</td></tr>'}</tbody></table></div>
     <div class="dm-pager">${pages>1?`<button type="button" class="ibtn" data-dmpage="-1"${DM.page?'':' disabled'}>Previous</button><span>${DM.page+1} / ${pages}</span><button type="button" class="ibtn" data-dmpage="1"${DM.page<pages-1?'':' disabled'}>Next</button>`:''}</div>`;
 }
 function dmBars(list,key,limit){ const max=Math.max(1,...list.map(x=>x.n)); return `<div class="dm-bars">${list.slice(0,limit).map(x=>`<button type="button" class="dm-bar" ${key?`data-dmbar="${key}|${dmE(x.k)}"`:''}><span class="lb">${dmE(x.l||x.k)}</span><span class="tr">${['F','S','I'].map(s=>x[s]?`<i class="s${s}" style="width:${x[s]/max*100}%"></i>`:'').join('')}</span><span class="vv">${x.n}</span></button>`).join('')}</div>`; }
@@ -4824,7 +4939,9 @@ function dmBindTab(host){
 }
 function dmOpenNeed(id){
   const c=DM.byCl.get(id); const cl=CLB(); if(!c||!cl) return;
-  const cus=[...new Map(c.rs.flatMap(r=>(r.cu||[]).map(x=>[x[0],x]))).values()].sort((a,b)=>(a[1]||9)-(b[1]||9));
+  const cus=[...new Map(c.rs.flatMap(r=>(r.cu||[]).map(x=>[x[0],x]))).values()];
+  if(window.btVoiceCus) window.btVoiceCus(id).forEach(x=>{ if(!cus.some(y=>y[0]===x[0]||(x[2]&&String(y[2])===String(x[2])))) cus.push(x); });
+  cus.sort((a,b)=>(a[1]||9)-(b[1]||9));
   const ROLE={canonical:'Canonical',duplicate:'Duplicate',overlap:'Overlap',related:'Related'};
   const body=`<div class="fe-cols"><div>
       <div class="seclabel">What is asked</div><p class="dm-p">${dmE(c.what)}</p>
@@ -4835,6 +4952,11 @@ function dmOpenNeed(id){
     </div><div>
       <div class="seclabel">Tickets<span class="c">${c.m.length}</span></div>
       <div class="dm-mem">${c.m.map(m=>{const r=DM.byItem.get(m.i)||{};return `<div class="dm-mr"><span class="pp-tag ${m.r==='canonical'?'ship':m.r==='duplicate'?'over':'noest'}">${ROLE[m.r]||m.r}</span> ${r.u?`<a href="${dmE(r.u)}" target="_blank" rel="noopener">${dmE(r.k||'FIS page')}</a>`:dmE(r.k||'')} <span>${dmE(r.t||'')}</span><div class="small">${dmE(DM_SRC[r.s]||'')} · ${dmE(r.st||'')}${m.no?' · '+dmE(m.no):''}</div></div>`}).join('')}</div>
+      <div class="seclabel">Signal<span class="c">${dmSigParts(cus.map(x=>({n:x[0],t:x[1]}))).sum}</span></div>
+      <div class="dm-sigsum sm">${dmSigParts(cus.map(x=>({n:x[0],t:x[1]}))).html}</div>
+      ${(()=>{ const f=DM.needs.find(x=>x.c.id===id), all=dmSigParts(cus.map(x=>({n:x[0],t:x[1]}))).sum; return f&&f.sig!==all?`<div class="small">With your filters it reads ${f.sig}: only the matching tickets count.</div>`:''; })()}
+      <div class="small dm-signote">Each distinct customer adds its tier weight: T1 8 · T2 4 · T3 2 · T4 1. Who is asking, not a priority score.</div>
+      ${window.btNeedVoicesHtml?window.btNeedVoicesHtml(id):''}
       <div class="seclabel">Customers asking<span class="c">${cus.length}</span></div>
       <div class="small">${cus.map(x=>dmTier(x[1])+' '+(x[2]?`<button type="button" class="linkbtn" data-c360="${dmE(x[2])}">${dmE(x[0])}</button>`:dmE(x[0]))).join('<br>')||'none named'}</div>
     </div></div>`;
@@ -4855,6 +4977,7 @@ function dmOpenReq(id){
 // open the form with a need's details, from the Demand tab
 async function dmLogFrom(id){
   if(typeof feOpenForm!=='function') return;
+  if(window.EP_ACCESS&&window.EP_ACCESS.how&&window.btFromNeed){ window.btFromNeed(id); return; }
   showTabGlobal('pipeline'); feSetView('fl'); feOpenForm();
   if(FE.form){ FE.form.dup.decision='used'; FE.form.dup.choice=id; FE.form.dq=DM.byCl.get(id).name; await dmUse(id,true); }
 }
@@ -5065,10 +5188,12 @@ async function feBoot(){
   try{ FE.db=await claude.use('db'); }catch(e){ FE.db=null; }
   if(!FE.db){ FE.ready=true; feRender(); return; }
   const onErr=e=>{ FE.err=(e&&e.code)||'unavailable'; FE.ready=true; feRender(); };
-  FE.subs.push(FE.db.collection('ledger').onSnapshot(s=>{ FE.rows=s.docs.map(d=>Object.assign({_id:d.id},d.data())); FE.ready=true; feRender(); feNames();
+  FE.subs.push(FE.db.collection('ledger').onSnapshot(s=>{ FE.all=s.docs.map(d=>Object.assign({_id:d.id},d.data())); feSeen(); FE.ready=true; feRender(); feNames(); if(window.btOnRows) window.btOnRows();
     if(FE.pendingOpen&&FE.rows.some(x=>x._id===FE.pendingOpen)){ const id=FE.pendingOpen; FE.pendingOpen=null; feOpenEntry(id); } },onErr));
   FE.subs.push(FE.db.collection('ledger-events').onSnapshot(s=>{ const m={}; s.docs.forEach(d=>{ m[d.id]=(d.data()||{}).e||{}; }); FE.ev=m; if(FE.openId) feOpenEntry(FE.openId,true); },()=>{}));
 }
+// Beta test items (test:true) count only for a viewer with test mode on (Settings → Sync & logs → Beta lab)
+function feSeen(){ FE.rows=(FE.all||[]).filter(r=>!r.test||!!(window.BT&&window.BT.test)); }
 async function feNames(){
   const me=feMe(); if(!me.user||!me.user.profiles) return;
   const ids=[...new Set(FE.rows.flatMap(r=>[r.loggedBy,(r.raisedBy||{}).id].concat(Object.values((r.v||{}).handoff||{}).map(h=>h.to))).concat(Object.values(FE.ev).flatMap(m=>Object.values(m).map(e=>e.by))).filter(x=>x&&x!=='claude'))];
@@ -5335,10 +5460,24 @@ function feRender(){
 }
 
 // ---------- the form ----------
+function feSkillCard(preset){
+  FE._pend=preset||null; const cl=window.CL; if(!cl||!cl.modal) return;
+  const how=!!(window.EP_ACCESS&&window.EP_ACCESS.how);
+  cl.modal('Log a new work item','<span class="fe-skill-pill">In testing</span>',
+    `<div class="fe-skill"><div class="fe-skill-ic" aria-hidden="true">&#10022;</div><div><h4>Logging work items with Claude is in testing.</h4>
+      <p>You will share what a client said, in your own words, from a chat or from a call recording. Claude fills in the request, checks who else asked for it and what is already built, and puts it here with you as the person who logged it.</p>
+      <p class="fe-skill-now">It is in Beta with a small group first. Until it opens to you, ask Ajay to log it. Every item already on the ledger still opens, and details handed to you can still be filled in from the item.</p></div></div>`,
+    how?'<button type="button" data-feold>Use the old form</button><span>Only you and Bartosz see this while the skill is built.</span>':'<span>Thanks for your patience while this moves.</span>');
+}
+document.addEventListener('click',e=>{ if(!e.target.closest('[data-feold]')) return; const x=document.querySelector('#modal .x'); if(x) x.click(); feOpenForm(Object.assign({},FE._pend||{},{_old:true})); });
 function feOpenForm(preset){
   const me=feMe(), editR=preset&&preset.edit?FE.rows.find(x=>x._id===preset.edit):null;
   if(!me.ok){ uiToast('Sign in first: every work item is recorded under the name of whoever logs it. Reload the page and choose Continue.',{bad:true}); return; }
   if(me.canWrite===false){ uiToast('Your access to this page is view-only, so you cannot log work items. Ask the owner for “Can interact”.',{bad:true}); return; }
+  // logging a new work item is moving to a Claude skill (30 Sep 2026): a placeholder, except when filling in owed details, and an
+  // "old form" link for the How it works viewers (Ajay, Bartosz) while the skill is built
+  // Beta (30 Sep 2026): Settings viewers log with Claude; everyone else still sees the placeholder while it is tested
+  if(!(preset&&(preset.edit||preset._old))){ if(window.EP_ACCESS&&window.EP_ACCESS.how&&window.btOpen){ window.btOpen(preset||{}); return; } feSkillCard(preset); return; }
   let v=feBlank();
   try{ const d=JSON.parse(feLS('ep-fe-draft')||'null'); if(d&&d.v&&!preset) v=Object.assign(feBlank(),d.v); }catch(e){}
   if(preset&&preset.client){ v.client=preset.client; v.customers=[{client:preset.client,contact:'',how:'',note:''}]; }
@@ -5579,7 +5718,41 @@ function fePaintSide(){
     <div class="fe-sb"><div class="seclabel">Would still raise the details %</div>${cp.missing.length?`<div class="small">${cp.missing.map(feE).join(' · ')}</div>`:'<div class="small ok">Nothing missing.</div>'}</div>
     <div class="fe-sb fe-logged">Logged by <b>${feE(me.name||'you')}</b>, recorded from your sign-in. The log keeps who did what, and when, for every later step.</div>`;
 }
-// Log: T2 (draft → submitted). The LE id comes from a counter held under a short lease, so two people never get the same one.
+// write a new work item (T2, draft → submitted): the LE id comes from a counter held under a short lease, so two people never get the
+// same one. Used by the classic form and by Beta; test items (Beta test mode) get an LE-TEST id and use no number.
+async function feWriteNew(v0,opt){
+  opt=opt||{}; const me=feMe();
+  let id;
+  if(opt.test) id='LE-TEST-'+Date.now().toString(36).toUpperCase();
+  else {
+    const lock=FE.db.doc('config/ledger-seq');
+    let got=null;
+    for(let i=0;i<5&&!got;i++){ const l=await lock.acquire({holder:me.uid+':'+Date.now(),ttlMs:15000}); if(l.acquired) got=l; else await new Promise(r=>setTimeout(r,800+Math.random()*700)); }
+    if(!got) throw {code:'busy',message:'Someone else is logging an item at this moment. Try again in a few seconds.'};
+    const cur=await lock.get(), yr=new Date().getUTCFullYear(), data=cur.exists?cur.data():{};
+    const seq=(data.year===yr?(data.seq||0):0)+1; id='LE-'+yr+'-'+String(seq).padStart(4,'0');
+    if(cur.exists) await lock.update({seq, year:yr, lastId:id}); else await lock.set({seq, year:yr, lastId:id});
+  }
+  const at=feNow(), v=JSON.parse(JSON.stringify(v0)), sg=feSigner(v), cp=feCompleteness(v), fig=feFigure(v);
+  v.acceptanceCriteria=(v.acceptanceCriteria||[]).filter(x=>String(x).trim()); v.attachments=(v.attachments||[]).filter(x=>String(x).trim()); v.related=(v.related||[]).filter(x=>String(x).trim());
+  v.customers=(v.customers||[]).filter(c=>c.client); v.figureComputedGBP=fig;
+  if(opt.dup) v.dupCheck=opt.dup(at);
+  const lvv=feLever(v); if(lvv&&lvv.kind==='hours') v.figureBasis=Object.assign({},v.figureBasis,{kind:'hours',hours:feHours(v)}); else if(lvv) v.figureBasis={kind:'revenue'};
+  const eid='e'+Date.now()+'-'+Math.random().toString(36).slice(2,6), b='b'+Date.now().toString(36);
+  const owedK=Object.keys(feOwed(v)), hf={}; owedK.forEach(k=>{ const h=(v.handoff||{})[k]; if(h&&h.to) hf[k]={to:h.to, by:me.uid, at}; }); v.handoff=hf;
+  const ic=opt.ic||feIntake(v), via=opt.via||'form';
+  const doc={id, status:'submitted', owed:owedK, loggedBy:me.uid, loggedAt:at, raisedBy:{id:v.raisedBy.id}, raisingLayer:v.raisingLayer, source:v.source, v,
+    intakeCheck:ic, signer:sg?{who:sg.who, role:sg.role, rule:sg.rule}:null, fundingApprover:sg&&sg.fundedBy?{who:sg.fundedBy, rule:'fs-funded-approver'}:null,
+    completeness:cp, preview:!!window.LEDGER_PREVIEW, updatedAt:at, updatedBy:me.uid,
+    h:{[eid]:{at, by:me.uid, k:'log', from:'draft', to:'submitted', b, via}}};
+  if(opt.test) doc.test=true;
+  await FE.db.doc('ledger/'+id).set(doc);
+  const evs={[eid]:{id:eid, at, by:me.uid, role:'requester', k:'log', from:'draft', to:'submitted', b, via, raisedBy:v.raisedBy.id, owed:owedK, intakeCheck:{glossary:ic.glossary, problemClarity:ic.problemClarity}}};
+  [...new Set(Object.values(hf).map(h=>h.to))].forEach((to,i)=>{ const e2=eid+'-h'+i; evs[e2]={id:e2, at, by:me.uid, role:'requester', k:'handoff', to, fields:Object.keys(hf).filter(k=>hf[k].to===to), b}; });
+  await FE.db.doc('ledger-events/'+id).set({e:evs});
+  return {id, owedK, hf, sg, v};
+}
+// Log from the classic form: the checks, then feWriteNew
 async function feLog(){
   const f=FE.form; if(!f||f.saving) return;
   const err=feLogErrors(f.v);
@@ -5600,28 +5773,7 @@ async function feLog(){
   if(!FE.db){ uiToast('The shared database is not available in this view.',{bad:true}); return; }
   f.saving=true; feLive();
   try{
-    const lock=FE.db.doc('config/ledger-seq');
-    let got=null;
-    for(let i=0;i<5&&!got;i++){ const l=await lock.acquire({holder:me.uid+':'+Date.now(),ttlMs:15000}); if(l.acquired) got=l; else await new Promise(r=>setTimeout(r,800+Math.random()*700)); }
-    if(!got) throw {code:'busy',message:'Someone else is logging an item at this moment. Try again in a few seconds.'};
-    const cur=await lock.get(), yr=new Date().getUTCFullYear(), data=cur.exists?cur.data():{};
-    const seq=(data.year===yr?(data.seq||0):0)+1, id='LE-'+yr+'-'+String(seq).padStart(4,'0');
-    if(cur.exists) await lock.update({seq, year:yr, lastId:id}); else await lock.set({seq, year:yr, lastId:id});
-    const at=feNow(), v=JSON.parse(JSON.stringify(f.v)), sg=feSigner(v), cp=feCompleteness(v), fig=feFigure(v);
-    v.acceptanceCriteria=(v.acceptanceCriteria||[]).filter(x=>String(x).trim()); v.attachments=(v.attachments||[]).filter(x=>String(x).trim()); v.related=(v.related||[]).filter(x=>String(x).trim());
-    v.customers=(v.customers||[]).filter(c=>c.client); v.figureComputedGBP=fig;
-    v.dupCheck={query:String(f.dup.query||'').slice(0,400), shown:(f.dup.shown||[]).slice(0,8), decision:f.dup.decision||(f._dupTop?'none':'no-match'), choice:f.dup.choice||null, ai:f.dup.ai||null, at};
-    const lvv=feLever(v); if(lvv&&lvv.kind==='hours') v.figureBasis=Object.assign({},v.figureBasis,{kind:'hours',hours:feHours(v)}); else if(lvv) v.figureBasis={kind:'revenue'};
-    const eid='e'+Date.now()+'-'+Math.random().toString(36).slice(2,6), b='b'+Date.now().toString(36);
-    const owedK=Object.keys(feOwed(v)), hf={}; owedK.forEach(k=>{ const h=(v.handoff||{})[k]; if(h&&h.to) hf[k]={to:h.to, by:me.uid, at}; }); v.handoff=hf;
-    const doc={id, status:'submitted', owed:owedK, loggedBy:me.uid, loggedAt:at, raisedBy:{id:v.raisedBy.id}, raisingLayer:v.raisingLayer, source:v.source, v,
-      intakeCheck:ic, signer:sg?{who:sg.who, role:sg.role, rule:sg.rule}:null, fundingApprover:sg&&sg.fundedBy?{who:sg.fundedBy, rule:'fs-funded-approver'}:null,
-      completeness:cp, preview:!!window.LEDGER_PREVIEW, updatedAt:at, updatedBy:me.uid,
-      h:{[eid]:{at, by:me.uid, k:'log', from:'draft', to:'submitted', b}}};
-    await FE.db.doc('ledger/'+id).set(doc);
-    const evs={[eid]:{id:eid, at, by:me.uid, role:'requester', k:'log', from:'draft', to:'submitted', b, raisedBy:v.raisedBy.id, owed:owedK, intakeCheck:{glossary:ic.glossary, problemClarity:ic.problemClarity}}};
-    [...new Set(Object.values(hf).map(h=>h.to))].forEach((to,i)=>{ const e2=eid+'-h'+i; evs[e2]={id:e2, at, by:me.uid, role:'requester', k:'handoff', to, fields:Object.keys(hf).filter(k=>hf[k].to===to), b}; });
-    await FE.db.doc('ledger-events/'+id).set({e:evs});
+    const {id, owedK, hf, sg, v}=await feWriteNew(f.v,{ic, dup:at=>({query:String(f.dup.query||'').slice(0,400), shown:(f.dup.shown||[]).slice(0,8), decision:f.dup.decision||(f._dupTop?'none':'no-match'), choice:f.dup.choice||null, ai:f.dup.ai||null, at})});
     feLS('ep-fe-draft',null);
     feClose(false);
     const owedTo=[...new Set(owedK.map(k=>(hf[k]||{}).to||v.raisedBy.id))].map(feName);
@@ -5673,7 +5825,7 @@ function feOpenEntry(id,refresh){
   const kv=(rows)=>{ const r=rows.filter(x=>x[1]!==''&&x[1]!=null); return r.length?'<dl class="sx-kv">'+r.map(([k,val])=>`<dt>${feE(k)}</dt><dd>${val}</dd>`).join('')+'</dl>':'<p class="sx-dim" style="margin:0">Not given yet. It raises the details % when added.</p>'; };
   const t=x=>x?feE(x):'<span class="sx-dim">not given</span>';
   const ev=Object.values(FE.ev[id]||{}).sort((a,b)=>String(b.at).localeCompare(String(a.at)));
-  const KW={fill:'filled in details',handoff:'handed details to',log:'logged it',sign:'signed the figure','decline-sign':'declined to sign',return:'sent it back for details',resubmit:'answered and resubmitted',review:'reviewed it',estimate:'estimated it',approve:'approved it to the ledger',pickup:'picked it up',edit:'edited it',withdraw:'withdrew it'};
+  const KW={unsign:'removed the signature',move:'moved it on',chain:'closed the chain',link:'linked',unlink:'unlinked',answer:'answered a question',fill:'filled in details',handoff:'handed details to',log:'logged it',sign:'signed the figure','decline-sign':'declined to sign',return:'sent it back for details',resubmit:'answered and resubmitted',review:'reviewed it',estimate:'estimated it',approve:'approved it to the ledger',pickup:'picked it up',edit:'edited it',withdraw:'withdrew it'};
   const stamps=[['Logged',true,feName(r.loggedBy)+', '+ppWhen(r.loggedAt)],['Figure signed',!!r.signature,r.signature?'':'waiting on '+((r.signer||{}).who||'the lever owner')],
     ...(v.funded&&v.funded.yes?[['Funding confirmed',!!r.fundedConfirmation,r.fundedConfirmation?'':'waiting on '+((r.fundingApprover||{}).who||'')]]:[]),
     ['Reviewed',!!r.review,''],['Estimated',!!r.estimate,''],['Approved to ledger',!!r.approval,'not a commitment to build'],['Picked up',!!r.pickup,'only the product-business meeting']];
@@ -5683,6 +5835,7 @@ function feOpenEntry(id,refresh){
       return `<div class="fe-owedbox"><div><b>Before it can be signed</b>, these details are owed:<ul>${ow.keys.map(k=>`<li>${feE(FE_OWED_L[k]||k)} <span class="small">· ${feE(feName((hf[k]||{}).to||(r.raisedBy||{}).id||r.loggedBy))}</span></li>`).join('')}</ul></div>
         ${feCanFill(r)?`<button type="button" class="ibtn primary" data-fefill="${feE(r._id)}">Fill in the details</button>`:'<span class="small">The people named fill them in from here.</span>'}</div>`; })()}
     <div class="fe-stamps">${stamps.map(([l,ok,sub])=>`<div class="fe-stamp${ok?' ok':''}"><b>${ok?'✓':'○'} ${feE(l)}</b><span>${feE(sub)}</span></div>`).join('')}</div>
+    ${window.btEntryHtml?window.btEntryHtml(r):''}
     <div class="fe-cols"><div>
       <div class="seclabel">The request</div>${kv([['Client',co?feE(cl.shortName(co.name)):t(v.client)],['Product area',t(v.productArea)],['Problem',t(v.problem)],['Evidence',t(v.evidence)],['Needed by',v.neededBy?feE(v.neededBy)+(v.urgencyReason?' · '+feE(v.urgencyReason):''):''],['Raised by',feE(feName((r.raisedBy||{}).id))+' · '+feE((FE_LAYERS.find(x=>x[0]===r.raisingLayer)||[,''])[1])],['Source',feE((FE_SOURCES.find(x=>x[0]===(r.source||{}).kind)||[,''])[1])+((r.source||{}).ref?' · '+feE(r.source.ref):'')]])}
       <div class="seclabel">Who it is for</div>${kv([['Customers',(v.customers||[]).map(c=>{const x=cl.company(c.client);return feE(x?cl.shortName(x.name):c.client)+(x&&x.tier?' (T'+x.tier+')':'')+(c.contact?' · '+feE(c.contact):'')+(c.how?' · '+feE(c.how):'')}).join('<br>')],['Users',feE((v.whoFor||[]).join(', '))],['User story',t(v.userStory)],['Today',t(v.currentWorkaround)]])}
@@ -5720,7 +5873,7 @@ function feOpenEntry(id,refresh){
 })();
 feBoot();
 
-document.addEventListener('toggle',e=>{ const t=e.target; if(t&&t.classList&&t.classList.contains('pp-about')) PP.aboutOpen=t.open; },true);
+document.addEventListener('toggle',e=>{ const t=e.target; if(t&&t.classList&&t.classList.contains('pp-about')) PP.aboutOpen=t.open; if(t&&t.classList&&t.classList.contains('pp-more')) PP.moreOpen=t.open; if(t&&t.classList&&t.classList.contains('dm-sighow')) DM.sigOpen=t.open; },true);
 window.addEventListener('ep-gate',()=>{ ppRender(); ppEdSync(true); });
 ppBoot();
 
@@ -5731,17 +5884,19 @@ const OB={prefs:null, db:null, uid:null, ready:false, tour:null, nudgeT:0, open:
 const EP_MY=window.EP_MY={on:false, set:new Set()};
 const OB_ROLES=[['sales','Sales'],['tam','TAM / customer success'],['pe','Product & engineering'],['delivery','Delivery'],['lead','Leadership']];
 const OB_LAND={sales:'overview',tam:'overview',pe:'pipeline',delivery:'delivery',lead:'overview'};
-const OB_TABN={overview:'Overview',ledger:'Clients',timeline:'Timeline',pipeline:'Requests',demand:'Demand',delivery:'Delivery',bugs:'Bugs',incidents:'Incidents',logic:'Rules',method:'Method & sources',refresh:'Data refresh'};
+const OB_TABN={overview:'Overview',ledger:'Clients',timeline:'Timeline',pipeline:'Requests',demand:'Demand',delivery:'Delivery',bugs:'Bugs',incidents:'Incidents',logic:'Rules',method:'Method & sources',refresh:'Sync & logs'};
 const OB_PRIV=new Set(['logic','method','refresh']);
 const obE=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 const obAjay=()=>!!(window.EP_ACCESS&&window.EP_ACCESS.ajay);
+const obHow=()=>!!(window.EP_ACCESS&&window.EP_ACCESS.how);
 // ---- the tours: a few steps per tab, each pointing at one thing
 const OB_TOURS={
-  overview:[['#tabs','Sections','Client health (Overview, Clients, Timeline) shows every client from their side. Work holds requests, demand, delivery, bugs and incidents.'],
+  overview:[['#tabs','Sections','Client health (Overview, Clients, Timeline) shows every client from their side. Product delivery holds requests, demand, delivery, bugs and incidents.'],
     ['#ov-strip','What needs attention','The strip sums up today: clients to act on, open incidents and shows coming up. Click a tile to jump to it.'],
     ['#ov-cal','The next 8 weeks of shows','Every show, coloured by risk: Act now, Watch, No flag, Clear. Click a show to open that client.'],
     ['#ov-radar','Shows at risk','Clients with a show inside the window, riskiest first. Change the window with 30, 60 or 90 days.'],
     ['#find-open','Find a client','Jump to any client from anywhere. Press / to open it.'],
+    ['#fb-open','Feedback','Happy, sad, or want something? Tell Ajay in two clicks. Only Ajay sees it, and replies come back to you here.'],
     ['#sync-pill','Always current','Jira refreshes itself at least every 4 hours for everyone. Click it to see when, and by whom.']],
   ledger:[['#f-tier','Filter the clients','Narrow by tier, owner or name. The count shows how many match.'],
     ['#t-ledger','One row per client','Health, what is broken for them and what we promised. Click a row to open the client.'],
@@ -5752,7 +5907,7 @@ const OB_TOURS={
     ['#tv-filters','Filters','Turn marks on or off, and show only clients at Act now, Watch or Clear.'],
     ['#tl','Client by month','One row per client, one cell per month. A flag marks a show. Click a cell for that month’s detail.']],
   pipeline:[['#rq-switch','Two ledgers','The Feature ledger holds new work items; the Must-have ledger holds what we promised clients.'],
-    ['#fl-new','Log a work item','Only five fields are needed to log. Anything you do not know can be handed to the colleague who does.'],
+    ['#fl-new','Log a work item','Logging is moving to a Claude skill (in progress): the button explains what happens meanwhile. Details handed to you can still be filled in from the item.'],
     ['#fl-host .fe-tab','Where each item is','Every item shows its step, and who it is waiting on. Click one to see it on the flow.'],
     ['#fl-host [data-fewalk]','See it end to end','A sample item walked through every step, for calls or on your own.']],
   demand:[['#dm-q','Search in your own words','Describe a need; the closest asks, needs and built stories appear as you type.'],
@@ -5765,7 +5920,7 @@ const OB_TOURS={
   incidents:[['#chart-inc','Incidents by month','Production incidents from Jira IMP, kept current by the refresh.'],['#t-inc','Every incident','Newest first, with the client, event and status.']],
   logic:[['#lg-group','The rules','Every rule behind the page, grouped. Only you see this tab.']],
   method:[['#t-model','How health is scored','The model and its sources. Only you see this tab.']],
-  refresh:[['#rf-host .rf-tab','Every source','How fresh each one is, and a pull of only what changed.'],['#rf-host [data-rfall]','Pull all deltas','Pull every source the page can reach in one go.']]};
+  refresh:[['#sl-sub','Two views','Data refresh keeps every source current; History lists every change anyone made, with who and when.'],['#rf-host .rf-tab','Every source','How fresh each one is, and a pull of only what changed.'],['#rf-host [data-rfall]','Pull all deltas','Pull every source the page can reach in one go.']]};
 const OB_WHAT={overview:'Today at a glance: which clients have a show coming, how risky it looks, and what is open for them.',
   ledger:'Every client, with health, open problems and promises. Click a client for everything about them.',
   timeline:'Month by month for each client: shows, delivery and problems, so you can see what is landing before a show.',
@@ -5773,20 +5928,22 @@ const OB_WHAT={overview:'Today at a glance: which clients have a show coming, ho
   demand:'What clients are asking for, grouped into needs, so the same request is not logged twice.',
   delivery:'What was built and is being built, by client, month and product area.',
   bugs:'Open client bugs from Jira EP, with priority and age.', incidents:'Production incidents from Jira IMP.',
-  logic:'The rules and thresholds behind every number. Private to you.', method:'How the health score and the sources work. Private to you.', refresh:'Freshness of every source and delta pulls. Private to you.'};
+  logic:'The rules and thresholds behind every number. Private to you.', method:'How the health score and the sources work. Private to you.', refresh:'Sync & logs: freshness of every source with delta pulls (Data refresh), and every change anyone made, with who and when (History). Private to you.'};
 const OB_GLOSS=[['Tier','Sales Tier from Planhat: 1 is the most valuable client, 4 the least.'],['Health','Planhat health score, 0 to 10; bugs and incidents lower it.'],
   ['Act now · Watch · No flag · Clear','The risk before a client’s next show: Act now means something open trips a risk rule; Clear means nothing is open.'],
   ['Show','A client event from Jira OP, with its dates.'],['Must-have ledger','What we promised a client, with the month it should land.'],
   ['Feature ledger','New work items, from logging to done, each with one value lever and one £ figure.'],
   ['Value lever','Why an item is worth doing: increase revenue, retain revenue, reduce cost or avoid cost. Exactly one.'],
   ['Signer','The person who stands behind the £ figure: Sales (Chris) for revenue, Operations (Susan or Ilaria) for cost.'],
-  ['Funded','The client pays towards the item.'],['Build cost · Net value','Build cost is the estimate in days × the day rate; net value is the figure minus the build cost.'],
+  ['Funded','The client pays towards the item. Funded on 28 Sep 2026: all Hyve dedicated team work, the IMEX AI Search project, and Vinexposium’s required custom filters.'],['Build cost · Net value','Build cost is the estimate in days × the day rate; net value is the figure minus the build cost.'],
   ['Before signing','A field that is not needed to log but must be filled before the figure is signed. It can be handed to a colleague.'],
   ['Needs details','An item sent back to the requester with questions; it keeps its place and returns to the same step.'],
   ['On the ledger · not scheduled','Approved and ranked, but not yet a commitment to build. Only the product-business meeting picks items up.'],
-  ['Need','A group of requests asking for the same thing, in the demand map.'],['Incident','A production problem logged in Jira IMP.'],
+  ['Need','A group of requests asking for the same thing, in the demand map.'],
+  ['Signal (Demand)','Who is asking for a need: every distinct customer adds its Sales Tier weight, T1 8 · T2 4 · T3 2 · T4 1 (not on the ledger 0). A customer counts once however many tickets they raised. It follows the Demand filters and is not a priority score.'],['Incident','A production problem logged in Jira IMP.'],
   ['Bug priority','Urgent, High, Medium, Low, from Jira EP.'],['Hyve dedicated team','A team working only for Hyve; its tickets live in Jira HV.'],
-  ['Delta refresh','Pulling only what changed since the last pull, never everything again.']];
+  ['Delta refresh','Pulling only what changed since the last pull, never everything again.'],
+  ['Feedback','Happy, Sad or Want: tell Ajay what works, what does not and what you would like. Only Ajay sees it; replies come back in the Guide, under Feedback.']];
 // ---- preferences
 function obLS(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){} return null; }
 async function obLoad(){
@@ -5845,7 +6002,7 @@ function obCloseWelcome(){ const d=document.getElementById('ob-welcome'); if(!d)
 // ---- tours: spotlight + card
 function obSteps(tab){ return (OB_TOURS[tab]||[]).filter(([sel])=>{ const el=document.querySelector(sel); if(!el) return false; const r=el.getBoundingClientRect(); return r.width>0&&r.height>0; }); }
 function obStartTour(tab){
-  tab=tab||obCurTab(); if(OB_PRIV.has(tab)&&!obAjay()) return;
+  tab=tab||obCurTab(); if(OB_PRIV.has(tab)&&!obHow()) return;
   obNudgeHide(); const d=document.getElementById('ob-welcome'); if(d) obCloseWelcome(); obGuide(false);
   if(obCurTab()!==tab){ const cl=CLB(); if(cl&&cl.showTab) cl.showTab(tab); }
   setTimeout(()=>{ const st=obSteps(tab); if(!st.length){ uiToast('Nothing to show on this tab yet.'); return; } OB.tour={tab, steps:st, i:0}; obPaintTour(); },120);
@@ -5853,7 +6010,7 @@ function obStartTour(tab){
 function obEndTour(done){ const t=OB.tour; OB.tour=null; ['ob-spot','ob-card'].forEach(id=>{ const e=document.getElementById(id); if(e) e.remove(); });
   if(t&&done){ OB.prefs.tours[t.tab]=true; obSave(); const nx=obNextTour(); uiToast(obTabName(t.tab)+' tour done.'+(nx?'':' You have seen every tour.'),nx?{action:'Next: '+obTabName(nx),onAction:()=>obStartTour(nx)}:{}); } }
 const obTabName=t=>OB_TABN[t]||t;
-function obNextTour(){ const order=Object.keys(OB_TOURS).filter(t=>!OB_PRIV.has(t)||obAjay()); return order.find(t=>!OB.prefs.tours[t]&&document.querySelector('.tab[data-tab="'+t+'"]'))||null; }
+function obNextTour(){ const order=Object.keys(OB_TOURS).filter(t=>!OB_PRIV.has(t)||obHow()); return order.find(t=>!OB.prefs.tours[t]&&document.querySelector('.tab[data-tab="'+t+'"]'))||null; }
 function obPaintTour(){
   const t=OB.tour; if(!t) return; const [sel,title,text]=t.steps[t.i], el=document.querySelector(sel); if(!el){ obEndTour(false); return; }
   { const r=el.getBoundingClientRect(); if(r.top<70||r.bottom>innerHeight-190) el.scrollIntoView({block:r.height>innerHeight-260?'start':'center',behavior:'auto'}); }
@@ -5873,7 +6030,10 @@ function obPlace(el,spot,card){
   const cw=card.offsetWidth, ch=card.offsetHeight, gap=12;
   const opts=[[r.left,r.bottom+gap],[r.left,r.top-gap-ch],[r.right+gap,r.top],[r.left-gap-cw,r.top]];
   const fits=([cx,cy])=>cy>=8&&cy+ch<=vh-8&&cx>=8-cw&&true;
-  let [cx,cy]=opts.find(([a,b2])=>b2>=8&&b2+ch<=vh-8&&!(a<r.right&&a+cw>r.left&&b2<r.bottom&&b2+ch>r.top))||[vw-cw-16,vh-ch-16];
+  const clear=([a,b2])=>{ const x=Math.max(8,Math.min(vw-cw-8,a)); return b2>=8&&b2+ch<=vh-8&&!(x<r.right&&x+cw>r.left&&b2<r.bottom&&b2+ch>r.top); };
+  // a tall target (taller than the room left): try beside it at the top of the viewport, then either lower corner
+  const side=[[r.right+gap,Math.max(8,r.top)],[r.left-gap-cw,Math.max(8,r.top)],[r.right+gap,vh-ch-8],[r.left-gap-cw,vh-ch-8],[vw-cw-8,vh-ch-8],[8,vh-ch-8]].filter(([a])=>a>=8&&a+cw<=vw-8);
+  let [cx,cy]=opts.find(clear)||side.find(clear)||[vw-cw-16,vh-ch-16];
   cx=Math.max(8,Math.min(vw-cw-8,cx)); cy=Math.max(8,Math.min(vh-ch-8,cy));
   if(cx<r.right&&cx+cw>r.left&&cy<r.bottom&&cy+ch>r.top){ // still covering the target: move to the side with more room
     cy=(r.top>vh-r.bottom)?Math.max(8,r.top-gap-ch):Math.min(vh-ch-8,r.bottom+gap); }
@@ -5881,7 +6041,7 @@ function obPlace(el,spot,card){
 }
 // ---- a first-visit nudge per tab (floating, never in the layout)
 function obNudge(tab){
-  if(!OB.ready||!OB.prefs||OB.prefs.skipped||!OB.prefs.welcomed||OB.tour||OB.prefs.tours[tab]||OB.prefs.nudged[tab]||!OB_TOURS[tab]||(OB_PRIV.has(tab)&&!obAjay())) return;
+  if(!OB.ready||!OB.prefs||OB.prefs.skipped||!OB.prefs.welcomed||OB.tour||document.getElementById('fb-nudge')||OB.prefs.tours[tab]||OB.prefs.nudged[tab]||!OB_TOURS[tab]||(OB_PRIV.has(tab)&&!obHow())) return;
   if(!obSteps(tab).length) return;
   OB.prefs.nudged[tab]=true; obSave(); obNudgeHide();
   const n=document.createElement('div'); n.id='ob-nudge'; n.className='ob-nudge'; n.setAttribute('role','status');
@@ -5917,7 +6077,7 @@ function obGuide(open){
 }
 function obPaintGuide(){
   const p=document.getElementById('ob-guide'); if(!p) return; const tab=obCurTab(), pr=OB.prefs||{tours:{}}, cl=CLB();
-  const tours=Object.keys(OB_TOURS).filter(t=>(!OB_PRIV.has(t)||obAjay())&&document.querySelector('.tab[data-tab="'+t+'"]'));
+  const tours=Object.keys(OB_TOURS).filter(t=>(!OB_PRIV.has(t)||obHow())&&document.querySelector('.tab[data-tab="'+t+'"]'));
   const done=tours.filter(t=>pr.tours[t]).length;
   let body='';
   if(OB.pane==='tours') body=`<div class="ob-what"><b>What am I looking at?</b> ${obE(OB_WHAT[tab]||'')}</div>
@@ -5929,25 +6089,29 @@ function obPaintGuide(){
       <textarea id="ob-aq" class="ob-in" rows="3" placeholder="e.g. How do I log a request for a funded client?">${obE(OB.ask.q)}</textarea>
       <div class="ob-ask-acts"><button type="button" class="ibtn primary" data-obask${OB.ask.busy?' disabled':''}>${OB.ask.busy?'Thinking…':'Ask'}</button></div>
       ${OB.ask.err?`<div class="small ob-err">${obE(OB.ask.err)}</div>`:''}<div class="ob-ans" id="ob-ans"${OB.ask.a?'':' hidden'}></div>`;
+  else if(OB.pane==='fb') body=fbPane();
   else { const mine=EP_MY.set, all=cl?cl.activeClients().slice().sort((a,b)=>cl.shortName(a.name).localeCompare(cl.shortName(b.name))):[], q=String(OB.myq||'').toLowerCase();
-    body=`<div class="ob-set"><div class="ob-w-l">Your role</div><div class="ob-roles sm">${OB_ROLES.map(([k,l])=>`<button type="button" class="ob-role" data-obrole="${k}" aria-pressed="${pr.role===k}">${obE(l)}</button>`).join('')}</div>
+    body=`${obAjay()?fbInboxCta():''}<div class="ob-set"><div class="ob-w-l">Your role</div><div class="ob-roles sm">${OB_ROLES.map(([k,l])=>`<button type="button" class="ob-role" data-obrole="${k}" aria-pressed="${pr.role===k}">${obE(l)}</button>`).join('')}</div>
       <div class="ob-w-l">My clients <span class="small">${mine.size} chosen · filters Overview, Clients and Timeline</span></div>
       <input type="search" id="ob-myq" class="ob-in" placeholder="Find a client" value="${obE(OB.myq||'')}" autocomplete="off">
       <div class="ob-myl">${all.filter(c=>!q||c.name.toLowerCase().includes(q)).map(c=>`<label><input type="checkbox" data-obmy="${obE(c.pd)}"${mine.has(c.pd)?' checked':''}> ${obE(cl.shortName(c.name))}<span class="small">${c.owner?obE(c.owner):''}</span></label>`).join('')}</div>
       <div class="ob-set-acts"><button type="button" class="linkbtn" data-obrestart>Start onboarding again</button></div></div>`; }
   p.innerHTML=`<div class="ob-g-top"><b>Guide</b><button type="button" class="ob-x" data-obclose aria-label="Close the guide">&#215;</button></div>
-    <div class="ob-g-tabs" role="tablist">${[['tours','Tours'],['terms','Glossary'],['ask','Ask'],['me','You']].map(([k,l])=>`<button type="button" role="tab" data-obpane="${k}" aria-selected="${OB.pane===k}">${l}</button>`).join('')}</div>
+    <div class="ob-g-tabs" role="tablist">${[['tours','Tours'],['terms','Glossary'],['ask','Ask'],['fb','Feedback'],['me','You']].map(([k,l])=>`<button type="button" role="tab" data-obpane="${k}" aria-selected="${OB.pane===k}">${l}${k==='fb'&&fbUnread()?'<i class="fb-dot" aria-label="new reply"></i>':''}</button>`).join('')}</div>
     <div class="ob-g-body">${body}</div>`;
   if(OB.pane==='ask'&&OB.ask.a){ const a=p.querySelector('#ob-ans'); if(a) a.textContent=OB.ask.a; }
+  if(OB.pane==='fb') fbMarkSeen();
 }
 function obCorpus(){
-  const lines=['PAGE SECTIONS:'].concat(Object.keys(OB_WHAT).filter(t=>!OB_PRIV.has(t)||obAjay()).map(t=>'- '+obTabName(t)+': '+OB_WHAT[t]));
-  lines.push('HOW TO USE EACH SECTION:'); Object.keys(OB_TOURS).filter(t=>!OB_PRIV.has(t)||obAjay()).forEach(t=>OB_TOURS[t].forEach(([,h,x])=>lines.push('- '+obTabName(t)+' / '+h+': '+x)));
+  const lines=['PAGE SECTIONS:'].concat(Object.keys(OB_WHAT).filter(t=>!OB_PRIV.has(t)||obHow()).map(t=>'- '+obTabName(t)+': '+OB_WHAT[t]));
+  lines.push('HOW TO USE EACH SECTION:'); Object.keys(OB_TOURS).filter(t=>!OB_PRIV.has(t)||obHow()).forEach(t=>OB_TOURS[t].forEach(([,h,x])=>lines.push('- '+obTabName(t)+' / '+h+': '+x)));
   lines.push('TERMS:'); OB_GLOSS.forEach(([t,d])=>lines.push('- '+t+': '+d));
   lines.push('FEATURE LEDGER FLOW: 1 Draft (requester) → 2 Awaiting signature (lever owner signs the £ figure; Chris for revenue, Susan or Ilaria for cost; funded items raised by Sales or the relationship team: Chris only) → 3 Awaiting review (Ajay, weekly) → 4 Awaiting estimate (Bartosz, person-days) → 5 Awaiting approval (Ajay) → 6 On the ledger · not scheduled → 7 Picked up (only the product-business meeting commits, with team and dates) → 8 In delivery (Jira) → 9 Delivered · check due (did the figure hold?) → 10 Done. Needs details sends an item back to the requester; it returns to the same step. Approval is not a commitment to build.');
-  lines.push('LOGGING: only raised by, title, client (or Platform), product area ("Not sure" allowed) and the problem are needed to log. Other fields are needed before signing and can be handed to a colleague with "Don\'t know? Hand this to a colleague"; they fill them in from the item with "Fill in the details". Search the demand map first (step 0) so the same need is not logged twice.');
+  lines.push('LOGGING NOW: logging a new work item is moving to a Claude skill and is in progress; the Log button shows a placeholder, so until then people ask Ajay to log it. Filling in details handed to you still works from the item.');
+  lines.push('LOGGING (the form, for reference): only raised by, title, client (or Platform), product area ("Not sure" allowed) and the problem are needed to log. Other fields are needed before signing and can be handed to a colleague with "Don\'t know? Hand this to a colleague"; they fill them in from the item with "Fill in the details". Search the demand map first (step 0) so the same need is not logged twice.');
+  lines.push('FEEDBACK: the Feedback button in the header (or the Guide, Feedback) sends Ajay a Happy, Sad or Want note about the page. Only Ajay sees it; Ajay can reply, and replies show in the Guide under Feedback.');
   lines.push('DATA: Jira bugs and stories refresh at least every 4 hours for everyone; incidents and events refresh on visits too.');
-  if(!obAjay()) lines.push('PRIVATE: the Must-have ledger, Rules, Method & sources and Data refresh are private to Ajay for now; say so if asked and do not describe their rules.');
+  if(!obHow()) lines.push('PRIVATE: Rules, Method & sources and Sync & logs (the Settings tabs) are open only to Ajay and the Settings viewers; say so if asked and do not describe their rules. The Must-have ledger is open to everyone.');
   return lines.join('\n');
 }
 async function obAsk(){
@@ -5968,7 +6132,7 @@ function obBoot(){
   obLoad().then(()=>{
     obGreet();
     const p=OB.prefs, h=String(location.hash||'').replace('#','');
-    if(!h&&p.welcomed){ const land=p.lastTab||OB_LAND[p.role]; if(land&&land!=='overview'&&(!OB_PRIV.has(land)||obAjay())){ const cl=CLB(); if(cl&&cl.showTab) cl.showTab(land); } }
+    if(!h&&p.welcomed){ const land=p.lastTab||OB_LAND[p.role]; if(land&&land!=='overview'&&(!OB_PRIV.has(land)||obHow())){ const cl=CLB(); if(cl&&cl.showTab) cl.showTab(land); } }
     if(!p.welcomed&&!p.skipped) obWelcome();
     if(EP_MY.on) obRerender();
   });
@@ -5977,7 +6141,7 @@ function obBoot(){
 document.addEventListener('click',e=>{ const t=e.target; let b;
   if(t.closest('#ob-pill')){ obGuide(!OB.open); return; }
   if(t.closest('[data-obclose]')){ obGuide(false); return; }
-  if((b=t.closest('[data-obpane]'))){ OB.pane=b.dataset.obpane; obPaintGuide(); return; }
+  if((b=t.closest('[data-obpane]'))){ OB.pane=b.dataset.obpane; if(OB.pane==='fb') fbStartDraft(); obPaintGuide(); return; }
   if((b=t.closest('[data-obrole]'))){ OB.prefs.role=b.dataset.obrole; obSave(); document.querySelectorAll('[data-obrole]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.obrole===OB.prefs.role))); return; }
   if(t.closest('[data-obgo]')){ obCloseWelcome(); obStartTour('overview'); return; }
   if(t.closest('[data-oblater]')){ obCloseWelcome(); uiToast('The Guide is in the corner whenever you want it.'); return; }
@@ -6005,3 +6169,1147 @@ document.addEventListener('keydown',e=>{
 },true);
 addEventListener('resize',()=>{ if(OB.tour) obPaintTour(); });
 window.addEventListener('ep-gate',()=>{ if((window.GATE||{}).ok) obBoot(); else obBoot(); });
+
+// ================= Feedback: Happy / Sad / Want (28 Sep 2026) =================
+// Each person's feedback lives in their own subtree: feedback/<id> (a marker the inbox lists), feedback/<id>/items/<fid> (written by them)
+// and feedback/<id>/replies/<fid> (written by Ajay: status, theme, messages). The database rules make feedback/ readable and writable only
+// by the artifact's owner, and each feedback/<id> by that person as well, so nobody else can read anyone's feedback. Ids only, never names.
+const FB={db:null, uid:null, mine:{}, rep:{}, draft:{mood:'',text:'',weight:'',where:null,attach:true}, busy:false, err:'', sent:false, booted:false,
+  inbox:{users:{}, items:{}, rep:{}, watch:{}, names:{}, loaded:false, busy:false, err:'', view:'list', open:null, dr:{}, dirty:false, f:{mood:'',status:'open',q:'',theme:''}}};
+const FB_MOODS=[['happy','Happy','Something works well'],['sad','Sad','Confusing, wrong or slow'],['want','Want','Something you would like']];
+const FB_PH={happy:'What works well for you? What should we keep?',sad:'What went wrong, or what was confusing? What did you expect to happen?',want:'What should it do? What would it help you with?'};
+const FB_W=[['nice','Nice to have'],['important','Important'],['blocking','Blocking me']], FB_WN=Object.fromEntries(FB_W);
+const FB_ST=[['new','New'],['planned','Planned'],['building','Building'],['shipped','Shipped'],['wont','Won’t do']], FB_STN=Object.fromEntries(FB_ST);
+const FB_OPEN=new Set(['new','planned','building']);
+const FB_ST_REPLY={planned:'Thanks for this. It is now planned.',building:'Thanks for this. We are building it now.',shipped:'This has shipped. Have a look and tell me what you think.',wont:'Thanks for this. We are not doing it for now, because '};
+const fbP=(uid,sub,id)=>'feedback/'+uid+(sub?'/'+sub+(id?'/'+id:''):'');
+const fbWhen=t=>{ if(!t) return ''; const d=new Date(t); if(isNaN(d)) return ''; const days=Math.floor((Date.now()-d)/864e5);
+  return days<1&&new Date().toDateString()===d.toDateString()?'today':days<2?'yesterday':d.toLocaleDateString('en-GB',{day:'numeric',month:'short'}); };
+const fbWhereTxt=w=>!w?'':(OB_TABN[w.tab]||w.tab||'')+(w.pop?' › '+w.pop:'');
+function fbFace(k,s){
+  const mouth=k==='happy'?'<path d="M8.5 14.2c1.9 2.2 5.1 2.2 7 0"/>':'<path d="M8.5 16.4c1.9-2.2 5.1-2.2 7 0"/>';
+  const inner=k==='want'?'<path class="fb-fill" d="M12 6.2l1.6 3.9 4.2.3-3.2 2.7 1 4.1L12 15l-3.6 2.2 1-4.1-3.2-2.7 4.2-.3z"/>':'<circle cx="8.8" cy="9.8" r="1.2" class="fb-fill"/><circle cx="15.2" cy="9.8" r="1.2" class="fb-fill"/>'+mouth;
+  return `<svg class="fb-face m-${k}" width="${s}" height="${s}" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/>${inner}</svg>`; }
+// where the viewer is when they start: the tab, and the open pop-up or client if any
+function fbWhere(){ const tab=obCurTab(); let pop='';
+  const mo=document.getElementById('modal'); if(mo&&mo.hasAttribute('open')){ const h=mo.querySelector('.top h3'); pop=h?h.textContent.trim():''; }
+  if(!pop){ const c=document.getElementById('c360'); if(c&&!c.hidden){ const h=c.querySelector('h2,h3'); pop=h?h.textContent.trim():''; } }
+  if(!pop&&document.getElementById('fe-m')) pop='Log a work item';
+  return {tab, pop:pop.replace(/\s+/g,' ').slice(0,90)}; }
+function fbStartDraft(){ if(FB.sent) FB.sent=false; if(!FB.draft.text) FB.draft.where=fbWhere(); }
+// ---- the viewer's own feedback and Ajay's replies
+async function fbBoot(){
+  const g=window.GATE||{}; if(FB.booted||!g.ok||!g.uid) return; FB.booted=true; FB.uid=g.uid;
+  try{ FB.db=await window.claude.use('db'); }catch(e){ FB.db=null; }
+  const b=document.getElementById('fb-open'); if(b){ b.hidden=false; if(obAjay()){ document.getElementById('fb-open-l').textContent='Feedback inbox'; b.setAttribute('aria-label','Feedback inbox, only you see it'); } }
+  if(!FB.db) return;
+  FB.db.collection(fbP(FB.uid,'items')).onSnapshot(s=>{ const m={}; s.docs.forEach(d=>{ m[d.id]=d.data()||{}; }); FB.mine=m; fbRefresh(); },()=>{});
+  FB.db.collection(fbP(FB.uid,'replies')).onSnapshot(s=>{ const m={}; s.docs.forEach(d=>{ m[d.id]=d.data()||{}; }); FB.rep=m; fbRefresh(); fbReplyNudge(); },()=>{});
+  if(obAjay()) fbInboxLoad();
+}
+const fbLastReply=id=>{ const ms=(FB.rep[id]||{}).msgs||[]; return ms.length?String(ms[ms.length-1].at||''):''; };
+function fbUnread(){ const seen=(OB.prefs&&OB.prefs.fbSeen)||{}; return Object.keys(FB.rep).filter(id=>FB.mine[id]&&fbLastReply(id)&&fbLastReply(id)>(seen[id]||'')).length; }
+function fbMarkSeen(){ if(!OB.prefs) return; const seen=OB.prefs.fbSeen=OB.prefs.fbSeen||{}; let ch=false;
+  Object.keys(FB.rep).forEach(id=>{ const l=fbLastReply(id); if(l&&l>(seen[id]||'')){ seen[id]=l; ch=true; } });
+  if(ch){ obSave(); setTimeout(()=>{ fbBadge(); const n=document.getElementById('fb-nudge'); if(n) n.remove(); },0); } }
+function fbBadge(){ const b=document.getElementById('fb-badge'); if(!b) return; const n=obAjay()?fbInboxNew():fbUnread();
+  b.hidden=!n; b.textContent=n; b.setAttribute('aria-label',obAjay()?n+' new':n+' new repl'+(n===1?'y':'ies')); }
+function fbTyping(){ const a=document.activeElement; return !!(a&&(a.id==='fb-text'||a.id==='fb-rt'||a.id==='fb-th')); }
+function fbRefresh(){ fbBadge(); if(OB.open&&!fbTyping()) obPaintGuide(); }
+function fbReplyNudge(){
+  if(!OB.ready||!OB.prefs){ setTimeout(fbReplyNudge,1500); return; }
+  if((OB.open&&OB.pane==='fb')||document.getElementById('fb-nudge')||OB.tour) return;
+  const nd=OB.prefs.fbNudged=OB.prefs.fbNudged||{}, seen=OB.prefs.fbSeen||{};
+  const fresh=Object.keys(FB.rep).filter(id=>{ const l=fbLastReply(id); return FB.mine[id]&&l&&l>(seen[id]||'')&&l>(nd[id]||''); });
+  if(!fresh.length) return; fresh.forEach(id=>{ nd[id]=fbLastReply(id); }); obSave(); obNudgeHide();
+  const n=document.createElement('div'); n.id='fb-nudge'; n.className='ob-nudge fb-nudge'; n.setAttribute('role','status');
+  n.innerHTML=`${fbFace('happy',18)}<span><b>Ajay replied</b> to your feedback.</span><button type="button" class="ibtn primary" data-fbread>Read</button><button type="button" class="linkbtn" data-fbnx>Later</button>`;
+  document.body.appendChild(n); }
+async function fbSend(){
+  const d=FB.draft, t=String(d.text||'').trim();
+  if(!d.mood){ FB.err='Pick Happy, Sad or Want first.'; obPaintGuide(); return; }
+  if(t.length<3){ FB.err='Write a line about it first.'; obPaintGuide(); const x=document.getElementById('fb-text'); if(x) x.focus(); return; }
+  if(!FB.db||!FB.uid){ FB.err='Feedback cannot be saved in this view of the page.'; obPaintGuide(); return; }
+  FB.busy=true; FB.err=''; obPaintGuide();
+  const id='f'+Date.now().toString(36)+Math.random().toString(36).slice(2,6), at=new Date().toISOString();
+  const doc={mood:d.mood, text:t.slice(0,2000), weight:d.weight||'', where:d.attach&&d.where?d.where:null, at, by:FB.uid};
+  try{ await FB.db.doc(fbP(FB.uid,'items',id)).set(doc);
+    await FB.db.doc(fbP(FB.uid)).set({by:FB.uid, last:at, n:Object.keys(FB.mine).length+(FB.mine[id]?0:1)});
+    FB.mine[id]=doc; FB.draft={mood:'',text:'',weight:'',where:null,attach:true}; FB.sent=true; }
+  catch(e){ const c=e&&e.code; FB.err=c==='invalid_argument'||c==='permission_denied'||c==='not_granted'?'Your access to this page cannot save feedback. Ask Ajay to give you “Can interact”.':'Not sent ('+(c||'error')+'). Try again.'; }
+  FB.busy=false; obPaintGuide(); fbBadge(); }
+function fbInboxCta(){ const n=fbInboxNew(), all=fbInboxAll().length;
+  return `<button type="button" class="fb-inboxcta" data-fbinbox><span class="fb-ic">${fbFace('want',22)}</span><span class="fb-it"><b>Feedback inbox</b><span class="small">${n?n+' new · ':''}${all} in all · only you see it</span></span><span class="arw" aria-hidden="true">›</span></button>`; }
+function fbPane(){
+  const d=FB.draft, mine=Object.entries(FB.mine).sort((a,b)=>String(b[1].at).localeCompare(String(a[1].at)));
+  let h=obAjay()?fbInboxCta():'';
+  if(FB.sent) h+=`<div class="fb-thanks">${fbFace('happy',26)}<div><b>Thank you.</b> Ajay reads every one, and replies show up here.<div><button type="button" class="linkbtn" data-fbmore>Send more feedback</button></div></div></div>`;
+  else {
+    h+=`<div class="fb-q"><b>How is the ledger working for you?</b><span class="small">Only Ajay sees what you send.</span></div>
+      <div class="fb-moods" role="group" aria-label="Your feedback is">${FB_MOODS.map(([k,l,s])=>`<button type="button" class="fb-mood m-${k}" data-fbmood="${k}" aria-pressed="${d.mood===k}">${fbFace(k,28)}<b>${l}</b><span>${s}</span></button>`).join('')}</div>`;
+    if(d.mood) h+=`<textarea id="fb-text" class="ob-in" rows="4" maxlength="2000" placeholder="${obE(FB_PH[d.mood])}" aria-label="Your feedback">${obE(d.text)}</textarea>
+      <div class="fb-w"><span class="small">How much does it matter?</span><span class="seg" role="group" aria-label="How much it matters">${FB_W.map(([k,l])=>`<button type="button" data-fbw="${k}" aria-pressed="${d.weight===k}">${l}</button>`).join('')}</span></div>
+      ${d.where&&d.where.tab?`<label class="fb-where"><input type="checkbox" id="fb-attach"${d.attach?' checked':''}> <span>About <b>${obE(fbWhereTxt(d.where))}</b></span></label>`:''}
+      ${FB.err?`<div class="small ob-err" role="alert">${obE(FB.err)}</div>`:''}
+      <div class="fb-acts"><button type="button" class="linkbtn" data-fbcancel>Cancel</button><button type="button" class="ibtn primary" data-fbsend${FB.busy?' disabled':''}>${FB.busy?'Sending…':'Send to Ajay'}</button></div>`;
+    else if(FB.err) h+=`<div class="small ob-err" role="alert">${obE(FB.err)}</div>`;
+  }
+  if(mine.length){ const seen=(OB.prefs&&OB.prefs.fbSeen)||{};
+    h+=`<div class="ob-w-l">Your feedback <span class="small">${mine.length} sent · status and replies from Ajay</span></div><div class="fb-list">${mine.map(([id,f])=>{ const r=FB.rep[id]||{}, st=r.status||'new', ms=r.msgs||[], un=fbLastReply(id)>(seen[id]||'');
+      return `<div class="fb-item${un?' unread':''}"><div class="fb-ih">${fbFace(f.mood,18)}<span class="fb-st s-${st}">${st==='new'?'Sent':obE(FB_STN[st]||st)}</span>${un?'<span class="fb-new">New reply</span>':''}<span class="small">${obE(fbWhen(f.at))}</span></div>
+        <div class="fb-tx">${obE(f.text)}</div>${ms.map(m=>`<div class="fb-reply"><div class="fb-rb"><b>Ajay</b><span class="small">${obE(fbWhen(m.at))}</span></div><div>${obE(m.text)}</div></div>`).join('')}</div>`; }).join('')}</div>`; }
+  return h; }
+// ---- Ajay's inbox and roadmap
+function fbInboxLoad(){ const I=FB.inbox; if(I.sub||!FB.db) return;
+  I.sub=FB.db.collection('feedback').onSnapshot(s=>{ s.docs.forEach(d=>{ const uid=d.id; I.users[uid]=d.data()||{}; if(I.watch[uid]) return; I.watch[uid]=true;
+      FB.db.collection(fbP(uid,'items')).onSnapshot(x=>{ const m={}; x.docs.forEach(q=>{ m[q.id]=q.data()||{}; }); I.items[uid]=m; fbInboxChanged(); },()=>{});
+      FB.db.collection(fbP(uid,'replies')).onSnapshot(x=>{ const m={}; x.docs.forEach(q=>{ m[q.id]=q.data()||{}; }); I.rep[uid]=m; fbInboxChanged(); },()=>{}); });
+    I.loaded=true; fbInboxChanged(); },()=>{ I.loaded=true; I.err='The inbox could not be read.'; fbInboxChanged(); }); }
+function fbInboxAll(){ const I=FB.inbox, out=[];
+  Object.entries(I.items).forEach(([uid,m])=>Object.entries(m||{}).forEach(([id,f])=>{ const r=(I.rep[uid]||{})[id]||{}; out.push(Object.assign({},f,{_id:id,_u:uid,_r:r,_st:r.status||'new',_th:r.theme||''})); }));
+  return out.sort((a,b)=>String(b.at).localeCompare(String(a.at))); }
+const fbInboxNew=()=>obAjay()?fbInboxAll().filter(x=>x._st==='new').length:0;
+const fbName=uid=>uid===FB.uid?'You':(FB.inbox.names[uid]||'Someone');
+const fbThemes=()=>[...new Set(fbInboxAll().map(x=>x._th).filter(Boolean))].sort();
+async function fbNames(){ const I=FB.inbox, u=(window.GATE||{}).user, ids=Object.keys(I.items).filter(id=>!(id in I.names)&&id!==FB.uid);
+  if(!u||!u.profiles||!ids.length) return; ids.forEach(i=>{ I.names[i]=''; });
+  try{ const ps=await u.profiles(ids); ids.forEach(i=>{ I.names[i]=(ps[i]&&ps[i].name)||''; }); fbInboxChanged(true); }catch(e){} }
+function fbInboxChanged(noNames){ fbBadge(); if(!noNames) fbNames();
+  if(document.getElementById('fb-in')){ if(fbTyping()) FB.inbox.dirty=true; else fbPaintInbox(); }
+  if(OB.open&&(OB.pane==='me'||OB.pane==='fb')&&!fbTyping()) obPaintGuide(); }
+function fbOpenInbox(){ if(!obAjay()) return; obGuide(false); fbInboxLoad();
+  let el=document.getElementById('fb-in'); if(!el){ el=document.createElement('div'); el.id='fb-in'; el.className='modal fb-in'; el.setAttribute('open',''); document.body.appendChild(el); }
+  fbPaintInbox(); const x=el.querySelector('.x'); if(x) x.focus({preventScroll:true}); }
+function fbCloseInbox(){ const el=document.getElementById('fb-in'); if(el) el.remove(); const b=document.getElementById('fb-open'); if(b) b.focus({preventScroll:true}); }
+function fbPaintInbox(){
+  const el=document.getElementById('fb-in'); if(!el) return; const I=FB.inbox, all=fbInboxAll(), f=I.f; I.dirty=false;
+  const sc=el.querySelector('.fb-body'), top=sc?sc.scrollTop:0, nNew=fbInboxNew();
+  const list=all.filter(x=>(!f.mood||x.mood===f.mood)&&(f.status==='all'||(f.status==='open'?FB_OPEN.has(x._st):x._st===f.status))&&(!f.theme||x._th===f.theme)
+    &&(!f.q||[x.text,x._th,fbName(x._u),fbWhereTxt(x.where)].join(' ').toLowerCase().includes(f.q.toLowerCase())));
+  const body=I.view==='road'?fbRoad(all):(list.length?list.map(fbInRow).join(''):`<div class="empty">${all.length?'Nothing matches these filters.':I.err?obE(I.err):I.loaded?'No feedback yet. When someone sends some, it shows up here.':'Loading…'}</div>`);
+  el.innerHTML=`<div class="scrim" data-fbinx></div><div class="box fb-box" role="dialog" aria-modal="true" aria-labelledby="fb-in-h">
+    <div class="top"><div class="fb-toph"><h3 id="fb-in-h">Feedback inbox</h3><div class="meta"><span>${all.length} in all</span>${FB_MOODS.map(([k,l])=>`<span class="fb-mc">${fbFace(k,14)}${l} <b>${all.filter(x=>x.mood===k).length}</b></span>`).join('')}<span>Only you see this</span></div></div>
+      <span class="seg fb-view" role="group" aria-label="View">${[['list','Inbox'],['road','Roadmap']].map(([k,l])=>`<button type="button" data-fbview="${k}" aria-pressed="${I.view===k}">${l}${k==='list'&&nNew?` <span class="fb-badge in">${nNew}</span>`:''}</button>`).join('')}</span>
+      <button type="button" class="x" data-fbinx aria-label="Close">&#215;</button></div>
+    ${I.view==='list'?`<div class="toolbar fb-tools"><span class="seg" role="group" aria-label="Mood">${[['','All']].concat(FB_MOODS.map(m=>[m[0],m[1]])).map(([k,l])=>`<button type="button" data-fbfm="${k}" aria-pressed="${f.mood===k}">${l}</button>`).join('')}</span>
+      <label>Status <select id="fb-fs">${[['open','Open'],...FB_ST,['all','All']].map(([k,l])=>`<option value="${k}"${f.status===k?' selected':''}>${l}</option>`).join('')}</select></label>
+      ${f.theme?`<button type="button" class="fb-thchip" data-fbth="">Theme: ${obE(f.theme)} <span aria-hidden="true">&#215;</span></button>`:''}
+      <input type="search" id="fb-fq" placeholder="Search feedback, people, themes" value="${obE(f.q)}" autocomplete="off" aria-label="Search feedback"><span class="count">${list.length} shown</span></div>`:''}
+    <div class="body fb-body">${body}</div></div>`;
+  const nb=el.querySelector('.fb-body'); if(nb) nb.scrollTop=top; }
+function fbInRow(x){ const k=x._u+'/'+x._id, open=FB.inbox.open===k, ms=(x._r.msgs||[]);
+  return `<div class="fb-row${open?' open':''}${x._st==='new'?' isnew':''}">
+    <button type="button" class="fb-rh" data-fbrow="${obE(k)}" aria-expanded="${open}">${fbFace(x.mood,22)}
+      <span class="fb-rm"><span class="fb-rt">${obE(x.text)}</span><span class="small">${obE(fbName(x._u))} · ${obE(fbWhen(x.at))}${x.where?' · '+obE(fbWhereTxt(x.where)):''}${x.weight?' · '+obE(FB_WN[x.weight]||''):''}${ms.length?' · '+ms.length+(ms.length===1?' reply':' replies'):''}</span></span>
+      ${x._th?`<span class="fb-thtag">${obE(x._th)}</span>`:''}<span class="fb-st s-${x._st}">${obE(FB_STN[x._st]||x._st)}</span></button>
+    ${open?fbInDetail(x,k):''}</div>`; }
+function fbInDetail(x,k){ const I=FB.inbox, ms=x._r.msgs||[], dr=I.dr[k]||{}, nm=fbName(x._u);
+  return `<div class="fb-det"><div class="fb-full">${obE(x.text)}</div>
+    <div class="fb-drow"><span class="fb-dl">Status</span><span class="seg" role="group" aria-label="Status">${FB_ST.map(([s,l])=>`<button type="button" data-fbst="${s}" data-fbk="${obE(k)}" aria-pressed="${x._st===s}">${l}</button>`).join('')}</span></div>
+    <div class="fb-drow"><span class="fb-dl">Theme</span><input class="ob-in fb-thin" id="fb-th" data-fbk="${obE(k)}" list="fb-thl" placeholder="Group it with related feedback, e.g. Timeline filters" value="${obE(dr.theme!=null?dr.theme:x._th)}" autocomplete="off" aria-label="Theme"><datalist id="fb-thl">${fbThemes().map(t=>`<option value="${obE(t)}">`).join('')}</datalist><button type="button" class="ibtn" data-fbthsave="${obE(k)}">Save theme</button></div>
+    ${ms.length?`<div class="fb-thread">${ms.map(m=>`<div class="fb-reply"><div class="fb-rb"><b>You replied</b><span class="small">${obE(fbWhen(m.at))}</span></div><div>${obE(m.text)}</div></div>`).join('')}</div>`:''}
+    <div class="fb-drow col"><span class="fb-dl">Reply to ${obE(nm==='Someone'?'them':nm)} <span class="small">Only they see it, in their Feedback list.</span></span>
+      <textarea class="ob-in" id="fb-rt" data-fbk="${obE(k)}" rows="3" maxlength="2000" placeholder="e.g. Thanks, this is planned for the next version." aria-label="Reply">${obE(dr.reply||'')}</textarea>
+      <div class="fb-acts">${I.err?`<span class="small ob-err" role="alert">${obE(I.err)}</span>`:'<span></span>'}<button type="button" class="ibtn primary" data-fbreply="${obE(k)}"${I.busy?' disabled':''}>${I.busy?'Saving…':'Send reply'}</button></div></div></div>`; }
+function fbRoad(all){
+  const group=xs=>{ const g={}; xs.forEach(x=>{ const key=x._th||('·'+x._u+'/'+x._id); (g[key]=g[key]||[]).push(x); }); return Object.entries(g).sort((a,b)=>b[1].length-a[1].length||String(b[1][0].at).localeCompare(String(a[1][0].at))); };
+  const card=([key,xs])=>{ const th=key[0]==='·'?'':key, ppl=new Set(xs.map(x=>x._u)).size, moods=FB_MOODS.map(([k])=>[k,xs.filter(x=>x.mood===k).length]).filter(m=>m[1]), blk=xs.filter(x=>x.weight==='blocking').length;
+    return `<button type="button" class="fb-card" ${th?`data-fbth="${obE(th)}"`:`data-fbgo="${obE(key.slice(1))}"`}><b>${obE(th||xs[0].text)}</b>
+      <span class="small">${th?xs.length+(xs.length===1?' item · ':' items · '):'No theme yet · '}${ppl} ${ppl===1?'person':'people'}${blk?' · '+blk+' blocking':''}</span><span class="fb-cm">${moods.map(([k,n])=>`<span>${fbFace(k,14)}${n}</span>`).join('')}</span></button>`; };
+  const wont=all.filter(x=>x._st==='wont').length;
+  return `<p class="small fb-roadnote">Feedback by status, grouped by theme. Give related feedback the same theme in the inbox and it groups here. Click a card to see what is behind it.</p>
+    <div class="fb-road">${FB_ST.filter(([s])=>s!=='wont').map(([s,l])=>{ const g=group(all.filter(x=>x._st===s));
+      return `<div class="fb-col"><div class="fb-colh"><span class="fb-st s-${s}">${l}</span><span class="small">${g.length}</span></div>${g.map(card).join('')||'<div class="small fb-none">Nothing here yet</div>'}</div>`; }).join('')}</div>
+    ${wont?`<div class="small fb-wont">${wont} marked Won’t do. <button type="button" class="linkbtn" data-fbwont>See them</button></div>`:''}`; }
+async function fbSaveRep(k,patch){
+  const [uid,id]=k.split('/'), I=FB.inbox, cur=(I.rep[uid]||{})[id]||{};
+  const doc=Object.assign({status:'new',theme:'',msgs:[]},cur,patch,{at:new Date().toISOString(),by:FB.uid});
+  I.busy=true; I.err=''; fbPaintInbox();
+  try{ await FB.db.doc(fbP(uid,'replies',id)).set(JSON.parse(JSON.stringify(doc))); (I.rep[uid]=I.rep[uid]||{})[id]=doc; I.busy=false; fbPaintInbox(); fbBadge(); return true; }
+  catch(e){ I.busy=false; I.err='Not saved ('+((e&&e.code)||'error')+'). Try again.'; fbPaintInbox(); return false; } }
+// ---- wiring
+document.addEventListener('click',e=>{ const t=e.target; let b;
+  if(t.closest('#fb-open')){ if(obAjay()) fbOpenInbox(); else { FB.sent=false; fbStartDraft(); OB.pane='fb'; obGuide(true); } return; }
+  if((b=t.closest('[data-fbmood]'))){ const d=FB.draft; d.mood=b.dataset.fbmood; if(!d.where) d.where=fbWhere(); FB.err=''; obPaintGuide(); const x=document.getElementById('fb-text'); if(x) x.focus(); return; }
+  if((b=t.closest('[data-fbw]'))){ const w=b.dataset.fbw; FB.draft.weight=FB.draft.weight===w?'':w; obPaintGuide(); return; }
+  if(t.closest('[data-fbsend]')){ fbSend(); return; }
+  if(t.closest('[data-fbcancel]')){ FB.draft={mood:'',text:'',weight:'',where:null,attach:true}; FB.err=''; obPaintGuide(); return; }
+  if(t.closest('[data-fbmore]')){ FB.sent=false; FB.draft.where=fbWhere(); obPaintGuide(); return; }
+  if(t.closest('[data-fbinbox]')){ fbOpenInbox(); return; }
+  if(t.closest('[data-fbread]')){ const n=document.getElementById('fb-nudge'); if(n) n.remove(); OB.pane='fb'; obGuide(true); return; }
+  if(t.closest('[data-fbnx]')){ const n=document.getElementById('fb-nudge'); if(n) n.remove(); return; }
+  if(!t.closest('#fb-in')) return;
+  const I=FB.inbox;
+  if(t.closest('[data-fbinx]')){ fbCloseInbox(); return; }
+  if((b=t.closest('[data-fbview]'))){ I.view=b.dataset.fbview; fbPaintInbox(); return; }
+  if((b=t.closest('[data-fbfm]'))){ I.f.mood=b.dataset.fbfm; fbPaintInbox(); return; }
+  if((b=t.closest('[data-fbth]'))){ I.f.theme=b.dataset.fbth; if(I.f.theme){ I.f.status='all'; I.view='list'; } fbPaintInbox(); return; }
+  if((b=t.closest('[data-fbgo]'))){ Object.assign(I.f,{mood:'',status:'all',q:'',theme:''}); I.view='list'; I.open=b.dataset.fbgo; fbPaintInbox(); return; }
+  if(t.closest('[data-fbwont]')){ Object.assign(I.f,{mood:'',status:'wont',q:'',theme:''}); I.view='list'; fbPaintInbox(); return; }
+  if((b=t.closest('[data-fbrow]'))){ const k=b.dataset.fbrow; I.open=I.open===k?null:k; I.err=''; fbPaintInbox(); return; }
+  if((b=t.closest('[data-fbst]'))){ const k=b.dataset.fbk, s=b.dataset.fbst, dr=I.dr[k]=I.dr[k]||{};
+    fbSaveRep(k,{status:s}).then(ok=>{ if(ok&&FB_ST_REPLY[s]&&!String(dr.reply||'').trim()){ dr.reply=FB_ST_REPLY[s]; fbPaintInbox(); const r=document.getElementById('fb-rt'); if(r){ r.focus(); r.setSelectionRange(r.value.length,r.value.length); } uiToast('Status saved. A reply is drafted: edit it and press Send reply, or leave it.'); } else if(ok) uiToast('Status saved.'); }); return; }
+  if((b=t.closest('[data-fbthsave]'))){ const k=b.dataset.fbthsave, dr=I.dr[k]||{}; const th=String(dr.theme!=null?dr.theme:'').trim();
+    fbSaveRep(k,{theme:th.slice(0,60)}).then(ok=>{ if(ok){ delete dr.theme; uiToast(th?'Theme saved: '+th+'.':'Theme cleared.'); } }); return; }
+  if((b=t.closest('[data-fbreply]'))){ const k=b.dataset.fbreply, dr=I.dr[k]=I.dr[k]||{}, txt=String(dr.reply||'').trim(); if(!txt){ I.err='Write the reply first.'; fbPaintInbox(); return; }
+    const [uid,id]=k.split('/'), cur=((I.rep[uid]||{})[id]||{}).msgs||[];
+    fbSaveRep(k,{msgs:cur.concat([{text:txt.slice(0,2000),at:new Date().toISOString()}])}).then(ok=>{ if(ok){ dr.reply=''; fbPaintInbox(); uiToast('Reply sent. They see it next time they open the page.'); } }); return; }
+});
+document.addEventListener('input',e=>{ const t=e.target;
+  if(t.id==='fb-text'){ FB.draft.text=t.value; return; }
+  if(t.id==='fb-rt'||t.id==='fb-th'){ const dr=FB.inbox.dr[t.dataset.fbk]=FB.inbox.dr[t.dataset.fbk]||{}; dr[t.id==='fb-rt'?'reply':'theme']=t.value; return; }
+  if(t.id==='fb-fq'){ FB.inbox.f.q=t.value; const pos=t.selectionStart; fbPaintInbox(); const n=document.getElementById('fb-fq'); if(n){ n.focus(); n.setSelectionRange(pos,pos); } } });
+document.addEventListener('change',e=>{ const t=e.target;
+  if(t.id==='fb-attach'){ FB.draft.attach=t.checked; return; }
+  if(t.id==='fb-fs'){ FB.inbox.f.status=t.value; fbPaintInbox(); } });
+document.addEventListener('focusout',e=>{ const t=e.target; if((t.id==='fb-rt'||t.id==='fb-th'||t.id==='fb-text')&&FB.inbox.dirty) setTimeout(()=>{ if(!fbTyping()) fbPaintInbox(); },0); });
+document.addEventListener('keydown',e=>{
+  if(document.getElementById('fb-in')&&e.key==='Escape'){ e.preventDefault(); e.stopPropagation(); fbCloseInbox(); return; }
+  if(e.target&&e.target.id==='fb-th'&&e.key==='Enter'){ e.preventDefault(); const b=document.querySelector('[data-fbthsave]'); if(b) b.click(); }
+  if(e.target&&e.target.id==='fb-text'&&e.key==='Enter'&&(e.metaKey||e.ctrlKey)){ e.preventDefault(); fbSend(); }
+},true);
+window.addEventListener('ep-gate',()=>{ fbBoot(); });
+if((window.GATE||{}).ok) fbBoot();
+
+// ================= Sync & logs → History, and the activity log (28 Sep 2026) =================
+// History reads every record the ledger already keeps (must-have item and column histories, feature-ledger events, rule saves,
+// data pulls and pull requests, feedback) and one new one: activity/<id>/months/<yyyy-mm>, each person's sign-ins and the
+// sections and pop-ups they open. The db rules make activity/ readable only by the owner and each activity/<id> by that person.
+const ACT={db:null, uid:null, sid:null, q:[], t:0, last:'', marked:false, lastPop:''};
+async function actBoot(){
+  const g=window.GATE||{}; if(ACT.uid||!g.ok||!g.uid) return; ACT.uid=g.uid;
+  try{ ACT.db=await window.claude.use('db'); }catch(e){ ACT.db=null; } if(!ACT.db) return;
+  ACT.sid=Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+  actLog('signin',''); const t=document.querySelector('.tab[aria-selected="true"]'); if(t) actLog('tab',t.dataset.tab);
+  const mo=document.getElementById('modal');
+  if(mo) new MutationObserver(()=>{ if(!mo.hasAttribute('open')){ ACT.lastPop=''; return; } const h=mo.querySelector('.top h3'); const x=h?h.textContent.trim():''; if(x&&x!==ACT.lastPop){ ACT.lastPop=x; actLog('open',x); } }).observe(mo,{attributes:true,attributeFilter:['open'],subtree:true,childList:true});
+}
+function actLog(k,x){
+  if(!ACT.db||!ACT.uid) return; x=String(x||'').replace(/\s+/g,' ').slice(0,90);
+  if(k==='tab'){ if(x===ACT.last) return; ACT.last=x; }
+  ACT.q.push({k,x,at:new Date().toISOString(),s:ACT.sid}); clearTimeout(ACT.t); ACT.t=setTimeout(actFlush,k==='signin'?0:2500);
+}
+async function actFlush(){
+  const q=ACT.q.splice(0); if(!q.length||!ACT.db) return;
+  const ev={}; q.forEach((e,i)=>{ ev['e'+Date.parse(e.at).toString(36)+i+Math.random().toString(36).slice(2,4)]=e; });
+  const last=q[q.length-1].at, ref=ACT.db.doc('activity/'+ACT.uid+'/months/'+last.slice(0,7));
+  try{ await ref.update({ev,last}); }
+  catch(e){ try{ const d=await ref.get(); if(d.exists) await ref.update({ev,last}); else await ref.set({by:ACT.uid,first:q[0].at,last,ev}); }catch(e2){} }
+  try{ await ACT.db.doc('activity/'+ACT.uid).set({by:ACT.uid,last}); }catch(e){}
+}
+document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('.tab'); if(b&&b.dataset.tab) setTimeout(()=>actLog('tab',b.dataset.tab),0); },true);
+addEventListener('pagehide',()=>{ if(ACT.q.length) actFlush(); });
+window.addEventListener('ep-gate',()=>{ actBoot(); });
+
+const HS={sub:'refresh', src:'', who:'', span:'7', q:'', lim:150, act:{}, actSub:null, actWatch:{}, names:{}, lastPaint:0};
+const HS_SRC=[['pp','Must-have ledger'],['fe','Feature ledger'],['beta','Beta intake'],['rules','Rules'],['pull','Data pulls'],['visit','Visits'],['fb','Feedback']];
+const HS_TABN=t=>(typeof OB_TABN!=='undefined'&&OB_TABN[t])||t;
+const hsE=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const hsChange=(a,b)=>{ a=String(a??'').trim(); b=String(b??'').trim(); return !a?'set to '+hsCut(b,110):!b?'cleared (was '+hsCut(a,60)+')':hsCut(a,60)+' → '+hsCut(b,60); };
+const hsCut=(v,n)=>{ const t=String(v??'').replace(/\s+/g,' '); return t.length>(n||80)?t.slice(0,(n||80)-1)+'…':t; };
+function hsShow(){ const r=document.getElementById('rf-host'), h=document.getElementById('hs-host'); if(!r||!h) return;
+  if(!obHow()){ h.innerHTML=''; r.innerHTML=''; return; }
+  document.querySelectorAll('#sl-sub [data-slsub]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.slsub===HS.sub)));
+  const bl=document.getElementById('bt-lab'); if(bl){ bl.hidden=HS.sub!=='beta'; if(HS.sub==='beta'&&window.btLabPaint) window.btLabPaint(); }
+  r.hidden=HS.sub!=='refresh'; h.hidden=HS.sub!=='history'; if(HS.sub==='history'){ hsLoad(); hsPaint(); } }
+window.hsShow=hsShow;
+function hsLoad(){
+  if(HS.actSub||!obAjay()) return; const db=ACT.db||(FB&&FB.db); if(!db) return;
+  HS.actSub=db.collection('activity').onSnapshot(s=>{ s.docs.forEach(d=>{ const uid=d.id; if(HS.actWatch[uid]) return; HS.actWatch[uid]=true;
+    db.collection('activity/'+uid+'/months').onSnapshot(x=>{ const m={}; x.docs.forEach(q=>{ Object.assign(m,(q.data()||{}).ev||{}); }); HS.act[uid]=m; hsSoon(); },()=>{}); }); },()=>{});
+  if(typeof fbInboxLoad==='function') fbInboxLoad();
+}
+function hsSoon(){ clearTimeout(HS.t); HS.t=setTimeout(()=>{ if(HS.sub==='history'&&!document.getElementById('hs-host').hidden) hsPaint(); },300); }
+// every record, as {at, by, src, what, detail, open}
+function hsAll(){
+  const out=[], add=(at,by,src,what,detail,open)=>{ if(at) out.push({at:String(at),by:by||'',src,what,detail:detail||'',open:open||''}); };
+  try{ (PP.rows||[]).forEach(r=>{ const t=ppTitle(r); Object.values(r.h||{}).forEach(e=>{ if(!e||typeof e!=='object') return;
+      const K={add:'added',edit:'changed',revert:'reverted',remove:'removed',restore:'restored',import:'imported from Confluence',migrate:'migrated'};
+      add(e.at,e.by,'pp',(K[e.k]||e.k)+(e.f?' '+ppFldLabel(e.f):'')+' · '+t,e.f?hsChange(ppFmtVal(e.f,e.from),ppFmtVal(e.f,e.to)):hsCut(e.note,120),'pp:'+r.id); }); });
+    Object.values((PP.meta&&PP.meta.h)||{}).forEach(e=>{ if(e&&typeof e==='object') add(e.at,e.by,'pp','changed the columns'+(e.f?' ('+e.f+')':''),hsCut(e.note||e.op,120)); }); }catch(e){}
+  try{ const T={}; (FE.rows||[]).forEach(r=>{ T[r._id]=(r.id||r._id)+' · '+((r.v||{}).title||'Untitled'); });
+    Object.entries(FE.ev||{}).forEach(([id,m])=>Object.values(m||{}).forEach(e=>{ add(e.at,e.by,e.via==='beta'?'beta':'fe',(e.k||'updated')+' · '+(T[id]||id),e.from?e.from+' → '+e.to:(e.fields||[]).join(', '),'fe:'+id); })); }catch(e){}
+  try{ (window.EP_LOGS.logic()||[]).forEach(e=>add(e.at,e.by,'rules','saved the rules (version '+e.v+')',(e.changes||[]).slice(0,4).map(c=>c.name+': '+hsCut(c.from,24)+' → '+hsCut(c.to,24)).join('; ')+((e.changes||[]).length>4?'; and '+(e.changes.length-4)+' more':''),'rules')); }catch(e){}
+  try{ const st=window.EP_LOGS.sync()||{}; (st.runs||[]).forEach(r=>add(r.at,r.by,'pull',(r.manual?'pulled':'refreshed (automatic)')+' Jira EP bugs and stories',[r.bugsNew!=null?r.bugsNew+' new bugs':'',r.bugsClosed?r.bugsClosed+' closed':'',r.storiesShipped?r.storiesShipped+' stories shipped':'',r.seen!=null?r.seen+' read':''].filter(Boolean).join(' · ')));
+    const rf=window.EP_LOGS.rf(), NM={imp:'IMP incidents',op:'OP events',hv:'Hyve dedicated team (HV)',planhat:'Planhat',workbook:'the Drive workbook'};
+    Object.entries(rf.docs||{}).forEach(([k,d])=>(d.runs||[]).forEach(r=>add(r.at,r.by,'pull',(r.manual?'pulled ':'refreshed (automatic) ')+(NM[k]||k),[r.changed!=null?r.changed+' changed':'',r.seen!=null?r.seen+' read':'',r.since?'since '+r.since:''].filter(Boolean).join(' · '))));
+    Object.entries(rf.reqs||{}).forEach(([k,d])=>{ add(d.at,d.by,'pull',(d.auto?'queued':'asked Claude for')+' a pull of '+(d.name||k),hsCut(d.why,120)); if(d.doneAt) add(d.doneAt,'claude','pull','pulled '+(d.name||k),d.note||''); });
+    Object.entries(rf.visits||{}).forEach(([uid,v])=>{ if(!Object.keys(HS.act[uid]||{}).length&&v.first) add(v.first,uid,'visit','first visit',(v.n||1)+' visit'+(v.n===1?'':'s')+' in all, the last '+(v.last||'').slice(0,16).replace('T',' ')); }); }catch(e){}
+  Object.entries(HS.act).forEach(([uid,m])=>Object.values(m||{}).forEach(e=>{ if(e.k==='ai'){ add(e.at,uid,'beta','asked Claude: '+hsCut(e.x,80),''); return; } add(e.at,uid,'visit',e.k==='signin'?'signed in':e.k==='tab'?'opened '+HS_TABN(e.x):'opened '+hsCut(e.x,70),''); }));
+  try{ if(window.btHistory) window.btHistory(add); }catch(e){}
+  try{ if(obAjay()) fbInboxAll().forEach(x=>{ add(x.at,x._u,'fb','sent '+(x.mood==='happy'?'a Happy':x.mood==='sad'?'a Sad':'a Want')+' note',hsCut(x.text,120),'fb');
+      ((x._r||{}).msgs||[]).forEach(m=>add(m.at,(x._r||{}).by||FB.uid,'fb','replied to a note',hsCut(m.text,120),'fb')); }); }catch(e){}
+  return out.sort((a,b)=>b.at.localeCompare(a.at));
+}
+async function hsNames(ids){ const u=(window.GATE||{}).user, need=ids.filter(i=>i&&i!=='claude'&&!(i in HS.names)); if(!u||!u.profiles||!need.length) return;
+  need.forEach(i=>{ HS.names[i]=''; }); try{ const ps=await u.profiles(need.slice(0,64)); need.forEach(i=>{ HS.names[i]=(ps[i]&&ps[i].name)||''; }); hsSoon(); }catch(e){} }
+const hsWho=id=>!id?'Someone':id==='claude'?'Claude':id===((window.GATE||{}).uid)?'You':(HS.names[id]||'Someone');
+function hsDay(k){ const d=new Date(k+'T12:00:00'); if(isNaN(d)) return k; const t=new Date(); const y=new Date(Date.now()-864e5);
+  const same=(a,b)=>a.toDateString()===b.toDateString(); return same(d,t)?'Today':same(d,y)?'Yesterday':d.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'}); }
+function hsPaint(){
+  const host=document.getElementById('hs-host'); if(!host) return;
+  if(!obHow()){ host.innerHTML=''; return; }
+  const all=hsAll(); hsNames([...new Set(all.map(x=>x.by))]);
+  const now=Date.now(), cut=HS.span==='all'?'':new Date(now-(+HS.span)*864e5).toISOString(), q=HS.q.toLowerCase();
+  const list=all.filter(x=>(!cut||x.at>=cut)&&(!HS.src||x.src===HS.src)&&(!HS.who||x.by===HS.who)&&(!q||(x.what+' '+x.detail+' '+hsWho(x.by)).toLowerCase().includes(q)));
+  const people=[...new Set(all.map(x=>x.by).filter(Boolean))].sort((a,b)=>hsWho(a).localeCompare(hsWho(b)));
+  const cnt=k=>all.filter(x=>(!cut||x.at>=cut)&&x.src===k).length, shown=list.slice(0,HS.lim);
+  let day='', rows='';
+  shown.forEach(x=>{ const d=x.at.length<=10?x.at:(()=>{ const t=new Date(x.at); return isNaN(t)?x.at.slice(0,10):t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0'); })();
+    if(d!==day){ day=d; rows+=`<div class="hs-day">${hsE(hsDay(d))}</div>`; }
+    const tm=x.at.length<=10?'—':new Date(x.at).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'});
+    rows+=`<div class="hs-row"><span class="hs-t">${hsE(tm)}</span><span class="hs-src s-${x.src}">${hsE((HS_SRC.find(s=>s[0]===x.src)||[])[1]||x.src)}</span><span class="hs-m"><span><b>${hsE(hsWho(x.by))}</b> ${hsE(x.what)}</span>${x.detail?`<span class="hs-d">${hsE(x.detail)}</span>`:''}</span>${x.open?`<button type="button" class="ibtn" data-hsopen="${hsE(x.open)}">Open</button>`:'<span></span>'}</div>`; });
+  const sc=host.querySelector('.hs-list'), top=sc?sc.scrollTop:0, a=document.activeElement, focusQ=a&&a.id==='hs-q', pos=focusQ?a.selectionStart:0;
+  host.innerHTML=`<div class="hs-head"><div><h3>History</h3><p class="hs-sub">Every change anyone made on the ledger${obAjay()?', and every visit,':''} with who and when. Kept in the ledger's own database, so nothing is lost.${obAjay()?'':' Visits and feedback are visible to Ajay only.'}</p></div>
+    <div class="hs-sum">${HS_SRC.map(([k,l])=>`<button type="button" class="hs-chip s-${k}" data-hssrc="${k}" aria-pressed="${HS.src===k}"><b>${cnt(k)}</b> ${hsE(l)}</button>`).join('')}</div></div>
+    <div class="toolbar hs-tools"><span class="seg" role="group" aria-label="Period">${[['1','Today'],['7','7 days'],['30','30 days'],['all','All']].map(([k,l])=>`<button type="button" data-hsspan="${k}" aria-pressed="${HS.span===k}">${l}</button>`).join('')}</span>
+      <label>Person <select id="hs-who"><option value="">Everyone</option>${people.map(p=>`<option value="${hsE(p)}"${HS.who===p?' selected':''}>${hsE(hsWho(p))}</option>`).join('')}</select></label>
+      <input type="search" id="hs-q" placeholder="Search the history" value="${hsE(HS.q)}" autocomplete="off" aria-label="Search the history">
+      ${HS.src||HS.who||HS.q?'<button type="button" class="linkbtn" data-hsclear>Clear filters</button>':''}<span class="count">${list.length} of ${all.length}</span></div>
+    <div class="hs-list">${rows||'<div class="empty">Nothing recorded for these filters.</div>'}${list.length>HS.lim?`<button type="button" class="ibtn hs-more" data-hsmore>Show ${Math.min(150,list.length-HS.lim)} more</button>`:''}</div>`;
+  const nl=host.querySelector('.hs-list'); if(nl) nl.scrollTop=top;
+  if(focusQ){ const n=document.getElementById('hs-q'); if(n){ n.focus(); n.setSelectionRange(pos,pos); } }
+}
+document.addEventListener('click',e=>{ const t=e.target; let b;
+  if((b=t.closest('#sl-sub [data-slsub]'))){ HS.sub=b.dataset.slsub; hsShow(); return; }
+  if(!t.closest('#hs-host')) return;
+  if((b=t.closest('[data-hssrc]'))){ HS.src=HS.src===b.dataset.hssrc?'':b.dataset.hssrc; HS.lim=150; hsPaint(); return; }
+  if((b=t.closest('[data-hsspan]'))){ HS.span=b.dataset.hsspan; HS.lim=150; hsPaint(); return; }
+  if(t.closest('[data-hsclear]')){ HS.src=''; HS.who=''; HS.q=''; hsPaint(); return; }
+  if(t.closest('[data-hsmore]')){ HS.lim+=150; hsPaint(); return; }
+  if((b=t.closest('[data-hsopen]'))){ const [k,id]=b.dataset.hsopen.split(':');
+    if(k==='pp'&&typeof ppOpenEditor==='function') ppOpenEditor(id);
+    else if(k==='fe'&&typeof feOpenEntry==='function') feOpenEntry(id);
+    else if(k==='fb'&&typeof fbOpenInbox==='function') fbOpenInbox();
+    else if(k==='rules'){ const cl=CLB(); if(cl&&cl.showTab) cl.showTab('logic'); } return; }
+});
+document.addEventListener('input',e=>{ if(e.target.id==='hs-q'){ HS.q=e.target.value; clearTimeout(HS.qt); HS.qt=setTimeout(hsPaint,200); } });
+document.addEventListener('change',e=>{ if(e.target.id==='hs-who'){ HS.who=e.target.value; hsPaint(); } });
+
+// ================= Beta: log a work item with Claude (30 Sep 2026, owner) =================
+// In testing with the Settings viewers (Ajay, Bartosz; btAcc().how); everyone else still sees the placeholder card (feSkillCard).
+// Two ways in, one modal: Quick share (clients, a source, Claude fills the request in, "Is this it?", tidy, save) and Full review
+// (Describe, Check matches, Review, Send). New items go straight into the ledger's own `ledger` / `ledger-events` (feWriteNew,
+// via "beta"); a share that joins an existing need, points at something already built or follows work already on its way is a
+// voice in `ledger-voices`. Test mode tags everything test:true, and test records count only for a viewer with test mode on.
+// From a call recording only the quoted moments are kept, never the transcript. The classic form stays behind a link.
+const btAcc=()=>window.EP_ACCESS||{};
+const BT={el:null, mode:'share', test:false, sample:undefined, mcp:undefined, aiOk:false, ailog:[], vAll:[], voices:[], vsub:null, s:null, d:null, fa:null, lab:{confirm:false, check:null, q:''}, eq:{}};
+window.BT=BT;
+try{ BT.test=localStorage.getItem('ep-bt-test')==='1'; }catch(e){}
+const btE=uiEsc, btN=n=>Number(n||0).toLocaleString('en-GB'), btPl=(n,w,p)=>btN(n)+' '+(n===1?w:(p||w+'s'));
+const btCut=(t,n)=>{ t=String(t??'').replace(/\s+/g,' ').trim(); return t.length>n?t.slice(0,n-1).replace(/\s\S*$/,'')+'…':t; };
+const BT_SRC={type:'Speak or type', chat:'Chat snippet', call:'Call recording'};
+const BT_REL={same:'Same thing', part:'Part of it', related:'Related', extends:'Extends this feature', exists:'Already exists', follow:'Already on its way'};
+const BT_KIND={a:'Asked', b:'Built', m:'Must-have', l:'On the ledger'};
+const BT_LEDGER_URL='https://claude.ai/artifact/WS7mJGdC1y2RzsPTScKu6d';
+const BT_STEPS=[['describe','Describe'],['check','Check matches'],['review','Review'],['send','Send']];
+const BT_DECIDE={new:'It’s a new work item', builds:'It builds on what I linked', exists:'It’s already built'};
+const BT_VALUE_KEYS=['lever','figureGBP','hours','rateGBP','rateSource','figureText','assumption','figureDetail','funded','existingGrowing'];
+const btSeen=x=>!(x&&x.test)||BT.test; window.btSeen=btSeen;
+const btPh=t=>/^\s*(not (stated|given|mentioned|specified|provided|known|clear)( in the (request|source|text|chat|call))?|n\/?a|none|unknown|tbd|tbc|-+)\s*\.?\s*$/i.test(String(t||''));
+const btNorm=t=>String(t||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const btNewId=p=>p+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+async function btUse(n){ try{ return await claude.use(n); }catch(e){ return null; } }
+function btResetShare(){ BT.s={clients:[], clientAuto:false, src:'type', raw:'', url:'', name:'', area:'', what:'', why:'', outcome:'', auto:{}, cites:{}, sugg:{}, pick:null, none:false,
+  filling:false, fillErr:'', fillNote:'', progress:0, stage:'form', tidy:null, tidyBusy:false, tidyDone:false, tidyChoice:{}, tidyNote:'', result:null, answer:'', answered:false, saving:false, err:''}; }
+function btResetDrop(){ BT.d={step:1, clients:[], what:'', why:'', outcome:'', links:[], decision:null, draft:{what:'', why:'', outcome:''}, ai:null, busy:false, err:'', progress:0,
+  answers:{}, sales:null, area:'', name:'', fromNeed:'', tidy:null, tidyBusy:false, tidyDone:false, tidyChoice:{}, result:null, saving:false}; }
+function btResetCall(){ BT.fa={url:'', state:'idle', title:'', date:'', callUrl:'', segs:[], err:''}; }
+btResetShare(); btResetDrop(); btResetCall();
+
+// ---------- clients, signal ----------
+function btCo(pd){ if(pd==='Platform') return {pd:'Platform', short:'Platform', tier:0}; const cl=CLB(), c=cl&&cl.company(pd); return c?{pd:String(c.pd), short:cl.shortName(c.name), name:c.name, tier:+c.tier||0}:null; }
+const btCu=pd=>{ const c=btCo(pd); return c&&c.pd!=='Platform'?[c.short,c.tier,c.pd]:null; };
+const btSig=cus=>cus.reduce((a,x)=>a+(DM_TW[x[1]]||0),0);
+const btClientsTxt=list=>(list||[]).map(pd=>(btCo(pd)||{short:pd}).short).join(', ');
+const btTierPill=t=>t?`<span class="tierpill t${t<=2?t:''}">T${t}</span>`:'';
+// the clients a need has picked up in the ledger: voices that joined it, and Beta items linked to it as the same thing or part of it
+function btVoiceCus(id){
+  const out=[], add=pd=>{ const c=btCu(pd); if(c&&!out.some(x=>x[2]===c[2])) out.push(c); };
+  BT.voices.filter(v=>v.kind==='join'&&v.target&&v.target.k==='a'&&v.target.id===id).forEach(v=>(v.clients||[]).forEach(add));
+  (FE.rows||[]).forEach(r=>{ const b=(r.v||{}).beta; if(b&&(b.links||[]).some(l=>l.k==='a'&&l.id===id&&(l.rel==='same'||l.rel==='part'))) ((r.v||{}).customers||[]).forEach(c=>add(c.client)); });
+  return out;
+}
+window.btVoiceCus=btVoiceCus;
+function btNeedCus(c){ const m=new Map(); c.rs.forEach(r=>(r.cu||[]).forEach(x=>{ if(!m.has(x[0])) m.set(x[0],[x[0],+x[1]||0,x[2]?String(x[2]):'']); }));
+  btVoiceCus(c.id).forEach(x=>{ if(![...m.values()].some(y=>y[0]===x[0]||(x[2]&&y[2]===x[2]))) m.set(x[0],x); }); return [...m.values()]; }
+window.btNeedVoicesHtml=id=>{ const vs=BT.voices.filter(v=>v.target&&v.target.k==='a'&&v.target.id===id); if(!vs.length) return '';
+  return `<div class="seclabel">Shared in the ledger<span class="c">${vs.length}</span></div><div class="bt-vl">${vs.slice(0,6).map(v=>`<div class="bt-v"><b>${btE(btClientsTxt(v.clients))}</b> <span class="small">${btE(BT_SRC[v.src]||'')} · ${btE(ppWhen(v.at))} · ${btE(feName(v.by))}${v.test?' · Test':''}</span><div class="small">${btE(btCut(v.what,160))}</div></div>`).join('')}</div>`; };
+function btVoicesBoot(){ if(BT.vsub||!FE.db) return; BT.vsub=FE.db.collection('ledger-voices').onSnapshot(s=>{ BT.vAll=s.docs.map(d=>Object.assign({_id:d.id},d.data())); btVoicesApply(); },()=>{}); }
+function btVoicesApply(){ BT.voices=BT.vAll.filter(btSeen); if(DM.data){ try{ dmDerive(); }catch(e){} } if(HS.sub==='beta') btLabPaint(); }
+window.btOnRows=()=>{ btVoicesBoot(); if(FE.openId) setTimeout(()=>{ if(FE.openId) feOpenEntry(FE.openId,true); },0); if(HS.sub==='beta') btLabPaint(); };
+function btSetTest(on){ BT.test=!!on; try{ localStorage.setItem('ep-bt-test',on?'1':'0'); }catch(e){} feSeen(); feRender(); btVoicesApply(); if(BT.el) btPaint(); btLabPaint(); }
+
+// ---------- what the request might match: needs asked for, built stories, must-have items, work items on the ledger ----------
+function btCands(text, clients, limit){
+  const out=[]; if(!DM.idx||dmTok(text).length<2) return out;
+  const r=dmSearch(text,{limit:12,builtLimit:5}), mine=new Set((clients||[]).map(String));
+  r.needs.forEach(h=>{ const c=DM.byCl.get(h.id); if(c) out.push(Object.assign(btNeedCand(c),{pct:dmPct(h.cov)})); });
+  r.built.forEach(h=>{ const b=(DM.data.built||[]).find(x=>x.k===h.id); if(b) out.push(Object.assign(btBuiltCand(b),{pct:dmPct(h.cov)})); });
+  const terms=[...new Set(dmTok(text))], w=Object.fromEntries(terms.map(t=>[t,dmIdf(t)])), all=terms.reduce((a,t)=>a+w[t],0)||1;
+  const cover=t=>{ const s=new Set(dmTok(t)); return Math.round(terms.reduce((a,x)=>a+(s.has(x)?w[x]:0),0)/all*100); };
+  (PP.rows||[]).forEach(p=>{ const c=btMhCand(p); if(!c) return; const pct=cover([c.title,c.body,c.pa].join(' ')); if(pct>=30) out.push(Object.assign(c,{pct})); });
+  (FE.rows||[]).forEach(x=>{ const c=btLeCand(x), pct=cover([c.title,c.title,c.body,c.pa].join(' ')); if(pct>=30) out.push(Object.assign(c,{pct})); });
+  out.forEach(m=>{ m.mine=m.cus.some(c=>mine.has(String(c[2]))); if(m.mine) m.pct=Math.min(99,m.pct+6); });
+  return out.filter(m=>m.pct>=30).sort((a,b)=>b.pct-a.pct||(b.signal||0)-(a.signal||0)).slice(0,limit||12);
+}
+function btNeedCand(c){ const cus=btNeedCus(c); return {k:'a', id:c.id, title:c.name, pa:c.product, cus, signal:btSig(cus), keys:c.rs.map(x=>x.k).filter(Boolean), body:c.what, why:c.why, outcome:c.outcome, bs:c.bs}; }
+function btBuiltCand(b){ return {k:'b', id:b.k, title:b.t, sub:b.f||'', pa:b.p||'', cus:[], body:b.i||''}; }
+function btMhCand(p){ const v=(p&&p.v)||{}; if(!v.feature||ppStatus(p)==='Done') return null; const cu=btCu(v.driver);
+  return {k:'m', id:p.id, title:v.feature, pa:v.area||'', key:v.key||'', month:v.month||'', cus:cu?[cu]:[], body:[v.why,v.impact].filter(Boolean).join(' ')}; }
+function btLeCand(x){ const v=x.v||{}; return {k:'l', id:x._id, le:x.id||x._id, title:v.title||'', pa:v.productArea||'', cus:(v.customers||[]).map(c=>btCu(c.client)).filter(Boolean), body:v.problem||''}; }
+function btFind(key){ const i=String(key||'').indexOf(':'), k=key.slice(0,i), id=key.slice(i+1);
+  if(k==='a'){ const c=DM.byCl&&DM.byCl.get(id); return c?btNeedCand(c):null; }
+  if(k==='b'){ const b=DM.data&&(DM.data.built||[]).find(x=>x.k===id); return b?btBuiltCand(b):null; }
+  if(k==='m'){ const p=(PP.rows||[]).find(x=>x.id===id); return p?(btMhCand(p)||{k:'m', id, title:(p.v||{}).feature||id, pa:'', cus:[], key:(p.v||{}).key||''}):null; }
+  if(k==='l'){ const x=(FE.all||[]).find(r=>r._id===id); return x?btLeCand(x):null; } return null; }
+const btKey=m=>m.k+':'+m.id;
+function btKindChip(m){ const t=m.k==='m'?'Must-have'+(m.month?' · '+m.month:''):m.k==='l'?'On the ledger · '+(m.le||''):m.k==='b'?'Built'+(m.sub?' · '+m.sub:''):'Asked · signal '+(m.signal||0);
+  return `<span class="bt-kc k-${m.k}">${btE(btCut(t,48))}</span>`; }
+function btCandTitle(m){ return `<button type="button" class="linkbtn bt-mt" data-btcand="${btE(btKey(m))}">${btE(m.title)}</button>`; }
+function btOpenCand(key){ const m=btFind(key); if(!m) return;
+  if(m.k==='a') dmOpenNeed(m.id); else if(m.k==='l') feOpenEntry(m.id); else if(m.k==='m'&&typeof ppOpenEditor==='function') ppOpenEditor(m.id);
+  else if(m.k==='b'){ const a=document.createElement('a'); a.href='https://expoplatform.atlassian.net/browse/'+encodeURIComponent(m.id); a.target='_blank'; a.rel='noopener'; document.body.appendChild(a); a.click(); a.remove(); } }
+function btMatchMsg(m, clients){
+  const own=new Set((clients||[]).map(String)), others=m.cus.filter(x=>!own.has(String(x[2])));
+  if(m.k==='a'){ const t1=others.filter(x=>x[1]===1).length, names=others.slice(0,2).map(x=>x[0]).join(', ')+(others.length>2?' and '+(others.length-2)+' more':'');
+    if(m.pct>=85) return others.length?`${btPl(others.length,'other client')} asked for this already: a ${m.pct}% match with a need raised by ${names}${t1?', '+t1+' of them Tier 1':''}. Add your client and its signal goes up.`:`Your client already asked for this: a ${m.pct}% match with a need they raised before.`;
+    if(others.length<m.cus.length) return `Your client is already one of the ${m.cus.length} asking for this (${m.pct}% match). Link it so this builds on theirs instead of starting a new queue.`;
+    return `Close to what others have asked (${m.pct}%). Link it and your client’s voice adds to ${m.cus.length===1?'theirs':'the '+m.cus.length+' already asking'}.`; }
+  if(m.k==='b') return m.pct>=85?`We may have built this already: a ${m.pct}% match with ${m.sub?'“'+m.sub+'”':'a delivered story'} (${m.id}). Check it with the client before logging.`:`Related to something already built (${m.pct}%). If the client needs more than it does, extend it.`;
+  if(m.k==='m') return `Already on its way: a ${m.pct}% match with a must-have item${m.month?' planned for '+m.month:''}.`;
+  return `Already on the ledger: a ${m.pct}% match with ${m.le}.`;
+}
+
+// ---------- the call recording (Fathom): resolve the link, read the transcript, keep only the moments quoted ----------
+const BT_FA_ERR={server_not_connected:'Connect Fathom in claude.ai (Settings, Connectors), then fetch again.', needs_reauth:'Reconnect Fathom in claude.ai (Settings, Connectors), then fetch again.',
+  not_in_manifest:'Fathom is not switched on for this page yet.', not_granted:'Fathom was not allowed for this page. Allow it when claude.ai asks, then fetch again.',
+  tool_error:'Fathom could not find that recording. Check the link is from a call you can open in Fathom.', selection_required:'Choose which Fathom account to use when claude.ai asks, then fetch again.',
+  blocked_by_policy:'Your organisation blocks this Fathom action.', rate_limited:'Fathom is busy. Wait a minute and fetch again.'};
+const btTextOf=r=>{ if(!r) return ''; const p=r.payload!==undefined?r.payload:r; if(typeof p==='string') return p; if(Array.isArray(p)) return p.map(c=>c&&(c.text||'')).join('\n');
+  if(Array.isArray(r.content)) return r.content.map(c=>c&&c.text||'').join('\n'); if(p&&typeof p==='object'){ if(Array.isArray(p.content)) return p.content.map(c=>c&&c.text||'').join('\n'); return JSON.stringify(p); } return String(p); };
+async function btFetchCall(){
+  const F=BT.fa, inp=BT.el&&BT.el.querySelector('#bt-url'); if(inp) F.url=inp.value.trim();
+  if(!/fathom\.video\//i.test(F.url)){ Object.assign(F,{state:'error', err:'Paste a Fathom link. It looks like https://fathom.video/share/…'}); return btPaintCall(); }
+  if(BT.mcp===undefined) BT.mcp=await btUse('mcp');
+  if(!BT.mcp){ Object.assign(F,{state:'error', err:'Reading calls needs the Fathom connection, which this view of the page does not have. Type or paste what was said instead.'}); return btPaintCall(); }
+  Object.assign(F,{state:'loading', err:''}); btPaintCall();
+  try{
+    const r1=btTextOf(await BT.mcp.callTool('Fathom','get_recording_by_url',{url:F.url}));
+    const rid=(r1.match(/recording_id\W+(\d+)/)||[])[1], curl=(r1.match(/\burl\W+(https?:\/\/[^\s"',}]+)/)||[])[1];
+    if(!rid) throw {code:'tool_error'};
+    F.title=((r1.match(/title\W+([^\n"]+)/)||[])[1]||'').trim(); F.date=(r1.match(/date\W+([0-9]{4}-[0-9]{2}-[0-9]{2})/)||[])[1]||''; F.callUrl=curl||'';
+    const inp2={recording_id:+rid}; if(curl) inp2.url=curl;
+    const r2=btTextOf(await BT.mcp.callTool('Fathom','get_meeting_transcript',inp2)), segs=[];
+    r2.split(/\n/).forEach(line=>{ const m=line.match(/^\s*\[(\d{1,2}:\d{2}(?::\d{2})?)\]\((https?:[^)]+)\)\s*([^:]{1,60}):\s*(.*)$/); if(m) segs.push({i:segs.length+1, t:m[1], link:m[2], speaker:m[3].trim(), text:m[4].replace(/\\\*/g,'*').trim()}); });
+    if(!segs.length) throw {code:'tool_error'};
+    Object.assign(F,{state:'ready', segs});
+    try{ actLog('open','Read a call recording for Beta'); }catch(e){}
+  }catch(e){ Object.assign(F,{state:'error', err:BT_FA_ERR[e&&e.code]||'The call could not be read just now. Try again in a moment.'}); }
+  btPaintCall();
+  if(BT.mode==='share'&&F.state==='ready') btFill(false);
+}
+const btSeg=id=>/^s\d+$/.test(id)?BT.fa.segs[+id.slice(1)-1]:null;
+function btQuotes(ids){ return [...new Set(ids)].filter(x=>/^s\d+$/.test(x)).slice(0,5).map(btSeg).filter(Boolean).map(s=>({t:s.t, link:s.link, speaker:s.speaker, text:s.text.slice(0,300)})); }
+function btPaintCall(){
+  const b=BT.el&&BT.el.querySelector('#bt-fbox'); if(!b) return; const F=BT.fa;
+  if(F.state==='loading'){ b.innerHTML='<div class="bt-teaser">Reading the recording and its transcript from Fathom…</div>'; return; }
+  if(F.state==='error'){ b.innerHTML=`<div class="bt-note bad">${btE(F.err)}</div>`; return; }
+  if(F.state!=='ready'){ b.innerHTML=''; return; }
+  const text=BT.mode==='share'?btText(BT.s)||'':btText(BT.d), q=[...new Set(dmTok(text))], qs=q.reduce((a,w)=>a+(DM.idx?dmIdf(w):1),0)||1;
+  const moments=q.length?F.segs.map(s=>{ const st=new Set(dmTok(s.text)); return {s, sc:q.reduce((a,w)=>a+(st.has(w)?(DM.idx?dmIdf(w):1):0),0)/qs}; }).filter(x=>x.sc>.15).sort((a,b)=>b.sc-a.sc).slice(0,3):[];
+  const speakers=[...new Set(F.segs.map(s=>s.speaker))];
+  b.innerHTML=`<div class="bt-call"><b>${btE(F.title||'Call')}</b><span class="small">${btE(F.date)} · ${btPl(F.segs.length,'moment')} · ${btE(speakers.slice(0,4).join(', '))}</span>
+    ${moments.length?`<div class="bt-sl">Moments that match</div>${moments.map(x=>btQuoteHtml(x.s)).join('')}`:'<div class="small">Once the request is filled in, the moments that match it show here.</div>'}
+    <div class="small">Only the moments quoted in the request are kept. The transcript itself is not saved.</div></div>`;
+}
+function btQuoteHtml(s){ return `<a class="bt-quote" href="${btE(s.link)}" target="_blank" rel="noopener"><span class="bt-qt">${btE(s.t)}</span> <b>${btE(s.speaker)}:</b> ${btE(btCut(s.text,220))}</a>`; }
+
+// ---------- Claude (the page's sample capability) ----------
+const BT_AI_ERR={not_granted:'Claude needs your permission for this page. Allow it when claude.ai asks, then try again.', sampling_disabled:'Claude is not available for your account or organisation here.',
+  not_declared:'This version of the page cannot use Claude.', capability_disabled:'Claude is not available in this view of the page.', capability_removed:'Your Claude app is too old for this. Update it or open the page in a browser.',
+  rate_limited:'Too many requests to Claude just now, or your usage limit is reached. Wait a minute and try again.', session_expired:'Your claude.ai session ended. Sign in again, then try again.',
+  refused:'Claude declined this text. Rephrase it and try again.', empty_completion:'Claude returned nothing. Add a little more detail and try again.', invalid_json:'Claude’s answer came back in the wrong shape. Try again.',
+  prompt_too_large:'There is too much text for Claude at once. Shorten it and try again.', cancelled:'Stopped.', upstream_error:'Claude did not answer just now. Try again in a moment.'};
+const btAiMsg=e=>{ const c=(e&&e.code)||'upstream_error'; return (BT_AI_ERR[c]||BT_AI_ERR.upstream_error)+(btAcc().ajay?' (code: '+c+')':''); };
+function btParse(t){ t=String(t||'').trim(); try{ return JSON.parse(t); }catch(e){}
+  const f=t.match(/```(?:json)?\s*([\s\S]*?)```/); if(f){ try{ return JSON.parse(f[1]); }catch(e){} }
+  const a=t.indexOf('{'), b=t.lastIndexOf('}'); if(a>=0&&b>a){ try{ return JSON.parse(t.slice(a,b+1)); }catch(e){} }
+  throw {code:'invalid_json', message:'no JSON object in the reply', text:t}; }
+async function btAI(kind,prompt,o){
+  o=o||{}; if(BT.sample===undefined) BT.sample=await btUse('sample'); if(!BT.sample) throw {code:'capability_disabled'};
+  const opts={modelTier:o.tier||'default'}; if(o.signal) opts.signal=o.signal; if(o.fresh) opts.cache=false; if(o.onText) opts.onText=o.onText;
+  const t0=Date.now(); let res;
+  try{ res=await BT.sample(prompt+'\n\nReply with only the JSON object, no other text.',opts); }
+  catch(e){ const c=e&&e.code; btLog(kind,prompt,{code:c, message:e&&e.message},null,[],c||'error'); if(['not_granted','sampling_disabled','not_declared','capability_disabled','capability_removed'].includes(c)) BT.sample=null; throw e; }
+  let data; try{ data=btParse(res.text); }catch(e){ btLog(kind,prompt,res.text,null,[],'invalid_json'); throw e; }
+  BT.aiOk=true; return {data, text:res.text, ms:Date.now()-t0};
+}
+// the AI log: every call this session in the Beta lab, and one line per call in the History (the viewer's own activity log)
+function btLog(kind,prompt,raw,used,dropped,code){ BT.ailog.unshift({at:new Date(), kind, prompt, raw, used, dropped:dropped||[], code:code||''}); if(BT.ailog.length>30) BT.ailog.pop();
+  try{ actLog('ai',kind+(code?' (failed: '+code+')':'')+(dropped&&dropped.length?' · left out '+dropped.join(', '):'')); }catch(e){} if(HS.sub==='beta') btLabPaint(); }
+// without Claude: split the text into what, why and outcome by its words
+function btHeuristic(raw){
+  const lines=String(raw||'').split(/\n+|(?<=[.!?])\s+/).map(x=>x.replace(/^\s*[^:\n]{1,40}?\b\d{1,2}:\d{2}\b\s*:?\s*/,'').replace(/^\s*[A-Z][\w .()'-]{0,30}:\s+/,'').trim()).filter(x=>x.length>3);
+  if(!lines.length) return {what:'', why:'', outcome:''};
+  const isWant=x=>/\b(wants?|needs?|ask(s|ing|ed)?|would like|should|can we|could we|request(s|ed)?|looking for)\b/i.test(x);
+  const isWhy=x=>/\b(because|currently|today|right now|at the moment|can'?t|cannot|never|problem|issue|without|manual(ly)?|have to|half of|by hand|struggl\w*)\b/i.test(x);
+  const isOut=x=>/\b(so that|so they|would|will|then they|same day|faster|easier|instead|stop|no longer)\b/i.test(x);
+  let wi=lines.findIndex(x=>isWant(x)&&!isWhy(x)); if(wi<0) wi=lines.findIndex(isWant); if(wi<0) wi=0;
+  let what=lines[wi]; const rest=lines.filter((_,k)=>k!==wi); let why=rest.find(isWhy)||'', out=rest.find(x=>x!==why&&isOut(x))||'';
+  const cap=s=>s?s.charAt(0).toUpperCase()+s.slice(1):s; let m;
+  if(!out&&(m=what.match(/^(.*?)\s*,?\s*\b(so that|so they can)\b\s*(.+)$/i))){ what=m[1]; out=cap(m[3]); }
+  if(!why&&(m=what.match(/^(.*?)\s*,?\s*\bbecause\b\s*(.+)$/i))){ what=m[1]; why=cap(m[2]); }
+  return {what:cap(what.replace(/[,;]\s*$/,'')), why, outcome:out};
+}
+function btCallLines(){ let n=0; return BT.fa.segs.filter(s=>(n+=s.text.length)<28000).map(s=>`s${s.i} [${s.t}] ${s.speaker}: ${s.text}`).join('\n'); }
+function btAreaGuess(cands){ const areas=feAreas().map(x=>x[0]); const a=(cands||[]).find(m=>m.pa&&areas.includes(m.pa)); return a?a.pa:''; }
+
+// ---------- Quick share: fill it in ----------
+function btApplyFill(vals,cites){ const S=BT.s;
+  ['what','why','outcome'].forEach(k=>{ const t=String(vals[k]||'').trim(); if(!t||btPh(t)) return; const guess=(cites[k]||[]).includes('guess');
+    if(!guess&&(!S[k].trim()||S.auto[k])){ S[k]=t; S.auto[k]=true; S.cites[k]=cites[k]||[]; delete S.sugg[k]; }
+    else if(t!==S[k].trim()) S.sugg[k]={text:t, cites:cites[k]||[]}; }); }
+async function btFill(auto){
+  const S=BT.s, call=S.src==='call', hasSrc=call?BT.fa.state==='ready':S.raw.trim().length>=12;
+  if(!hasSrc){ if(!auto){ S.fillErr=call?'Read the call first, then Claude can fill it in.':'Type or say a sentence or two first, then Claude can fill it in.'; btPaintFill(); } return; }
+  if(auto&&!BT.aiOk&&!call) return;
+  const local=()=>{ if(call) return; applyLocal(); };
+  const applyLocal=()=>{ btApplyFill(btHeuristic(S.raw),{what:['raw'],why:['raw'],outcome:['raw']}); S.fillNote='Filled in from your text. Check each field.'; };
+  if(BT.sample===undefined) BT.sample=await btUse('sample');
+  if(!BT.sample){ local(); btRepaintShare(); return; }
+  const src=call?'Call transcript (each line starts with its id):\n'+btCallLines():(S.src==='chat'?'Chat snippet':'What the person said or typed')+' (cite it as "raw"):\n'+S.raw.slice(0,8000);
+  const names=feClients().map(x=>x[1]).join('; ');
+  const prompt=`From the source below, write the request a client is making to ExpoPlatform (an event technology platform). Use only what the source says.
+
+Rules:
+- what: one or two sentences, what the client wants. why: what goes wrong today without it. outcome: what changes when it exists.
+- Each field has "cites": ${call?'transcript line ids such as "s12"':'["raw"]'}. If the source does not state why or outcome, you may write a short best guess and cite ["guess"]. Never guess what.
+- Never invent customers, dates or money.
+- clients: the names of any of these clients that the source clearly names, written exactly as in this list, otherwise an empty list: ${names}
+- If the source contains several requests, pick the one stated most clearly.
+
+${src}
+
+JSON shape: {"clients":[],"what":{"text":"","cites":[]},"why":{"text":"","cites":[]},"outcome":{"text":"","cites":[]}}`;
+  S.filling=true; S.fillErr=''; S.fillNote=''; S.progress=0; btPaintFill(); btPaintFoot();
+  try{
+    const r=await btAI('Fill in from '+BT_SRC[S.src].toLowerCase(),prompt,{fresh:!auto, onText:({text})=>{ S.progress=text.length; btPaintFill(); }});
+    const d=r.data||{}, ok=id=>id==='guess'||(id==='raw'?!call:!!btSeg(id)), vals={}, cites={}, dropped=[];
+    ['what','why','outcome'].forEach(k=>{ const x=d[k]||{}, cs=(Array.isArray(x.cites)?x.cites:[]).map(String).filter(ok), t=String(x.text||'').trim();
+      if(t&&(cs.length||k!=='what')){ vals[k]=t; cites[k]=cs.length?cs:['guess']; } else if(t) dropped.push(k); });
+    if(!vals.what&&!call){ vals.what=btHeuristic(S.raw).what; cites.what=['raw']; }
+    btApplyFill(vals,cites);
+    const cl=feClients(), found=(Array.isArray(d.clients)?d.clients:[]).map(n=>cl.find(c=>btNorm(c[1])===btNorm(n))).filter(Boolean).map(c=>c[0]).filter(pd=>!S.clients.includes(pd));
+    if(found.length){ S.clients=S.clients.concat(found); S.clientAuto=true; }
+    S.fillNote='Filled in for you. Check each field and change anything.';
+    btLog('Fill in from '+BT_SRC[S.src].toLowerCase(),prompt,r.text,{vals,cites,clients:found.map(btClientsTxt)},dropped);
+  }catch(e){ S.fillErr=btAiMsg(e)+(call?'':' The fields were filled from your text instead.'); local(); }
+  finally{ S.filling=false; btRepaintShare(); }
+}
+async function btTidy(fields, related){
+  const prompt=`Tidy this request for ExpoPlatform (an event technology platform). Fix spelling, grammar and clarity. Keep the meaning, the client's terms and every fact. Do not add anything new. Keep each field about the same length or shorter.
+Also write "title": a short name for the request, at most 8 words, in sentence case.
+${related?'Also write "question": one short question to the person sharing that would add information the existing request below lacks (for example which parts of the platform, how often, which users), or empty if nothing important is missing.':'Also write "question": one short question that would make the request clearer, or empty if it is already clear.'}
+
+THE TEXT TO TIDY (tidy only this):
+what: ${fields.what}
+why: ${fields.why||'(not given)'}
+outcome: ${fields.outcome||'(not given)'}
+${related?`
+EXISTING REQUEST, for context only (never copy from it):
+its what: ${related.body||''}
+its why: ${related.why||''}
+its outcome: ${related.outcome||''}
+`:''}
+JSON shape: {"what":"","why":"","outcome":"","title":"","question":""}`;
+  try{ const r=await btAI('Tidy before saving',prompt,{tier:'quick'}), d=r.data||{};
+    const out={what:String(d.what||'').trim(), why:String(d.why||'').trim(), outcome:String(d.outcome||'').trim(), title:String(d.title||'').trim().slice(0,90), question:String(d.question||'').trim().slice(0,240)};
+    ['why','outcome'].forEach(k=>{ if(!fields[k]||btPh(out[k])) out[k]=''; }); btLog('Tidy before saving',prompt,r.text,out); return out; }
+  catch(e){ return {failed:btAiMsg(e)}; }
+}
+const btText=o=>[o.what,o.why,o.outcome].filter(Boolean).join(' ').trim()||(o.raw||'');
+function btShareMatches(){ const t=btText(BT.s); return t.length<8?[]:btCands(t,BT.s.clients,4); }
+function btShareMode(){ const p=BT.s.pick; if(!p) return 'new'; return p.startsWith('a:')?'join':p.startsWith('b:')?'exists':'follow'; }
+function btShareMissing(){ const S=BT.s;
+  if(!S.clients.length) return 'Choose at least one client, or Platform.';
+  if(S.what.trim().length<8) return S.filling?'Filling in what they want…':S.raw.trim().length>=12?'Press “Fill it in for me”, or type what they want under The request.':S.src==='call'&&BT.fa.state!=='ready'?'Paste the Fathom link and press “Read the call”.':'Say what the client wants.';
+  if(btShareMode()==='new'&&!S.area) return 'Choose the product area.';
+  return ''; }
+
+// ---------- the modal ----------
+function btOpen(preset){
+  preset=preset||{}; const me=feMe();
+  if(!me.ok){ uiToast('Sign in first: every work item is recorded under the name of whoever logs it. Reload the page and choose Continue.',{bad:true}); return; }
+  if(me.canWrite===false){ uiToast('Your access to this page is view-only, so you cannot log work items. Ask the owner for “Can interact”.',{bad:true}); return; }
+  if(BT.s.stage==='done') btResetShare(); if(BT.d.step==='done') btResetDrop();
+  if(preset.client&&!BT.s.clients.includes(preset.client)){ BT.s.clients=[preset.client]; BT.d.clients=[preset.client]; }
+  if(preset.mode) BT.mode=preset.mode;
+  if(BT.el) BT.el.remove();
+  const d=document.createElement('div'); d.className='modal bt-m'; d.id='bt-m'; d.setAttribute('open',''); d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-labelledby','bt-m-t');
+  BT.el=d; BT.prev=document.activeElement; document.body.appendChild(d); document.body.classList.add('bt-open');
+  d.addEventListener('click',btClick); d.addEventListener('input',btInput); d.addEventListener('change',btChange); d.addEventListener('paste',btPasteEv,true); d.addEventListener('keydown',btKeyIn);
+  document.addEventListener('keydown',btEsc,true);
+  btPaint(); dmLoad().then(()=>{ if(BT.el) btPaintParts(); }).catch(()=>{});
+  if(BT.sample===undefined) btUse('sample').then(x=>{ if(BT.sample===undefined) BT.sample=x; if(BT.el) btPaintFoot(); });
+  try{ actLog('open','Beta: log a new work item'); }catch(e){}
+  setTimeout(()=>{ const f=d.querySelector('#bt-raw,#bd-what,#shc-in'); if(f) f.focus(); },0);
+}
+window.btOpen=btOpen;
+function btClose(){ if(!BT.el) return; BT.el.remove(); BT.el=null; document.body.classList.remove('bt-open'); document.removeEventListener('keydown',btEsc,true); if(BT.prev&&BT.prev.focus) try{ BT.prev.focus(); }catch(e){} }
+function btEsc(e){ if(e.key==='Escape'&&BT.el&&!document.querySelector('.ui-dlg')&&!(document.getElementById('modal')||{}).hasAttribute?.('open')){ e.preventDefault(); e.stopPropagation(); btClose(); } }
+function btKeyIn(e){ if(e.key==='Enter'&&e.target&&(e.target.id==='bt-url'||e.target.id==='bd-furl')){ e.preventDefault(); btFetchCall(); } }
+window.btFromNeed=id=>{ const c=DM.byCl.get(id); if(!c) return; btResetDrop(); const D=BT.d;
+  const cl=[...new Set(c.rs.flatMap(r=>(r.cu||[]).map(x=>x[2]).filter(Boolean).map(String)))].filter(pd=>btCo(pd)).slice(0,6);
+  Object.assign(D,{what:c.what||c.name, why:c.why||'', outcome:c.outcome||'', clients:cl, links:[{k:'a', id:c.id, rel:'same'}], decision:'builds', fromNeed:c.id, area:feAreas().some(a=>a[0]===c.product)?c.product:''});
+  btOpen({mode:'drop'}); };
+function btPaint(){
+  const d=BT.el; if(!d) return; const how=!!btAcc().how;
+  d.innerHTML=`<div class="scrim" data-btclose></div><div class="box bt-box"><div class="top"><div><h3 id="bt-m-t">Log a new work item <span class="bt-beta">Beta</span></h3>
+    <div class="meta">Share what the client said. Claude fills in the request, shows who else asked for it and what already exists, and logs it with you as the person who logged it.</div></div>
+    <button class="x" type="button" data-btclose aria-label="Close">&#215;</button></div>
+    <div class="bt-bar"><span class="seg" role="group" aria-label="How to log it"><button type="button" data-btmode="share" aria-pressed="${BT.mode==='share'}">Quick share</button><button type="button" data-btmode="drop" aria-pressed="${BT.mode==='drop'}">Full review · 4 steps</button></span>
+      <label class="bt-testsw"><input type="checkbox" id="bt-test"${BT.test?' checked':''}> Test mode</label>
+      ${how?'<button type="button" class="linkbtn" data-btold>Use the classic form</button>':''}</div>
+    ${BT.test?'<div class="bt-testbar">Test mode is on. What you log is tagged <b>Test</b> and left out of every count, board and signal. Only viewers with test mode on see it.</div>':''}
+    <div class="bt-body" id="bt-body">${BT.mode==='share'?btShareBody():btDropBody()}</div>
+    <div class="foot bt-foot" id="bt-foot"></div></div>`;
+  btPaintParts();
+}
+function btPaintParts(){ if(!BT.el) return; if(BT.mode==='share'){ if(BT.s.stage!=='done'){ btPaintCall(); btPaintFill(); btPaintMatch(); btPaintTidy(); } }
+  else { const s=BT.d.step; if(s===1){ btPaintCall(); btPaintTeaser(); } if(s===2){ btPaintMatches(); btPaintLinked(); } if(s===3){ btPaintSugg(); btPaintAi(); } if(s===4) btPaintDTidy(); }
+  btPaintFoot(); }
+const btQ=s=>BT.el?BT.el.querySelector(s):null;
+
+// ---------- pickers and dictation ----------
+function btPicker(id,sel){
+  return `<div class="bt-cp" data-cp="${id}"><div class="bt-cpc">${sel.map(pd=>{ const c=btCo(pd); return c?`<span class="bt-chip">${btE(c.short)}${c.tier?' <small>T'+c.tier+'</small>':''}<button type="button" data-btcpx="${id}|${btE(pd)}" aria-label="Remove ${btE(c.short)}">&#215;</button></span>`:''; }).join('')}</div>
+    <input class="bt-in" id="${id}-in" data-btcpin="${id}" type="search" autocomplete="off" placeholder="${sel.length?'Add another client':'Type a client name'}" aria-label="${sel.length?'Add another client':'Choose a client'}"><div class="bt-cpl" id="${id}-list" hidden></div></div>`; }
+const btCpState=id=>id==='shc'?BT.s:BT.d;
+function btCpList(id){ const i=btQ('#'+id+'-in'), l=btQ('#'+id+'-list'); if(!i||!l) return; const q=btNorm(i.value), st=btCpState(id);
+  const all=[['Platform','Platform (no single client)']].concat(feClients()).filter(([pd,n])=>!st.clients.includes(pd)&&(!q||btNorm(n).includes(q)));
+  const hits=all.sort((a,b)=>(btNorm(a[1]).startsWith(q)?0:1)-(btNorm(b[1]).startsWith(q)?0:1)).slice(0,8);
+  l.innerHTML=hits.map(([pd,n],k)=>{ const c=btCo(pd); return `<button type="button" class="bt-cpo${k===0?' first':''}" data-btcpadd="${id}|${btE(pd)}">${btE(n)}${c&&c.tier?' <small>Tier '+c.tier+'</small>':''}</button>`; }).join('')||'<div class="small bt-cpn">No client matches</div>'; l.hidden=false; }
+function btCpSet(id,list){ const st=btCpState(id); st.clients=[...new Set(list)]; const w=btQ('[data-cp="'+id+'"]'); if(w){ w.outerHTML=btPicker(id,st.clients); const i=btQ('#'+id+'-in'); if(i) i.focus(); }
+  if(id==='shc'){ BT.s.clientAuto=false; const cs=btQ('#bt-csug'); if(cs) cs.innerHTML=''; btPaintMatch(); } btPaintFoot(); }
+const BT_DEV=/iPhone|iPad|iPod/.test(navigator.userAgent)?'ios':/Android/.test(navigator.userAgent)?'android':/Mac/.test(navigator.platform||navigator.userAgent)?'mac':/Win/.test(navigator.platform||navigator.userAgent)?'win':'other';
+const BT_SPEAK={ios:'<ol><li>Tap in the box.</li><li>Tap the microphone on your keyboard and talk.</li><li>Tap it again when you are done.</li></ol>',
+  android:'<ol><li>Tap in the box.</li><li>Tap the microphone on your keyboard and talk.</li><li>Tap it again when you are done.</li></ol>',
+  mac:'<ol><li>The first time only: Apple menu, System Settings, Keyboard, and switch Dictation on. Note the shortcut it shows.</li><li>Click in the box and press that shortcut (on most Macs the microphone key, F5, or Control twice).</li><li>Talk. The words appear as you speak. Press the shortcut again to stop.</li></ol>',
+  win:'<ol><li>Click in the box.</li><li>Press the Windows key and H together, then talk.</li><li>If nothing opens: Settings, Time &amp; language, Speech, and switch voice typing on.</li></ol>',
+  other:'<ol><li>Click in the box.</li><li>Start your device’s dictation (voice typing) and talk.</li></ol>'};
+let BT_QR=null;
+function btLoadQR(){ if(window.QRCode) return Promise.resolve(); if(!BT_QR) BT_QR=new Promise((res,rej)=>{ const s=document.createElement('script'); s.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js'; s.onload=res; s.onerror=rej; document.head.appendChild(s); }); return BT_QR; }
+function btSpeak(target){
+  const el=btQ('#'+target); if(el){ el.focus(); const n=el.value.length; try{ el.setSelectionRange(n,n); }catch(e){} }
+  const box=btQ('#speak-'+target); if(!box) return; const phone=BT_DEV==='ios'||BT_DEV==='android'; box.hidden=false;
+  box.innerHTML=`<b>Speak into the box</b>${BT_SPEAK[BT_DEV]}${phone?'':`<div class="bt-qrbox"><div class="bt-qr" id="qr-${target}" aria-label="QR code that opens the ledger on your phone"></div><div><b>Easier on your phone.</b><br>Scan this with your phone’s camera to open the ledger there, then tap the microphone on your keyboard and talk.</div></div>`}
+    <span class="small">Pages inside claude.ai cannot use the microphone directly, so your device turns your voice into text.</span>`;
+  if(!phone) btLoadQR().then(()=>{ const q=btQ('#qr-'+target); if(q&&window.QRCode&&!q.firstChild){ try{ new QRCode(q,{text:BT_LEDGER_URL+'#log', width:124, height:124, colorDark:'#0D0D28', colorLight:'#ffffff'}); }catch(e){} } })
+    .catch(()=>{ const q=btQ('#qr-'+target); if(q) q.outerHTML='<div class="small">The QR code could not load. Open the ledger on your phone from claude.ai instead.</div>'; });
+}
+
+// ---------- Quick share: the view ----------
+function btShareBody(){
+  const S=BT.s; if(S.stage==='done') return btShareDone();
+  const areas=feAreas();
+  return `${(S.raw||S.what||S.clients.length)?'<div class="bt-restart"><button type="button" class="linkbtn" data-btnew>Start over</button></div>':''}
+    <div class="bt-f"><label for="shc-in">Clients asking <span class="req">at least one</span></label><span class="bt-h">Type a name and pick it. Add every client asking for this, or Platform when it is for everyone.</span>${btPicker('shc',S.clients)}<div id="bt-csug">${S.clientAuto&&S.clients.length?'<span class="small">Picked from what you shared. Remove any that are wrong.</span>':''}</div></div>
+    <div class="bt-f"><label>How are you sharing it?</label><span class="seg" role="group" aria-label="Source">${Object.entries(BT_SRC).map(([k,l])=>`<button type="button" data-btsrc="${k}" aria-pressed="${S.src===k}">${l}</button>`).join('')}</span></div>
+    <div id="bt-src">${btShareSrc()}</div><div id="bt-fill"></div>
+    <div class="bt-fh"><b>The request</b><span class="small">Filled in from what you shared. You can also type here.</span></div>
+    <div id="bt-fields">${btShareFields()}</div>
+    <div class="bt-f"><label for="bt-area">Product area <span class="req">for a new item</span></label><span class="bt-h">Filled in from the closest match. Not needed when you add to something that already exists.</span>
+      <select class="bt-in" id="bt-area"><option value="">Choose…</option>${areas.map(([k,l])=>`<option value="${btE(k)}"${S.area===k?' selected':''}>${btE(l)}</option>`).join('')}</select></div>
+    <div class="bt-sec" id="bt-match"></div><div id="bt-tidy"></div>
+    <div class="bt-full"><button type="button" class="linkbtn" data-btfull>Need more detail? Continue in the full review &#8594;</button></div>`;
+}
+function btShareSrc(){ const S=BT.s;
+  if(S.src==='call') return `<div class="bt-f"><label for="bt-url">Fathom link</label><span class="bt-h">From your call with the client. Claude reads the transcript and fills in the request; only the quoted moments are kept.</span>
+    <div class="bt-row"><input class="bt-in" id="bt-url" type="url" placeholder="https://fathom.video/share/…" value="${btE(S.url||BT.fa.url)}"><button type="button" class="ibtn" data-btfetch>Read the call</button></div><div id="bt-fbox"></div></div>`;
+  const fill=`<button type="button" class="ibtn primary" data-btfill${S.filling?' disabled':''}>Fill it in for me</button>`;
+  if(S.src==='chat') return `<div class="bt-f"><label for="bt-raw">Chat snippet</label><span class="bt-h">Paste from Slack, Teams, email or WhatsApp. Claude fills in the request as soon as you paste. Leave out personal details such as phone numbers.</span><textarea class="bt-in" id="bt-raw" rows="5" placeholder="Paste the messages here">${btE(S.raw)}</textarea><div class="bt-acts">${fill}</div></div>`;
+  return `<div class="bt-f"><label for="bt-raw">Tell us in your own words</label><span class="bt-h">Type or speak a few sentences: what they want, why, and what would change. Then press “Fill it in for me”.</span><textarea class="bt-in" id="bt-raw" rows="4" placeholder="The client told me their exhibitors…">${btE(S.raw)}</textarea>
+    <div class="bt-acts"><button type="button" class="ibtn" data-btspeak="bt-raw">Speak instead</button>${fill}</div><div class="bt-speak" id="speak-bt-raw" hidden></div></div>`; }
+function btShareFields(){ const S=BT.s;
+  const f=(k,label,req,rows)=>`<div class="bt-f"><label for="bt-${k}">${label}${req?' <span class="req">required</span>':''}</label><textarea class="bt-in" id="bt-${k}" rows="${rows}">${btE(S[k])}</textarea><div class="bt-sugg" id="bts-${k}">${btShareSugg(k)}</div></div>`;
+  return f('what','What do they want?',true,3)+f('why','Why do they need it?',false,2)+f('outcome','What changes when it exists?',false,2)+
+    `<div class="bt-f"><label for="bt-name">Name <span class="opt">optional</span></label><span class="bt-h">Leave it empty and Claude names it when it tidies the wording.</span><input class="bt-in" id="bt-name" maxlength="90" value="${btE(S.name)}"></div>`; }
+function btCites(cs,src){ return (cs||[]).map(id=>{ const s=btSeg(id); if(s) return `<a class="bt-cite call" href="${btE(s.link)}" target="_blank" rel="noopener">Call ${btE(s.t)}, ${btE(s.speaker)}</a>`;
+  if(id==='raw'||id==='tam') return `<span class="bt-cite you">${src==='chat'?'From the chat':'From your words'}</span>`; if(id==='guess') return '<span class="bt-cite guess">Claude’s guess: confirm with the client</span>';
+  const m=btFind(id); return m?`<button type="button" class="bt-cite" data-btcand="${btE(id)}">${btE(btCut(m.title,60))}</button>`:''; }).join(''); }
+function btShareSugg(k){ const S=BT.s, sg=S.sugg[k];
+  if(sg&&sg.text&&sg.text.trim()!==S[k].trim()){ const gs=(sg.cites||[]).includes('guess'); return `<div class="bt-sg${gs?' guess':''}"><span class="small">${gs?'Claude’s guess: the source does not say this':'Suggested from the '+(S.src==='call'?'call':S.src==='chat'?'chat':'text above')}</span><p>${btE(sg.text)}</p><div>${btCites(sg.cites,S.src)}</div><button type="button" class="ibtn" data-btuse="${k}">Use this</button></div>`; }
+  if(S.auto[k]&&S.cites[k]) return `<span class="small">Filled in for you. Change anything you like.</span> ${btCites(S.cites[k],S.src)}`; return ''; }
+function btPaintFill(){ const b=btQ('#bt-fill'), S=BT.s; if(!b) return;
+  b.innerHTML=S.filling?`<div class="bt-teaser"><span class="gate-spin"></span> ${S.progress?'Writing it up…':'Reading the '+(S.src==='call'?'call':S.src==='chat'?'chat':'text')+'…'} <span class="small">${S.progress?'':'Up to a minute. The first time, claude.ai asks you to allow Claude for this page.'}</span></div>`
+    :S.fillErr?`<div class="bt-note bad">${btE(S.fillErr)}</div>`:S.fillNote?`<div class="bt-teaser ok">${btE(S.fillNote)}</div>`:''; }
+function btRepaintShare(){ const S=BT.s; const f=btQ('#bt-fields'); if(f) f.innerHTML=btShareFields();
+  const pk=btQ('[data-cp="shc"]'); if(pk) pk.outerHTML=btPicker('shc',S.clients);
+  const cs=btQ('#bt-csug'); if(cs) cs.innerHTML=S.clientAuto&&S.clients.length?'<span class="small">Picked from what you shared. Remove any that are wrong.</span>':'';
+  const fb=btQ('[data-btfill]'); if(fb) fb.disabled=!!S.filling;
+  btPaintFill(); btPaintMatch(); btPaintCall(); }
+function btPaintMatch(){ const w=btQ('#bt-match'), S=BT.s; if(!w) return;
+  const ms=btShareMatches();
+  if(!S.area){ const g=btAreaGuess(ms); if(g){ S.area=g; const a=btQ('#bt-area'); if(a) a.value=g; } }
+  if(!ms.length){ w.innerHTML=btText(S).length>=8?`<h4>Is this it?</h4><div class="small">${DM.data?'Nothing close yet. It will be logged as a new work item.':'Loading the demand map…'}</div>`:''; btPaintFoot(); return; }
+  w.innerHTML=`<h4>Is this it?</h4><div class="small">If one of these is the same idea, pick it. That adds your client’s voice in one tap instead of starting a new item.</div>
+    ${ms.map(m=>{ const key=btKey(m), on=S.pick===key, act=m.k==='a'?'Yes, add my client’s voice':m.k==='b'?'Yes, it’s already built':'Yes, it’s already on its way';
+      return `<div class="bt-pick${on?' on':''}">${btPct(m.pct)}<div class="bt-mm">${btCandTitle(m)}<div class="small">${btKindChip(m)} ${btE(m.pa||'')}${m.cus.length?' · '+btPl(m.cus.length,'client')+' asking':''}${m.mine?' · <b>your client</b>':''}</div>
+        <div class="bt-macts">${on?'<span class="bt-state ok">Picked</span><button type="button" class="linkbtn" data-btpick="">Undo</button>':`<button type="button" class="ibtn${m.k==='a'?' primary':''}" data-btpick="${btE(key)}">${act}</button>`}</div></div></div>`; }).join('')}
+    <button type="button" class="bt-dcard" data-btpick="none" aria-pressed="${!!(S.none&&!S.pick)}"><b>None of these, it’s new</b><span>It becomes a new work item that others can add to.</span></button>`;
+  btPaintFoot(); }
+function btPct(p){ return `<div class="bt-pct" title="Share of the important words in the request found in this item, lifted when the same client is behind it. A similarity score, not a probability."><b>${p}%</b><span class="bt-meter"><i style="width:${p}%" class="${p>=85?'hi':p>=60?'md':''}"></i></span></div>`; }
+function btPaintTidy(){ const w=btQ('#bt-tidy'), S=BT.s; if(!w) return;
+  if(S.tidyBusy){ w.innerHTML='<div class="bt-ai"><b>Tidying the wording…</b><div class="small">Spelling and clarity only. Nothing new is added.</div></div>'; return; }
+  const t=S.tidy; if(!t){ w.innerHTML=S.tidyNote?`<div class="bt-note">The wording could not be tidied: ${btE(S.tidyNote)} Your own words are saved as they are.</div>`:''; return; }
+  const ch=['what','why','outcome'].filter(k=>t[k]&&t[k].trim()&&t[k].trim()!==S[k].trim());
+  w.innerHTML=`<div class="bt-ai"><b>${ch.length?'We tidied the wording':'The wording looks good'}</b>${ch.length?'<div class="small">Pick the version to keep for each field, then save.</div>'+ch.map(k=>{ const ai=S.tidyChoice[k]!=='mine';
+    return `<div class="bt-sl">${{what:'What',why:'Why',outcome:'Outcome'}[k]}</div><button type="button" class="bt-tc${ai?' on':''}" data-bttidy="${k}|ai"><span class="small">Tidied</span>${btE(t[k])}</button><button type="button" class="bt-tc${!ai?' on':''}" data-bttidy="${k}|mine"><span class="small">Your words</span>${btE(S[k])}</button>`; }).join(''):'<div class="small">Nothing to change. Save when you are ready.</div>'}</div>`; }
+function btPaintFoot(){ const f=btQ('#bt-foot'); if(!f) return;
+  if(BT.mode==='share'){ const S=BT.s; if(S.stage==='done'){ f.innerHTML=''; f.hidden=true; return; } f.hidden=false;
+    const miss=btShareMissing(), mode=btShareMode(), label=S.tidy&&!S.tidyBusy?'Save':mode==='join'?'Add my client’s voice':mode==='exists'?'Record as already built':mode==='follow'?'Add my client to it':'Log it as a new work item';
+    f.innerHTML=`<span class="small bt-fn">${BT.sample?'Claude tidies the wording before it is saved.':BT.sample===null?'Claude is not available in this view: your own words are saved.':''}</span>${miss?`<span class="bt-miss" role="status">${btE(miss)}</span>`:''}<button type="button" class="ibtn primary" data-btgo${miss||S.saving||S.tidyBusy?' disabled':''}>${S.saving?'Saving…':S.tidyBusy?'Tidying…':label}</button>`; return; }
+  const D=BT.d; if(D.step==='done'){ f.innerHTML=''; f.hidden=true; return; } f.hidden=false;
+  const s=D.step, miss=btStepMissing(s), ex=D.decision==='exists';
+  const label=s===4&&D.tidyBusy?'Tidying…':s===4&&D.saving?'Saving…':s===4&&D.tidy&&D.tidyDone?(ex?'Record as already built':D.sales?'Log it and hand the value to '+feName(D.sales.id):'Log it'):s===1?'Continue to matches':s===2?(ex?'Continue to record it':D.decision==='builds'?'Continue with '+btPl(D.links.filter(l=>l.rel!=='exists').length,'linked item'):'Continue to review'):s===3?'Continue to send':ex?'Record as already built':D.sales?'Log it and hand the value to '+feName(D.sales.id):'Log it';
+  f.innerHTML=`${s>1?'<button type="button" class="ibtn" data-btnav="back">Back</button>':'<span></span>'}<span class="bt-fgo">${miss?`<span class="bt-miss" role="status">${btE(miss)}</span>`:''}<button type="button" class="ibtn primary" data-btnav="next"${miss||D.saving||D.tidyBusy?' disabled':''}>${btE(label)}</button></span>`; }
+
+// ---------- Quick share: save ----------
+async function btShareGo(){
+  const S=BT.s; if(btShareMissing()||S.saving) return;
+  const mode=btShareMode(), pick=S.pick?btFind(S.pick):null;
+  if(BT.sample&&!S.tidy&&!S.tidyDone){
+    S.tidyBusy=true; btPaintTidy(); btPaintFoot();
+    S.tidy=await btTidy({what:S.what, why:S.why, outcome:S.outcome}, mode==='join'&&pick?pick:null);
+    S.tidyBusy=false; S.tidyDone=true;
+    if(S.tidy&&S.tidy.failed){ S.tidyNote=S.tidy.failed; S.tidy=null; }
+    if(S.tidy&&['what','why','outcome'].some(k=>S.tidy[k]&&S.tidy[k]!==S[k].trim())){ btPaintTidy(); btPaintFoot(); const t=btQ('#bt-tidy'); if(t) t.scrollIntoView({block:'center'}); return; }
+  }
+  const fin={what:S.what.trim(), why:btPh(S.why)?'':S.why.trim(), outcome:btPh(S.outcome)?'':S.outcome.trim()};
+  if(S.tidy) ['what','why','outcome'].forEach(k=>{ if(S.tidy[k]&&S.tidy.hasOwnProperty(k)&&S.tidyChoice[k]!=='mine'&&fin[k]) fin[k]=S.tidy[k]; });
+  const call=S.src==='call', quotes=call?btQuotes(['what','why','outcome'].flatMap(k=>S.cites[k]||[])):[];
+  const base={clients:S.clients.slice(), src:S.src, what:fin.what, why:fin.why, outcome:fin.outcome, excerpt:call?'':S.raw.trim().slice(0,600),
+    call:call?{title:BT.fa.title, date:BT.fa.date, url:BT.fa.callUrl||S.url}:null, quotes, question:S.tidy?S.tidy.question:''};
+  S.saving=true; btPaintFoot();
+  try{ S.result=mode==='new'?await btSaveItem(Object.assign({mode:'share', name:S.name||(S.tidy&&S.tidy.title)||'', area:S.area, links:[], decision:'new', matches:btShareMatches()},base)):await btSaveVoice(mode,pick,base);
+    S.stage='done'; }
+  catch(e){ S.err=e&&e.code==='invalid_argument'?'Not saved: your access to this page is read-only.':e&&e.code==='busy'?e.message:'It could not be saved just now ('+((e&&e.code)||'error')+'). Your text is still here; try again.'; uiToast(S.err,{bad:true}); }
+  S.saving=false; btPaint();
+}
+async function btSaveVoice(mode,m,base){
+  const me=feMe(); if(!FE.db||!me.uid) throw {code:'unavailable'};
+  const at=feNow(), vid=btNewId('v'), doc=Object.assign({kind:mode==='exists'?'exists':mode, target:{k:m.k, id:m.id, name:m.title}, by:me.uid, at, beta:true},base);
+  let res={mode, name:m.title, key:btKey(m)};
+  if(mode==='join'){ const before={c:m.cus.length, s:btSig(m.cus)}, fresh=base.clients.map(btCu).filter(Boolean).filter(x=>!m.cus.some(y=>y[0]===x[0]||(y[2]&&y[2]===x[2])));
+    const after={c:before.c+fresh.length, s:before.s+btSig(fresh)}; doc.sig={before, after, had:!fresh.length}; Object.assign(res,{before, after, had:!fresh.length, top:before.c>=5}); }
+  if(BT.test) doc.test=true;
+  doc.h={['e'+Date.now().toString(36)]:{at, by:me.uid, k:'share', to:doc.kind}};
+  await FE.db.doc('ledger-voices/'+vid).set(doc);
+  res.vid=vid; res.question=base.question; return res;
+}
+// a new work item from Beta, in the ledger's own schema: the five fields to log, the rest owed (and the value handed to the sales colleague if one was chosen)
+async function btSaveItem(o){
+  const me=feMe(); if(!FE.db||!me.uid) throw {code:'unavailable'};
+  const v=feBlank(), cls=o.clients.filter(x=>x!=='Platform'), c0=cls[0]||'Platform';
+  v.raisedBy={id:me.uid}; v.client=c0; v.customers=cls.length?cls.map(pd=>({client:pd,contact:'',how:o.src==='call'?'Call':o.src==='chat'?'Other':'',note:''})):[{client:'',contact:'',how:'',note:''}];
+  v.title=btCut(String(o.name||'').trim()||o.what.split(/(?<=[.!?])\s/)[0],90); v.productArea=o.area;
+  v.problem=[o.what,o.why].filter(Boolean).join(' '); v.successMeasure=o.outcome||'';
+  const keys=[]; (o.links||[]).forEach(l=>{ const m=btFind(l.k+':'+l.id); if(!m||l.rel==='related') return; if(m.k==='a') keys.push(...(m.keys||[]).slice(0,15)); if(m.k==='m'&&m.key) keys.push(m.key); });
+  v.related=[...new Set(keys)].slice(0,30); if(!v.related.length) v.related=[''];
+  const same=(o.links||[]).find(l=>l.k==='a'&&l.rel==='same'); if(same){ const m=btFind('a:'+same.id); if(m) v.dupOf={id:m.id, name:m.title, keys:(m.keys||[]).slice(0,15)}; }
+  v.source=o.src==='call'&&o.call&&o.call.url?{kind:'meeting', ref:o.call.url}:{kind:'intake-form', ref:''};
+  v.evidence=['Shared with Beta ('+BT_SRC[o.src]+(o.call&&o.call.title?': “'+o.call.title+'”'+(o.call.date?', '+o.call.date:''):'')+').'].concat((o.quotes||[]).map(q=>'['+q.t+'] '+q.speaker+': '+q.text)).concat(v.related.filter(Boolean).length?['Linked tickets: '+v.related.filter(Boolean).join(', ')]:[]).join('\n');
+  if(o.surfaces&&o.surfaces.length){ const map=[['admin',/admin/i],['web',/web|front/i],['app',/app|mobile/i],['api',/\bapi\b|integration/i],['reports',/report|stat|analytic/i]]; v.surfaces.on=map.filter(([k,re])=>o.surfaces.some(s=>re.test(s))).map(([k])=>k); }
+  if(o.sales&&o.sales.id){ v.handoff={}; BT_VALUE_KEYS.forEach(k=>{ v.handoff[k]={to:o.sales.id}; }); }
+  const cb=btCombined(o.clients,o.links||[]);
+  v.beta={v:1, mode:o.mode, src:o.src, what:o.what, why:o.why, outcome:o.outcome, excerpt:o.excerpt||'', call:o.call||null, quotes:o.quotes||[], links:(o.links||[]).map(l=>({k:l.k, id:l.id, rel:l.rel, name:(btFind(l.k+':'+l.id)||{}).title||''})),
+    decision:o.decision||'new', signal:{clients:cb.list.length, signal:cb.signal}, close:cb.close, questions:o.questions||[], question:o.question||'', answer:'', verdict:o.verdict||'', lever:o.lever||'', sales:o.sales?{id:o.sales.id}:null, test:!!BT.test};
+  const ms=(o.matches||[]).slice(0,8);
+  const {id, owedK, sg}=await feWriteNew(v,{via:'beta', test:!!BT.test,
+    dup:at=>({query:btCut(btText(o),400), shown:ms.filter(m=>m.k==='a').map(m=>m.id), decision:same?'same':(o.links||[]).length?'linked':ms.length?'none':'no-match', choice:same?same.id:null, ai:null, at})});
+  return {mode:'new', id, name:v.title, owed:owedK.length, signer:sg?sg.who:'', sales:o.sales?o.sales.id:'', question:o.question||'', signal:cb, close:cb.close};
+}
+function btShareDone(){
+  const r=BT.s.result||{}; let head, body;
+  if(r.mode==='join'){ head=r.had?'Your client was already asking for this':r.top?'This is one of the most asked needs':'Added to a need already asked for';
+    body=r.had?`The new evidence was added to their voice on “${btE(r.name)}”. Its signal stays at ${r.after.s}.`:`“${btE(r.name)}”: ${btPl(r.before.c,'client')} ${r.before.c===1?'was':'were'} asking, and you made it ${r.after.c}. Its signal went from ${r.before.s} to ${r.after.s}.`; }
+  else if(r.mode==='exists'){ head='Recorded as already built'; body=`“${btE(r.name)}” already exists. Tell the client how to use it. Their ask still counts as demand for it, so product sees how often it comes up.`; }
+  else if(r.mode==='follow'){ head='Added to work already on its way'; body=`Your client now follows “${btE(r.name)}”. It shows on that item, and nothing new is logged.`; }
+  else { head='Logged as '+btE(r.id); body=`“${btE(r.name)}” is on the Feature ledger at step 2. ${r.owed?btPl(r.owed,'detail')+' '+(r.owed===1?'is':'are')+' still owed before '+btE(r.signer||'the lever owner')+' signs; fill them in from the item.':'It now waits for '+btE(r.signer||'the lever owner')+' to sign the figure.'}`; }
+  return `<div class="bt-done"><div class="bt-tick" aria-hidden="true"></div><h4>${head}</h4><p>${body}</p></div>
+    ${r.mode==='join'&&!r.had?`<div class="bt-sigbar"><div><span class="small">Signal before</span><b>${r.before.s}</b></div><span class="bt-meter big"><i style="width:${Math.min(100,r.before.s/Math.max(r.after.s,1)*100)}%" class="lo"></i><i style="width:${Math.min(100,(r.after.s-r.before.s)/Math.max(r.after.s,1)*100)}%" class="hi"></i></span><div><span class="small">After</span><b>${r.after.s}</b></div></div>`:''}
+    ${BT.test?'<div class="bt-note">Saved as test data. Only viewers with test mode on count it.</div>':''}
+    ${r.question?`<div class="bt-sec"><h4>One question, if you know</h4><p>${btE(r.question)}</p><textarea class="bt-in" id="bt-ans" rows="2">${btE(BT.s.answer)}</textarea><div class="bt-acts"><button type="button" class="ibtn" data-btans${BT.s.answered?' disabled':''}>${BT.s.answered?'Added, thank you':'Add my answer'}</button></div></div>`:''}
+    <div class="bt-acts">${r.id?`<button type="button" class="ibtn primary" data-btopenitem="${btE(r.id)}">Open ${btE(r.id)}</button>`:r.key?`<button type="button" class="ibtn primary" data-btcand="${btE(r.key)}">${r.mode==='exists'?'See what exists':r.mode==='join'?'Open the need':'Open it'}</button>`:''}<button type="button" class="ibtn" data-btnew>Share another</button></div>`;
+}
+async function btAnswer(){
+  const S=BT.s, r=S.result||{}, a=String((btQ('#bt-ans')||{}).value||'').trim(); if(!a||S.answered) return; S.answer=a;
+  try{ if(r.vid) await FE.db.doc('ledger-voices/'+r.vid).update({answer:a, answeredAt:feNow()});
+    else if(r.id) await btItemUpdate(r.id,v=>{ v.beta=Object.assign({},v.beta,{answer:a}); },{k:'answer', fields:['question']});
+    S.answered=true; btPaint(); uiToast('Answer added.'); }
+  catch(e){ uiToast('The answer could not be saved just now. Try again.',{bad:true}); }
+}
+
+// ---------- Full review: 4 steps ----------
+function btCombined(clients,links){
+  const cus=new Map(); (clients||[]).map(btCu).filter(Boolean).forEach(c=>cus.set(c[0],[c[0],c[1],c[2],true]));
+  const close=[]; (links||[]).forEach(l=>{ const m=btFind(l.k+':'+l.id); if(!m) return;
+    if(m.k==='a'&&(l.rel==='same'||l.rel==='part')) m.cus.forEach(x=>{ if(![...cus.values()].some(y=>y[0]===x[0]||(x[2]&&y[2]===x[2]))) cus.set(x[0],[x[0],x[1],x[2],false]); });
+    if(l.rel==='same'&&m.k==='a') close.push(...(m.keys||[])); });
+  const list=[...cus.values()]; return {list, signal:btSig(list), close:[...new Set(close)]};
+}
+const btLinked=(k,id)=>BT.d.links.find(l=>l.k===k&&l.id===id);
+const btRelOpts=k=>k==='a'?['same','part','related']:k==='b'?['extends','exists','related']:['follow','related'];
+function btDropMatches(){ const D=BT.d, t=[D.what,D.why,D.outcome].join(' '), ms=btCands(t,D.clients,12);
+  if(D.ai){ ms.forEach(m=>{ const a=D.ai.pcts[btKey(m)]; if(a){ m.ai=a.pct; m.why=a.why; } }); Object.entries(D.ai.pcts).forEach(([k,a])=>{ if(!ms.some(m=>btKey(m)===k)){ const m=btFind(k); if(m) ms.push(Object.assign(m,{pct:a.text||0, ai:a.pct, why:a.why})); } });
+    ms.sort((a,b)=>(b.ai??b.pct)-(a.ai??a.pct)); }
+  return ms.slice(0,12); }
+function btStepMissing(s){ const D=BT.d;
+  if(s===1){ if(!D.clients.length) return 'Choose at least one client, or Platform.'; if(D.what.trim().length<8) return 'Say what the client wants.'; return ''; }
+  if(s===2){ if(!D.decision) return 'Choose what this is.'; if(D.decision==='builds'&&!D.links.some(l=>l.rel!=='exists')) return 'Link at least one match, or choose another option.';
+    if(D.decision==='exists'&&!D.links.some(l=>l.rel==='exists')) return 'Mark the built feature with “Already exists”, or choose another option.'; return ''; }
+  if(s===3){ if(D.decision==='exists') return ''; if(D.draft.what.trim().length<8) return 'Fill in what the client wants.'; if(D.draft.why.trim().length<8) return 'Fill in why they need it.'; return ''; }
+  if(s===4){ if(D.decision!=='exists'&&!D.area) return 'Choose the product area.'; } return ''; }
+function btDropBody(){
+  const D=BT.d; if(D.step==='done') return btDropDone(); const s=D.step;
+  return `<ol class="bt-prog" aria-label="Progress">${BT_STEPS.map(([k,l],i)=>`<li class="${i+1<s?'done':i+1===s?'now':''}"><button type="button" data-btstep="${i+1}"${i+1<s?'':' disabled'} aria-current="${i+1===s?'step':'false'}"><i>${i+1}</i><span>${l}</span></button></li>`).join('')}</ol>
+    <div id="bd-body">${s===1?btStep1():s===2?btStep2():s===3?btStep3():btStep4()}</div>`; }
+function btStep1(){ const D=BT.d;
+  return `<p class="bt-lead">Tell us what the client wants, in a few lines. Next you see who else asked for it and what already exists.</p>
+    <div class="bt-f"><label for="drc-in">Clients <span class="req">at least one</span></label><span class="bt-h">Type a name and pick it. Add every client this is for.</span>${btPicker('drc',D.clients)}</div>
+    <div class="bt-f"><label for="bd-what">What do they want? <span class="req">required</span></label><span class="bt-h">One or two lines, in the client’s words.</span><textarea class="bt-in" id="bd-what" rows="4" placeholder="Exhibitors want to sort marketplace listings by newest and most viewed">${btE(D.what)}</textarea><div class="bt-acts"><button type="button" class="ibtn" data-btspeak="bd-what">Speak instead</button></div><div class="bt-speak" id="speak-bd-what" hidden></div></div>
+    <div class="bt-f"><label for="bd-why">Why do they need it?</label><span class="bt-h">What goes wrong today without it. You can add this later.</span><textarea class="bt-in" id="bd-why" rows="3">${btE(D.why)}</textarea></div>
+    <div class="bt-f"><label for="bd-outcome">What changes when it exists?</label><textarea class="bt-in" id="bd-outcome" rows="2">${btE(D.outcome)}</textarea></div>
+    <div class="bt-f"><label for="bt-url">Call recording <span class="opt">optional</span></label><span class="bt-h">Paste the Fathom link from your call with the client. The draft can then quote their own words, with a link to the exact moment.</span>
+      <div class="bt-row"><input class="bt-in" id="bt-url" type="url" placeholder="https://fathom.video/share/…" value="${btE(BT.fa.url)}"><button type="button" class="ibtn" data-btfetch>Read the call</button></div><div id="bt-fbox"></div></div>
+    <div id="bd-teaser"></div>`; }
+function btPaintTeaser(){ const t=btQ('#bd-teaser'), D=BT.d; if(!t) return; if((D.what+D.why).trim().length<8){ t.innerHTML=''; return; }
+  const ms=btCands([D.what,D.why,D.outcome].join(' '),D.clients,12), strong=ms.filter(m=>m.pct>=60);
+  t.innerHTML=`<div class="bt-teaser">${ms.length?`<b>${btPl(ms.length,'possible match','possible matches')}</b>${strong.length?', '+strong.length+' of them close':''}. You check them in the next step.`:DM.data?'No close match so far. It may be new.':'Loading the demand map…'}</div>`; }
+function btStep2(){ return `<p class="bt-lead">Checked against every need asked for, what is already built, the Must-have ledger and the work items on this ledger. Link anything that fits, then say what this is.</p>
+    <div id="bd-head"></div><div class="bt-sec"><h4>Matches <span class="small" id="bd-mcount"></span></h4><div id="bd-matches"></div></div><div class="bt-sec" id="bd-linked"></div><div class="bt-sec" id="bd-decide">${btDecideInner()}</div>`; }
+function btDecideInner(){ const D=BT.d, sug=D.links.some(l=>l.rel==='exists')?'exists':D.links.length?'builds':'new';
+  return `<h4>So, this is…</h4><div class="bt-dcards">${Object.entries(BT_DECIDE).map(([k,l])=>`<button type="button" class="bt-dcard" data-btdecide="${k}" aria-pressed="${D.decision===k}"><b>${l}</b><span>${{new:'Nothing above covers it. It starts its own item.', builds:'It joins or extends what you linked, and their clients add to its signal.', exists:'The client can already do this. Nothing new is logged: you tell the client, and it still counts as demand.'}[k]}</span>${sug===k&&D.decision!==k?'<em>Suggested</em>':''}</button>`).join('')}</div>`; }
+function btActions(m){ const l=btLinked(m.k,m.id), key=btKey(m), pct=m.ai??m.pct;
+  if(l) return `<span class="bt-state ok">Linked: ${btE(BT_REL[l.rel])}</span><button type="button" class="linkbtn" data-btunlink="${btE(key)}">Remove</button>`;
+  if(m.k==='a') return `<button type="button" class="ibtn primary" data-btlink="${btE(key)}|${pct>=85?'same':'part'}">Add to my request</button>`;
+  if(m.k==='b') return `<button type="button" class="ibtn" data-btlink="${btE(key)}|extends">Extend this feature</button><button type="button" class="ibtn" data-btlink="${btE(key)}|exists">Already exists</button>`;
+  return `<button type="button" class="ibtn" data-btlink="${btE(key)}|follow">Follow it</button>`; }
+function btPaintMatches(){ const box=btQ('#bd-matches'), D=BT.d; if(!box) return; const head=btQ('#bd-head'), mc=btQ('#bd-mcount');
+  if((D.what+D.why+D.outcome).trim().length<8){ box.innerHTML='<div class="small">Describe what they want to see matches.</div>'; if(head) head.innerHTML=''; if(mc) mc.textContent=''; return; }
+  if(!DM.data){ box.innerHTML='<div class="small">Loading the demand map…</div>'; return; }
+  const ms=btDropMatches(); if(mc) mc.textContent=ms.length?btPl(ms.length,'match','matches'):'';
+  const best=ms[0];
+  if(head) head.innerHTML=best&&(best.ai??best.pct)>=50?`<div class="bt-mhead"><div>${btE(btMatchMsg(Object.assign({},best,{pct:best.ai??best.pct}),D.clients))}</div><div class="small">${btKindChip(best)} ${best.ai!=null?'Claude’s match':'Text match'}</div></div>`:`<div class="bt-mhead"><div>This looks new: nothing close among the needs asked for, what is built, or what is on its way.</div></div>`;
+  box.innerHTML=ms.length?ms.map(m=>`<div class="bt-mrow">${btPct(m.ai??m.pct)}<div class="bt-mm">${btCandTitle(m)}<div class="small">${btKindChip(m)} ${btE(m.pa||'')}${m.cus.length?' · '+btE(m.cus.slice(0,3).map(x=>x[0]).join(', '))+(m.cus.length>3?' +'+(m.cus.length-3):''):''}${m.mine?' · <b>your client</b>':''}</div>${m.why?`<div class="small bt-why">${btE(m.why)}</div>`:''}<div class="bt-macts">${btActions(m)}</div></div></div>`).join(''):'<div class="small">No close match yet. Add a little more detail, or log it as new.</div>'; }
+function btPaintLinked(){ const w=btQ('#bd-linked'), D=BT.d; if(!w) return; if(!D.links.length){ w.innerHTML=''; return; }
+  const cb=btCombined(D.clients,D.links);
+  w.innerHTML=`<h4>Linked <span class="small">${D.links.length}</span></h4>${D.links.some(l=>l.rel==='exists')?'<div class="bt-note">You marked a match as already built. Choose “It’s already built” below to record it without a new item.</div>':''}
+    ${D.links.map(l=>{ const m=btFind(l.k+':'+l.id); if(!m) return ''; const key=btKey(m); return `<div class="bt-lrow"><span class="bt-mm">${btCandTitle(m)} ${btKindChip(m)}</span><span class="bt-lact"><select class="bt-in bt-rel" data-btrel="${btE(key)}" aria-label="How it relates">${btRelOpts(m.k).map(r=>`<option value="${r}"${l.rel===r?' selected':''}>${BT_REL[r]}</option>`).join('')}</select><button type="button" class="linkbtn" data-btunlink="${btE(key)}">Remove</button></span></div>`; }).join('')}
+    <div class="bt-stats"><div><b>${cb.list.length}</b><span>clients behind it</span><span class="small">${btE(cb.list.slice(0,4).map(x=>x[0]).join(', '))}${cb.list.length>4?' and '+(cb.list.length-4)+' more':''}</span></div><div><b>${cb.signal}</b><span>combined signal</span><span class="small">each client once at its tier weight</span></div></div>
+    ${cb.close.length?`<div class="small">When this ships, ${btPl(cb.close.length,'ticket')} can close: ${btE(cb.close.slice(0,10).join(', '))}${cb.close.length>10?' …':''}</div>`:''}`; }
+function btStep3(){ const D=BT.d; if(D.decision==='exists') return '<p class="bt-lead">Nothing to draft: you marked this as already built. Continue to record it and see what to tell the client.</p>';
+  return `<p class="bt-lead">Check the words that go on the item. Let Claude draft it from your text${BT.fa.state==='ready'?', the call':''} and the matches, then keep, edit or ignore each suggestion.</p>
+    <div class="bt-f"><label for="bd-dwhat">What <span class="req">required</span></label><textarea class="bt-in" id="bd-dwhat" rows="3">${btE(D.draft.what)}</textarea><div class="bt-sugg" id="bg-what"></div></div>
+    <div class="bt-f"><label for="bd-dwhy">Why <span class="req">required</span></label><textarea class="bt-in" id="bd-dwhy" rows="3">${btE(D.draft.why)}</textarea><div class="bt-sugg" id="bg-why"></div></div>
+    <div class="bt-f"><label for="bd-dout">Outcome</label><textarea class="bt-in" id="bd-dout" rows="2">${btE(D.draft.outcome)}</textarea><div class="bt-sugg" id="bg-outcome"></div></div>
+    <div id="bd-ai"></div>`; }
+function btPaintSugg(){ const a=BT.d.ai;
+  ['what','why','outcome'].forEach(k=>{ const el=btQ('#bg-'+k); if(!el) return; const f=a&&a.draft[k];
+    if(!f||!f.text||BT.d.draft[k].trim()===f.text.trim()){ el.innerHTML=f&&f.text?'<span class="small">Using Claude’s suggestion.</span> '+btCites(f.cites):''; return; }
+    const gs=(f.cites||[]).includes('guess'); el.innerHTML=`<div class="bt-sg${gs?' guess':''}"><span class="small">${gs?'Claude’s guess from similar requests':'Claude suggests'}</span><p>${btE(f.text)}</p><div>${btCites(f.cites)}</div><button type="button" class="ibtn" data-btaccept="${k}">Use this</button></div>`; }); }
+function btPaintAi(){ const w=btQ('#bd-ai'), D=BT.d; if(!w) return;
+  if(BT.sample===null){ w.innerHTML='<div class="bt-ai"><div class="small">Claude is not available in this view. Edit the fields above in your own words.</div></div>'; return; }
+  let inner='';
+  if(D.busy) inner=`<b>${D.progress?'Writing the draft…':'Thinking…'}</b><div class="small">${D.progress?'Almost there.':'Up to a minute. It runs on your own Claude account; the first time, claude.ai asks you to allow it.'}</div><button type="button" class="ibtn" data-btstop>Stop</button>`;
+  else if(D.err) inner=`<div class="bt-note bad">${btE(D.err)}</div>`;
+  else if(D.ai) inner=btAiResult(D.ai);
+  w.innerHTML=`<div class="bt-ai"><div class="bt-aih"><div><b>Claude’s draft</b><div class="small">Suggestions appear under each field, with their sources. Nothing changes until you choose “Use this”.</div></div><button type="button" class="ibtn${D.ai?'':' primary'}" data-btai${D.busy?' disabled':''}>${D.ai?'Draft again':'Draft with Claude'}</button></div>${inner?'<div class="bt-air">'+inner+'</div>':''}</div>`; }
+function btAiResult(r){ const VL={duplicate:'Claude thinks this was already asked for', extends:'Claude thinks this extends something that exists or was asked for', new:'Claude thinks this is new'};
+  return `<b>${btE(VL[r.verdict]||VL.new)}</b>
+    ${r.questions.length?`<div class="bt-qs"><div class="bt-sl">A few questions to make it clearer</div><div class="small">Answers go with the item to product and sales. Skip any you cannot answer.</div>${r.questions.map((q,i)=>`<div class="bt-f"><label for="bd-ans-${i}">${btE(q)}</label><textarea class="bt-in" id="bd-ans-${i}" data-btans2="${i}" rows="2">${btE(BT.d.answers[i]||'')}</textarea></div>`).join('')}</div>`:''}
+    ${r.draft.surfaces&&r.draft.surfaces.list.length?`<div class="bt-sl">Parts of the platform touched</div><div class="bt-chips">${r.draft.surfaces.list.map(s=>`<span class="bt-chip">${btE(s)}</span>`).join('')}</div><div>${btCites(r.draft.surfaces.cites)}</div>`:''}
+    ${r.lever?`<div class="small">Suggested lever for sales to confirm: <b>${btE(r.lever)}</b>. No figure is entered.</div>`:''}`; }
+let btAbort=null;
+async function btRunAi(){ const D=BT.d; if(D.busy) return; if(BT.sample===undefined) BT.sample=await btUse('sample'); if(!BT.sample){ btPaintAi(); return; }
+  if((D.draft.what||D.what).trim().length<8){ D.err='Write at least a line about what the client wants first.'; btPaintAi(); return; }
+  const ms=btCands([D.draft.what||D.what,D.draft.why||D.why,D.draft.outcome||D.outcome].join(' '),D.clients,12);
+  D.links.forEach(l=>{ const m=btFind(l.k+':'+l.id); if(m&&!ms.some(x=>btKey(x)===btKey(m))) ms.push(Object.assign(m,{pct:0})); });
+  const cmap={}, cands=ms.map((m,i)=>{ const cid='c'+(i+1); cmap[cid]=m; return {id:cid, kind:{a:'need asked for by clients', b:'built and delivered', m:'must-have item being built', l:'work item already on the ledger'}[m.k],
+    title:m.k==='b'&&m.sub?m.sub+': '+m.title:m.title, detail:String(m.body||'').slice(0,360), product:m.pa||'', customers:m.cus.map(x=>x[0]+(x[1]?' (T'+x[1]+')':'')).slice(0,6), text_match:m.pct}; });
+  const call=BT.fa.state==='ready'?btCallLines():'', cl=D.clients.map(btCo).filter(Boolean);
+  const prompt=`You help product and business at ExpoPlatform (an event technology platform) write up a piece of work for the ledger. Use only the evidence given here.
+
+Rules:
+- For every candidate, give a match percentage (0 to 100) for how closely it covers what is asked for, and one short reason. Built candidates count as matches when they already deliver what is asked.
+- Draft what, why and outcome. Each field has "cites": "tam" for the user's own words, candidate ids such as "c3"${call?', or call transcript line ids such as "s12"':''}.
+- If nothing supports why or outcome, you may write a short best guess based on the candidates and cite ["guess"]. Never guess what.
+- Never invent customers, dates or money. Do not produce any value figure.
+- In questions and reasons, refer to candidates by their title, never by id (never write c1, c2 or s12 in prose).
+- verdict: "duplicate" if a need or work item candidate is the same thing, "extends" if a candidate covers part of it or it builds on something built, otherwise "new".
+- questions: at most 3, only for real gaps (for example which parts of the platform: admin panel, web front end, mobile app, API, reports).
+- lever: optionally one of "increase revenue", "retain revenue", "reduce cost", "avoid cost", only if the evidence implies it; otherwise empty.
+
+The request:
+clients: ${cl.map(c=>c.short+(c.tier?' (tier '+c.tier+')':'')).join('; ')||'(none chosen)'}
+what: ${D.draft.what||D.what}
+why: ${D.draft.why||D.why||'(not given)'}
+outcome: ${D.draft.outcome||D.outcome||'(not given)'}${D.ai&&D.ai.questions.some((q,i)=>D.answers[i])?'\nanswers to earlier questions:\n'+D.ai.questions.map((q,i)=>D.answers[i]?'- '+q+' '+D.answers[i]:'').filter(Boolean).join('\n'):''}
+
+Candidates (JSON):
+${JSON.stringify(cands)}
+${call?'\nCall transcript (each line starts with its id):\n'+call+'\n':''}
+JSON shape: {"matches":[{"id":"c1","pct":0,"why":""}],"verdict":"duplicate|extends|new","draft":{"what":{"text":"","cites":[]},"why":{"text":"","cites":[]},"outcome":{"text":"","cites":[]},"surfaces":{"list":[],"cites":[]}},"questions":[],"lever":""}`;
+  D.busy=true; D.err=''; D.progress=0; btPaintAi(); btAbort=new AbortController();
+  try{ const r=await btAI('Draft for the ledger',prompt,{signal:btAbort.signal, fresh:!!D.ai, onText:({text})=>{ D.progress=text.length; if(D.progress%40<8) btPaintAi(); }});
+    D.ai=btCleanAi(r.data,cmap); btLog('Draft for the ledger',prompt,r.text,D.ai,['what','why','outcome'].filter(k=>r.data&&r.data.draft&&r.data.draft[k]&&r.data.draft[k].text&&!D.ai.draft[k].text)); }
+  catch(e){ D.err=btAiMsg(e); }
+  finally{ D.busy=false; btAbort=null; btPaintSugg(); btPaintAi(); } }
+function btCleanAi(r,cmap){
+  const toKey=id=>id==='tam'||id==='guess'?id:cmap[id]?btKey(cmap[id]):btSeg(id)?id:null, cites=cs=>[...new Set((Array.isArray(cs)?cs:[]).map(toKey).filter(Boolean))];
+  const nameOf=id=>{ const cm=cmap[id]; if(cm) return '“'+btCut((cm.k==='b'&&cm.sub)||cm.title,60)+'”'; const sg=btSeg(id); return sg?'the call at '+sg.t:id; };
+  const unId=t=>String(t||'').replace(/\(?\b[cs]\d+(?:\s*(?:,|and)\s*[cs]\d+)*\b\)?/g,m=>{ const ids=m.match(/[cs]\d+/g)||[]; const ns=ids.map(nameOf).filter(n=>!/^[cs]\d+$/.test(n)); return ns.length?(m.startsWith('(')?'('+ns.join(', ')+')':ns.join(', ')):''; }).replace(/\s+([,.?)])/g,'$1').replace(/\(\s*\)/g,'').trim();
+  const f=x=>{ const c=cites(x&&x.cites), t=unId((x&&x.text)||''); return c.length&&t&&!btPh(t)?{text:t, cites:c}:{text:'', cites:[]}; };
+  const d=(r&&r.draft)||{}, surf=d.surfaces||{}, sc=cites(surf.cites), pcts={};
+  ((r&&r.matches)||[]).forEach(m=>{ const cm=m&&cmap[m.id], p=Math.round(+m.pct); if(cm&&p>=0&&p<=100) pcts[btKey(cm)]={pct:p, why:unId(m.why).slice(0,200), text:cm.pct}; });
+  return {pcts, verdict:['duplicate','extends','new'].includes(r&&r.verdict)?r.verdict:'new',
+    draft:{what:f(d.what), why:f(d.why), outcome:f(d.outcome), surfaces:sc.length||(surf.list||[]).length?{list:(surf.list||[]).map(String).slice(0,6), cites:sc}:null},
+    questions:((r&&r.questions)||[]).map(unId).filter(Boolean).slice(0,3),
+    lever:['increase revenue','retain revenue','reduce cost','avoid cost'].includes(String((r&&r.lever)||'').toLowerCase())?String(r.lever).toLowerCase():''}; }
+function btStep4(){ const D=BT.d, cls=D.clients.map(btCo).filter(Boolean), cb=btCombined(D.clients,D.links), ex=D.decision==='exists', areas=feAreas();
+  const moments=BT.fa.state==='ready'&&D.ai?[...new Set(['what','why','outcome'].flatMap(f=>(D.ai.draft[f]&&D.ai.draft[f].cites)||[]).filter(x=>/^s\d+$/.test(x)))]:[];
+  const linked=D.links.map(l=>{ const m=btFind(l.k+':'+l.id); return m?`<li>${btCandTitle(m)} ${btKindChip(m)} <span class="small">${btE(BT_REL[l.rel])}</span></li>`:''; }).join('');
+  return `<p class="bt-lead">${ex?'Check the record below. Nothing new goes on the ledger; the demand is kept against what already exists.':'Check the item, choose who adds the value, and log it.'}</p>
+    <div class="bt-sum"><div class="bt-sumh">${cls.map(c=>btTierPill(c.tier)+' <b>'+btE(c.short)+'</b>').join(' ')} <span class="bt-kc">${btE(BT_DECIDE[D.decision]||'')}</span></div>
+      ${ex?`<p>${btE(D.what)}</p>`:`<dl class="sx-kv"><dt>What</dt><dd>${btE(D.draft.what)}</dd><dt>Why</dt><dd>${btE(D.draft.why)}</dd>${D.draft.outcome?`<dt>Outcome</dt><dd>${btE(D.draft.outcome)}</dd>`:''}</dl>`}
+      ${linked?`<div class="bt-sl">Linked</div><ul class="bt-lk">${linked}</ul>`:''}
+      ${!ex?`<div class="bt-stats"><div><b>${cb.list.length}</b><span>clients behind it</span><span class="small">${btE(cb.list.slice(0,3).map(x=>x[0]).join(', '))}${cb.list.length>3?' +'+(cb.list.length-3):''}</span></div><div><b>${cb.signal}</b><span>signal</span><span class="small">each client once at its tier weight</span></div></div>`:''}
+      ${moments.length?`<div class="bt-sl">Evidence from the call</div>${moments.map(id=>{ const sg=btSeg(id); return sg?btQuoteHtml(sg):''; }).join('')}`:''}
+      ${Object.values(D.answers).some(Boolean)?`<div class="bt-sl">Your answers</div>${(D.ai?D.ai.questions:[]).map((q,i)=>D.answers[i]?`<p class="small"><b>${btE(q)}</b><br>${btE(D.answers[i])}</p>`:'').join('')}`:''}
+      ${cb.close.length&&!ex?`<div class="small">When it ships, ${btPl(cb.close.length,'ticket')} can close: ${btE(cb.close.slice(0,8).join(', '))}${cb.close.length>8?' …':''}</div>`:''}</div>
+    <div id="bd-tidy"></div>
+    ${ex?'':`<div class="bt-f"><label for="bd-area">Product area <span class="req">required</span></label><select class="bt-in" id="bd-area"><option value="">Choose…</option>${areas.map(([k,l])=>`<option value="${btE(k)}"${D.area===k?' selected':''}>${btE(l)}</option>`).join('')}</select></div>
+      <div class="bt-f"><label for="bd-name">Name <span class="opt">optional</span></label><input class="bt-in" id="bd-name" maxlength="90" value="${btE(D.name)}" placeholder="Claude names it when it tidies the wording"></div>
+      <div class="bt-f" id="bd-sales"><label for="bd-sq">Who adds the value?</label><span class="bt-h">The sales colleague who enters the lever, the £ figure and the funding. The value details are handed to them and the item waits on them. Optional: leave it empty and they stay with you.</span>
+      ${D.sales?`<div class="bt-picked"><b>${btE(feName(D.sales.id))}</b><button type="button" class="linkbtn" data-btsalesx>Change</button></div>`:`<input class="bt-in" id="bd-sq" type="search" autocomplete="off" placeholder="Search for a colleague"><div id="bd-sres"></div>`}</div>`}`; }
+function btPaintDTidy(){ const w=btQ('#bd-tidy'), D=BT.d; if(!w) return;
+  if(D.tidyBusy){ w.innerHTML='<div class="bt-ai"><b>Tidying the wording…</b><div class="small">Spelling and clarity only. Nothing new is added.</div></div>'; return; }
+  const t=D.tidy; if(!t){ w.innerHTML=''; return; } const ch=['what','why','outcome'].filter(k=>t[k]&&t[k].trim()&&t[k].trim()!==D.draft[k].trim());
+  w.innerHTML=ch.length?`<div class="bt-ai"><b>We tidied the wording</b><div class="small">Pick the version to keep for each field, then log it.</div>${ch.map(k=>{ const ai=D.tidyChoice[k]!=='mine'; return `<div class="bt-sl">${{what:'What',why:'Why',outcome:'Outcome'}[k]}</div><button type="button" class="bt-tc${ai?' on':''}" data-btdtidy="${k}|ai"><span class="small">Tidied</span>${btE(t[k])}</button><button type="button" class="bt-tc${!ai?' on':''}" data-btdtidy="${k}|mine"><span class="small">Your words</span>${btE(D.draft[k])}</button>`; }).join('')}</div>`:''; }
+async function btSalesSearch(q){ const box=btQ('#bd-sres'); if(!box) return; const u=feMe().user; let hits=[];
+  if(u&&u.search){ try{ hits=await u.search(q)||[]; }catch(e){} }
+  box.innerHTML=hits.slice(0,6).map(h=>{ if(h.id&&h.name) FE.names[h.id]=h.name; return `<button type="button" class="bt-cpo" data-btsales="${btE(h.id)}">${btE(h.name||'Someone')}</button>`; }).join('')||(q.trim()?'<div class="small">Nobody by that name. The page can only hand details to colleagues in the organisation.</div>':''); }
+function btGoStep(n){ const D=BT.d; if(n===3&&D.decision!=='exists') ['what','why','outcome'].forEach(k=>{ if(!D.draft[k]) D.draft[k]=D[k]; });
+  if(n===4&&!D.area){ const ls=D.links.map(l=>btFind(l.k+':'+l.id)).filter(Boolean); D.area=btAreaGuess(ls.concat(btDropMatches())); } D.step=n; btPaint(); const b=btQ('.bt-body'); if(b) b.scrollTop=0; }
+async function btDropNext(){ const D=BT.d, s=D.step; if(btStepMissing(s)) return;
+  if(s<4){ btGoStep(s+1); return; }
+  if(D.decision!=='exists'&&BT.sample&&!D.tidyDone){ D.tidyBusy=true; btPaintDTidy(); btPaintFoot();
+    const same=D.links.find(l=>l.k==='a'&&(l.rel==='same'||l.rel==='part'));
+    D.tidy=await btTidy({what:D.draft.what, why:D.draft.why, outcome:D.draft.outcome}, same?btFind('a:'+same.id):null); D.tidyBusy=false; D.tidyDone=true;
+    if(D.tidy&&D.tidy.failed) D.tidy=null;
+    if(D.tidy&&['what','why','outcome'].some(k=>D.tidy[k]&&D.tidy[k]!==D.draft[k].trim())){ btPaintDTidy(); btPaintFoot(); const w=btQ('#bd-tidy'); if(w) w.scrollIntoView({block:'center'}); return; } }
+  if(D.tidy) ['what','why','outcome'].forEach(k=>{ if(D.tidy[k]&&D.tidyChoice[k]!=='mine'&&D.draft[k]) D.draft[k]=D.tidy[k]; });
+  const call=BT.fa.state==='ready', quotes=call&&D.ai?btQuotes(['what','why','outcome'].flatMap(k=>(D.ai.draft[k]&&D.ai.draft[k].cites)||[])):[];
+  const base={clients:D.clients.slice(), src:call?'call':'type', what:D.decision==='exists'?D.what:D.draft.what, why:D.draft.why||D.why, outcome:D.draft.outcome||D.outcome, excerpt:'',
+    call:call?{title:BT.fa.title, date:BT.fa.date, url:BT.fa.callUrl||BT.fa.url}:null, quotes, question:D.tidy?D.tidy.question:''};
+  D.saving=true; btPaintFoot();
+  try{
+    if(D.decision==='exists'){ const l=D.links.find(x=>x.rel==='exists'), m=l&&btFind(l.k+':'+l.id); D.result=await btSaveVoice('exists',m,base); }
+    else D.result=await btSaveItem(Object.assign({mode:'review', name:D.name||(D.tidy&&D.tidy.title)||'', area:D.area, links:D.links, decision:D.decision, matches:btDropMatches(), sales:D.sales,
+      questions:D.ai?D.ai.questions.map((q,i)=>({q, a:D.answers[i]||''})):[], verdict:D.ai?D.ai.verdict:'', lever:D.ai?D.ai.lever:'', surfaces:D.ai&&D.ai.draft.surfaces?D.ai.draft.surfaces.list:[]},base));
+    D.step='done'; }
+  catch(e){ uiToast(e&&e.code==='invalid_argument'?'Not saved: your access to this page is read-only.':e&&e.code==='busy'?e.message:'It could not be saved just now ('+((e&&e.code)||'error')+'). Try again.',{bad:true}); }
+  D.saving=false; btPaint(); }
+function btDropDone(){ const r=BT.d.result||{}, ex=r.mode==='exists';
+  return `<div class="bt-done"><div class="bt-tick" aria-hidden="true"></div><h4>${ex?'Recorded as already built':'Logged as '+btE(r.id)}</h4><p>${btE(ex?r.name:r.name)}</p></div>
+    ${BT.test?'<div class="bt-note">Saved as test data. Only viewers with test mode on count it.</div>':''}
+    <div class="bt-sec"><h4>What happens next</h4><ol class="bt-next">${ex?`<li>Tell the client how to use what already exists: <b>${btE(r.name)}</b>.</li><li>The request is kept as demand against it, so product sees how often it is asked for.</li>`
+      :`<li>It is on the Feature ledger at step 2 of 10.</li><li>${r.sales?`<b>${btE(feName(r.sales))}</b> is asked`:'You are asked'} to add the lever, the £ figure and the funding. Then <b>${btE(r.signer||'the lever owner')}</b> signs the figure.</li><li>It is reviewed, estimated and approved onto the ranked ledger; only the product-business meeting picks it up.</li>${r.close&&r.close.length?`<li>When it ships, ${btPl(r.close.length,'linked ticket')} can close from the item.</li>`:''}`}</ol></div>
+    <div class="bt-acts">${r.id?`<button type="button" class="ibtn primary" data-btopenitem="${btE(r.id)}">Open ${btE(r.id)}</button>`:r.key?`<button type="button" class="ibtn primary" data-btcand="${btE(r.key)}">See what exists</button>`:''}<button type="button" class="ibtn" data-btnew>Log another</button></div>`; }
+
+// ---------- events ----------
+let btT=0; const btSoon=(fn,ms)=>{ clearTimeout(btT); btT=setTimeout(fn,ms||180); };
+function btInput(e){ const t=e.target, id=t.id, S=BT.s, D=BT.d;
+  if(t.dataset.btcpin){ btCpList(t.dataset.btcpin); return; }
+  if(id==='bt-raw'){ S.raw=t.value; S.fillErr=''; clearTimeout(BT.fillT); BT.fillT=setTimeout(()=>btFill(true),1800); return; }
+  if(id==='bt-url'){ S.url=t.value; BT.fa.url=t.value; return; }
+  if(id==='bt-name'){ S.name=t.value; return; }
+  if(['bt-what','bt-why','bt-outcome'].includes(id)){ const k=id.slice(3); S[k]=t.value; S.auto[k]=false; S.tidy=null; S.tidyDone=false; btPaintTidy(); btPaintFoot(); btSoon(()=>{ btPaintMatch(); btPaintCall(); }); return; }
+  if(['bd-what','bd-why','bd-outcome'].includes(id)){ D[id.slice(3)]=t.value; btPaintFoot(); btSoon(()=>{ btPaintTeaser(); btPaintCall(); }); return; }
+  if(['bd-dwhat','bd-dwhy','bd-dout'].includes(id)){ const k={'bd-dwhat':'what','bd-dwhy':'why','bd-dout':'outcome'}[id]; D.draft[k]=t.value; D.tidy=null; D.tidyDone=false; btPaintFoot(); btSoon(()=>btPaintSugg()); return; }
+  if(t.dataset.btans2!=null){ D.answers[+t.dataset.btans2]=t.value; return; }
+  if(id==='bd-name'){ D.name=t.value; return; }
+  if(id==='bd-sq'){ btSoon(()=>btSalesSearch(t.value),200); return; } }
+function btChange(e){ const t=e.target, id=t.id;
+  if(id==='bt-test'){ btSetTest(t.checked); return; }
+  if(id==='bt-area'){ BT.s.area=t.value; btPaintFoot(); return; }
+  if(id==='bd-area'){ BT.d.area=t.value; btPaintFoot(); return; }
+  if(t.dataset.btrel){ const l=BT.d.links.find(x=>x.k+':'+x.id===t.dataset.btrel); if(l){ l.rel=t.value; btPaintLinked(); const dd=btQ('#bd-decide'); if(dd) dd.innerHTML=btDecideInner(); btPaintFoot(); } } }
+function btPasteEv(e){ if(e.target&&e.target.id==='bt-raw') setTimeout(()=>{ BT.s.raw=e.target.value; clearTimeout(BT.fillT); btFill(false); },50); }
+function btClick(e){ const t=e.target, S=BT.s, D=BT.d; let b;
+  if(t.closest('[data-btclose]')){ btClose(); return; }
+  if(!t.closest('[data-cp]')) BT.el.querySelectorAll('.bt-cpl').forEach(l=>l.hidden=true);
+  if((b=t.closest('[data-btcpin]'))){ btCpList(b.dataset.btcpin); return; }
+  if((b=t.closest('[data-btcpadd]'))){ const [id,pd]=b.dataset.btcpadd.split('|'); btCpSet(id,btCpState(id).clients.concat(pd)); if(id==='drc'){ btPaintTeaser(); } return; }
+  if((b=t.closest('[data-btcpx]'))){ const [id,pd]=b.dataset.btcpx.split('|'); btCpSet(id,btCpState(id).clients.filter(x=>x!==pd)); return; }
+  if((b=t.closest('[data-btmode]'))){ const m=b.dataset.btmode; if(m===BT.mode) return;
+    if(m==='drop'&&D.step===1&&!D.what&&S.stage!=='done'){ Object.assign(D,{clients:S.clients.slice(), what:S.what, why:S.why, outcome:S.outcome, area:S.area, name:S.name}); if(S.pick){ const k=S.pick.split(':')[0]; D.links=[{k, id:S.pick.slice(2), rel:k==='a'?'same':k==='b'?'exists':'follow'}]; D.decision=k==='b'?'exists':'builds'; } }
+    if(m==='share'&&S.stage!=='done'&&!S.what&&D.step!=='done'){ Object.assign(S,{clients:D.clients.slice(), what:D.draft.what||D.what, why:D.draft.why||D.why, outcome:D.draft.outcome||D.outcome, area:D.area, name:D.name}); }
+    BT.mode=m; btPaint(); return; }
+  if(t.closest('[data-btfull]')){ Object.assign(D,{step:1, clients:S.clients.slice(), what:S.what, why:S.why, outcome:S.outcome, area:S.area, name:S.name}); if(S.pick){ const k=S.pick.split(':')[0]; D.links=[{k, id:S.pick.slice(2), rel:k==='a'?'same':k==='b'?'exists':'follow'}]; D.decision=k==='b'?'exists':'builds'; } BT.mode='drop'; btPaint(); return; }
+  if(t.closest('[data-btold]')){ const pre={_old:true}; const c=(BT.mode==='share'?S.clients:D.clients).find(x=>x!=='Platform'); if(c) pre.client=c; btClose(); feOpenForm(pre); return; }
+  if((b=t.closest('[data-btcand]'))){ btOpenCand(b.dataset.btcand); return; }
+  if((b=t.closest('[data-btopenitem]'))){ const id=b.dataset.btopenitem; btClose(); if(FE.rows.some(x=>x._id===id)) feOpenEntry(id); else FE.pendingOpen=id; return; }
+  if(t.closest('[data-btnew]')){ if(BT.mode==='share') btResetShare(); else btResetDrop(); btResetCall(); btPaint(); return; }
+  if((b=t.closest('[data-btspeak]'))){ btSpeak(b.dataset.btspeak); return; }
+  if(t.closest('[data-btfetch]')){ btFetchCall(); return; }
+  // quick share
+  if((b=t.closest('[data-btsrc]'))){ S.src=b.dataset.btsrc; const w=btQ('#bt-src'); if(w) w.innerHTML=btShareSrc(); btPaintCall(); btPaintFoot(); return; }
+  if(t.closest('[data-btfill]')){ btFill(false); return; }
+  if((b=t.closest('[data-btuse]'))){ const k=b.dataset.btuse, sg=S.sugg[k]; if(sg){ S[k]=sg.text; S.auto[k]=true; S.cites[k]=sg.cites; delete S.sugg[k]; S.tidy=null; S.tidyDone=false; btRepaintShare(); } return; }
+  if((b=t.closest('[data-btpick]'))){ const v=b.dataset.btpick; if(v==='none'){ S.pick=null; S.none=true; } else { S.pick=v||null; S.none=false; } S.tidy=null; S.tidyDone=false; btPaintMatch(); btPaintTidy(); return; }
+  if((b=t.closest('[data-bttidy]'))){ const [k,c]=b.dataset.bttidy.split('|'); S.tidyChoice[k]=c; btPaintTidy(); return; }
+  if(t.closest('[data-btgo]')){ btShareGo(); return; }
+  if(t.closest('[data-btans]')){ btAnswer(); return; }
+  // full review
+  if((b=t.closest('[data-btstep]'))){ btGoStep(+b.dataset.btstep); return; }
+  if((b=t.closest('[data-btnav]'))){ if(b.dataset.btnav==='back') btGoStep(Math.max(1,D.step-1)); else btDropNext(); return; }
+  if((b=t.closest('[data-btlink]'))){ const [key,rel]=b.dataset.btlink.split('|'), i=key.indexOf(':'); const k=key.slice(0,i), id=key.slice(i+1); if(!btLinked(k,id)) D.links.push({k,id,rel});
+    if(!D.decision) D.decision=rel==='exists'?'exists':'builds'; btPaintMatches(); btPaintLinked(); const dd=btQ('#bd-decide'); if(dd) dd.innerHTML=btDecideInner(); btPaintFoot(); return; }
+  if((b=t.closest('[data-btunlink]'))){ const key=b.dataset.btunlink; D.links=D.links.filter(l=>l.k+':'+l.id!==key); btPaintMatches(); btPaintLinked(); const dd=btQ('#bd-decide'); if(dd) dd.innerHTML=btDecideInner(); btPaintFoot(); return; }
+  if((b=t.closest('[data-btdecide]'))){ D.decision=b.dataset.btdecide; const dd=btQ('#bd-decide'); if(dd) dd.innerHTML=btDecideInner(); btPaintFoot(); return; }
+  if(t.closest('[data-btai]')){ btRunAi(); return; }
+  if(t.closest('[data-btstop]')){ if(btAbort) btAbort.abort(); return; }
+  if((b=t.closest('[data-btaccept]'))){ const k=b.dataset.btaccept, f=D.ai&&D.ai.draft[k]; if(f&&f.text){ D.draft[k]=f.text; const el=btQ('#'+{what:'bd-dwhat',why:'bd-dwhy',outcome:'bd-dout'}[k]); if(el) el.value=f.text; btPaintSugg(); btPaintFoot(); } return; }
+  if((b=t.closest('[data-btdtidy]'))){ const [k,c]=b.dataset.btdtidy.split('|'); D.tidyChoice[k]=c; btPaintDTidy(); return; }
+  if((b=t.closest('[data-btsales]'))){ D.sales={id:b.dataset.btsales}; const w=btQ('#bd-sales'); if(w){ btPaint(); } return; }
+  if(t.closest('[data-btsalesx]')){ D.sales=null; btPaint(); return; }
+}
+document.addEventListener('focusin',e=>{ if(e.target&&e.target.id==='bd-sq') btSalesSearch(e.target.value); });
+
+// ---------- the item: what Beta recorded, the signal, the chain, and moving it along ----------
+async function btItemUpdate(id,fn,ev,extra){
+  let r=null; for(let i=0;i<15&&!r;i++){ r=(FE.all||[]).find(x=>x._id===id); if(!r) await new Promise(res=>setTimeout(res,200)); }
+  if(!r) throw {code:'not_found'}; const me=feMe(), at=feNow(), v=JSON.parse(JSON.stringify(r.v||{}));
+  const patch=Object.assign({},fn(v,r)||{}), eid='e'+Date.now()+'-'+Math.random().toString(36).slice(2,6), e=Object.assign({id:eid, at, by:me.uid, via:'beta'},ev);
+  await FE.db.doc('ledger/'+id).update(Object.assign({v, updatedAt:at, updatedBy:me.uid, h:Object.assign({},r.h||{},{[eid]:{at, by:me.uid, k:ev.k, from:ev.from, to:ev.to, via:'beta'}})},patch,extra||{}));
+  await FE.db.doc('ledger-events/'+id).set({e:Object.assign({},FE.ev[id]||{},{[eid]:e})});
+}
+const BT_NEXT={signed:'reviewed', reviewed:'estimated', estimated:'approved', approved:'picked-up', 'picked-up':'in-delivery', 'in-delivery':'delivered', delivered:'checked'};
+const BT_STAMP={reviewed:'review', estimated:'estimate', approved:'approval', 'picked-up':'pickup'};
+const BT_STN={submitted:'Awaiting signature', signed:'Signed', reviewed:'Reviewed', estimated:'Estimated', approved:'On the ledger', 'picked-up':'Picked up', 'in-delivery':'In delivery', delivered:'Delivered', checked:'Checked'};
+window.btEntryHtml=r=>{
+  const v=r.v||{}, b=v.beta; if(!b) return '';
+  const me=feMe(), how=!!btAcc().how, mine=r.loggedBy===me.uid, sales=b.sales&&b.sales.id;
+  const links=b.links||[], follows=BT.voices.filter(x=>x.target&&x.target.k==='l'&&x.target.id===r._id);
+  const clients=(v.customers||[]).map(c=>c.client).filter(Boolean).concat(follows.flatMap(x=>x.clients||[]));
+  const cb=btCombined([...new Set(clients)],links);
+  const tickets=[...new Set((v.related||[]).filter(Boolean).concat(cb.close))];
+  const canSign=r.status==='submitted'&&!(r.owed||[]).length&&(how||sales===me.uid), canUnsign=r.status==='signed'&&(how||(r.signature||{}).by===me.uid), nx=BT_NEXT[r.status];
+  const owedNote=r.status==='submitted'&&(r.owed||[]).length?`<span class="small">It can be signed once the ${btPl((r.owed||[]).length,'detail')} owed ${(r.owed||[]).length===1?'is':'are'} filled in.</span>`:'';
+  const found=(how||mine)&&BT.eq[r._id]&&BT.eq[r._id].trim().length>=3?btCands(BT.eq[r._id],clients,6).filter(m=>!(m.k==='l'&&m.id===r._id)&&!links.some(l=>l.k===m.k&&l.id===m.id)):[];
+  return `<div class="bt-entry" data-btent="${btE(r._id)}"><div class="bt-eh"><span class="bt-beta">Beta</span><b>Logged with Claude</b><span class="small">${btE(BT_SRC[b.src]||'')} · ${b.mode==='review'?'full review':'quick share'}</span>${r.test?'<span class="pp-tag noest">Test</span>':''}</div>
+    <div class="bt-eg"><div>
+      <div class="bt-sl">What the client said</div><dl class="sx-kv"><dt>What</dt><dd>${btE(b.what)}</dd>${b.why?`<dt>Why</dt><dd>${btE(b.why)}</dd>`:''}${b.outcome?`<dt>Outcome</dt><dd>${btE(b.outcome)}</dd>`:''}</dl>
+      ${b.call&&b.call.url?`<div class="small">From the call <a href="${btE(b.call.url)}" target="_blank" rel="noopener">${btE(b.call.title||'recording')}</a>${b.call.date?' · '+btE(b.call.date):''}</div>`:''}
+      ${(b.quotes||[]).map(q=>btQuoteHtml(q)).join('')}
+      ${b.excerpt&&b.excerpt!==b.what?`<div class="small bt-exc">“${btE(btCut(b.excerpt,240))}”</div>`:''}
+      ${(b.questions||[]).filter(x=>x.a).map(x=>`<p class="small"><b>${btE(x.q)}</b><br>${btE(x.a)}</p>`).join('')}
+      ${b.question?`<p class="small"><b>${btE(b.question)}</b><br>${b.answer?btE(b.answer):'<span class="sx-dim">not answered yet</span>'}</p>`:''}
+      ${sales?`<div class="small">Value handed to <b>${btE(feName(sales))}</b></div>`:''}
+    </div><div>
+      <div class="bt-stats"><div><b>${cb.list.length}</b><span>clients behind it</span><span class="small">${btE(cb.list.slice(0,4).map(x=>x[0]).join(', '))}${cb.list.length>4?' +'+(cb.list.length-4):''}</span></div><div><b>${cb.signal}</b><span>signal</span><span class="small">T1 8 · T2 4 · T3 2 · T4 1</span></div></div>
+      <div class="bt-sl">Linked<span class="c">${links.length}</span></div>
+      ${links.length?links.map(l=>{ const m=btFind(l.k+':'+l.id); return `<div class="bt-lrow"><span class="bt-mm">${m?btCandTitle(m)+' '+btKindChip(m):btE(l.name||l.id)}</span><span class="bt-lact"><span class="small">${btE(BT_REL[l.rel]||l.rel)}</span>${(how||mine)?`<button type="button" class="linkbtn" data-btiunlink="${btE(l.k+':'+l.id)}">Unlink</button>`:''}</span></div>`; }).join(''):'<div class="small">Nothing linked. Link the needs this work delivers, so they close together.</div>'}
+      ${follows.length?`<div class="bt-sl">Clients following it</div><div class="small">${btE(follows.map(x=>btClientsTxt(x.clients)).join(', '))}</div>`:''}
+      ${(how||mine)?`<input class="bt-in bt-lq" type="search" data-btlq="${btE(r._id)}" placeholder="Link more: search needs, built work and the ledger" value="${btE(BT.eq[r._id]||'')}" aria-label="Link more">
+        <div class="bt-lres">${found.map(m=>`<div class="bt-lrow"><span class="bt-mm">${btCandTitle(m)} ${btKindChip(m)} <span class="small">${m.pct}%</span></span><button type="button" class="ibtn" data-btilink="${btE(btKey(m))}">Link</button></div>`).join('')}${BT.eq[r._id]&&BT.eq[r._id].trim().length>=3&&!found.length?'<div class="small">Nothing matches yet.</div>':''}</div>`:''}
+    </div></div>
+    <div class="bt-sl">Close the chain<span class="c">${btPl(tickets.length,'ticket')}</span></div>
+    ${b.chainClosed?`<div class="bt-teaser ok">Closed by ${btE(feName(b.chainClosed.by))} ${btE(ppWhen(b.chainClosed.at))}: ${btPl((b.chainClosed.needs||[]).length,'need')} marked delivered, ${btPl((b.chainClosed.tickets||[]).length,'ticket')} to close in Jira.</div>`
+      :['delivered','checked'].includes(r.status)?`<div class="small">This work is delivered. Close everything it delivers in one go: the linked needs are marked delivered, and you get the Jira tickets to close.</div>${how?`<button type="button" class="ibtn primary" data-btiact="chain"${tickets.length||links.length?'':' disabled'}>Close the chain</button>`:''}`
+      :'<div class="small">When it is delivered, the linked needs and tickets close together from here.</div>'}
+    ${tickets.length?`<div class="bt-chips">${tickets.slice(0,30).map(k=>/^[A-Z]+-\d+$/.test(k)?`<a class="bt-chip" href="https://expoplatform.atlassian.net/browse/${btE(k)}" target="_blank" rel="noopener">${btE(k)}</a>`:`<span class="bt-chip">${btE(k)}</span>`).join('')}</div><button type="button" class="linkbtn" data-btcopy="${btE(tickets.join(', '))}">Copy the ticket list</button>`:''}
+    <div class="bt-eacts">${canSign?`<button type="button" class="ibtn primary" data-btiact="sign">Sign the figure${r.signer&&r.signer.who?' ('+btE(r.signer.who)+')':''}</button>`:''}${canUnsign?'<button type="button" class="ibtn" data-btiact="unsign">Unsign to change it</button>':''}
+      ${how&&nx&&r.status!=='submitted'?`<button type="button" class="ibtn" data-btiact="move">Move to ${btE(BT_STN[nx])}</button>`:''}${owedNote}
+      ${how?'<span class="small">Beta: Settings viewers move a Beta item along by hand while the rest of the lifecycle is built. Every move is recorded.</span>':''}</div></div>`;
+};
+async function btItemAct(id,act,arg){
+  const r=(FE.all||[]).find(x=>x._id===id); if(!r) return; const me=feMe(), at=feNow();
+  try{
+    if(act==='sign'){ await btItemUpdate(id,()=>({status:'signed', signature:{by:me.uid, at, who:(r.signer||{}).who||'', via:'beta'}}),{k:'sign', from:r.status, to:'signed'}); uiToast('Signed. It now waits for review.'); }
+    else if(act==='unsign'){ await btItemUpdate(id,()=>({status:'submitted', signature:null}),{k:'unsign', from:'signed', to:'submitted'}); uiToast('Signature removed. Change the value, then sign again.'); }
+    else if(act==='move'){ const nx=BT_NEXT[r.status]; if(!nx) return; const st=BT_STAMP[nx]; await btItemUpdate(id,()=>Object.assign({status:nx},st?{[st]:{by:me.uid, at, via:'beta'}}:{}),{k:'move', from:r.status, to:nx}); uiToast('Moved to '+BT_STN[nx]+'.'); }
+    else if(act==='chain'){ const b=(r.v||{}).beta||{}, cb=btCombined([],b.links||[]), tickets=[...new Set(((r.v||{}).related||[]).filter(Boolean).concat(cb.close))], needs=(b.links||[]).filter(l=>l.k==='a'&&l.rel!=='related').map(l=>l.id);
+      await btItemUpdate(id,v=>{ v.beta=Object.assign({},v.beta,{chainClosed:{by:me.uid, at, needs, tickets}, links:(v.beta.links||[]).map(l=>needs.includes(l.id)?Object.assign({},l,{closed:true, closedAt:at}):l)}); },{k:'chain', fields:tickets.slice(0,30)}); uiToast('Chain closed: '+btPl(needs.length,'need')+' delivered, '+btPl(tickets.length,'ticket')+' to close in Jira.'); }
+    else if(act==='link'){ const m=btFind(arg); if(!m) return; const rel=m.k==='a'?'part':m.k==='b'?'extends':'follow';
+      await btItemUpdate(id,v=>{ v.beta=Object.assign({},v.beta,{links:(v.beta.links||[]).concat({k:m.k, id:m.id, rel, name:m.title})}); const ks=m.k==='a'?(m.keys||[]).slice(0,15):m.k==='m'&&m.key?[m.key]:[]; v.related=[...new Set((v.related||[]).filter(Boolean).concat(ks))]; },{k:'link', fields:[m.title]}); BT.eq[id]=''; }
+    else if(act==='unlink'){ await btItemUpdate(id,v=>{ v.beta=Object.assign({},v.beta,{links:(v.beta.links||[]).filter(l=>l.k+':'+l.id!==arg)}); },{k:'unlink', fields:[(btFind(arg)||{}).title||arg]}); }
+  }catch(e){ uiToast(e&&e.code==='invalid_argument'?'Not saved: your access to this page is read-only.':'It could not be saved just now ('+((e&&e.code)||'error')+'). Try again.',{bad:true}); }
+}
+document.addEventListener('click',e=>{ const t=e.target; if(!t.closest||!t.closest('.bt-entry')) return; const ent=t.closest('.bt-entry').dataset.btent; let b;
+  if((b=t.closest('[data-btiact]'))){ btItemAct(ent,b.dataset.btiact); return; }
+  if((b=t.closest('[data-btilink]'))){ btItemAct(ent,'link',b.dataset.btilink); return; }
+  if((b=t.closest('[data-btiunlink]'))){ btItemAct(ent,'unlink',b.dataset.btiunlink); return; }
+  if((b=t.closest('[data-btcand]'))){ const m=btFind(b.dataset.btcand); if(m&&m.k==='l'&&m.id===ent) return; btOpenCand(b.dataset.btcand); return; }
+  if((b=t.closest('[data-btcopy]'))){ const x=b.dataset.btcopy; try{ navigator.clipboard.writeText(x).then(()=>uiToast('Ticket list copied.'),()=>uiToast('Copy it from here: '+x)); }catch(err){ uiToast('Copy it from here: '+x); } } });
+document.addEventListener('input',e=>{ const t=e.target; if(!t.dataset||!t.dataset.btlq) return; const id=t.dataset.btlq; BT.eq[id]=t.value; clearTimeout(BT.lqT);
+  BT.lqT=setTimeout(()=>{ const ent=document.querySelector('.bt-entry[data-btent="'+CSS.escape(id)+'"]'), r=(FE.all||[]).find(x=>x._id===id); if(!ent||!r) return; const w=document.createElement('div'); w.innerHTML=window.btEntryHtml(r);
+    const a=ent.querySelector('.bt-lres'), n=w.querySelector('.bt-lres'); if(a&&n) a.innerHTML=n.innerHTML; },250); });
+
+// ---------- History: voices shared with Beta ----------
+window.btHistory=add=>{ BT.vAll.forEach(v=>{ const K={join:'added a client’s voice to',exists:'recorded as already built:',follow:'added a client to work on its way:'};
+  add(v.at,v.by,'beta',(K[v.kind]||'shared')+' '+btCut((v.target||{}).name,70)+(v.test?' (test)':''),btClientsTxt(v.clients)+(v.sig&&!v.sig.had?' · signal '+v.sig.before.s+' → '+v.sig.after.s:'')+' · '+(BT_SRC[v.src]||''),
+    v.target&&v.target.k==='l'?'fe:'+v.target.id:''); }); };
+
+// ---------- Settings → Sync & logs → Beta lab (Settings viewers) ----------
+const BT_SCEN=[
+  {id:'dup', title:'Already asked for by many', body:'A request many clients already made. Expect “Is this it?” and a jump in the signal.', src:'type', raw:'Exhibitors want visitors to be able to sort the marketplace so the newest products show first'},
+  {id:'built', title:'Already built', body:'A request the platform already covers. Expect a Built match and “Record as already built”.', src:'type', raw:'Registrants should be able to pick their preferred language when they sign up, so all emails arrive in that language'},
+  {id:'new', title:'A new idea', body:'Nothing like it exists. Expect “None of these, it’s new” and a new work item.', src:'type', raw:'Organisers want an estimate of each attendee’s travel carbon footprint shown on their event dashboard'},
+  {id:'chat', title:'From a chat snippet', body:'An example chat thread. Expect the fields to fill themselves from the chat.', src:'chat', raw:'Organiser 10:42: our exhibitors keep asking if scanned leads can go straight into Salesforce\nOrganiser 10:43: right now they export a CSV after the show and half of them never do it\nOrganiser 10:44: if it synced live they would follow up the same day'},
+  {id:'review', title:'The full review', body:'Opens the four steps with the top need linked as the same thing.'}];
+function btRunScen(id){ const sc=BT_SCEN.find(x=>x.id===id); if(!sc) return; if(!BT.test) btSetTest(true);
+  if(id==='review'){ const top=(DM.needs||[])[0]; if(top) window.btFromNeed(top.c.id); else btOpen({mode:'drop'}); return; }
+  btResetShare(); btResetCall(); Object.assign(BT.s,{src:sc.src, raw:sc.raw}); btOpen({mode:'share'}); setTimeout(()=>btFill(false),200); }
+function btLabPaint(){
+  const host=document.getElementById('bt-lab'); if(!host) return; if(!btAcc().how){ host.innerHTML=''; return; } if(host.hidden) return;
+  const me=feMe(), mineT=x=>x.test&&(x.loggedBy===me.uid||x.by===me.uid), ti=(FE.all||[]).filter(mineT), tv=BT.vAll.filter(mineT), L=BT.lab;
+  const items=(FE.all||[]).filter(r=>(r.v||{}).beta&&btSeen(r)).sort((a,b)=>String(b.loggedAt).localeCompare(String(a.loggedAt))).slice(0,12);
+  const voices=BT.voices.slice().sort((a,b)=>String(b.at).localeCompare(String(a.at))).slice(0,12);
+  host.innerHTML=`<div class="bt-lab"><div class="bt-lh"><h3>Beta lab</h3><div class="bt-p">Logging with Claude is in Beta with the Settings viewers. Test it here: switch test mode on, run a case, look at what Claude sent and got back, then clear your tests.</div></div>
+    <div class="bt-lgrid"><div class="card"><h3>Test mode</h3><div class="bt-p">While it is on, everything you log or share with Beta is tagged Test and left out of every count, board and signal. Only viewers with test mode on see it.</div>
+      <div class="bt-acts"><button type="button" class="ibtn${BT.test?'':' primary'}" data-btlab="test">${BT.test?'Turn test mode off':'Turn test mode on'}</button><span class="bt-state${BT.test?' ok':''}">${BT.test?'On':'Off'}</span></div>
+      <div class="small">Your test data: ${btPl(ti.length,'work item')}, ${btPl(tv.length,'shared voice')}.</div>
+      ${ti.length+tv.length?(L.confirm?`<div class="bt-note">Delete ${btPl(ti.length+tv.length,'test record')}? This cannot be undone.<div class="bt-acts"><button type="button" class="ibtn primary" data-btlab="delyes">Yes, delete them</button><button type="button" class="ibtn" data-btlab="delno">Cancel</button></div></div>`:'<button type="button" class="ibtn" data-btlab="del">Delete my test data</button>'):''}</div>
+      <div class="card"><h3>Check Claude</h3><div class="bt-p">Makes one tiny call to Claude from this page and says exactly what happened. The first time, claude.ai asks you to allow it.</div>
+      <button type="button" class="ibtn" data-btlab="check"${L.check&&L.check.busy?' disabled':''}>${L.check&&L.check.busy?'Checking…':'Check Claude'}</button>
+      ${L.check&&!L.check.busy?(L.check.ok?`<div class="bt-teaser ok">Claude works here (${Math.round(L.check.ms/100)/10} s).</div>`:`<div class="bt-note bad">${btE(L.check.msg||'It did not work.')}</div>`):''}
+      <h3>Open Beta</h3><div class="bt-p">The same window every “Log a new work item” button opens for you.</div><div class="bt-acts"><button type="button" class="ibtn primary" data-btlab="open">Log a new work item</button></div></div></div>
+    <div class="card"><h3>Cases</h3><div class="bt-p">One tap sets up a case in test mode; then run the flow yourself.</div><div class="bt-scen">${BT_SCEN.map(s=>`<div class="bt-sc"><b>${btE(s.title)}</b><span class="small">${btE(s.body)}</span><button type="button" class="ibtn" data-btscen="${s.id}">Run</button></div>`).join('')}</div></div>
+    <div class="card"><h3>Logged with Beta</h3><div class="bt-p">The newest work items and shared voices${BT.test?', test ones included':''}.</div>
+      <div class="bt-rec">${items.map(r=>`<button type="button" class="bt-recr" data-btlabopen="${btE(r._id)}"><b>${btE(r.id||r._id)}</b><span>${btE(btCut((r.v||{}).title,80))}</span><span class="small">${btE(BT_SRC[(r.v.beta||{}).src]||'')} · ${btE(ppWhen(r.loggedAt))} · ${btE(feName(r.loggedBy))}${r.test?' · Test':''}</span></button>`).join('')}
+        ${voices.map(v=>`<div class="bt-recr"><b>${btE({join:'Joined',exists:'Already built',follow:'Following'}[v.kind]||v.kind)}</b><span>${btE(btCut((v.target||{}).name,80))}</span><span class="small">${btE(btClientsTxt(v.clients))}${v.sig&&!v.sig.had?' · signal '+v.sig.before.s+' → '+v.sig.after.s:''} · ${btE(ppWhen(v.at))}${v.test?' · Test':''}</span></div>`).join('')}
+        ${items.length+voices.length?'':'<div class="empty">Nothing logged with Beta yet.</div>'}</div></div>
+    <div class="card"><h3>What Claude was asked</h3><div class="bt-p">Every call to Claude in this session: what was sent, what came back, and what was left out for having no source. Each call is also a line in History.</div>
+      ${BT.ailog.length?BT.ailog.map(l=>`<details class="bt-ailog"><summary><b>${btE(l.kind)}</b> <span class="small">${btE(l.at.toLocaleTimeString('en-GB'))}${l.code?' · failed: '+btE(l.code):''}${l.dropped.length?' · left out: '+btE(l.dropped.join(', ')):''}</span></summary>
+        <div class="bt-sl">Sent</div><pre class="bt-code">${btE(String(l.prompt).slice(0,6000))}</pre><div class="bt-sl">Came back</div><pre class="bt-code">${btE((typeof l.raw==='string'?l.raw:JSON.stringify(l.raw,null,2)||'').slice(0,4000))}</pre>${l.used?`<div class="bt-sl">Used</div><pre class="bt-code">${btE(JSON.stringify(l.used,null,2).slice(0,3000))}</pre>`:''}</details>`).join(''):'<div class="empty">No calls yet in this session.</div>'}</div></div>`;
+}
+window.btLabPaint=btLabPaint;
+async function btLabDelete(){ const me=feMe(), mineT=x=>x.test&&(x.loggedBy===me.uid||x.by===me.uid); let n=0;
+  for(const r of (FE.all||[]).filter(mineT)){ try{ await FE.db.doc('ledger/'+r._id).delete(); try{ await FE.db.doc('ledger-events/'+r._id).delete(); }catch(e){} n++; }catch(e){} }
+  for(const v of BT.vAll.filter(mineT)){ try{ await FE.db.doc('ledger-voices/'+v._id).delete(); n++; }catch(e){} }
+  BT.lab.confirm=false; btLabPaint(); uiToast('Deleted '+btPl(n,'test record')+'.'); }
+async function btLabCheck(){ BT.lab.check={busy:true}; btLabPaint(); const t0=Date.now();
+  try{ const r=await btAI('Connection check','Return this JSON object exactly: {"ok": true}',{tier:'quick', fresh:true}); BT.lab.check={ok:!!(r.data&&r.data.ok===true), ms:Date.now()-t0}; btLog('Connection check','Return {"ok": true}',r.text,r.data); }
+  catch(e){ BT.lab.check={ok:false, msg:btAiMsg(e)}; } btLabPaint(); }
+document.addEventListener('click',e=>{ const t=e.target; if(!t.closest||!t.closest('#bt-lab')) return; let b;
+  if((b=t.closest('[data-btscen]'))){ btRunScen(b.dataset.btscen); return; }
+  if((b=t.closest('[data-btlabopen]'))){ feOpenEntry(b.dataset.btlabopen); return; }
+  if((b=t.closest('[data-btlab]'))){ const a=b.dataset.btlab;
+    if(a==='test') btSetTest(!BT.test); else if(a==='del'){ BT.lab.confirm=true; btLabPaint(); } else if(a==='delno'){ BT.lab.confirm=false; btLabPaint(); } else if(a==='delyes') btLabDelete();
+    else if(a==='check') btLabCheck(); else if(a==='open') btOpen({}); } });
+// the QR code opens the ledger at #log: a Settings viewer lands straight in Beta
+window.addEventListener('ep-gate',()=>{ setTimeout(()=>{ if(location.hash==='#log'&&btAcc().how) btOpen({}); },400); });

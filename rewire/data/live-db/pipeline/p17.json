@@ -1,0 +1,202 @@
+{
+  "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "impact": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2055929867/Alphabetical+Sorting+for+Filter+Items | EP-56170 comment 2026-09-11 by Kavinder Rawal | EP-56170 comment 2026-09-16 by Kavinder Rawal",
+      "notes": "EP-56170 comment 2026-09-18 by Kavinder Rawal | EP-56170 comment 2026-09-16 by Kavinder Rawal | jiraColumns",
+      "why": "EP-56170 Reported by HINTE | EP-56170 comment 2026-09-03 by Oleksandr Parashchuk (Background)"
+    },
+    "gaps": [],
+    "pages": [
+      {
+        "note": "Tiny link resolves to page 2055929867, last modified 18 Sep 2026; references REQ-2026-030-I",
+        "read": true,
+        "title": "Alphabetical Sorting for Filter Items",
+        "url": "https://expoplatform.atlassian.net/wiki/x/CwCLeg"
+      },
+      {
+        "note": "Same page as the tiny link (linked in comment 2026-09-09)",
+        "read": true,
+        "title": "Alphabetical Sorting for Filter Items",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2055929867/Alphabetical+Sorting+for+Filter+Items"
+      }
+    ]
+  },
+  "flags": {
+    "drift": false,
+    "dueSoon": false,
+    "noEstimate": false,
+    "noJira": false,
+    "overEstimate": false,
+    "overdue": false,
+    "shipped": false
+  },
+  "h": {
+    "h0imp": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 18 Sep 2026."
+    },
+    "h0imp-area": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "area",
+      "from": "(Sessions & Scheduling / Admin",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "Sessions"
+    },
+    "h0imp-month": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "month",
+      "from": "October 2026",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "2026-10"
+    },
+    "h0imp-status": {
+      "at": "2026-09-22",
+      "b": "b0import-0922",
+      "by": "claude",
+      "f": "status",
+      "from": "In progress (Sub-tasks decomposed: BE in progress, FE & QA ready to start)",
+      "k": "import",
+      "note": "normalised so the ledger can be totalled (pp-normalise)",
+      "to": "In Progress"
+    },
+    "h0mig": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "k": "migrate",
+      "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "h0mig-rationale": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "migrate",
+      "note": "the old Why, word for word",
+      "to": "German organizers / enterprise customers requested alphabetical sorting of Tracks, Tags and Types to improve discoverability on events with large taxonomy sets. Supports multilingual events by sorting according to the attendee's active language locale."
+    },
+    "h0mig-why": {
+      "at": "2026-09-22T22:35:37Z",
+      "b": "b0schema2-0922",
+      "by": "claude",
+      "f": "why",
+      "from": "German organizers / enterprise customers requested alphabetical sorting of Tracks, Tags and Types to improve discoverability on events with large taxonomy sets. Supports multilingual events by sorting according to the attendee's active language locale.",
+      "k": "migrate",
+      "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
+      "to": ""
+    },
+    "hb260928enr-impact": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "impact",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2055929867/Alphabetical+Sorting+for+Filter+Items | EP-56170 comment 2026-09-11 by Kavinder Rawal | EP-56170 comment 2026-09-16 by Kavinder Rawal",
+      "to": "Attendees on large and multi-language events find Track, Tag and Type filter options in alphabetical order for their own language on All Sessions, Round Tables, On-Demand and Marketplace Exhibitor Events, on web and in the mobile app. Organisers get an opt-in toggle (off by default); their manual order is kept and restored when it is switched off."
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-56170 comment 2026-09-18 by Kavinder Rawal | EP-56170 comment 2026-09-16 by Kavinder Rawal | jiraColumns",
+      "to": "18 Sep: due on the release candidate on 7 Oct; App QA team to run the mobile smoke test then. 16 Sep: Confluence spec and Jira description updated (accent-sensitive collation, numeric sort, Round Tables in scope). Jira status: In testing."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-56170 Reported by HINTE | EP-56170 comment 2026-09-03 by Oleksandr Parashchuk (Background)",
+      "to": "German organisers (HINTE) say long Track, Tag and Type lists are hard to browse and asked for alphabetical order per language."
+    },
+    "hb260928jira-status": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "status",
+      "from": "In Progress",
+      "k": "edit",
+      "note": "Status now follows Jira: In testing (owner, 28 Sep 2026: the ledger must match every board)",
+      "to": "In Testing"
+    },
+    "hmuljie4z0dl5i": {
+      "at": "2026-09-28T17:47:20Z",
+      "b": "hmuljie4y0cb3a",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "to": "44404"
+    }
+  },
+  "j": {
+    "aggOrigDays": 23,
+    "assignee": "Evgen Polivach",
+    "canon": "In Testing",
+    "due": "2026-10-07",
+    "origDays": 11,
+    "priority": "Medium",
+    "resolved": null,
+    "spentDays": 5.88,
+    "status": "In testing",
+    "summary": "Alphabetical Sorting for Filter Items for sessions and Exhibitor Events",
+    "team": "Visitor team",
+    "teamField": "customfield_10001",
+    "type": "Story"
+  },
+  "jAt": "2026-09-29T07:30:24Z",
+  "migrated": {
+    "at": "2026-09-22",
+    "schema": 2
+  },
+  "n": {
+    "days": 12,
+    "daysKind": "point"
+  },
+  "order": 240,
+  "raw": {
+    "area": "(Sessions & Scheduling / Admin",
+    "month": "October 2026",
+    "status": "In progress (Sub-tasks decomposed: BE in progress, FE & QA ready to start)"
+  },
+  "source": "confluence-2155872263",
+  "updatedAt": "2026-09-28",
+  "updatedBy": "u_odCcEgwJ2lNM84eM7e5ykg",
+  "v": {
+    "area": "Sessions",
+    "deps": "Backend dynamic sorting and response order_num renumbering for active locale. Risk: mobile smoke test coordination needed; public API v3 remains on manual DB order by design.",
+    "driver": "44404",
+    "estimate": "12d",
+    "feature": "Alphabetical Sorting for Filter Items for sessions and Exhibitor Events",
+    "impact": "Attendees on large and multi-language events find Track, Tag and Type filter options in alphabetical order for their own language on All Sessions, Round Tables, On-Demand and Marketplace Exhibitor Events, on web and in the mobile app. Organisers get an opt-in toggle (off by default); their manual order is kept and restored when it is switched off.",
+    "key": "EP-56170",
+    "month": "2026-10",
+    "notes": "18 Sep: due on the release candidate on 7 Oct; App QA team to run the mobile smoke test then. 16 Sep: Confluence spec and Jira description updated (accent-sensitive collation, numeric sort, Round Tables in scope). Jira status: In testing.",
+    "owner": "Kavi",
+    "priority": "Customer",
+    "rationale": "German organizers / enterprise customers requested alphabetical sorting of Tracks, Tags and Types to improve discoverability on events with large taxonomy sets. Supports multilingual events by sorting according to the attendee's active language locale.",
+    "status": "In Testing",
+    "team": "",
+    "why": "German organisers (HINTE) say long Track, Tag and Type lists are hard to browse and asked for alphabetical order per language."
+  }
+}

@@ -1,0 +1,322 @@
+[
+ {
+  "id": "integ-event-system-import",
+  "kind": "new",
+  "kindWhy": "'Integration with ASP events system to pull in Exhibitors, Sessions and Speakers' builds a new integration",
+  "buildsOn": [],
+  "buildsOnWhy": "No baseline claim covers this external event-system connector"
+ },
+ {
+  "id": "integ-visit-badge-scanner",
+  "kind": "new",
+  "kindWhy": "'Visit G2 external badge / external scanner / pull external leads' introduce the Visit integration",
+  "buildsOn": [],
+  "buildsOnWhy": "No Visit claims in the baseline"
+ },
+ {
+  "id": "integ-api-meeting-data",
+  "kind": "improved",
+  "kindWhy": "Adds meeting endpoints and filters to the existing public API ('API endpoints in the public API', 'Add additional filter param', 'Exhibitor Id need to add')",
+  "buildsOn": [
+   "20_integrations:84",
+   "20_integrations:290"
+  ],
+  "buildsOnWhy": "Meetings export API with pagination and last_modified filter"
+ },
+ {
+  "id": "integ-expofp-floor-plan",
+  "kind": "new",
+  "kindWhy": "'ExpoFP Floorplan | Integration' launches the integration, plus sessions and an account token field",
+  "buildsOn": [
+   "20_integrations:267",
+   "20_integrations:214",
+   "20_integrations:215"
+  ],
+  "buildsOnWhy": "ExpoFP floor plan integration, its token field and Map with Hall toggle"
+ },
+ {
+  "id": "integ-reach5-buyer-registration",
+  "kind": "improved",
+  "kindWhy": "'add reach 5 settings functionality to the EP internal buyer registration pop up' extends existing registration",
+  "buildsOn": [],
+  "buildsOnWhy": "No Reach5 claims in the baseline"
+ },
+ {
+  "id": "integ-klipso-integration",
+  "kind": "new",
+  "kindWhy": "'Build an integration between EP and Klipso'",
+  "buildsOn": [],
+  "buildsOnWhy": "No Klipso claims in the baseline"
+ },
+ {
+  "id": "integ-public-api-2023q4",
+  "kind": "improved",
+  "kindWhy": "Adds parameters and options to existing v2 endpoints (buyers export, images[] URLs on product/set, speakers on sessions/get)",
+  "buildsOn": [
+   "20_integrations:150",
+   "20_integrations:167",
+   "20_integrations:308"
+  ],
+  "buildsOnWhy": "account/buyers, product/set and product image URL handling"
+ },
+ {
+  "id": "integ-aditus-app-badges",
+  "kind": "new",
+  "kindWhy": "'Custom Badge Page Integration with Aditus' introduces the Aditus badge integration",
+  "buildsOn": [],
+  "buildsOnWhy": "No Aditus claims in the baseline"
+ },
+ {
+  "id": "integ-crm-session-import",
+  "kind": "new",
+  "kindWhy": "'Sessions integration with DWTC CRM' builds a new connector",
+  "buildsOn": [],
+  "buildsOnWhy": "No claim for this organiser CRM connector"
+ },
+ {
+  "id": "integ-event-system-import-enhancements",
+  "kind": "improved",
+  "kindWhy": "'ASP Integration - Enhancements' / 'Send Email Functionality' extend the existing ASP import",
+  "buildsOn": [],
+  "buildsOnWhy": "No baseline claim covers the ASP connector"
+ },
+ {
+  "id": "integ-expofp-data-sync",
+  "kind": "improved",
+  "kindWhy": "'ExpoFP - Data Integration' / batching every 10 minutes extends the existing ExpoFP integration",
+  "buildsOn": [
+   "20_integrations:267",
+   "20_integrations:214"
+  ],
+  "buildsOnWhy": "ExpoFP floor plan integration and its token setting"
+ },
+ {
+  "id": "integ-public-api-2024q2",
+  "kind": "improved",
+  "kindWhy": "Adds parameters and filters to existing endpoints (account/set opt-in, time filter on statistics, meeting tags in export)",
+  "buildsOn": [
+   "20_integrations:140",
+   "20_integrations:83",
+   "20_integrations:84"
+  ],
+  "buildsOnWhy": "account/set, Statistics API v2, meetings export API"
+ },
+ {
+  "id": "integ-crowd-connected",
+  "kind": "improved",
+  "kindWhy": "'Pass User ID through to Crowd Connected', push messaging and settings at app creation extend an existing Crowd Connected link",
+  "buildsOn": [
+   "20_integrations:216",
+   "20_integrations:268"
+  ],
+  "buildsOnWhy": "Crowdconnected SDK in the EP apps"
+ },
+ {
+  "id": "integ-reach5-registration",
+  "kind": "improved",
+  "kindWhy": "'Autologged in mode + Reach 5 in EP Registration' adds Reach5 to existing visitor registration",
+  "buildsOn": [],
+  "buildsOnWhy": "No Reach5 claims in the baseline"
+ },
+ {
+  "id": "integ-public-api-2024q4",
+  "kind": "improved",
+  "kindWhy": "Adds parameters to exhibitor/set and product/set ('Addition of parameter \"status\"')",
+  "buildsOn": [
+   "20_integrations:167"
+  ],
+  "buildsOnWhy": "product/set endpoint"
+ },
+ {
+  "id": "integ-a2z-enhancements",
+  "kind": "improved",
+  "kindWhy": "'A2Z Enhancements' to the existing A2Z integration",
+  "buildsOn": [],
+  "buildsOnWhy": "No A2Z claims in the baseline"
+ },
+ {
+  "id": "integ-reach5-sso",
+  "kind": "unclear",
+  "kindWhy": "Single story 'Reach5 SSO'; Reach5 existed for registration but it cannot be told whether SSO login is a first version",
+  "buildsOn": [],
+  "buildsOnWhy": "Baseline SSO claims are SAML 2.0, not Reach5"
+ },
+ {
+  "id": "integ-visit-sso-meetings",
+  "kind": "improved",
+  "kindWhy": "'GES - Single Sign-on', 'allow_meetings' and 'SSO Button - Relocate' add options to the existing Visit/GES integration",
+  "buildsOn": [],
+  "buildsOnWhy": "No Visit/GES claims in the baseline"
+ },
+ {
+  "id": "integ-aditus-participants",
+  "kind": "new",
+  "kindWhy": "'InfoSalons/Aditus Participant API' launches participant sync (settings 'Reinstate' is minor)",
+  "buildsOn": [],
+  "buildsOnWhy": "No Aditus claims in the baseline"
+ },
+ {
+  "id": "integ-klipso-enhancements",
+  "kind": "improved",
+  "kindWhy": "'Klipso Integration - Team member admin / Multiple Hall/Stands / Product Categories Enhancement'",
+  "buildsOn": [],
+  "buildsOnWhy": "No Klipso claims in the baseline"
+ },
+ {
+  "id": "integ-public-api-2025q2",
+  "kind": "improved",
+  "kindWhy": "'/api/v2/meetings/export - New parameters', 'Badge QR - Exposing it to the api/v2/account/get'",
+  "buildsOn": [
+   "20_integrations:84",
+   "20_integrations:141"
+  ],
+  "buildsOnWhy": "Meetings export API and account/get"
+ },
+ {
+  "id": "integ-event-system-push-back",
+  "kind": "new",
+  "kindWhy": "'ASP - Data Push Back' adds an outbound direction the ASP import did not have",
+  "buildsOn": [],
+  "buildsOnWhy": "No baseline claim covers the ASP connector"
+ },
+ {
+  "id": "integ-api-v2-lists",
+  "kind": "improved",
+  "kindWhy": "'API V1 Visitors list Migration to API V2' / 'Synchronize data Migration' re-platform existing v1 endpoints",
+  "buildsOn": [
+   "20_integrations:76"
+  ],
+  "buildsOnWhy": "Delta-sync pattern after the first full pull (timestamp filters)"
+ },
+ {
+  "id": "integ-public-api-v3",
+  "kind": "new",
+  "kindWhy": "First v3 endpoints ('GET - Event List', categories, 'Accounts - New Endpoint on API V3')",
+  "buildsOn": [
+   "20_integrations:72"
+  ],
+  "buildsOnWhy": "REST API v2 and v3 over HTTPS"
+ },
+ {
+  "id": "integ-visit-api-v2",
+  "kind": "improved",
+  "kindWhy": "'HYVE - N200 API V2. New version on N200 using V2' re-platforms the existing Visit integration",
+  "buildsOn": [],
+  "buildsOnWhy": "No Visit claims in the baseline"
+ },
+ {
+  "id": "integ-genesis-world",
+  "kind": "new",
+  "kindWhy": "'Phase 1 - HINTE - Genesis World Integration'",
+  "buildsOn": [],
+  "buildsOnWhy": "No Genesis World claims in the baseline"
+ },
+ {
+  "id": "integ-map-your-show",
+  "kind": "new",
+  "kindWhy": "'Integration Hub - Map Your Show' builds a new connector, then 'MYS Stage 2'",
+  "buildsOn": [],
+  "buildsOnWhy": "No Map Your Show claims; hub claims describe the host, not this connector"
+ },
+ {
+  "id": "integ-hub-mapping",
+  "kind": "improved",
+  "kindWhy": "'Add team member role matching to the mapping schema', 'Addition of new field' to the existing hub",
+  "buildsOn": [
+   "20_integrations:81"
+  ],
+  "buildsOnWhy": "Integration HUB catalogue of native connectors"
+ },
+ {
+  "id": "integ-public-api-v3-expansion",
+  "kind": "improved",
+  "kindWhy": "Adds more endpoints to v3 ('Check if the Account exists', 'API V3 - Meetings Export Migration')",
+  "buildsOn": [
+   "20_integrations:148",
+   "20_integrations:84",
+   "20_integrations:72"
+  ],
+  "buildsOnWhy": "account/exists, meetings export API, v3 API"
+ },
+ {
+  "id": "integ-public-api-v3-content",
+  "kind": "improved",
+  "kindWhy": "'API V3 Migration - /api/v2/floorplan/getStands to V3' etc. move existing v2 endpoints to v3",
+  "buildsOn": [
+   "20_integrations:72",
+   "20_integrations:73"
+  ],
+  "buildsOnWhy": "v2/v3 API and its core resources"
+ },
+ {
+  "id": "integ-cds-participants",
+  "kind": "new",
+  "kindWhy": "'CDS - Participant Integration' builds a new connector",
+  "buildsOn": [],
+  "buildsOnWhy": "No CDS claims in the baseline"
+ },
+ {
+  "id": "integ-d2i",
+  "kind": "new",
+  "kindWhy": "'D2i - Native Integration Build'",
+  "buildsOn": [],
+  "buildsOnWhy": "No D2i claims in the baseline"
+ },
+ {
+  "id": "integ-hub-migrations",
+  "kind": "improved",
+  "kindWhy": "'Integration HUB Migration - Aventri V2 / Aditus / A2Z' re-platforms existing integrations",
+  "buildsOn": [
+   "20_integrations:81",
+   "20_integrations:217"
+  ],
+  "buildsOnWhy": "Integration HUB and Aventri/Cvent participant sync"
+ },
+ {
+  "id": "integ-integrations-page",
+  "kind": "new",
+  "kindWhy": "'A new Integrations page' ('Integrations page - Back-end work'), with SAML settings moved onto it",
+  "buildsOn": [
+   "20_integrations:81",
+   "20_integrations:104",
+   "20_integrations:80"
+  ],
+  "buildsOnWhy": "Integration HUB catalogue, organiser HUB view, SAML config"
+ },
+ {
+  "id": "integ-public-api-v2-2026q3",
+  "kind": "improved",
+  "kindWhy": "'New endpoint for sponsor analytics' and 'Add filter_1 to filter_5 support on sessions/set' extend API v2",
+  "buildsOn": [
+   "20_integrations:83"
+  ],
+  "buildsOnWhy": "Statistics API v2 interaction coverage"
+ },
+ {
+  "id": "integ-hub-sync",
+  "kind": "improved",
+  "kindWhy": "'ExpoFP - Migration to HUB', 'Updates on Sync Mechanism', 'Change on Matching Mechanism'",
+  "buildsOn": [
+   "20_integrations:81",
+   "20_integrations:267"
+  ],
+  "buildsOnWhy": "Integration HUB and ExpoFP integration"
+ },
+ {
+  "id": "integ-api-v3-products",
+  "kind": "improved",
+  "kindWhy": "Adds product create/update/delete and media endpoints to v3; products already set via v2 product/set",
+  "buildsOn": [
+   "20_integrations:167",
+   "20_integrations:308"
+  ],
+  "buildsOnWhy": "product/set and product image URL handling"
+ },
+ {
+  "id": "integ-swoogo",
+  "kind": "new",
+  "kindWhy": "'Native Integration - Swoogo' builds a new connector",
+  "buildsOn": [],
+  "buildsOnWhy": "No Swoogo claims in the baseline"
+ }
+]

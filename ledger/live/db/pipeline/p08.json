@@ -1,5 +1,25 @@
 {
   "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "deps": "EP-57107 description; EP-57107 comments 2026-09-16 by Oleksandr Zakablukov, 2026-09-17 by Oleksii Tur, 2026-09-17 by Taimoor Zulfiqar, 2026-09-17 by Oleksandr Yelfutin, 2026-09-16 by Oleksii Tur",
+      "driver": "EP-57107 was split from EP-57014 (Reported by DLG, Pipedrive 81808) and serves the DLG G3 calendar prototype",
+      "notes": "EP-57107 comments 2026-09-17 by Roman Kubashevych, 2026-09-17 by Oleksii Tur, 2026-09-17 by Taimoor Zulfiqar and Oleksandr Yelfutin; jiraColumns status/resolved",
+      "why": "EP-57107 description; EP-57107 link 'Work item split: EP-57014'"
+    },
+    "gaps": [],
+    "pages": [
+      {
+        "note": "Not linked from EP-57107 itself (no Confluence link in its description or comments); read via EP-57014, from which EP-57107 was split. EP-57107 comments state there is no Confluence page for the API contract.",
+        "read": true,
+        "title": "Multi-day Session Calendar View Enhancements for Attendee Experience",
+        "url": "https://expoplatform.atlassian.net/wiki/x/EABCfg"
+      }
+    ]
+  },
   "flags": {
     "drift": false,
     "dueSoon": true,
@@ -63,23 +83,74 @@
       "k": "migrate",
       "note": "moved to Rationale; Why is now one line (pp-why-one-line)",
       "to": ""
+    },
+    "hb260928enr-deps": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "deps",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57107 description; EP-57107 comments 2026-09-16 by Oleksandr Zakablukov, 2026-09-17 by Oleksii Tur, 2026-09-17 by Taimoor Zulfiqar, 2026-09-17 by Oleksandr Yelfutin, 2026-09-16 by Oleksii Tur",
+      "to": "Frontend adaptation (EP-57014, Visitor team) had to ship with it: the change is breaking (old view/day body now answers 400), the calendar was broken on alpha until the adapted frontend reached rc on 23 Sep, and pushes to alpha/rc/prod had to be agreed with the frontend developer. Sub-tasks EP-57262 (contract), EP-57263 (build, PR 5089), EP-57264 and EP-57391 (QA). Mobile is not a consumer: Android and iOS calendars are native and call no API for it. Open risks carried: 4 performance cases blocked because the EP-57286 test stand is gone with no one named to replace it; id-list validation defect EP-57367 filed separately across all search endpoints."
+    },
+    "hb260928enr-driver": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57107 was split from EP-57014 (Reported by DLG, Pipedrive 81808) and serves the DLG G3 calendar prototype",
+      "to": "81808"
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57107 comments 2026-09-17 by Roman Kubashevych, 2026-09-17 by Oleksii Tur, 2026-09-17 by Taimoor Zulfiqar and Oleksandr Yelfutin; jiraColumns status/resolved",
+      "to": "17 Sep: QA complete on 154 cases with no failures, but 15 cases not executed (performance, planner, timezone, null-start) and none human-verified; four documentation corrections owed, JD-15 fixed in the Description the same day. 17 Sep: Android and iOS confirmed native, not calling these endpoints. Jira: Done, resolved 23 Sep."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-57107 description; EP-57107 link 'Work item split: EP-57014'",
+      "to": "API behind the new multi-day session calendar (split from EP-57014): day-range sessions and a days-with-sessions list in one call each."
+    },
+    "hb260928jira-status": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "status",
+      "from": "Ready for Release",
+      "k": "edit",
+      "note": "Status now follows Jira: Done (owner, 28 Sep 2026: the ledger must match every board)",
+      "to": "Done"
     }
   },
   "j": {
     "aggOrigDays": 5,
     "assignee": "Oleksii Tur",
-    "canon": "Ready for Release",
+    "canon": "Done",
     "due": "2026-09-22",
     "origDays": 5,
     "priority": "High",
-    "resolved": null,
+    "resolved": "2026-09-23",
     "spentDays": 7.59,
-    "status": "Ready for release",
+    "status": "Done",
     "summary": "[API] Multi-day Session Calendar View Enhancements",
     "team": "Exhibitor team",
     "teamField": "customfield_10001",
     "type": "Story"
   },
+  "jAt": "2026-09-28T19:00:00Z",
   "migrated": {
     "at": "2026-09-22",
     "schema": 2
@@ -88,29 +159,40 @@
     "days": 5,
     "daysKind": "point"
   },
-  "order": 80,
+  "order": 100,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "EP-57107 was split from EP-57014 (Reported by DLG, Pipedrive 81808) and serves the DLG G3 calendar prototype",
+      "by": "Claude",
+      "field": "Jira",
+      "name": "81808",
+      "quote": "EP-57107 was split from EP-57014 (Reported by DLG, Pipedrive 81808) and serves the DLG G3 calendar prototype",
+      "value": "81808"
+    }
+  },
   "raw": {
     "area": "Sessions",
     "month": "Sept 2026",
     "status": "Ready for deploy"
   },
   "source": "confluence-2155872263",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-28",
   "v": {
     "area": "Sessions",
-    "deps": "",
-    "driver": "",
+    "deps": "Frontend adaptation (EP-57014, Visitor team) had to ship with it: the change is breaking (old view/day body now answers 400), the calendar was broken on alpha until the adapted frontend reached rc on 23 Sep, and pushes to alpha/rc/prod had to be agreed with the frontend developer. Sub-tasks EP-57262 (contract), EP-57263 (build, PR 5089), EP-57264 and EP-57391 (QA). Mobile is not a consumer: Android and iOS calendars are native and call no API for it. Open risks carried: 4 performance cases blocked because the EP-57286 test stand is gone with no one named to replace it; id-list validation defect EP-57367 filed separately across all search endpoints.",
+    "driver": "81808",
     "estimate": "5d",
     "feature": "[API] Multi-day Session Calendar View Enhancements",
     "impact": "Platform & Attendees: eliminates rendering lag and multiple round trips during multi-day calendar navigation. Engineering & QA: clean OpenAPI contract with standardized envelope and server-side timezone boundary resolution.",
     "key": "EP-57107",
     "month": "2026-09",
-    "notes": "",
+    "notes": "17 Sep: QA complete on 154 cases with no failures, but 15 cases not executed (performance, planner, timezone, null-start) and none human-verified; four documentation corrections owed, JD-15 fixed in the Description the same day. 17 Sep: Android and iOS confirmed native, not calling these endpoints. Jira: Done, resolved 23 Sep.",
     "owner": "Kavi",
     "priority": "Strategic",
     "rationale": "Re-architects session search endpoints (/sessionsCalendarView and /sessionsDates) to replace inefficient single-day/week queries with an inclusive, bounded date-range (dayFrom..dayTo up to 31 days) and a single unpaginated date picker fetch.",
-    "status": "Ready for Release",
+    "status": "Done",
     "team": "",
-    "why": ""
+    "why": "API behind the new multi-day session calendar (split from EP-57014): day-range sessions and a days-with-sessions list in one call each."
   }
 }

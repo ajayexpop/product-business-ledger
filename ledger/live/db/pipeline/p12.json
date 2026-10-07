@@ -1,5 +1,26 @@
 {
   "createdAt": "2026-09-22",
+  "enrich": {
+    "at": "2026-09-28T16:00:00Z",
+    "by": "claude",
+    "candidates": [],
+    "fields": {
+      "driver": "Jira Reported by Vinexposium, Pipedrive 5368; a paid client request",
+      "impact": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters; EP-56915 comments 2026-09-22 by Konstantin Shein and 2026-09-23 by Vladyslav Dziubenko",
+      "notes": "EP-56915 comments 2026-09-28 by Konstantin Shein and Shubham Goswami, 2026-09-23 by Vladyslav Dziubenko, 2026-09-22 by Konstantin Shein; jiraColumns.due",
+      "rationale": "Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters; EP-56915 comment 2026-09-11 by Ajay Singh",
+      "why": "EP-56915 comment 2026-09-11 by Ajay Singh; Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters"
+    },
+    "gaps": [],
+    "pages": [
+      {
+        "note": "Names no client",
+        "read": true,
+        "title": "Required Custom Category Filters",
+        "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters"
+      }
+    ]
+  },
   "flags": {
     "drift": false,
     "dueSoon": false,
@@ -33,54 +54,147 @@
       "by": "claude",
       "k": "migrate",
       "note": "migrated this item to schema 2 (spec v1 §2 and §3)"
+    },
+    "hb260928conf-estimate": {
+      "at": "2026-09-28",
+      "b": "b260928conf",
+      "by": "claude",
+      "f": "estimate",
+      "from": "15-20d",
+      "k": "import",
+      "note": "From the Must-Have Product Pipeline Ledger page in Confluence, as it stood on 2026-09-28.",
+      "to": "16d"
+    },
+    "hb260928enr-driver": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "driver",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Jira Reported by Vinexposium, Pipedrive 5368; a paid client request",
+      "to": "5368"
+    },
+    "hb260928enr-impact": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "impact",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters; EP-56915 comments 2026-09-22 by Konstantin Shein and 2026-09-23 by Vladyslav Dziubenko",
+      "to": "Organisers get at least one category from every required filter on user and exhibitor records. It covers seven Add category popups: user and exhibitor profile activity/interest categories, products, brands, exhibitor events, news and groups. The admin Categories page gains an Optional/Required filter type and some layout clean-up. The backend will not enforce the rule, so categories set through the admin panel, import, the API or the mobile app are not checked."
+    },
+    "hb260928enr-notes": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "notes",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-56915 comments 2026-09-28 by Konstantin Shein and Shubham Goswami, 2026-09-23 by Vladyslav Dziubenko, 2026-09-22 by Konstantin Shein; jiraColumns.due",
+      "to": "28 Sep: brief sent to the client; build waits for the client's final approval. 23 Sep: QA raised 13 open spec questions and estimated about 5 + 2 days (web only; mobile needs a separate task). 22 Sep: FE about 4d, BE about 3-4d. Jira due 13 Oct."
+    },
+    "hb260928enr-rationale": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "rationale",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters; EP-56915 comment 2026-09-11 by Ajay Singh",
+      "to": "Organisers want to mark custom category filters as required, so users and exhibitors must choose at least one category from each such filter when setting activity, interest or product categories. It is a paid client request, so the brief is being confirmed with the client before the build starts. The rule also applies to categories saved earlier, and the category limit is raised automatically when there are more required filters than the limit allows, so users cannot reach a dead end."
+    },
+    "hb260928enr-why": {
+      "at": "2026-09-28T16:00:00Z",
+      "b": "b260928enr",
+      "by": "claude",
+      "f": "why",
+      "from": "",
+      "k": "edit",
+      "note": "Filled from EP-56915 comment 2026-09-11 by Ajay Singh; Confluence https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2112389133/Required+Custom+Category+Filters",
+      "to": "Paid Vinexposium request: let organisers mark custom category filters as required, so users and exhibitors must pick at least one."
+    },
+    "hb260928jira-funded": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "funded",
+      "from": "",
+      "k": "edit",
+      "note": "Funded: Vinexposium’s required custom filters are a funded (paid) request (owner, 28 Sep 2026)",
+      "to": "Yes"
+    },
+    "hb260928jira-status": {
+      "at": "2026-09-28T19:00:00Z",
+      "b": "b260928jira",
+      "by": "claude",
+      "f": "status",
+      "from": "Planned",
+      "k": "edit",
+      "note": "Status now follows Jira: In Progress (owner, 28 Sep 2026: the ledger must match every board)",
+      "to": "In Progress"
     }
   },
   "j": {
-    "aggOrigDays": null,
-    "assignee": "Konstantin Shein",
-    "canon": "Planned",
-    "due": "2026-10-06",
-    "origDays": null,
+    "aggOrigDays": 0,
+    "assignee": "Oleksandr Parashchuk",
+    "canon": "In Progress",
+    "due": "2026-10-13",
+    "origDays": 0,
     "priority": "Medium",
     "resolved": null,
-    "spentDays": 2.84,
-    "status": "Open",
+    "spentDays": 4.54,
+    "status": "In Progress",
     "summary": "Required (Important) Custom Category Filters in popup",
     "team": "Exhibitor team",
     "teamField": "customfield_10001",
     "type": "Story"
   },
+  "jAt": "2026-09-30T11:34:54Z",
   "migrated": {
     "at": "2026-09-22",
     "schema": 2
   },
   "n": {
-    "days": 17.5,
-    "daysKind": "range"
+    "days": 16,
+    "daysKind": "point"
   },
-  "order": 120,
+  "order": 140,
+  "prefill": {
+    "driver": {
+      "at": "2026-09-28",
+      "basis": "Jira Reported by Vinexposium, Pipedrive 5368; a paid client request",
+      "by": "Claude",
+      "field": "Jira",
+      "name": "5368",
+      "quote": "Jira Reported by Vinexposium, Pipedrive 5368; a paid client request",
+      "value": "5368"
+    }
+  },
   "raw": {
     "area": "Networking",
     "month": "October 2026",
     "status": "Planned"
   },
   "source": "confluence-2155872263",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-28",
   "v": {
     "area": "Networking",
     "deps": "Can be delayed till end of October because of overloaded pipeline",
-    "driver": "",
-    "estimate": "15-20d",
+    "driver": "5368",
+    "estimate": "16d",
     "feature": "Required (Important) Custom Category Filters in popup",
-    "impact": "",
+    "funded": "Yes",
+    "impact": "Organisers get at least one category from every required filter on user and exhibitor records. It covers seven Add category popups: user and exhibitor profile activity/interest categories, products, brands, exhibitor events, news and groups. The admin Categories page gains an Optional/Required filter type and some layout clean-up. The backend will not enforce the rule, so categories set through the admin panel, import, the API or the mobile app are not checked.",
     "key": "EP-56915",
     "month": "2026-10",
-    "notes": "",
+    "notes": "28 Sep: brief sent to the client; build waits for the client's final approval. 23 Sep: QA raised 13 open spec questions and estimated about 5 + 2 days (web only; mobile needs a separate task). 22 Sep: FE about 4d, BE about 3-4d. Jira due 13 Oct.",
     "owner": "Alex",
     "priority": "Customer",
-    "rationale": "",
-    "status": "Planned",
+    "rationale": "Organisers want to mark custom category filters as required, so users and exhibitors must choose at least one category from each such filter when setting activity, interest or product categories. It is a paid client request, so the brief is being confirmed with the client before the build starts. The rule also applies to categories saved earlier, and the category limit is raised automatically when there are more required filters than the limit allows, so users cannot reach a dead end.",
+    "status": "In Progress",
     "team": "",
-    "why": ""
+    "why": "Paid Vinexposium request: let organisers mark custom category filters as required, so users and exhibitors must pick at least one."
   }
 }

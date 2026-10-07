@@ -28,7 +28,8 @@ def run(page, width):
     d = os.path.join(W, 'dist-journey', page)
     src = open(os.path.join(d, 'index.html'), encoding='utf-8').read()
     probe = open(os.path.join(W, 'tools', 'roadmap_qa_probe.js'), encoding='utf-8').read()
-    open(os.path.join(d, 'qa_run.html'), 'w', encoding='utf-8').write(SKELETON + src + '<script>' + probe + '</script></body></html>')
+    mock = open(os.path.join(W, 'tools', 'roadmap_qa_mock.js'), encoding='utf-8').read() if 'internal' in page else ''
+    open(os.path.join(d, 'qa_run.html'), 'w', encoding='utf-8').write(SKELETON + ('<script>' + mock + '</script>' if mock else '') + src + '<script>' + probe + '</script></body></html>')
     # Chrome will not size a window below 500px, so narrow widths run the page inside an iframe of that width
     open(os.path.join(d, 'qa_host.html'), 'w').write('<!doctype html><body style="margin:0"><iframe src="qa_run.html" style="border:0;width:%spx;height:1000px"></iframe>'
         '<script>addEventListener("message",e=>{if(e.data&&e.data.__qa){const p=document.createElement("pre");p.id="__qa";p.textContent=e.data.__qa;document.body.append(p)}})</script></body>' % width)
@@ -42,6 +43,11 @@ def run(page, width):
     if not m:
         print(page, width, 'QA did not finish'); return False
     R = json.loads(html.unescape(m.group(1)))
+    pm = re.search(r'<pre id="__pdf" hidden="">(.*?)</pre>', out, re.S)
+    if pm:
+        import base64
+        os.makedirs(os.path.join(W, 'dist-journey', 'qa-shots'), exist_ok=True)
+        open(os.path.join(W, 'dist-journey', 'qa-shots', 'qa-roadmap.pdf'), 'wb').write(base64.b64decode(pm.group(1)))
     print('%s @%spx · steps %d · sheets opened %d · errors %d · issues %d' % (page, width, R['steps'], R['opened'], len(R['errors']), len(R['issues'])))
     for e in R['errors'][:20]: print('  ERROR', e['step'], e['msg'])
     kinds = {}
