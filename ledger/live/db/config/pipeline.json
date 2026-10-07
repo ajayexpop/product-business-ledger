@@ -29,6 +29,7 @@
       "norm": true,
       "opts": [
         "API",
+        "Acquisition and Commerce",
         "Communication Channels",
         "Exhibitor Manual",
         "Global Search",
@@ -51,7 +52,8 @@
         "Alex",
         "Kavi",
         "Pedro + Alex",
-        "Taimoor"
+        "Taimoor",
+        "Ajay"
       ],
       "type": "select",
       "w": 110
@@ -389,6 +391,64 @@
       "k": "add",
       "note": "Column added: Funded (owner, 28 Sep 2026)",
       "op": "add"
+    },
+    "hb261007add-area": {
+      "at": "2026-10-07T09:30:00Z",
+      "b": "b261007add",
+      "by": "claude",
+      "f": "area",
+      "from": [
+        "API",
+        "Communication Channels",
+        "Exhibitor Manual",
+        "Global Search",
+        "Invoicing",
+        "Lead Intelligence",
+        "Legacy mobile app",
+        "Networking",
+        "Registration",
+        "Search",
+        "Sessions"
+      ],
+      "k": "edit",
+      "note": "Area added for EP-58131 (Ajay, 7 Oct 2026)",
+      "op": "opts",
+      "to": [
+        "API",
+        "Acquisition and Commerce",
+        "Communication Channels",
+        "Exhibitor Manual",
+        "Global Search",
+        "Invoicing",
+        "Lead Intelligence",
+        "Legacy mobile app",
+        "Networking",
+        "Registration",
+        "Search",
+        "Sessions"
+      ]
+    },
+    "hb261007add-owner": {
+      "at": "2026-10-07T09:30:00Z",
+      "b": "b261007add",
+      "by": "claude",
+      "f": "owner",
+      "from": [
+        "Alex",
+        "Kavi",
+        "Pedro + Alex",
+        "Taimoor"
+      ],
+      "k": "edit",
+      "note": "Raised by option added for the Stand-Based Meeting Model item (Ajay, 7 Oct 2026)",
+      "op": "opts",
+      "to": [
+        "Alex",
+        "Kavi",
+        "Pedro + Alex",
+        "Taimoor",
+        "Ajay"
+      ]
     }
   },
   "migrated": {
@@ -406,5 +466,5 @@
     "url": "https://expoplatform.atlassian.net/wiki/spaces/P2/pages/2155872263/Must-Have+Product+Pipeline+Ledger"
   },
   "teamsAsOf": "2026-09-28",
-  "updatedAt": "2026-09-28"
+  "updatedAt": "2026-10-07T09:30:00Z"
 }
