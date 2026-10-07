@@ -362,12 +362,16 @@
     if (!vis($('#pp-host .pp-board'))) R.issues.push({step: 'must-have', kind: 'board-not-shown-to-others'});
     await clicks('#pp-host .pp-bc', 2, 'must-have card (others)', {fresh: true});
     await clicks('#rq-switch [data-v="fl"]', 1, 'feature ledger (others)', {keep: true});
-    if (vis($('#tg-how')) || vis($('.tab[data-tab="logic"]')) || vis($('.tab[data-tab="method"]'))) R.issues.push({step: 'tabs', kind: 'how-it-works-visible-to-others'});
+    // since 6 Oct 2026 Method & sources is read-only for everyone; Rules and Sync & logs stay private
+    if (vis($('.tab[data-tab="logic"]')) || vis($('.tab[data-tab="refresh"]'))) R.issues.push({step: 'tabs', kind: 'how-it-works-visible-to-others'});
+    if (!vis($('#tg-how')) || !vis($('.tab[data-tab="method"]'))) R.issues.push({step: 'tabs', kind: 'method-hidden-from-others'});
+    showTab('method'); await W(250); if (!vis($('#panel-method')) || !vis($('#def-signal'))) R.issues.push({step: 'tabs', kind: 'method-not-open-to-others'}); else check('method for others');
+    if ($('#panel-method #hs-host, #panel-method #rf-host, #panel-method #fb-in, #panel-method .lg')) R.issues.push({step: 'tabs', kind: 'private-content-in-method'});
     showTab('refresh'); await W(200); if (vis($('#panel-refresh'))) R.issues.push({step: 'tabs', kind: 'data-refresh-open-to-others'});
     // a How it works viewer (EP_HOW_IDS): the three tabs open, the Must-have ledger stays locked, the feedback inbox stays Ajay's
     if (!EP_HOW_IDS.includes('u_0KCjQDtQxEOgVhmNzuV5SQ')) R.issues.push({step: 'how access', kind: 'bartosz-not-listed'});
     EP_ACCESS.how = true; applyAccess(); await W(150);
-    if (!vis($('#tg-how'))) R.issues.push({step: 'how access', kind: 'how-tabs-hidden'});
+    if (!vis($('.tab[data-tab="logic"]')) || !vis($('.tab[data-tab="refresh"]'))) R.issues.push({step: 'how access', kind: 'how-tabs-hidden'});
     for (const t of ['logic', 'method', 'refresh']) { showTab(t); await W(250); if (!vis($('#panel-' + t))) R.issues.push({step: 'how access', kind: 'tab-not-open', text: t}); else check('how access: ' + t); }
     if (!vis($('#rf-host .rf-tab'))) R.issues.push({step: 'how access', kind: 'data-refresh-empty'});
     await clicks('#sl-sub [data-slsub="history"]', 1, 'how access: history', {keep: true, wait: 500}); if (!$$('#hs-host .hs-row').length) R.issues.push({step: 'how access', kind: 'history-empty'});
@@ -378,8 +382,8 @@
     $('#sl-sub [data-slsub="refresh"]').click(); await W(200);
     if (vis($('#fb-in'))) R.issues.push({step: 'how access', kind: 'feedback-inbox-opened'});
     EP_ACCESS.how = false; applyAccess(); showTab('overview'); await W(200);
-    if (vis($('#tg-how'))) R.issues.push({step: 'how access', kind: 'how-tabs-not-hidden-again'});
-    location.hash = 'rules'; showTab('logic'); await W(300); if (vis($('#panel-logic')) || vis($('#panel-method'))) R.issues.push({step: 'tabs', kind: 'rules-open-to-others'}); check('rules refused');
+    if (vis($('.tab[data-tab="logic"]')) || vis($('.tab[data-tab="refresh"]'))) R.issues.push({step: 'how access', kind: 'how-tabs-not-hidden-again'});
+    location.hash = 'rules'; showTab('logic'); await W(300); if (vis($('#panel-logic'))) R.issues.push({step: 'tabs', kind: 'rules-open-to-others'}); check('rules refused');
 
   } catch (err) { R.errors.push({step: 'locked view', msg: String(err && err.message || err)}); }
   try { await tab('pipeline'); await clicks('#rq-switch [data-v="pp"]', 1, 'must-have ledger', {keep: true}); check('requests must-have board');
@@ -433,8 +437,19 @@
   { const d = $('.dm-sighow'); if (!d) R.issues.push({step: 'demand', kind: 'signal-explainer-missing'}); else { d.querySelector('summary').click(); await W(150); check('demand signal explained');
       const ex = $('.dm-sigex .dm-eq'), top = $('.dm-rr .dm-sig'); if (ex && top && ex.textContent.replace(/\D/g, '') !== top.textContent.replace(/\D/g, '')) R.issues.push({step: 'demand', kind: 'signal-example-mismatch', text: ex.textContent + ' vs ' + top.textContent});
       d.querySelector('summary').click(); await W(100); } }
+  // the definition lives once in Method & sources (6 Oct 2026): the weights there come from DM_TW, and Demand's links land on it
+  { const w = $('#def-signal-w'), want = [1, 2, 3, 4].map(t => 'T' + t + ' ' + DM_TW[t]).join(' · ');
+    if (!w || !w.textContent.startsWith(want)) R.issues.push({step: 'definitions', kind: 'weights-differ-from-code', text: w ? w.textContent : 'missing'});
+    if (/T1 8 · T2 4/.test($('#panel-demand').textContent)) R.issues.push({step: 'definitions', kind: 'weights-restated-on-demand'});
+    const d = $('.dm-sighow'); if (d) { d.querySelector('summary').click(); await W(150); const l = d.querySelector('[data-def="signal"]');
+      if (!l) R.issues.push({step: 'definitions', kind: 'demand-link-missing'}); else { l.click(); await W(400); const e = $('#def-signal'), r = e && e.getBoundingClientRect();
+        const bar = $('.tabs').getBoundingClientRect().bottom; if (!vis($('#panel-method')) || !r || r.top < bar - 2 || r.top > innerHeight * 0.6) R.issues.push({step: 'definitions', kind: 'link-not-landing', el: 'panel ' + vis($('#panel-method')) + ' top ' + (r ? Math.round(r.top) : 'none') + ' bar ' + Math.round(bar) + ' h ' + innerHeight + ' y ' + Math.round(scrollY)}); else check('definitions from demand'); }
+      await tab('demand'); await W(400); const d2 = $('.dm-sighow'); if (d2 && d2.open) { d2.querySelector('summary').click(); await W(100); } } }
   await clicks('.dm-rr', 3, 'demand ranked need', {after: async () => {}});
-  { const r = $('.dm-rr'); if (r) { r.click(); await W(300); if (!vis($('#modal .dm-sigsum'))) R.issues.push({step: 'demand', kind: 'need-signal-breakdown-missing'}); await closeAll(); } }
+  { const r = $('.dm-rr'); if (r) { r.click(); await W(300); if (!vis($('#modal .dm-sigsum'))) R.issues.push({step: 'demand', kind: 'need-signal-breakdown-missing'});
+      const l = $('#modal .dm-signote [data-def="signal"]'); if (!l) R.issues.push({step: 'definitions', kind: 'need-link-missing'}); else { l.click(); await W(700);
+        if ($('#modal[open]') || !vis($('#def-signal'))) R.issues.push({step: 'definitions', kind: 'need-link-not-landing'}); else check('definitions from a need'); }
+      await closeAll(); await tab('demand'); await W(400); } }
   $('#dm-view [data-v="needs"]').click(); await W(300); check('demand needs');
   await clicks('[data-dmsort]', 5, 'demand needs sort', {keep: true, fresh: true});
   await clicks('table.dm-tab tr.r', 3, 'demand needs row', {fresh: true});

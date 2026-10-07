@@ -62,7 +62,7 @@ Rules the tool follows: key, month, status, area, priority, owner and estimate f
 
 ## Tab groups and logging (30 Sep 2026)
 
-- The tab groups are **Client health** (Overview, Clients; the Timeline was removed on 6 Oct 2026, its code is in `deprecated/timeline/`), **Product delivery** (Requests, Demand, Delivery, Bugs, Incidents; was "Work") and **Settings** (Rules, Method & sources, Sync & logs; was "How it works").
+- The tab groups are **Client health** (Overview, Clients; the Timeline was removed on 6 Oct 2026, its code is in `deprecated/timeline/`), **Product delivery** (Requests, Demand, Delivery, Bugs, Incidents; was "Work") and **Settings** (Rules, Method & sources, Sync & logs; was "How it works"; since 6 Oct 2026 Method & sources shows for everyone, the other two for Ajay and the Settings viewers).
 - **Logging a new work item is in Beta (logging with Claude), for the Settings viewers first.** Every "Log a work item" entry point (the Requests header, the Feature ledger button, Demand's "Log a work item from this need", Client 360) opens Beta for Ajay and Bartosz (`btOpen`; from a need, `btFromNeed` opens the full review with the need linked). Everyone else sees the placeholder card (`feSkillCard`, *In testing*). Beta keeps **Use the classic form**; filling in owed details on an existing item still opens the form. When Beta opens to everyone, drop the `ACCESS.how` check in `feOpenForm`.
 
 ## Beta: logging with Claude (30 Sep 2026)
@@ -78,7 +78,8 @@ Rules the tool follows: key, month, status, area, priority, owner and estimate f
 ## Who sees what
 
 - **Ajay** (the artifact's owner, or an id in `EP_AJAY_IDS`): everything, including the Feedback inbox, visits and day counts.
-- **Settings viewers** (the group was called How it works until 30 Sep 2026; `EP_HOW_IDS` in `src/main.js`): Rules, Method & sources and Sync & logs (Data refresh and History, without visits and feedback, which the `db` rules keep owner-only). Since 30 Sep 2026: Bartosz (`u_0KCjQDtQxEOgVhmNzuV5SQ`).
+- **Settings viewers** (the group was called How it works until 30 Sep 2026; `EP_HOW_IDS` in `src/main.js`): Rules and Sync & logs (Data refresh and History, without visits and feedback, which the `db` rules keep owner-only). Since 30 Sep 2026: Bartosz (`u_0KCjQDtQxEOgVhmNzuV5SQ`).
+- **Method & sources**: everyone, read-only, since 6 Oct 2026. It opens with **Definitions**: each number used across the page is defined there once (first entry: Demand signal) and other tabs link to it (`data-def="<key>"` → `#def-<key>`). Add a new term as another `.def` entry; don't restate a definition on another tab.
 - **Must-have ledger**: everyone, since 30 Sep 2026 (the countdown lock and its access code were removed).
 - The page cannot read email addresses (the `email` user scope is refused), so people are added by claude.ai account id. To find one: `ArtifactData list` the `visits` collection, then `ArtifactData profiles` on the ids (the person must have opened the ledger once). Add the id, rebuild, QA, publish.
 

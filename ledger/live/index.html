@@ -2111,6 +2111,17 @@ button.bt-recr{cursor:pointer}button.bt-recr:hover{border-color:var(--accent)}
 .modal .foot.bt-foot button.ibtn:not(.primary):hover{border-color:var(--accent);color:var(--accent-strong)}
 .modal .foot.bt-foot button.ibtn.primary:disabled{opacity:.45;cursor:not-allowed}
 .bt-p{font-size:12.5px;color:var(--muted);line-height:1.5;max-width:72ch}
+
+/* ===== Definitions (Method & sources, 6 Oct 2026) ===== */
+.defs{margin-bottom:0}
+.def{border-top:1px solid var(--line2);padding-top:12px;margin-top:12px;border-radius:8px;transition:box-shadow .3s,background .3s}
+.defs .note+.def{border-top:0;margin-top:4px;padding-top:4px}
+.def:focus{outline:none}
+.def-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.def-h h4{margin:0;font-size:14px;color:var(--head)}
+.def-p{margin:6px 0 0;font-size:13px;color:var(--ink2)}
+.def-kv{margin-top:8px}
+.def.def-hit{background:var(--accent-soft);box-shadow:0 0 0 6px var(--accent-soft)}
 </style>
 
 <div class="wrap">
@@ -2152,10 +2163,10 @@ button.bt-recr{cursor:pointer}button.bt-recr:hover{border-color:var(--accent)}
       <button class="tab" role="tab" data-tab="bugs" aria-selected="false">Bugs</button>
       <button class="tab" role="tab" data-tab="incidents" aria-selected="false">Incidents</button>
     </span>
-    <span class="tgrp" id="tg-how" hidden><span class="tgl">Settings</span>
-      <button class="tab" role="tab" data-tab="logic" aria-selected="false">Rules</button>
+    <span class="tgrp" id="tg-how"><span class="tgl">Settings</span>
+      <button class="tab" role="tab" data-tab="logic" aria-selected="false" data-how hidden>Rules</button>
       <button class="tab" role="tab" data-tab="method" aria-selected="false">Method &amp; sources</button>
-      <button class="tab" role="tab" data-tab="refresh" aria-selected="false">Sync &amp; logs</button>
+      <button class="tab" role="tab" data-tab="refresh" aria-selected="false" data-how hidden>Sync &amp; logs</button>
     </span>
   </nav>
 
@@ -2262,7 +2273,7 @@ button.bt-recr{cursor:pointer}button.bt-recr:hover{border-color:var(--accent)}
 
   <!-- DEMAND -->
   <section class="panel" id="panel-demand" role="tabpanel" hidden>
-    <details class="about"><summary><span class="ib" aria-hidden="true">i</span>How to read this</summary><div class="banner"><span class="ic">1,781</span><span><b>Everything customers are asking for, in one place.</b> The Product Demand Map inside the ledger: Jira feature requests (every status except Rejected), open stories and Confluence FIS intake pages, grouped into needs so one need counts once however many tickets it has, with the Sales Tier of every customer asking and what the knowledge base says is already built. Search in your own words; <b>Ask AI</b> has Claude read the closest 30 and say which are the same need. The same search runs inside <b>Log a new work item</b>, so a request is checked before it is logged. No priority score yet: needs are ranked by tier signal (T1 8 · T2 4 · T3 2 · T4 1 per distinct customer).</span></div></details>
+    <details class="about"><summary><span class="ib" aria-hidden="true">i</span>How to read this</summary><div class="banner"><span class="ic">1,781</span><span><b>Everything customers are asking for, in one place.</b> The Product Demand Map inside the ledger: Jira feature requests (every status except Rejected), open stories and Confluence FIS intake pages, grouped into needs so one need counts once however many tickets it has, with the Sales Tier of every customer asking and what the knowledge base says is already built. Search in your own words; <b>Ask AI</b> has Claude read the closest 30 and say which are the same need. The same search runs inside <b>Log a new work item</b>, so a request is checked before it is logged. No priority score yet: needs are ranked by tier signal, defined in <button type="button" class="linkbtn" data-def="signal">Method &amp; sources</button>.</span></div></details>
     <div id="dm-host"></div>
   </section>
 
@@ -2461,7 +2472,25 @@ button.bt-recr{cursor:pointer}button.bt-recr:hover{border-color:var(--accent)}
 
   <!-- METHOD -->
   <section class="panel" id="panel-method" role="tabpanel" hidden>
-    <div class="grid two">
+    <div class="card defs" id="defs">
+      <h3>Definitions</h3>
+      <div class="note">What a number on this page means, written once. Other tabs link here instead of repeating the rule. A new term gets its own entry below.</div>
+      <div class="def" id="def-signal" tabindex="-1">
+        <div class="def-h"><h4>Demand signal</h4><span class="small">Used on Demand (the ranking, each need, the hover on a number) and in Beta (clients behind an item)</span></div>
+        <p class="def-p">Who is asking for a need, weighted by how valuable they are. It is not a priority score.</p>
+        <dl class="sx-kv def-kv">
+          <dt>Formula</dt><dd>The sum, over the distinct customers asking for the need, of their Sales Tier weight.</dd>
+          <dt>Weights</dt><dd id="def-signal-w">T1 8 · T2 4 · T3 2 · T4 1. A customer not on the ledger (no tier) adds 0.</dd>
+          <dt>Scale</dt><dd>Each tier weighs double the one below: one Tier 1 customer counts as much as two Tier 2s, four Tier 3s or eight Tier 4s.</dd>
+          <dt>Counting</dt><dd>A customer counts once per need, however many tickets they raised. Duplicates add tickets, not signal.</dd>
+          <dt>Ties</dt><dd>More tickets first, then the need&rsquo;s name.</dd>
+          <dt>Filters</dt><dd>Only tickets that pass the Demand filters count, so a need&rsquo;s signal can drop under a source, year or product filter.</dd>
+          <dt>Leaves out</dt><dd>Money, effort, urgency, how recent the asks are, and whether the need is already built.</dd>
+          <dt>Source</dt><dd>Sales Tier from Planhat; customers from the requests database (Reported by, Affected clients, Pipedrive id) and the names in the ticket text.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="grid two" style="margin-top:14px">
       <div class="card">
         <h3>How bugs move the Health Score</h3>
         <div class="note">Live in production, reviewed 14 Sep 2026. Score runs 0 to 10 and starts at 5.0. Recomputed nightly at 01:10 UTC by n8n from Jira EP, Hyve and IMP, written to four Planhat company fields.</div>
@@ -5276,9 +5305,9 @@ function renderHvBar(){
 // ----- tabs
 function showTab(t){
   const AC=window.EP_ACCESS||{ajay:false,checked:false};
-  if((t==='logic'||t==='method'||t==='refresh')&&!AC.how){
+  if((t==='logic'||t==='refresh')&&!AC.how){
     if(!AC.checked){ AC.want=t; t='overview'; }
-    else { uiToast('Rules, Method & sources and Sync & logs are private for now.'); return; } }
+    else { uiToast('Rules and Sync & logs are private for now.'); return; } }
   // a tab that no longer exists (the Timeline, removed 6 Oct 2026) or a mistyped link opens the Overview
   if(!document.getElementById('panel-'+t)) t='overview';
   document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===t)));
@@ -6908,20 +6937,21 @@ new MutationObserver(()=>{ if(TK_T) return; TK_T=requestAnimationFrame(()=>{ TK_
 const GATE={ok:false, uid:null, name:'', avatar:'', user:null, canWrite:null, done:false};
 window.GATE=GATE;
 
-// ===== Settings (was "How it works": Rules, Method & sources, Sync & logs) open only to Ajay and the Settings viewers. The Must-have ledger
-// was private too until its countdown ended; it opened to everyone on 30 Sep 2026 (owner) =====
+// ===== Settings (was "How it works"): Rules and Sync & logs open only to Ajay and the Settings viewers. Method & sources is read-only for
+// everyone since 6 Oct 2026 (owner: definitions are shared, never private). The Must-have ledger opened to everyone on 30 Sep 2026 =====
 // Ajay (ajay@expoplatform.com) is recognised as the artifact's owner, or by a claude.ai account id listed in EP_AJAY_IDS
 // (the organisation does not share emails with pages, so the email itself cannot be checked). This hides the views; it is
 // not a vault: the page source and logic.json still carry the rules.
 const EP_AJAY_IDS=[];
 var ACCESS={ajay:false, how:false, checked:false, want:null}; window.EP_ACCESS=ACCESS;
-// who else sees the whole Settings section (was How it works) (Rules, Method & sources, Sync & logs), by claude.ai account id (the page cannot read
+// who else sees the private Settings tabs (Rules, Sync & logs), by claude.ai account id (the page cannot read
 // email addresses). 30 Sep 2026, owner: Bartosz (bartosz@expoplatform.com).
 const EP_HOW_IDS=['u_0KCjQDtQxEOgVhmNzuV5SQ'];
-function isPrivateTab(t){ return t==='logic'||t==='method'||t==='refresh'; }
+function isPrivateTab(t){ return t==='logic'||t==='refresh'; }
 function applyAccess(){
   document.body.classList.toggle('ep-ajay',ACCESS.ajay);
-  const g=document.getElementById('tg-how'); if(g) g.hidden=!ACCESS.how;
+  // Method & sources is read-only for everyone since 6 Oct 2026; Rules and Sync & logs stay with Ajay and the Settings viewers
+  document.querySelectorAll('#tg-how [data-how]').forEach(b=>{ b.hidden=!ACCESS.how; });
   const cur=document.querySelector('.tab[aria-selected="true"]');
   if(ACCESS.how&&ACCESS.want){ const w=ACCESS.want; ACCESS.want=null; showTab(w); }
   else if(cur&&isPrivateTab(cur.dataset.tab)&&!ACCESS.how) showTab('overview');
@@ -6930,6 +6960,19 @@ function applyAccess(){
   try{ if(typeof ppRender==='function') ppRender(); }catch(e){}
 }
 window.showTab=showTab; window.applyAccess=applyAccess; window.EP_HOW_IDS=EP_HOW_IDS;
+// Definitions (Method & sources, 6 Oct 2026): a number is defined once there; any [data-def] link closes what is open and lands on its entry
+function openDef(k){
+  try{ if(typeof btClose==='function') btClose(); }catch(e){}
+  if(modal.hasAttribute('open')) closeModal();
+  const c=document.getElementById('c360'); if(c&&!c.hidden) closeC360();
+  showTab('method');
+  setTimeout(()=>{ const e=document.getElementById('def-'+k); if(!e) return;
+    const bar=document.querySelector('.tabs'), below=bar?bar.getBoundingClientRect().bottom:0; // the tab bar is sticky: land just under it
+    window.scrollTo(0,Math.max(0,scrollY+e.getBoundingClientRect().top-below-12)); try{ e.focus({preventScroll:true}); }catch(_){}
+    e.classList.add('def-hit'); setTimeout(()=>e.classList.remove('def-hit'),1800); },30);
+}
+window.openDef=openDef;
+document.addEventListener('click',e=>{ const b=e.target.closest('[data-def]'); if(!b) return; e.preventDefault(); e.stopPropagation(); openDef(b.dataset.def); },true);
 const TAB_ID=Math.random().toString(36).slice(2,8);
 function gateEl(tag,cls,text){ const e=document.createElement(tag); if(cls)e.className=cls; if(text!=null)e.textContent=text; return e; }
 async function gateBoot(){
@@ -9406,7 +9449,10 @@ const dmE = uiEsc;
 const DM_SRC={F:'Feature request',S:'Open story',I:'FIS intake'};
 const DM_TW={1:8,2:4,3:2,4:1};
 // the signal (intel/SPEC.md, Tier signal): Σ over the DISTINCT customers asking of their tier weight. Who is asking, not a priority score.
-const DM_SIG_TIP='Signal: each distinct customer asking adds its Sales Tier weight (T1 8 · T2 4 · T3 2 · T4 1; not on the ledger 0). Who is asking, not a priority score.';
+const DM_SIG_TIP='Signal: who is asking, weighted by Sales Tier. Not a priority score. The rule is in Method & sources, Definitions.';
+// the one link to the definition (Method & sources → Definitions → Demand signal); the weights there are written from DM_TW
+const dmDefLink=(txt)=>`<button type="button" class="linkbtn" data-def="signal">${txt||'How the signal is worked out'}</button>`;
+(function(){ const e=document.getElementById('def-signal-w'); if(e) e.textContent=[1,2,3,4].map(t=>'T'+t+' '+DM_TW[t]).join(' · ')+'. A customer not on the ledger (no tier) adds 0.'; })();
 function dmSigParts(cus,max){ const named=cus.filter(x=>DM_TW[x.t]), rest=cus.length-named.length, show=named.slice(0,max||99);
   const sum=named.reduce((a,x)=>a+DM_TW[x.t],0);
   return {sum, html:(show.map(x=>`<span class="dm-sp">${dmE(x.n)} <span class="dm-spt t${x.t}">T${x.t} = ${DM_TW[x.t]}</span></span>`).join('<span class="dm-plus">+</span>')||'<span class="small">No customer on the ledger</span>')+
@@ -9415,17 +9461,10 @@ function dmSigParts(cus,max){ const named=cus.filter(x=>DM_TW[x.t]), rest=cus.le
 function dmSigHow(){
   const top=DM.needs[0], filt=Object.values(DM.f).some(Boolean);
   const ex=top?dmSigParts(top.cu,6):null;
-  return `<details class="about dm-sighow"${DM.sigOpen?' open':''}><summary><span class="ib" aria-hidden="true">i</span>What is the signal score, and how is it worked out?</summary><div class="dm-sigbody">
-    <p><b>The signal says who is asking for a need, weighted by how valuable they are.</b> Every distinct customer asking adds the weight of their Sales Tier (from Planhat); the need's signal is the total.</p>
-    <div class="dm-sigw">${[1,2,3,4].map(t=>`<span class="dm-sigwt"><span class="tierpill t${t<=2?t:''}">T${t}</span> adds <b>${DM_TW[t]}</b></span>`).join('')}<span class="dm-sigwt"><span class="tierpill na">—</span> not on the ledger adds <b>0</b></span></div>
-    <div class="small">Each tier counts double the one below, so one Tier 1 customer (8) weighs as much as two Tier 2s, four Tier 3s or eight Tier 4s.</div>
+  return `<details class="about dm-sighow"${DM.sigOpen?' open':''}><summary><span class="ib" aria-hidden="true">i</span>What is the signal score?</summary><div class="dm-sigbody">
+    <p><b>The signal says who is asking for a need, weighted by each customer&rsquo;s Sales Tier.</b> It is not a priority score. The rule, with the weights, is defined once in Method &amp; sources: ${dmDefLink('Definitions, Demand signal')}.</p>
     ${ex?`<div class="dm-sigex"><div class="small">Worked example: the top need${filt?' with your filters':''}, <b>${dmE(top.c.name)}</b></div><div class="dm-sigsum">${ex.html}</div></div>`:''}
-    <ul class="dm-sigl">
-      <li><b>A customer counts once per need</b>, however many tickets they raised for it; duplicates add tickets, not signal.</li>
-      <li><b>Ties</b> are broken by the number of tickets, then by name.</li>
-      <li><b>It follows your filters</b>: with a source, year or product filter on, only the matching tickets count, so a need's signal can drop.</li>
-      <li><b>It is not a priority score.</b> It ignores money, effort, urgency, how recent the asks are and whether the need is already built (the <i>Built today</i> column shows that). The priority score comes later with its own criteria.</li>
-    </ul></div></details>`;
+    </div></details>`;
 }
 const DM_BUILT={done:'Already built',part:'Partially built',none:'Nothing built'};
 const DM_STOP=new Set('a an and are as at be but by can for from has have how i if in into is it its of on or our so that the their them then there these they this to too us was we were what when where which who why will with would should could able allow allows need needs want wants add adding make using use new also only just more than via per each all any other some like get set see show'.split(' '));
@@ -9610,7 +9649,7 @@ function dmRankHtml(){
   return `<div class="dm-rank"><div class="card"><h3>Needs by product and the best tier asking</h3><div class="note">Each need counts once, at the best Sales Tier among its customers. Click a cell to filter.</div>
     <div class="dm-heat"><div class="dm-hr hd"><span></span>${cols.map(c=>`<span>${c==='Not in ledger'?'Not in ledger':c}</span>`).join('')}</div>
     ${rowsP.map(p=>`<div class="dm-hr"><span class="dm-hp">${dmE(p)}</span>${cols.map(c=>{const v=grid[p][c]||0; const tn=c[0]==='T'?c[1]:0; return `<button type="button" class="dm-hc" data-dmheat="${dmE(p)}|${c}" ${v?'':'disabled'} style="--a:${v/max};--c:${tn?'var(--tier'+tn+')':'var(--tier0)'}">${v||''}</button>`;}).join('')}</div>`).join('')}</div></div>
-    <div class="card"><h3>Where Tier 1 is asking</h3><div class="note">Ranked by signal: each distinct customer adds T1 8 · T2 4 · T3 2 · T4 1, then tickets break ties. Hover a number for how it adds up, or read <i>What is the signal score</i> above.</div>
+    <div class="card"><h3>Where Tier 1 is asking</h3><div class="note">Ranked by signal, the tier-weighted count of customers asking. Hover a number for how it adds up. ${dmDefLink()}.</div>
     <ol class="dm-rl">${top.map(x=>`<li><button type="button" class="dm-rr" data-dmneed="${dmE(x.c.id)}"><span class="dm-rn">${x.rank}</span><span class="dm-rm"><b>${dmE(x.c.name)}</b><span class="small">${dmE(x.c.product)} · ${x.n} ticket${x.n===1?'':'s'}${x.dup?' · '+x.dup+' duplicate'+(x.dup===1?'':'s'):''} · ${x.cu.filter(c=>c.t===1).slice(0,3).map(c=>dmE(c.n)).join(', ')||'no Tier 1'}</span></span>${dmTierBars(x)}<span class="dm-b ${x.bs}">${DM_BUILT[x.bs]}</span><span class="dm-sig" title="${dmE(x.cu.filter(c=>DM_TW[c.t]).map(c=>c.n+' T'+c.t+' '+DM_TW[c.t]).join(' + ')+' = '+x.sig)}">${x.sig}</span></button></li>`).join('')||'<li class="empty">No need matches these filters.</li>'}</ol></div></div>`;
 }
 function dmNeedsHtml(){
@@ -9678,7 +9717,7 @@ function dmOpenNeed(id){
       <div class="seclabel">Signal<span class="c">${dmSigParts(cus.map(x=>({n:x[0],t:x[1]}))).sum}</span></div>
       <div class="dm-sigsum sm">${dmSigParts(cus.map(x=>({n:x[0],t:x[1]}))).html}</div>
       ${(()=>{ const f=DM.needs.find(x=>x.c.id===id), all=dmSigParts(cus.map(x=>({n:x[0],t:x[1]}))).sum; return f&&f.sig!==all?`<div class="small">With your filters it reads ${f.sig}: only the matching tickets count.</div>`:''; })()}
-      <div class="small dm-signote">Each distinct customer adds its tier weight: T1 8 · T2 4 · T3 2 · T4 1. Who is asking, not a priority score.</div>
+      <div class="small dm-signote">Who is asking, not a priority score. ${dmDefLink()}.</div>
       ${window.btNeedVoicesHtml?window.btNeedVoicesHtml(id):''}
       <div class="seclabel">Customers asking<span class="c">${cus.length}</span></div>
       <div class="small">${cus.map(x=>dmTier(x[1])+' '+(x[2]?`<button type="button" class="linkbtn" data-c360="${dmE(x[2])}">${dmE(x[0])}</button>`:dmE(x[0]))).join('<br>')||'none named'}</div>
@@ -10609,7 +10648,7 @@ const OB_ROLES=[['sales','Sales'],['tam','TAM / customer success'],['pe','Produc
 const OB_LAND={sales:'overview',tam:'overview',pe:'pipeline',delivery:'delivery',lead:'overview'};
 // timeline stays in the names: older feedback, visits and History entries still point at it
 const OB_TABN={overview:'Overview',ledger:'Clients',timeline:'Timeline',pipeline:'Requests',demand:'Demand',delivery:'Delivery',bugs:'Bugs',incidents:'Incidents',logic:'Rules',method:'Method & sources',refresh:'Sync & logs'};
-const OB_PRIV=new Set(['logic','method','refresh']);
+const OB_PRIV=new Set(['logic','refresh']);
 const obE=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 const obAjay=()=>!!(window.EP_ACCESS&&window.EP_ACCESS.ajay);
 const obHow=()=>!!(window.EP_ACCESS&&window.EP_ACCESS.how);
@@ -10638,7 +10677,7 @@ const OB_TOURS={
   bugs:[['#b-pr','Filter bugs','By priority, client, team or status.'],['#t-bugs','Sort','Click a column heading to sort.']],
   incidents:[['#chart-inc','Incidents by month','Production incidents from Jira IMP, kept current by the refresh.'],['#t-inc','Every incident','Newest first, with the client, event and status.']],
   logic:[['#lg-group','The rules','Every rule behind the page, grouped. Only you see this tab.']],
-  method:[['#t-model','How health is scored','The model and its sources. Only you see this tab.']],
+  method:[['#defs','Definitions','What a number on this page means, defined once. Other tabs link here instead of repeating the rule.'],['#t-model','How health is scored','The model and its sources. Everyone can read this tab; nothing on it can be edited.']],
   refresh:[['#sl-sub','Two views','Data refresh keeps every source current; History lists every change anyone made, with who and when.'],['#rf-host .rf-tab','Every source','How fresh each one is, and a pull of only what changed.'],['#rf-host [data-rfall]','Pull all deltas','Pull every source the page can reach in one go.']]};
 const OB_WHAT={overview:'Today at a glance: which clients have a show coming, how risky it looks, and what is open for them.',
   ledger:'Every client, with health, open problems and promises. Click a client for everything about them.',
@@ -10646,7 +10685,7 @@ const OB_WHAT={overview:'Today at a glance: which clients have a show coming, ho
   demand:'What clients are asking for, grouped into needs, so the same request is not logged twice.',
   delivery:'What was built and is being built, by client, month and product area.',
   bugs:'Open client bugs from Jira EP, with priority and age.', incidents:'Production incidents from Jira IMP.',
-  logic:'The rules and thresholds behind every number. Private to you.', method:'How the health score and the sources work. Private to you.', refresh:'Sync & logs: freshness of every source with delta pulls (Data refresh), and every change anyone made, with who and when (History). Private to you.'};
+  logic:'The rules and thresholds behind every number. Private to you.', method:'Definitions of the numbers (the Demand signal first), how the health score works, and every source. Read-only, open to everyone.', refresh:'Sync & logs: freshness of every source with delta pulls (Data refresh), and every change anyone made, with who and when (History). Private to you.'};
 const OB_GLOSS=[['Tier','Sales Tier from Planhat: 1 is the most valuable client, 4 the least.'],['Health','Planhat health score, 0 to 10; bugs and incidents lower it.'],
   ['Act now · Watch · No flag · Clear','The risk before a client’s next show: Act now means something open trips a risk rule; Clear means nothing is open.'],
   ['Show','A client event from Jira OP, with its dates.'],['Must-have ledger','What we promised a client, with the month it should land.'],
@@ -10658,7 +10697,7 @@ const OB_GLOSS=[['Tier','Sales Tier from Planhat: 1 is the most valuable client,
   ['Needs details','An item sent back to the requester with questions; it keeps its place and returns to the same step.'],
   ['On the ledger · not scheduled','Approved and ranked, but not yet a commitment to build. Only the product-business meeting picks items up.'],
   ['Need','A group of requests asking for the same thing, in the demand map.'],
-  ['Signal (Demand)','Who is asking for a need: every distinct customer adds its Sales Tier weight, T1 8 · T2 4 · T3 2 · T4 1 (not on the ledger 0). A customer counts once however many tickets they raised. It follows the Demand filters and is not a priority score.'],['Incident','A production problem logged in Jira IMP.'],
+  ['Signal (Demand)','Who is asking for a need, weighted by each customer\'s Sales Tier. Not a priority score. The full rule, with the weights, is in Method & sources under Definitions.'],['Incident','A production problem logged in Jira IMP.'],
   ['Bug priority','Urgent, High, Medium, Low, from Jira EP.'],['Hyve dedicated team','A team working only for Hyve; its tickets live in Jira HV.'],
   ['Delta refresh','Pulling only what changed since the last pull, never everything again.'],
   ['Feedback','Happy, Sad or Want: tell Ajay what works, what does not and what you would like. Only Ajay sees it; replies come back in the Guide, under Feedback.']];
@@ -10829,7 +10868,7 @@ function obCorpus(){
   lines.push('LOGGING (the form, for reference): only raised by, title, client (or Platform), product area ("Not sure" allowed) and the problem are needed to log. Other fields are needed before signing and can be handed to a colleague with "Don\'t know? Hand this to a colleague"; they fill them in from the item with "Fill in the details". Search the demand map first (step 0) so the same need is not logged twice.');
   lines.push('FEEDBACK: the Feedback button in the header (or the Guide, Feedback) sends Ajay a Happy, Sad or Want note about the page. Only Ajay sees it; Ajay can reply, and replies show in the Guide under Feedback.');
   lines.push('DATA: Jira bugs and stories refresh at least every 4 hours for everyone; incidents and events refresh on visits too.');
-  if(!obHow()) lines.push('PRIVATE: Rules, Method & sources and Sync & logs (the Settings tabs) are open only to Ajay and the Settings viewers; say so if asked and do not describe their rules. The Must-have ledger is open to everyone.');
+  if(!obHow()) lines.push('PRIVATE: Rules and Sync & logs are open only to Ajay and the Settings viewers; say so if asked and do not describe their rules. Method & sources (definitions, the health model, the sources) and the Must-have ledger are open to everyone.');
   return lines.join('\n');
 }
 async function obAsk(){
@@ -11938,7 +11977,7 @@ window.btEntryHtml=r=>{
       ${b.question?`<p class="small"><b>${btE(b.question)}</b><br>${b.answer?btE(b.answer):'<span class="sx-dim">not answered yet</span>'}</p>`:''}
       ${sales?`<div class="small">Value handed to <b>${btE(feName(sales))}</b></div>`:''}
     </div><div>
-      <div class="bt-stats"><div><b>${cb.list.length}</b><span>clients behind it</span><span class="small">${btE(cb.list.slice(0,4).map(x=>x[0]).join(', '))}${cb.list.length>4?' +'+(cb.list.length-4):''}</span></div><div><b>${cb.signal}</b><span>signal</span><span class="small">T1 8 · T2 4 · T3 2 · T4 1</span></div></div>
+      <div class="bt-stats"><div><b>${cb.list.length}</b><span>clients behind it</span><span class="small">${btE(cb.list.slice(0,4).map(x=>x[0]).join(', '))}${cb.list.length>4?' +'+(cb.list.length-4):''}</span></div><div><b>${cb.signal}</b><span>signal</span><span class="small"><button type="button" class="linkbtn" data-def="signal">tier-weighted</button></span></div></div>
       <div class="bt-sl">Linked<span class="c">${links.length}</span></div>
       ${links.length?links.map(l=>{ const m=btFind(l.k+':'+l.id); return `<div class="bt-lrow"><span class="bt-mm">${m?btCandTitle(m)+' '+btKindChip(m):btE(l.name||l.id)}</span><span class="bt-lact"><span class="small">${btE(BT_REL[l.rel]||l.rel)}</span>${(how||mine)?`<button type="button" class="linkbtn" data-btiunlink="${btE(l.k+':'+l.id)}">Unlink</button>`:''}</span></div>`; }).join(''):'<div class="small">Nothing linked. Link the needs this work delivers, so they close together.</div>'}
       ${follows.length?`<div class="bt-sl">Clients following it</div><div class="small">${btE(follows.map(x=>btClientsTxt(x.clients)).join(', '))}</div>`:''}

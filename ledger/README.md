@@ -15,7 +15,8 @@ This folder holds the whole project. Open it in Claude Code and read `CLAUDE.md`
 | Requests | The Feature ledger (work items, their flow, sample walkthrough, hand-offs; logging new items with Claude is in Beta for the Settings viewers) and the Must-have ledger |
 | Demand | The Product Demand Map with instant and AI search |
 | Delivery, Bugs, Incidents | What is built and being built; open client bugs; production incidents |
-| Rules, Method & sources, Sync & logs | Settings: Ajay and Bartosz |
+| Method & sources | Settings: everyone, read-only (Definitions first, then the health model and the sources) |
+| Rules, Sync & logs | Settings: Ajay and Bartosz |
 | Feedback (header button) | Everyone: Happy / Sad / Want notes to Ajay, with replies. Ajay: the Feedback inbox and Roadmap |
 
 Everyone gets onboarding (a welcome card, a tour for every tab, one-time hints) and the Guide (tours, glossary, Ask, personal settings such as My clients).

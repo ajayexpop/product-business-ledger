@@ -39,10 +39,10 @@
       <button class="tab" role="tab" data-tab="bugs" aria-selected="false">Bugs</button>
       <button class="tab" role="tab" data-tab="incidents" aria-selected="false">Incidents</button>
     </span>
-    <span class="tgrp" id="tg-how" hidden><span class="tgl">Settings</span>
-      <button class="tab" role="tab" data-tab="logic" aria-selected="false">Rules</button>
+    <span class="tgrp" id="tg-how"><span class="tgl">Settings</span>
+      <button class="tab" role="tab" data-tab="logic" aria-selected="false" data-how hidden>Rules</button>
       <button class="tab" role="tab" data-tab="method" aria-selected="false">Method &amp; sources</button>
-      <button class="tab" role="tab" data-tab="refresh" aria-selected="false">Sync &amp; logs</button>
+      <button class="tab" role="tab" data-tab="refresh" aria-selected="false" data-how hidden>Sync &amp; logs</button>
     </span>
   </nav>
 
@@ -149,7 +149,7 @@
 
   <!-- DEMAND -->
   <section class="panel" id="panel-demand" role="tabpanel" hidden>
-    <details class="about"><summary><span class="ib" aria-hidden="true">i</span>How to read this</summary><div class="banner"><span class="ic">1,781</span><span><b>Everything customers are asking for, in one place.</b> The Product Demand Map inside the ledger: Jira feature requests (every status except Rejected), open stories and Confluence FIS intake pages, grouped into needs so one need counts once however many tickets it has, with the Sales Tier of every customer asking and what the knowledge base says is already built. Search in your own words; <b>Ask AI</b> has Claude read the closest 30 and say which are the same need. The same search runs inside <b>Log a new work item</b>, so a request is checked before it is logged. No priority score yet: needs are ranked by tier signal (T1 8 · T2 4 · T3 2 · T4 1 per distinct customer).</span></div></details>
+    <details class="about"><summary><span class="ib" aria-hidden="true">i</span>How to read this</summary><div class="banner"><span class="ic">1,781</span><span><b>Everything customers are asking for, in one place.</b> The Product Demand Map inside the ledger: Jira feature requests (every status except Rejected), open stories and Confluence FIS intake pages, grouped into needs so one need counts once however many tickets it has, with the Sales Tier of every customer asking and what the knowledge base says is already built. Search in your own words; <b>Ask AI</b> has Claude read the closest 30 and say which are the same need. The same search runs inside <b>Log a new work item</b>, so a request is checked before it is logged. No priority score yet: needs are ranked by tier signal, defined in <button type="button" class="linkbtn" data-def="signal">Method &amp; sources</button>.</span></div></details>
     <div id="dm-host"></div>
   </section>
 
@@ -348,7 +348,25 @@
 
   <!-- METHOD -->
   <section class="panel" id="panel-method" role="tabpanel" hidden>
-    <div class="grid two">
+    <div class="card defs" id="defs">
+      <h3>Definitions</h3>
+      <div class="note">What a number on this page means, written once. Other tabs link here instead of repeating the rule. A new term gets its own entry below.</div>
+      <div class="def" id="def-signal" tabindex="-1">
+        <div class="def-h"><h4>Demand signal</h4><span class="small">Used on Demand (the ranking, each need, the hover on a number) and in Beta (clients behind an item)</span></div>
+        <p class="def-p">Who is asking for a need, weighted by how valuable they are. It is not a priority score.</p>
+        <dl class="sx-kv def-kv">
+          <dt>Formula</dt><dd>The sum, over the distinct customers asking for the need, of their Sales Tier weight.</dd>
+          <dt>Weights</dt><dd id="def-signal-w">T1 8 · T2 4 · T3 2 · T4 1. A customer not on the ledger (no tier) adds 0.</dd>
+          <dt>Scale</dt><dd>Each tier weighs double the one below: one Tier 1 customer counts as much as two Tier 2s, four Tier 3s or eight Tier 4s.</dd>
+          <dt>Counting</dt><dd>A customer counts once per need, however many tickets they raised. Duplicates add tickets, not signal.</dd>
+          <dt>Ties</dt><dd>More tickets first, then the need&rsquo;s name.</dd>
+          <dt>Filters</dt><dd>Only tickets that pass the Demand filters count, so a need&rsquo;s signal can drop under a source, year or product filter.</dd>
+          <dt>Leaves out</dt><dd>Money, effort, urgency, how recent the asks are, and whether the need is already built.</dd>
+          <dt>Source</dt><dd>Sales Tier from Planhat; customers from the requests database (Reported by, Affected clients, Pipedrive id) and the names in the ticket text.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="grid two" style="margin-top:14px">
       <div class="card">
         <h3>How bugs move the Health Score</h3>
         <div class="note">Live in production, reviewed 14 Sep 2026. Score runs 0 to 10 and starts at 5.0. Recomputed nightly at 01:10 UTC by n8n from Jira EP, Hyve and IMP, written to four Planhat company fields.</div>

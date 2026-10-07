@@ -4,6 +4,19 @@ The ledger at **https://claude.ai/artifact/WS7mJGdC1y2RzsPTScKu6d**. Versions 1 
 "preview" of the redesign (a separate artifact beside the old ledger, with its own database). On 28 Sep 2026 it became the
 ledger (version 13) and the old link got a "moved" page.
 
+## Version 23 (6 Oct 2026): published, 1791345418-8fc4 — Method & sources open to everyone; Definitions
+**Method & sources** is now read-only for every signed-in viewer. Rules and Sync & logs stay with Ajay and the Settings viewers,
+so the Settings group shows one tab to everyone else and three to them. A **Definitions** section opens the tab, one entry per
+term; the first is **Demand signal** (formula, weights, scale, counting, ties, filters, what it leaves out, source). Ilaria's
+phase 4 review asked for definitions on a shared Sources page, never in a private tab, and Ajay agreed on 6 Oct. The weights in
+the entry are written from `DM_TW`, the same constant the Demand ranking uses. The Demand tab no longer restates the weights:
+the explainer (now "What is the signal score?") keeps its worked example and links to the entry, as do the Where Tier 1 is
+asking note, each need's pop-up, the How to read this banner, the glossary and Beta's signal figure. A `data-def` link closes
+what is open, switches tab and lands the entry under the sticky tab bar. The signal itself is unchanged: `dmDerive`,
+`dmSigParts`, `btVoiceCus` and `demand.json` are byte-identical to v22, and the top need still reads 59. QA: someone other than
+Ajay sees Method & sources but not Rules or Sync & logs, the weights match `DM_TW`, Demand carries no copy of them, and the
+links from the explainer and from a need land on the entry.
+
 ## Version 22 (6 Oct 2026): published, 1791343920-6e67 — Timeline tab removed
 The **Timeline** tab is gone from Client health, which now holds Overview and Clients. Its "Delivering or firefighting, month by
 month" chart went with it. Ilaria's phase 4 review (feedback of 1 Oct) marked the tab as cut, and Ajay deprecated the chart on
