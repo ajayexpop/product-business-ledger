@@ -4,6 +4,15 @@ The ledger at **https://claude.ai/artifact/WS7mJGdC1y2RzsPTScKu6d**. Versions 1 
 "preview" of the redesign (a separate artifact beside the old ledger, with its own database). On 28 Sep 2026 it became the
 ledger (version 13) and the old link got a "moved" page.
 
+## Version 22 (6 Oct 2026): published, 1791343920-6e67 — Timeline tab removed
+The **Timeline** tab is gone from Client health, which now holds Overview and Clients. Its "Delivering or firefighting, month by
+month" chart went with it. Ilaria's phase 4 review (feedback of 1 Oct) marked the tab as cut, and Ajay deprecated the chart on
+6 Oct. The code is kept in `deprecated/timeline/` with a README that says how to put it back. `TIERS` and `tlRisk` stay in
+`main.js` because Delivery and the Overview use them. Any tab without a panel, such as an old `#timeline` link or a saved last tab,
+now opens the Overview. The "Shows in 90 days" KPI opens Clients. The Guide, the "My clients" text and the Jira OP source card
+no longer mention the Timeline. QA: the Timeline checks moved to the deprecated folder; new checks confirm the tab is gone and
+that an old link lands on the Overview, and "My clients" is checked on the Clients count.
+
 ## Version 21 (30 Sep 2026): published, 1790786519-79a4 — Beta: logging with Claude; Must-have ledger open to everyone
 **Beta** replaces the logging placeholder for the Settings viewers (Ajay, Bartosz); everyone else still sees the card, now marked
 *In testing*. Two ways in, one window: **Quick share** (clients, then Speak or type / Chat snippet / Call recording; Claude fills in

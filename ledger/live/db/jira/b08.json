@@ -1,6 +1,22 @@
 {
-  "at": "2026-09-28T12:11:00Z",
+  "at": "2026-10-06T19:55:51Z",
   "r": {
+    "EP-52843": {
+      "ac": [],
+      "at": "2026-10-06T10:19:38Z",
+      "cr": "2026-05-05",
+      "k": "EP-52843",
+      "p": "Medium",
+      "rb": [],
+      "rej": false,
+      "s": "API V3 - [PATCH] /api/v3/events/{eventId}/products/{productId} (Update event-scoped product data)",
+      "sc": "indeterminate",
+      "scd": "2026-08-18",
+      "st": "Ready for release",
+      "t": "S",
+      "team": "Integration team",
+      "up": "2026-10-06T08:15"
+    },
     "EP-53448": {
       "ac": [],
       "at": "2026-09-26T03:45:08Z",
@@ -19,7 +35,7 @@
     },
     "EP-54081": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-06-02",
       "k": "EP-54081",
       "p": "High",
@@ -35,7 +51,7 @@
     },
     "EP-54658": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-06-18",
       "k": "EP-54658",
       "p": "Medium",
@@ -51,7 +67,7 @@
     },
     "EP-54669": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-06-18",
       "k": "EP-54669",
       "p": "Medium",
@@ -67,7 +83,7 @@
     },
     "EP-55082": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-07-06",
       "k": "EP-55082",
       "p": "High",
@@ -117,9 +133,27 @@
       "team": "Mobile team",
       "up": "2026-09-28T09:14"
     },
+    "EP-55835": {
+      "ac": [],
+      "at": "2026-09-30T16:35:10Z",
+      "cr": "2026-08-03",
+      "gone": false,
+      "k": "EP-55835",
+      "p": "Medium",
+      "rb": [
+        "Tampere Fairs"
+      ],
+      "s": "[Alihankinta] Flashing on Chrome for website homepage",
+      "sc": "new",
+      "scd": "2026-08-03",
+      "st": "Ready to start",
+      "t": "B",
+      "team": "Visitor team",
+      "up": "2026-09-30T13:04"
+    },
     "EP-55912": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-06T19:55:51Z",
       "cr": "2026-08-05",
       "k": "EP-55912",
       "p": "Medium",
@@ -128,10 +162,10 @@
       "s": "AutoUpdate: SyncRunOptions — force and dry-run flags for manual sync triggers",
       "sc": "indeterminate",
       "scd": "2026-09-09",
-      "st": "In testing",
+      "st": "Ready for release",
       "t": "S",
       "team": "Integration team",
-      "up": "2026-09-25T14:10"
+      "up": "2026-10-06T14:03"
     },
     "EP-56418": {
       "ac": [],
@@ -153,7 +187,7 @@
     },
     "EP-56836": {
       "ac": [],
-      "at": "2026-09-26T07:45:47Z",
+      "at": "2026-09-28T16:56:01Z",
       "cr": "2026-08-31",
       "k": "EP-56836",
       "p": "Medium",
@@ -167,11 +201,11 @@
       "st": "Done",
       "t": "S",
       "team": "Visitor team",
-      "up": "2026-09-26T06:01"
+      "up": "2026-09-28T13:42"
     },
     "EP-56869": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-06T14:20:26Z",
       "cr": "2026-09-01",
       "k": "EP-56869",
       "p": "Medium",
@@ -185,27 +219,45 @@
       "st": "In Progress",
       "t": "S",
       "team": "Integration team",
-      "up": "2026-09-24T16:38"
+      "up": "2026-10-06T09:44"
+    },
+    "EP-56924": {
+      "ac": [],
+      "at": "2026-10-05T10:22:11Z",
+      "cr": "2026-09-02",
+      "k": "EP-56924",
+      "p": "Medium",
+      "rb": [
+        "INTERNAL"
+      ],
+      "rej": false,
+      "s": "Story 7: Build UI from approved prototype (pages 01–05)",
+      "sc": "done",
+      "scd": "2026-10-05",
+      "st": "Done",
+      "t": "S",
+      "team": "Data Science",
+      "up": "2026-10-05T09:34"
     },
     "EP-57150": {
       "ac": [
         "DLG"
       ],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-09-30T11:34:40Z",
       "cr": "2026-09-09",
-      "gone": false,
+      "gone": true,
       "k": "EP-57150",
       "p": "High",
       "rb": [
         "DLG"
       ],
       "s": "DLG: the app shows the language info in EN on DE sessions page",
-      "sc": "indeterminate",
-      "scd": "2026-09-23",
-      "st": "Ready for release",
+      "sc": "done",
+      "scd": "2026-09-28",
+      "st": "Done",
       "t": "B",
       "team": "Mobile team",
-      "up": "2026-09-25T16:09"
+      "up": "2026-09-30T09:00"
     },
     "EP-57183": {
       "ac": [
@@ -226,6 +278,24 @@
       "t": "B",
       "team": "Mobile team",
       "up": "2026-09-24T13:55"
+    },
+    "EP-57749": {
+      "ac": [],
+      "at": "2026-10-06T19:55:51Z",
+      "cr": "2026-09-23",
+      "k": "EP-57749",
+      "p": "Medium",
+      "rb": [
+        "INTERNAL"
+      ],
+      "rej": false,
+      "s": "[Reg-OT][BE][Payments][Part 2.1][Split1] Purchasing: bring invoice and cumulative discounts back, and close the Part 2 review items",
+      "sc": "indeterminate",
+      "scd": "2026-10-02",
+      "st": "Ready for testing",
+      "t": "S",
+      "team": "Organizer team",
+      "up": "2026-10-06T15:38"
     }
   }
 }

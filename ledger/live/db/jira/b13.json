@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-28T12:11:00Z",
+  "at": "2026-10-06T19:55:51Z",
   "r": {
     "EP-47332": {
       "ac": [],
@@ -21,7 +21,7 @@
     },
     "EP-50109": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-03-06",
       "k": "EP-50109",
       "p": "Medium",
@@ -53,7 +53,7 @@
     },
     "EP-51704": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-04-13",
       "k": "EP-51704",
       "p": "Medium",
@@ -119,7 +119,7 @@
     },
     "EP-54680": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-06-18",
       "k": "EP-54680",
       "p": "Medium",
@@ -135,7 +135,7 @@
     },
     "EP-54790": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-06-23",
       "k": "EP-54790",
       "p": "Medium",
@@ -151,7 +151,7 @@
     },
     "EP-55021": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-07-02",
       "k": "EP-55021",
       "p": "Medium",
@@ -233,7 +233,7 @@
     },
     "EP-56033": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-01T19:59:14Z",
       "cr": "2026-08-08",
       "k": "EP-56033",
       "p": "High",
@@ -245,11 +245,11 @@
       "st": "Ready for review",
       "t": "S",
       "team": "Organizer team",
-      "up": "2026-09-23T23:24"
+      "up": "2026-10-01T18:19"
     },
     "EP-56121": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-09-30T16:35:10Z",
       "cr": "2026-08-11",
       "k": "EP-56121",
       "p": "Medium",
@@ -260,10 +260,10 @@
       "s": "Integration Hub: Per-Field \"Null if Empty\" Control on Field Mappings",
       "sc": "indeterminate",
       "scd": "2026-09-24",
-      "st": "In Progress",
+      "st": "Ready for review",
       "t": "S",
       "team": "Integration team",
-      "up": "2026-09-25T17:45"
+      "up": "2026-09-30T15:28"
     },
     "EP-56891": {
       "ac": [],
@@ -321,7 +321,7 @@
     },
     "EP-57342": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-01T19:59:14Z",
       "cr": "2026-09-15",
       "k": "EP-57342",
       "p": "Medium",
@@ -335,11 +335,11 @@
       "st": "Rejected",
       "t": "S",
       "team": "Staff Team",
-      "up": "2026-09-17T15:30"
+      "up": "2026-10-01T18:02"
     },
     "EP-57386": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-01T19:59:14Z",
       "cr": "2026-09-16",
       "k": "EP-57386",
       "p": "Medium",
@@ -348,21 +348,22 @@
       ],
       "rej": false,
       "s": "Widen the SearchField page-id helpers to string and make isKnownSearchPage a type guard",
-      "sc": "indeterminate",
-      "scd": "2026-09-17",
-      "st": "Ready for release",
+      "sc": "done",
+      "scd": "2026-09-30",
+      "st": "Done",
       "t": "S",
       "team": "Staff Team",
-      "up": "2026-09-23T18:18"
+      "up": "2026-09-30T17:20"
     },
     "EP-57430": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-29T11:31:18Z",
       "cr": "2026-09-17",
       "k": "EP-57430",
       "p": "Medium",
       "rb": [
-        "DLG"
+        "DLG",
+        "IMEX"
       ],
       "rej": false,
       "s": "[Exhibitor] Update SponsorAccountsInteractionsReport to expose sync_ts",
@@ -371,7 +372,7 @@
       "st": "Done",
       "t": "S",
       "team": "Exhibitor team",
-      "up": "2026-09-28T12:22"
+      "up": "2026-09-29T09:20"
     },
     "EP-57870": {
       "ac": [
@@ -392,6 +393,64 @@
       "t": "B",
       "team": "Visitor team",
       "up": "2026-09-28T09:17"
+    },
+    "EP-58156": {
+      "ac": [
+        "Kortrijk Xpo"
+      ],
+      "at": "2026-10-06T10:19:38Z",
+      "cr": "2026-10-03",
+      "gone": true,
+      "k": "EP-58156",
+      "p": "High",
+      "rb": [
+        "Kortrijk Xpo"
+      ],
+      "s": "The product numbers don't update if we change the product categories",
+      "sc": "done",
+      "scd": "2026-10-05",
+      "st": "Rejected",
+      "t": "B",
+      "team": "Exhibitor team",
+      "up": "2026-10-05T15:14"
+    },
+    "EP-58244": {
+      "ac": [
+        "IMEX"
+      ],
+      "at": "2026-10-06T14:20:26Z",
+      "cr": "2026-10-06",
+      "gone": false,
+      "k": "EP-58244",
+      "p": "Urgent",
+      "rb": [
+        "IMEX"
+      ],
+      "s": "[iOS] App crashes while scrolling the \"ExpoPlatform\" exhibitor profile (IMEX America, app 1.106.11)",
+      "sc": "new",
+      "scd": "2026-10-06",
+      "st": "Open",
+      "t": "B",
+      "team": "Mobile team",
+      "up": "2026-10-06T12:01"
+    },
+    "EP-58266": {
+      "ac": [],
+      "at": "2026-10-06T19:55:51Z",
+      "cr": "2026-10-06",
+      "k": "EP-58266",
+      "p": "High",
+      "rb": [
+        "INTERNAL"
+      ],
+      "rej": false,
+      "s": "Sentry: coarse environment buckets instead of one per hostname",
+      "sc": "indeterminate",
+      "scd": "2026-10-06",
+      "st": "Ready for release",
+      "t": "S",
+      "team": "Staff Team",
+      "up": "2026-10-06T17:18"
     }
   }
 }

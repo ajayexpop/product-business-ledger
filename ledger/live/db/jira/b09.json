@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-28T12:11:00Z",
+  "at": "2026-10-06T19:55:51Z",
   "r": {
     "EP-50501": {
       "ac": [],
@@ -37,7 +37,7 @@
     },
     "EP-51601": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-04-08",
       "k": "EP-51601",
       "p": "Medium",
@@ -53,9 +53,25 @@
       "team": "Visitor team",
       "up": "2026-09-28T12:51"
     },
+    "EP-52844": {
+      "ac": [],
+      "at": "2026-10-06T10:19:38Z",
+      "cr": "2026-05-05",
+      "k": "EP-52844",
+      "p": "Medium",
+      "rb": [],
+      "rej": false,
+      "s": "API V3 - [DELETE] /api/v3/events/{eventId}/products/{productId} (Remove product from event only)",
+      "sc": "indeterminate",
+      "scd": "2026-08-18",
+      "st": "Ready for release",
+      "t": "S",
+      "team": "Integration team",
+      "up": "2026-10-06T08:15"
+    },
     "EP-54659": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-06-18",
       "k": "EP-54659",
       "p": "Medium",
@@ -87,7 +103,7 @@
     },
     "EP-55083": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-06T14:20:26Z",
       "cr": "2026-07-06",
       "gone": false,
       "k": "EP-55083",
@@ -96,50 +112,147 @@
         "IMEX"
       ],
       "s": "Meetings analytics: server-side meeting creation hardcodes \"Meeting Wizard\" as source instead of actual origin",
-      "sc": "new",
-      "scd": "2026-09-04",
-      "st": "Open",
+      "sc": "indeterminate",
+      "scd": "2026-10-05",
+      "st": "Ready for testing",
       "t": "B",
       "team": "Exhibitor team",
-      "up": "2026-09-23T08:31"
+      "up": "2026-10-06T10:23"
+    },
+    "EP-55380": {
+      "ac": [],
+      "at": "2026-10-05T09:58:04Z",
+      "cr": "2026-07-16",
+      "gone": true,
+      "k": "EP-55380",
+      "p": "High",
+      "rb": [
+        "CONNECT Oman"
+      ],
+      "s": "Favicon shows generic ExpoPlatform icon instead of custom uploaded favicon",
+      "sc": "done",
+      "scd": "2026-10-02",
+      "st": "Done",
+      "t": "B",
+      "team": "Core Team",
+      "up": "2026-10-02T10:45"
     },
     "EP-57690": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-06T10:19:38Z",
       "cr": "2026-09-23",
-      "gone": false,
+      "gone": true,
       "k": "EP-57690",
       "p": "Urgent",
       "rb": [
         "FrankfurterBuchmesse"
       ],
       "s": "FBM: App data sync fails with error on manual trigger; Android reports sync complete but session data still stale",
-      "sc": "indeterminate",
-      "scd": "2026-09-24",
-      "st": "Ready for review",
+      "sc": "done",
+      "scd": "2026-09-30",
+      "st": "Done",
       "t": "B",
       "team": "Mobile team",
-      "up": "2026-09-25T10:38"
+      "up": "2026-10-05T13:11"
     },
     "EP-57728": {
       "ac": [
         "DLG"
       ],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-01T19:59:14Z",
       "cr": "2026-09-23",
-      "gone": false,
+      "gone": true,
       "k": "EP-57728",
       "p": "High",
       "rb": [
         "DLG"
       ],
       "s": "DLG: QR code scan ignores the \"Community page as home page\" setting — user is always routed to the Community page",
-      "sc": "indeterminate",
-      "scd": "2026-09-24",
-      "st": "Ready for release",
+      "sc": "done",
+      "scd": "2026-09-30",
+      "st": "Done",
       "t": "B",
       "team": "Mobile team",
-      "up": "2026-09-24T16:50"
+      "up": "2026-09-30T17:20"
+    },
+    "EP-57937": {
+      "ac": [
+        "DLG"
+      ],
+      "at": "2026-10-06T19:55:51Z",
+      "cr": "2026-09-29",
+      "k": "EP-57937",
+      "p": "Medium",
+      "rb": [
+        "INTERNAL"
+      ],
+      "rej": false,
+      "s": "API V2 Enhancement - DLG Exhibitors",
+      "sc": "indeterminate",
+      "scd": "2026-10-02",
+      "st": "In testing",
+      "t": "S",
+      "team": "Integration team",
+      "up": "2026-10-06T15:39"
+    },
+    "EP-57959": {
+      "ac": [
+        "Fairtrade Messe"
+      ],
+      "at": "2026-10-05T09:58:04Z",
+      "cr": "2026-09-29",
+      "gone": true,
+      "k": "EP-57959",
+      "p": "High",
+      "rb": [
+        "Fairtrade Messe"
+      ],
+      "s": "[Fairtrade Messe] Marketplace Exhibitors tab counter ignores applied filters: shows \"Exhibitors (84)\" while the Country filter returns 4 exhibitors",
+      "sc": "done",
+      "scd": "2026-10-01",
+      "st": "Rejected",
+      "t": "B",
+      "team": "Exhibitor team",
+      "up": "2026-10-05T08:26"
+    },
+    "EP-58064": {
+      "ac": [
+        "CloserStill"
+      ],
+      "at": "2026-10-06T10:19:38Z",
+      "cr": "2026-10-01",
+      "gone": false,
+      "k": "EP-58064",
+      "p": "Urgent",
+      "rb": [
+        "INTERNAL",
+        "CloserStill"
+      ],
+      "s": "ASP integration: chairpersons imported as speakers and not attached to sessions",
+      "sc": "new",
+      "scd": "2026-10-01",
+      "st": "Ready to start",
+      "t": "B",
+      "team": "Integration team",
+      "up": "2026-10-05T10:38"
+    },
+    "EP-58174": {
+      "ac": [],
+      "at": "2026-10-06T19:55:51Z",
+      "cr": "2026-10-05",
+      "gone": false,
+      "k": "EP-58174",
+      "p": "High",
+      "rb": [
+        "Mercator Media Ltd"
+      ],
+      "s": "[Exhibitor Settings] Seawork - The default logo is not visible on exhibitor profiles without a custom logo on the mobile app",
+      "sc": "new",
+      "scd": "2026-10-05",
+      "st": "Open",
+      "t": "B",
+      "team": "Mobile team",
+      "up": "2026-10-06T16:06"
     }
   }
 }

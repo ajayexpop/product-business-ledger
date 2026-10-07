@@ -8,7 +8,7 @@ Last updated 28 Sep 2026 (the ledger moved to WS7mJG…, the old link shows a mo
 
 | Artifact | Audience | Status | Link |
 |---|---|---|---|
-| Internal Product Business Ledger | Internal (product, CS, leadership) | **Live, source of truth** since 28 Sep 2026 (v21: Beta logging with Claude for Settings viewers; Must-have ledger open to everyone). Project: `ledger/` | https://claude.ai/artifact/WS7mJGdC1y2RzsPTScKu6d |
+| Internal Product Business Ledger | Internal (product, CS, leadership) | **Live, source of truth** since 28 Sep 2026 (v22, 6 Oct 2026: Timeline tab removed, code kept in `ledger/deprecated/timeline/`; v21: Beta logging with Claude for Settings viewers; Must-have ledger open to everyone). Project: `ledger/` | https://claude.ai/artifact/WS7mJGdC1y2RzsPTScKu6d |
 | Ledger Rewire Preview | Internal (owner, Ilaria; then Product, Sales, Ops, Engineering) | New 29 Sep 2026: working preview of the planned restructure on live data, read-only. Project: `rewire/` | https://claude.ai/artifact/BUv7s6D31RAuodnBFsqJ7o |
 | ~~Department Lens~~ | Internal | Superseded 29 Sep 2026 by the Rewire Preview; `deptlens/` removed. Owner to delete it from `/artifacts` (the delete needs their confirmation) | ~~https://claude.ai/artifact/8fbYFs6yCseVTq6Yy7By8b~~ |
 | Ledger Rewire Map | Internal (owner, Ilaria) | New 29 Sep 2026: planning diagram of the ledger restructure (tab remap, Home lenses, intake pipeline, link layer). Source: `ledger/docs/diagrams/next-ui-structure.html`; plan: `ledger/docs/planning-the-next-part-of-ui-ux.md` | https://claude.ai/artifact/9QGLoezhu8tJYezDMRHhEq |

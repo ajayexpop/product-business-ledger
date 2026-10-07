@@ -1,9 +1,9 @@
 {
-  "at": "2026-09-28T12:11:00Z",
+  "at": "2026-10-06T19:55:51Z",
   "r": {
     "EP-51706": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-04-13",
       "k": "EP-51706",
       "p": "Medium",
@@ -19,7 +19,7 @@
     },
     "EP-52839": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-05T09:58:04Z",
       "cr": "2026-05-05",
       "k": "EP-52839",
       "p": "Medium",
@@ -28,10 +28,10 @@
       "s": "API V3 - [GET] /api/v3/products/{productId} (Get product details across all events)",
       "sc": "indeterminate",
       "scd": "2026-09-17",
-      "st": "Ready for testing",
+      "st": "Ready for release",
       "t": "S",
       "team": "Integration team",
-      "up": "2026-09-25T14:09"
+      "up": "2026-10-02T16:50"
     },
     "EP-54176": {
       "ac": [],
@@ -67,7 +67,7 @@
     },
     "EP-54671": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-06-18",
       "k": "EP-54671",
       "p": "Medium",
@@ -83,7 +83,7 @@
     },
     "EP-54682": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-06-18",
       "k": "EP-54682",
       "p": "Medium",
@@ -135,7 +135,7 @@
     },
     "EP-54929": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-06-29",
       "k": "EP-54929",
       "p": "Medium",
@@ -183,6 +183,22 @@
       "team": "Integration team",
       "up": "2026-09-20T16:36"
     },
+    "EP-55375": {
+      "ac": [],
+      "at": "2026-10-06T19:55:51Z",
+      "cr": "2026-07-01",
+      "k": "EP-55375",
+      "p": "High",
+      "rb": [],
+      "rej": false,
+      "s": "Translation Manager - Restrict English translation edits to authorised users",
+      "sc": "indeterminate",
+      "scd": "2026-10-06",
+      "st": "Ready for testing",
+      "t": "S",
+      "team": "Organizer team",
+      "up": "2026-10-06T14:07"
+    },
     "EP-55397": {
       "ac": [],
       "at": "2026-09-26T03:45:08Z",
@@ -201,21 +217,21 @@
     },
     "EP-57014": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-01T19:59:14Z",
       "cr": "2026-09-04",
       "k": "EP-57014",
       "p": "Medium",
       "rb": [
-        "INTERNAL"
+        "DLG"
       ],
       "rej": false,
       "s": "Multi-day Session Calendar View Enhancements",
-      "sc": "indeterminate",
-      "scd": "2026-09-08",
-      "st": "Ready for release",
+      "sc": "done",
+      "scd": "2026-09-30",
+      "st": "Done",
       "t": "S",
       "team": "Visitor team",
-      "up": "2026-09-25T16:26"
+      "up": "2026-10-01T09:23"
     },
     "EP-57058": {
       "ac": [],
@@ -239,7 +255,7 @@
       "ac": [
         "DLG"
       ],
-      "at": "2026-09-28T10:16:16Z",
+      "at": "2026-10-05T09:58:04Z",
       "cr": "2026-09-10",
       "gone": true,
       "k": "EP-57223",
@@ -253,11 +269,11 @@
       "st": "Done",
       "t": "B",
       "team": "Mobile team",
-      "up": "2026-09-28T08:25"
+      "up": "2026-10-05T08:18"
     },
     "EP-57795": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-06T10:19:38Z",
       "cr": "2026-09-24",
       "k": "EP-57795",
       "p": "Medium",
@@ -271,7 +287,63 @@
       "st": "In Progress",
       "t": "S",
       "team": "Visitor team",
-      "up": "2026-09-24T11:48"
+      "up": "2026-10-06T04:13"
+    },
+    "EP-57960": {
+      "ac": [],
+      "at": "2026-10-06T10:19:38Z",
+      "cr": "2026-09-29",
+      "gone": true,
+      "k": "EP-57960",
+      "p": "Urgent",
+      "rb": [
+        "FrankfurterBuchmesse"
+      ],
+      "s": "FBM app: Android freezes after update, iOS sync error",
+      "sc": "done",
+      "scd": "2026-09-30",
+      "st": "Done",
+      "t": "B",
+      "team": "Mobile team",
+      "up": "2026-10-06T08:27"
+    },
+    "EP-58004": {
+      "ac": [
+        "IMEX"
+      ],
+      "at": "2026-10-05T09:58:04Z",
+      "cr": "2026-09-30",
+      "gone": true,
+      "k": "EP-58004",
+      "p": "Urgent",
+      "rb": [
+        "IMEX"
+      ],
+      "s": "[EP:TAM] IMEX America iOS app (App 232): Messages tab shows empty state despite existing conversation",
+      "sc": "done",
+      "scd": "2026-10-02",
+      "st": "Done",
+      "t": "B",
+      "team": "Mobile team",
+      "up": "2026-10-02T10:49"
+    },
+    "EP-58246": {
+      "ac": [],
+      "at": "2026-10-06T19:55:51Z",
+      "cr": "2026-10-06",
+      "gone": false,
+      "k": "EP-58246",
+      "p": "High",
+      "rb": [
+        "Rapid News"
+      ],
+      "s": "Interplas 2029: Images added via Text Editor block visible in back office but not displayed on live website",
+      "sc": "indeterminate",
+      "scd": "2026-10-06",
+      "st": "In Progress",
+      "t": "B",
+      "team": "Visitor team",
+      "up": "2026-10-06T14:13"
     }
   }
 }

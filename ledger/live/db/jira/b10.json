@@ -1,9 +1,45 @@
 {
-  "at": "2026-09-28T12:11:00Z",
+  "at": "2026-10-07T02:20:24Z",
   "r": {
+    "EP-39068": {
+      "ac": [],
+      "at": "2026-10-05T10:22:11Z",
+      "cr": "2025-01-29",
+      "gone": false,
+      "k": "EP-39068",
+      "p": "Medium",
+      "rb": [
+        "Evoke"
+      ],
+      "s": "[Evoke] In Message analytics, in the 'To' column, all message recipients are shown as 'deleted'",
+      "sc": "new",
+      "scd": "2026-06-16",
+      "st": "Ready to start",
+      "t": "B",
+      "team": "Exhibitor team",
+      "up": "2026-10-05T09:38"
+    },
+    "EP-45393": {
+      "ac": [],
+      "at": "2026-10-07T02:20:24Z",
+      "cr": "2025-09-18",
+      "gone": true,
+      "k": "EP-45393",
+      "p": "High",
+      "rb": [
+        "LNRSG"
+      ],
+      "s": "Session Data Loss After Deactivation/Activation Workaround – Sessions Missing from Attendees’ and Speakers’ Schedules",
+      "sc": "done",
+      "scd": "2026-10-07",
+      "st": "Rejected",
+      "t": "B",
+      "team": "Visitor team",
+      "up": "2026-10-07T00:56"
+    },
     "EP-49342": {
       "ac": [],
-      "at": "2026-09-28T10:16:16Z",
+      "at": "2026-10-06T14:20:26Z",
       "cr": "2026-02-16",
       "gone": false,
       "k": "EP-49342",
@@ -18,7 +54,7 @@
       "st": "Ready to start",
       "t": "B",
       "team": "Organizer team",
-      "up": "2026-09-28T07:53"
+      "up": "2026-10-06T11:33"
     },
     "EP-50535": {
       "ac": [],
@@ -38,7 +74,7 @@
     },
     "EP-52647": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-04-30",
       "k": "EP-52647",
       "p": "Medium",
@@ -70,7 +106,7 @@
     },
     "EP-53978": {
       "ac": [],
-      "at": "2026-09-26T03:45:08Z",
+      "at": "2026-10-01T19:59:14Z",
       "cr": "2026-05-29",
       "k": "EP-53978",
       "p": "High",
@@ -85,7 +121,7 @@
       "st": "Done",
       "t": "S",
       "team": "Exhibitor team",
-      "up": "2026-09-25T16:26"
+      "up": "2026-10-01T08:35"
     },
     "EP-54814": {
       "ac": [],
@@ -140,7 +176,7 @@
     },
     "EP-56915": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-30T16:35:10Z",
       "cr": "2026-09-02",
       "k": "EP-56915",
       "p": "Medium",
@@ -154,7 +190,7 @@
       "st": "In Progress",
       "t": "S",
       "team": "Exhibitor team",
-      "up": "2026-09-28T11:26"
+      "up": "2026-09-30T15:00"
     },
     "EP-57394": {
       "ac": [],
@@ -176,7 +212,7 @@
     },
     "EP-57471": {
       "ac": [],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-10-05T09:58:04Z",
       "cr": "2026-09-17",
       "k": "EP-57471",
       "p": "Medium",
@@ -185,18 +221,36 @@
       ],
       "rej": false,
       "s": "Cloning: remap session type \"Visible to\" / \"Available to\" ids to the cloned event",
-      "sc": "indeterminate",
-      "scd": "2026-09-17",
-      "st": "Ready for release",
+      "sc": "done",
+      "scd": "2026-10-02",
+      "st": "Done",
       "t": "S",
       "team": "Visitor team",
-      "up": "2026-09-28T13:00"
+      "up": "2026-10-02T16:29"
+    },
+    "EP-57581": {
+      "ac": [],
+      "at": "2026-10-06T19:55:51Z",
+      "cr": "2026-09-21",
+      "k": "EP-57581",
+      "p": "Medium",
+      "rb": [
+        "INTERNAL"
+      ],
+      "rej": false,
+      "s": "Implement Account Module",
+      "sc": "indeterminate",
+      "scd": "2026-09-28",
+      "st": "Ready for review",
+      "t": "S",
+      "team": "Visitor team",
+      "up": "2026-10-06T18:45"
     },
     "EP-57806": {
       "ac": [
         "Vinexposium"
       ],
-      "at": "2026-09-28T12:11:00Z",
+      "at": "2026-09-28T13:06:34Z",
       "cr": "2026-09-24",
       "gone": true,
       "k": "EP-57806",
@@ -211,6 +265,63 @@
       "t": "B",
       "team": "Visitor team",
       "up": "2026-09-28T12:14"
+    },
+    "EP-57905": {
+      "ac": [
+        "DLG"
+      ],
+      "at": "2026-10-06T10:19:38Z",
+      "cr": "2026-09-28",
+      "gone": true,
+      "k": "EP-57905",
+      "p": "High",
+      "rb": [
+        "DLG"
+      ],
+      "s": "DLG: exhibitor list filters return no results (EuroTier 2026)",
+      "sc": "done",
+      "scd": "2026-10-02",
+      "st": "Done",
+      "t": "B",
+      "team": "Exhibitor team",
+      "up": "2026-10-05T18:23"
+    },
+    "EP-57927": {
+      "ac": [],
+      "at": "2026-10-06T19:55:51Z",
+      "cr": "2026-09-29",
+      "k": "EP-57927",
+      "p": "High",
+      "rb": [
+        "DLG",
+        "HINTE"
+      ],
+      "rej": false,
+      "s": "Enhancing Sessions Location Filter with Stand-Level Pinning Attribute",
+      "sc": "indeterminate",
+      "scd": "2026-10-01",
+      "st": "Ready for testing",
+      "t": "S",
+      "team": "Exhibitor team",
+      "up": "2026-10-06T17:37"
+    },
+    "EP-58065": {
+      "ac": [],
+      "at": "2026-10-06T19:55:51Z",
+      "cr": "2026-10-01",
+      "k": "EP-58065",
+      "p": "Urgent",
+      "rb": [
+        "INTERNAL"
+      ],
+      "rej": false,
+      "s": "(WEB)Play & Win for IMEX",
+      "sc": "indeterminate",
+      "scd": "2026-10-02",
+      "st": "Ready for testing",
+      "t": "S",
+      "team": "Visitor team",
+      "up": "2026-10-06T15:10"
     }
   }
 }

@@ -12,7 +12,6 @@ This folder holds the whole project. Open it in Claude Code and read `CLAUDE.md`
 | --- | --- |
 | Overview | A greeting with what changed since your last visit, what needs attention, the next 8 weeks of shows, the event radar, team pressure |
 | Clients | Every client with health, problems and promises; Client 360 for each |
-| Timeline | Client by month: shows, delivery, bugs, incidents; zoom, ranges, filters, clickable month chart |
 | Requests | The Feature ledger (work items, their flow, sample walkthrough, hand-offs; logging new items with Claude is in Beta for the Settings viewers) and the Must-have ledger |
 | Demand | The Product Demand Map with instant and AI search |
 | Delivery, Bugs, Incidents | What is built and being built; open client bugs; production incidents |
@@ -35,6 +34,7 @@ Everyone gets onboarding (a welcome card, a tour for every tab, one-time hints) 
 | The shared database (must-have items, column settings, Jira refresh, data-refresh pulls, visits, work items) | `live/db/<collection>/<doc>.json` |
 | Feedback (private to Ajay) and its roadmap | `live/db/feedback/`, `docs/feedback-roadmap.md` (`tools/feedback.py build`) |
 | What is published right now | `live/index.html`, `live/MANIFEST.json` |
+| Code taken out of the page, kept to restore (the Timeline tab, removed 6 Oct 2026) | `deprecated/timeline/` (README has the steps) |
 
 All of it is JSON. `live/db` is refreshed from the published ledger at the start of every change (update cycle step 1).
 

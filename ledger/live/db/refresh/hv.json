@@ -1,6 +1,6 @@
 {
-  "lastBy": "u_odCcEgwJ2lNM84eM7e5ykg",
-  "lastRun": "2026-09-28T12:11:13Z",
+  "lastBy": "u_gVSVBLxsiVQXOQJt17Pp8Q",
+  "lastRun": "2026-10-06T19:55:58Z",
   "note": "",
   "recs": {
     "HV-114": {
@@ -8,14 +8,21 @@
       "s": "DS-side exceptions review and meeting generation test coverage",
       "st": "Ready for release",
       "t": "Story",
-      "up": "2026-09-21T16:46:58.765+0100"
+      "up": "2026-10-06T15:24:36.103+0100"
     },
     "HV-122": {
       "k": "HV-122",
       "s": "[frontend] Refactor logic and component flow for MP",
       "st": "In Progress",
       "t": "Story",
-      "up": "2026-09-25T06:01:01.673+0100"
+      "up": "2026-10-06T15:24:35.833+0100"
+    },
+    "HV-125": {
+      "k": "HV-125",
+      "s": "[Backend] Meeting Program. Revamping Report Generation",
+      "st": "Done",
+      "t": "Story",
+      "up": "2026-10-02T07:31:19.581+0100"
     },
     "HV-126": {
       "k": "HV-126",
@@ -24,12 +31,33 @@
       "t": "Story",
       "up": "2026-09-21T16:46:59.317+0100"
     },
+    "HV-127": {
+      "k": "HV-127",
+      "s": "[Backend] Meeting Program. All Relevance Actions Report",
+      "st": "Done",
+      "t": "Story",
+      "up": "2026-10-02T07:30:01.611+0100"
+    },
     "HV-128": {
       "k": "HV-128",
       "s": "[Backend] Meeting Program. Users Availability Report",
       "st": "Done",
       "t": "Story",
       "up": "2026-09-28T07:46:40.921+0100"
+    },
+    "HV-129": {
+      "k": "HV-129",
+      "s": "[Backend] Meeting program. MP Settings Changelog Report",
+      "st": "Done",
+      "t": "Story",
+      "up": "2026-10-02T07:31:22.138+0100"
+    },
+    "HV-130": {
+      "k": "HV-130",
+      "s": "[Backend] Meeting Program. Meetings Manual Changelog Report",
+      "st": "Done",
+      "t": "Story",
+      "up": "2026-10-02T07:31:16.612+0100"
     },
     "HV-131": {
       "k": "HV-131",
@@ -38,40 +66,61 @@
       "t": "Story",
       "up": "2026-09-21T16:46:59.336+0100"
     },
+    "HV-132": {
+      "k": "HV-132",
+      "s": "Exception bug /api/v1/meetingProgram/46/addConnection (duplicate key value violates unique constraint)",
+      "st": "Ready for release",
+      "t": "Bug",
+      "up": "2026-10-06T15:24:36.565+0100"
+    },
+    "HV-134": {
+      "k": "HV-134",
+      "s": "BE Exception Uncaught TypeError: Argument 1 passed to ExpoUniversal\\Services\\MeetingProgram\\MeetingProgramMatchesService::participantMatches() must be of the type string, int given,",
+      "st": "Ready for release",
+      "t": "Bug",
+      "up": "2026-10-06T15:24:35.370+0100"
+    },
     "HV-139": {
       "k": "HV-139",
       "s": "[BE] Group Tabletalk attendees by custom field",
-      "st": "Ready for UAT",
+      "st": "In testing",
       "t": "Story",
-      "up": "2026-09-21T16:46:58.684+0100"
+      "up": "2026-10-06T15:24:36.803+0100"
     },
     "HV-141": {
       "k": "HV-141",
       "s": "[FE/BE] Enhanced attendee card for roundtable table moves",
-      "st": "Ready for release",
+      "st": "Ready for UAT",
       "t": "Story",
-      "up": "2026-09-25T06:01:01.883+0100"
+      "up": "2026-10-06T15:24:34.886+0100"
     },
     "HV-143": {
       "k": "HV-143",
       "s": "[BE] Replace declined roundtable user places with 'waitlist'",
-      "st": "In testing",
+      "st": "Ready for UAT",
       "t": "Story",
-      "up": "2026-09-25T15:44:39.912+0100"
+      "up": "2026-10-06T15:24:34.575+0100"
     },
     "HV-144": {
       "k": "HV-144",
       "s": "Roundtable Allocation & Admin",
       "st": "In Progress",
       "t": "Epic",
-      "up": "2026-09-28T11:17:15.998+0100"
+      "up": "2026-10-01T14:19:41.679+0100"
     },
     "HV-15": {
       "k": "HV-15",
       "s": "Organization 26Q2/Q3",
       "st": "In Progress",
       "t": "Task",
-      "up": "2026-09-24T10:43:14.788+0100"
+      "up": "2026-10-06T15:53:46.393+0100"
+    },
+    "HV-152": {
+      "k": "HV-152",
+      "s": "[Android] Redesign of the meeting profile page.",
+      "st": "Open",
+      "t": "Story",
+      "up": "2026-09-30T08:17:51.835+0100"
     },
     "HV-159": {
       "k": "HV-159",
@@ -92,7 +141,7 @@
       "s": "MP. Exhibitor control over team members actions. Confirmation stage",
       "st": "Open",
       "t": "Epic",
-      "up": "2026-09-28T12:09:14.351+0100"
+      "up": "2026-09-30T11:43:07.749+0100"
     },
     "HV-178": {
       "k": "HV-178",
@@ -106,7 +155,14 @@
       "s": "Embed Profile Stage into the Meeting Programme journey v1",
       "st": "Ready for release",
       "t": "Story",
-      "up": "2026-09-25T06:01:01.653+0100"
+      "up": "2026-10-06T15:24:35.153+0100"
+    },
+    "HV-194": {
+      "k": "HV-194",
+      "s": "Only Show Completed Profiles in Meeting Programme Search Results",
+      "st": "Rejected",
+      "t": "Story",
+      "up": "2026-09-30T08:18:58.918+0100"
     },
     "HV-200": {
       "k": "HV-200",
@@ -115,12 +171,75 @@
       "t": "Story",
       "up": "2026-09-25T08:52:37.400+0100"
     },
+    "HV-21": {
+      "k": "HV-21",
+      "s": "Meeting Program. Exclusive Sponsored Meetings",
+      "st": "Rejected",
+      "t": "Story",
+      "up": "2026-09-30T08:25:56.385+0100"
+    },
+    "HV-22": {
+      "k": "HV-22",
+      "s": "Meeting Program. Exclusive Sponsored Meetings",
+      "st": "Rejected",
+      "t": "Sub-task",
+      "up": "2026-09-30T08:25:30.042+0100"
+    },
+    "HV-227": {
+      "k": "HV-227",
+      "s": "Error on image upload in hyve staging env",
+      "st": "Rejected",
+      "t": "Bug",
+      "up": "2026-10-06T14:39:34.376+0100"
+    },
+    "HV-23": {
+      "k": "HV-23",
+      "s": "Add a new toggle: \"Generate only Sponsored meetings\" on UI",
+      "st": "Rejected",
+      "t": "Sub-task",
+      "up": "2026-09-30T08:25:29.908+0100"
+    },
+    "HV-232": {
+      "k": "HV-232",
+      "s": "New button in MP UI for 'Manage Availability'",
+      "st": "Open",
+      "t": "Story",
+      "up": "2026-10-06T15:46:24.997+0100"
+    },
+    "HV-238": {
+      "k": "HV-238",
+      "s": "[Placeholder][Mobile] WebView -> Native",
+      "st": "Rejected",
+      "t": "Story",
+      "up": "2026-10-02T13:49:32.849+0100"
+    },
+    "HV-24": {
+      "k": "HV-24",
+      "s": "Extend the MP CRUD api with boolean param \"Generate only Sponsored meetings\"",
+      "st": "Rejected",
+      "t": "Sub-task",
+      "up": "2026-09-30T08:25:29.999+0100"
+    },
+    "HV-25": {
+      "k": "HV-25",
+      "s": "Extend the Meeting Generation on MP logic with new settings",
+      "st": "Rejected",
+      "t": "Sub-task",
+      "up": "2026-09-30T08:25:29.956+0100"
+    },
+    "HV-259": {
+      "k": "HV-259",
+      "s": "Embed Profile Stage into the Meeting Programme journey",
+      "st": "Done",
+      "t": "Sub-task",
+      "up": "2026-10-02T10:08:43.571+0100"
+    },
     "HV-261": {
       "k": "HV-261",
       "s": "Technical improvements",
       "st": "Ready for release",
       "t": "Story",
-      "up": "2026-09-24T08:38:59.446+0100"
+      "up": "2026-10-06T15:24:35.428+0100"
     },
     "HV-264": {
       "k": "HV-264",
@@ -128,6 +247,20 @@
       "st": "Done",
       "t": "Bug",
       "up": "2026-09-28T10:00:37.068+0100"
+    },
+    "HV-266": {
+      "k": "HV-266",
+      "s": "Designs for Meeting program. Flexible generation settings",
+      "st": "Open",
+      "t": "Story",
+      "up": "2026-10-02T13:47:48.021+0100"
+    },
+    "HV-267": {
+      "k": "HV-267",
+      "s": "Designs for Meeting program. Flexible generation settings",
+      "st": "In Progress",
+      "t": "Sub-task",
+      "up": "2026-10-02T13:47:48.331+0100"
     },
     "HV-279": {
       "k": "HV-279",
@@ -143,6 +276,13 @@
       "t": "Story",
       "up": "2026-09-25T06:01:01.816+0100"
     },
+    "HV-284": {
+      "k": "HV-284",
+      "s": "[Backend] MP Exhibitor control over team members actions (Incoming Relevance/Opt-in Stage)",
+      "st": "Ready for release",
+      "t": "Story",
+      "up": "2026-10-06T15:24:35.655+0100"
+    },
     "HV-285": {
       "k": "HV-285",
       "s": "[FE/BE] MP Exhibitor Bulk respond to incoming relevance requests (Opt-in Stage)",
@@ -155,21 +295,42 @@
       "s": "[Frontend] MP Exhibitor control over team members actions (Confirmation Stage)",
       "st": "In testing",
       "t": "Story",
-      "up": "2026-09-25T06:01:01.648+0100"
+      "up": "2026-10-06T15:24:35.924+0100"
     },
     "HV-303": {
       "k": "HV-303",
       "s": "[Backend] MP Exhibitor control over team members actions (Confirmation Stage)",
-      "st": "In testing",
+      "st": "Ready for release",
       "t": "Story",
-      "up": "2026-09-28T08:47:01.472+0100"
+      "up": "2026-10-06T15:24:36.171+0100"
     },
     "HV-304": {
       "k": "HV-304",
       "s": "[FE/BE] MP Exhibitor Bulk Confirm meetings on behalf of team (Confirmation Stage)",
       "st": "In testing",
       "t": "Story",
-      "up": "2026-09-25T15:05:31.439+0100"
+      "up": "2026-10-06T15:24:36.407+0100"
+    },
+    "HV-310": {
+      "k": "HV-310",
+      "s": "Bulk confirm/decline apply endpoint: filtered preview, atomic write, keep-existing-decisions flag",
+      "st": "Done",
+      "t": "Sub-task",
+      "up": "2026-10-05T13:46:00.129+0100"
+    },
+    "HV-311": {
+      "k": "HV-311",
+      "s": "[Backend] Round Tables: tables are not generated after registration ends — tablesCount stays 0 and isTableGenerationPassed stays false",
+      "st": "Ready for release",
+      "t": "Bug",
+      "up": "2026-10-06T15:24:36.671+0100"
+    },
+    "HV-312": {
+      "k": "HV-312",
+      "s": "Exhibitor Acting on Behalf of Team Members — Meeting ratings",
+      "st": "Ready to start",
+      "t": "Story",
+      "up": "2026-10-06T15:24:36.904+0100"
     },
     "HV-316": {
       "k": "HV-316",
@@ -185,26 +346,138 @@
       "t": "Story",
       "up": "2026-09-21T16:46:59.289+0100"
     },
+    "HV-327": {
+      "k": "HV-327",
+      "s": "[Backend] MP. Meetings program maintenance (Safety net & CI gate)",
+      "st": "In Progress",
+      "t": "Story",
+      "up": "2026-10-06T15:24:34.579+0100"
+    },
     "HV-330": {
       "k": "HV-330",
       "s": "[Backend] MP. Meetings program maintenance (Domain relocation)",
       "st": "In Progress",
       "t": "Story",
-      "up": "2026-09-28T08:49:57.313+0100"
+      "up": "2026-09-29T07:17:50.939+0100"
+    },
+    "HV-331": {
+      "k": "HV-331",
+      "s": "[Backend] MP. Meetings program maintenance (Published contract & consumer repointing)",
+      "st": "In Progress",
+      "t": "Story",
+      "up": "2026-10-06T15:43:33.805+0100"
+    },
+    "HV-409": {
+      "k": "HV-409",
+      "s": "Enhancing Attend a Stand Functionality for My Schedule and Team Schedule Integration",
+      "st": "Open",
+      "t": "Story",
+      "up": "2026-10-06T15:48:43.177+0100"
+    },
+    "HV-41": {
+      "k": "HV-41",
+      "s": "Refactor timelines ",
+      "st": "Rejected",
+      "t": "Story",
+      "up": "2026-10-06T15:27:20.135+0100"
     },
     "HV-417": {
       "k": "HV-417",
       "s": "Improving the faker for testing Meeting program",
+      "st": "Done",
+      "t": "Task",
+      "up": "2026-10-05T14:44:25.673+0100"
+    },
+    "HV-42": {
+      "k": "HV-42",
+      "s": "MP  - Schedule Download Refactor",
+      "st": "Ready to start",
+      "t": "Story",
+      "up": "2026-09-30T08:22:51.767+0100"
+    },
+    "HV-43": {
+      "k": "HV-43",
+      "s": "refactor ICS files done in 42161 (HYVE HURRY)",
+      "st": "Rejected",
+      "t": "Story",
+      "up": "2026-09-30T08:13:34.010+0100"
+    },
+    "HV-44": {
+      "k": "HV-44",
+      "s": "Research and Improve the data delays in MP report ",
+      "st": "Rejected",
+      "t": "Story",
+      "up": "2026-09-30T08:24:08.495+0100"
+    },
+    "HV-444": {
+      "k": "HV-444",
+      "s": "Meeting Programme (MP) – attendee search not working in Hyve staging environment",
+      "st": "Open",
+      "t": "Bug",
+      "up": "2026-10-06T15:24:34.882+0100"
+    },
+    "HV-446": {
+      "k": "HV-446",
+      "s": "[RVM-TC-26] Locked matrix disables the grid, select-all checkboxes and preset buttons in the UI",
+      "st": "Rejected",
+      "t": "Bug",
+      "up": "2026-09-30T08:31:56.861+0100"
+    },
+    "HV-447": {
+      "k": "HV-447",
+      "s": "Groceryshop 2026 - Meeting Program - Reports won't generate",
+      "st": "Ready for release",
+      "t": "Bug",
+      "up": "2026-10-06T15:24:35.134+0100"
+    },
+    "HV-448": {
+      "k": "HV-448",
+      "s": "[Backend] photoURL fallback: doubled URL on some accounts, and bulk/list disagree with detail",
+      "st": "Rejected",
+      "t": "Bug",
+      "up": "2026-09-30T08:32:55.025+0100"
+    },
+    "HV-459": {
+      "k": "HV-459",
+      "s": "The user's schedule does not display the Table they were assigned to in the Round Table session",
+      "st": "Done",
+      "t": "Bug",
+      "up": "2026-10-02T07:32:30.167+0100"
+    },
+    "HV-467": {
+      "k": "HV-467",
+      "s": "Meeting program. Team members management improvements",
+      "st": "Open",
+      "t": "Story",
+      "up": "2026-10-06T15:33:08.816+0100"
+    },
+    "HV-469": {
+      "k": "HV-469",
+      "s": "Manage Team Members in Requests Stage",
+      "st": "Open",
+      "t": "Story",
+      "up": "2026-10-06T15:46:45.523+0100"
+    },
+    "HV-479": {
+      "k": "HV-479",
+      "s": "[placeholder] Backend configurability for Meeting Programme labels/content",
+      "st": "Open",
+      "t": "Story",
+      "up": "2026-10-02T13:50:04.826+0100"
+    },
+    "HV-482": {
+      "k": "HV-482",
+      "s": "[GroceryShop] Custom page design",
       "st": "Ready to start",
       "t": "Task",
-      "up": "2026-09-21T09:49:26.279+0100"
+      "up": "2026-10-02T13:49:24.056+0100"
     },
     "HV-483": {
       "k": "HV-483",
       "s": "No-show / \"did not attend\" status has no single source of truth — three disagreeing write paths, one causing a boolean/string type-coercion flip",
-      "st": "In testing",
+      "st": "Done",
       "t": "Bug",
-      "up": "2026-09-28T12:38:08.392+0100"
+      "up": "2026-10-06T15:39:32.290+0100"
     },
     "HV-487": {
       "k": "HV-487",
@@ -213,6 +486,13 @@
       "t": "Bug",
       "up": "2026-09-23T17:48:39.533+0100"
     },
+    "HV-489": {
+      "k": "HV-489",
+      "s": "[RC Prod 2026-09-02] MP page fires POST /api/v1/search/filters that the RC backend rejects — 404 \"Wrong target type!\" error toast on every open",
+      "st": "Done",
+      "t": "Bug",
+      "up": "2026-10-02T07:33:18.159+0100"
+    },
     "HV-490": {
       "k": "HV-490",
       "s": "[RC Prod 2026-09-02] Bulk respond dry-run times out (504 after 60 s) on the default scope — modal shows \"0 matching requests\" instead of the real 49k",
@@ -220,12 +500,26 @@
       "t": "Bug",
       "up": "2026-09-21T16:46:59.383+0100"
     },
+    "HV-492": {
+      "k": "HV-492",
+      "s": "Organizer Platform: Add engagement tracking to interactive elements in App Builder Custom Blocks",
+      "st": "Open",
+      "t": "Story",
+      "up": "2026-10-06T15:24:35.370+0100"
+    },
     "HV-495": {
       "k": "HV-495",
       "s": "Hide switch for user that don't have sponsor meetings",
       "st": "Done",
       "t": "Task",
       "up": "2026-09-21T16:46:59.435+0100"
+    },
+    "HV-504": {
+      "k": "HV-504",
+      "s": "MP members endpoint returns HTTP 500 and leaks PHQL query on any non-empty sort value",
+      "st": "Done",
+      "t": "Bug",
+      "up": "2026-10-06T17:46:59.567+0100"
     },
     "HV-505": {
       "k": "HV-505",
@@ -237,9 +531,30 @@
     "HV-506": {
       "k": "HV-506",
       "s": "[DS] Flexible meeting generation settings (DS scheduling engine)",
-      "st": "In Progress",
+      "st": "Ready for testing",
       "t": "Story",
-      "up": "2026-09-25T12:50:33.409+0100"
+      "up": "2026-10-05T09:35:54.491+0100"
+    },
+    "HV-508": {
+      "k": "HV-508",
+      "s": "[Test Fail] SaveMeetingProgramDto undefined index customPoints — 5 test errors",
+      "st": "Ready for testing",
+      "t": "Story",
+      "up": "2026-10-06T15:24:34.866+0100"
+    },
+    "HV-509": {
+      "k": "HV-509",
+      "s": "[Test Fail] MeetingCreationService getStart() on null — 7 test errors",
+      "st": "Ready for testing",
+      "t": "Story",
+      "up": "2026-10-06T15:24:34.574+0100"
+    },
+    "HV-514": {
+      "k": "HV-514",
+      "s": "Messaging within MP",
+      "st": "Open",
+      "t": "Story",
+      "up": "2026-10-02T13:47:28.117+0100"
     },
     "HV-536": {
       "k": "HV-536",
@@ -258,16 +573,23 @@
     "HV-538": {
       "k": "HV-538",
       "s": "MP refactor · Phase 2: typed API layer (meetingProgramApi)",
-      "st": "In Progress",
+      "st": "Ready for review",
       "t": "Sub-task",
-      "up": "2026-09-25T11:27:26.460+0100"
+      "up": "2026-10-06T12:42:00.169+0100"
     },
     "HV-545": {
       "k": "HV-545",
       "s": "[Fintech EU] Time format should be changed to 24 hours",
-      "st": "Open",
+      "st": "Rejected",
+      "t": "Task",
+      "up": "2026-10-06T15:09:21.946+0100"
+    },
+    "HV-549": {
+      "k": "HV-549",
+      "s": "No data in 'Relevance Actions per Exhibitor' report",
+      "st": "Done",
       "t": "Bug",
-      "up": "2026-09-25T06:41:09.787+0100"
+      "up": "2026-09-30T08:07:14.076+0100"
     },
     "HV-550": {
       "k": "HV-550",
@@ -275,6 +597,13 @@
       "st": "Done",
       "t": "Bug",
       "up": "2026-09-21T16:46:58.860+0100"
+    },
+    "HV-551": {
+      "k": "HV-551",
+      "s": "Discrepancy between Meeting Programme report and backend UI",
+      "st": "Rejected",
+      "t": "Bug",
+      "up": "2026-09-30T08:07:55.613+0100"
     },
     "HV-552": {
       "k": "HV-552",
@@ -290,6 +619,13 @@
       "t": "Bug",
       "up": "2026-09-21T16:46:58.654+0100"
     },
+    "HV-558": {
+      "k": "HV-558",
+      "s": "[Meeting Program] Exhibitors tab ignores the visibility matrix — companies stay listed even with Hide all",
+      "st": "Open",
+      "t": "Bug",
+      "up": "2026-10-06T15:24:35.594+0100"
+    },
     "HV-559": {
       "k": "HV-559",
       "s": "Grouping: attendee with the same multi-option answer as a seated group is left Unassigned while that group's tables have free seats",
@@ -299,10 +635,10 @@
     },
     "HV-560": {
       "k": "HV-560",
-      "s": "Grouping: attendees sharing one placement answer are split across topics although a single table would hold them all",
-      "st": "Rejected",
+      "s": "Grouping: attendees sharing one placement answer must be seated together using the fewest tables, not spread across topics",
+      "st": "Ready to start",
       "t": "Defect",
-      "up": "2026-09-25T15:44:17.164+0100"
+      "up": "2026-09-30T11:17:07.672+0100"
     },
     "HV-561": {
       "k": "HV-561",
@@ -310,6 +646,20 @@
       "st": "Done",
       "t": "Bug",
       "up": "2026-09-21T16:46:58.761+0100"
+    },
+    "HV-563": {
+      "k": "HV-563",
+      "s": "[MP] Unique company rule broken on generation — 14 company pairs got 2 meetings instead of 1 (28 meetings), against 7565 pairs at exactly 1",
+      "st": "Done",
+      "t": "Bug",
+      "up": "2026-10-06T17:46:59.508+0100"
+    },
+    "HV-565": {
+      "k": "HV-565",
+      "s": "Meeting Program. Replace 3-Dots Menu with \"Manage Availability\" Button",
+      "st": "Done",
+      "t": "Sub-task",
+      "up": "2026-10-02T08:21:54.765+0100"
     },
     "HV-566": {
       "k": "HV-566",
@@ -332,12 +682,26 @@
       "t": "Task",
       "up": "2026-09-28T12:37:17.798+0100"
     },
+    "HV-573": {
+      "k": "HV-573",
+      "s": "Implement backend changes",
+      "st": "Ready to start",
+      "t": "Sub-task",
+      "up": "2026-10-06T15:48:43.496+0100"
+    },
+    "HV-574": {
+      "k": "HV-574",
+      "s": "Implement frontend changes",
+      "st": "Ready to start",
+      "t": "Sub-task",
+      "up": "2026-10-06T15:48:43.892+0100"
+    },
     "HV-576": {
       "k": "HV-576",
       "s": "Meeting program. Team members management improvements",
-      "st": "In Progress",
+      "st": "Ready for review",
       "t": "Sub-task",
-      "up": "2026-09-28T12:56:47.243+0100"
+      "up": "2026-10-06T15:33:09.265+0100"
     },
     "HV-588": {
       "k": "HV-588",
@@ -359,6 +723,13 @@
       "st": "Rejected",
       "t": "Defect",
       "up": "2026-09-28T11:13:01.858+0100"
+    },
+    "HV-595": {
+      "k": "HV-595",
+      "s": "Investigate: 130 commercial users reported zero meetings (flagged in HV-561 comment)",
+      "st": "Ready to start",
+      "t": "Task",
+      "up": "2026-10-06T15:24:35.810+0100"
     },
     "HV-596": {
       "k": "HV-596",
@@ -391,9 +762,9 @@
     "HV-600": {
       "k": "HV-600",
       "s": "Platform discards skipped_applications reasons and treats a zero-seated schedule as success — organiser sees \"Unassigned\" with no cause, is_table_generation_passed=true with data: []",
-      "st": "Ready for testing",
+      "st": "Done",
       "t": "Defect",
-      "up": "2026-09-28T12:41:55.295+0100"
+      "up": "2026-09-29T10:54:35.187+0100"
     },
     "HV-601": {
       "k": "HV-601",
@@ -419,9 +790,9 @@
     "HV-605": {
       "k": "HV-605",
       "s": "Release the optimiser by upgrading the old service in place, and add a greedy/optimiser selector",
-      "st": "Ready to start",
+      "st": "Done",
       "t": "Task",
-      "up": "2026-09-22T04:59:59.554+0100"
+      "up": "2026-10-02T08:20:33.540+0100"
     },
     "HV-606": {
       "k": "HV-606",
@@ -442,28 +813,28 @@
       "s": "Developer introduction",
       "st": "In Progress",
       "t": "Task",
-      "up": "2026-09-25T18:54:49.831+0100"
+      "up": "2026-10-05T15:56:43.548+0100"
     },
     "HV-611": {
       "k": "HV-611",
       "s": "Calendar sync: permanent fix for Google OAuth silent token failure + instrumentation of the Outlook export path",
       "st": "In Progress",
       "t": "Task",
-      "up": "2026-09-25T21:13:11.434+0100"
+      "up": "2026-10-06T15:24:36.023+0100"
     },
     "HV-612": {
       "k": "HV-612",
       "s": "ICS email attachments collide: two invitations generated in the same second on one web node can send an attendee another attendee's event",
       "st": "Open",
       "t": "Bug",
-      "up": "2026-09-22T16:26:45.355+0100"
+      "up": "2026-09-30T08:37:06.198+0100"
     },
     "HV-613": {
       "k": "HV-613",
       "s": "[Shoptalk Fall] Tabletalk not displaying for some user's schedule",
       "st": "Done",
       "t": "Bug",
-      "up": "2026-09-25T15:07:52.436+0100"
+      "up": "2026-09-29T08:18:04.177+0100"
     },
     "HV-617": {
       "k": "HV-617",
@@ -482,65 +853,212 @@
     "HV-620": {
       "k": "HV-620",
       "s": "Team confirmation list and Bulk confirm preview take 20–50 s for \"All team members\" (200 members, 364 meetings); list is requested twice on page load",
-      "st": "In Progress",
+      "st": "Done",
       "t": "Defect",
-      "up": "2026-09-28T12:52:44.890+0100"
+      "up": "2026-10-05T10:27:40.635+0100"
     },
     "HV-621": {
       "k": "HV-621",
       "s": "Bulk confirm preview shows \"No decision\" for a meeting declined on behalf of the team member (API returns currentStatus \"declined\")",
-      "st": "Ready to start",
+      "st": "Done",
       "t": "Defect",
-      "up": "2026-09-25T09:18:07.146+0100"
+      "up": "2026-10-06T10:45:21.271+0100"
     },
     "HV-622": {
       "k": "HV-622",
       "s": "Bulk confirm preview rows show a placeholder instead of the counterpart's photo",
-      "st": "Ready to start",
+      "st": "Done",
       "t": "Defect",
-      "up": "2026-09-25T09:15:58.584+0100"
+      "up": "2026-10-06T10:45:42.488+0100"
     },
     "HV-623": {
       "k": "HV-623",
       "s": "[Shoptalk fall] Add user back to MP",
-      "st": "Rejected",
+      "st": "Done",
       "t": "Task",
-      "up": "2026-09-25T16:15:40.692+0100"
+      "up": "2026-10-02T13:48:15.536+0100"
     },
     "HV-626": {
       "k": "HV-626",
       "s": "Confirmation list (team view): admin-created meeting shows \"Performed by team member\" mark although the team member took no action",
-      "st": "Ready to start",
+      "st": "In testing",
       "t": "Defect",
-      "up": "2026-09-25T15:42:00.169+0100"
+      "up": "2026-10-06T10:34:45.633+0100"
     },
     "HV-628": {
       "k": "HV-628",
       "s": "[MP] Final schedule double-books a participant — admin-created meeting and a generated meeting in the same slot",
-      "st": "Open",
+      "st": "Done",
       "t": "Bug",
-      "up": "2026-09-28T10:45:31.170+0100"
+      "up": "2026-10-06T08:47:43.366+0100"
     },
     "HV-629": {
       "k": "HV-629",
       "s": "[MP] Table placement puts two confirmed meetings at the same table in the same slot — admin-created meeting and a generated meeting",
-      "st": "Open",
+      "st": "Done",
       "t": "Bug",
-      "up": "2026-09-28T10:45:27.244+0100"
+      "up": "2026-10-06T08:47:28.729+0100"
     },
     "HV-631": {
       "k": "HV-631",
       "s": "Migrate master's round-tables generation flow off the Lambda-based path onto the round-tables-service HTTP flow (align with alpha)",
       "st": "Open",
       "t": "Task",
-      "up": "2026-09-28T11:09:29.463+0100"
+      "up": "2026-10-06T15:24:36.290+0100"
     },
     "HV-632": {
       "k": "HV-632",
       "s": "[MP] Table QR link /qrCodes/complete opens the front \"404 Page not found\" — the scan never reaches QrCodesController, so the QR no-show path cannot run",
+      "st": "Done",
+      "t": "Bug",
+      "up": "2026-10-06T09:44:00.080+0100"
+    },
+    "HV-633": {
+      "k": "HV-633",
+      "s": "Grouping + tables_limit: the largest answer group loses its extra tables while smaller groups keep theirs — RFC §2.3 says smallest groups go to waitlist first",
+      "st": "Ready to start",
+      "t": "Defect",
+      "up": "2026-09-30T11:17:13.265+0100"
+    },
+    "HV-634": {
+      "k": "HV-634",
+      "s": "[MP] Meeting generation produces no meetings on alpha2 since 29.09 — Meeting Generation timepoint passes, mutual relevance exists, Total meetings stays 0",
+      "st": "Ready for release",
+      "t": "Bug",
+      "up": "2026-10-02T07:12:24.341+0100"
+    },
+    "HV-635": {
+      "k": "HV-635",
+      "s": "[Shoptalk Fall] SQL update",
+      "st": "Open",
+      "t": "Task",
+      "up": "2026-09-29T20:25:21.685+0100"
+    },
+    "HV-636": {
+      "k": "HV-636",
+      "s": "Confirmation list (team view): team members selector is a multi-select with checkboxes instead of a single selector (All team members or one member)",
+      "st": "Done",
+      "t": "Defect",
+      "up": "2026-10-06T12:31:20.657+0100"
+    },
+    "HV-637": {
+      "k": "HV-637",
+      "s": "[Design] Figma MP/Confirmation List (exhibitor view) shows \"Pre-registered\" status badge next to the \"Meeting Program\" title, EP-43484 forbids it for Exhibitors",
+      "st": "Done",
+      "t": "Bug",
+      "up": "2026-09-30T13:08:03.734+0100"
+    },
+    "HV-638": {
+      "k": "HV-638",
+      "s": "Bulk confirm modal: texts and preview layout differ from Figma (meetings/requests, response/decision, Confirmed button, preview header and rows)",
+      "st": "Done",
+      "t": "Defect",
+      "up": "2026-10-06T10:46:56.195+0100"
+    },
+    "HV-639": {
+      "k": "HV-639",
+      "s": "Bulk confirm apply is accepted (200) after the 1st confirmation deadline and writes the decision",
+      "st": "Done",
+      "t": "Defect",
+      "up": "2026-10-05T11:22:21.563+0100"
+    },
+    "HV-640": {
+      "k": "HV-640",
+      "s": "Confirmation list: \"N requests awaiting your response\" counts all requests, including ones that already have a decision",
+      "st": "Done",
+      "t": "Defect",
+      "up": "2026-10-06T12:33:18.883+0100"
+    },
+    "HV-643": {
+      "k": "HV-643",
+      "s": "Confirmation list (team view): team/confirmationList is requested twice on page load, and a failed response blanks the loaded list",
+      "st": "In Progress",
+      "t": "Defect",
+      "up": "2026-10-06T14:10:26.569+0100"
+    },
+    "HV-645": {
+      "k": "HV-645",
+      "s": "[MP] Admin Create Meeting: unique company rule is not applied when one side has an empty company — one user gets several meetings with the same company",
       "st": "Open",
       "t": "Bug",
-      "up": "2026-09-28T12:39:49.522+0100"
+      "up": "2026-10-05T15:17:15.968+0100"
+    },
+    "HV-646": {
+      "k": "HV-646",
+      "s": "[MP][FE] Confirmation stage (team control) has no frontend automated test coverage — 0 of 20 UI/Bulk/Iteration cases implemented in portal-ui or E2E",
+      "st": "In Progress",
+      "t": "Defect",
+      "up": "2026-10-06T09:57:28.551+0100"
+    },
+    "HV-647": {
+      "k": "HV-647",
+      "s": "[MP][FE] Bulk Confirm: Apply after iteration close gets 403 STAGE_CLOSED, popup stays open and the next screen is not shown",
+      "st": "In Progress",
+      "t": "Defect",
+      "up": "2026-10-06T14:11:04.146+0100"
+    },
+    "HV-649": {
+      "k": "HV-649",
+      "s": "[FE] Investigate feasibility of migrating from react-window v1 to @tanstack/react-virtual in portal-ui",
+      "st": "In Progress",
+      "t": "Task",
+      "up": "2026-10-06T15:24:36.506+0100"
+    },
+    "HV-65": {
+      "k": "HV-65",
+      "s": "[Backend] GES Visit External Badge",
+      "st": "Ready for release",
+      "t": "Story",
+      "up": "2026-10-06T15:24:35.130+0100"
+    },
+    "HV-650": {
+      "k": "HV-650",
+      "s": "Confirmation list (team view): admin-created meeting is not shown to the exhibitor owner during the 1st confirmation iteration",
+      "st": "Ready to start",
+      "t": "Defect",
+      "up": "2026-10-06T10:42:24.119+0100"
+    },
+    "HV-651": {
+      "k": "HV-651",
+      "s": "MP refactor · Post-refactor: pre-existing issues found during HV-538 QA",
+      "st": "Ready to start",
+      "t": "Sub-task",
+      "up": "2026-10-06T12:32:58.723+0100"
+    },
+    "HV-652": {
+      "k": "HV-652",
+      "s": "QA ",
+      "st": "Ready to start",
+      "t": "Sub-task",
+      "up": "2026-10-06T15:48:44.200+0100"
+    },
+    "HV-653": {
+      "k": "HV-653",
+      "s": "Frontend implementation",
+      "st": "Ready to start",
+      "t": "Sub-task",
+      "up": "2026-10-06T15:46:25.364+0100"
+    },
+    "HV-654": {
+      "k": "HV-654",
+      "s": "qa",
+      "st": "Ready to start",
+      "t": "Sub-task",
+      "up": "2026-10-06T15:46:25.699+0100"
+    },
+    "HV-69": {
+      "k": "HV-69",
+      "s": "Improving Meeting Programme Management for Exhibitors and Team Coordination",
+      "st": "Rejected",
+      "t": "Epic",
+      "up": "2026-09-30T08:20:28.998+0100"
+    },
+    "HV-70": {
+      "k": "HV-70",
+      "s": "[Design] Create a prototype for Improving Meeting Programme Management for Exhibitors and Team Coordination",
+      "st": "Rejected",
+      "t": "Story",
+      "up": "2026-09-30T08:20:39.217+0100"
     },
     "HV-88": {
       "k": "HV-88",
@@ -548,6 +1066,27 @@
       "st": "Done",
       "t": "Story",
       "up": "2026-09-21T16:46:59.374+0100"
+    },
+    "HV-89": {
+      "k": "HV-89",
+      "s": "Company can book a meeting with itself during the event",
+      "st": "Ready for release",
+      "t": "Bug",
+      "up": "2026-10-06T15:24:35.590+0100"
+    },
+    "HV-91": {
+      "k": "HV-91",
+      "s": "Audit log of all admin operations with included DS logs",
+      "st": "Rejected",
+      "t": "Story",
+      "up": "2026-09-30T08:21:05.035+0100"
+    },
+    "HV-97": {
+      "k": "HV-97",
+      "s": "[Placeholder] How meetings are generated then allocated to tables",
+      "st": "Rejected",
+      "t": "Story",
+      "up": "2026-10-02T13:49:43.398+0100"
     }
   },
   "runs": [
@@ -566,6 +1105,118 @@
       "manual": true,
       "seen": 17,
       "since": "-11h"
+    },
+    {
+      "at": "2026-09-28T13:06:49Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 1,
+      "manual": true,
+      "seen": 7,
+      "since": "-2h"
+    },
+    {
+      "at": "2026-09-28T16:56:12Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 3,
+      "manual": true,
+      "seen": 5,
+      "since": "-5h"
+    },
+    {
+      "at": "2026-09-28T17:44:24Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 0,
+      "manual": true,
+      "seen": 1,
+      "since": "-2h"
+    },
+    {
+      "at": "2026-09-28T18:37:21Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 0,
+      "manual": true,
+      "seen": 0,
+      "since": "-2h"
+    },
+    {
+      "at": "2026-09-28T18:37:24Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 0,
+      "manual": true,
+      "seen": 0,
+      "since": "-2h"
+    },
+    {
+      "at": "2026-09-28T21:36:45Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 0,
+      "manual": true,
+      "seen": 0,
+      "since": "-4h"
+    },
+    {
+      "at": "2026-09-28T21:36:48Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 0,
+      "manual": true,
+      "seen": 0,
+      "since": "-2h"
+    },
+    {
+      "at": "2026-09-29T02:48:59Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 0,
+      "manual": true,
+      "seen": 0,
+      "since": "-7h"
+    },
+    {
+      "at": "2026-09-29T11:58:41Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 10,
+      "manual": true,
+      "seen": 10,
+      "since": "-11h"
+    },
+    {
+      "at": "2026-09-29T11:58:47Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 0,
+      "manual": true,
+      "seen": 7,
+      "since": "-2h"
+    },
+    {
+      "at": "2026-09-30T03:00:13Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 9,
+      "manual": true,
+      "seen": 14,
+      "since": "-17h"
+    },
+    {
+      "at": "2026-10-01T19:59:16Z",
+      "by": "u_odCcEgwJ2lNM84eM7e5ykg",
+      "changed": 52,
+      "manual": false,
+      "seen": 52,
+      "since": "-42h"
+    },
+    {
+      "at": "2026-10-05T09:58:07Z",
+      "by": "u_0KCjQDtQxEOgVhmNzuV5SQ",
+      "changed": 34,
+      "manual": false,
+      "seen": 34,
+      "since": "-87h"
+    },
+    {
+      "at": "2026-10-06T19:55:58Z",
+      "by": "u_gVSVBLxsiVQXOQJt17Pp8Q",
+      "changed": 66,
+      "manual": false,
+      "seen": 67,
+      "since": "-35h"
     }
   ]
 }
